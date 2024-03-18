@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <%-include('../include/guide/GUT00100HEAD.ejs') %>
+        <%-include('../include/guide/GUT00100HEADGUIDE.ejs') %>
+        <script>
+            document.addEventListener('DOMContentLoaded',function(){
+                listGuide.page.init();
+            });
+        </script>
+    </head>
+    <body>
+        <div id="wrap" class="wrap guide">
+            <%-include('../include/guide/GUT00101HEADER.ejs') %>
+            <main class="container guide GUT002W01 sub">
+                <div class="container-inner">
+                    <div class="content-area">
+                        <div class="progress-picker">
+                            <ul class="display-work-list">
+                                <!-- <li><em class="box-green new">progress:110</em><span>완료(신규이슈)</span></li> -->
+                                <li><em class="box-green">progress:100</em><span>완료</span></li>
+                                <li><em class="box-orange">progress:102</em><span>탭</span></li>
+                                <li><em class="box-skyblue">progress:101</em><span>개발</span></li>
+                                <li><em class="box-red">progress:1</em><span>삭제</span></li>
+                                <li><em class="box-sea">progress:99</em><span>공통</span></li>
+                                <li><em class="box-yellow">progress:50</em><span>검수</span></li>
+                                <li><em class="box-duskypink">progress:70</em><span>수정</span></li>
+                                <li><em class="box-white">progress:0</em><span>없음</span></li>
+                            </ul>
+                        </div>
+
+                        <article class="contents page-list-wrap">
+                            <h4 class="title-guide-page-list">
+                                <span class="text">효성티엔씨(WEB) : 국문(KOR)</span>
+                            </h4>
+                            <div class="content-view">
+                                <div class="list-container">
+                                    <table id="pageList1" class="table-type1">
+                                        <thead>
+                                            <tr>
+                                                <th>No.</th>
+                                                <th>화면 ID</th>
+                                                <th>분류</th>
+                                                <th>Depth1</th>
+                                                <th>Depth2</th>
+                                                <th>화면명</th>
+                                                <th>type</th>
+                                                <th>담당<br />기획자</th>
+                                                <th>담당<br />디자이너</th>
+                                                <th>담당<br />퍼블리셔</th>
+                                                <th>시작일</th>
+                                                <th>완료일</th>
+                                                <th>진행도(%)</th>
+                                                <th>수정날짜</th>
+                                                <th>URL</th>
+                                                <th>진행상황</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="contents page-list-wrap">
+                            <h4 class="title-guide-page-list">
+                                <span class="text">효성티엔씨(WEB) : 영문(ENG)</span>
+                            </h4>
+                            <div class="content-view">
+                                <div class="list-container">
+                                    <table id="pageList2" class="table-type1">
+                                        <thead>
+                                            <tr>
+                                                <th>No.</th>
+                                                <th>화면 ID</th>
+                                                <th>분류</th>
+                                                <th>Depth1</th>
+                                                <th>Depth2</th>
+                                                <th>화면명</th>
+                                                <th>type</th>
+                                                <th>담당<br />기획자</th>
+                                                <th>담당<br />디자이너</th>
+                                                <th>담당<br />퍼블리셔</th>
+                                                <th>시작일</th>
+                                                <th>완료일</th>
+                                                <th>진행도(%)</th>
+                                                <th>수정날짜</th>
+                                                <th>URL</th>
+                                                <th>진행상황</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </article>
+
+                    </div>
+                </div>
+            </main>
+            <%-include('../include/guide/GUT00103FOOTER.ejs') %>
+        </div>
+    </body>
+</html>

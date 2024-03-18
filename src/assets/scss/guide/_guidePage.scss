@@ -1,0 +1,248 @@
+.guide {
+    .title-guide-example {
+        + .guide-code-view {
+            margin-top:2rem;
+        }
+    }
+    .guide-code-view {
+        padding:1rem;
+        font-family:'Pretendard';
+        font-size:1.6rem;
+        font-weight:500;
+        line-height:2.2rem;
+        color:rgba(128,128,128,1);
+        background-color:rgba(30,30,30,1);
+        .text {
+            font-size:inherit;
+            &.color-tag {
+                color:rgba(63,156,203,1);
+            }
+            &.color-class {
+                color:rgba(79,185,254,1);
+            }
+            &.color-class-name {
+                color:rgba(206,145,120,1);
+            }
+            &.color-cadmission {
+                color:rgba(255,255,255,1);
+            }
+            &.color-text {
+                color:rgba(255,255,255,1);
+            }
+            &.color-scss-all-selector {
+                color:rgba(53,140,213,1);
+            }
+            &.color-scss-class-name {
+                color:rgba(215,186,125,1);
+            }
+            &.color-scss-property-name {
+                color:rgba(156,220,254,1);
+            }
+            &.color-scss-property-value-text {
+                color:rgba(195,145,106,1);
+            }
+            &.color-scss-property-value-number {
+                color:rgba(181,206,168,1);
+            }
+            &.color-scss-colon {
+                color:rgba(255,255,255,1);
+            }
+            &.color-scss-semicolon {
+                color:rgba(255,255,255,1);
+            }
+            &.color-scss-comma {
+                color:rgba(255,255,255,1);
+            }
+            &.color-scss-function {
+                color:rgba(197,134,192,1);
+            }
+            &.color-scss-function-name {
+                color:rgba(220,220,170,1);
+            }
+            &.color-scss-mid-bracket1 {
+                color:rgba(201,212,139,1);
+            }
+            &.color-scss-mid-bracket2 {
+                color:rgba(209,148,70,1);
+            }
+            &.color-scss-bracket1 {
+                color:rgba(230,166,31,1);
+            }
+            &.color-scss-bracket2 {
+                color:rgba(199,10,66,1);
+            }
+            &.color-text {
+                color:rgba(255,255,255,1);
+            }
+        }
+    }
+    .guide-text-info {
+        font-size:0;
+        .text-wrap {
+            display:block;
+            font-size:0;
+            .title {
+                font-size:1.6rem;
+                font-family:'Pretendard';
+                font-weight:700;
+                line-height:2.2rem;
+                color:rgba(0,0,0,1);
+            }
+            .text {
+                font-size:1.6rem;
+                font-family:'Pretendard';
+                font-weight:400;
+                line-height:2.2rem;
+                color:rgba(25,25,25,1);
+                &.title {
+                    font-size:1.6rem;
+                    font-family:'Pretendard';
+                    font-weight:700;
+                    line-height:2.2rem;
+                    color:rgba(0,0,0,1);
+                }
+            }
+            ~ .text-wrap {
+                margin-top:1rem;
+            }
+        }
+        
+    }
+    .guide-description-dl {
+        > dt,
+        > dd {
+            display:block;
+        }
+        > dt {
+            > .text {
+                font-size:1.8rem;
+                font-family:'Pretendard';
+                font-weight:500;
+                line-height:2.4rem;
+                color:rgba(0,0,0,1);
+                &.title {
+                    padding:.5rem 1rem;
+                    color:rgba(255,255,255,1);
+                    background-color:rgba(0,0,0,1);
+                }
+                abbr {
+                    text-decoration:none;
+                }
+            }
+            + dd {
+                margin-top:1.2rem;
+            }
+        }
+        > dd {
+            > .text {
+                font-size:1.8rem;
+                font-family:'Pretendard';
+                font-weight:400;
+                line-height:2.4rem;
+                color:rgba(85,85,85,1);
+                + .bullet-guide-asterisk {
+                    margin-top:.5rem;
+                }
+                .bold {
+                    font-weight: 700;
+                }
+                &.border-bottom {
+                    border-bottom:.1rem dashed rgba(0,0,0,.2);
+                }
+            }
+        }
+        ~ .guide-description-dl {
+            margin-top:3rem;
+        }
+    }
+}
+.guide-sort-bar {
+    + .contents {
+        margin-top:3rem;
+    }
+}
+.guide-sort-bar {
+    display:block;
+    position:relative;
+    font-size:0;
+    line-height:0;
+    text-align:center;
+    .bar {
+        position:absolute;
+        top:50%;
+        transform:translate3d(0,-50%,0) scale3d(1,1,1) rotate3d(0,0,1,0deg);
+        display:block;
+        width:100%;
+        height:.3rem;
+        background-color:rgba(30,30,30,1);
+    }
+    .text-wrap {
+        position:relative;
+        z-index:1;
+        display:inline-block;
+        padding-left:1.5rem;
+        padding-right:1.5rem;
+        font-size:0;
+        line-height:0;
+        background-color:rgba(235,235,235,1);
+        .text {
+            display:inline-block;
+            word-break:keep-all;
+            font-family:'Pretendard';
+            font-weight:700;
+            font-size:2rem;
+            line-height:2.8rem;
+            color:rgba(30,30,30,1);
+            text-align:center;
+        }
+    }
+}
+
+.mo {
+    .guide-sort-bar {
+        .text-wrap {
+            margin-left:3rem;
+            margin-right:3rem;
+            padding-left:1rem;
+            padding-right:1rem;
+            .text {
+                font-weight:500;
+                font-size:1.6rem;
+                line-height:2.2rem;
+            }
+        }
+        .bar {
+            height:.1rem;
+        }
+        + .contents {
+            margin-top:1.5rem;
+        }
+    }
+}
+
+.link-guide-page-view {
+    display:inline-block;
+    font-size:0;
+    line-height:0;
+    .text-wrap {
+        display:inline-block;
+        font-size:0;
+        .text {
+            font-family:'Pretendard';
+            font-weight:500;
+            font-size:1.8rem;
+            line-height:2.4rem;
+            color:rgba(40,40,40,1);
+            transition-duration:.3s;
+            text-decoration:underline;
+        }
+    }
+    &:hover,
+    &:focus {
+        .text-wrap {
+            .text {
+                color:rgba(40,114,252,1);
+            }
+        }
+    }
+}

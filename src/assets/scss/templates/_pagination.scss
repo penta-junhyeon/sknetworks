@@ -1,0 +1,59 @@
+.pagination-display.design-1 {
+    &.case-1 {
+        width: 100%;
+        max-width: 42.4rem;
+        margin: 0 auto;
+        .pagination-list {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            .pagination-item {
+                .button {
+                    &.icon-left-arrow03 {
+                        margin-right: 2rem;
+                        .button-text-core {
+                            &::after {
+                                background-image: icon(left-arrow03, #000);
+                            }
+                        }
+                    }
+                    &.icon-right-arrow03 {
+                        margin-left: 2rem;
+                        .button-text-core {
+                            &::after {
+                                background-image: icon(right-arrow03, #000);
+                            }
+                        }
+                    }
+                }
+                .num {
+                    display: block;
+                    width: 3.2rem;
+                    height: 3.2rem;
+                    font-size: 1.6rem;
+                    font-weight: 600;
+                    line-height: 3.2rem;
+                    text-align: center;
+                    color: #282828;
+                }
+                .dot {
+                    display: block;
+                    width: 3.2rem;
+                    height: 3.2rem;
+                    font-size: 1.6rem;
+                    font-weight: 600;
+                    line-height: 3.2rem;
+                    text-align: center;
+                    color: #282828;
+                }
+                &.active {
+                    .num {
+                        background-color: #FF8D24;
+                        border-radius: 0.8rem;
+                        color: #ffffff;
+                    }
+                }
+            }
+        }
+    }
+}

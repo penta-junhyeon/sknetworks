@@ -1,0 +1,425 @@
+.HTNCWKD40D30W01 {
+    .container-inner {
+        .contents-section {
+            &.contents-section2 {
+                &.active {
+                    .contents-section-inner {
+                        .contents-section-head {
+                            background: url('../../assets/images/photo/sustainability/humanrights/img-humanrights-intro-pc.jpg') no-repeat center center;
+                            background-size: cover;
+                            .title-wrap {
+                                .title.large-v4 {
+                                    .name {
+                                        transform: translateY(0);
+                                        @include mobile {
+                                            opacity: 1;
+                                        }
+                                    }
+                                }
+                            }
+                            .title.small-v4 {
+                                .name {
+                                    @include mobile {
+                                        transform: translateY(0);
+                                        opacity: 1;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .contents-section-inner {
+                    .contents-section-head {
+                        width: 100%;
+                        height: 66rem;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        flex-direction: column;
+                        background: url('../../assets/images/photo/sustainability/humanrights/img-humanrights-intro-pc.jpg') no-repeat top center;
+                        background-size: cover;
+                        opacity: 1;
+                        @include mobile {
+                            height: 30rem;
+                        }
+                        .title-wrap {
+                            padding-bottom: 3.2rem;
+                            @include mobile {
+                                padding-bottom: 1.7rem;
+                            }
+                            .title.large-v4 {
+                                overflow: hidden;
+                                width: 100%;
+                                height: 11rem;
+                                @include mobile {
+                                    height: 4rem;
+                                    overflow: visible;
+                                }
+                                .name {
+                                    display: block;
+                                    letter-spacing: unset;
+                                    line-height: 10.6rem; 
+                                    color: #ffffff;
+                                    transform: translateY(8rem);
+                                    transition-duration: 0.6s;
+                                    @include mobile {
+                                        line-height: 4rem;
+                                        transform: translateY(5rem);
+                                        transition-duration: 0.7s;
+                                        opacity: 0;
+                                    }
+                                }
+                                &~ .title.large-v4 {
+                                    .name {
+                                        transition-delay: 0.1s;
+                                        @include mobile {
+                                            transition-delay: unset;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        .title.small-v4 {
+                            .name {
+                                display: block;
+                                color: #FFF;
+                                @include mobile {
+                                    transform: translateY(5rem);
+                                    transition-duration: 0.7s;
+                                    opacity: 0;
+                                }
+                            }
+                        }
+                    }
+
+                    .contents-section-body {
+                        .contents-article {
+                            position: relative;
+                            opacity: 1;
+                            overflow: hidden;
+                            .contents-article-inner {
+                                position: relative;
+                            }
+                            &.contents-article1 {
+                                &.active {
+                                    .contents-article-inner {
+                                        > .data-display {
+                                            .data-head {
+                                                .title.large {
+                                                    .name {
+                                                        transform: translateY(0);
+                                                        opacity: 1;
+                                                    }
+                                                }
+                                                @include mobile {
+                                                    &::before {
+                                                        transform: translate(-50%, 0);
+                                                        opacity: 1;
+                                                    }
+                                                }
+                                            }
+                                            .data-body {
+                                                transform: translateY(0);
+                                                @include mobile {
+                                                    transform: unset;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                                .contents-article-inner {
+                                    margin-top: 14rem;
+                                    padding-bottom: 18rem;
+                                    @include mobile {
+                                        margin-top: 10rem;
+                                        padding-bottom: 18.8rem;
+                                    }
+                                    > .data-display {
+                                        flex-direction: column;
+                                        .data-head {
+                                            position: relative;
+                                            padding-top: 9rem;
+                                            @include mobile {
+                                                padding-top: 5rem;
+                                            }
+                                            &::before {
+                                                content: '';
+                                                width: 3.8rem;
+                                                height: 2.7rem;
+                                                background: url('../../assets/images/photo/sustainability/humanrights/img-humanrights-dot-pc.png') no-repeat center center;
+                                                background-size: cover;
+                                                position: absolute;
+                                                top: 0;
+                                                left: 50%;
+                                                transform: translateX(-50%);
+                                            }
+                                            @include mobile {
+                                                &::before {
+                                                    width: 2.8rem;
+                                                    height: 2rem;
+                                                    opacity: 0;
+                                                    transform: translate(-50%, 5rem);
+                                                    transition-duration: 0.6s;
+                                                }
+                                            }
+                                            .title.large {
+                                                overflow: hidden;
+                                                width: 100%;
+                                                height: 100%;
+                                                .name {
+                                                    display: block;
+                                                    transform: translateY(6rem);
+                                                    transition-duration: 0.5s;
+                                                    opacity: 0;
+                                                }
+                                                &~ .title.large {
+                                                    padding-top: 0.8rem;
+                                                }
+                                                &.turn-2 {
+                                                    .name {
+                                                        transition-delay: 0.1s;
+                                                    }
+                                                }
+                                                &.turn-3 {
+                                                    .name {
+                                                        transition-delay: 0.2s;
+                                                    }
+                                                }
+                                                @include mobile {
+                                                    overflow: visible;
+                                                    &.turn-2 {
+                                                        .name {
+                                                            transition-delay: unset;
+                                                        }
+                                                    }
+                                                    &.turn-3 {
+                                                        .name {
+                                                            transition-delay: unset;
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                            .title.small-v4 {
+                                                position: relative;
+                                                padding-top: 5.6rem;
+                                                padding-bottom: 6rem;
+                                                @include mobile {
+                                                    padding-top: 2.4rem;
+                                                    padding-bottom: 3rem;
+                                                }
+                                                &::after {
+                                                    content: '';
+                                                    width: 4rem;
+                                                    height: 0.4rem;
+                                                    background: #7BB9C6;
+                                                    position: absolute;
+                                                    bottom: 0;
+                                                    left: 50%;
+                                                    transform: translateX(-50%);
+                                                    @include mobile {
+                                                        width: 3rem;
+                                                        height: 0.3rem;
+                                                    }
+                                                }
+                                                .name {
+                                                    color: #999999;
+                                                }
+                                            }
+                                        }
+                                        .data-body {
+                                            max-width: 45rem;
+                                            margin: 0 auto;
+                                            padding-top: 10rem;
+                                            transform: translateY(10rem);
+                                            transition-duration: 0.6s;
+                                            transition-delay: 0.2s;
+                                            @include mobile {
+                                                max-width: 25.5rem;
+                                                padding-top: 6rem;
+                                                transform: unset;
+                                                transition-duration: unset;
+                                                transition-delay: unset;
+                                            }
+                                            .text-content-area {
+                                                .text {
+                                                    font-family: 'Hyosung';
+                                                    font-size: 2.6rem;
+                                                    font-weight: 500;
+                                                    color: #000;
+                                                    line-height: 5.6rem;
+                                                    &~ .text {
+                                                        padding-top: 4rem;
+                                                    }
+                                                    @include mobile {
+                                                        font-size: 1.6rem;
+                                                        line-height: 2.6rem;
+                                                        &~ .text {
+                                                            padding-top: 2rem;
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                    .human-img {
+                                        position: absolute;
+                                        z-index: -1;
+                                        .img {
+                                            width: 100%;
+                                        }
+                                        &.turn-1 {
+                                            width: 49rem;
+                                            height: auto;
+                                            bottom: 36rem;
+                                            left: 0;
+                                        }
+                                        &.turn-2 {
+                                            width: 38.8rem;
+                                            height: auto;
+                                            bottom: 12rem;
+                                            right: 0;
+                                        }
+                                        @include mobile {
+                                            &.turn-1 {
+                                                width: 60%;
+                                                max-width: 30rem;
+                                                min-width: 25rem;
+                                                height: auto;
+                                                bottom: 44.5rem;
+                                                left: 0;
+                                            }
+                                            &.turn-2 {
+                                                width: 48%;
+                                                max-width: 20rem;
+                                                min-width: 18rem;
+                                                height: auto;
+                                                bottom: 30rem;
+                                                right: 0;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+
+                            &.contents-article2 {
+                                padding-bottom: 20rem;
+                                @include mobile {
+                                    padding-bottom: 8rem;
+                                }
+                                &.active {
+                                    .contents-article-inner {
+                                        .thumbnail-display {
+                                            .thumbnail-body {
+                                                .thumbnail-figure {
+                                                    transform: translate(0, 0) scale(1);
+                                                    opacity: 1;
+                                                }
+                                                .thumbnail-data {
+                                                    .para:last-child {
+                                                        transform: translateY(0);
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                                .contents-article-inner {
+                                    .thumbnail-display {
+                                        max-width: 111rem;
+                                        margin: 0 auto;
+                                        .thumbnail-body {
+                                            .thumbnail-figure {
+                                                transform: translate(-20%, 10%) scale(0.7);
+                                                transition-duration: 0.8s;
+                                                opacity: 0;
+                                                @include mobile {
+                                                    transform: translate(13%, 12%) scale(0.7);
+                                                }
+                                            }
+                                            .thumbnail-data {
+                                                .para:last-child {
+                                                    transform: translateY(5rem);
+                                                    transition-duration: 0.8s;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+
+                            &.contents-article3 {
+                                background-color: #1D6ECD;
+                                border-radius: 5.6rem;
+                                overflow: hidden;
+                                padding-top: 12rem;
+                                padding-bottom: 12rem;
+                                z-index: 1;
+                                @include mobile {
+                                    border-radius: 3.2rem;
+                                    padding-top: 10rem;
+                                    padding-bottom: 10rem;
+                                }
+                                .contents-article-inner {
+                                    max-width: 111rem;
+                                    margin: 0 auto;
+                                    .diagram-display {
+                                        margin-bottom: 8rem;
+                                        @include mobile {
+                                            margin-bottom: 4rem;
+                                        }
+                                        .diagram-head {
+                                            padding-bottom: 8rem;
+                                            @include mobile {
+                                                padding-bottom: 4rem;
+                                            }
+                                        }
+                                    }
+                                    > .data-display.design-1 {
+                                        .data-para {
+                                            &~ .data-para {
+                                                padding-top: 1.6rem;
+                                                @include mobile {
+                                                    padding-top: 1rem;
+                                                }
+                                            }
+                                        }
+                                        .data-mean {
+                                            padding-top: 2.4rem;
+                                            font-weight: 500;
+                                            color: #E1E6EF;
+                                            @include mobile {
+                                                padding-top: 4rem;
+                                            }
+                                        }
+                                    }
+                                    > .data-display.design-2 {
+                                        margin-top: 6rem;
+                                        .button.design-1.case-1 {
+                                            min-width: 24rem;
+                                        }
+                                        @include mobile {
+                                            margin-top: 4rem;
+                                            .button.design-1.case-1 {
+                                                min-width: unset;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            &.contents-article4 {
+                                background-color: #1D2329;
+                                padding-top: 28rem;
+                                padding-bottom: 14rem;
+                                margin-top: -14rem;
+                                @include mobile {
+                                    padding-top: 20.2rem;
+                                    margin-top: -10.4rem;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

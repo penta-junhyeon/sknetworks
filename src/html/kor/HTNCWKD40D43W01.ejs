@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <%-include('../include/kor/HTNCWK00HEADMETACOMMON.ejs') %>
+        <%-include('../meta-id/kor/HTNCWKD40D43W01.ejs') %>
+        <%-include('../include/kor/HTNCWK00HEADSTYLE.ejs') %>
+        <%-include('../include/kor/HTNCWK00HEADFAVICON.ejs') %>
+        <%-include('../include/kor/HTNCWK00HEADSCRIPTLIBRARY.ejs') %>
+        <%-include('../include/kor/HTNCWK00HEADSCRIPTGSAP.ejs') %>
+        <%-include('../include/kor/HTNCWK00HEADSCRIPTLOADER.ejs') %>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                scrollEvent();
+                resizeEvent();
+                tncAccordion();
+
+                subPageIntroWheel_01(); // 서브 공통 MouseWheel naviDepth3, naviDepth4
+                localInteraction_04_01(); // 서브 공통 Info Interaction
+                naviDepth3_Interaction_01(); // 서브 공통 naviDepth3 fixed,  naviDepth4 따라 내려옴
+
+                contentsSubScrollEventCustom(); // 서브 공통 Section Active
+            });
+
+            function scrollEvent(){
+                window.addEventListener('scroll', () => {
+                    contentsSubScrollEventCustom();
+                });
+            }
+
+            function resizeEvent(){
+                window.addEventListener('resize', () => {
+                });
+            }
+        </script>
+    </head>
+    <body class="tnc-site">
+        <%-include('../include/kor/HTNCWK01HEADER.ejs') %>
+        <main id="container" class="container tnc HTNCWKD40D43W01 sub">
+            <h2 class="blind">컨테이너 영역</h2>
+            <div class="container-inner">
+                <section class="contents-section contents-section1">
+                    <div class="contents-section-inner">
+                        <div class="local sustainability-common" local-interaction="sustainability-01">
+                            <div class="local-head design-1">
+                                <div class="local-head-wrap">
+                                    <div class="local-subject">
+                                        <h2 class="local-name">
+                                            <span class="wbr">Governance</span>
+                                            <span class="wbr hide">리스크 관리</span>
+                                        </h2>
+                                    </div>
+                                    <div class="local-subject">
+                                        <h2 class="local-name">
+                                            <span class="wbr hide">Governance</span>
+                                            <span class="wbr">리스크 관리</span>
+                                        </h2>
+                                    </div>
+                                    <picture class="local-figure">
+                                        <source media="(max-width: 1023px)" srcset="../../assets/images/photo/sustainability/risk/local-mo.jpg">
+                                        <source media="(max-width: 1920px)" srcset="../../assets/images/photo/sustainability/risk/local-pc.jpg">
+                                        <img src="../../assets/images/photo/sustainability/risk/local-pc.jpg" alt=" ">
+                                    </picture>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <nav class="navi depth3">
+                    <div class="navi-wrap">
+                        <div class="navi-subject"><a href="#" title="현재 선택된 항목" class="navi-name">리스크 관리</a></div>
+                        <div class="tab-display">
+                            <ul class="tab-list">
+                                <li class="tab-item" title="현재 선택된 항목"><a href="#" class="tab-text">윤리경영</a></li>
+                                <li class="tab-item current"><a href="#" class="tab-text">리스크 관리</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+                <section class="contents-section contents-section2">
+                    <div class="contents-section-inner">
+                        <div class="contents-section-head">
+                            <div class="data-display design-1 case-1 color-6 align-1">
+                                <ul class="data-list">
+                                    <li class="data-item">
+                                        <div class="data-wrap">
+                                            <div class="data-head">
+                                                <h3 class="title design-1 case-1 align-4 medium">
+                                                    <em class="name">리스크 관리</em>
+                                                </h3>
+                                            </div>
+                                            <div class="data-body">
+                                                <p class="data-para">
+                                                    경영 환경과 사회 복잡성이 높아짐에 따라 예상치 못한 위험과 새로운 비즈니스의 기회도 증가하며, 기업의 지속 성장을 위해 리스크를 사전에 방지하고
+                                                     관리할 수 있는 시스템이 필요합니다.<br /> 효성은 리스크 관리를 중요한 경영 활동으로 인식하고 기업의 비지니스 활동에 의해 직·간접적으로 발생되는 부정적인 환경·사회 영향을 최소화하기 위해 리스크 관리 체계를 구축하였습니다.<br  /> 아울러 비재무적 리스크에 대한 이해관계자들의 높아진 관심에 대응하고, 기업의 사회적 책임을 충실히 이행하고자 
+                                                    전통적인 재무 리스크와 더불어 환경, 사회 등 비재무적 관점에서 발생 가능한 <br class="br-pc">리스크에 대한 관리를 강화하고 있습니다.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="contents-section-body">
+                            <div class="contents-article contents-article1">
+                                <div class="contents-article-inner">
+                                    <div class="thumbnail-display design-24">
+                                        <div class="thumbnail-list">
+                                            <div class="thumbnail-item">
+                                                <div class="thumbnail-wrap">
+                                                    <p class="thumbnail-head">리스크 관리 체계</p>
+                                                    <div class="thumbnail-body">
+                                                        <div class="thumbnail-para">
+                                                            <p class="para">
+                                                                효성은 경영활동에 중대한 영향을 미칠 수 있는 시장의 불확실성 및 대내외적 위험과 기회 등을 리스크로 정의해 관리하고 있으며, 2021년 전사적인 리스크 관리 역량 강화를 위해 관련 프로세스 규정을 개정하였습니다.
+                                                            </p>
+                                                            <p class="para">
+                                                                리스크를 재무, 비재무(사업 연속성, 경영) 리스크로 구분하고, 리스크의 영향력과 발생 가능성을 고려하여 주요 리스크를 정의하고, 주요 리스크는 발생 원인을 사전에 파악해 선제적인 대응이 가능하도록 예방체계를 구축하여 매년 리스크 관리 현황을 업데이트하고 주요 리스크에 대해서는 대응방안의 목표를 달성하였는지 평가합니다.
+                                                            </p>
+                                                        </div>
+                                                        <figure class="thumbnail-part">
+                                                            <picture>
+                                                                <source media="(max-width: 1023px)" srcset="../../assets/images/diagram/sustainability/risk/diagram-riskmanagement-01-mo.svg">
+                                                                <source media="(max-width: 1920px)" srcset="../../assets/images/diagram/sustainability/risk/diagram-riskmanagement-01-pc.svg">
+                                                                <img src="../../assets/images/diagram/sustainability/risk/diagram-riskmanagement-01-pc.svg" alt=" ">
+                                                            </picture>
+                                                            <figcaption>
+
+                                                            </figcaption>
+                                                        </figure>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="contents-article contents-article2">
+                                <div class="contents-article-inner">
+                                    <div class="data-display design-1 case-3 color-2">
+                                        <ul class="data-list">
+                                            <li class="data-item">
+                                                <div class="data-wrap">
+                                                    <div class="data-head">
+                                                        <h3 class="title design-1 case-1 small-v2">
+                                                            <em class="name">리스크 관리 조직</em>
+                                                        </h3>
+                                                    </div>
+                                                    <div class="data-body">
+                                                        <p class="data-para">
+                                                            효성티앤씨는 이사회 산하 경영위원회 및 대표이사 산하 ESG경영추진위원회에서 리스크 안건을 관리하고 주요 리스크 및 대응 상황을 논의 합니다. 재무리스크는 재무실 주관 아래 본사 내 사업부 및 국내외 종속회사와의 유기적인 협력을 통해 주기적으로 재무위험의 측정, 평가 및 헷지 등을 실행 합니다. 비재무리스크는 대표이사 직할의 ESG경영팀을 주축으로 환경/사회/거버넌스에 연관된 각 실무 조직 내 ESG경영 담당자를 선정하여 상시적인 ESG 실무협의체 운영을 통해 리스크를 식별하고 저감할 수 있는 방안을 수립하고 있습니다. 식별된 리스크는 대표이사를 위원장 및 리스크 관리 책임자로 하여, 경영전략실장, 재무실장, 지원실장, 구매 및 홍보담당 임원, 공장장, 각 사업부문장(섬유부문 PU장)을 위원으로 한 경영위원회 및 ESG경영 추진위원회를 통해 전사적 재무 및 비재무리스크를 대처할 수 있는 실행방안을 최종 승인하는 과정을 통해 관리되고 있습니다.
+                                                        </p>
+                                                        <ul class="order-list design-1 usual-1 case-3 small type-2 align-1">
+                                                            <li class="order-item">
+                                                                중대재해처벌법 실행으로 안전보건에 관한 리스크는 CSO(최고안전책임자) 산하 안전보건팀에서 전사 안전보건 리스크를 관리
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="data-aside">
+                                                        <div class="diagram-display design-1">
+                                                            <div class="diagram-wrap">
+                                                                <div class="diagram-body">
+                                                                    <div class="picture">
+                                                                        <img class="img" src="../../assets/images/diagram/sustainability/social/diagram-riskmanagement-02-mo.svg" alt="아래 항목 참고">
+                                                                    </div>
+                                                                    <picture class="picture">
+                                                                        <source media="(max-width: 1023px)" srcset="../../assets/images/diagram/sustainability/social/diagram-riskmanagement-01-mo.svg">
+                                                                        <source media="(max-width: 1920px)" srcset="../../assets/images/diagram/sustainability/social/diagram-riskmanagement-01-pc.svg">
+                                                                        <img class="img" src="../../assets/images/diagram/sustainability/social/diagram-riskmanagement-01-pc.svg" alt="아래 항목 참고">
+                                                                    </picture>
+                                                                </div>
+                                                                <div class="diagram-footer">
+                                                                    <em>효성 윤리경영 커뮤니케이션 채널</em>
+                                                                    <ul>
+                                                                        <li>인적,물적 보안</li>
+                                                                        <li>업무 연속성</li>
+                                                                        <li>보안사고 대응</li>
+                                                                        <li>개인정보 보호</li>
+                                                                        <li>정보 자산관리</li>
+                                                                    </ul>
+                                                                    <em>HR 상담센터</em>
+                                                                    <em>고충처리</em>
+                                                                    <em>제보하기</em>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="contents-article contents-article3">
+                                <div class="contents-article-inner">
+                                    <div class="diagram-display design-2">
+                                        <div class="diagram-wrap">
+                                            <div class="diagram-head">
+                                                <h3 class="title design-1 case-1 small-v2">
+                                                    <em class="name">리스크 관리 프로세스</em>
+                                                </h3>
+                                            </div>
+                                            <div class="diagram-body">
+                                                <picture class="picture">
+                                                    <source media="(max-width: 1023px)" srcset="../../assets/images/diagram/sustainability/risk/diagram-riskmanagement-03-mo.svg">
+                                                    <source media="(max-width: 1920px)" srcset="../../assets/images/diagram/sustainability/risk/diagram-riskmanagement-03-pc.svg">
+                                                    <img class="img" src="../.../assets/images/diagram/sustainability/risk/diagram-riskmanagement-03-pc.svg" alt="아래 항목 참고">
+                                                </picture>
+                                            </div>
+                                            <div class="diagram-footer">
+                                                <ul>
+                                                    <li>
+                                                        <em>내외부 상황파악</em>
+                                                        <p>내외부 이해관계자 요구사항 조사</p>
+                                                    </li>
+                                                    <li>
+                                                        <em>리스크 식별</em>
+                                                        <p>SWOT, 3C 분석 등</p>
+                                                    </li>
+                                                    <li>
+                                                        <em>리스크 평가</em>
+                                                        <p>발생가능성, 심각도</p>
+                                                    </li>
+                                                    <li>
+                                                        <em>리스크 조치</em>
+                                                        <p>리스크 저감을 위한 방안 수립 및 이행</p>
+                                                    </li>
+                                                    <li>
+                                                        <em>리스크 확인 및 변경 관리</em>
+                                                        <p>조치 이행 후 리스크 변경 관리</p>
+                                                    </li>
+                                                    <li>
+                                                        <em>이사회/최고 경영진 보고</em>
+                                                        <p>주요 리스크 보고</p>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="contents-article contents-article4 case-1">
+                                <div class="contents-article-inner">
+                                    <div class="data-display design-1 case-9 color-2">
+                                        <ul class="data-list">
+                                            <li class="data-item">
+                                                <div class="data-wrap">
+                                                    <div class="data-head">
+                                                        <h3 class="title design-1 case-1 small-v2">
+                                                            <em class="name">주요 리스크 유형에 따른<br class="br-mo" /> 관리 활동</em>
+                                                        </h3>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="accordion-display design-1 case-2">
+                                        <ul class="accordion-list">
+                                            <li class="accordion-item">
+                                                <div class="accordion-wrap">
+                                                    <div class="accordion-head">
+                                                        <a href="javascript:void(0)" class="accordion-button case-1">
+                                                            <div class="accordion-button-body">
+                                                                <em class="accordion-title">재무</em>
+                                                                <i class="accordion-icon">
+                                                                    <span class="blind">button</span>
+                                                                </i>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                    <div class="accordion-body">
+                                                        <div class="accordion-content">
+                                                            <div class="table-display design-2">
+                                                                <div class="table-list">
+                                                                    <div class="table-item">
+                                                                        <div class="table-wrap">
+                                                                            <div class="table-head">
+                                                                                <p class="name">시장</p>
+                                                                            </div>
+                                                                            <div class="table-body">
+                                                                                <p class="para type-1">
+                                                                                    주가, 금리, 환율변동 등 재무적 요소와<br class="br-pc">
+                                                                                    연관된 시장 리스크
+                                                                                </p>
+                                                                                <div class="para type-2">
+                                                                                    <ul class="order-list design-1 usual-1 case-1 medium type-1 align-1">
+                                                                                        <li class="order-item">자금/무역금융 전문인력 운영을 통한 리스크 측정, 분석 및 헷징</li>
+                                                                                        <li class="order-item">내부회계관리제도 운영</li>
+                                                                                        <li class="order-item">입금 및 지출 통화를 일치시켜 환포지션 발생을 최소화하고, 환위험 관리정책에 측정주기, 헷지기간, 헷지비율 등을 구체적으로 규정하여 환위험을 체계적 관리</li>
+                                                                                    </ul>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="table-item">
+                                                                        <div class="table-wrap">
+                                                                            <div class="table-head">
+                                                                                <p class="name">신용</p>
+                                                                            </div>
+                                                                            <div class="table-body">
+                                                                                <p class="para type-1">
+                                                                                    고객 또는 거래상대방이 계약조건상<br class="br-pc"> 의무사항을 지키지 못하는 리스크
+                                                                                </p>
+                                                                                <div class="para type-2">
+                                                                                    <ul class="order-list design-1 usual-1 case-1 medium type-1 align-1">
+                                                                                        <li class="order-item">내부 채권관리규정을 준수하여 매출채권 거래상대방에 대한 신용한도 설정 및 관리</li>
+                                                                                        <li class="order-item">투자 및 대여 등에 대해서는 신용조사 및 담보 등 회수방안 관리</li>
+                                                                                    </ul>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="table-item">
+                                                                        <div class="table-wrap">
+                                                                            <div class="table-head">
+                                                                                <p class="name">유동성</p>
+                                                                            </div>
+                                                                            <div class="table-body">
+                                                                                <p class="para type-1">
+                                                                                    예상하지 못한 유동성 악화로 인한<br class="br-pc"> 재무적 손실 리스크
+                                                                                </p>
+                                                                                <div class="para type-2">
+                                                                                    <ul class="order-list design-1 usual-1 case-1 medium type-1 align-1">
+                                                                                        <li class="order-item">주기적으로 미래 현금흐름을 예측하여 적정 수준의 예금시재 유지</li>
+                                                                                        <li class="order-item">긴급자금 수혈과 관련하여 금융기관과 약정을 체결</li>
+                                                                                    </ul>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="accordion-item">
+                                                <div class="accordion-wrap">
+                                                    <div class="accordion-head">
+                                                        <a href="javascript:void(0)" class="accordion-button case-1">
+                                                            <div class="accordion-button-body">
+                                                                <em class="accordion-title">비재무<span class="small">사업연속성</span></em>
+                                                                <i class="accordion-icon">
+                                                                    <span class="blind">button</span>
+                                                                </i>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                    <div class="accordion-body">
+                                                        <div class="accordion-content">
+                                                            <div class="table-display design-2">
+                                                                <div class="table-list">
+                                                                    <div class="table-item">
+                                                                        <div class="table-wrap">
+                                                                            <div class="table-head">
+                                                                                <p class="name">공급망</p>
+                                                                            </div>
+                                                                            <div class="table-body">
+                                                                                <p class="para type-1">
+                                                                                    원재료 수급 및 생산 연속성 확보 실패 등으로 인한<br class="br-pc" /> 
+                                                                                    제품 납기 지연 리스크
+                                                                                </p>
+                                                                                <div class="para type-2">
+                                                                                    <ul class="order-list design-1 usual-1 case-1 medium type-1 align-1">
+                                                                                        <li class="order-item">공급연속성 비상사태(원부자재 공급 중단, 고객 공급 비상사태) 시나리오별 대응체계 구축 및 훈련</li>
+                                                                                        <li class="order-item">원부재료 공급업체 대상 IATF16949, ISO9001, ISO14001에 준하는 정기 평가 및 품질, 환경 감사</li>
+                                                                                        <li class="order-item">협력사 ESG 경영 역량 강화 컨설팅 지원 및 정기평가</li>
+                                                                                        <li class="order-item">정기적인 협력사 에너지 개선 방향 도출</li>
+                                                                                    </ul>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="table-item">
+                                                                        <div class="table-wrap">
+                                                                            <div class="table-head">
+                                                                                <p class="name">재난 및 안전</p>
+                                                                            </div>
+                                                                            <div class="table-body">
+                                                                                <p class="para type-1">
+                                                                                    지진, 화재 등 재난 발생 또는 작업장 내 안전 사고<br class="br-pc" /> 등으로 인해 발생할 수 있는 리스크
+                                                                                </p>
+                                                                                <div class="para type-2">
+                                                                                    <ul class="order-list design-1 usual-1 case-1 medium type-1 align-1">
+                                                                                        <li class="order-item">전사 안전리스크 관리 전담 조직 운영 (대표이사 직할의 CSO 주도하에 안전보건팀을 운영하여 본사 포함 전 사업장 대상 안전, 보건, 재해 시스템 관리 점검)</li>
+                                                                                        <li class="order-item">재해 및 안전사고 비상대응 조직 구축, 시나리오별 매뉴얼 및 복구조치사항 마련</li>
+                                                                                        <li class="order-item">공장화재, 폭발 등 사고 시나리오를 바탕으로 정기적인 민관합동 훈련</li>
+                                                                                        <li class="order-item">공장 全 직원 대상 매년 사고사례 교육, 위험물 취급법 교육 실시</li>
+                                                                                        <li class="order-item">공장 환경안전전담 조직을 통해 상시 공장 안전 순찰점 실시</li>
+                                                                                    </ul>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="table-item">
+                                                                        <div class="table-wrap">
+                                                                            <div class="table-head">
+                                                                                <p class="name">유동성</p>
+                                                                            </div>
+                                                                            <div class="table-body">
+                                                                                <p class="para type-1">
+                                                                                    온실가스 및 유해물질 배출 등 환경 규제에 대한 부적합한<br class="br-pc" /> 
+                                                                                    대응으로 인한 법적 제재 및 벌금 발생의 리스크
+                                                                                </p>
+                                                                                <div class="para type-2">
+                                                                                    <ul class="order-list design-1 usual-1 case-1 medium type-1 align-1">
+                                                                                        <li class="order-item">환경리스크 관리 전담 조직 운영</li>
+                                                                                        <li class="order-item">환경영향평가를 통한 정기적인 잠재 리스크 진단 및 예방</li>
+                                                                                        <li class="order-item">ISO 14001 인증 재심사 및 자체 검증 활동</li>
+                                                                                        <li class="order-item">화학물질 및 폐수 유출 등 환경 사고 시나리오별 정기적 대응 훈련</li>
+                                                                                        <li class="order-item">공장 환경안전전담 조직을 통해 상시 공장 순찰점검 실시</li>
+                                                                                    </ul>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="accordion-item">
+                                                <div class="accordion-wrap">
+                                                    <div class="accordion-head">
+                                                        <a href="javascript:void(0)" class="accordion-button case-1">
+                                                            <div class="accordion-button-body">
+                                                                <em class="accordion-title">비재무<span class="small">경영</span></em>
+                                                                <i class="accordion-icon">
+                                                                    <span class="blind">button</span>
+                                                                </i>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                    <div class="accordion-body">
+                                                        <div class="accordion-content">
+                                                            <div class="table-display design-2">
+                                                                <div class="table-list">
+                                                                    <div class="table-item">
+                                                                        <div class="table-wrap">
+                                                                            <div class="table-head">
+                                                                                <p class="name">기후변화</p>
+                                                                            </div>
+                                                                            <div class="table-body">
+                                                                                <p class="para type-1 case-2">
+                                                                                    배출량 관련 규제 리스크, 물리적 리스크 및<br class="br-pc"> 관련 사업 전환 리스크
+                                                                                </p>
+                                                                                <div class="para type-2">
+                                                                                    <ul class="order-list design-1 usual-1 case-1 medium type-1 align-1">
+                                                                                        <li class="order-item">기후변화리스크 관리 전담 조직 운영</li>
+                                                                                        <li class="order-item">관련 법규 변화 모니터링</li>
+                                                                                        <li class="order-item">감축목표의 수립 및 이행 관리</li>
+                                                                                        <li class="order-item">탄소자산관리시스템 통한 사업장 온실가스 배출량 모니터링 및 제품탄소배출량 산정</li>
+                                                                                        <li class="order-item">내부탄소가격을 활용하여 기후변화 위험 및 기회를 반영한 사업추진 방향 및 투자의사 결정</li>
+                                                                                    </ul>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="table-item">
+                                                                        <div class="table-wrap">
+                                                                            <div class="table-head">
+                                                                                <p class="name">품질관리</p>
+                                                                            </div>
+                                                                            <div class="table-body">
+                                                                                <p class="para type-1 case-2">
+                                                                                    4M(Man, Machine, Material, Method) 변경으로 인한 리스크, 지속적인 공급이나 납품에 영향을 주는 리스크, 부적합품이 발생되거나 유출될 가능성이 있는 리스크
+                                                                                </p>
+                                                                                <div class="para type-2">
+                                                                                    <ul class="order-list design-1 usual-1 case-1 medium type-1 align-1">
+                                                                                        <li class="order-item">타당성 평가 (변경관리 및 4M 변경으로 인한 영향)</li>
+                                                                                        <li class="order-item">품질 수준 모니터링</li>
+                                                                                        <li class="order-item">부적합품 처리 프로세스에 따른 관리</li>
+                                                                                        <li class="order-item">품질 관리 리스크 비상시나리오 수립 및 훈련</li>
+                                                                                    </ul>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="table-item">
+                                                                        <div class="table-wrap">
+                                                                            <div class="table-head">
+                                                                                <p class="name">인권</p>
+                                                                            </div>
+                                                                            <div class="table-body">
+                                                                                <p class="para type-1 case-2">
+                                                                                    인권침해 리스크, 인적자원 관리 리스크
+                                                                                </p>
+                                                                                <div class="para type-2">
+                                                                                    <ul class="order-list design-1 usual-1 case-1 medium type-1 align-1">
+                                                                                        <li class="order-item">주기적인 인권영향평가의 실시 및 개선 추진</li>
+                                                                                        <li class="order-item">인권방침 및 지침의 제정 및 배포</li>
+                                                                                        <li class="order-item">인권보호, 차별금지 등 교육의 주기적 실시</li>
+                                                                                        <li class="order-item">제보하기 시스템 운영</li>
+                                                                                    </ul>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="table-display design-2">
+                                                                <div class="table-list">
+                                                                    <div class="table-item">
+                                                                        <div class="table-wrap">
+                                                                            <div class="table-head">
+                                                                                <p class="name">보안</p>
+                                                                            </div>
+                                                                            <div class="table-body">
+                                                                                <p class="para type-1">
+                                                                                    외부로부터의 사이버 테러 혹은 내부 데이터 유출에<br class="br-pc"> 따른 정보 분실 발생 등의 리스크
+                                                                                </p>
+                                                                                <div class="para type-2">
+                                                                                    <ul class="order-list design-1 usual-1 case-1 medium type-1 align-1">
+                                                                                        <li class="order-item">보안 전담조직 운영</li>
+                                                                                        <li class="order-item">보안규정 및 운영기준 수립</li>
+                                                                                        <li class="order-item">문서중앙화 시스템(ECM)을 통한Knowledge Management</li>
+                                                                                        <li class="order-item">보안솔루션 복합기 도입, 전용 USB 사용, 모바일 단말기 카메라 통제 등 문서의 생성, 수정, 반출입 및 폐기의 全 과정에 대한 철저한 모니터링</li>
+                                                                                        <li class="order-item">정보보안 10대 수칙, 사내 보안가이드 정기적인 교육, 월 1회 이상 별도 IT 보안 교육 실시</li>
+                                                                                    </ul>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="table-item">
+                                                                        <div class="table-wrap">
+                                                                            <div class="table-head">
+                                                                                <p class="name">법률 및 윤리</p>
+                                                                            </div>
+                                                                            <div class="table-body">
+                                                                                <p class="para type-1">
+                                                                                    사업에 불리한 계약체결 및 소송 또는 불공정거래,<br /> 부정부패 등의 리스크
+                                                                                </p>
+                                                                                <div class="para type-2">
+                                                                                    <ul class="order-list design-1 usual-1 case-1 medium type-1 align-1">
+                                                                                        <li class="order-item">계약심사규정 준수 및 표준계약서의 활용을 통한 법률리스크 예방 및 소송사건 사례 전파를 통한 인식 제고</li>
+                                                                                        <li class="order-item">외환, 특허, 계약관리 등 현업실무교육을 통한 이해도 향상</li>
+                                                                                        <li class="order-item">청탁금지법, 하도급법, 공정거래법 등 반부패 및 윤리경영 교육</li>
+                                                                                        <li class="order-item">공정거래자율준수 편람 업데이트</li>
+                                                                                        <li class="order-item">입사자 전원 윤리경영서약서 작성을 통한 인식 제고</li>
+                                                                                        <li class="order-item">제보채널 운영</li>
+                                                                                    </ul>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="table-item">
+                                                                        <div class="table-wrap">
+                                                                            <div class="table-head">
+                                                                                <p class="name">기후변화</p>
+                                                                            </div>
+                                                                            <div class="table-body">
+                                                                                <p class="para type-1">
+                                                                                    오보 또는 부정적 커뮤니케이션으로 인한<br class="br-pc"> 기업 이미지 하락 등의 리스크
+                                                                                </p>
+                                                                                <div class="para type-2">
+                                                                                    <ul class="order-list design-1 usual-1 case-1 medium type-1 align-1">
+                                                                                        <li class="order-item">신규 입사자, 신입 승격자, 신임 팀장 대상 PR 리스크 대응 교육 실시</li>
+                                                                                        <li class="order-item">홍보담당자 대상 행동 원칙 및 행동프로세스, 사례교육 실시를 통한 인식 제고</li>
+                                                                                        <li class="order-item">브랜드마케팅 및 다양한 채널의 이해관계자 커뮤니케이션 실시</li>
+                                                                                    </ul>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="table-display design-2">
+                                                                <div class="table-list">
+                                                                    <div class="table-item">
+                                                                        <div class="table-wrap">
+                                                                            <div class="table-head">
+                                                                                <p class="name">마케팅 윤리</p>
+                                                                            </div>
+                                                                            <div class="table-body">
+                                                                                <p class="para type-1 case-2">
+                                                                                    광고나 마케팅시 정보의 허위/과장/축소나 정보의<br class="br-pc">
+                                                                                    인지와 습득에 취약한 계층을 고려하지 않은<br class="br-pc"> 
+                                                                                    정보 전달 등의 리스크
+                                                                                </p>
+                                                                                <div class="para type-2">
+                                                                                    <ul class="order-list design-1 usual-1 case-1 medium type-1 align-1">
+                                                                                        <li class="order-item">‘윤리적 마케팅 운영원칙’을 구축하여 운영</li>
+                                                                                        <li class="order-item">효성뿐만 아니라 광고 및 마케팅 업무를 위탁받아 운영하는 외부업체도 운영원칙을 존중하고 준용하도록 권장</li>
+                                                                                    </ul>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="table-item">
+                                                                        <div class="table-wrap">
+                                                                            <div class="table-head">
+                                                                                <p class="name">브랜드 / 상표</p>
+                                                                            </div>
+                                                                            <div class="table-body">
+                                                                                <p class="para type-1 case-2">
+                                                                                    브랜드/상표의 권리 침해나 가치 훼손 리스크
+                                                                                </p>
+                                                                                <div class="para type-2">
+                                                                                    <ul class="order-list design-1 usual-1 case-1 medium type-1 align-1">
+                                                                                        <li class="order-item">브랜드 및 상표의 보호와 가치 증진을 위해 별도의 가이드라인을 마련해 준수</li>
+                                                                                    </ul>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="table-item">
+                                                                        <div class="table-wrap">
+                                                                            <div class="table-head">
+                                                                                <p class="name">수주</p>
+                                                                            </div>
+                                                                            <div class="table-body">
+                                                                                <p class="para type-1 case-2">
+                                                                                    수금 조건, 계약 독소조항, 사양 불명확, 납기 미확보, 민원, 현지 국가 상황 등으로 인한 악성 수주 리스크
+                                                                                </p>
+                                                                                <div class="para type-2">
+                                                                                    <ul class="order-list design-1 usual-1 case-1 medium type-1 align-1">
+                                                                                        <li class="order-item">수주 심의, BAC(Bid Approval Committee) 운영</li>
+                                                                                    </ul>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="table-display design-2 case-2">
+                                                                <div class="table-list">
+                                                                    <div class="table-item">
+                                                                        <div class="table-wrap">
+                                                                            <div class="table-head">
+                                                                                <p class="name">경영일반</p>
+                                                                            </div>
+                                                                            <div class="table-body">
+                                                                                <p class="para type-1">
+                                                                                    담당자 혹은 시스템 오류로 인한 운영상의 리스크
+                                                                                </p>
+                                                                                <div class="para type-2">
+                                                                                    <ul class="order-list design-1 usual-1 case-1 medium type-1 align-1">
+                                                                                        <li class="order-item">ERP(전사자원관리)를 활용하여 경영 제반 활동들을 통합적으로 연계하여 관리</li>
+                                                                                        <li class="order-item">C-Cube 시스템 구축을 통한 체계적인 VOC의 관리 및 고객만족도 향상</li>
+                                                                                        <li class="order-item">COVID-19 리스크 관리 (회의체 비대면화, 유연근무제 및 IT 지원 확대, 대응 프로세스 구축 운영)</li>
+                                                                                    </ul>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+        <%-include('../include/kor/HTNCWK03FOOTER.ejs') %>
+    </body>
+</html>

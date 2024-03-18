@@ -1,0 +1,363 @@
+.text-guide-class-name {
+    &.guide-title-name {
+        display: inline-block;
+        text-align: left;
+    }
+    .blur {
+        opacity: .5;
+    }
+}
+.title {
+    font-size: 0;
+
+    &.design-1 {
+
+        // Case
+        &.case-1 {
+
+        }
+        &.case-2 {
+            .dif-font {
+                font-family: 'Poppins';
+            }
+            
+            &::after {
+                content: '';
+                display: block;
+                width: 100%;
+                height: 0.1rem;
+                margin-top: 6rem;
+                background-color: color(achromatic, 451);
+                @include mobile {
+                    margin-top: 3.2rem;
+                }
+            }
+        }
+    }
+
+    // Font 
+     &.small-v14 {
+        .name {
+            font-size: 3.2rem;
+            font-weight: 700;
+            line-height: 4.8rem;
+            font-family: 'Hyosung';
+            @include mobile {
+                font-size: 2.4rem;
+                line-height: 3.6rem;
+            }
+        }
+    }
+    &.small-v13 {
+        .name {
+            font-size: 2.4rem;
+            font-weight: 700;
+            line-height: 2.8rem;
+            font-family: 'Hyosung';
+            @include mobile {
+                font-size: 1.8rem;
+                line-height: 3rem;
+            }
+        }
+    }
+    &.small-v12 {
+        .name {
+            font-size: 2.8rem;
+            font-weight: 700;
+            line-height: 4.8rem;
+            font-family: 'Hyosung';
+            @include mobile {
+                font-size: 2.2rem;
+                line-height: 3.2rem;
+            }
+        }
+    }
+    &.small-v11 {
+        .name {
+            font-size: 4rem;
+            font-weight: 700;
+            line-height: 7.2rem;
+            font-family: 'Hyosung';
+            @include mobile {
+                font-size: 2.8rem;
+                line-height: 4rem;
+            }
+        }
+    }
+    &.small-v10 {
+        .name {
+            font-size: 4.8rem;
+            font-weight: 700;
+            line-height: 6.4rem;
+            font-family: 'Hyosung';
+            @include mobile {
+                font-size: 3.2rem;
+                font-weight: 700;
+                line-height: 4rem;
+            }
+        }
+    }
+    &.small-v9 {
+        .name {
+            font-size: 1.8rem;
+            font-weight: 700;
+            line-height: 3.2rem;
+            @include mobile {
+                font-size: 1.4rem;
+                line-height: 2.4rem;
+            }
+        }
+    }
+    &.small-v8 {
+        .name {
+            font-family: 'Hyosung';
+            font-size: 2.4rem;
+            font-weight: 500;
+            line-height: 3.6rem;
+            @include mobile {
+                font-size: 1.8rem;
+                font-weight: 700;
+                line-height: 3rem;
+            }
+        }
+    }
+    &.small-v7 {
+        .name {
+            font-family: 'Hyosung';
+            font-size: 2.8rem;
+            font-weight: 700;
+            line-height: 4.2rem;
+            @include mobile {
+                font-size: 1.8rem;
+                line-height: 3rem;
+            }
+        }
+    }
+    &.small-v6 {
+        .name {
+            font-family: 'Hyosung';
+            font-size: 2rem;
+            font-weight: 700;
+            line-height: 3.2rem;
+        }
+    }
+    &.small-v5 {
+        .name {
+            font-family: 'Hyosung';
+            font-size: 2.2rem;
+            font-weight: 700;
+            line-height: 3.2rem;
+        }
+    }
+    &.small-v4 {
+        .name {
+            font-family: 'Hyosung';
+            font-size: 2.4rem;
+            font-weight: 700;
+            line-height: 3.6rem;
+            @include mobile {
+                font-size: 1.6rem;
+                line-height: 2.6rem;
+            }
+        }
+    }
+    &.small-v3 {
+        .name {
+            font-family: 'Hyosung';
+            font-size: 2.8rem;
+            font-weight: 700;
+            line-height: 3.6rem;
+            @include mobile {
+                font-size: 2.4rem;
+            }
+        }
+    }
+    &.small-v2 {
+        .name {
+            font-family: 'Hyosung';
+            font-size: 3.2rem;
+            font-weight: 700;
+            line-height: 4.8rem;
+            @include mobile {
+                font-size: 1.8rem;
+                line-height: 3rem;
+            }
+        }
+    }
+    &.small-v1 {
+        .name {
+            font-family: 'Hyosung';
+            font-size: 4rem;
+            font-weight: 700;
+            line-height: 6rem;
+        }
+    }
+    &.small {
+        .name {
+            font-family: 'Poppins';
+            font-size: 5rem;
+            font-weight: 700;
+            line-height: 6.8rem;
+        }
+    }
+    &.medium {
+        .name {
+            font-family: 'Hyosung';
+            font-size: 5.2rem;
+            font-weight: 700;
+            line-height: 7.2rem;
+            @include mobile {
+                font-size: 3.2rem;
+                line-height: 4rem;
+            }
+        }
+    }
+    &.large {
+        .name {
+            font-family: "Hyosung";
+            font-size: 5.6rem;
+            font-weight: 700;
+            line-height: 7.2rem;
+            @include mobile {
+                font-size: 3.2rem;
+                line-height: 4rem;
+            }
+        }
+    }
+    &.large-v1 {
+        .name {
+            font-family: 'Poppins';
+            font-size: 6.4rem;
+            font-weight: 700;
+            line-height: 8.6rem;
+        }
+    }
+    &.large-v2 {
+        .name {
+            font-size: 6.5rem;
+            font-weight: 700;
+            line-height: 7rem;
+        }
+    }
+    &.large-v3 {
+        .name {
+            font-family: 'Poppins';
+            font-size: 7.2rem;
+            font-weight: 600;
+            line-height: 9.2rem;
+        }
+    }
+    &.large-v4 {
+        .name {
+            font-family: 'Poppins';
+            font-size: 8rem;
+            font-weight: 700;
+            line-height: 10.6rem;
+            // letter-spacing: -0.48rem;
+            @include mobile {
+                font-size: 3.2rem;
+                line-height: 4rem;
+            }
+        }
+    }
+    &.large-v5 {
+        .name {
+            font-family: 'Hyosung';
+            font-size: 6.4rem;
+            font-weight: 700;
+            line-height: 7.6rem;
+        }
+    }
+    &.large-v6 {
+        .name {
+            font-family: 'Poppins';
+            font-size: 5.6rem;
+            font-weight: 700;
+            line-height: 7.2rem;
+            @include mobile {
+                font-size: 3.2rem;
+                line-height: 4rem;
+            }
+        }
+    }
+
+    // Align
+    &.align-1 {
+        text-align: left;
+    }
+    &.align-2 {
+        text-align: right;
+    }
+    &.align-3 {
+        text-align: center;
+    }
+    &.align-4 {
+        text-align: center;
+        @include mobile {
+            text-align-last: left;
+        }
+    }
+    &.align-5 {
+        text-align: left;
+        @include mobile {
+            text-align: center;
+        }
+    }
+
+    // Color
+    &.color-1 {
+        .name {
+            color: color(achromatic, 999);
+        }
+    }
+    &.color-2 {
+        .name {
+            color: color(achromatic, 0);
+        }
+    }
+    &.color-3 {
+        .name {
+            color: color(chromatic, 266);
+        }
+    }
+    &.color-4 {
+        .name {
+            color: color(chromatic, 434);
+        }
+    }
+    &.color-5 {
+        .name {
+            color: color(chromatic, 584);
+        }
+    }
+    &.color-6 {
+        .name {
+            color: color(chromatic, 784);
+        }
+    }
+    &.color-7 {
+        .name {
+            color: color(achromatic, 157);
+        }
+    }
+    &.color-8 {
+        .name {
+            color: color(chromatic, 560);
+        }
+    }
+    &.color-9 {
+        .name {
+            color: color(chromatic, 266);
+        }
+    }
+    &.color-10 {
+        .name {
+            color: color(achromatic, 850);
+        }
+    }
+    &.color-11 {
+        .name {
+            color: color(chromatic, 769);
+        }
+    }
+}

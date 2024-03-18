@@ -1,0 +1,907 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <%-include('../include/kor/HTNCWK00HEADMETACOMMON.ejs') %>
+        <%-include('../meta-id/kor/HTNCWKD40D20W01.ejs') %>
+        <%-include('../include/kor/HTNCWK00HEADSTYLE.ejs') %>
+        <%-include('../include/kor/HTNCWK00HEADFAVICON.ejs') %>
+        <%-include('../include/kor/HTNCWK00HEADSCRIPTLIBRARY.ejs') %>
+        <%-include('../include/kor/HTNCWK00HEADSCRIPTGSAP.ejs') %>
+        <%-include('../include/kor/HTNCWK00HEADSCRIPTLOADER.ejs') %>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                scrollEvent();
+                resizeEvent();
+                tncAccordion();
+                tabFunction();
+                tabSwiper('.tab-display.design-2 .tab-swiper', 10)
+                thumbSwiper('.thumbnail-display.design-8 .tnumbSwiper', 6);
+                thumbnailAni();
+
+                subPageIntroWheel_01(); // 서브 공통 MouseWheel naviDepth3, naviDepth4
+                localInteraction_04_01(); // 서브 공통 Info Interaction
+                naviDepth3_Interaction_01(); // 서브 공통 naviDepth3 fixed,  naviDepth4 따라 내려옴
+
+                contentsSubScrollEventCustom(); // 서브 공통 Section Active
+            });
+        
+            function scrollEvent(){
+                window.addEventListener('scroll', () => {
+                    contentsSubScrollEventCustom();
+                });
+            }
+
+            function resizeEvent(){
+                window.addEventListener('resize', () => {
+                    contentsSubScrollEventCustom();
+                });
+            }
+
+            function thumbnailAni() {
+                const article3Wrap = $('.contents-article.contents-article3');
+                const thumbnailAniItem = $('.thumbnail-display.design-8 .thumbnail-list.case-1 .thumbnail-item');
+
+                // PC animation
+                const tl = gsap.timeline({
+                    scrollTrigger: {
+                    id: "article3-ani",
+                    trigger: article3Wrap,
+                    start: "-10% top",
+                    end: "65% top",
+                    toggleActions: "play none none reverse",
+                    scrub: 1,
+                    // markers: true,
+                    }
+                });
+
+                tl
+                .to(thumbnailAniItem.find('.img'), {
+                    top: "35%",
+                })
+            }
+        </script>
+    </head>
+    <body class="tnc-site">
+        <%-include('../include/kor/HTNCWK01HEADER.ejs') %>
+        <main id="container" class="container tnc HTNCWKD40D20W01 sub">
+            <h2 class="blind">컨테이너 영역</h2>
+            <div class="container-inner">
+                <section class="contents-section contents-section1">
+                    <div class="contents-section-inner">
+                        <div class="local sustainability-common" local-interaction="sustainability-01">
+                            <div class="local-head design-1">
+                                <div class="local-head-wrap">
+                                    <div class="local-subject">
+                                        <h2 class="local-name">
+                                            <span class="wbr">Environmental</span>
+                                            <span class="wbr hide">그린경영</span>
+                                        </h2>
+                                    </div>
+                                    <div class="local-subject">
+                                        <h2 class="local-name">
+                                            <span class="wbr hide">Environmental</span>
+                                            <span class="wbr">그린경영</span>
+                                        </h2>
+                                    </div>
+                                    <picture class="local-figure">
+                                        <source media="(max-width: 1023px)" srcset="../../assets/images/photo/sustainability/green/local-mo.jpg">
+                                        <source media="(max-width: 1920px)" srcset="../../assets/images/photo/sustainability/green/local-pc.jpg">
+                                        <img src="../../assets/images/photo/sustainability/green/local-pc.jpg" alt=" ">
+                                    </picture>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <nav class="navi depth3">
+                    <div class="navi-wrap">
+                        <div class="navi-subject"><a href="#" title="현재 선택된 항목" class="navi-name">그린경영</a></div>
+                        <div class="tab-display">
+                            <ul class="tab-list">
+                                <li class="tab-item current"><a href="#" class="tab-text">그린경영</a></li>
+                                <li class="tab-item"><a href="#" class="tab-text">기후변화 대응</a></li>
+                                <li class="tab-item"><a href="#" class="tab-text">자원순환</a></li>
+                                <li class="tab-item"><a href="#" class="tab-text">오염저감</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+                <section class="contents-section contents-section2">
+                    <div class="contents-section-inner">
+                        <div class="contents-section-head">
+                            <div class="data-display design-1 case-1 color-2 align-3">
+                                <ul class="data-list">
+                                    <li class="data-item">
+                                        <div class="data-wrap">
+                                            <div class="data-head">
+                                                <h3 class="title design-1 case-1 align-4 medium">
+                                                    <em class="name">그린경영<br class="br-mo" /> Vision 2030</em>
+                                                </h3>
+                                            </div>
+                                            <div class="data-body">
+                                                <p class="data-para">
+                                                    효성은 인류의 보다 나은 생활을 선도하는 친환경 기업이 되고자 그린경영 Vision 2030을 구축하였습니다.<br class="br-pc" />
+                                                    온실가스 감축, 친환경 기술 개발 및 시장 확대, 친환경 기업문화 조성, 이해관계자 신뢰 제고라는 네 가지 목표를 설정하고,<br class="br-pc" />
+                                                    각 목표별 세부 추진 과제를 상정하여 전사 차원의 기후변화 대응 전략을 수립 및 운영하고 있습니다.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="contents-section-body">
+                            <div class="contents-article contents-article1">
+                                <div class="contents-article-inner">
+                                    <div class="accordion-contents-wrap">
+                                        <div class="data-display design-1 case-15 color-2">
+                                            <ul class="data-list">
+                                                <li class="data-item">
+                                                    <div class="data-wrap">
+                                                        <div class="data-head">
+                                                            <h3 class="title design-1 case-1 small-v3">
+                                                                <em class="name">인류의 보다 나은 생활을 선도하는 친환경 기업 구현 </em>
+                                                            </h3>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="accordion-display design-2">
+                                            <ul class="accordion-list">
+                                                <li class="accordion-item">
+                                                    <div class="accordion-wrap">
+                                                        <div class="accordion-head">
+                                                            <a href="javascript:void(0)" class="accordion-button">
+                                                                <div class="accordion-button-body">
+                                                                    <em class="accordion-title">2030년까지 ’18년 배출량 대비 14.5% 감축</em>
+                                                                    <span class="button design-1 case-6 color-1 icon-down-arrow02">
+                                                                        <i class="button-text-core">
+                                                                            <span class="blind">icon</span>
+                                                                        </i>
+                                                                    </span>
+                                                                </div>
+                                                            </a>
+                                                        </div>
+                                                        <div class="accordion-body">
+                                                            <div class="accordion-content">
+                                                                <ul>
+                                                                    <li>신기후 체제에 따른 SDM* 등 외부 감축사업을 통한 온실가스 감축</li>
+                                                                    <li>사업장 에너지 절감 활동과 신재생에너지 도입 확대로 온실가스 감축</li>
+                                                                    <li>사내 탄소자산관리시스템 및 제품 탄소발자국 산정시스템 운영을 통한 효율적 온실가스 관리</li>
+                                                                    <li>기후변화 위기 및 기회 식별 프로세스 구축을 통해 리스크 헤지 및 기회 발굴</li>
+                                                                    <li class="small">* SDM(Sustainable Development Mechanism) 파리협정상의 지속가능개발체제</li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="accordion-item">
+                                                    <div class="accordion-wrap">
+                                                        <div class="accordion-head">
+                                                            <a href="javascript:void(0)" class="accordion-button">
+                                                                <div class="accordion-button-body">
+                                                                    <em class="accordion-title">친환경 기술 개발을 통한 시장 개척 및 사업 확대</em>
+                                                                    <span class="button design-1 case-6 color-1 icon-down-arrow02">
+                                                                        <i class="button-text-core">
+                                                                            <span class="blind">icon</span>
+                                                                        </i>
+                                                                    </span>
+                                                                </div>
+                                                            </a>
+                                                        </div>
+                                                        <div class="accordion-body">
+                                                            <div class="accordion-content">
+                                                                <ul>
+                                                                    <li>재생 및 친환경 섬유 제품 라인업 강화</li>
+                                                                    <li>친환경 철강제품 및 친환경 화학소재의 Biz 확대</li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="accordion-item">
+                                                    <div class="accordion-wrap">
+                                                        <div class="accordion-head">
+                                                            <a href="javascript:void(0)" class="accordion-button">
+                                                                <div class="accordion-button-body">
+                                                                    <em class="accordion-title">친환경 인프라 구축을 위한 기업문화 조성</em>
+                                                                    <span class="button design-1 case-6 color-1 icon-down-arrow02">
+                                                                        <i class="button-text-core">
+                                                                            <span class="blind">icon</span>
+                                                                        </i>
+                                                                    </span>
+                                                                </div>
+                                                            </a>
+                                                        </div>
+                                                        <div class="accordion-body">
+                                                            <div class="accordion-content">
+                                                                <ul>
+                                                                    <li>수질 및 대기 오염물질 관리 체계 고도화를 통한 환경오염영향 최소화 추구</li>
+                                                                    <li>용수 재활용을 통한 사용량 절감 및 자원재활용을 통한 폐기물 배출량 저감 추진</li>
+                                                                    <li>친환경 섬유 value-chain 협력사의 역량 강화를 위한 상생협력 및 동반성장 지속 추진</li>
+                                                                    <li>친환경 및 녹색기술 제품 구매확대를 통한 친환경 인프라구축</li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="accordion-item">
+                                                    <div class="accordion-wrap">
+                                                        <div class="accordion-head">
+                                                            <a href="javascript:void(0)" class="accordion-button">
+                                                                <div class="accordion-button-body">
+                                                                    <em class="accordion-title">투명한 정보 공개를 통한 이해관계자 신뢰 제고</em>
+                                                                    <span class="button design-1 case-6 color-1 icon-down-arrow02">
+                                                                        <i class="button-text-core">
+                                                                            <span class="blind">icon</span>
+                                                                        </i>
+                                                                    </span>
+                                                                </div>
+                                                            </a>
+                                                        </div>
+                                                        <div class="accordion-body">
+                                                            <div class="accordion-content">
+                                                                <ul>
+                                                                    <li>녹색 및 친환경 인증 확대를 통한 그린경영체계 구축</li>
+                                                                    <li>CDP** 및 환경정보공개제도 참여와 지속가능경영보고서 발간을 통한 이해관계자 신뢰 구축</li>
+                                                                    <li>기후변화 관련 국제 이니셔티브 자발적 참여</li>
+                                                                    <li>지역 주민과의 원활한 소통 및 1사 1하천/공원/산 등 지역 자연정화 활동 추진</li>
+                                                                    <li class="small">**CDP(Carbon Disclosure Project) 탄소정보 공개 프로젝트</li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="contents-article contents-article2">
+                                <div class="contents-article-inner">
+                                    <div class="data-display design-1 case-3 align-3 color-10">
+                                        <ul class="data-list">
+                                            <li class="data-item">
+                                                <div class="data-wrap">
+                                                    <div class="data-head">
+                                                        <h3 class="title design-1 case-1 small-v2">
+                                                            <em class="name">지속가능한 구매방침</em>
+                                                        </h3>
+                                                    </div>
+                                                    <div class="data-body">
+                                                        <p class="data-para">
+                                                            효성티앤씨㈜는 환경, 사회적 책임을 충실하게 수행하고자 노력하며<br class="br-pc" /> 사업활동에 따른 부정적인 영향을 최소화 하도록 구매활동시에 다음 원칙을 준수합니다.
+                                                        </p>
+                                                    </div>
+                                                    <div class="data-aside">
+                                                        <div class="thumbnail-display design-7">
+                                                            <div class="thumbnail-list">
+                                                                <div class="thumbnail-item">
+                                                                    <div class="thumbnail-wrap">
+                                                                        <div class="thumbnail-head">
+                                                                            <em class="num">1</em>
+                                                                        </div>
+                                                                        <div class="thumbnail-body">
+                                                                            <p class="para">
+                                                                                기후변화대응은 물론,<br>
+                                                                                수질 오염, 토양 오염, 대기 오염 등 부정적인 환경
+                                                                                임팩트를 예방할 수 있는 역량과 실행의지를
+                                                                                보유한 공급업체를 선정합니다.
+                                                                            </p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="thumbnail-item">
+                                                                    <div class="thumbnail-wrap">
+                                                                        <div class="thumbnail-head">
+                                                                            <em class="num">2</em>
+                                                                        </div>
+                                                                        <div class="thumbnail-body">
+                                                                            <p class="para">
+                                                                                국제노동기구(ILO)의 노동규범을 준수하는
+                                                                                근로조건, 다양성 보호, 인권 보호, 윤리경영 등
+                                                                                사회적 책임을 완수하는 공급업체를 선정합니다.
+                                                                            </p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="thumbnail-item">
+                                                                    <div class="thumbnail-wrap">
+                                                                        <div class="thumbnail-head">
+                                                                            <em class="num">3</em>
+                                                                        </div>
+                                                                        <div class="thumbnail-body">
+                                                                            <p class="para">
+                                                                                회사의 임직원은 물론 사용자의 안전을 고려하는
+                                                                                공급업체를 선정합니다.
+                                                                            </p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="contents-article contents-article3">
+                                <div class="contents-article-inner">
+                                    <div class="data-display design-1 case-3 align-3 color-10">
+                                        <ul class="data-list">
+                                            <li class="data-item">
+                                                <div class="data-wrap">
+                                                    <div class="data-head">
+                                                        <h3 class="title design-1 case-1 small-v2">
+                                                            <em class="name">녹색 구매방침</em>
+                                                        </h3>
+                                                    </div>
+                                                    <div class="data-body">
+                                                        <p class="data-para">
+                                                            효성티앤씨㈜는 자원 절약에 기여하고 환경 영향을 최소화하는 녹색 구매 활동을 통해<br class="br-pc" /> 당사 제품의 이용자와 사회에 대한 책임을 다하고자 구매 활동 시에 다음의 원칙을 준수합니다.
+                                                        </p>
+                                                    </div>
+                                                    <div class="data-aside">
+                                                        <div class="thumbnail-display design-8">
+                                                            <div class="thumbnail-swiper swiper tnumbSwiper">
+                                                                <div class="thumbnail-list swiper-wrapper">
+                                                                    <div class="thumbnail-item swiper-slide">
+                                                                        <div class="thumbnail-wrap">
+                                                                            <div class="thumbnail-head">
+                                                                                <em class="num">1</em>
+                                                                            </div>
+                                                                            <div class="thumbnail-body">
+                                                                                <p class="para">
+                                                                                    자원 절약을 위해<br class="br-mo"> 불필요한 구매는 지양하여
+                                                                                    가능한 잔량이 나오지 않도록 합니다.
+                                                                                </p>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="thumbnail-item swiper-slide">
+                                                                        <div class="thumbnail-wrap">
+                                                                            <div class="thumbnail-head">
+                                                                                <em class="num">2</em>
+                                                                            </div>
+                                                                            <div class="thumbnail-body">
+                                                                                <p class="para">
+                                                                                    품질과 가격 이외에 제품의 환경성을 검토하고 친환경 상품을 우대합니다.
+                                                                                </p>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="thumbnail-item swiper-slide">
+                                                                        <div class="thumbnail-wrap">
+                                                                            <div class="thumbnail-head">
+                                                                                <em class="num">3</em>
+                                                                            </div>
+                                                                            <div class="thumbnail-body">
+                                                                                <p class="para">
+                                                                                    녹색구매 확대를 위해 유해화학물질 저사용 제품이나 폐기물 저감 제품, 자원소모 축소 제품 등을 발굴하기 위해 지속적인 노력을 기울입니다.
+                                                                                </p>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="thumbnail-item swiper-slide">
+                                                                        <div class="thumbnail-wrap">
+                                                                            <div class="thumbnail-head">
+                                                                                <em class="num">4</em>
+                                                                            </div>
+                                                                            <div class="thumbnail-body">
+                                                                                <p class="para">
+                                                                                    당사의 녹색 구매 방침을 협력사에 공유하고 납품 제품의 환경성 개선 활동을 독려합니다.
+                                                                                </p>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="thumbnail-list case-1">
+                                                                    <div class="thumbnail-item">
+                                                                        <img class="img" src="../../assets/images/photo/sustainability/green/img-green-thumb-08-2.png" alt=" ">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="contents-article contents-article4">
+                                <div class="contents-article-inner">
+                                    <div class="data-display design-1 case-3 align-1 color-7">
+                                        <ul class="data-list">
+                                            <li class="data-item">
+                                                <div class="data-wrap">
+                                                    <div class="data-head">
+                                                        <h3 class="title design-1 case-1 small-v2 color-9">
+                                                            <em class="name">그린경영 추진 조직</em>
+                                                        </h3>
+                                                    </div>
+                                                    <div class="data-body">
+                                                        <p class="data-para">
+                                                            효성티앤씨㈜는 2021 하반기에 기존 의사결정기구인 EHS위원회와 CSR위원회를 개편해 대표이사 산하 ESG경영추진위원회를 신설하였으며, 주요 안건은 이사회에 상정하여 보고하고 있습니다. ESG경영추진위원회는 반기 1회 개최하며 ESG경영 체계수립, 온실가스 감축 목표 및 배출권 과부족, 공급망 역량 향상을 위한 협력사 상생 사업, 친환경 제품 및 기술개발, 그린경영을 위한 ERP시스템과 환경 설비 투자 등 기후변화를 비롯한 주요 ESG 관련 법제적 환경 변화에 대한 다양한 대응 활동을 안건으로 다루고 있습니다. 전담조직으로는 대표이사 직할의 ESG경영팀과 경영관리팀 내 그린경영담당을 두어 그린경영을 비롯한 ESG경영 전략 수립, 실행 관리 및 성과 공개를 하고 있습니다. 사업장 내 동력팀(울산공장)과 생산팀(구미공장)은 에너지 사용량 절감과 온실가스 감축의 실행을 담당하며, 환경안전팀은 사업장의 환경오염배출시설의 관리 및 오염물질 배출 저감활동을 담당합니다.
+                                                        </p>
+                                                    </div>
+                                                    <div class="data-aside">
+                                                        <div class="diagram-display design-1">
+                                                            <div class="diagram-wrap">
+                                                                <div class="diagram-body">
+                                                                    <picture class="picture">
+                                                                        <source media="(max-width: 1023px)" srcset="../../assets/images/diagram/sustainability/environmental/diagram-green-06-mo.svg">
+                                                                        <source media="(max-width: 1920px)" srcset="../../assets/images/diagram/sustainability/environmental/diagram-green-06-pc.svg">
+                                                                        <img class="img" src="../../assets/images/diagram/sustainability/environmental/diagram-green-06-pc.svg" alt="아래 항목 참고">
+                                                                    </picture>
+                                                                </div>
+                                                                <div class="diagram-footer">
+                                                                    <h4>의사결정기구</h4>
+                                                                    <ul>
+                                                                        <li>
+                                                                            <em>이사회 (ESG경영위원회)</em>
+                                                                            <ol>
+                                                                                <li>ESG경영추진위원회</li>
+                                                                                <li>R&amp;D 위원회</li>
+                                                                            </ol>
+                                                                        </li>
+                                                                    </ul>
+                                                                    <h4>실무조직 및 역할</h4>
+                                                                    <ul>
+                                                                        <li>
+                                                                            <em>ESG경영팀 전략 수립 및 성과 공개</em>
+                                                                            <em>전략 수립 및 성과 공개</em>
+                                                                        </li>
+                                                                        <li>
+                                                                            <em>경영관리팀 (그린경영 담당)</em>
+                                                                            <em>전략 추진 및 실행 관리</em>
+                                                                        </li>
+                                                                        <li>
+                                                                            <em>동력팀/생산팀</em>
+                                                                            <em>에너지, 온실가스 감축사업 발굴 및 실행</em>
+                                                                        </li>
+                                                                        <li>
+                                                                            <em>환경안전팀</em>
+                                                                            <em>사업장 환경오염저감 활동 및 관리</em>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="contents-article contents-article5">
+                                <div class="contents-article-inner">
+                                    <div class="data-display design-1 case-3 align-3 color-10">
+                                        <ul class="data-list">
+                                            <li class="data-item">
+                                                <div class="data-wrap">
+                                                    <div class="data-head">
+                                                        <h3 class="title design-1 case-1 small-v2 color-4">
+                                                            <em class="name">환경경영시스템</em>
+                                                        </h3>
+                                                    </div>
+                                                    <div class="data-body">
+                                                        <p class="data-para">
+                                                            효성티앤씨㈜는 ISO14001(환경경영시스템)에 의거하여<br class="br-pc" /> 환경 운영관리 프로세스를 기반으로 한 환경경영시스템을 구축 및 운영하고 있습니다.
+                                                        </p>
+                                                    </div>
+                                                    <div class="data-aside">
+                                                        <div class="diagram-display design-1">
+                                                            <div class="diagram-wrap">
+                                                                <div class="diagram-body">
+                                                                    <picture class="picture">
+                                                                        <source media="(max-width: 1023px)" srcset="../../assets/images/diagram/sustainability/environmental/diagram-green-02-mo.svg">
+                                                                        <source media="(max-width: 1920px)" srcset="../../assets/images/diagram/sustainability/environmental/diagram-green-02-pc.svg">
+                                                                        <img class="img" src="../../assets/images/diagram/sustainability/environmental/diagram-green-02-pc.svg" alt="아래 항목 참고">
+                                                                    </picture>
+                                                                </div>
+                                                                <div class="diagram-footer">
+                                                                    <ol>
+                                                                        <li>A. 환경 운영관리 프로세스
+                                                                            <ol>
+                                                                                <li>조직상황관리</li>
+                                                                                <li>리스크관리</li>
+                                                                                <li>영향평가</li>
+                                                                                <li>법규 및 방침 관리</li>
+                                                                                <li>환경 인허가</li>
+                                                                                <li>그린경영 운영활동 수질환경, 대기환경, 폐기물, 화학물질 관리</li>
+                                                                                <li>준수평가관리</li>
+                                                                                <li>변경관리</li>
+                                                                            </ol>
+                                                                        </li>
+                                                                        <li>B. 그린경영 의사소통</li>
+                                                                        <li>C. 교육 및 훈련</li>
+                                                                        <li>D. 환경 · 안전 비상대응</li>
+                                                                    </ol>
+                                                                    <ol>
+                                                                        <li>상황별 시나리오 구축</li>
+                                                                        <li>비상대응 훈련</li>
+                                                                        <li>비상대응 체계 개선</li>
+                                                                    </ol>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="contents-article contents-article6 case-1">
+                                <div class="contents-article-inner">
+                                    <div class="data-display design-1 case-3 align-1 color-12">
+                                        <div class="data-list">
+                                            <div class="data-item">
+                                                <div class="data-wrap">
+                                                    <div class="data-head">
+                                                        <h3 class="title design-1 case-1 small-v2 color-1">
+                                                            <em class="name">친환경 제품<br /> 및 기술 개발 전략</em>
+                                                        </h3>
+                                                    </div>
+                                                    <div class="data-body">
+                                                        <p class="data-para">
+                                                            효성티앤씨㈜는 전사 핵심가치 중 하나인 혁신 정신과 Vision 2030에 따른 ‘친환경 기술 개발을 통한 시장 개척 및 사업 확대’ 전략을 기반으로<br class="br-pc" /> 친환경 기술 및 제품 연구개발에 총력을 기울이고 있으며, 이를 통해 미래 신성장동력을 확보하고 지속가능한 성장을 실현하고 있습니다.
+                                                        </p>
+                                                    </div>
+                                                    <div class="data-aside">
+                                                        <div class="diagram-display design-1">
+                                                            <div class="diagram-wrap">
+                                                                <div class="diagram-body">
+                                                                    <picture class="picture">
+                                                                        <source media="(max-width: 1023px)" srcset="../../assets/images/diagram/sustainability/environmental/diagram-green-03-mo.svg">
+                                                                        <source media="(max-width: 1920px)" srcset="../../assets/images/diagram/sustainability/environmental/diagram-green-03-pc.svg">
+                                                                        <img class="img" src="../../assets/images/diagram/sustainability/environmental/diagram-green-03-pc.svg" alt="아래 항목 참고">
+                                                                    </picture>
+                                                                </div>
+                                                                <div class="diagram-footer">
+                                                                    <h4>친환경 제품/기술 개발 </h4>
+                                                                    <ul>
+                                                                        <li>
+                                                                            <em>Hyosung Way 혁신</em>
+                                                                            <p>“새로운 가능성에 도전하다 "</p>
+                                                                        </li>
+                                                                        <li>
+                                                                            <em>VISION 2030 전략</em>
+                                                                            <p>친환경 기술 개발을 통한 시장 개척 및 사업 확대</p>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="data-tab">
+                                                        <div class="tab-display design-1">
+                                                            <div class="tab-list form-1">
+                                                                <a href="javascript:void(0)" class="tab form-1 case-1 fill-1 color-1 align-5 icon-plus01 active">
+                                                                    <div class="tab-inner">
+                                                                        <div class="text-wrap">
+                                                                            <span class="tab-text-cate small">category</span>
+                                                                            <span class="tab-text-title large">섬유 부문</span>
+                                                                        </div>
+                                                                    </div>
+                                                                </a>
+                                                                <a href="javascript:void(0)" class="tab form-1 case-1 fill-2 color-2 align-5 icon-plus01">
+                                                                    <div class="tab-inner">
+                                                                        <div class="text-wrap">
+                                                                            <span class="tab-text-cate small">Trading</span>
+                                                                            <span class="tab-text-title large">무역 부문</span>
+                                                                        </div>
+                                                                    </div>
+                                                                </a>
+                                                            </div>
+                                                            <div class="board-list">
+                                                                <div class="board-display design-1 case-1 style-1">
+                                                                    <div class="board-wrap">
+                                                                        <div class="board-inner">
+                                                                            <div class="board-head">
+                                                                                <span class="board-above medium bold color-002">재생 및 친환경</span>
+                                                                                <strong class="board-title large bold color-506">
+                                                                                    섬유 제품 라인업 강화
+                                                                                </strong>
+                                                                            </div>
+                                                                            <div class="board-body">
+                                                                                <p class="board-para small normal color-001">효성티앤씨㈜는 전방산업인 패션업체들과 긴밀한 협조를 통해 재활용 원료를 사용하여 생산하는 친환경 원사 도입에 앞장서고 있습니다. 또한 스판덱스가 화석 원료 대신 친환경 바이오 원료를 통해 생산될 수 있도록 지속적인 투자를 진행하고 있습니다. 2021년에는 투명 폐페트병을 재활용한 리젠 폴리에스터(regen Polyester), 생산 공정 부산물을 재활용한 리젠 스판덱스(regen Spandex), 비식용 식재료를 원재료로 한 바이오 스판덱스 총 3개 제품과 기존 일반 제품에 대해, 제품 전 과정 중 원부자재 포장재 제조 및 수송, 제품제조 단계의 제품 탄소발자국을 산정하였습니다.<br /> 그 결과, 기존 일반 제품 대비 리젠 오션 나일론은 약 73%, 리젠 폴리에스터는 약 67%, 리젠 스판덱스는 약 67%, 리젠 바이오 베이스드 스판덱스는  약 20% 이산화탄소 배출 저감효과가 있는 것으로 산정되었습니다. 그리고 리젠 바이오 베이스드 스판덱스는 연료를 30% 대체하기도 합니다. 또한, 효성티앤씨는 전 세계 35개국 250개 이상 글로벌 기업들이 가입되어 있는 지속가능의류연합인 SAC(Sustainable Apparel Coalition)가 개발한 환경영향평가 지수인 ‘Higg Index’의 MSI(Material Sustainability Index) 부문에 바이오 스판덱스를 등록하며 기후변화 대응에 책임 있는 일원으로서 지속적으로 노력하고 있습니다.</p>
+                                                                            </div>
+                                                                            <div class="board-footer">
+                                                                                <div class="board-box">
+                                                                                    <div class="box-inner">
+                                                                                        <div class="box-head">
+                                                                                            <em class="box-title medium normal color-000">스판덱스</em>
+                                                                                        </div>
+                                                                                        <div class="box-body">
+                                                                                            <span class="box-desc small-v1 normal color-003">리젠 바이오 베이스드 스판덱스 & 리젠 스판덱스 개발</span>
+                                                                                            <span class="box-desc small-v1 normal color-003">GRS 인증, OEKO-TEX 인증</span>
+                                                                                            <span class="box-desc small-v1 normal color-003"> SGS ECO Product 인증</span>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="board-box">
+                                                                                    <div class="box-inner">
+                                                                                        <div class="box-head">
+                                                                                            <em class="box-title medium normal color-000">나일론/폴리에스터</em>
+                                                                                        </div>
+                                                                                        <div class="box-body">
+                                                                                            <span class="box-desc small-v1 normal color-003">Chemical & Mechanical Recycle 기술 개발</span>
+                                                                                            <span class="box-desc small-v1 normal color-003">PBAT 방사기술 기초 연구</span>
+                                                                                            <span class="box-desc small-v1 normal color-003">생분해성 MB 혼입 PET 방사 기술 개발</span>
+                                                                                            <span class="box-desc small-v1 normal color-003">리젠 폴리에스터 개발</span>
+                                                                                            <span class="box-desc small-v1 normal color-003">GRS, OEKO-TEX, OBP 인증</span>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="board-box">
+                                                                                    <div class="box-inner">
+                                                                                        <div class="box-head">
+                                                                                            <em class="box-title medium normal color-000">직물/염색</em>
+                                                                                        </div>
+                                                                                        <div class="box-body">
+                                                                                            <span class="box-desc small-v1 normal color-003">OEKO-TEX 인증</span>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="board-display design-1 case-1 style-2 blind">
+                                                                    <div class="board-wrap">
+                                                                        <div class="board-inner">
+                                                                            <div class="board-head">
+                                                                                <span class="board-above medium bold color-002">친환경 철강제품 및 친환경</span>
+                                                                                <strong class="board-title large bold color-250">
+                                                                                    화학소재의 Biz 확대
+                                                                                </strong>
+                                                                            </div>
+                                                                            <div class="board-body">
+                                                                                <p class="board-para small normal color-001">종합상사업을 영위하는 효성티앤씨㈜ 무역부문에서는 ESG경영에 발맞춰 기존 거래하는 철강제품과 화학제품의 친환경 산업에 대한 거래 확대 및 친환경 인증 제품에 대한 수출 및 삼국간무역을 확대하고 있습니다. 이를 위해 철강 사업부에서는 태양광과 풍력 등 신재생에너지용 철강 제품 거래 규모를 지속 확대하고 있으며, 화학 사업부에서는 바이오연료 (바이오디젤 및 바이오중유) 및 바이오연료 원재료(UCO, 팜오일 등)에 대한 ISCC(International Sustainability and Carbon Certification) EU&PLUS 인증 취득을 통해 효성티앤씨가 취급하는 품목이 유럽연합의 재생가능한 에너지이용촉진법 (Renewable Energy Directive 이하 RED)에 적합하게 유통되는 품목임을 증명하고 있습니다.</p>
+                                                                            </div>
+                                                                            <div class="board-footer">
+                                                                                <div class="board-box">
+                                                                                    <div class="box-inner">
+                                                                                        <div class="box-head">
+                                                                                            <em class="box-title medium normal color-000">철강</em>
+                                                                                        </div>
+                                                                                        <div class="box-body">
+                                                                                            <span class="box-desc small-v1 normal color-003">신재생에너지(태양광, 풍력 등)</span>
+                                                                                            <span class="box-desc small-v1 normal color-003">철강 제품 거래 지속 확대</span>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="board-box">
+                                                                                    <div class="box-inner">
+                                                                                        <div class="box-head">
+                                                                                            <em class="box-title medium normal color-000">화학</em>
+                                                                                        </div>
+                                                                                        <div class="box-body">
+                                                                                            <span class="box-desc small-v1 normal color-003">바이오 연료 및 원재료</span>
+                                                                                            <span class="box-desc small-v1 normal color-003">ISCC EU&PLUS 인증 취득</span>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="contents-article contents-article7 case-1">
+                                <div class="contents-article-inner">
+                                    <div class="data-display design-1 case-3 align-1 color-10">
+                                        <ul class="data-list">
+                                            <li class="data-item">
+                                                <div class="data-wrap">
+                                                    <div class="data-head">
+                                                        <h3 class="title design-1 case-1 small-v2">
+                                                            <em class="name">그린경영 인식 확대 노력</em>
+                                                        </h3>
+                                                    </div>
+                                                    <div class="data-body">
+                                                        <p class="data-para">
+                                                            효성은 임직원을 대상으로 한 그린경영 교육뿐만 아니라 사회적으로도 친환경 인식을 확대하기 위한 여러 공모전과 프로젝트를 이어오고 있습니다.<br /> 2014년 탄소섬유 등 창업공모전, 2017년부터 2019년까지 대학생 친환경아이디어 공모전, 21년 온실가스 에너지절감 사내 공모전, 22년 오픈이노베이션 프로젝트를 개최하였으며, 앞으로도 많은 이해관계자들의 그린경영에 대한 관심을 확대하기 위한 노력을 하겠습니다.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="tab-display design-2 form-1">
+                                        <div class="tab-area swiper tab-swiper">
+                                            <ul class="tab-list swiper-wrapper">
+                                                <li class="tab-item swiper-slide active">
+                                                    <div class="tab-inner">
+                                                        <a href="javascript:void(0)" class="tab case-1 fill-1 color-1 align-5">
+                                                            <div class="text-wrap">
+                                                                <span class="tab-text-title medium">친환경아이디어 공모전</span>
+                                                            </div>
+                                                        </a>
+                                                        <div class="board-display design-1 case-1 style-1 color-1">
+                                                            <div class="board-wrap">
+                                                                <div class="board-inner">
+                                                                    <div class="board-head">
+                                                                        <strong class="board-title">
+                                                                            효성은 2017년부터 2019년까지<br /> 3년 연속 친환경아이디어 공모전을 진행하였습니다.
+                                                                        </strong>
+                                                                    </div>
+                                                                    <div class="board-body">
+                                                                        <p class="board-para">2017년에는 ‘무선 전자기기 충전 신발’, ‘제올라이트 필터를 적용한 브레이크 패드 집진 장치’ 등의 아이디어를 시상 하였습니다.</p>
+                                                                        <p class="board-para">2018년에는 ‘바이오 플라스틱을 이용한 씨앗을 품은 배변봉투’ 아이디어가 대상을 수상했습니다. 일회용 비닐 대신 20일 만에 분해되는 바이오 플라스틱 비닐을 사용하고, 씨앗을 봉투에 미리 담아 반려동물의 분변을 천연비료로 활용해 꽃을 피워 환경오염 방지와 환경미화의 두 마리 토끼를 잡았습니다.</p>
+                                                                        <p class="board-para">2019년에는 ‘화학적 정화가 가능한 보급형 마스크’ 아이디어가 대상을 수상했습니다. 기존의 미세먼지 필터가 지니고 있던 작은 입자의 미세먼지를 걸러내지 못하는 한계점을 창의적으로 개선해 미세먼지 필터에 여러 화학 용액이 혼합된 용액을 코팅하여 효율성을 높였습니다.</p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="tab-item swiper-slide">
+                                                    <div class="tab-inner">
+                                                        <a href="javascript:void(0)" class="tab case-1 fill-1 color-1">
+                                                            <div class="text-wrap">
+                                                                <span class="tab-text-title medium">순환경제를 위한<br class="br-mo" /> 리젠 되돌림 캠페인 전개</span>
+                                                            </div>
+                                                        </a>
+                                                        <div class="board-display design-1 case-1 style-1 color-1">
+                                                            <div class="board-wrap">
+                                                                <div class="board-inner">
+                                                                    <div class="board-head">
+                                                                        <strong class="board-title">
+                                                                            효성티앤씨㈜는 2021년부터 마포, 반포 사업장에 근무하는 임직원 전체 인원이 동참하는 친환경 기업문화 조성을 위한 사내 폐PET병 모으기 캠페인을 진행하고 있습니다.
+                                                                        </strong>
+                                                                    </div>
+                                                                    <div class="board-body">
+                                                                        <p class="board-para">임직원들이 연간 모은 폐PET병을 효성티앤씨가 제작하는 리젠의 원료로 활용하고 이를 통해 리젠 원사를 활용하는 친환경 패션 스타트업의 제품을 임직원들에게 선물로 주는 캠페인은 임직원들에게 업사이클링을 직접 체험할 기회를 제공해 자원 재활용에 대한 인식을 높이고, 친환경적인 기업문화를 조성하기 위해 실시하고 있습니다. </p>
+                                                                        <p class="board-para">2022년은 총 8,831개의 PET병이 수거 되었으며, 이를 환산하면 30년산 소나무 약 37그루가 연간 이산화탄소를 흡수한 효과 입니다.</p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="tab-item swiper-slide">
+                                                    <div class="tab-inner">
+                                                        <a href="javascript:void(0)" class="tab case-1 fill-1 color-1">
+                                                            <div class="text-wrap">
+                                                                <span class="tab-text-title medium">에너지 절감 및<br class="br-mo" /> 온실가스 감축 아이디어 사내공모전</span>
+                                                            </div>
+                                                        </a>
+                                                        <div class="board-display design-1 case-1 style-1 color-1">
+                                                            <div class="board-wrap">
+                                                                <div class="board-inner">
+                                                                    <div class="board-head">
+                                                                        <strong class="board-title">
+                                                                            효성티앤씨㈜ 울산공장은 2021년 에너지 절감 및 온실가스 감축 아이디어 사내공모전에 NY중합 회수공정의 락탐수 농축기의 생산농도를 상승시켜 스팀을 절감하는 아이디어를 공모하여 우수상을 수상하고 부상으로 2백만 원의 시상금을 받았습니다.
+                                                                        </strong>
+                                                                    </div>
+                                                                    <div class="board-body">
+                                                                        <p class="board-para">이를 통해 953톤/년의 스팀을 절감할 수 있을 것으로 기대하고 있습니다.</p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="tab-item swiper-slide">
+                                                    <div class="tab-inner">
+                                                        <a href="javascript:void(0)" class="tab case-1 fill-1 color-1">
+                                                            <div class="text-wrap">
+                                                                <span class="tab-text-title medium">온실가스 에너지 절감 사내 캠페인 진행</span>
+                                                            </div>
+                                                        </a>
+                                                        <div class="board-display design-1 case-1 style-1 color-1">
+                                                            <div class="board-wrap">
+                                                                <div class="board-inner">
+                                                                    <div class="board-head">
+                                                                        <strong class="board-title">
+                                                                            효성티앤씨㈜는 2021년부터 마포, 반포 사업장에 근무하는 임직원 전체 인원이 동참하는 친환경 기업문화 조성을 위한 ‘사무실 일회용품 퇴출’ 캠페인을 진행했습니다.
+                                                                        </strong>
+                                                                    </div>
+                                                                    <div class="board-body">
+                                                                        <p class="board-para">이에 따라 본사 휴게실 등에 비치된 종이컵을 비롯한 일회용품을 없애고 지급된 개인용 텀블러 구입비에 따라 구입한 개인용 텀블러를 사용하기로 했습니다.</p>
+                                                                        <p class="board-para">2020년 효성티앤씨가 본사 사무실 내에서 사용한 종이컵은 약 19만 개로 추정되며, 이번 캠페인으로 효성티앤씨는 일상생활 속에서 종이컵 사용을 줄이는 것만으로 연간 2톤의 온실가스 배출량을 줄일 수 있을 것으로 기대하고 있습니다.</p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="tab-item swiper-slide">
+                                                    <div class="tab-inner">
+                                                        <a href="javascript:void(0)" class="tab case-1 fill-1 color-1">
+                                                            <div class="text-wrap">
+                                                                <span class="tab-text-title medium">전 임직원 대상 환경 관련 교육 실시</span>
+                                                            </div>
+                                                        </a>
+                                                        <div class="board-display design-1 case-1 style-1 color-1">
+                                                            <div class="board-wrap">
+                                                                <div class="board-inner">
+                                                                    <div class="board-head">
+                                                                        <strong class="board-title">
+                                                                            효성티앤씨㈜는 전 임직원을 대상으로 기후변화의 영향, 탄소중립 정책, 기후변화가 생물다양성에 미치는 영향 등 환경 대한 이해도를 높이기 위한 교육을 매년 진행하고 있습니다.
+                                                                        </strong>
+                                                                    </div>
+                                                                    <div class="board-body">
+                                                                        <p class="board-para">또한 신입사원을 대상으로 하는 ESG경영 교육에서도 기후변화 및 탄소중립에 대해 비중 있게 다루어 교육하고 있습니다.</p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="contents-article contents-article8 case-1">
+                                <div class="contents-article-inner">
+                                    <div class="contents-article-area">
+                                        <div class="data-display design-1 case-2 align-3 color-14">
+                                            <ul class="data-list">
+                                                <li class="data-item">
+                                                    <div class="data-wrap">
+                                                        <div class="data-above">
+                                                            <span class="data-sup">지자체와 함께하는</span>
+                                                        </div>
+                                                        <div class="data-head">
+                                                            <h3 class="title design-1 case-1 small-v2">
+                                                                <em class="name">순환 자원 프로젝트</em>
+                                                            </h3>
+                                                        </div>
+                                                        <div class="data-body">
+                                                            <p class="data-para">
+                                                                효성티앤씨㈜는 제주를 시작으로 서울시와 함께 지자체에서 분리수거된 폐 PET병을 친환경 원사로 재탄생시켜 고품질의 의류를 만들 수 있는 자원 순환 프로젝트를 진행하고 있습니다.
+                                                            </p>
+                                                            <p class="data-para">
+                                                                이렇게 생산된 당사의 리사이클 원사는 플리츠마마, 노스페이스를 비롯 국내외 친환경 의류를 제작하는 브랜드로 공급되어 순환경제를 구축하는데 앞장서고 있습니다.
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="board-display design-1 case-2">
+                                            <div class="board-list">
+                                                <div class="board-item">
+                                                    <div class="board-wrap">
+                                                        <div class="board-head">
+                                                            <p class="subject">오픈 이노베이션 프로젝트</p>
+                                                            <p class="summary">(친환경 섬유 스타트업 지원)</p>
+                                                        </div>
+                                                        <div class="board-body">
+                                                            <p class="para">
+                                                                효성은 친환경 섬유, 스마트 섬유 등 스타트업 발굴을 위한 오픈이노베이션 프로젝트를 진행했습니다. 오픈이노베이션은 대기업이 스타트업 등 외부와의 협업을 통해 사업 모델 및 핵심 기술을 혁신하여 기업경쟁력을 제고하는 경영기법입니다.
+                                                                효성은 이번 프로젝트를 통해 바이오기반/생분해 장섬유, 리싸이클 섬유의 원료 수급, 친환경 염색 및 가공기술 등 친환경 섬유에 특화된 기술을 갖고 있는 스타트업과 웨어러블 섬유 기술,IT 융합 섬유 신기술 등 혁신적인 스마트 섬유 기술을 보유한 스타트업 발굴을 기대하고 있습니다. 이와 함께 탄소 및 에너지 절감 기술, 지속가능성 등 ESG경영에 대한 전문성과 경영 노하우로 효성의 기존 사업을 혁신하고 신규 사업모델을 제안할 수 있는 스타트업의 참여도 기대하고 있습니다.
+                                                                최종 선발된 스타트업에게는 사업 협업을 통해 신제품 공동개발, 기술개발 지원, 기술검증, 지분투자 등을 지원하고 있으며, 2021년에는 국내 대표 업사이클링 패션 스타트업인 플리츠마마에 전략적 파트너로서 지분투자 및 MOU를 체결하였고, 2022년에는 대구 소재 업사이클링 스타트업인 할리케이의 마케팅 역량 향상 및 해외진출을 지원하는 등 국내 친환경 패션 스타트업들의 역량을 향상시킬 수 있도록 아낌없는 지원을 이어나갈 계획입니다.
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+        <%-include('../include/kor/HTNCWK03FOOTER.ejs') %>
+    </body>
+</html>

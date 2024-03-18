@@ -1,0 +1,30 @@
+.HTNCWKD40D41W05 {
+    .contents-section2 {
+        padding-bottom: 20rem;
+        @include mobile {
+            padding-bottom: 14rem;
+        }
+        .contents-section-inner {
+            padding-top: 34.2rem !important;
+            @include mobile {
+                padding-top: 11rem !important;
+            }
+            .contents-section-head {
+                .title.small-v10 {
+                    padding-bottom: 4rem;
+                }
+                .data-display.case-7 {
+                    @include mobile {
+                        text-align: center;
+                    }
+                }
+                .button-display {
+                    padding-top: 8rem;
+                    @include mobile {
+                        padding-top: 4rem;
+                    }
+                }
+            }
+        }
+    }
+}

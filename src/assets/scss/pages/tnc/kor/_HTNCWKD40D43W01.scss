@@ -1,0 +1,225 @@
+.HTNCWKD40D43W01 {
+    .container-inner {
+        .contents-section {
+            &.contents-section2 {
+                .contents-section-head {
+                    .data-display {
+                        max-width: 133.6rem;
+                        margin: 0 auto;
+                    }
+                }
+                .contents-section-inner {
+                    .contents-article {
+                        width: 100%;
+                        .para,
+                        .data-para {
+                            color: color(achromatic, 157);
+                        }
+                        &.contents-article1 {
+                            padding-top: 14rem;
+                            .contents-article-inner {
+                                padding-bottom: 12rem;
+                                border-bottom: 0.1rem solid #E1E6EF;
+                                .thumbnail-display {
+                                    .thumbnail-body {
+                                        display: flex;
+                                        gap: 4.04%;
+                                        .thumbnail-para {
+                                            flex-basis: 67.8rem;
+                                            width: 100%;
+                                            @include mobile {
+                                                flex-basis: unset;
+                                            }
+                                        }
+                                        .thumbnail-part {
+                                            display: block;
+                                            flex-basis: 60.4rem;
+                                            width: 100%;
+                                            img {
+                                                width: 100%;
+                                            }
+                                            @include mobile {
+                                                flex-basis: unset;
+                                                padding-top: 4rem;
+                                            }
+                                        }
+                                        @include mobile {
+                                            flex-direction: column;
+                                        }
+                                    }
+                                }
+                                @include mobile {
+                                    padding-bottom: 6rem;
+                                }
+                            }
+                            @include mobile {
+                                padding-top: 10rem;
+                                //padding-bottom: 6rem;
+                            }
+                        }
+                        &.contents-article2 {
+                            padding-top: 12rem;
+                            overflow: hidden;
+                            .contents-article-inner {
+                                .data-display {
+                                    .data-list {
+                                        .data-item {
+                                            .data-wrap {
+                                                .data-body {
+                                                    & + .data-aside {
+                                                        margin-top: 8rem;
+                                                        padding: 8rem 0;
+                                                        @include mobile {
+                                                            margin-top: 6rem;
+                                                            padding-top: 4rem;
+                                                            padding-bottom: 6rem;
+                                                        }
+                                                    }
+                                                }
+                                                .data-aside {
+                                                    position: relative;
+                                                    background-color: #F8F9FC;
+
+                                                    @include mobile {
+                                                        background-color: transparent;
+
+                                                        &::before {
+                                                            content: '';
+                                                            position: absolute;
+                                                            top: 0;
+                                                            left: 50%;
+                                                            transform: translateX(-50%);
+                                                            width: 100vw;
+                                                            height: 100%;
+                                                            background-color: #F8F9FC;
+                                                            z-index: -1;
+                                                        }
+                                                    }
+
+                                                    .diagram-display {
+                                                        .diagram-wrap {
+                                                            .diagram-body {
+                                                                .picture {
+                                                                    &:nth-child(1) {
+                                                                        display: none;
+
+                                                                        @include mobile {
+                                                                            position: absolute;
+                                                                            top: 27%;
+                                                                            left: 0;
+                                                                            display: block;
+                                                                            width: calc(100% + 3.6rem);
+                                                                            margin-left: -1.8rem;
+                                                                            padding-left: 1.8rem;
+                                                                            padding-right: 1.8rem;
+                                                                            padding-bottom: 1rem;
+                                                                            overflow: hidden;
+                                                                            overflow-x: auto;
+
+                                                                            &::-webkit-scrollbar {
+                                                                                border-radius: 1rem;
+                                                                                height: 0.4rem;
+                                                                            }
+                                                                            &::-webkit-scrollbar-thumb {
+                                                                                background-color: #2f3542;
+                                                                                border-radius: 1rem;
+                                                                            }
+                                                                            &::-webkit-scrollbar-track {
+                                                                                margin-left: 1.8rem;
+                                                                                margin-right: 1.8rem;
+                                                                                background-color: #eee;
+                                                                                border-radius: 1rem;
+                                                                            }
+
+                                                                            img {
+                                                                                min-width: 78.2rem;
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                                .data-display {
+                                    .order-list {
+                                        padding-top: 1.6rem;
+                                        @include mobile {
+                                            padding-top: 2.4rem;
+                                        }
+                                    }
+                                }
+                                // .diagram {
+                                //     margin-top: 8rem;
+                                //     padding: 8rem 0;
+                                //     background-color: #F8F9FC;
+                                //     @include mobile {
+                                //         width: calc(100% + 3.6rem);
+                                //         margin-left: -1.8rem;
+                                //         .diagram-picture {
+                                //             padding: 0 1.8rem;
+                                //         }
+                                //     }
+                                // }
+                            }
+                            @include mobile {
+                                padding-top: 6rem;
+                            }
+                        }
+                        &.contents-article3 {
+                            padding-top: 18rem;
+                            .diagram-display {
+                                .diagram-head {
+                                    +.diagram-body {
+                                        padding-top: 6rem;
+                                        @include mobile {
+                                            padding-top: 2.4rem;
+                                        }
+                                    }
+                                }
+                                @include mobile {
+                                    .diagram-body {
+                                        picture {
+                                            min-width: 130rem;
+                                        }
+                                    }
+                                }
+                            }
+                            @include mobile {
+                                padding-top: 10rem;
+                            }
+                        }
+                        &.contents-article4 {
+                            padding-top: 18rem;
+                            .data-display {
+                                max-width: 133.6rem;
+                                margin: 0 auto;
+                                padding-bottom: 4rem;
+                                padding-left: 1.8rem;
+                            }
+                            .accordion-display {
+                                .accordion-item:nth-child(3) {
+                                    .accordion-content {
+                                        .table-display {
+                                            &~ .table-display {
+                                                margin-top: 4rem;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            @include mobile {
+                                padding-top: 10rem;
+                                padding-bottom: 14rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

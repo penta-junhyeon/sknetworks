@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <%-include('../include/kor/HTNCWK00HEADMETACOMMON.ejs') %>
+        <%-include('../meta-id/kor/HTNCWKD40D53W01.ejs') %>
+        <%-include('../include/kor/HTNCWK00HEADSTYLE.ejs') %>
+        <%-include('../include/kor/HTNCWK00HEADFAVICON.ejs') %>
+        <%-include('../include/kor/HTNCWK00HEADSCRIPTLIBRARY.ejs') %>
+        <%-include('../include/kor/HTNCWK00HEADSCRIPTGSAP.ejs') %>
+        <%-include('../include/kor/HTNCWK00HEADSCRIPTLOADER.ejs') %>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                scrollEvent();
+                resizeEvent();
+
+                subPageIntroWheel_02(); // 서브 공통 MouseWheel naviDepth3, naviDepth4
+                localInteraction_04_01(); // 서브 공통 Info Interaction
+                naviDepth3_Interaction_01(); // 서브 공통 naviDepth3 fixed,  naviDepth4 따라 내려옴
+
+                contentsSubScrollEventCustom(); // 서브 공통 Section Active
+            });
+
+            function scrollEvent(){
+                window.addEventListener('scroll', () => {
+                    contentsSubScrollEventCustom();
+                });
+            }
+
+            function resizeEvent(){
+                window.addEventListener('resize', () => {
+                });
+            }
+        </script>
+    </head>
+    <body class="tnc-site">
+        <%-include('../include/kor/HTNCWK01HEADER.ejs') %>
+        <main id="container" class="container tnc HTNCWKD40D53W01 sub">
+            <h2 class="blind">컨테이너 영역</h2>
+            <div class="container-inner">
+                <section class="contents-section contents-section1">
+                    <div class="contents-section-inner">
+                        <div class="local sustainability-common" local-interaction="sustainability-01">
+                            <div class="local-head design-1">
+                                <div class="local-head-wrap">
+                                    <div class="local-subject">
+                                        <h2 class="local-name ko">
+                                            <span class="wbr">인증서</span>
+                                            <span class="wbr hide">기타</span>
+                                        </h2>
+                                    </div>
+                                    <div class="local-subject">
+                                        <h2 class="local-name ko">
+                                            <span class="wbr hide">인증서</span>
+                                            <span class="wbr">기타</span>
+                                        </h2>
+                                    </div>
+                                    <picture class="local-figure">
+                                        <source media="(max-width: 1023px)" srcset="../../assets/images/photo/sustainability/etc/local-mo.jpg">
+                                        <source media="(max-width: 1920px)" srcset="../../assets/images/photo/sustainability/etc/local-pc.jpg">
+                                        <img src="../../assets/images/photo/sustainability/etc/local-pc.jpg" alt=" ">
+                                    </picture>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <nav class="navi depth3">
+                    <div class="navi-wrap">
+                        <div class="navi-subject"><a href="#" title="현재 선택된 항목" class="navi-name">기타</a></div>
+                        <div class="tab-display">
+                            <ul class="tab-list">
+                                <li class="tab-item"><a href="#" class="tab-text">환경</a></li>
+                                <li class="tab-item"><a href="#" class="tab-text">안전보건</a></li>
+                                <li class="tab-item"><a href="#" class="tab-text">품질</a></li>
+                                <li class="tab-item current"><a href="#" class="tab-text">기타</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+                <section class="contents-section contents-section2">
+                    <div class="contents-section-inner">
+                        <div class="contents-section-head"></div>
+                        <div class="contents-section-body">
+                            <div class="contents-article contents-article1">
+                                <div class="thumbnail-display design-25 type-1">
+                                    <div class="thumbnail-list">
+                                        <div class="thumbnail-item">
+                                            <div class="thumbnail-wrap">
+                                                <div class="thumbnail-head">
+                                                    <p class="subject">가족친화인증</p>
+                                                </div>
+                                                <div class="thumbnail-figure">
+                                                    <img class="img" src="../../assets/images/photo/sustainability/certificate/img-thumb-07.jpg" alt="Best Family Friendly Management 가족친화인증">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="contents-article-inner">
+                                    <div class="data-display design-1 case-5 color-2">
+                                        <ul class="data-list">
+                                            <li class="data-item">
+                                                <div class="data-wrap">
+                                                    <div class="data-body">
+                                                        <p class="data-para">
+                                                            가족친화인증은 여성가족부에서 자녀출산 및 양육지원, 유연근무제도, 가족친화직장문화조성 등 가족친화제도를 모범적으로 운영하는 기업 및 공공기관에 대하여 심사를 통해 부여하는 인증입니다.
+                                                        </p>
+                                                        <p class="data-para">
+                                                            효성은 가족친화제도를 적극 운영함으로써 임직원의 일과 생활의 균형을 지원하고, 인권존중 문화의 확산을 장려하고 있으며, 2015년 가족친화인증 최초 획득 이후로 지속적으로 인증을 유지하고 있습니다.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="table-display design-1 case-1 align-3">
+                                        <table>
+                                            <colgroup>
+                                                <col>
+                                                <col>
+                                                <col>
+                                                <col>
+                                                <col>
+                                                <col>
+                                                <col class="view-pc">
+                                            </colgroup>
+                                            <thead>
+                                                <tr>
+                                                    <th scope="col">인증기관</th>
+                                                    <th scope="col">인증서명</th>
+                                                    <th scope="col">사업장</th>
+                                                    <th scope="col">국가</th>
+                                                    <th scope="col">인증만료일</th>
+                                                    <th scope="col">비고</th>
+                                                    <th scope="col" class="view-pc">인증서 다운로드</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>여성가족부</td>
+                                                    <td>가족친화인증</td>
+                                                    <td>효성티앤씨</td>
+                                                    <td>대한민국</td>
+                                                    <td>2023-11-30</td>
+                                                    <td></td>
+                                                    <td class="view-pc">
+                                                        <div class="button-display form-1 sort-1 align-3">
+                                                            <div class="button-wrap form-1">
+                                                                <a href="javascript:void(0)" class="button design-2 case-1 medium color-600 color-3 rtl icon-down-arrow01">
+                                                                    <span class="button-text-core">다운로드</span>
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div class="button-display form-1 sort-1 align-3">
+                                        <div class="button-wrap form-1">
+                                            <a href="javascript:void(0)" class="button design-1 case-3 medium align-4 color-1 fill-800 rtl icon-down-arrow01">
+                                                <span class="button-text-core">인증서 다운로드</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+        <%-include('../include/kor/HTNCWK03FOOTER.ejs') %>
+    </body>
+</html>

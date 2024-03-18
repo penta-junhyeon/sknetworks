@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <%-include('../include/kor/HTNCWK00HEADMETACOMMON.ejs') %>
+        <%-include('../meta-id/kor/HTNCWKD40D14W01.ejs') %>
+        <%-include('../include/kor/HTNCWK00HEADSTYLE.ejs') %>
+        <%-include('../include/kor/HTNCWK00HEADFAVICON.ejs') %>
+        <%-include('../include/kor/HTNCWK00HEADSCRIPTLIBRARY.ejs') %>
+        <%-include('../include/kor/HTNCWK00HEADSCRIPTGSAP.ejs') %>
+        <%-include('../include/kor/HTNCWK00HEADSCRIPTLOADER.ejs') %>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                scrollEvent();
+                resizeEvent();
+
+                subPageIntroWheel_01(); // 서브 공통 MouseWheel naviDepth3, naviDepth4
+                localInteraction_04_01(); // 서브 공통 Info Interaction
+                naviDepth3_Interaction_01(); // 서브 공통 naviDepth3 fixed,  naviDepth4 따라 내려옴
+
+                contentsSubScrollEventCustom(); // 서브 공통 Section Active
+            });
+
+            function scrollEvent(){
+                window.addEventListener('scroll', () => {
+                    contentsSubScrollEventCustom();
+                });
+            }
+
+            function resizeEvent(){
+                window.addEventListener('resize', () => {
+                });
+            }
+        </script>
+    </head>
+    <body class="tnc-site">
+        <%-include('../include/kor/HTNCWK01HEADER.ejs') %>
+        <main id="container" class="container tnc HTNCWKD40D14W01 sub">
+            <h2 class="blind">컨테이너 영역</h2>
+            <div class="container-inner">
+                <section class="contents-section contents-section1">
+                    <div class="contents-section-inner">
+                        <div class="local sustainability-common" local-interaction="sustainability-01">
+                            <div class="local-head design-1">
+                                <div class="local-head-wrap">
+                                    <div class="local-subject">
+                                        <h2 class="local-name">
+                                            <span class="wbr">Sustainability</span>
+                                            <span class="wbr hide">ESG 정책</span>
+                                        </h2>
+                                    </div>
+                                    <div class="local-subject">
+                                        <h2 class="local-name">
+                                            <span class="wbr hide">Sustainability</span>
+                                            <span class="wbr">ESG 정책</span>
+                                        </h2>
+                                    </div>
+                                    <picture class="local-figure">
+                                        <source media="(max-width: 1023px)" srcset="../../assets/images/photo/sustainability/esg/local-mo.jpg">
+                                        <source media="(max-width: 1920px)" srcset="../../assets/images/photo/sustainability/esg/local-pc.jpg">
+                                        <img src="../../assets/images/photo/sustainability/esg/local-pc.jpg" alt=" ">
+                                    </picture>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <nav class="navi depth3">
+                    <div class="navi-wrap">
+                        <div class="navi-subject"><a href="#" title="현재 선택된 항목" class="navi-name">ESG 정책</a></div>
+                        <div class="tab-display">
+                            <ul class="tab-list">
+                                <li class="tab-item"><a href="#" class="tab-text">지속가능경영</a></li>
+                                <li class="tab-item"><a href="#" class="tab-text">보고서</a></li>
+                                <li class="tab-item"><a href="#" class="tab-text">외부평가</a></li>
+                                <li class="tab-item"><a href="#" class="tab-text">참여 이니셔티브</a></li>
+                                <li class="tab-item current" title="현재 선택된 항목"><a href="#" class="tab-text">ESG 정책</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+                <section class="contents-section contents-section2">
+                    <div class="contents-section-inner">
+                        <div class="contents-section-head">
+                            <div class="data-display design-1 case-1 color-2 align-3">
+                                <ul class="data-list">
+                                    <li class="data-item">
+                                        <div class="data-wrap">
+                                            <div class="data-head">
+                                                <h3 class="title design-1 case-1 align-3 medium">
+                                                    <em class="name">ESG 정책</em>
+                                                </h3>
+                                            </div>
+                                            <div class="data-body">
+                                                <p class="data-para">
+                                                    효성티앤씨는 사회적 책임을 다하는 조직으로서의 행동에 대한 기대를 위해, 경영활동의 기반이 되는 사내 규정 및 지침을 마련하여 투명하게 공개하고 있습니다.<br class="br-pc" />
+                                                    아울러 이러한 원칙에 대한 사내 구성원들의 이해를 높이고 원칙에 따른 의사결정 및 활동이 이행될 수 있도록 지속적인 교육을 실시하고 있습니다.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="contents-section-body">
+                            <div class="contents-article contents-article1">
+                                <div class="contents-article-inner">
+                                    <div class="thumbnail-display design-6 case-1">
+                                        <div class="thumbnail-list">
+                                            <div class="thumbnail-item">
+                                                <div class="thumbnail-wrap">
+                                                    <picture class="thumbnail-figure">
+                                                        <source media="(max-width: 1023px)" srcset="../../assets/images/photo/sustainability/esg/img-photo-esg-01-mo.png">
+                                                        <source media="(max-width: 1920px)" srcset="../../assets/images/photo/sustainability/esg/img-photo-esg-01.png">
+                                                        <img class="img" src="../../assets/images/photo/sustainability/esg/img-photo-esg-01.png" alt=" ">
+                                                    </picture>
+                                                    <div class="thumbnail-infrom">
+                                                        <div class="data-list">
+                                                            <div class="data-item">
+                                                                <p class="data-head">환경경영 정책</p>
+                                                                <div class="button-display form-1 sort-1 align-2">
+                                                                    <div class="button-wrap form-1">
+                                                                        <a href="javascript:void(0)" class="button design-1 case-3 medium align-3 line-100 color-1 rtl icon-down-arrow01">
+                                                                            <span class="button-text-core">KOR</span>
+                                                                        </a>
+                                                                        <a href="javascript:void(0)" class="button design-1 case-3 medium align-3 line-100 color-1 rtl icon-down-arrow01">
+                                                                            <span class="button-text-core">ENG</span>
+                                                                        </a>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="data-item">
+                                                                <p class="data-head">인권경영 정책</p>
+                                                                <div class="button-display form-1 sort-1 align-2">
+                                                                    <div class="button-wrap form-1">
+                                                                        <a href="javascript:void(0)" class="button design-1 case-3 medium align-3 line-100 color-1 rtl icon-down-arrow01">
+                                                                            <span class="button-text-core">KOR</span>
+                                                                        </a>
+                                                                        <a href="javascript:void(0)" class="button design-1 case-3 medium align-3 line-100 color-1 rtl icon-down-arrow01">
+                                                                            <span class="button-text-core">ENG</span>
+                                                                        </a>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="data-item">
+                                                                <p class="data-head">부패방지 정책</p>
+                                                                <div class="button-display form-1 sort-1 align-2">
+                                                                    <div class="button-wrap form-1">
+                                                                        <a href="javascript:void(0)" class="button design-1 case-3 medium align-3 line-100 color-1 rtl icon-down-arrow01">
+                                                                            <span class="button-text-core">KOR</span>
+                                                                        </a>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="data-item">
+                                                                <p class="data-head">안전보건 경영정책</p>
+                                                                <div class="button-display form-1 sort-1 align-2">
+                                                                    <div class="button-wrap form-1">
+                                                                        <a href="javascript:void(0)" class="button design-1 case-3 medium align-3 line-100 color-1 rtl icon-down-arrow01">
+                                                                            <span class="button-text-core">KOR</span>
+                                                                        </a>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="data-item">
+                                                                <p class="data-head">협력사 행동규범</p>
+                                                                <div class="button-display form-1 sort-1 align-2">
+                                                                    <div class="button-wrap form-1">
+                                                                        <a href="javascript:void(0)" class="button design-1 case-3 medium align-3 line-100 color-1 rtl icon-down-arrow01">
+                                                                            <span class="button-text-core">KOR</span>
+                                                                        </a>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="contents-article contents-article2">
+                                    <div class="contents-article-inner">
+                                        <div class="thumbnail-display design-6 case-2">
+                                            <div class="thumbnail-list">
+                                                <div class="thumbnail-item">
+                                                    <div class="thumbnail-wrap">
+                                                        <picture class="thumbnail-figure">
+                                                            <source media="(max-width: 1023px)" srcset="../../assets/images/photo/sustainability/esg/img-photo-esg-02-mo.png">
+                                                            <source media="(max-width: 1920px)" srcset="../../assets/images/photo/sustainability/esg/img-photo-esg-02-pc.png">
+                                                            <img class="img" src="../../assets/images/photo/sustainability/esg/img-photo-esg-02-pc.png" alt=" ">
+                                                        </picture>
+                                                        <div class="thumbnail-infrom">
+                                                            <div class="data-list">
+                                                                <div class="data-item">
+                                                                    <p class="data-head">차별 및 괴롭힘 예방 규정</p>
+                                                                    <div class="button-display form-1 sort-1 align-2">
+                                                                        <div class="button-wrap form-1">
+                                                                            <a href="javascript:void(0)" class="button design-1 case-3 medium align-3 line-100 color-1 rtl icon-down-arrow01">
+                                                                                <span class="button-text-core">KOR</span>
+                                                                            </a>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="data-item">
+                                                                    <p class="data-head">전략물자 수출 관리 정책</p>
+                                                                    <div class="button-display form-1 sort-1 align-2">
+                                                                        <div class="button-wrap form-1">
+                                                                            <a href="javascript:void(0)" class="button design-1 case-3 medium align-3 line-100 color-1 rtl icon-down-arrow01">
+                                                                                <span class="button-text-core">KOR</span>
+                                                                            </a>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="data-item">
+                                                                    <p class="data-head">분쟁, 책임광물 정책</p>
+                                                                    <div class="button-display form-1 sort-1 align-2">
+                                                                        <div class="button-wrap form-1">
+                                                                            <a href="javascript:void(0)" class="button design-1 case-3 medium align-3 line-100 color-1 rtl icon-down-arrow01">
+                                                                                <span class="button-text-core">KOR</span>
+                                                                            </a>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="data-item">
+                                                                    <p class="data-head">광고 및 마케팅 윤리 규정</p>
+                                                                    <div class="button-display form-1 sort-1 align-2">
+                                                                        <div class="button-wrap form-1">
+                                                                            <a href="javascript:void(0)" class="button design-1 case-3 medium align-3 line-100 color-1 rtl icon-down-arrow01">
+                                                                                <span class="button-text-core">KOR</span>
+                                                                            </a>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="data-item">
+                                                                    <p class="data-head">개인정보처리 방침</p>
+                                                                    <div class="button-display form-1 sort-1 align-2">
+                                                                        <div class="button-wrap form-1">
+                                                                            <a href="javascript:void(0)" class="button design-1 case-3 medium align-3 line-100 color-1 rtl icon-down-arrow01">
+                                                                                <span class="button-text-core">KOR</span>
+                                                                            </a>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="data-item">
+                                                                    <p class="data-head">다양성 및 포용성</p>
+                                                                    <div class="button-display form-1 sort-1 align-2">
+                                                                        <div class="button-wrap form-1">
+                                                                            <a href="javascript:void(0)" class="button design-1 case-3 medium align-3 line-100 color-1 rtl icon-down-arrow01">
+                                                                                <span class="button-text-core">KOR</span>
+                                                                            </a>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="data-item">
+                                                                    <p class="data-head">생물다양성 보호 정책</p>
+                                                                    <div class="button-display form-1 sort-1 align-2">
+                                                                        <div class="button-wrap form-1">
+                                                                            <a href="javascript:void(0)" class="button design-1 case-3 medium align-3 line-100 color-1 rtl icon-down-arrow01">
+                                                                                <span class="button-text-core">KOR</span>
+                                                                            </a>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+        <%-include('../include/kor/HTNCWK03FOOTER.ejs') %>
+    </body>
+</html>

@@ -1,0 +1,33 @@
+.HTNCWKD40D42W02 {
+    .contents-section2 {
+        padding-bottom: 20rem;
+        @include mobile {
+            padding-bottom: 14rem;
+        }
+        .contents-section-inner {
+            .contents-section-head {
+                padding-bottom: 12rem;
+                @include mobile {
+                    padding-bottom: 6rem;
+                }
+                .title.small-v10 {
+                    padding-bottom: 4rem;
+                }
+            }
+            .contents-section-body {
+                .contents-article {
+                    .data-display.design-4 {
+                        > .data-list {
+                            > .data-item {
+                                padding-top: 12rem; 
+                                @include mobile {
+                                    padding-top: 10;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

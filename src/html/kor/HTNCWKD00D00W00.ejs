@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <%-include('../include/kor/HTNCWK00HEADMETACOMMON.ejs') %>
+        <%-include('../meta-id/kor/HTNCWKD00D00W00.ejs') %>
+        <%-include('../include/kor/HTNCWK00HEADSTYLE.ejs') %>
+        <%-include('../include/kor/HTNCWK00HEADFAVICON.ejs') %>
+        <%-include('../include/kor/HTNCWK00HEADSCRIPTLIBRARY.ejs') %>
+        <%-include('../include/kor/HTNCWK00HEADSCRIPTGSAP.ejs') %>
+        <%-include('../include/kor/HTNCWK00HEADSCRIPTLOADER.ejs') %>
+        
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                scrollEvent();
+                resizeEvent();
+                ani();
+                tncMainStory01();
+            });
+        
+            function scrollEvent(){
+                window.addEventListener('scroll', () => {
+                    
+                });
+            }
+
+            function resizeEvent(){
+                window.addEventListener('resize', () => {
+
+                });
+            }
+
+            function ani() {
+                    var contents_01 = $('.contents-01');
+                    var contents_02 = $('.contents-02');
+                    var story_01 = $('.story-01');
+                    var story_02 = $('.story-02');
+                    var story_02_Wrap = $('.story-02 .section-wrap');
+                    var story_03 = $('.story-03');
+                    var story_03_First = $('.story-03 .sub-section:first-child');
+                    var story_04 = $('.story-04');
+
+                    const story_02_WrapTrigger = gsap.timeline({
+                        scrollTrigger: {
+                            id: "story_02_Wrap",
+                            trigger: story_02_Wrap,
+                            start: () => getEndValue(),
+                            end: () => getEndValue2(),
+                            markers: true,
+                            scrub: 1,
+                            pinSpacing: false
+                        }
+                    });
+
+                    window.addEventListener("resize", updateEndValue);
+
+                    function updateEndValue() {
+                        const trigger = ScrollTrigger.getById("story_02_Wrap");
+                        if (trigger && trigger.scrollTrigger) {
+                            trigger.scrollTrigger.start = getEndValue();
+                            trigger.scrollTrigger.end = getEndValue2();
+                            trigger.scrollTrigger.update();
+                        }
+                    }
+
+                    function getEndValue() {
+                        var window_H = window.innerHeight;
+                        return "top+=" + window_H + "px top";
+                    }
+
+                    function getEndValue2() {
+                        var window_H = window.innerHeight;
+                        return "bottom+=" + window_H + "px bottom";
+                    } 
+
+                    story_02_WrapTrigger.addLabel('story_02_WrapTrigger_01')
+                    .fromTo(
+                        story_02_Wrap.find('.data-item:nth-child(1)'),
+                        { width: 0 + '%' },
+                        { width: 20 + '%' },
+                        'story_02_WrapTrigger_01'
+                    );
+
+                    story_02_WrapTrigger.addLabel('story_02_WrapTrigger_02')
+                    .fromTo(
+                        story_02_Wrap.find('.data-item:nth-child(2)'),
+                        { width: 0 + '%' },
+                        { width: 20 + '%' },
+                        'story_02_WrapTrigger_02'
+                    );
+
+                    story_02_WrapTrigger.addLabel('story_02_WrapTrigger_03')
+                    .fromTo(
+                        story_02_Wrap.find('.data-item:nth-child(3)'),
+                        { width: 0 + '%' },
+                        { width: 20 + '%' },
+                        'story_02_WrapTrigger_03'
+                    );
+
+                    story_02_WrapTrigger.addLabel('story_02_WrapTrigger_04')
+                    .fromTo(
+                        story_02_Wrap.find('.data-item:nth-child(4)'),
+                        { width: 0 + '%' },
+                        { width: 20 + '%' },
+                        'story_02_WrapTrigger_04'
+                    );
+
+                    story_02_WrapTrigger.addLabel('story_02_WrapTrigger_05')
+                    .fromTo(
+                        story_02_Wrap.find('.data-item:nth-child(5)'),
+                        { width: 0 + '%' },
+                        { width: 20 + '%' },
+                        'story_02_WrapTrigger_05'
+                    );
+
+                    story_02_WrapTrigger.addLabel('story_02_WrapTrigger_06')
+                    .fromTo(
+                        story_02_Wrap.find('.section-aside'),
+                        { 
+                            zIndex: -1,
+                            opacity: 0 
+                        },
+                        {   
+                            zIndex: 1,
+                            opacity: 1
+                        },
+                    )
+                    .to(
+                        story_02_Wrap.find('.section-aside'),2,
+                        {
+                            backgroundImage: "linear-gradient(360deg, #00B2FF 80%, #00B2FF 150.75%)"
+                        }
+                    )
+                    .to(
+                        story_03,                      
+                        {
+                            zIndex: 2
+                        },                        
+                        // 'story_03_Trigger_01+=1'
+                    );
+
+                    // const story_03_Trigger = gsap.timeline({
+                    //     scrollTrigger: {
+                    //         id: "story_03",
+                    //         trigger: story_03_First,
+                    //         start: "top top",
+                    //         end: "bottom bottom",
+                    //         markers: true,
+                    //         scrub: 1,
+                    //         pinSpacing: false
+                    //     }
+                    // });
+
+                    // story_03_Trigger.addLabel('story_03_Trigger_01')  
+                    // .fromTo(
+                    //     story_02,
+                    //     { 
+                    //         opacity: 1 
+                    //     },
+                    //     { 
+                    //         opacity: 0,
+                    //         zIndex: -2 
+                    //     },                        
+                    //     'story_03_Trigger_01'
+                    // )
+                    // .fromTo(
+                    //     story_03,
+                    //     { 
+                    //         opacity: 0 
+                    //     },
+                    //     { 
+                    //         opacity: 1,
+                    //         zIndex: 1 
+                    //     },                        
+                    //     'story_03_Trigger_01'
+                    // );
+
+                    // 
+
+                    /* Layer cover motion */
+                    let sections = gsap.utils.toArray(".contents-02 .wheel-section");
+
+                    sections.forEach((section, i) => {
+                        let trigger = ScrollTrigger.create({
+                            id: "story" + (i + 2),
+                            trigger: section,
+                            start: "bottom bottom",
+                            pin: true,
+                            pinSpacing: false,
+                        });
+                    });
+                }
+
+            //홍수기 스크립트
+            function tncMainStory01() {
+                const sectionStory01 = $('.section.story-01');
+                const sectionpart01 = sectionStory01.find('.design-wrap.part-01');
+                const sectionpart02 = sectionStory01.find('.design-wrap.part-02');
+
+                //video
+                setTimeout(function() {
+                    sectionpart01.find('.box.style-01').addClass('act-1');
+                }, 1000);
+
+                // ScrollTrigger.saveStyles(".section.story-01 .design-wrap.part-01 .box.style-01.act-1");
+
+                ScrollTrigger.matchMedia({
+                    "(min-width: 1024px)": function() {
+
+                        // PC animation
+                        const tl = gsap.timeline({
+                            scrollTrigger: {
+                            id: "스토리1",
+                            trigger: sectionStory01,
+                            start: "top top",
+                            end: "65% top",
+                            toggleActions: "play none none reverse",
+                            scrub: 5,
+                            markers: true,
+                            }
+                        });
+
+                        tl.to(sectionStory01, {
+                            pin: true,
+                        })
+                        
+                        // Timeline 1 - PC
+                        .addLabel("tl1")
+                        .fromTo(sectionpart01.find('.box.style-01'), {
+                            width: "93.23vw",
+                            height: "81.49vh",
+                            borderRadius: "32px",
+                            delay: 1
+                        },
+                        {
+                            width: "217px",
+                            height: "400px",
+                            top: "24%",
+                            borderRadius: "16px",
+                            left: '50%',
+                            xPercent: -50,
+                            yPercent: 0,
+                            position: 'absolute',
+                            overflow: 'hidden',
+                            duration: 0.8
+                        }, 'tl1')
+                        .to(sectionpart01.find('.box.style-01 .video-wrap'), {
+                            borderRadius: "16px",
+                        }, 'tl1')
+                        .to(sectionpart01.find('.box.style-01 .video-wrap .scroll-mark'), {
+                            opacity: 0
+                        }, 'tl1')
+                        .to(sectionpart01.find('.title-wrap'), {
+                            y: 0,
+                            opacity: 1,
+                            duration: 1,
+                            delay:0.3
+                        }, 'tl1')
+                        .to(sectionpart01.find('.box.style-02, .box.style-03, .box.style-04'), {
+                            opacity: 1,
+                            delay: 0.1
+                        })
+
+                        // Timeline 2 - PC
+                        .addLabel("tl2")
+                        .to(sectionpart01.find('.box.style-01'), {
+                            yPercent: -10,
+                            rotation: -15,
+                            transformOrigin: "0% 100%",
+                        },'tl2')
+                        .to(sectionpart01.find('.box.style-02'), {
+                            xPercent: -113,
+                            yPercent: 16,
+                            rotation: -44,
+                            transformOrigin: "0% 100%",
+                        },'tl2')
+                        .to(sectionpart01.find('.box.style-03, .box.style-04, .box.style-05'), {
+                            xPercent: -139,
+                            yPercent: 54,
+                            rotation: -75,
+                            transformOrigin: "0% 100%",
+                        },'tl2')
+                        .to(sectionStory01, {
+                            onComplete: function(){
+                                sectionStory01.addClass('act-main');
+                            },
+                            maxWidth: '1584px',
+                            padding: '0 18px',
+                            duration: 0
+                        },'tl2')
+
+                        .to(sectionpart01.find('.box.style-05'), {
+                            opacity: 1
+                        })
+
+                        // Timeline 3 - PC
+                        .addLabel("tl3")
+                        .to(sectionpart01.find('.box.style-01'), {
+                            xPercent: -73,
+                            yPercent: -29,
+                            rotation: -6,
+                            duration: 0.1
+                        },'tl3')
+                        .to(sectionpart01.find('.box.style-02'), {
+                            xPercent: -142,
+                            yPercent: 5,
+                            rotation: -40,
+                            transformOrigin: "0% 100%"
+                        },'tl3')
+                        .to(sectionpart01.find('.box.style-03'), {
+                            xPercent: -164,
+                            yPercent: 52,
+                            rotation: -75,
+                            transformOrigin: "0% 100%"
+                        },'tl3')
+                        .to(sectionpart01.find('.box.style-04'), {
+                            xPercent: -136,
+                            yPercent: 90,
+                            rotation: -110,
+                            transformOrigin: "0% 100%",
+                        }, 'tl3')
+                        .to(sectionpart01.find('.box.style-05'), {
+                            xPercent: -79,
+                            yPercent: 115,
+                            rotation: -141,
+                            transformOrigin: "0% 100%",
+                        }, 'tl3')
+
+                        // Timeline 4 - PC
+                        .addLabel("tl4")
+                        .to(sectionpart01.find('.box.style-05'), {
+                            xPercent: -70,
+                            yPercent: 140,
+                            rotation: -230,
+                            transformOrigin: "0% 100%",
+                        }, 'tl4')
+                        .to(sectionpart01.find('.box.style-05'), {
+                            width: "336px",
+                            height: "548px",
+                            xPercent: -150,
+                            yPercent: 250,
+                            rotation: -340,
+                            transformOrigin: "0% 100%",
+                        }, 'tl4')
+                        .to(sectionpart02.find('.title-wrap'), {
+                            y: 0,
+                            opacity: 1,
+                        }, 'tl4')
+                        .to(sectionpart01.find('.box.style-05'), {
+                            width: "32.4%",
+                            height: "620px",
+                            xPercent: 0,
+                            yPercent: 275,
+                            rotation: -360,
+                            transformOrigin: "0% 100%",
+                            left: 0,
+                            bottom: 0,
+                            opacity: 0.1,
+                            duration: 1,
+                            delay: 0.2
+                        }, 'tl4')
+
+                       // Timeline 5 - PC
+                        .addLabel("tl5")
+                        .to(sectionpart01.find('.box.style-05'), {
+                            duration: 0.5,
+                            opacity: 0,
+                            delay: 0.1
+                        }, 'tl5')
+                        .to(sectionpart02.find('.card-box-wrap .box01'), {
+                            left: 0,
+                            opacity: 1,
+                        }, 'tl5')
+                        .to(sectionpart02.find('.card-box-wrap .box02'), {
+                            left: '50%',
+                            xPercent: -50,
+                            opacity: 1,
+                        }, 'tl5')
+                        .to(sectionpart02.find('.card-box-wrap .box03'), {
+                            right: 0,
+                            opacity: 1,
+                        }, 'tl5')
+
+                    },
+                    "(max-width: 1023px)": function() {
+                        // Mobile animation
+                        const tlm1 = gsap.timeline({
+                            scrollTrigger: {
+                            id: "스토리1mo",
+                            trigger: sectionStory01,
+                            start: "top top",
+                            end: "60% top",
+                            toggleActions: "play none none reverse",
+                            scrub: 4,
+                            }
+                        });
+
+                        tlm1.to(sectionStory01, {
+                            pin: true
+                        })
+
+                        // Timeline 1 - MO
+                        .addLabel("tlm1-1")
+                        .fromTo(sectionpart01.find('.box.style-01'), {
+                            width: "82.94vw",
+                            height: "80%",
+                            borderRadius: "32px",
+                        },
+                        {
+                            width: "117px",
+                            height: "214px",
+                            borderRadius: "16px",
+                            marginTop: 0,
+                            position: 'absolute',
+                            duration: 0.5
+                        }, 'tlm1-1')
+                        .to(sectionpart01.find('.box.style-01 .video-wrap'), {
+                            borderRadius: "16px",
+                            duration: 0
+                        }, 'tlm1-1')
+                        .to(sectionpart01.find('.box.style-01 .video-wrap .scroll-mark'), {
+                            opacity: 0
+                        }, 'tlm1-1')
+                        .to(sectionpart01.find('.title-wrap'), {
+                            y: 0,
+                            opacity: 1,
+                            duration: 1.2,
+                            delay:0.4
+                        }, 'tlm1-1')
+                        .to(sectionpart01.find('.box.style-02, .box.style-03, .box.style-04, .box.style-05'), {
+                            opacity: 1,
+                            delay: 0.1
+                        })
+
+                        // Timeline 2 - MO
+                        .addLabel("tlm1-2")
+                        .to(sectionpart01.find('.box.style-01'), {
+                            xPercent: -8,
+                            yPercent: -61,
+                            rotation: 17,
+                            duration:0.3
+                        },'tlm1-2')
+                        .to(sectionpart01.find('.box.style-02'), {
+                            xPercent: -48,
+                            yPercent: -69,
+                            rotation: -12,
+                            scale: 0.85,
+                            transformOrigin: "0% 100%",
+                            duration:0.3
+                        },'tlm1-2')
+                        .to(sectionpart01.find('.box.style-03'), {
+                            xPercent: -52,
+                            yPercent: -53,
+                            rotation: -38,
+                            scale: 0.7,
+                            transformOrigin: "0% 100%",
+                            duration:0.3
+                        },'tlm1-2')
+                        .to(sectionpart01.find('.box.style-04'), {
+                            xPercent: -48,
+                            yPercent: -47,
+                            rotation: -66,
+                            scale: 0.5,
+                            transformOrigin: "0% 100%",
+                            duration:0.3
+                        },'tlm1-2')
+                        
+                         // Timeline 3 - MO
+                        .to(sectionStory01, {
+                            backgroundColor: 'rgba(255, 198, 51, 1)',
+                            duration: 1,
+                            delay: 1
+                        },'tlm1-3')
+                        .to(sectionpart02.find('.title-wrap'), {
+                            y: 0,
+                            opacity: 1,
+                            delay: 1,
+                            duration: 1
+                        },'tlm1-3')
+
+                        .to(sectionpart02.find('.card-box-wrap'), {
+                            opacity: 1,
+                            top: '23%',
+                        })
+                    },
+                });
+            }
+        </script>
+    </head>
+    <body class="tnc-site">
+        <%-include('../include/kor/HTNCWK01HEADER.ejs') %>
+        <main id="container" class="container tnc HTNCWKD00D00W00">
+            <div class="main-contents contents-01">
+                <section class="section story-01">
+                    <div class="section-wrap">
+                        <div class="section-inner">
+                            <div class="section-head">
+                                <!-- <h2 class="section-title"><span class="section-name">섹션 타이틀</span></h2> -->
+                            </div>
+                            <div class="section-body">
+                                <div class="design-wrap part-01">
+                                    <div class="data-wrap">
+                                        <div class="box-wrap">
+                                            <div class="box style-01">
+                                                <div class="video-wrap">
+                                                    <img src="../../assets/images/main/main-intro-video.jpg" alt="">
+                                                    <div class="scroll-mark">
+                                                        <img src="../../assets/images/main/main-scroll-down-mark.svg" alt="SCROLL TO DISCOVER">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="box style-02"></div>
+                                            <div class="box style-03"></div>
+                                            <div class="box style-04"></div>
+                                            <div class="box style-05"></div>
+                                        </div>
+                                        <div class="title-wrap">
+                                            <strong class="tit">Hyosung TNC</strong>
+                                            <p class="desc">Colorful한 우리들의 이야기를 들어보세요</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="design-wrap part-02">
+                                    <div class="data-wrap">
+                                        <div class="title-wrap">
+                                            <strong class="tit">Global No.1 HYOSUNG TNC</strong>
+                                            <p class="desc">일류오너라!<br class="br-mo" /> 대한민국 일류기업<br class="br-mo" /> 효성TNC</p>
+                                        </div>
+                                        <div class="card-box-wrap">
+                                            <div class="card-box box01">
+                                                <strong class="tit">Spandex</strong>
+                                                <p class="tit-desc">스판덱스 섬유</p>
+                                                <div class="img-wrap">
+                                                    <img src="../../assets/images/main/main-contents01-card01.jpg" alt="">
+                                                </div>
+                                                <strong class="sub-tit">세계 시장 점유율 1위, 글로벌 No.1</strong>
+                                                <p class="sub-tit-desc">
+                                                    효성의 독자적인 생산기술과 R&D,글로벌 마케팅 활동을 바탕으로 스판덱스 세계시장 점유율 No.1를 달성했어요!<br />
+                                                    최고의 품질과 가치를 바탕으로 고객들의 니즈에 부합하는 섬유업계의 새로운 지평을 새롭게 열어가겠습니다.
+                                                </p>
+                                            </div>
+                                            <div class="card-box box02">
+                                                <strong class="tit">Nylon & Polyester</strong>
+                                                <p class="tit-desc">나일론/폴리에스터 섬유</p>
+                                                <div class="img-wrap">
+                                                    <img src="../../assets/images/main/main-contents01-card02.jpg" alt="">
+                                                </div>
+                                                <strong class="sub-tit">글로벌 섬유산업을 리드하는 차별화된 제품</strong>
+                                                <p class="sub-tit-desc">
+                                                    50여 년간 축적된 생산 노하우를 바탕으로 다양한 기능을 갖춘 나일론 섬유와 일반 원사부터 고기능성 특수사에 이르기까지 다양하고 차별화된 폴리에스터 원사는 효성의 국내 폴리에스터 원사 메이커의 선두주자입니다.
+                                                </p>
+                                            </div>
+                                            <div class="card-box box03">
+                                                <strong class="tit">Trade Business</strong>
+                                                <p class="tit-desc">무역사업</p>
+                                                <div class="img-wrap">
+                                                    <img src="../../assets/images/main/main-contents01-card03.jpg" alt="">
+                                                </div>
+                                                <strong class="sub-tit">전세계를 누비는 철강제품 스페셜 리스트</strong>
+                                                <p class="sub-tit-desc">
+                                                    세계 각국의 고객과 수출입 파트너 관계 강화로 철강제품의 무역을 선도하고있습니다. 이외에도 시장개발 및 다양한 화학 제품 취급하고 수상건축물을 세워 지속적인 무역활동과 세계 각국을 돌아다니며 효성의 미래 가치를 높이기 위해 기여하고 있습니다.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <div class="main-contents contents-02">
+                <section class="section story-02 wheel-section">
+                    <div class="section-wrap">
+                        <div class="section-inner">
+                            <div class="section-head">
+                                <p class="section-caption">최고의 품질로 사랑받으며</p>
+                                <h2 class="section-title"><span class="section-name">세계 시장 점유율<br>1위가 되기 까지</span></h2>
+                            </div>
+                            <div class="section-body">
+                                <div class="sub-section">
+                                    <div class="sub-section-wrap">                                
+                                        <div class="sub-section-body">
+                                            <div class="data-display world-market-share">
+                                                <ul class="data-list">
+                                                    <li class="data-item">
+                                                        <div class="data-wrap">
+                                                            <div class="data-head"><h2 class="data-title"><span class="data-name"></span></h2></div>
+                                                            <div class="data-body"></div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="data-item">
+                                                        <div class="data-wrap">
+                                                            <div class="data-head"><h2 class="data-title"><span class="data-name"></span></h2></div>
+                                                            <div class="data-body"></div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="data-item">
+                                                        <div class="data-wrap">
+                                                            <div class="data-head"><h2 class="data-title"><span class="data-name"></span></h2></div>
+                                                            <div class="data-body"></div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="data-item">
+                                                        <div class="data-wrap">
+                                                            <div class="data-head"><h2 class="data-title"><span class="data-name"></span></h2></div>
+                                                            <div class="data-body"></div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="data-item">
+                                                        <div class="data-wrap">
+                                                            <div class="data-head"><h2 class="data-title"><span class="data-name"></span></h2></div>
+                                                            <div class="data-body"></div>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="section-aside">
+
+                            </div>
+                        </div>    
+                    </div>
+                </section>
+                <section class="section story-03 wheel-section">
+                    <div class="section-wrap">
+                        <div class="section-inner">
+                            <!-- <div class="section-head">
+                                <h2 class="section-title"><span class="section-name">story-03</span></h2>
+                            </div> -->
+                            <div class="section-body">
+                                <div class="sub-section">
+                                    <div class="sub-section-wrap">
+                                        <div class="sub-section-body">
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="sub-section">
+                                    <div class="sub-section-wrap">
+                                        <div class="sub-section-body">
+                                            <img src="../../assets/images/example/story-03-02.jpg" alt="">
+                                            <img src="../../assets/images/example/story-03-03.jpg" alt="">
+                                            <img src="../../assets/images/example/story-03-04.jpg" alt="">
+                                            <img src="../../assets/images/example/story-03-05.jpg" alt="">
+                                            <img src="../../assets/images/example/story-03-06.jpg" alt="">
+                                            <img src="../../assets/images/example/story-03-07.jpg" alt="">
+                                            <img src="../../assets/images/example/story-03-08.jpg" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="sub-section">
+                                    <div class="sub-section-wrap">
+                                        <div class="sub-section-body">
+                                            <img src="../../assets/images/example/story-03-09.png" alt="">
+                                            <img src="../../assets/images/example/story-03-10.png" alt="">
+                                            <img src="../../assets/images/example/story-03-11.png" alt="">
+                                            <img src="../../assets/images/example/story-03-12.png" alt="">
+                                            <img src="../../assets/images/example/story-03-13.png" alt="">
+                                            <img src="../../assets/images/example/story-03-14.png" alt="">
+                                            <img src="../../assets/images/example/story-03-15.png" alt="">
+                                            <img src="../../assets/images/example/story-03-16.png" alt="">
+                                            <img src="../../assets/images/example/story-03-17.png" alt="">
+                                            <img src="../../assets/images/example/story-03-18.png" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>    
+                    </div>    
+                </section>
+                <section class="section story-04 wheel-section">
+                    <div class="section-wrap">
+                        <div class="section-inner">
+                            <!-- <div class="section-head">
+                                <h2 class="section-title"><span class="section-name">story-04</span></h2>
+                            </div> -->
+                            <div class="section-body">
+                                <div class="sub-section">
+                                    <div class="sub-section-wrap">
+                                        <div class="sub-section-body">
+                                            <img src="../../assets/images/example/story-04.png" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>          
+        </main>
+        <%-include('../include/kor/HTNCWK03FOOTER.ejs') %>
+    </body>
+</html>

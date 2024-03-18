@@ -1,0 +1,146 @@
+.HTNCWKD40D12W01 {
+    .container-inner {
+        .contents-section {
+            &.contents-section2 {
+                padding-bottom: 20rem;
+                .contents-section-inner {
+                    .contents-article {
+                        &.contents-article1 {
+                            .title {
+                                +.thumbnail-display {
+                                    padding-top: 14rem;
+                                    @include mobile {
+                                        padding-top: 6rem;
+                                    }
+                                }
+                            }
+                            .order-list {
+                                .order-item {
+                                    color: color(achromatic, 451);
+                                }
+                            }
+                        }
+                        &.contents-article2 {
+                            opacity: 1;
+                            transform: none;
+                            .data-display {
+                                .data-head {
+                                    +.data-body {
+                                        padding-top: 8rem;
+                                        @include mobile {
+                                            padding-top: 4rem;
+                                        }
+                                    }
+                                }
+                                .data-body {
+                                    width: 100%;
+                                    display: flex;
+                                    align-items: flex-start;
+                                    justify-content: flex-start;
+                                    gap: 6.73%;
+                                    @include mobile {
+                                        flex-direction: column;
+                                    }
+                                    .thumbnail-figure {
+                                        width: 35.55%;
+                                        display: block;
+                                        .img {
+                                            width: 100%;
+                                        }
+                                        @include mobile {
+                                            width: 100%;
+                                        }
+                                    }
+                                    .content-list {
+                                        width: 57.7%;
+                                        @include mobile {
+                                            width: 100%;
+                                            margin-top: 4rem;
+                                        }
+                                    }
+                                    .content-item {
+                                        display: flex;
+                                        gap: 4rem;
+                                        .content-head {
+                                            .content-year {
+                                                display: inline-block;
+                                                min-width: 9.3rem;
+                                                font-family: 'Hyosung';
+                                                font-size: 2.4rem;
+                                                font-weight: 700;
+                                                line-height: 3.6rem;
+                                                color: color(chromatic, 266);
+                                                @include mobile {
+                                                    font-size: 1.8rem;
+                                                    line-height: 3rem;
+                                                }
+                                            }
+                                        }
+                                        .content-body {
+                                            .content-part {
+                                                .content-title {
+                                                    display: inline-block;
+                                                    font-family: 'Hyosung';
+                                                    font-size: 2.4rem;
+                                                    font-weight: 700;
+                                                    line-height: 3.6rem;
+                                                    color: color(achromatic, 157);
+                                                    +.content-para {
+                                                        padding-top: 1.6rem;
+                                                        @include mobile {
+                                                            padding-top: 0.4rem;
+                                                        }
+                                                    }
+                                                    @include mobile {
+                                                        font-size: 1.8rem;
+                                                        line-height: 3rem;
+                                                    }
+                                                }
+                                                .content-para {
+                                                    font-size: 1.8rem;
+                                                    font-weight: 500;
+                                                    line-height: 3.2rem;
+                                                    color: color(achromatic, 157);
+                                                    word-break: keep-all;
+                                                    @include mobile {
+                                                        font-size: 1.4rem;
+                                                        line-height: 2.4rem;
+                                                    }
+                                                }
+                                                +.content-part {
+                                                    padding-top: 4rem;
+                                                    @include mobile {
+                                                        padding-top: 2.4rem;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                        +.content-item {
+                                            padding-top: 6rem;
+                                            @include mobile {
+                                                padding-top: 4rem;
+                                            }
+                                        }
+                                        @include mobile {
+                                            flex-direction: column;
+                                            gap: 1.6rem;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        +.contents-article {
+                            padding-top: 18rem;
+                            @include mobile {
+                                padding-top: 10rem;
+                            }
+                        }
+                    }
+                }
+                @include mobile {
+                    padding-bottom: 14rem;
+                }
+            }
+        }
+    }
+}

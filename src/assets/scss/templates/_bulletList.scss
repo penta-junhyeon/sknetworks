@@ -1,0 +1,320 @@
+.order-list.design-1.usual-1 {
+    .order-item {
+        position: relative;
+        padding-left: 2.4rem;
+        font-weight: 500;
+        color: #282828;
+        @include mobile {
+            padding-left: 1.8rem;
+        }
+    }
+    &.case-1 {
+        .order-item {
+            &::before {
+                content: '•';
+                color: #535353;
+                position: absolute;
+                left: 0.8rem;
+                top: 0;
+                @include mobile {
+                    font-size: 1.2rem;
+                }
+            }
+        }
+        &.small {
+            .order-item {
+                font-size: 1.4rem;
+                line-height: 2.2rem;
+                @include mobile {
+                    font-size: 1.2rem;
+                    line-height: 2rem;
+                }
+            }
+        }
+        &.medium {
+            .order-item {
+                font-size: 1.6rem;
+                line-height: 2.8rem;
+                @include mobile {
+                    font-size: 1.4rem;
+                    line-height: 2.4rem;
+                }
+            }
+        }
+        &.large {
+            .order-item {
+                font-size: 1.8rem;
+                line-height: 3.2rem;
+                @include mobile {
+                    font-size: 1.4rem;
+                    line-height: 2.4rem;
+                }
+            }
+        }
+    }
+    &.case-2 {
+        counter-reset: order-count;
+        .order-item {
+            &::before {
+                content: counter(order-count) ". ";
+                width: 2.4rem;
+                height: 2.4rem;
+                color: #535353;
+                position: absolute;
+                left: 0.5rem;
+                top: 0;
+                counter-increment: order-count;
+                @include mobile {
+                    font-size: 1.2rem;
+                }
+            }
+        }
+        &.small {
+            .order-item {
+                font-size: 1.4rem;
+                line-height: 2.2rem;
+                @include mobile {
+                    font-size: 1.2rem;
+                    line-height: 2rem;
+                }
+            }
+        }
+        &.medium {
+            .order-item {
+                font-size: 1.6rem;
+                line-height: 2.8rem;
+                @include mobile {
+                    font-size: 1.4rem;
+                    line-height: 2.4rem;
+                }
+            }
+        }
+        &.large {
+            .order-item {
+                font-size: 1.8rem;
+                line-height: 3.2rem;
+                @include mobile {
+                    font-size: 1.4rem;
+                    line-height: 2.4rem;
+                }
+            }
+        }
+    }
+    &.case-3 {
+        padding-top: 2.4rem;
+        .order-item {
+            display: block;
+            padding-left: 1rem;
+            color: color(achromatic, 451);
+            word-break: keep-all;
+            &::before {
+                content: '*';
+                position: absolute;
+                left: 0;
+                top: 0;
+                color: color(achromatic, 451);
+            }
+            @include mobile {
+                padding-left: .9rem;
+            }
+        }
+        &.small {
+            .order-item {
+                font-size: 1.4rem;
+                line-height: 2.2rem;
+                @include mobile {
+                    font-size: 1.2rem;
+                    line-height: 2rem;
+                }
+            }
+        }
+        &.medium {
+            .order-item {
+                font-size: 1.6rem;
+                line-height: 2.8rem;
+                @include mobile {
+                    font-size: 1.4rem;
+                    line-height: 2.4rem;
+                }
+            }
+        }
+        &.large {
+            .order-item {
+                font-size: 1.8rem;
+                line-height: 3.2rem;
+                @include mobile {
+                    font-size: 1.4rem;
+                    line-height: 2.4rem;
+                }
+            }
+        }
+    }
+    &.case-4 {
+        .order-item {
+            padding-left: 1.3rem;
+            @include mobile {
+                padding-left: 1rem;
+            }
+            &::before {
+                content: '※';
+                color: #535353;
+                position: absolute;
+                left: 0;
+                top: 0;
+                @include mobile {
+                    font-size: 1.2rem;
+                }
+            }
+        }
+        &.small {
+            .order-item {
+                font-size: 1.4rem;
+                line-height: 2.2rem;
+                @include mobile {
+                    font-size: 1.2rem;
+                    line-height: 2rem;
+                }
+            }
+        }
+        &.medium {
+            .order-item {
+                font-size: 1.6rem;
+                line-height: 2.8rem;
+                @include mobile {
+                    font-size: 1.4rem;
+                    line-height: 2.4rem;
+                }
+            }
+        }
+        &.large {
+            .order-item {
+                font-size: 1.8rem;
+                line-height: 3.2rem;
+                @include mobile {
+                    font-size: 1.4rem;
+                    line-height: 2.4rem;
+                }
+            }
+        }
+    }
+    &.case-5 {
+        counter-reset: order-count;
+        .order-item {
+            &::before {
+                content: counter(order-count);
+                width: 2.4rem;
+                height: 2.4rem;
+                font-size: 1rem;
+                font-weight: 700;
+                text-align: center;
+                color: #282828;
+                position: absolute;
+                left: 0;
+                top: 0;
+                counter-increment: order-count;
+            }
+            &::after {
+                content: '';
+                width: 1.2rem;
+                height: 1.2rem;
+                border: 0.15rem solid #282828;
+                border-radius: 50%;
+                position: absolute;
+                left: 0.44rem;
+                top: 0.6rem;
+            }
+        }
+        &.small {
+            .order-item {
+                font-size: 1.4rem;
+                line-height: 2.2rem;
+                @include mobile {
+                    font-size: 1.2rem;
+                    line-height: 2rem;
+                }
+            }
+        }
+        &.medium {
+            .order-item {
+                font-size: 1.6rem;
+                line-height: 2.8rem;
+                @include mobile {
+                    font-size: 1.4rem;
+                    line-height: 2.4rem;
+                }
+            }
+        }
+        &.large {
+            .order-item {
+                font-size: 1.8rem;
+                line-height: 3.2rem;
+                @include mobile {
+                    font-size: 1.4rem;
+                    line-height: 2.4rem;
+                }
+            }
+        }
+    }
+    &.case-6 {
+        .order-item {
+            color: #282828;
+        }
+        &.small {
+            .order-item {
+                font-size: 1.4rem;
+                line-height: 2.2rem;
+                text-indent: -1.7rem;
+                padding-left: 2rem;
+            }
+        }
+        &.medium {
+            .order-item {
+                font-size: 1.6rem;
+                line-height: 2.8rem;
+                text-indent: -1.8rem;
+                padding-left: 2rem;
+                @include mobile {
+                    font-size: 1.4rem;
+                    line-height: 2.4rem;
+                    text-indent: -1.7rem;
+                    padding-left: 2rem;
+                }
+            }
+        }
+        &.large {
+            .order-item {
+                font-size: 1.8rem;
+                line-height: 3.2rem;
+                text-indent: -2.1rem;
+                padding-left: 2.5rem;
+                @include mobile {
+                    font-size: 1.4rem;
+                    line-height: 2.4rem;
+                    text-indent: -1.7rem;
+                    padding-left: 2rem;
+                }
+            }
+        }
+    }
+    &.align-1 {
+        text-align: left;
+    }
+    &.align-2 {
+        text-align: right;
+    }
+    &.align-3 {
+        text-align: center;
+    }
+    &.type-1 {
+        .order-item {
+            &~ .order-item {
+                margin-top: 1rem;
+            }
+        }
+    }
+    &.type-2 {
+        .order-item {
+            margin: 0;
+        }
+    }
+}

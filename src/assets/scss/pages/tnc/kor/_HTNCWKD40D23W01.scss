@@ -1,0 +1,106 @@
+.HTNCWKD40D23W01 {
+    .contents-section2 {
+        padding-bottom: 20rem;
+        background-image: url('../images/photo/sustainability/pollution/bg-01.jpg');
+        background-position-y: bottom;
+        background-repeat: no-repeat;
+        .contents-article {
+            +.contents-article {
+                padding-top: 18rem;
+                @include mobile {
+                    padding-top: 10rem;
+                }
+            }
+            &.contents-article1 {
+                padding-top: 8rem;
+                .thumbnail-display.design-7 {
+                    .thumbnail-item {
+                        &:nth-child(1) {
+                            background-image: url('../images/photo/sustainability/pollution/img-thumb-01-pc.jpg');
+                            @include mobile {
+                                background-image: url('../images/photo/sustainability/pollution/img-thumb-01-mo.jpg');
+                            }
+                        }
+                        &:nth-child(2) {
+                            background-image: url('../images/photo/sustainability/pollution/img-thumb-02-pc.jpg');
+                            @include mobile {
+                                background-image: url('../images/photo/sustainability/pollution/img-thumb-02-mo.jpg');
+                            }
+                        }
+                        &:nth-child(3) {
+                            background-image: url('../images/photo/sustainability/pollution/img-thumb-03-pc.jpg');
+                            @include mobile {
+                                background-image: url('../images/photo/sustainability/pollution/img-thumb-03-mo.jpg');
+                            }
+                        }
+                    }
+                } 
+                .data-display {
+                    position: relative;
+                    .data-body {
+                        +.data-aside {
+                            padding-top: 8rem;
+                            @include mobile {
+                                padding-top: 6rem;
+                            }
+                        }
+                    }
+                    .button-display {
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                        @include mobile {
+                            position: relative;
+                            padding-top: 4rem;
+                        }
+                    }
+                }
+                @include mobile {
+                    padding-top: 6rem;
+                }
+            }
+            &.contents-article2 {
+                .data-body {
+                    +.data-aside {
+                        padding-top: 8rem;
+                    }
+                }
+            }
+            &.contents-article3 {
+                .board-head {
+                    +.board-body {
+                        padding-top: 4rem;
+                    }
+                }
+                .board-body {
+                    display: flex;
+                    gap: 1.2rem;
+                    @include mobile {
+                        flex-direction: column;
+                    }
+                }
+                .data-display {
+                    padding-top: 8rem;
+                    padding-bottom: 8.4rem;
+                    border-radius: 3.6rem;
+                    padding-left: 8rem;
+                    padding-right: 8rem;
+                    &.fill-584 {
+                        background-color: color(chromatic, 584);
+                    }
+                    &.fill-266 {
+                        background-color: color(chromatic, 266);
+                    }
+                    @include mobile {
+                        padding: 4rem 2rem;
+                        border-radius: 2rem;
+                    }
+                }
+            }
+        }
+        @include mobile {
+            padding-bottom: 14rem;
+            background-size: auto 26rem;
+        }
+    }
+}

@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <%-include('../include/kor/HTNCWK00HEADMETACOMMON.ejs') %>
+        <%-include('../meta-id/kor/HTNCWKD40D22W01.ejs') %>
+        <%-include('../include/kor/HTNCWK00HEADSTYLE.ejs') %>
+        <%-include('../include/kor/HTNCWK00HEADFAVICON.ejs') %>
+        <%-include('../include/kor/HTNCWK00HEADSCRIPTLIBRARY.ejs') %>
+        <%-include('../include/kor/HTNCWK00HEADSCRIPTGSAP.ejs') %>
+        <%-include('../include/kor/HTNCWK00HEADSCRIPTLOADER.ejs') %>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                scrollEvent();
+                resizeEvent();
+
+                subPageIntroWheel_01(); // 서브 공통 MouseWheel naviDepth3, naviDepth4
+                localInteraction_04_01(); // 서브 공통 Info Interaction
+                naviDepth3_Interaction_01(); // 서브 공통 naviDepth3 fixed,  naviDepth4 따라 내려옴
+
+                contentsSubScrollEventCustom(); // 서브 공통 Section Active
+            });
+
+            function scrollEvent(){
+                window.addEventListener('scroll', () => {
+                    contentsSubScrollEventCustom();
+                });
+            }
+
+            function resizeEvent(){
+                window.addEventListener('resize', () => {
+                });
+            }
+        </script>
+    </head>
+    <body class="tnc-site">
+        <%-include('../include/kor/HTNCWK01HEADER.ejs') %>
+        <main id="container" class="container tnc HTNCWKD40D22W01 sub">
+            <h2 class="blind">컨테이너 영역</h2>
+            <div class="container-inner">
+                <section class="contents-section contents-section1">
+                    <div class="contents-section-inner">
+                        <div class="local sustainability-common" local-interaction="sustainability-01">
+                            <div class="local-head design-1">
+                                <div class="local-head-wrap">
+                                    <div class="local-subject">
+                                        <h2 class="local-name">
+                                            <span class="wbr">Environmental</span>
+                                            <span class="wbr hide">자원순환</span>
+                                        </h2>
+                                    </div>
+                                    <div class="local-subject">
+                                        <h2 class="local-name">
+                                            <span class="wbr hide">Environmental</span>
+                                            <span class="wbr">자원순환</span>
+                                        </h2>
+                                    </div>
+                                    <picture class="local-figure">
+                                        <source media="(max-width: 1023px)" srcset="../../assets/images/photo/sustainability/resource/local-mo.jpg">
+                                        <source media="(max-width: 1920px)" srcset="../../assets/images/photo/sustainability/resource/local-pc.jpg">
+                                        <img src="../../assets/images/photo/sustainability/resource/local-pc.jpg" alt=" ">
+                                    </picture>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <nav class="navi depth3">
+                    <div class="navi-wrap">
+                        <div class="navi-subject"><a href="#" title="현재 선택된 항목" class="navi-name">자원순환</a></div>
+                        <div class="tab-display">
+                            <ul class="tab-list">
+                                <li class="tab-item"><a href="#" class="tab-text">그린경영</a></li>
+                                <li class="tab-item"><a href="#" class="tab-text">기후변화 대응</a></li>
+                                <li class="tab-item current"><a href="#" class="tab-text">자원순환</a></li>
+                                <li class="tab-item"><a href="#" class="tab-text">오염저감</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+                <section class="contents-section contents-section2">
+                    <div class="contents-section-inner">
+                        <div class="contents-section-head">
+                            <div class="data-display design-1 case-1 color-2 align-3">
+                                <ul class="data-list">
+                                    <li class="data-item">
+                                        <div class="data-wrap">
+                                            <div class="data-head">
+                                                <h2 class="title design-1 case-1 large">
+                                                    <em class="name">자원순환 정책</em>
+                                                </h2>
+                                            </div>
+                                            <div class="data-body">
+                                                <p class="data-para">
+                                                    효성티앤씨㈜는 미래 세대를 위한 지구의 자원을 보존하고자 자원의 순환성에 대해서 전사적인 접근방식을 취하고 있습니다. <br>
+                                                    생산ㆍ유통ㆍ소비 등 제품의 전 과정에서 자원을 효율적으로 이용하고 폐기물의 발생을 최대한 억제하며 발생된 폐기물의 순환 이용을 촉진하여 지속 가능한 순환경제사회를 만드는 데 기여하기 위하여 각 단계별 정책을 수립하여 실행하고 있습니다.
+                                                </p>
+                                            </div>
+                                            <div class="data-aside">
+                                                <div class="button-display form-1 sort-2 align-3">
+                                                    <div class="button-wrap form-1">
+                                                        <a href="javascript:void(0)" class="button design-1 case-5 small align-3 color-1 line-900 border-width-2 rtl icon-right-arrow01">
+                                                            <span class="button-text-core">친환경 기술 개발 바로가기</span>
+                                                        </a>
+                                                        
+                                                    </div>
+                                                </div>
+                                                <div class="diagram-display design-2">
+                                                    <div class="diagram-wrap">
+                                                        <div class="diagram-body">
+                                                            <picture class="picture">
+                                                                <source media="(max-width: 1023px)" srcset="../../assets/images/diagram/sustainability/recycle/diagram-recycle-01-mo.svg">
+                                                                <source media="(max-width: 1920px)" srcset="../../assets/images/diagram/sustainability/recycle/diagram-recycle-01-pc.svg">
+                                                                <img class="img" src="../../assets/images/diagram/sustainability/recycle/diagram-recycle-01-pc.svg" alt="아래 항목 참고">
+                                                            </picture>
+                                                        </div>
+                                                        <div class="diagram-footer">
+                                                            <ul>
+                                                                <li>
+                                                                    <h4>원재료</h4>
+                                                                    <em>친환경 원부자재 (recycled, Bio) 사용</em>
+                                                                    <p>Eco-friendly Materials</p>
+                                                                    <em>감량화</em>
+                                                                    <p>원부자재 재고 및 사용량 관리 최적화를 통한 신규 구매 최소화</p>
+                                                                </li>
+                                                                <li>
+                                                                    <h4>생산, 유통</h4>
+                                                                    <em>친환경 기술</em>
+                                                                    <p>Eco-friendly Tech</p>
+                                                                    <em>재활용</em>
+                                                                    <p>Recycle 공정폐기물(불량품) 재활용, 유제 재사용</p>
+                                                                </li>
+                                                                <li>
+                                                                    <h4>소비</h4>
+                                                                    <em>제품 내구성 증대</em>
+                                                                    <p>Maintenance For Durability </p>
+                                                                </li>
+                                                                <li>
+                                                                    <h4>폐기</h4>
+                                                                    <em>최소화</em>
+                                                                    <p>Minimize</p>
+                                                                    <em>재사용, 재정비, 수리, 용도변경</em>
+                                                                    <p>제품 유지보수 서비스 Reuse, Refurbish, Repair, Repurpose</p>
+                                                                    <em>재제조/재생</em>
+                                                                    <p>Remanufacture</p>
+                                                                    <em>재활용</em>
+                                                                    <p>Recycle, 기계적, 화학적 재활용 기술 및 제품 개발</p>
+                                                                </li>
+                                                                <li>
+                                                                    <h4>소각, 매립</h4>
+                                                                    <em>제품 내구성 증대</em>
+                                                                    <p>Maintenance For Durability </p>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="contents-section-body">
+                            <div class="contents-article contents-article1">
+                                <div class="contents-article-inner">
+                                    <div class="thumbnail-display design-10 case-1">
+                                        <div class="thumbnail-list">
+                                            <div class="thumbnail-item">
+                                                <div class="thumbnail-wrap">
+                                                    <div class="thumbnail-head">
+                                                        <p class="subject">원부자재 및 수자원 저감 활동</p>
+                                                        <p class="summary">
+                                                            원부자재의 재고 및 사용량 관리 최적화를 통하여 신규 구매량을 최소화하고 있습니다.
+                                                            생산 공정에서 불필요한 용수 사용량을 최소화하여 용수 사용량을 감축하고 있습니다.
+                                                            매년 상수, 공업용수 등 취수원별로 용수 사용량에 대한 목표를 잡고 목표대비 사용량을 감축하기 위해 노력하고 있습니다.
+                                                        </p>
+                                                    </div>
+                                                    <picture class="thumbnail-figure">
+                                                        <source media="(max-width: 1023px)" srcset="../../assets/images/photo/sustainability/resource/img-thumb-01-mo.png">
+                                                        <source media="(max-width: 1920px)" srcset="../../assets/images/photo/sustainability/resource/img-thumb-01.png">
+                                                        <img class="img" src="../../assets/images/photo/sustainability/resource/img-thumb-01.png" alt=" ">
+                                                    </picture>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="contents-article contents-article2 case-1">
+                                <div class="thumbnail-display design-11">
+                                    <div class="thumbnail-list">
+                                        <div class="thumbnail-item">
+                                            <div class="thumbnail-wrap">
+                                                <div class="thumbnail-head">
+                                                    <p class="subject">재활용 원사 및<br> 원단 활용 제품 생산</p>
+                                                    <p class="summary">
+                                                        효성티앤씨㈜는 NY, PET 재활용 원사 및 원단에 대해 GRS 인증을 획득하였습니다.<br>
+                                                        GRS 인증은 섬유 원료 및 의류 생산에 재활용 원료가
+                                                        사용되었음을 증명하기 위한 인증입니다.<br class="br-pc">
+                                                        재활용 원료를 사용하여 자원 이용을 줄이기 위한
+                                                        국제적 노력에 동참하고 있습니다.
+                                                    </p>
+                                                </div>
+                                                <picture class="thumbnail-figure">
+                                                    <source media="(max-width: 1023px)" srcset="../../assets/images/photo/sustainability/resource/img-thumb-02-mo.png">
+                                                    <source media="(max-width: 1920px)" srcset="../../assets/images/photo/sustainability/resource/img-thumb-02.png">
+                                                    <img class="img" src="../../assets/images/photo/sustainability/resource/img-thumb-02.png" alt=" ">
+                                                </picture>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="contents-article contents-article3">
+                                <div class="contents-article-inner">
+                                    <div class="thumbnail-display design-10 case-2">
+                                        <div class="thumbnail-list">
+                                            <div class="thumbnail-item">
+                                                <div class="thumbnail-wrap">
+                                                    <div class="thumbnail-head">
+                                                        <p class="subject">자원 절약을 고려한 친환경 제품 구매</p>
+                                                        <p class="summary">
+                                                            효성티앤씨㈜는 자원 절약을 고려한 녹색구매방침을 따르고 있으며,<br class="br-pc"> 친환경 구매를 꾸준히 실천하고 있습니다.
+                                                        </p>
+                                                    </div>
+                                                    <picture class="thumbnail-figure">
+                                                        <source media="(max-width: 1023px)" srcset="../../assets/images/photo/sustainability/resource/img-thumb-03-mo.png">
+                                                        <source media="(max-width: 1920px)" srcset="../../assets/images/photo/sustainability/resource/img-thumb-03.png">
+                                                        <img class="img" src="../../assets/images/photo/sustainability/resource/img-thumb-03.png" alt=" ">
+                                                    </picture>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="contents-article contents-article4">
+                                <div class="contents-article-inner">
+                                    <div class="thumbnail-display design-10 case-3">
+                                        <div class="thumbnail-list">
+                                            <div class="thumbnail-item">
+                                                <div class="thumbnail-wrap">
+                                                    <div class="thumbnail-head">
+                                                        <p class="subject">폐기물 재활용 처리를 통한 자원순환</p>
+                                                        <p class="summary">
+                                                            효성티앤씨㈜는 사업장에서 공정상 생산된 불량칩 및 원사 등을
+                                                            폐기 처리하지 않고 재활용업체로 판매 가능한 형태로 가공한 후
+                                                            재판매하여 폐기물 배출량을 저감하고 자원순환에 기여하고 있습니다.
+                                                        </p>
+                                                    </div>
+                                                    <picture class="thumbnail-figure">
+                                                        <source media="(max-width: 1023px)" srcset="../../assets/images/photo/sustainability/resource/img-thumb-04-mo.png">
+                                                        <source media="(max-width: 1920px)" srcset="../../assets/images/photo/sustainability/resource/img-thumb-04.png">
+                                                        <img class="img" src="../../assets/images/photo/sustainability/resource/img-thumb-01.png" alt=" ">
+                                                    </picture>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="contents-article contents-article5">
+                                <div class="contents-article-inner">
+                                    <div class="thumbnail-display design-10 case-4">
+                                        <div class="thumbnail-list">
+                                            <div class="thumbnail-item">
+                                                <div class="thumbnail-wrap">
+                                                    <div class="thumbnail-head">
+                                                        <p class="subject">자원순환 제품 및 기술 개발</p>
+                                                        <p class="summary">
+                                                            효성티앤씨㈜는 환경 오염의 주요 원인이 되는 일회용품 폐기물을 활용하여 녹색 제품으로 탈바꿈하는 친환경 제품 혁신을 추진하고 있습니다. 또한 생분해성 제품 및 자원재활용 기술을 개발하고 있습니다. 앞으로도 효성은 친환경 제품과 기술에 대한 아낌없는 연구개발 투자를 통해 기후변화에 대응하고 친환경 사업 생태계를 조성하는 데 앞장설 것입니다.
+                                                        </p>
+                                                    </div>
+                                                    <picture class="thumbnail-figure">
+                                                        <source media="(max-width: 1023px)" srcset="../../assets/images/photo/sustainability/resource/img-thumb-05-mo.png">
+                                                        <source media="(max-width: 1920px)" srcset="../../assets/images/photo/sustainability/resource/img-thumb-05.png">
+                                                        <img class="img" src="../../assets/images/photo/sustainability/resource/img-thumb-01.png" alt=" ">
+                                                    </picture>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="contents-article contents-article6">
+                                <div class="contents-article-inner">
+                                    <div class="thumbnail-display design-10 case-5">
+                                        <div class="thumbnail-list">
+                                            <div class="thumbnail-item">
+                                                <div class="thumbnail-wrap">
+                                                    <div class="thumbnail-head">
+                                                        <p class="subject">굿윌스토어 효성1호점 물품 후원</p>
+                                                        <p class="summary">
+                                                            ‘굿윌스토어’는 ‘사람, 기업, 환경’을 생각하는 사회적 기업 모델로 미국, 캐나다 등 15개국에 2,800여 개의 스토어를 운영하며 장애인, 취약계층에게 20만 개의 일자리를 제공하고 있습니다. ‘굿윌스토어’는 취약계층을 고용하여 경제적 자립에 기여하고 기증받은 물품의 판매 수익금을 장애인 일자리 창출과 직업 교육∙훈련을 위해 사용하며, 자원 선순환을 촉진하는 사회적 기업입니다. 효성은 국내기업으로는 처음으로 2013년 10월 서울시 은평구에 ‘굿윌스토어 효성 1호점’을 오픈하였고, 본사와 각 사업장에 굿윌스토어 기증함을 설치하여 임직원들이 기증한 물품을 ‘효성1호점’에 전달하고 있습니다.
+                                                        </p>
+                                                    </div>
+                                                    <picture class="thumbnail-figure">
+                                                        <source media="(max-width: 1023px)" srcset="../../assets/images/photo/sustainability/resource/img-thumb-06-mo.png">
+                                                        <source media="(max-width: 1920px)" srcset="../../assets/images/photo/sustainability/resource/img-thumb-06.png">
+                                                        <img class="img" src="../../assets/images/photo/sustainability/resource/img-thumb-01.png" alt=" ">
+                                                    </picture>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+        <%-include('../include/kor/HTNCWK03FOOTER.ejs') %>
+    </body>
+</html>

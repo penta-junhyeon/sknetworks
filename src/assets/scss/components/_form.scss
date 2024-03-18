@@ -1,0 +1,113 @@
+%form {
+    position: relative;
+    padding: 0 2rem;
+    height: 6.4rem;
+    border: 0.1rem solid rgba(225, 230, 239, 0.8);
+    box-sizing: border-box;
+    border-radius: 1.2rem;
+
+    color: #000000;
+    font-size: 1.6rem;
+    font-weight: 500;
+    font-family: 'Pretendard';
+    line-height: 175%;
+
+    transition: all 0.1s ease-out;
+    @include mobile {
+        height: 5rem;
+    }
+    &::placeholder{
+        color: #737373;
+        font-weight: 500;
+        line-height: 175%;
+        font-family: 'Pretendard';
+    }
+    &:disabled {
+        background-color: #ffffff;
+        border-color: rgba(225, 230, 239, 0.8);
+        color: #737373;
+    }
+    &:read-only {
+        background-color: rgba(244, 246, 250, 0.8);
+        border-color: rgba(244, 246, 250, 0.8);
+        color: #000000;
+    }
+    &.textRegexp {
+        border: 0.2rem solid #F11;
+    }
+    &:active,
+    &:focus {
+        outline: 0.2rem solid rgba(40, 40, 40, 0.8);
+    }
+}
+
+%label {
+    @include hide;
+    + label {
+        display: inline-block;
+        padding-left: 3.6rem;
+        padding-right: 3.6rem;
+        line-height: 3.2rem;
+        font-size: 1.8rem;
+        font-weight: 600;
+        color: #535353;
+        @include mobile {
+            padding-left: 2.6rem;
+            padding-right: 1.6rem;
+            font-size: 1.6rem;
+            font-weight: 500;
+            white-space: nowrap;
+        }
+    }
+}
+
+textarea,
+input:not([type="radio"], [type="checkbox"]){
+    @extend %form;
+}
+
+input{
+    &[type="checkbox"]{
+        @extend %label;
+        + label {
+            background: url('../../assets/images/icon/bg_chk_off.svg') no-repeat left center;
+            background-size: 2.8rem 2.8rem;
+            @include mobile {
+                padding-left: 3.2rem;
+                font-size: 1.4rem;
+            }
+        }
+        &:checked {
+            + label {
+                background: url('../../assets/images/icon/bg_chk_on.svg') no-repeat left center;
+                background-size: 2.8rem 2.8rem;
+            }
+        }
+    }
+    &[type="radio"]{
+        @extend %label;
+        + label {
+            background: url('../../assets/images/icon/bg_radio_off.svg') no-repeat left center;
+            background-size: 2.4rem 2.4rem;
+            @include mobile {
+                background-size: 1.8rem 1.8rem;
+                color: #000000;
+            }
+        }
+        &:checked {
+            + label {
+                background: url('../../assets/images/icon/bg_radio_on.svg') no-repeat left center;
+                background-size: 2.4rem 2.4rem;
+                @include mobile {
+                    background-size: 1.8rem 1.8rem;
+                }
+            }
+        }
+    }
+    &[type="file"]{
+        @include hide;
+        + input.file-name {
+            border: unset;
+        }
+    }
+}

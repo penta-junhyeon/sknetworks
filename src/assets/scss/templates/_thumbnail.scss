@@ -1,0 +1,2464 @@
+//flex form
+%form01 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+%form02 {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+%form03 {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+}
+%form04 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+%form05 {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+%form06 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+//font type
+@mixin thumbfont01 {
+    font-size: 2.4rem;
+    line-height: 3.6rem;
+}
+@mixin thumbfont02 {
+    font-size: 1.4rem;
+    line-height: 2.4rem;
+}
+@mixin thumbfont03 {
+    font-family: 'hyosung';
+    font-weight: 700;
+    font-size: 2.8rem;
+    line-height: 3.6rem;
+}
+@mixin thumbfont04 {
+    font-weight: 700;
+    font-size: 3.2rem;
+    line-height: 4.8rem;
+}
+@mixin thumbfont05 {
+    font-size: 1.8rem;
+    line-height: 3.2rem;
+}
+@mixin thumbfont06 {
+    font-size: 1.6rem;
+    line-height: 2.6rem;
+}
+@mixin thumbfont07 {
+    font-size: 2rem;
+    line-height: 3.2rem;
+}
+@mixin thumbfont08 {
+    font-family: 'hyosung';
+    font-size: 2.8rem;
+    line-height: 4.2rem;
+}
+@mixin thumbfont09 {
+    font-size: 1.8rem;
+    line-height: 3rem;
+}
+@mixin thumbfont10 {
+    font-family: 'hyosung';
+    font-size: 2.8rem;
+    line-height: 4.8rem;
+}
+
+
+.thumbnail-display {
+    width: 100%;
+    max-width: 133.6rem;
+    margin: 0 auto;
+    position: relative;
+    * {
+        scroll-behavior: smooth;
+    }
+    .thumbnail-figure {
+        .img {
+            width: 100%
+        }
+    }
+    picture.thumbnail-figure {
+        display: block
+    }
+    &.design-1 {
+        .thumbnail-wrap {
+            @extend %form01;
+            @include mobile {
+                flex-direction: column;
+            }
+            .thumbnail-head {
+                width: 24.7rem;
+                .subject {
+                    font-weight: 800;
+                    font-size: 10rem;
+                    line-height: 1;
+                    color: #00B066;
+                }
+                .summary {
+                    font-family: 'hyosung';
+                    @include thumbfont04;
+                    color: color(achromatic, 0);
+                    padding-top: 8rem;
+                }
+                @include mobile {
+                    width: 100%;
+                    text-align: center;
+                    .subject {
+                        font-size: 4.8rem;
+                    }
+                    .summary {
+                        @include thumbfont01;
+                        padding-top: 2.4rem;
+                    }
+                }
+            }
+            .thumbnail-inform {
+                width: 66.12%;
+                .thumbnail-head {
+                    display: flex;
+                    align-items: flex-end;
+                    gap: 9.04%;
+                    width: auto;
+                    .thumbnail-figure {
+                        position: relative;
+                        width: 53.4%;
+                        .img {
+                            width: 100%;
+                        }
+                        .para {
+                            position: absolute;
+                            left: 8.4%;
+                            bottom: 4rem;
+                            text-align: left;
+                            font-family: 'Poppins';
+                            font-weight: 700;
+                            font-size: 2.6rem;
+                            line-height: 3.6rem;
+                            color: color(achromatic, 999);
+                            text-transform: uppercase;
+                            @include mobile {
+                                font-size: 1.8rem;
+                                line-height: 2.6rem;
+                                left: 8%;
+                                bottom: 15%;
+                            }
+                        }
+                    }
+                }
+                .thumbnail-body {
+                    padding-top: 6rem;
+                    .para {
+                        font-weight: 500;
+                        @include thumbfont05;
+                        color: color(achromatic, 157);
+                        &~ .para {
+                            padding-top: 1.6rem;
+                        }
+                        @include mobile {
+                            @include thumbfont02;
+                            &~ .para {
+                                padding-top: 1rem;
+                            }
+                        }
+                    }
+                }
+                @include mobile {
+                    width: 100%;
+                    .thumbnail-head {
+                        flex-direction: column;
+                        padding-top: 6rem;
+                        .thumbnail-figure {
+                            width: 100%;
+                            &::after {
+                                left: 8%;
+                                top: 15%;
+                            }
+                        }
+                        .button-display.form-1 {
+                            padding-top: 4rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &.design-2 {
+        .thumbnail-item {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            &:nth-child(n+2) {
+                padding-top: 8rem;
+                margin-top: 8rem;
+                border-top: 0.1rem solid rgba(255,255,255,0.2);
+                @include mobile {
+                    border-top: unset;
+                    padding: unset;
+                    margin: unset;
+                }
+            }
+            @include mobile {
+                &:nth-child(1) {
+                    .thumbnail-wrap:nth-child(1) {
+                        border-top: unset;
+                        padding: unset;
+                        margin: unset;
+                    }
+                }
+            }
+        }
+        .thumbnail-wrap {
+            width: 50%;
+            display: flex;
+            align-items: flex-start;
+            gap: 7.4%;
+            @include mobile {
+                flex-direction: column;
+                width: 100%;
+                padding-top: 6rem;
+                margin-top: 6rem;
+                border-top: 0.1rem solid rgba(255,255,255,0.2);
+                gap: unset;
+            }
+            &:nth-child(even) {
+                justify-content: end;
+            }
+            .thumbnail-head {
+                width: 13rem;
+                .subject {
+                    font-weight: 800;
+                    font-size: 5rem;
+                    line-height: 6rem;
+                    color: #069774;
+                }
+                @include mobile {
+                    width: 100%;
+                    .subject {
+                        font-size: 3.6rem;
+                        line-height: 1;
+                    }
+                }
+            }
+            .thumbnail-body {
+                width: 54.8%;
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                .thumbnail-figure {
+                    position: relative;
+                    display: block;
+                    width: 100%;
+                    .img {
+                        width: 100%;
+                    }
+                    .para {
+                        position: absolute;
+                        left: 3.4rem;
+                        bottom: 3rem;
+                        font-family: 'Poppins';
+                        font-weight: 600;
+                        font-size: 1.8rem;
+                        line-height: 2.6rem;
+                        color: color(achromatic, 999);
+                        text-transform: uppercase;
+                        @include mobile {
+                            left: 8%;
+                            bottom: 15%;
+                        }
+                    }
+                }
+                .desc {
+                    @include thumbfont01;
+                    font-weight: 700;
+                    color: color(achromatic, 999);
+                    padding-top: 4rem;
+                }
+                .button-display.form-1 {
+                    padding-top: 4rem;
+                }
+                @include mobile {
+                    width: 100%;
+                    flex-direction: column;
+                    .thumbnail-figure {
+                        width: 100%;
+                        border-radius: 2.4rem;
+                        margin-top: 3rem;
+                        &::after {
+                            left: 8%;
+                            top: 15%;
+                        }
+                    }
+                    .desc {
+                        @include thumbfont05;
+                    }
+                }
+            }
+        }
+    }
+    &.design-3 {
+        .thumbnail-item {
+            &~ .thumbnail-item {
+                padding-top: 18rem;
+                @include mobile {
+                    padding-top: 10rem;
+                }
+            }
+            .thumbnail-wrap {
+                @extend %form02;
+                gap: 6.7%;
+                @include mobile {
+                    flex-direction: column;
+                }
+            }
+        }
+        .thumbnail-figure {
+            display: block;
+            width: 36%;
+            .img {
+                max-width: 100%;
+            }
+            @include mobile {
+                width: 100%;
+            }
+        }
+        .thumbnail-inform {
+            width: 57.6%;
+            .thumbnail-head {
+                font-family: 'hyosung';
+                @include thumbfont04;
+                color: color(achromatic, 0);
+            }
+            .thumbnail-body {
+                font-weight: 500;
+                @include thumbfont05;
+                color: color(achromatic, 157);
+                padding-top: 4rem;
+            }
+            .table-display.design-1 {
+                padding-top: 6rem;
+            }
+            @include mobile {
+                width: 100%;
+                padding-top: 4rem;
+                .thumbnail-head {
+                    @include thumbfont01;
+                }
+                .thumbnail-body {
+                    @include thumbfont02;
+                    padding-top: 2.4rem;
+                }
+            }
+        }
+    }
+    &.design-4 {
+        .thumbnail-item {
+            &~ .thumbnail-item {
+                padding-top: 18rem;
+            }
+            @include mobile {
+                &~ .thumbnail-item {
+                    padding-top: 10rem;
+                }
+            }
+        }
+        .thumbnail-wrap {
+            @extend %form02;
+            gap: 6.7%;
+
+            @include mobile {
+                flex-direction: column;
+            }
+        }
+        .thumbnail-figure {
+            display: block;
+            width: 35.5%;
+            .img {
+                width: 100%;
+            }
+            @include mobile {
+                width: 100%;
+            }
+        }
+        .thumbnail-inform {
+            width: 57.6%;
+            .thumbnail-head {
+                font-family: 'hyosung';
+                @include thumbfont04;
+                color: color(achromatic, 0);
+            }
+            .para {
+                font-weight: 500;
+                @include thumbfont05;
+                color: color(achromatic, 157);
+                padding-top: 4rem;
+                &~ .para {
+                    padding-top: 1.6rem;
+                }
+                @include mobile {
+                    @include thumbfont02;
+                    &~ .para {
+                        padding-top: 1rem;
+                    }
+                }
+            }
+            .button-display.form-1 {
+                padding-top: 8rem;
+                .design-1.icon-right-arrow01 .button-text::after {
+                    background-image: icon(right-arrow01, color(achromatic, 0));
+                }
+            }
+            @include mobile {
+                width: 100%;
+                padding-top: 4rem;
+                .thumbnail-head {
+                    @include thumbfont01;
+                }
+                .para {
+                    @include thumbfont02;
+                    padding-top: 2.4rem;
+                }
+                .button-display.form-1 {
+                    padding-top: 4rem;
+                }
+            }
+        }
+    }
+    &.design-5 {
+        .thumbnail-wrap {
+            display: flex;
+            flex-direction: column;
+            .thumbnail-head {
+                position: relative;
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                .subject {
+                    font-weight: 'Poppins';
+                    @include thumbfont04;
+                    color: #00B066;
+                }
+                .thumbnail-figure {
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+                    width: 26.3%;
+                    .img{
+                        width: 100%;
+                    }
+                }
+                @include mobile {
+                    flex-direction: column;
+                    .subject {
+                        font-weight: 'Poppins';
+                        font-weight: 700;
+                        @include thumbfont01;
+                        color: #00B066;
+                    }
+                    .thumbnail-figure {
+                        @include posi01;
+                        width: 100%;
+                        margin-top: 4rem;
+                        padding-bottom: 61.33%;
+                        width: calc(100% + 3.6rem);
+                        margin-left: -1.8rem;
+                        .img {
+                            @include posi02;
+                        }
+                    }
+                }
+            }
+            .thumbnail-body {
+                width: 66.9%;
+                .para {
+                    font-weight: 500;
+                    @include thumbfont05;
+                    color: color(achromatic, 157);
+                    padding-top: 4rem;
+                }
+                @include mobile {
+                    width: 100%;
+                    .para {
+                        @include thumbfont02;
+                    }
+                }
+            }
+        }
+    }
+    &.design-6 {
+        .thumbnail-item {
+            .thumbnail-wrap {
+                width: 100%;
+                @extend %form01;
+                gap: 4.49%;
+                @include mobile {
+                    flex-direction: column;
+                }
+                .thumbnail-figure {
+                    width: 37.79%;
+                    .img {
+                        width: 100%;
+                    }
+                    @include mobile {
+                        width: 100%;
+                    }
+                }
+                .thumbnail-infrom {
+                    width: 57.63%;
+                    .data-list {
+                        .data-item {
+                            @extend %form01;
+                            padding: 2.8rem 0 2.8rem 1rem;
+                            border-bottom: 0.1rem solid color(achromatic, 0);
+                            .data-head {
+                                font-family: 'hyosung';
+                                font-weight: 700;
+                                @include thumbfont07;
+                            }
+                            &:nth-child(1) {
+                                padding: 0 0 2.8rem 1rem;
+                            }
+                        }
+                    }
+                    @include mobile {
+                        width: 100%;
+                        padding-top: 2rem;
+                        .data-list {
+                            .data-item {
+                                flex-direction: column;
+                                align-items: flex-start;
+                                padding: 4rem 0;
+                                .data-head {
+                                    @include thumbfont05;
+                                }
+                                &:nth-child(1) {
+                                    padding: 4rem 0;
+                                }
+                            }
+                            .button-display.form-1 {
+                                padding-top: 4rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        &.case-2 {
+            .thumbnail-item {
+                .thumbnail-wrap {
+                    flex-direction: row-reverse;
+                    gap: 9.95%;
+                    @include mobile {
+                        flex-direction: column;
+                    }
+                    .thumbnail-figure {
+                        width: 32.33%;
+                        @include mobile {
+                            width: 100%;
+                        }
+                    }
+                    .thumbnail-infrom {
+                        width: 57.7%;
+                        @include mobile {
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &.design-7 {
+        .thumbnail-list {
+            @extend %form01;
+            gap: 0.59%;
+            @include mobile {
+                flex-direction: column;
+            }
+        }
+        .thumbnail-item {
+            @include posi01;
+            width: calc(100% / 3);
+            padding-bottom: 31.81%;
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: cover;
+            &:nth-child(1) {
+                background-image: url('../../assets/images/photo/sustainability/green/img-green-thumb-01.png');
+                @include mobile {
+                    background-image: url('../../assets/images/photo/sustainability/green/img-green-thumb-01-mo.png');
+                }
+            }
+            &:nth-child(2) {
+                background-image: url('../../assets/images/photo/sustainability/green/img-green-thumb-02.png');
+                @include mobile {
+                    background-image: url('../../assets/images/photo/sustainability/green/img-green-thumb-02-mo.png');
+                }
+            }
+            &:nth-child(3) {
+                background-image: url('../../assets/images/photo/sustainability/green/img-green-thumb-03.png');
+                @include mobile {
+                    background-image: url('../../assets/images/photo/sustainability/green/img-green-thumb-03-mo.png');
+                }
+            }
+            @include mobile {
+                width: 100%;
+                padding-bottom: 85.3%;
+                &~ .thumbnail-item {
+                    margin-top: 0.6rem;
+                }
+            }
+        }
+        .thumbnail-head {
+            width: 5.6rem;
+            height: 5.6rem;
+            text-align: center;
+            background-color: color(achromatic, 999);
+            border-radius: 1.6rem;
+            position: absolute;
+            left: 11.3%;
+            top: 11.7%;
+            box-shadow: inset 0.2rem 0.3rem 0.4rem rgba(0, 0, 0, 0.25);
+            .num {
+                font-weight: 700;
+                font-size: 1.8rem;
+                line-height: 5.6rem;
+                color: color(achromatic, 0);
+            }
+            @include mobile {
+                width: 4rem;
+                height: 4rem;
+                border-radius: 1.2rem;
+                left: 8.85%;
+                top: 10.34%;
+                .num {
+                    font-size: 1.6rem;
+                    line-height: 4rem;
+                }
+            }
+        }
+        .thumbnail-body {
+            position: absolute;
+            left: 11.3%;
+            top: 51.76%;
+            padding-right: 11.3%;
+            .para{
+                font-weight: 700;
+                @include thumbfont05;
+                text-align: left;
+                color: color(achromatic, 999);
+            }
+            @media (max-width: 1200px) {
+                top: 40%;
+            }
+            @include mobile {
+                left: 8.85%;
+                top: 44.83%;
+                padding-right: 8.85%;
+                .para{
+                    @include thumbfont02;
+                }
+            }
+        }
+    }
+    &.design-8 {
+        @include mobile {
+            width: calc(100% + 3.6rem);
+            max-width: unset;
+            margin-left: -1.8rem;
+        }
+        .thumbnail-swiper {
+            @extend %form03;
+            gap: 0.89%;
+            @include mobile {
+                padding-left: 1.8rem;
+            }
+        }
+        .thumbnail-list {
+            .thumbnail-item {
+                .thumbnail-head {
+                    width: 5.6rem;
+                    height: 5.6rem;
+                    text-align: center;
+                    background-color: color(achromatic, 999);
+                    border-radius: 1.6rem;
+                    position: absolute;
+                    top: 11.7%;
+                    left: 11.3%;
+                    box-shadow: inset 0.2rem 0.3rem 0.4rem rgba(0, 0, 0, 0.25);
+                    .num {
+                        font-weight: 700;
+                        font-size: 1.8rem;
+                        line-height: 5.6rem;
+                        color: color(achromatic, 0);
+                    }
+                    @include mobile {
+                        width: 4rem;
+                        height: 4rem;
+                        border-radius: 1.2rem;
+                        top: 10.38%;
+                        left: 10.38%;
+                        .num {
+                            font-size: 1.6rem;
+                            line-height: 3.2rem;
+                            line-height: 4rem;
+                        }
+                    }
+                }
+                .thumbnail-body {
+                    position: absolute;
+                    left: 11.3%;
+                    top: 44.7%;
+                    padding-right: 11.3%;
+                    .para{
+                        font-weight: 700;
+                        @include thumbfont05;
+                        text-align: left;
+                        color: color(achromatic, 999);
+                        word-break: keep-all;
+                    }
+                    @include mobile {
+                        left: 10.38%;
+                        top: 38.06%;
+                        .para{
+                            @include thumbfont02;
+                        }
+                    }
+                }
+                &:nth-child(even) {
+                    .thumbnail-head {
+                        top: auto;
+                        left: auto;
+                        bottom: 11.7%;
+                        right: 11.3%;
+                    }
+                }
+            }
+            &:nth-child(1) {
+                @extend %form01;
+                flex-wrap: wrap;
+                gap: 0.59%;
+                width: 66.46%;
+                .thumbnail-item {
+                    @include posi01;
+                    width: calc(100% / 2 - 0.59%);
+                    padding-bottom: 47.86%;
+                    background-repeat: no-repeat;
+                    background-position: center center;
+                    background-size: cover;
+                    &:nth-child(1) {
+                        background-image: url('../../assets/images/photo/sustainability/green/img-green-thumb-04.png');
+                        @include mobile {
+                            background-image: url('../../assets/images/photo/sustainability/green/img-green-thumb-04-mo.png');
+                        }
+                    }
+                    &:nth-child(2) {
+                        background-image: url('../../assets/images/photo/sustainability/green/img-green-thumb-05.png');
+                        @include mobile {
+                            background-image: url('../../assets/images/photo/sustainability/green/img-green-thumb-05-mo.png');
+                        }
+                    }
+                    &:nth-child(3) {
+                        background-image: url('../../assets/images/photo/sustainability/green/img-green-thumb-06.png');
+                        @include mobile {
+                            background-image: url('../../assets/images/photo/sustainability/green/img-green-thumb-06-mo.png');
+                        }
+                    }
+                    &:nth-child(4) {
+                        background-image: url('../../assets/images/photo/sustainability/green/img-green-thumb-07.png');
+                        @include mobile {
+                            background-image: url('../../assets/images/photo/sustainability/green/img-green-thumb-07-mo.png');
+                        }
+                    }
+                    &:nth-child(n+3) {
+                        margin-top: 1.4%;
+                    }
+                }
+                @include mobile {
+                    width: 100%;
+                    flex-wrap: nowrap;
+                    .thumbnail-item {
+                        width: 77%;
+                        padding-bottom: 72%;
+                        &:nth-child(n+3) {
+                            margin-top: unset;
+                        }
+                    }
+                }
+            }
+            &:nth-child(2) {
+                width: 32.96%;
+                .thumbnail-item {
+                    @include posi01;
+                    width: 100%;
+                    padding-bottom: 195.45%;
+                    background: url('../../assets/images/photo/sustainability/green/img-green-thumb-08.png') center center no-repeat;
+                    background-size: cover;
+                    .img {
+                        position: absolute;
+                        top: 6%;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        // transition-duration: 1s;
+                        // transition-delay: 0.1s;
+                    }
+                }
+                @include mobile {
+                    display: none;
+                }
+            }
+        }
+    }
+    &.design-9 {
+        width: 50.67%;
+        max-width: 67.7rem;
+        margin: 0 auto;
+        @include mobile {
+            width: 100%;
+            max-width: unset;
+        }
+        .thumbnail-item {
+            &~ .thumbnail-item {
+                padding-top: 12rem;
+                @include mobile {
+                    padding-top: 6rem;
+                }
+            }
+            .thumbnail-wrap {
+                .thumbnail-head {
+                    text-align: left;
+                    @include thumbfont03;
+                    padding:0 2.4rem 3rem;
+                    @include mobile {
+                        @include thumbfont05;
+                        padding:0 1rem 2.4rem;
+                    }
+                }
+                .thumbnail-body {
+                    text-align: left;
+                    .thumbnail-figure {
+                        display: block;
+                        width: 100%;
+                        margin-bottom: 3.4rem;
+                        .img {
+                            width: 100%;
+                        }
+                    }
+                    .para {
+                        padding:0 2.4rem;
+                        &.type-1 {
+                            font-weight: 600;
+                            @include thumbfont05;
+                            color: color(chromatic, 266);
+                            padding-bottom: 1.6rem
+                        }
+                        &.type-2 {
+                            font-weight: 500;
+                            @include thumbfont06;
+                            color: color(achromatic, 157);
+                        }
+                        @include mobile {
+                            padding: unset;
+                            &.type-1 {
+                                font-weight: 700;
+                                @include thumbfont02;
+                                padding-bottom: 1.6rem
+                            }
+                            &.type-2 {
+                                @include thumbfont02;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &.design-10 {
+        .thumbnail-item {
+            .thumbnail-wrap {
+                display: flex;
+                flex-direction: column;
+                .thumbnail-head {
+                    padding-bottom: 6rem;
+                    margin-left: 2rem;
+                    .subject {
+                        @include thumbfont03;
+                        color: color(achromatic, 0);
+                        padding-bottom: 3rem;
+                    }
+                    .summary {
+                        font-weight: 500;
+                        @include thumbfont06;
+                        color: color(achromatic, 157);
+                    }
+                    @include mobile {
+                        width: 100% !important;
+                        margin-left: unset;
+                        .subject {
+                            @include thumbfont01;
+                            padding-bottom: 2.4rem;
+                        }
+                        .summary {
+                            @include thumbfont02;
+                        }
+                    }
+                }
+                .thumbnail-figure {
+                    display: block;
+                    .img {
+                        width: 100%;
+                    }
+                    @include mobile {
+                        width: 100% !important;
+                    }
+                }
+            }
+        }
+        // &.case-1,
+        // &.case-2 {
+        //     .thumbnail-head {
+        //         width: 39.9%;
+        //     }
+        //     .thumbnail-figure {
+        //         width: 60.7%;
+        //     }
+        // }
+        // &.case-3 {
+        //     .thumbnail-head {
+        //         width: 33%;
+        //     }
+        //     .thumbnail-figure {
+        //         width: 35.32%;
+        //     }
+        // }
+        // &.case-4 {
+        //     .thumbnail-head {
+        //         width: 41.54%;
+        //     }
+        //     .thumbnail-figure {
+        //         width: 43.78%;
+        //     }
+        // }
+        // &.case-5 {
+        //     .thumbnail-head {
+        //         width: 83.08%;
+        //     }
+        //     .thumbnail-figure {
+        //         width: 86.07%;
+        //     }
+        // }
+        @include mobile {
+            &.case-2, 
+            &.case-3, 
+            &.case-4, 
+            &.case-5 {
+                .thumbnail-item {
+                    .thumbnail-wrap {
+                        flex-direction: column-reverse;
+                        .thumbnail-head {
+                            padding-top: 4rem;
+                            padding-bottom: 0;
+                            .subject {
+                                @include thumbfont05;
+                                padding-bottom: 1.6rem;
+                            }
+                        }
+                    }
+                }
+            } 
+        }
+    }
+    &.design-11 {
+        position: relative;
+        width: 100%;
+        max-width: 184rem;
+        height: auto;
+        padding: 13.2rem 0 10.5rem; 
+        border-radius: 3.2rem;
+        overflow: hidden;
+        background: url('../../assets/images/photo/sustainability/resource/img-thumb-02-bg.jpg') center center no-repeat;
+        background-size: cover;
+        @include mobile {
+            border-radius: unset;
+            padding: 10rem 0 8rem;
+            background: url('../../assets/images/photo/sustainability/resource/img-thumb-02-bg-mo.jpg') center center no-repeat;
+            background-size: cover;
+        }
+        .thumbnail-wrap {
+            width: 100%;
+            @extend %form04;
+            gap: 11.95%;
+            @include mobile {
+                flex-direction: column-reverse;
+            }
+            .thumbnail-head {
+                width: 34.5rem;
+                padding-left: 1.8rem;
+                .subject {
+                    @include thumbfont03;
+                    color: color(achromatic, 999);
+                    padding-bottom: 3rem;
+                }
+                .summary {
+                    font-weight: 500;
+                    @include thumbfont06;
+                    color: #F4F8FF;
+                    word-break: keep-all;
+                }
+                @include mobile {
+                    width: 100%;
+                    padding-left: 1.8rem;
+                    padding-right: 1.8rem;
+                    padding-top: 6rem;
+                    .subject {
+                        @include thumbfont01;
+                        padding-bottom: 2.4rem;
+                    }
+                    .summary {
+                        @include thumbfont02;
+                    }
+                }
+            }
+            .thumbnail-figure {
+                display: block;
+                width: 30.7%;
+                .img {
+                    width: 100%;
+                }
+                @include mobile {
+                    width: 100%;
+                    padding-left: 2.3rem;
+                }
+            }
+        }
+    }
+    &.design-12 {
+        .thumbnail-item {
+            &~ .thumbnail-item {
+                padding-top: 8rem;
+            }
+            .thumbnail-wrap {
+                display: flex;
+                justify-content: space-between;
+                gap: 8.45%;
+                @include mobile {
+                    flex-direction: column;
+                }
+                .thumbnail-figure {
+                    @include posi01;
+                    width: 23.87%;
+                    padding-bottom: 20.65%;
+                    .img {
+                        @include posi02;
+                    }
+                    @include mobile {
+                        width: 66.66%;
+                        padding-bottom: 62.4%;
+                        border-radius: 1.6rem;
+                    }
+                }
+                .thumbnail-inform {
+                    width: 67.6%;
+                    .thumbnail-head {
+                        @include thumbfont03;
+                        color: color(achromatic, 0);
+                        padding-bottom: 3rem;
+                    }
+                    .thumbnail-body {
+                        font-weight: 500;
+                        @include thumbfont06;
+                        color: color(achromatic, 157);
+                    }
+                    @include mobile {
+                        width: 100%;
+                        padding-top: 4rem;
+                        .thumbnail-head {
+                            @include thumbfont05;
+                            padding-bottom: 1.6rem;
+                        }
+                        .thumbnail-body {
+                            @include thumbfont02;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &.design-13 {
+        .thumbnail-item {
+            .thumbnail-wrap {
+                .thumbnail-head {
+                    padding-bottom: 9.6rem;
+                    .subject {
+                        font-family: 'hyosung';
+                        font-weight: 700;
+                        font-size: 4rem;
+                        line-height: 6rem;
+                        color: color(achromatic, 0);
+                        padding-bottom: 2rem;
+                    }
+                    .summary {
+                        font-weight: 600;
+                        @include thumbfont05;
+                        color: #B3B3B3;
+                    }
+                    @include mobile {
+                        padding-bottom:4rem;
+                        .subject {
+                            @include thumbfont01;
+                            padding-bottom: 0.8rem;
+                        }
+                        .summary {
+                            font-size: 1.2rem;
+                            line-height: 2rem;
+                        }
+                    }
+                }
+                .thumbnail-body {
+                    max-width: 111rem;
+                    @extend %form01;
+                    gap: 11.9%;
+                    .thumbnail-figure {
+                        width: 38.9%;
+                        .img {
+                            width: 100%;
+                        }
+                    }
+                    .thumbnail-data {
+                        width: 49.09%;
+                        .para {
+                            font-weight: 500;
+                            @include thumbfont05;
+                            &~ .para {
+                                padding-top: 2rem;
+                            }
+                        }
+                    }
+                    @include mobile {
+                        flex-direction: column;
+                        .thumbnail-figure {
+                            width: 100%;
+                            margin-bottom: 4rem;
+                            margin-right: 0;
+                            margin-left: auto;
+                        }
+                        .thumbnail-data {
+                            width: 100%;
+                            .para {
+                                @include thumbfont02;
+                                &~ .para {
+                                    padding-top: 1rem;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &.design-14 {
+        padding: 0.2rem 0;
+        .thumbnail-item {
+            @extend %form01;
+            gap: 8.6%;
+            @include mobile {
+                flex-direction: column;
+            }
+            .thumbnail-head {
+                width: 26.7%;
+                position: relative;
+                .subject {
+                    font-weight: 700;
+                    font-size: 2.2rem;
+                    line-height: 1.4;
+                    color: color(achromatic, 999);
+                    padding: 3.5% 5.9%;
+                    border-radius: 1.6rem;
+                    background-color: #33455C;
+                    position: absolute;
+                    left: 53%;
+                    top: 40.4%;
+                    @media screen and (max-width: 1500px) {
+                        font-size: 1.46vw;
+                    }
+                }
+                .summary {
+                    display: flex;
+                    align-items: flex-end;
+                    .img {
+                        margin-right: 8.4%;
+                        width: 44.25%;
+                    }
+                    .name {
+                        font-family: 'hyosung';
+                        font-weight: 700;
+                        font-size: 5.6rem;
+                        line-height: 7.2rem;
+                        color: color(achromatic, 999);
+                        @media screen and (max-width: 1500px) {
+                            font-size: 3.73vw;
+                        }
+                    }
+                    .num {
+                        font-weight: 700;
+                        @include thumbfont01;
+                        display: none;
+                    }
+                }
+                @include mobile {
+                    display: flex;
+                    align-items: center;
+                    width: 100%;
+                    padding-bottom: 4rem;
+                    .subject {
+                        position: static;
+                        display: inline-block;
+                        padding: unset;
+                        padding-right: 0.8rem;
+                        background-color: unset;
+                        border-radius: unset;
+                        font-weight: 700;
+                        @include thumbfont01;
+                    }
+                    .summary {
+                        .img {
+                            display: none;
+                        }
+                        .name {
+                            font-weight: 700;
+                            @include thumbfont01;
+                        }
+                        .num {
+                            display: inline-block;
+                            vertical-align: middle;
+                        }
+                    }
+                }
+            }
+            .data-list {
+                width: 64.6%;
+                @extend %form01;
+                flex-wrap: wrap;
+                gap: 4.1%;
+                .data-item {
+                    @include posi01;
+                    width: calc(100% / 3 - 2.86%);
+                    padding-bottom: 27.77%;
+                    border-radius: 4rem;
+                    border: 1.2rem solid #1D252F;
+                    box-shadow: 0 0 0 0.2rem rgba(255,255,255,0.1);
+                    background-repeat: no-repeat;
+                    background-position: center center;
+                    background-size: cover;
+                    &:nth-child(n+4) {
+                        margin-top: 4.1%;
+                    }
+                    .data-head {
+                        @include thumbfont03;
+                        color: color(achromatic, 999);
+    
+                        position: absolute;
+                        left: 50%;
+                        top: 50%;
+                        transform: translate(-50%,-50%);
+                        white-space: nowrap;
+                    }
+                    &:nth-child(1) {
+                        background-image: url('../../assets/images/photo/sustainability/humanrights/img-thumb-rule-01.jpg');
+                    }
+                    &:nth-child(2) {
+                        background-image: url('../../assets/images/photo/sustainability/humanrights/img-thumb-rule-02.jpg');
+                    }
+                    &:nth-child(3) {
+                        background-image: url('../../assets/images/photo/sustainability/humanrights/img-thumb-rule-03.jpg');
+                    }
+                    &:nth-child(4) {
+                        background-image: url('../../assets/images/photo/sustainability/humanrights/img-thumb-rule-04.jpg');
+                    }
+                    &:nth-child(5) {
+                        background-image: url('../../assets/images/photo/sustainability/humanrights/img-thumb-rule-05.jpg');
+                    }
+                    &:nth-child(6) {
+                        background-image: url('../../assets/images/photo/sustainability/humanrights/img-thumb-rule-06.jpg');
+                    }
+                    &:nth-child(7) {
+                        background-image: url('../../assets/images/photo/sustainability/humanrights/img-thumb-rule-07.jpg');
+                    }
+                    &:nth-child(8) {
+                        background-image: url('../../assets/images/photo/sustainability/humanrights/img-thumb-rule-08.jpg');
+                    }
+                    &:nth-child(9) {
+                        background-image: url('../../assets/images/photo/sustainability/humanrights/img-thumb-rule-09.jpg');
+                    }
+                }
+                @include mobile {
+                    width: 100%;
+                    .data-item {
+                        border-radius: 1.6rem;
+                        border: 0.4rem solid #1D252F;
+                        box-shadow: 0 0 0 0.1rem rgba(255,255,255,0.1);
+                        .data-head {
+                            font-weight: 700;
+                            @include thumbfont02;
+                            //font-size: 3.733vw;
+                        }
+                    }
+                }
+            }
+        }
+        &.case-2 {
+            .data-item {
+                padding-bottom: unset;
+                height: 100px;
+            }
+        }
+    }
+    &.design-15 {
+        .thumbnail-item {
+            display: flex;
+            justify-content: space-between;
+            @include mobile{
+                flex-direction: column-reverse;
+            }
+            .thumbnail-wrap {
+                position: relative;
+                width: 60%;
+                @include mobile{
+                    width: 100%;
+                }
+                .thumbnail-head {
+                    padding-top: 4rem;
+                    padding-bottom: 6rem;
+                    @include mobile {
+                        padding-top: 0;
+                    }
+                    .caption {
+                        @include thumbfont07;
+                        padding-bottom: 3rem;
+                        font-weight: 700;
+                        line-height: 4rem;
+                        color: color(achromatic, 157);
+                    }
+                    .subject {
+                        @include thumbfont10;
+                        font-family: 'hyosung';
+                        font-weight: 700;
+                        color: color(achromatic, 157);
+                        .accent {
+                            display: block;
+                            color: color(chromatic, 434)
+                        }
+                    }
+                    .thumbnail-figure {
+                        position: absolute;
+                        right: 0;
+                        top: 0;
+                        width: 39.97%;
+                        .img {
+                            width: 100%;
+                        }
+                        @include mobile{
+                            width: 100%;
+                        }
+                    }
+                    @include mobile {
+                        padding-bottom: 2.4rem;
+                        .subject {
+                            font-size: 2.2rem;
+                            line-height: 3.2rem;
+                            padding-bottom: 0.4rem;
+                        }
+                        .caption {
+                            font-size: 1.6rem;
+                            line-height: 2.4rem;
+                            padding-bottom: 1.6rem;
+                        }
+                        .thumbnail-figure {
+                            width: 100%;
+                        }
+                    }
+                }
+                .thumbnail-inform {
+                    width: 85%;
+                    .thumbnail-head {
+                        padding-bottom: 7rem;
+                        .subject {
+                            font-weight: 600;
+                            font-size: 3.6rem;
+                            line-height: 1.55;
+                            color: color(achromatic, 157);
+                            .accent-1 {
+                                font-weight: 700;
+                                color: color(chromatic, 434);
+                            }
+                        }
+                    }
+                    .thumbnail-body {
+                        .para {
+                            font-weight: 500;
+                            @include thumbfont05;
+                            color: color(achromatic, 157);
+                            word-break: keep-all;
+                            &~ .para {
+                                padding-top: 1.6rem;
+                            }
+                        }
+                    }
+                    @include mobile {
+                        width: 100%;
+                        .thumbnail-head {
+                            padding-bottom: 4rem;
+                            .subject {
+                                font-size: 2.2rem;
+                            }
+                        }
+                        .thumbnail-body {
+                            .para {
+                                @include thumbfont02;
+                                &~ .para {
+                                    padding-top: 1rem;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &.design-16 {
+        .thumbnail-item {
+            .thumbnail-wrap {
+                @extend %form01;
+                gap: 10.47%;
+                .thumbnail-figure {
+                    display: block;
+                    width: 34.13%;
+                    .img {
+                        width: 100%;
+                    }
+                }
+                .thumbnail-inform {
+                    width: 55.38%;
+                    .data-list {
+                        @extend %form02;
+                        flex-wrap: wrap;
+                        .data-item {
+                            width: 44.59%;
+                            .data-head {
+                                font-family: 'Hyosung';
+                                @include thumbfont07;
+                                font-weight: 700;
+                                padding-bottom: 3rem;
+                                color: #87D3FE;
+                            }
+                            .data-body {
+                                font-weight: 600;
+                                @include thumbfont06;
+                                color: color(achromatic, 999);
+                                word-break: keep-all;
+                            }
+                            &:nth-child(n+3) {
+                                margin-top: 10.8%;
+                            }
+                        }
+                    }
+                }
+            }
+            @include mobile {
+                .thumbnail-wrap {
+                    flex-direction: column;
+                    .thumbnail-figure {
+                        width: 100%;
+                    }
+                    .thumbnail-inform {
+                        width: 100%;
+                        .data-list {
+                            .data-item { 
+                                width: 100%;
+                                margin-top: 6rem;
+                                .data-head {
+                                    @include thumbfont06;
+                                    padding-bottom: 1.6rem;
+                                }
+                                .data-body {
+                                    @include thumbfont02;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &.design-17 {
+        .thumbnail-wrap {
+            display: flex;
+            gap: 10.48%;
+            align-items: flex-start;
+            @include mobile {
+                flex-direction: column;
+            }
+            .thumbnail-figure {
+                flex-basis: 51.8rem;
+                width: 100%;
+                .img {
+                    width: 100%;
+                }
+                @include mobile {
+                    flex-basis: unset;
+                    padding-bottom: 4rem;
+                }
+            }
+            .thumbnail-inform {
+                width: 50.74%;
+                .thumbnail-head {
+                    font-family: 'hyosung';
+                    font-weight: 700;
+                    font-size: 5.6rem;
+                    line-height: 7.2rem;
+                    color: color(achromatic, 0);
+                    padding-bottom: 6rem;
+                    @include mobile {
+                        padding-bottom: 4rem;
+                        font-size: 3.2rem;
+                        line-height: 4rem;
+                    }
+                }
+                .thumbnail-body {
+                    flex-basis: 67.8rem;
+                    width: 100%;
+                    .title + .para {
+                        padding-top: 3rem;
+                        @include mobile {
+                            padding-top: 2.4rem;
+                        }
+                    } 
+                    .para {
+                        font-weight: 500;
+                        @include thumbfont05;
+                        color: color(achromatic, 157);
+                        word-break: keep-all;
+                        &~ .para {
+                            padding-top: 1.6rem;
+                        }
+                    }
+                    @include mobile {
+                        flex-basis: unset;
+                        .title {
+                            padding-right: 13rem;
+                        }
+                    }
+                }
+                @include mobile {
+                    flex-direction: column;
+                    width: 100%;
+                    .thumbnail-head {
+                        font-size: 3.2rem;
+                        line-height: 4rem;
+                        padding-bottom: 4rem;
+                    }
+                    .thumbnail-body {
+                        .para {
+                            @include thumbfont02;
+                            &~ .para {
+                                padding-top: 1rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    &.design-18 {
+        .thumbnail-list {
+            @extend %form03;
+            flex-wrap: wrap;
+        }
+        .thumbnail-item {
+            position: relative;
+            width: 48.5%;
+            @extend %form05;
+            min-height: 25.8rem;
+            padding-top: 5.2rem;
+            padding-bottom: 4.2rem;
+            padding-left: 6rem;
+            padding-right: 6rem;
+            background: rgba(244, 248, 255, 0.8);
+            border-radius: 2.4rem;
+            overflow: hidden;
+            &:nth-child(n+3) {
+                margin-top: 1.49%;
+            }
+            @include mobile {
+                width: 100%;
+                flex-direction: column;
+                min-height: unset;
+                border-radius: unset;
+                padding: unset;
+                background: unset;
+                +.thumbnail-item {
+                    padding-top: 4rem;
+                }
+            }
+
+            .thumbnail-wrap {
+                @extend %form05;
+                .thumbnail-figure {
+                    @include posi01;
+                    width: 27.5%;
+                    padding-bottom: 27.46%;
+                    margin-right: 6.17%;
+                    display: block;
+                    overflow: hidden;
+                    .img {
+                        @include posi02;
+                    }
+                    @include mobile {
+                        width: 100%;
+                        padding-bottom: 61.46%;
+                        margin-bottom: 3rem;
+                    }
+                }
+                .thumbnail-inform {
+                    .thumbnail-head {
+                        @include thumbfont04;
+                        font-family: 'hyosung';
+                        color: #1B4B66;
+                        padding-bottom: 2rem;
+                        .num {
+                            display: inline-block;
+                            position: absolute;
+                            bottom: -11rem;
+                            right: -3.3rem;
+                            min-width: 20.6rem;
+                            min-height: 30rem;
+                            font-family: 'Poppins';
+                            font-size: 20rem;
+                            font-weight: 700;
+                            line-height: 30rem;
+                            color: color(achromatic, 999);
+                            text-align: center;
+                        }
+                    }
+                    .thumbnail-body {
+                        @include thumbfont05;
+                        max-width: 42rem;
+                        font-weight: 600;
+                        color: color(achromatic, 0);
+                        position: relative;
+                        z-index: 1;
+                    }
+                    @include mobile {
+                        width: 100%;
+                        .thumbnail-head {
+                            font-size: 2rem;
+                            line-height: 3.2rem;
+                            padding-bottom: 1.6rem;
+                            word-break: keep-all;
+                            .num {
+                                top: -99999rem;
+                                left: -99999rem;
+                                width: 0;
+                                height: 0;
+                                overflow: hidden;
+                            }
+                        }
+                        .thumbnail-body {
+                            @include thumbfont06;
+                            font-weight: 500;
+                        }
+                    }
+                }
+                @include mobile {
+                    width: 100%;
+                    flex-direction: column;
+                }
+            }
+        }
+    }
+    &.design-19 {
+        .thumbnail-item {
+            &~ .thumbnail-item {
+                padding-top: 8rem;
+            }
+            @include mobile {
+                &~ .thumbnail-item {
+                    padding-top: 6rem;
+                }
+            }
+            .thumbnail-wrap {
+                @extend %form05;
+                gap: 7.85%;
+                @include mobile {
+                    flex-direction: column;
+                }
+                .thumbnail-figure {
+                    display: block;
+                    width: 34.46%;
+                    .img {
+                        width: 100%
+                    }
+                    @include mobile {
+                        width: 100%;
+                        padding-bottom: 2rem;
+                    }
+                }
+                .thumbnail-inform {
+                    width: 52.09%;
+                    .thumbnail-head {
+                        .date {
+                            @include thumbfont07;
+                            font-weight: 700;
+                            color: color(chromatic, 564);
+                            padding-bottom: 0.4rem;
+                        }
+                        .subject {
+                            font-family: 'hyosung';
+                            font-weight: 700;
+                            @include thumbfont01;
+                            color: #1B4B66;
+                            padding-bottom: 3rem;
+                        }
+                    }
+                    .thumbnail-body {
+                        font-weight: 500;
+                        @include thumbfont05;
+                        color: color(achromatic, 0);
+                        word-break: keep-all;
+                    }
+                    @include mobile {
+                        width: 100%;
+                        .thumbnail-head {
+                            .date {
+                                @include thumbfont02;
+                                padding-bottom: 0.2rem;
+                            }
+                            .subject {
+                                @include thumbfont06;
+                                padding-bottom: 1.6rem;
+                            }
+                        }
+                        .thumbnail-body {
+                            @include thumbfont02;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &.design-20 {
+        @include mobile {
+            padding: 0 3.2rem;
+        }
+        .thumbnail-list {
+            @extend %form02;
+            @include mobile {
+                flex-direction: column;
+            }
+        }
+        .thumbnail-item {
+            width: 29.34%;
+            @include mobile {
+                width: 100%;
+                &~ .thumbnail-item {
+                    padding-top: 6rem;
+                }
+            }
+            .thumbnail-wrap {
+                .thumbnail-figure {
+                    width: 100%;
+                    .img {
+                        width: 100%;
+                        padding-bottom: 4rem;
+                    }
+                }
+                .thumbnail-inform {
+                    .thumbnail-head {
+                        .year {
+                            font-family: 'Poppins';
+                            font-weight: 600;
+                            font-size: 2.2rem;
+                            line-height: 3.2rem;
+                            color: color(achromatic, 999);
+                            padding-bottom: 0.5rem;
+                        }
+                        .subject {
+                            @include thumbfont08;
+                            font-family: 'hyosung';
+                            font-weight: 700;
+                            color: #FFC633;
+                            padding-bottom: 3rem;
+                        }
+                    }
+
+                    .thumbnail-body {
+                        @include thumbfont06;
+                        font-weight: 600;
+                        color: color(achromatic, 999);
+                    }
+                    @include mobile {
+                        .thumbnail-head {
+                            .year {
+                                font-size: 1.6rem;
+                                line-height: 2.2rem;
+                                padding-bottom: 0.2rem;
+                            }
+                            .subject {
+                                @include thumbfont09;
+                                padding-bottom: 1.6rem;
+                            }
+                        }
+                        .thumbnail-body {
+                            @include thumbfont02;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &.design-21 {
+        .thumbnail-list {
+            @extend %form02;
+            flex-wrap: wrap;
+        }
+        .thumbnail-item {
+            width: 27.32%;
+            .thumbnail-figure {
+                @include posi01;
+                width: 100%;
+                padding-bottom: 60.27%;
+                margin-bottom: 2rem;
+                border-radius: 3.2rem;
+                .img {
+                    @include posi02;
+                }
+            }
+            .thumbnail-body {
+                .para {
+                    @include thumbfont05;
+                    @include ellipsis(2);
+                    font-family: 'hyosung';
+                    font-weight: 700;
+                    color: color(achromatic, 0);
+                    margin-bottom: 1rem;
+                }
+                .date {
+                    @include thumbfont06;
+                    font-weight: 500;
+                    color: color(achromatic, 599);
+                }
+            }
+            &:nth-child(n+4) {
+                padding-top: 5.98%;
+            }
+            @include mobile {
+                width: 100%;
+                .thumbnail-wrap {
+                    display: flex;
+                    align-items: flex-start;
+                    justify-content: flex-start;
+                    gap: 5.3%;
+                }
+                .thumbnail-figure {
+                    width: 41.6%;
+                    padding-bottom: 25.06%;
+                    border-radius: 1.6rem;
+                }
+                .thumbnail-body {
+                    width: 47.5%;
+                    .para {
+                        @include ellipsis(3);
+                        font-size: 1.4rem;
+                        line-height: 2.2rem;
+                        margin-bottom: 0.8rem;
+                    }
+                    .date {
+                        font-size: 1.2rem;
+                        line-height: 2rem;
+                    }
+                }
+            }
+        }
+    }
+    &.design-22 {
+        width: 100%;
+        max-width: 77.1rem;
+        @include mobile {
+            max-width: unset;
+        }
+        .thumbnail-item {
+            .thumbnail-figure {
+                display: block;
+                width: 100%;
+                max-width: 74rem;
+                padding-bottom: 6rem;
+                .img {
+                    width: 100%;
+                }
+            }
+            .thumbnail-inform {
+                .thumbnail-head {
+                    @include thumbfont01;
+                    font-family: 'hyosung';
+                    font-weight: 700;
+                    color: color(achromatic, 999);
+                    padding-bottom: 3rem;
+                }
+                .thumbnail-body {
+                    @include thumbfont05;
+                    font-weight: 500;
+                    color: color(achromatic, 999);
+                }
+            }
+            @include mobile {
+                .thumbnail-figure {
+                    max-width: 67.8rem;
+                }
+                .thumbnail-inform {
+                    .thumbnail-head {
+                        @include thumbfont05;
+                        padding-bottom: 1.6rem;
+                    }
+                    .thumbnail-body {
+                        @include thumbfont02;
+                    }
+                }
+            }
+        }
+    }
+    &.design-23 {
+        width: 100%;
+        max-width: 92.8rem;
+        @include mobile {
+            min-width: 59.6rem
+        }
+        .thumbnail-list {
+            @extend %form01;
+            flex-wrap: wrap;
+            gap: 1.19%;
+        }
+        .thumbnail-item {
+            width: calc(100% / 4 - 1.19%);
+            @include posi01;
+            padding-bottom: 23.7%;
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: cover;
+            .thumbnail-head {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%,-50%);
+                width: 100%;
+                text-align: center;
+                .subject {
+                    @include thumbfont07;
+                    font-family: 'hyosung';
+                    font-weight: 700;
+                    color: color(achromatic, 999);
+                    @include mobile {
+                        font-size: 1.8rem;
+                        line-height: 3rem;
+                    }
+                }
+            }
+            &.case-1 {
+                .thumbnail-head {
+                    .subject {
+                        @include thumbfont03;
+                        @include mobile {
+                            font-size: 2.2rem;
+                            line-height: 3.4rem;
+                        }
+                    }
+                }
+            }
+            &:nth-child(1) {
+                background-image: url('../../assets/images/photo/sustainability/ethical/img-thumb-ethical-01.png');
+                @include mobile {
+                    background-image: url('../../assets/images/photo/sustainability/ethical/img-thumb-ethical-01-mo.png');
+                }
+            }
+            &:nth-child(2) {
+                background-image: url('../../assets/images/photo/sustainability/ethical/img-thumb-ethical-02.png');
+                @include mobile {
+                    background-image: url('../../assets/images/photo/sustainability/ethical/img-thumb-ethical-02-mo.png');
+                }
+            }
+            &:nth-child(3) {
+                background-image: url('../../assets/images/photo/sustainability/ethical/img-thumb-ethical-03.png');
+                @include mobile {
+                    background-image: url('../../assets/images/photo/sustainability/ethical/img-thumb-ethical-03-mo.png');
+                }
+            }
+            &:nth-child(4) {
+                background-image: url('../../assets/images/photo/sustainability/ethical/img-thumb-ethical-04.png');
+                @include mobile {
+                    background-image: url('../../assets/images/photo/sustainability/ethical/img-thumb-ethical-04-mo.png');
+                }
+            }
+            &:nth-child(5) {
+                background-image: url('../../assets/images/photo/sustainability/ethical/img-thumb-ethical-05.png');
+                @include mobile {
+                    background-image: url('../../assets/images/photo/sustainability/ethical/img-thumb-ethical-05-mo.png');
+                }
+            }
+            &:nth-child(6) {
+                background-image: url('../../assets/images/photo/sustainability/ethical/img-thumb-ethical-06.png');
+                @include mobile {
+                    background-image: url('../../assets/images/photo/sustainability/ethical/img-thumb-ethical-06-mo.png');
+                }
+            }
+            &:nth-child(7) {
+                background-image: url('../../assets/images/photo/sustainability/ethical/img-thumb-ethical-07.png');
+                @include mobile {
+                    background-image: url('../../assets/images/photo/sustainability/ethical/img-thumb-ethical-07-mo.png');
+                }
+            }
+            &:nth-child(8) {
+                background-image: url('../../assets/images/photo/sustainability/ethical/img-thumb-ethical-08.png');
+                @include mobile {
+                    background-image: url('../../assets/images/photo/sustainability/ethical/img-thumb-ethical-08-mo.png');
+                }
+            }
+            &:nth-child(n+4) {
+                margin-top: 1.19%;;
+            }
+        }
+    }
+    &.design-24 {
+        .thumbnail-wrap {
+            .thumbnail-head {
+                @include thumbfont04;
+                padding-bottom: 4rem;
+                font-family: 'hyosung';
+                color: color(achromatic, 0);
+                @include mobile {
+                    @include thumbfont01;
+                    padding-bottom: 2.4rem;
+                }
+            }
+            .thumbnail-body {
+                width: 100%;
+                .thumbnail-figure {
+                    width: 100%;
+                    margin-bottom: 6rem;
+                    border-radius: 2.4rem;
+                    overflow: hidden;
+                    .img {
+                        width: 100%;
+                    }
+                }
+                .para {
+                    @include thumbfont05;
+                    font-weight: 500;
+                    color: color(achromatic, 157);
+                    word-break: keep-all;
+                    &~ .para {
+                        padding-top: 1.6rem;
+                    }
+                }
+                @include mobile {
+                    width: 100%;
+                    .thumbnail-figure {
+                        border-radius: 0.9rem;
+                        margin-bottom: 4rem
+                    }
+                    .para {
+                        @include thumbfont02;
+                        &~ .para {
+                            padding-top: 1rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &.design-25 {
+        .thumbnail-item {
+            .thumbnail-wrap {
+                @extend %form01;
+                padding: 4rem 8.45%;
+                border: 0.1rem solid color(achromatic, 906);
+                border-radius: 2.4rem;
+                @include mobile {
+                    flex-direction: column;
+                    padding: 3rem 8% 1rem;
+                }
+                .thumbnail-head {
+                    width: 71.17%;
+                    .subject {
+                        @include thumbfont04;
+                        font-family: 'hyosung';
+                        color: color(achromatic, 0);
+                        padding-bottom: 0.8rem;
+                        &.en {
+                            font-family: 'Poppins';
+                        }
+                    }
+                    .summary {
+                        @include thumbfont07;
+                        font-family: 'Pretendard';
+                        font-weight: 600;
+                        color: color(achromatic, 599);
+                    }
+                    @include mobile {
+                        width: 100%;
+                        padding-bottom: 1rem;
+                        .subject {
+                            @include thumbfont01;
+                        }
+                        .summary {
+                            @include thumbfont06;
+                        }
+                    }
+                }
+                .thumbnail-figure {
+                    width: 25.225%;
+                    .img {
+                        width: 100%;
+                    }
+                    @include mobile {
+                        width: 100%;
+                    }
+                }
+                &.type-1 {
+                    .thumbnail-head {
+                        .subject {
+                            font-family: 'hyosung';
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &.design-26 {
+        .thumbnail-list {
+            .thumbnail-item {
+                .thumbnail-wrap {
+                    display: flex;
+                    align-items: flex-start;
+                    justify-content: space-between;
+                    @include mobile {
+                        flex-direction: column;
+                    }
+                }
+                &~ .thumbnail-item {
+                    margin-top: 10rem;
+                    @include mobile {
+                        margin-top: 4rem;
+                    }
+                }
+                .thumbnail-figure {
+                    display: block;
+                    .img {
+                        width: 100%;
+                    }
+                }
+                gap: 9.995%;
+                .tumbnail-body {
+                    .para {
+                        font-size: 18px;
+                        font-weight: 500;
+                        line-height: 177.778%;
+                        color: #282828;
+                        &~ .para {
+                            padding-top: 1.6rem;
+                        }
+                        @include mobile {
+                            font-size: 1.4rem;
+                            line-height: 24px;
+                            &~ .para {
+                                padding-top: 1rem;
+                            }
+                        }
+                    }
+                    @include mobile {
+                        margin-top: 4rem;
+                    }
+                }
+                &:nth-child(1) {
+                    .thumbnail-wrap {
+                        .thumbnail-figure {
+                            width: 32.335%;
+                        }
+                        .tumbnail-body {
+                            width: 57.709%;
+                        }
+                        @include mobile {
+                            .thumbnail-figure,
+                            .tumbnail-body {
+                                width: 100%;
+                            }
+                        }
+                    }
+                }
+                &:nth-child(2) {
+                    .thumbnail-wrap {
+                        flex-direction: row-reverse;
+                        @include mobile {
+                            flex-direction: column;
+                        }
+                        .thumbnail-figure {
+                            width: 57.709%;
+                        }
+                        .tumbnail-body {
+                            width: 32.335%;
+                        }
+                        @include mobile {
+                            .thumbnail-figure,
+                            .tumbnail-body {
+                                width: 100%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &.design-27 {
+        .thumbnail-list {
+            .thumbnail-item {
+                .thumbnail-wrap {
+                    @extend %form02;
+                    @include mobile {
+                        flex-direction: column;
+                    }
+                    .thumbnail-figure {
+                        width: 32.335%;
+                    }
+                    .tumbnail-body {
+                        width: 57.709%;
+                        .para {
+                            @include thumbfont05;
+                            font-weight: 500;
+                            color: #282828;
+                            &~ .para {
+                                padding-top: 1.6rem;
+                            }
+                        }
+                    }
+                    @include mobile {
+                        .thumbnail-figure,
+                        .tumbnail-body {
+                            width: 100%;
+                        }
+                        .tumbnail-body {
+                            padding-top: 4rem;
+                            .para {
+                                @include thumbfont02;
+                                &~ .para {
+                                    padding-top: 1rem;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &.design-28 {
+        .thumbnail-list {
+            .thumbnail-item {
+                .thumbnail-wrap {
+                    .thumbnail-figure {
+                        @include mobile {
+                            max-width: 65rem;
+                            margin:0 auto;
+                        }
+                    }
+                    .thumbnail-inform {
+                        padding-top: 8rem;
+                        @include mobile {
+                            padding-top: 6rem;
+                        }
+                        .data-list {
+                            display: flex;
+                            flex-wrap: wrap;
+                            justify-content: space-between;
+                            align-items: flex-start;
+                            .data-item {
+                                width: 46.257%;
+                                &:nth-child(n+3) {
+                                    padding-top: 8rem;
+                                }
+                                .data-head {
+                                    @include thumbfont07;
+                                    font-family: 'Pretendard';
+                                    font-weight: 700;
+                                    color: #1B4B66;
+                                    padding-bottom: 2rem;
+                                }
+                                .data-body {
+                                    @include thumbfont06;
+                                    font-weight: 500;
+                                    color: #282828;
+                                }
+                                @include mobile {
+                                    width: 100%;
+                                    &~ .data-item {
+                                        padding-top: 4rem !important;
+                                    }
+                                    .data-head {
+                                        @include thumbfont06;
+                                        padding-bottom: 1.6rem
+                                    }
+                                    .data-body {
+                                        @include thumbfont02;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &.design-29 {
+        .thumbnail-wrap {
+            @include mobile {
+                flex-direction: column;
+            }
+            .thumbnail-head {
+                font-family: 'hyosung';
+                font-weight: 700;
+                font-size: 5.6rem;
+                line-height: 7.2rem;
+                color: color(achromatic, 0);
+                padding-bottom: 6rem;
+                @include mobile {
+                    padding-bottom: 4rem;
+                    font-size: 3.2rem;
+                    line-height: 4rem;
+                }
+            }
+            .thumbnail-inform {
+                display: flex;
+                // width: 50.74%;
+                gap: 10.48%;
+                align-items: center;
+                .thumbnail-figure {
+                    flex-basis: 51.8rem;
+                    width: 100%;
+                    .img {
+                        width: 100%;
+                    }
+                    @include mobile {
+                        flex-basis: unset;
+                        padding-bottom: 4rem;
+                    }
+                }
+                .thumbnail-body {
+                    flex-basis: 67.8rem;
+                    width: 100%;
+                    .title + .para {
+                        padding-top: 3rem;
+                        @include mobile {
+                            padding-top: 2.4rem;
+                        }
+                    } 
+                    .para {
+                        font-weight: 500;
+                        @include thumbfont05;
+                        color: color(achromatic, 157);
+                        word-break: keep-all;
+                        &~ .para {
+                            padding-top: 1.6rem;
+                        }
+                    }
+                    @include mobile {
+                        flex-basis: unset;
+                        .title {
+                            padding-right: 9rem;
+                        }
+                    }
+                }
+                @include mobile {
+                    flex-direction: column;
+                    width: 100%;
+                    .thumbnail-head {
+                        font-size: 3.2rem;
+                        line-height: 4rem;
+                        padding-bottom: 4rem;
+                    }
+                    .thumbnail-body {
+                        .para {
+                            @include thumbfont02;
+                            &~ .para {
+                                padding-top: 1rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+
+    //썸네일 스와이퍼
+    .tnumbSwiper.swiper {
+        position: relative;
+        > .swiper-wrapper {
+            flex-direction: row;
+            @include mobile {
+                flex-wrap: nowrap;
+            }
+        }
+        &.case-2 {
+            .swiper-pagination {
+                @include thumbfont06;
+                font-weight: 600;
+                color: #282828;
+                .swiper-pagination-current,
+                .swiper-pagination-total {
+                    @include thumbfont06;
+                    font-weight: 600;
+                    color: #282828;
+                }
+            }
+            .slide-paging {
+                width: 100%;
+                max-width: 18.1rem;
+                position: absolute;
+                left: 50%;
+                bottom: 0;
+                transform: translateX(-50%);
+                display: none;
+                @include mobile {
+                    display: block;
+                }
+            }
+            .swiper-pagination-fraction {
+                bottom: 0;
+            }
+            .swiper-button-next, .swiper-button-prev {
+                top: unset;
+                bottom: 0;
+                align-items: end;
+                width: 3.2rem;
+                height: 3.2rem;
+                z-index: 11;
+                &::after {
+                    content: '';
+                }
+            }
+            @include mobile {
+                padding-bottom: 7rem;
+            }
+        }
+    }
+}

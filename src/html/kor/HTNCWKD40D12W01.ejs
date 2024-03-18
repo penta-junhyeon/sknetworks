@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <%-include('../include/kor/HTNCWK00HEADMETACOMMON.ejs') %>
+        <%-include('../meta-id/kor/HTNCWKD40D12W01.ejs') %>
+        <%-include('../include/kor/HTNCWK00HEADSTYLE.ejs') %>
+        <%-include('../include/kor/HTNCWK00HEADFAVICON.ejs') %>
+        <%-include('../include/kor/HTNCWK00HEADSCRIPTLIBRARY.ejs') %>
+        <%-include('../include/kor/HTNCWK00HEADSCRIPTGSAP.ejs') %>
+        <%-include('../include/kor/HTNCWK00HEADSCRIPTLOADER.ejs') %>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                scrollEvent();
+                resizeEvent();
+                
+                subPageIntroWheel_01(); // 서브 공통 MouseWheel naviDepth3, naviDepth4
+                localInteraction_04_01(); // 서브 공통 Info Interaction
+                naviDepth3_Interaction_01(); // 서브 공통 naviDepth3 fixed,  naviDepth4 따라 내려옴
+
+                contentsSubScrollEventCustom(); // 서브 공통 Section Active
+            });
+        
+            function scrollEvent(){
+                window.addEventListener('scroll', () => {
+                    contentsSubScrollEventCustom();
+                });
+            }
+
+            function resizeEvent(){
+                window.addEventListener('resize', () => {
+                });
+            }
+        </script>
+    </head>
+    <body class="tnc-site">
+        <%-include('../include/kor/HTNCWK01HEADER.ejs') %>
+        <main id="container" class="container tnc HTNCWKD40D12W01 sub">
+            <div class="container-inner">
+                <section class="contents-section contents-section1">
+                    <div class="contents-section-inner">
+                        <div class="local sustainability-common" local-interaction="sustainability-01">
+                            <div class="local-head design-1">
+                                <div class="local-head-wrap">
+                                    <div class="local-subject">
+                                        <h2 class="local-name">
+                                            <span class="wbr">Sustainability</span>
+                                            <span class="wbr hide">외부평가</span>
+                                        </h2>
+                                    </div>
+                                    <div class="local-subject">
+                                        <h2 class="local-name">
+                                            <span class="wbr hide">Sustainability</span>
+                                            <span class="wbr">외부평가</span>
+                                        </h2>
+                                    </div>
+                                    <picture class="local-figure">
+                                        <source media="(max-width: 1023px)" srcset="../../assets/images/photo/sustainability/evaluation/local-mo.jpg">
+                                        <source media="(max-width: 1920px)" srcset="../../assets/images/photo/sustainability/evaluation/local-pc.jpg">
+                                        <img src="../../assets/images/photo/sustainability/evaluation/local-pc.jpg" alt=" ">
+                                    </picture>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <nav class="navi depth3">
+                    <div class="navi-wrap">
+                        <div class="navi-subject"><a href="#" title="현재 선택된 항목" class="navi-name">외부평가</a></div>
+                        <div class="tab-display">
+                            <ul class="tab-list">
+                                <li class="tab-item"><a href="#" class="tab-text">지속가능경영</a></li>
+                                <li class="tab-item"><a href="#" class="tab-text">보고서</a></li>
+                                <li class="tab-item current" title="현재 선택된 항목"><a href="#" class="tab-text">외부평가</a></li>
+                                <li class="tab-item"><a href="#" class="tab-text">참여 이니셔티브</a></li>
+                                <li class="tab-item"><a href="#" class="tab-text">ESG 정책</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+                <section class="contents-section contents-section2">
+                    <div class="contents-section-inner">
+                        <div class="contents-section-body">
+                            <div class="contents-article contents-article1">
+                                <div class="contents-article-inner">
+                                    <h3 class="title design-1 case-2 align-1 medium">
+                                        <em class="name"><span class="dif-font">ESG</span> 평가결과</em>
+                                    </h3>
+                                    <div class="thumbnail-display design-3">
+                                        <div class="thumbnail-list">
+                                            <div class="thumbnail-item">
+                                                <div class="thumbnail-wrap">
+                                                    <picture class="thumbnail-figure">
+                                                        <source media="(max-width: 1023px)" srcset="../../assets/images/photo/sustainability/evaluation/img-mark-01-mo.png">
+                                                        <source media="(max-width: 1920px)" srcset="../../assets/images/photo/sustainability/evaluation/img-mark-01.png">
+                                                        <img class="img" src="../../assets/images/photo/sustainability/evaluation/img-mark-01.png" alt="한국ESG기준원">
+                                                    </picture>
+                                                    <div class="thumbnail-inform">
+                                                        <p class="thumbnail-head">한국ESG기준원</p>
+                                                        <p class="thumbnail-body">
+                                                            한국ESG기준원은 공익 추구 기관으로서 한국 자본 시장 발전을 위해 주요 Code (기준)을 제개정하고, 이의 활성화를 위해 유가증권시장 상장사 전체를 대상으로 ESG 평가를 제공하고 있습니다. 평가결과는 한국거래소(KRX)의 책임투자지수 종목 구성에 활용됩니다.
+                                                        </p>
+                                                        <div class="table-display design-1 case-1 align-3 type-1 accent-1 small">
+                                                            <table>
+                                                                <colgroup>
+                                                                    <col class="width-ratio20">
+                                                                    <col class="width-ratio20">
+                                                                    <col class="width-ratio20">
+                                                                    <col class="width-ratio20">
+                                                                    <col class="width-ratio20">
+                                                                </colgroup>
+                                                                <thead>
+                                                                    <tr>
+                                                                        <th scope="col">구분</th>
+                                                                        <th scope="col">종합등급</th>
+                                                                        <th scope="col">환경</th>
+                                                                        <th scope="col">사회</th>
+                                                                        <th scope="col">지배구조</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <th scope="row">2022</th>
+                                                                        <td>A</td>
+                                                                        <td>A</td>
+                                                                        <td>A+</td>
+                                                                        <td>B+</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <th scope="row">2021</th>
+                                                                        <td>A</td>
+                                                                        <td>A</td>
+                                                                        <td>A+</td>
+                                                                        <td>A</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <th scope="row">2020</th>
+                                                                        <td>A+</td>
+                                                                        <td>A+</td>
+                                                                        <td>A+</td>
+                                                                        <td>A</td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                            <div class="data-info case-2">
+                                                                <ul class="order-list design-1 usual-1 case-4 small type-2 align-1">
+                                                                    <li class="order-item">
+                                                                        평가등급은 총 7단계로, 높은 순으로 S, A+, A, B+, B, C, D 로 구성
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="thumbnail-item">
+                                                <div class="thumbnail-wrap">
+                                                    <picture class="thumbnail-figure">
+                                                        <source media="(max-width: 1023px)" srcset="../../assets/images/photo/sustainability/evaluation/img-mark-02-mo.png">
+                                                        <source media="(max-width: 1920px)" srcset="../../assets/images/photo/sustainability/evaluation/img-mark-02.png">
+                                                        <img class="img" src="../../assets/images/photo/sustainability/evaluation/img-mark-02.png" alt="SUSTINVEST">
+                                                    </picture>
+                                                    <div class="thumbnail-inform">
+                                                        <p class="thumbnail-head">서스틴베스트</p>
+                                                        <p class="thumbnail-body">
+                                                            (주) 서스틴베스트는 국내 SRI 산업을 선도하는 기업으로, 유가증권시장 상장사를 대상으로 ESG 평가를 제공하고 있습니다. 평가 결과는 연기금을 포함한 국내 최대규모의 사회책임투자펀드에 제공되며, ESG 분석 및 자문 서비스를 제공합니다.
+                                                        </p>
+                                                        <div class="table-display design-1 case-1 align-3 type-1 accent-1 small">
+                                                            <table>
+                                                                <colgroup>
+                                                                    <col class="width-ratio20">
+                                                                    <col class="width-ratio20">
+                                                                    <col class="width-ratio20">
+                                                                    <col class="width-ratio20">
+                                                                    <col class="width-ratio20">
+                                                                </colgroup>
+                                                                <thead>
+                                                                    <tr>
+                                                                        <th scope="col">구분</th>
+                                                                        <th scope="col">종합등급</th>
+                                                                        <th scope="col">환경</th>
+                                                                        <th scope="col">사회</th>
+                                                                        <th scope="col">지배구조</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <th scope="row">2022</th>
+                                                                        <td>BB</td>
+                                                                        <td>87.60</td>
+                                                                        <td>67.91</td>
+                                                                        <td>47.00</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <th scope="row">2021</th>
+                                                                        <td>B</td>
+                                                                        <td>79.20</td>
+                                                                        <td>63.12</td>
+                                                                        <td>49.49</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <th scope="row">2020</th>
+                                                                        <td>B</td>
+                                                                        <td>61.96</td>
+                                                                        <td>60.37</td>
+                                                                        <td>44.23</td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                            <div class="data-info case-2">
+                                                                <ul class="order-list design-1 usual-1 case-4 small type-2 align-1">
+                                                                    <li class="order-item">
+                                                                        평가등급 총 7단계로, 높은 순으로 AA, A, BB, B, C, D, E 로 구성
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="thumbnail-item">
+                                                <div class="thumbnail-wrap">
+                                                    <picture class="thumbnail-figure">
+                                                        <source media="(max-width: 1023px)" srcset="../../assets/images/photo/sustainability/evaluation/img-mark-03-mo.png">
+                                                        <source media="(max-width: 1920px)" srcset="../../assets/images/photo/sustainability/evaluation/img-mark-03.png">
+                                                        <img class="img" src="../../assets/images/photo/sustainability/evaluation/img-mark-03.png" alt="KRESG 한국ESG연구소">
+                                                    </picture>
+                                                    <div class="thumbnail-inform">
+                                                        <p class="thumbnail-head">한국ESG연구소</p>
+                                                        <p class="thumbnail-body">
+                                                            한국ESG연구소는 대신경제연구소의 자회사로 금융투자업자의 관점에서 ESG를 해석하고 있습니다. 한국ESG연구소는 지속가능한 주주총회 안건분석(Sustainable Proxy Analysis, SPA)이라는 연구소의 정체성(Identity)과 주요 이슈사안에 대해 자본시장 눈높이(Customizing)에 맞는 의안분석 보고서를 국민연금공단 등 주요 기관투자자에게 제공하고 있습니다.
+                                                        </p>
+                                                        <div class="table-display design-1 case-1 align-3 type-1 accent-1 small">
+                                                            <table>
+                                                                <colgroup>
+                                                                    <col class="width-ratio20">
+                                                                    <col class="width-ratio20">
+                                                                    <col class="width-ratio20">
+                                                                    <col class="width-ratio20">
+                                                                    <col class="width-ratio20">
+                                                                </colgroup>
+                                                                <thead>
+                                                                    <tr>
+                                                                        <th scope="col">구분</th>
+                                                                        <th scope="col">종합등급</th>
+                                                                        <th scope="col">환경</th>
+                                                                        <th scope="col">사회</th>
+                                                                        <th scope="col">지배구조</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <th scope="row">2022</th>
+                                                                        <td>A</td>
+                                                                        <td>A</td>
+                                                                        <td>A</td>
+                                                                        <td>B+</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <th scope="row">2021</th>
+                                                                        <td>S</td>
+                                                                        <td>A+</td>
+                                                                        <td>A+</td>
+                                                                        <td>A</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <th scope="row">2020</th>
+                                                                        <td>-</td>
+                                                                        <td>-</td>
+                                                                        <td>-</td>
+                                                                        <td>-</td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                            <div class="data-info case-2">
+                                                                <ul class="order-list design-1 usual-1 case-4 small type-3 align-1">
+                                                                    <li class="order-item">
+                                                                        평가등급은 총 7단계로, 높은 순으로 S, A+, A, B+, B, C, D 로 구성
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="thumbnail-item">
+                                                <div class="thumbnail-wrap">
+                                                    <picture class="thumbnail-figure">
+                                                        <source media="(max-width: 1023px)" srcset="../../assets/images/photo/sustainability/evaluation/img-mark-04-mo.png">
+                                                        <source media="(max-width: 1920px)" srcset="../../assets/images/photo/sustainability/evaluation/img-mark-04.png">
+                                                        <img class="img" src="../../assets/images/photo/sustainability/evaluation/img-mark-04.png" alt="CDP Disclosure Insight Action">
+                                                    </picture>
+                                                    <div class="thumbnail-inform">
+                                                        <p class="thumbnail-head">CDP</p>
+                                                        <p class="thumbnail-body">
+                                                            CDP는 전세계 주요 상장기업의 기후변화대응 전략과 온실가스 배출량 정보, 감축 노력 등을 평가하여 투자자와 금융기관에 제공하고 있습니다.
+                                                        </p>
+                                                        <div class="table-display design-1 case-1 align-3 type-1 accent-1 small">
+                                                            <table>
+                                                                <colgroup>
+                                                                    <col class="width-ratio20">
+                                                                    <col class="width-ratio40">
+                                                                    <col class="width-ratio40">
+                                                                </colgroup>
+                                                                <thead>
+                                                                    <tr>
+                                                                        <th scope="col">구분</th>
+                                                                        <th scope="col">Climate Change</th>
+                                                                        <th scope="col">Suppler Engagement</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <th scope="row">2022</th>
+                                                                        <td>12월 발표예정</td>
+                                                                        <td>12월 발표예정</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <th scope="row">2021</th>
+                                                                        <td>A-</td>
+                                                                        <td>B-</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <th scope="row">2020</th>
+                                                                        <td>-</td>
+                                                                        <td>-</td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                            <div class="data-info case-2">
+                                                                <ul class="order-list design-1 usual-1 case-4 small type-3 align-1">
+                                                                    <li class="order-item">
+                                                                        평가등급은 총 8단계로, 높은 순으로 Leadership(A, A-), Management(B,B-), Awareness(C, C-),<br class="br-pc" /> Disclosure(D, D-)로 구성
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="thumbnail-item">
+                                                <div class="thumbnail-wrap">
+                                                    <picture class="thumbnail-figure">
+                                                        <source media="(max-width: 1023px)" srcset="../../assets/images/photo/sustainability/evaluation/img-mark-05-mo.png">
+                                                        <source media="(max-width: 1920px)" srcset="../../assets/images/photo/sustainability/evaluation/img-mark-05.png">
+                                                        <img class="img" src="../../assets/images/photo/sustainability/evaluation/img-mark-05.png" alt="MSCI">
+                                                    </picture>
+                                                    <div class="thumbnail-inform">
+                                                        <p class="thumbnail-head">MSCI</p>
+                                                        <p class="thumbnail-body">
+                                                            모건스탠리캐피털인터내셔널(Morgan Stanley Capital International, MSCI)은 세계 3대 투자은행(IB) 중 하나인 모건스탠리가 만든 글로벌 평가기관으로, 2009년부터 전 세계 2800여개 기업에 대해 공시 데이터를 바탕으로 총 10개 부문, 35개 핵심 이슈를 업종별로 연간 상시 평가한 ESG 지수를 공개하고 있습니다.
+                                                        </p>
+                                                        <div class="table-display design-1 case-1 align-3 type-1 accent-1 small">
+                                                            <table>
+                                                                <colgroup>
+                                                                    <col class="width-ratio20">
+                                                                    <col class="width-ratio20">
+                                                                    <col class="width-ratio20">
+                                                                    <col class="width-ratio20">
+                                                                    <col class="width-ratio20">
+                                                                </colgroup>
+                                                                <thead>
+                                                                    <tr>
+                                                                        <th scope="col">구분</th>
+                                                                        <th scope="col">종합등급</th>
+                                                                        <th scope="col">환경</th>
+                                                                        <th scope="col">사회</th>
+                                                                        <th scope="col">지배구조</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <th scope="row">2022</th>
+                                                                        <td>BBB</td>
+                                                                        <td>6.1</td>
+                                                                        <td>3.1</td>
+                                                                        <td>1.9</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <th scope="row">2021</th>
+                                                                        <td>BB</td>
+                                                                        <td>4.2</td>
+                                                                        <td>5.2</td>
+                                                                        <td>1.7</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <th scope="row">2020</th>
+                                                                        <td>BB</td>
+                                                                        <td>-</td>
+                                                                        <td>-</td>
+                                                                        <td>-</td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                            <div class="data-info case-2">
+                                                                <ul class="order-list design-1 usual-1 case-4 small type-3 align-1">
+                                                                    <li class="order-item">평가등급은 총 7단계로, 높은 순으로 AAA, AA, A, BBB, BB, B, CCC 로 구성</li>
+                                                                    <li class="order-item">각 영역별 0~10점 (10점 만점)</li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="contents-article contents-article2">
+                                <div class="contents-article-inner">
+                                    <div class="data-display design-1 case-2 color-2">
+                                        <ul class="data-list">
+                                            <li class="data-item">
+                                                <div class="data-wrap">
+                                                    <div class="data-head">
+                                                        <h3 class="title design-1 case-1 small-v2">
+                                                            <em class="name">수상내역</em>
+                                                        </h3>
+                                                    </div>
+                                                    <div class="data-body">
+                                                        <picture class="thumbnail-figure">
+                                                            <source media="(max-width: 1023px)" srcset="../../assets/images/photo/sustainability/evaluation/photo-evaluation-01-mo.png">
+                                                            <source media="(max-width: 1920px)" srcset="../../assets/images/photo/sustainability/evaluation/photo-evaluation-01.png">
+                                                            <img class="img" src="../../assets/images/photo/sustainability/evaluation/photo-evaluation-01.png" alt="">
+                                                        </picture>
+                                                        <ul class="content-list">
+                                                            <li class="content-item">
+                                                                <div class="content-head">
+                                                                    <em class="content-year">2022년</em>
+                                                                </div>
+                                                                <div class="content-body">
+                                                                    <div class="content-part">
+                                                                        <strong class="content-title">'세종대왕상'</strong>
+                                                                        <p class="content-para">합성섬유 친환경 제조법 개발</p>
+                                                                    </div>
+                                                                </div>
+                                                            </li>
+                                                            <li class="content-item">
+                                                                <div class="content-head">
+                                                                    <em class="content-year">2021년</em>
+                                                                </div>
+                                                                <div class="content-body">
+                                                                    <div class="content-part">
+                                                                        <strong class="content-title">‘CDP 탄소경영’ 수상</strong>
+                                                                        <p class="content-para">탄소정보공개 및 기후변화 대응 노력</p>
+                                                                    </div>
+                                                                    <div class="content-part">
+                                                                        <strong class="content-title">‘서울특별시 환경상’ 대상 수상</strong>
+                                                                        <p class="content-para">서울시에서 버려진 페트병을 모아 리사이클한 ‘리젠서울’ 폴리에스터 생산</p>
+                                                                    </div>
+                                                                </div>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+        <%-include('../include/kor/HTNCWK03FOOTER.ejs') %>
+    </body>
+</html>

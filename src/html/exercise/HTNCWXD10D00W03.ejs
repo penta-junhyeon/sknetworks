@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <%-include('../include/kor/HTNCWK00HEADMETACOMMON.ejs') %>
+        <%-include('../meta-id/kor/HTNCWKD40D11W01.ejs') %>
+        <%-include('../include/kor/HTNCWK00HEADSTYLE.ejs') %>
+        <%-include('../include/kor/HTNCWK00HEADFAVICON.ejs') %>
+        <%-include('../include/kor/HTNCWK00HEADSCRIPTLIBRARY.ejs') %>
+        <%-include('../include/kor/HTNCWK00HEADSCRIPTGSAP.ejs') %>
+        <%-include('../include/kor/HTNCWK00HEADSCRIPTLOADER.ejs') %>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                scrollEvent();
+                resizeEvent();
+
+                subPageIntroWheel(); // 서브 공통 MouseWheel - sustainability
+                localInteraction_04(); // 서브 공통 Info Interaction - sustainability
+                naviDepth3_Interaction_01(); // 서브 공통 NaviDepth3 Interaction - sustainability
+
+                contentsSubScrollEventCustom(); // 서브 공통 Section Active
+            });
+
+            function scrollEvent(){
+                window.addEventListener('scroll', () => {
+                    contentsSubScrollEventCustom();
+                });
+            }
+
+            function resizeEvent(){
+                window.addEventListener('resize', () => {
+                });
+            }
+        </script>
+    </head>
+    <body class="tnc-site">
+        <%-include('../include/kor/HTNCWK01HEADER.ejs') %>
+        <main id="container" class="container tnc HTNCWKD40D11W01 sub">
+            <div class="container-inner">
+                <section class="contents-section contents-section1">
+                    <div class="contents-section-inner">
+                        <div class="local sustainability-common" local-interaction="sustainability-01">
+                            <div class="local-head design-1">
+                                <div class="local-head-wrap">
+                                    <div class="local-subject">
+                                        <h2 class="local-name">
+                                            <span class="wbr">Sustainability</span>
+                                            <span class="wbr hide">보고서</span>
+                                        </h2>
+                                    </div>
+                                    <div class="local-subject">
+                                        <h2 class="local-name">
+                                            <span class="wbr hide">Sustainability</span>
+                                            <span class="wbr">보고서</span>
+                                        </h2>
+                                    </div>
+                                    <picture class="local-figure">
+                                        <source media="(max-width: 1023px)" srcset="../../assets/images/example/subintro-mo.jpg">
+                                        <source media="(max-width: 1920px)" srcset="../../assets/images/example/subintro-pc.jpg">
+                                        <img src="../../assets/images/example/subintro-pc.jpg" alt=" ">
+                                    </picture>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <nav class="navi depth3">
+                    <div class="navi-wrap">
+                        <div class="navi-subject"><a href="#" title="현재 선택된 항목" class="navi-name">보고서</a></div>
+                        <div class="tab-display">
+                            <ul class="tab-list">
+                                <li class="tab-item"><a href="#" class="tab-text">지속가능경영</a></li>
+                                <li class="tab-item current" title="현재 선택된 항목"><a href="#" class="tab-text">보고서</a></li>
+                                <li class="tab-item"><a href="#" class="tab-text">외부평가</a></li>
+                                <li class="tab-item"><a href="#" class="tab-text">참여 이니셔티브</a></li>
+                                <li class="tab-item"><a href="#" class="tab-text">ESG 규정 및 지침</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+                <section class="contents-section contents-section2">
+                    <div class="contents-section-inner">
+                        <h3 class="blind">컨텐츠 그룹영역</h3>
+                        <div class="contents-article contents-article1" style="height:700px; background:rgb(198, 226, 227);">
+
+                            <div class="contents-article-inner">
+
+                            </div>
+                        </div>
+                        <div class="contents-article contents-article2" style="height:700px; background:rgb(143, 193, 208);">
+                            <h3 class="blind">컨텐츠 영역</h3>
+                            <div class="contents-article-inner">
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="contents-section contents-section3">
+                    <div class="contents-section-inner">
+                        <h2 class="blind">컨텐츠 그룹영역</h2>
+                        <div class="contents-article contents-article1" style="height:700px; background:rgb(134, 164, 194);">
+                            <h3 class="blind">컨텐츠 영역</h3>
+                            <div class="contents-article-inner">
+                            </div>
+                        </div>
+                        <div class="contents-article contents-article2" style="height:700px; background:rgb(126, 143, 188);">
+                            <h3 class="blind">컨텐츠 영역</h3>
+                            <div class="contents-article-inner">
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+        <%-include('../include/kor/HTNCWK03FOOTER.ejs') %>
+    </body>
+</html>

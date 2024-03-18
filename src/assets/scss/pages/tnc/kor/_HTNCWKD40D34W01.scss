@@ -1,0 +1,99 @@
+.HTNCWKD40D34W01 {
+    .container-inner {
+        .contents-section {
+            &.contents-section2 {
+                .contents-section-inner {
+                    .contents-section-head {
+                        .contents-article-inner {
+                            padding: 14rem 0 18rem 0;
+
+                            @include mobile {
+                                padding: 6rem 0 10rem 0;
+                            }
+                        }
+                    }
+                    .contents-article {
+                        &.contents-article1 {
+                            .contents-article-inner {
+                                > .data-display {
+                                    padding: 0 1.8rem 6rem;
+                                    .data-list {
+                                        max-width: 133.6rem;
+                                        margin: 0 auto;
+                                    }
+                                    @include mobile {
+                                        padding: 0 1.8rem 2.4rem;
+                                    }
+                                }
+                                > .accordion-display {
+                                    .accordion-body {
+                                        .diagram-display,
+                                        .table-display,
+                                        .button-display {
+                                            margin-top: 8rem;
+                                            @include mobile {
+                                                margin-top: 4rem;
+                                            }
+                                        }
+                                    }
+                                }
+                                @include mobile {
+                                    padding-bottom: 14rem;
+                                }
+
+
+                                .diagram-display {
+                                    &.policy-process {
+                                        .diagram-wrap {
+                                            .diagram-body {
+                                                .picture {
+                                                    &:nth-child(1) {
+                                                        display: none;
+    
+                                                        @include mobile {
+                                                            position: absolute;
+                                                            top: 0;
+                                                            left: 0;
+                                                            display: block;
+                                                            width: 100%;
+                                                            // margin-left: -1.8rem;
+                                                            // padding-left: 1.8rem;
+                                                            // padding-right: 1.8rem;
+                                                            padding-bottom: 1rem;
+                                                            overflow: hidden;
+                                                            overflow-x: auto;
+    
+                                                            &::-webkit-scrollbar {
+                                                                border-radius: 1rem;
+                                                                height: 0.4rem;
+                                                            }
+                                                            &::-webkit-scrollbar-thumb {
+                                                                background-color: #2f3542;
+                                                                border-radius: 1rem;
+                                                            }
+                                                            &::-webkit-scrollbar-track {
+                                                                // margin-left: 1.8rem;
+                                                                // margin-right: 1.8rem;
+                                                                border-radius: 1rem;                                                                
+                                                                background-color: #eee;
+                                                            }
+    
+                                                            img {
+                                                                width: 100%;
+                                                                min-width: 49.7rem;
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

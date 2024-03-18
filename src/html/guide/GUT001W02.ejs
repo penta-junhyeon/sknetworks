@@ -1,0 +1,1668 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <%-include('../include/guide/GUT00100HEAD.ejs') %> 
+    <%-include('../include/kor/HTNCWK00HEADSCRIPTLIBRARY.ejs') %> 
+    <%-include('../include/kor/HTNCWK00HEADSCRIPTGSAP.ejs') %>
+    <script src="../../assets/js/select2-dropdownPosition.js"></script>
+    <!-- <script>
+        (async function () {
+        if (!("paintWorklet" in CSS)) {
+            await import("https://unpkg.com/css-paint-polyfill/dist/css-paint-polyfill.js");
+        }
+    
+        CSS.paintWorklet.addModule(
+            "https://www.unpkg.com/css-houdini-squircle@0.2.2/squircle.min.js"
+        );
+        })();
+    </script> -->
+    <script>
+
+      document.addEventListener("DOMContentLoaded", function () {
+        var localInfo = $(".local-info");
+
+        const ui_InteractionTrigger_01 = gsap.timeline({
+          scrollTrigger: {
+            id: "info-head",
+            trigger: '[ui-interaction="animation-01"]',
+            start: "top top",
+            end: "bottom bottom",
+            markers: true,
+            scrub: 1,
+            pinSpacing: false,
+            onEnter: () => {
+              localInfo.addClass("active");
+            },
+            onLeave: () => {},
+            onEnterBack: () => {
+              localInfo.addClass("active");
+            },
+            onLeaveBack: () => {
+              localInfo.removeClass("active");
+            },
+          },
+        });
+      });
+    </script>
+  </head>
+
+  <body>
+    <div id="wrap" class="wrap guide">
+      <%-include('../include/guide/GUT00101HEADER.ejs') %>
+      <main class="container guide GUT001W02 sub">
+        <section class="container-wrap">
+          <div class="container-inner">
+            <em class="guide-sort-bar">
+              <span class="text-wrap">
+                <span class="text">효성티앤씨 컴포넌트 가이드</span>
+              </span>
+              <span class="bar"></span>
+            </em>
+            <article class="contents">
+              <div class="contents-inner">
+                <div class="title-contents-wrap">
+                  <h3 class="title-contents-guide">
+                    <span class="text color-white">Icon</span>
+                  </h3>
+                </div>
+                <div class="contents-box-wrap">
+                  <div class="contents-box-inner">
+                    <div class="contents-box-line">
+                      <div class="contents-box-item">
+                        <!-- 컨텐츠 복사 영역 -->
+                        <div class="contents-box-item guide-button">
+                          <!-- 컨텐츠 복사 영역 -->
+                          <div class="button-display form-1 sort-1 align-3 font-style-2">
+                            <div class="button-mask form-1">
+                              <a href="javascript:void(0)" class="button design-1 case-6 fill-800 color-1 icon-down-arrow01">
+                                <span class="button-text-core">
+                                  <span class="blind">icon</span>
+                                </span>
+                              </a>
+                            </div>
+                          </div>
+                          <!--// 컨텐츠 복사 영역 -->
+                        </div>
+                        <div class="contents-box-item guide-button">
+                          <!-- 컨텐츠 복사 영역 -->
+                          <div class="button-display form-1 sort-1 align-3">
+                            <div class="button-mask form-1">
+                              <a href="javascript:void(0)" class="button design-1 case-6 fill-800 color-1 icon-right-arrow01">
+                                <span class="button-text-core">
+                                  <span class="blind">icon</span>
+                                </span>
+                              </a>
+                            </div>
+                          </div>
+                          <!--// 컨텐츠 복사 영역 -->
+                        </div>
+                        <div class="contents-box-item guide-button">
+                          <!-- 컨텐츠 복사 영역 -->
+                          <div class="button-display form-1 sort-1 align-3">
+                            <div class="button-mask form-1">
+                              <a href="javascript:void(0)" class="button design-1 case-6 fill-800 color-1 icon-close01">
+                                <i class="button-text-core">
+                                  <span class="blind">icon</span>
+                                </i>
+                              </a>
+                            </div>
+                          </div>
+                          <!--// 컨텐츠 복사 영역 -->
+                        </div>
+                        <div class="contents-box-item guide-button">
+                          <!-- 컨텐츠 복사 영역 -->
+                          <div class="button-display form-1 sort-1 align-3">
+                            <div class="button-mask form-1">
+                              <a href="javascript:void(0)" class="button design-1 case-6 fill-800 color-1 icon-left-arrow02">
+                                <i class="button-text-core">
+                                  <span class="blind">icon</span>
+                                </i>
+                              </a>
+                            </div>
+                          </div>
+                          <!--// 컨텐츠 복사 영역 -->
+                        </div>
+                        <div class="contents-box-item guide-button">
+                          <!-- 컨텐츠 복사 영역 -->
+                          <div class="button-display form-1 sort-1 align-3">
+                            <div class="button-mask form-1">
+                              <a href="javascript:void(0)" class="button design-1 case-6 fill-800 color-1 icon-right-arrow02">
+                                <i class="button-text-core">
+                                  <span class="blind">icon</span>
+                                </i>
+                              </a>
+                            </div>
+                          </div>
+                          <!--// 컨텐츠 복사 영역 -->
+                        </div>
+                        <div class="contents-box-item guide-button">
+                          <!-- 컨텐츠 복사 영역 -->
+                          <div class="button-display form-1 sort-1 align-3">
+                            <div class="button-mask form-1">
+                              <a href="javascript:void(0)" class="button design-1 case-6 color-2 icon-plus01">
+                                <i class="button-text-core">
+                                  <span class="blind">icon</span>
+                                </i>
+                              </a>
+                            </div>
+                          </div>
+                          <!--// 컨텐츠 복사 영역 -->
+                        </div>
+                        <div class="contents-box-item guide-button">
+                          <!-- 컨텐츠 복사 영역 -->
+                          <div class="button-display form-1 sort-1 align-3">
+                            <div class="button-mask form-1">
+                              <a href="javascript:void(0)" class="button design-1 case-6 color-2 icon-minus01">
+                                <i class="button-text-core">
+                                  <span class="blind">icon</span>
+                                </i>
+                              </a>
+                            </div>
+                          </div>
+                          <!--// 컨텐츠 복사 영역 -->
+                        </div>
+                        <div class="contents-box-item guide-button">
+                          <!-- 컨텐츠 복사 영역 -->
+                          <div class="button-display form-1 sort-1 align-3">
+                            <div class="button-mask form-1">
+                              <a href="javascript:void(0)" class="button design-1 case-6 fill-800 color-1 icon-down-left-arrow01">
+                                <i class="button-text-core">
+                                  <span class="blind">icon</span>
+                                </i>
+                              </a>
+                            </div>
+                          </div>
+                          <!--// 컨텐츠 복사 영역 -->
+                        </div>
+                        <div class="contents-box-item guide-button">
+                          <!-- 컨텐츠 복사 영역 -->
+                          <div class="button-display form-1 sort-1 align-3">
+                            <div class="button-mask form-1">
+                              <a href="javascript:void(0)" class="button design-1 case-6 fill-800 color-1 icon-check01">
+                                <i class="button-text-core">
+                                  <span class="blind">icon</span>
+                                </i>
+                              </a>
+                            </div>
+                          </div>
+                          <!--// 컨텐츠 복사 영역 -->
+                        </div>
+                        <div class="contents-box-item guide-button">
+                          <!-- 컨텐츠 복사 영역 -->
+                          <div class="button-display form-1 sort-1 align-3">
+                            <div class="button-mask form-1">
+                              <a href="javascript:void(0)" class="button design-1 case-6 fill-800 color-1 icon-left-arrow03">
+                                <i class="button-text-core">
+                                  <span class="blind">icon</span>
+                                </i>
+                              </a>
+                            </div>
+                          </div>
+                          <!--// 컨텐츠 복사 영역 -->
+                        </div>
+                        <div class="contents-box-item guide-button">
+                          <!-- 컨텐츠 복사 영역 -->
+                          <div class="button-display form-1 sort-1 align-3">
+                            <div class="button-mask form-1">
+                              <a href="javascript:void(0)" class="button design-1 case-6 fill-800 color-1 icon-right-arrow03">
+                                <i class="button-text-core">
+                                  <span class="blind">icon</span>
+                                </i>
+                              </a>
+                            </div>
+                          </div>
+                          <!--// 컨텐츠 복사 영역 -->
+                        </div>
+                        <div class="contents-box-item guide-button">
+                          <!-- 컨텐츠 복사 영역 -->
+                          <div class="button-display form-1 sort-1 align-3">
+                            <div class="button-mask form-1">
+                              <a href="javascript:void(0)" class="button design-1 case-6 fill-800 color-1 icon-down-arrow02">
+                                <i class="button-text-core">
+                                  <span class="blind">icon</span>
+                                </i>
+                              </a>
+                            </div>
+                          </div>
+                          <!--// 컨텐츠 복사 영역 -->
+                        </div>
+                        <div class="contents-box-item guide-button">
+                          <!-- 컨텐츠 복사 영역 -->
+                          <div class="button-display form-1 sort-1 align-3">
+                            <div class="button-mask form-1">
+                              <a href="javascript:void(0)" class="button design-1 case-6 fill-800 color-1 icon-up-arrow02">
+                                <i class="button-text-core">
+                                  <span class="blind">icon</span>
+                                </i>
+                              </a>
+                            </div>
+                          </div>
+                          <!--// 컨텐츠 복사 영역 -->
+                        </div>
+                        <!--// 컨텐츠 복사 영역 -->
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+            <article class="contents">
+              <div class="contents-inner">
+                <div class="title-contents-wrap">
+                  <h3 class="title-contents-guide">
+                    <span class="text color-white">Button</span>
+                  </h3>
+                </div>
+                <div class="contents-box-wrap">
+                  <div class="contents-box-inner">
+                    <div class="contents-box-line">
+                      <div class="contents-box-item guide-button">
+                        <!-- 컨텐츠 복사 영역 -->
+                        <div class="button-display form-1 sort-1 align-3">
+                          <div class="button-wrap form-1">
+                            <button href="javascript:void(0)" class="button design-1 case-1 medium align-3 fill-800 color-1">
+                              <span class="button-text-core">Button</span>
+                            </button>
+                          </div>
+                        </div>
+                        <!-- // 컨텐츠 복사 영역 -->
+                      </div>
+                      <div class="contents-box-item guide-button">
+                        <!-- 컨텐츠 복사 영역 -->
+                        <div class="button-display form-1 sort-1 align-3">
+                          <div class="button-wrap form-1">
+                            <a href="javascript:void(0)" class="button design-1 case-1 medium align-3 line-600 color-1 border-width-2">
+                              <span class="button-text-core">Button</span>
+                            </a>
+                          </div>
+                        </div>
+                        <!-- // 컨텐츠 복사 영역 -->
+                      </div>
+                      <div class="contents-box-item guide-button background-black">
+                        <!-- 컨텐츠 복사 영역 -->
+                        <div class="button-display form-1 sort-1 align-3">
+                          <div class="button-wrap form-1">
+                            <a href="javascript:void(0)" class="button design-1 case-1 medium align-3 line-000 color-1 border-width-2">
+                              <span class="button-text-core">Button</span>
+                            </a>
+                          </div>
+                        </div>
+                        <!-- // 컨텐츠 복사 영역 -->
+                      </div>
+                      <div class="contents-box-item guide-button background-black">
+                        <!-- 컨텐츠 복사 영역 -->
+                        <div class="button-display form-1 sort-1 align-3">
+                          <div class="button-wrap form-1">
+                            <a href="javascript:void(0)" class="button design-1 case-1 medium align-3 fill-000 color-1 border-width-2">
+                              <span class="button-text-core">Button</span>
+                            </a>
+                          </div>
+                        </div>
+                        <!-- // 컨텐츠 복사 영역 -->
+                      </div>
+                      <div class="contents-box-item guide-button">
+                        <!-- 컨텐츠 복사 영역 -->
+                        <div class="button-display form-1 sort-1 align-3">
+                          <div class="button-wrap form-1">
+                            <a href="javascript:void(0)" class="button design-1 case-2 medium align-3 fill-530 color-1 rtl icon-down-arrow01">
+                              <span class="button-text-core">다운로드버튼</span>
+                            </a>
+                          </div>
+                        </div>
+                        <!-- // 컨텐츠 복사 영역 -->
+                      </div>
+                      <div class="contents-box-item guide-button">
+                        <!-- 컨텐츠 복사 영역 -->
+                        <div class="button-display form-1 sort-1 align-3">
+                          <div class="button-wrap form-1">
+                            <a href="javascript:void(0)" class="button design-1 case-3 medium align-3 color-1 fill-800 rtl icon-down-arrow01">
+                              <span class="button-text-core">Download_Mini ver</span>
+                            </a>
+                          </div>
+                        </div>
+                        <!-- // 컨텐츠 복사 영역 -->
+                      </div>
+                      <div class="contents-box-item guide-button">
+                        <!-- 컨텐츠 복사 영역 -->
+                        <div class="button-display form-1 sort-1 align-3">
+                          <div class="button-wrap form-1">
+                            <a href="javascript:void(0)" class="button design-1 case-3 medium align-3 color-1 line-100 border-width-1 rtl icon-down-arrow01">
+                              <span class="button-text-core">Download_Mini ver</span>
+                            </a>
+                          </div>
+                        </div>
+                        <!-- // 컨텐츠 복사 영역 -->
+                      </div>
+                      <div class="contents-box-item guide-button">
+                        <!-- 컨텐츠 복사 영역 -->
+                        <div class="button-display form-1 sort-1 align-3">
+                          <div class="button-wrap form-1">
+                            <a href="javascript:void(0)" class="button design-1 case-4 medium align-3 color-1 fill-400">
+                              <span class="button-text-core">파일첨부</span>
+                            </a>
+                          </div>
+                        </div>
+                        <!-- // 컨텐츠 복사 영역 -->
+                      </div>
+                      <div class="contents-box-item guide-button">
+                        <!-- 컨텐츠 복사 영역 -->
+                        <div class="button-display form-1 sort-1 align-3">
+                          <div class="button-wrap form-1">
+                            <a href="javascript:void(0)" class="button design-1 case-6 fill-900 icon-close01">
+                              <span class="button-text-core">
+                                <span class="blind">닫기</span>
+                              </span>
+                            </a>
+                          </div>
+                        </div>
+                        <!-- // 컨텐츠 복사 영역 -->
+                      </div>
+                      <div class="contents-box-item guide-button">
+                        <!-- 컨텐츠 복사 영역 -->
+                        <div class="button-display form-1 sort-2 align-3">
+                          <div class="button-wrap form-1">
+                            <a href="javascript:void(0)" class="button design-1 case-5 small align-3 color-1 line-900 border-width-2 rtl icon-right-arrow01">
+                              <span class="button-text-core">리젠 소개 바로가기</span>
+                            </a>
+                          </div>
+                        </div>
+                        <!-- // 컨텐츠 복사 영역 -->
+                      </div>
+                      <div class="contents-box-item guide-button background-black">
+                        <!-- 컨텐츠 복사 영역 -->
+                        <div class="button-display form-1 sort-2 align-3">
+                          <div class="button-wrap form-1">
+                            <a href="javascript:void(0)" class="button design-1 case-5 small align-3 color-1 line-000 border-width-2 rtl icon-right-arrow01">
+                              <span class="button-text-core">리젠 소개 바로가기</span>
+                            </a>
+                          </div>
+                        </div>
+                        <!-- // 컨텐츠 복사 영역 -->
+                      </div>
+                      <div class="contents-box-item guide-button">
+                        <!-- 컨텐츠 복사 영역 -->
+                        <div class="button-display form-1 sort-1 align-3">
+                          <div class="button-wrap form-1">
+                            <a href="javascript:void(0)" class="button design-1 case-3 medium align-3 fill-800 color-1 rtl icon-down-arrow01">
+                              <span class="button-text-core">KOR</span>
+                            </a>
+                            <a href="javascript:void(0)" class="button design-1 case-3 medium align-3 fill-800 color-1 rtl icon-down-arrow01">
+                              <span class="button-text-core">ENG</span>
+                            </a>
+                          </div>
+                        </div>
+                        <!-- // 컨텐츠 복사 영역 -->
+                      </div>
+                      <div class="contents-box-item guide-button">
+                        <!-- 컨텐츠 복사 영역 -->
+                        <div class="button-display form-1 sort-1 align-2">
+                          <div class="button-wrap form-1">
+                            <a href="javascript:void(0)" class="button design-1 case-3 medium align-3 line-100 color-1 rtl icon-down-arrow01">
+                              <span class="button-text-core">KOR</span>
+                            </a>
+                            <a href="javascript:void(0)" class="button design-1 case-3 medium align-3 line-100 color-1 rtl icon-down-arrow01">
+                              <span class="button-text-core">ENG</span>
+                            </a>
+                          </div>
+                        </div>
+                        <!-- // 컨텐츠 복사 영역 -->
+                      </div>
+                      <div class="contents-box-item guide-button" style="background-color: #191f26">
+                        <!-- 컨텐츠 복사 영역 -->
+                        <div class="button-display form-1 sort-1 align-3">
+                          <div class="button-wrap form-3">
+                            <a href="javascript:void(0)" class="button design-1 case-8 small-1v align-3 line-000 opacity-1 color-1 hover-1">
+                              <span class="button-text-core">제보센터</span>
+                            </a>
+                          </div>
+                        </div>
+                        <!--// 컨텐츠 복사 영역 -->
+                      </div>
+                      <div class="contents-box-item guide-button">
+                        <!-- 컨텐츠 복사 영역 -->
+                        <div class="button-display form-1 sort-1 align-3">
+                          <div class="button-wrap form-1">
+                            <a href="javascript:void(0)" class="button design-2 case-1 medium color-600 color-3 rtl icon-down-arrow01">
+                              <span class="button-text-core">다운로드</span>
+                            </a>
+                          </div>
+                        </div>
+                        <!--// 컨텐츠 복사 영역 -->
+                      </div>
+                      <div class="contents-box-item guide-button background-black">
+                        <!-- 컨텐츠 복사 영역 -->
+                        <div class="button-display form-1 sort-1 align-3">
+                          <div class="button-wrap form-1">
+                            <a href="javascript:void(0)" class="button design-1 icon-right-arrow03">
+                              <span class="button-text-core">
+                                <span class="blind">다음</span>
+                              </span>
+                            </a>
+                          </div>
+                        </div>
+                        <!-- // 컨텐츠 복사 영역 -->
+                      </div>
+                      <div class="contents-box-item guide-button">
+                        <!-- 컨텐츠 복사 영역 -->
+                        <div class="button-display form-1 sort-1 align-3">
+                          <div class="button-wrap form-1">
+                            <a href="javascript:void(0)" class="button design-1 case-6 fill-580 icon-left-arrow02">
+                              <span class="button-text-core">
+                                <span class="blind">이전</span>
+                              </span>
+                            </a>
+                          </div>
+                        </div>
+                        <!-- // 컨텐츠 복사 영역 -->
+                      </div>
+                      <div class="contents-box-item guide-button">
+                        <!-- 컨텐츠 복사 영역 -->
+                        <div class="button-display form-1 sort-1 align-3">
+                          <div class="button-wrap form-1">
+                            <a href="javascript:void(0)" class="button design-1 case-6 fill-580 icon-right-arrow02">
+                              <span class="button-text-core">
+                                <span class="blind">다음</span>
+                              </span>
+                            </a>
+                          </div>
+                        </div>
+                        <!-- // 컨텐츠 복사 영역 -->
+                      </div>
+                      <div class="contents-box-item guide-button">
+                        <!-- 컨텐츠 복사 영역 -->
+                        <div class="button-display form-1 sort-1 align-3">
+                          <div class="button-wrap form-1">
+                            <a href="javascript:void(0)" class="button design-1 case-6 fill-500 icon-left-arrow02">
+                              <span class="button-text-core">
+                                <span class="blind">이전</span>
+                              </span>
+                            </a>
+                          </div>
+                        </div>
+                        <!-- // 컨텐츠 복사 영역 -->
+                      </div>
+                      <div class="contents-box-item guide-button">
+                        <!-- 컨텐츠 복사 영역 -->
+                        <div class="button-display form-1 sort-1 align-3">
+                          <div class="button-wrap form-1">
+                            <a href="javascript:void(0)" class="button design-1 case-6 fill-500 icon-right-arrow02">
+                              <span class="button-text-core">
+                                <span class="blind">다음</span>
+                              </span>
+                            </a>
+                          </div>
+                        </div>
+                        <!-- // 컨텐츠 복사 영역 -->
+                      </div>
+                      <div class="contents-box-item guide-button">
+                        <!-- 컨텐츠 복사 영역 -->
+                        <div class="button-display form-1 sort-1 align-3">
+                          <div class="button-wrap form-1">
+                            <a href="javascript:void(0)" class="button design-1 case-6 icon-plus01">
+                              <span class="button-text-core">
+                                <span class="blind">더보기</span>
+                              </span>
+                            </a>
+                          </div>
+                        </div>
+                        <!-- // 컨텐츠 복사 영역 -->
+                      </div>
+                      <div class="contents-box-item guide-button">
+                        <!-- 컨텐츠 복사 영역 -->
+                        <div class="button-display form-1 sort-1 align-3">
+                          <div class="button-wrap form-1">
+                            <a href="javascript:void(0)" class="button design-1 case-6 icon-minus01">
+                              <span class="button-text-core">
+                                <span class="blind">접기</span>
+                              </span>
+                            </a>
+                          </div>
+                        </div>
+                        <!-- // 컨텐츠 복사 영역 -->
+                      </div>
+                      <div class="contents-box-item guide-button">
+                        <!-- 컨텐츠 복사 영역 -->
+                        <div class="button-display form-1 sort-1 align-3">
+                          <div class="button-wrap form-1">
+                            <a href="javascript:void(0)" class="button design-1 case-6 fill-541 icon-check01">
+                              <span class="button-text-core">
+                                <span class="blind">확인</span>
+                              </span>
+                            </a>
+                          </div>
+                        </div>
+                        <!-- // 컨텐츠 복사 영역 -->
+                      </div>
+                      <div class="contents-box-item guide-button">
+                        <!-- 컨텐츠 복사 영역 -->
+                        <div class="button-display form-1 sort-1 align-3">
+                          <div class="button-wrap form-1">
+                            <a href="javascript:void(0)" class="button design-1 case-6 fill-900 icon-down-left-arrow01">
+                              <span class="button-text-core">
+                                <span class="blind">바로가기</span>
+                              </span>
+                            </a>
+                          </div>
+                        </div>
+                        <!-- // 컨텐츠 복사 영역 -->
+                      </div>
+                      <div class="contents-box-item guide-button background-black">
+                        <!-- 컨텐츠 복사 영역 -->
+                        <div class="button-display form-1 sort-1 align-3">
+                          <div class="button-wrap form-1">
+                            <a href="javascript:void(0)" class="button design-1 icon-down-arrow02">
+                              <span class="button-text-core">
+                                <span class="blind">열기</span>
+                              </span>
+                            </a>
+                          </div>
+                        </div>
+                        <!-- // 컨텐츠 복사 영역 -->
+                      </div>
+                      <fieldset class="categorization-wrap">
+                        <legend class="title-categorization">
+                          <em class="text-wrap">
+                            <span class="text">Case</span>
+                          </em>
+                        </legend>
+                        <fieldset class="categorization-wrap">
+                          <legend class="title-categorization">
+                            <em class="text-wrap">
+                              <span class="text">design-1</span>
+                            </em>
+                          </legend>
+                          <div class="contents-box-item guide-button">
+                            <!-- 컨텐츠 복사 영역 -->
+                            <div class="button-display form-1 sort-1 align-3">
+                              <div class="button-wrap form-1">
+                                <a href="javascript:void(0)" class="button design-1 case-1 medium align-3 fill-800 color-1">
+                                  <span class="button-text-core">Button</span>
+                                </a>
+                              </div>
+                            </div>
+                            <!--// 컨텐츠 복사 영역 -->
+                            <span class="text-guide-class-name">case-1</span>
+                          </div>
+                          <div class="contents-box-item guide-button">
+                            <!-- 컨텐츠 복사 영역 -->
+                            <div class="button-display form-1 sort-1 align-3">
+                              <div class="button-wrap form-1">
+                                <a href="javascript:void(0)" class="button design-1 case-2 medium align-3 fill-800 color-1">
+                                  <span class="button-text-core">Button</span>
+                                </a>
+                              </div>
+                            </div>
+                            <!--// 컨텐츠 복사 영역 -->
+                            <span class="text-guide-class-name">case-2</span>
+                          </div>
+                          <div class="contents-box-item guide-button">
+                            <!-- 컨텐츠 복사 영역 -->
+                            <div class="button-display form-1 sort-1 align-3">
+                              <div class="button-wrap form-1">
+                                <a href="javascript:void(0)" class="button design-1 case-3 medium align-3 fill-800 color-1">
+                                  <span class="button-text-core">Button</span>
+                                </a>
+                              </div>
+                            </div>
+                            <!--// 컨텐츠 복사 영역 -->
+                            <span class="text-guide-class-name">case-3</span>
+                          </div>
+                          <div class="contents-box-item guide-button">
+                            <!-- 컨텐츠 복사 영역 -->
+                            <div class="button-display form-1 sort-1 align-3">
+                              <div class="button-wrap form-1">
+                                <a href="javascript:void(0)" class="button design-1 case-4 medium align-3 fill-800 color-1">
+                                  <span class="button-text-core">Button</span>
+                                </a>
+                              </div>
+                            </div>
+                            <!--// 컨텐츠 복사 영역 -->
+                            <span class="text-guide-class-name">case-4</span>
+                          </div>
+                          <div class="contents-box-item guide-button">
+                            <!-- 컨텐츠 복사 영역 -->
+                            <div class="button-display form-1 sort-2 align-3">
+                              <div class="button-wrap form-1">
+                                <a href="javascript:void(0)" class="button design-1 case-5 medium align-3 fill-800 color-1">
+                                  <span class="button-text-core">Button</span>
+                                </a>
+                              </div>
+                            </div>
+                            <!--// 컨텐츠 복사 영역 -->
+                            <span class="text-guide-class-name">case-5</span>
+                          </div>
+                          <div class="contents-box-item guide-button">
+                            <!-- 컨텐츠 복사 영역 -->
+                            <div class="button-display form-1 sort-1 align-3">
+                              <div class="button-wrap form-1">
+                                <a href="javascript:void(0)" class="button design-1 case-6 medium align-3 fill-800 color-1">
+                                  <i class="button-text-core">
+                                    <span class="blind">icon</span>
+                                  </i>
+                                </a>
+                              </div>
+                            </div>
+                            <!--// 컨텐츠 복사 영역 -->
+                            <span class="text-guide-class-name">case-6</span>
+                          </div>
+                          <div class="contents-box-item guide-button">
+                            <!-- 컨텐츠 복사 영역 -->
+                            <div class="button-display form-1 sort-1 align-3">
+                              <div class="button-wrap form-1">
+                                <a href="javascript:void(0)" class="button design-1 case-7 medium align-3 fill-800 color-1">
+                                  <span class="button-text-core">Button</span>
+                                </a>
+                              </div>
+                            </div>
+                            <!--// 컨텐츠 복사 영역 -->
+                            <span class="text-guide-class-name">case-7</span>
+                          </div>
+                          <div class="contents-box-item guide-button">
+                            <!-- 컨텐츠 복사 영역 -->
+                            <div class="button-display form-1 sort-1 align-3">
+                              <div class="button-wrap form-3">
+                                <a href="javascript:void(0)" class="button design-1 case-8 small-1v align-3 fill-800 color-1">
+                                  <span class="button-text-core">Button</span>
+                                </a>
+                              </div>
+                            </div>
+                            <!--// 컨텐츠 복사 영역 -->
+                            <span class="text-guide-class-name">case-8</span>
+                          </div>
+                          <div class="contents-box-item guide-button">
+                            <!-- 컨텐츠 복사 영역 -->
+                            <div class="button-display form-1 sort-1 align-3">
+                              <div class="button-wrap form-3">
+                                <a href="javascript:void(0)" class="button design-1 case-8 hover-1 small-1v align-3 fill-800 color-1">
+                                  <span class="button-text-core">Button</span>
+                                </a>
+                              </div>
+                            </div>
+                            <!--// 컨텐츠 복사 영역 -->
+                            <span class="text-guide-class-name">case-8 hover-1</span>
+                          </div>
+                          <div class="contents-box-item guide-button">
+                            <!-- 컨텐츠 복사 영역 -->
+                            <div class="button-display form-1 sort-1 align-3">
+                              <div class="button-wrap form-1">
+                                <a href="javascript:void(0)" class="button design-1 case-9 medium align-3 fill-800 color-1">
+                                  <span class="button-text-core">Button</span>
+                                </a>
+                              </div>
+                            </div>
+                            <!--// 컨텐츠 복사 영역 -->
+                            <span class="text-guide-class-name">case-9</span>
+                          </div>
+                        </fieldset>
+                        <fieldset class="categorization-wrap">
+                          <legend class="title-categorization">
+                            <em class="text-wrap">
+                              <span class="text">design-2</span>
+                            </em>
+                          </legend>
+                          <div class="contents-box-item guide-button">
+                            <!-- 컨텐츠 복사 영역 -->
+                            <div class="button-display form-1 sort-1 align-3">
+                              <div class="button-wrap form-1">
+                                <a href="javascript:void(0)" class="button design-2 case-1 medium color-900 color-3 rtl icon-down-arrow01">
+                                  <span class="button-text-core">Button</span>
+                                </a>
+                              </div>
+                            </div>
+                            <!--// 컨텐츠 복사 영역 -->
+                            <span class="text-guide-class-name">case-1</span>
+                          </div>
+                        </fieldset>
+                      </fieldset>
+                      <fieldset class="categorization-wrap">
+                        <legend class="title-categorization">
+                          <em class="text-wrap">
+                            <span class="text">Font Size</span>
+                          </em>
+                        </legend>
+                        <div class="contents-box-item guide-button">
+                          <!-- 컨텐츠 복사 영역 -->
+                          <div class="button-display form-1 sort-1 align-3">
+                            <div class="button-wrap form-1">
+                              <a href="javascript:void(0)" class="button design-1 case-1 medium align-3 fill-800 color-1">
+                                <span class="button-text-core">Button</span>
+                              </a>
+                            </div>
+                          </div>
+                          <!--// 컨텐츠 복사 영역 -->
+                          <span class="text-guide-class-name">medium</span>
+                        </div>
+                        <div class="contents-box-item guide-button">
+                          <!-- 컨텐츠 복사 영역 -->
+                          <div class="button-display form-1 sort-1 align-3">
+                            <div class="button-wrap form-1">
+                              <a href="javascript:void(0)" class="button design-1 case-1 small align-3 fill-800 color-1">
+                                <span class="button-text-core">Button</span>
+                              </a>
+                            </div>
+                          </div>
+                          <!--// 컨텐츠 복사 영역 -->
+                          <span class="text-guide-class-name">small</span>
+                        </div>
+                        <div class="contents-box-item guide-button">
+                          <!-- 컨텐츠 복사 영역 -->
+                          <div class="button-display form-1 sort-1 align-3">
+                            <div class="button-wrap form-1">
+                              <a href="javascript:void(0)" class="button design-1 case-1 small-1v align-3 fill-800 color-1">
+                                <span class="button-text-core">Button</span>
+                              </a>
+                            </div>
+                          </div>
+                          <!--// 컨텐츠 복사 영역 -->
+                          <span class="text-guide-class-name">small-1v</span>
+                        </div>
+                      </fieldset>
+                      <fieldset class="categorization-wrap">
+                        <legend class="title-categorization">
+                          <em class="text-wrap">
+                            <span class="text">Align</span>
+                          </em>
+                        </legend>
+                        <div class="contents-box-item guide-button">
+                          <!-- 컨텐츠 복사 영역 -->
+                          <div class="button-display form-1 sort-1 align-3">
+                            <div class="button-wrap form-1">
+                              <a href="javascript:void(0)" class="button design-1 case-1 medium align-1 fill-800 color-1">
+                                <span class="button-text-core">Button</span>
+                              </a>
+                            </div>
+                          </div>
+                          <!--// 컨텐츠 복사 영역 -->
+                          <span class="text-guide-class-name">align-1</span>
+                        </div>
+                        <div class="contents-box-item guide-button">
+                          <!-- 컨텐츠 복사 영역 -->
+                          <div class="button-display form-1 sort-1 align-1">
+                            <div class="button-wrap form-1">
+                              <a href="javascript:void(0)" class="button design-1 case-1 medium align-2 fill-800 color-1">
+                                <span class="button-text-core">Button</span>
+                              </a>
+                            </div>
+                          </div>
+                          <!--// 컨텐츠 복사 영역 -->
+                          <span class="text-guide-class-name">align-2</span>
+                        </div>
+                        <div class="contents-box-item guide-button">
+                          <!-- 컨텐츠 복사 영역 -->
+                          <div class="button-display form-1 sort-1 align-3">
+                            <div class="button-wrap form-1">
+                              <a href="javascript:void(0)" class="button design-1 case-1 medium align-3 fill-800 color-1">
+                                <span class="button-text-core">Button</span>
+                              </a>
+                            </div>
+                          </div>
+                          <!--// 컨텐츠 복사 영역 -->
+                          <span class="text-guide-class-name">align-3</span>
+                        </div>
+                      </fieldset>
+                      <fieldset class="categorization-wrap">
+                        <legend class="title-categorization">
+                          <em class="text-wrap">
+                            <span class="text">Fill</span>
+                          </em>
+                        </legend>
+                        <div class="contents-box-item guide-button background-black">
+                          <!-- 컨텐츠 복사 영역 -->
+                          <div class="button-display form-1 sort-1 align-3">
+                            <div class="button-wrap form-1">
+                              <a href="javascript:void(0)" class="button design-1 case-2 medium align-3 fill-000 color-1">
+                                <span class="button-text-core"># FFFFFF</span>
+                              </a>
+                            </div>
+                          </div>
+                          <!--// 컨텐츠 복사 영역 -->
+                          <span class="text-guide-class-name">fill-000</span>
+                        </div>
+                        <div class="contents-box-item guide-button">
+                          <!-- 컨텐츠 복사 영역 -->
+                          <div class="button-display form-1 sort-1 align-3">
+                            <div class="button-wrap form-1">
+                              <a href="javascript:void(0)" class="button design-1 case-2 medium align-3 fill-400 color-1">
+                                <span class="button-text-core"># 767B86</span>
+                              </a>
+                            </div>
+                          </div>
+                          <!--// 컨텐츠 복사 영역 -->
+                          <span class="text-guide-class-name">fill-400</span>
+                        </div>
+                        <div class="contents-box-item guide-button">
+                          <!-- 컨텐츠 복사 영역 -->
+                          <div class="button-display form-1 sort-1 align-3">
+                            <div class="button-wrap form-1">
+                              <a href="javascript:void(0)" class="button design-1 case-2 medium align-3 fill-500 color-1">
+                                <span class="button-text-core"># 626C87</span>
+                              </a>
+                            </div>
+                          </div>
+                          <!--// 컨텐츠 복사 영역 -->
+                          <span class="text-guide-class-name">fill-500</span>
+                        </div>
+                        <div class="contents-box-item guide-button">
+                          <!-- 컨텐츠 복사 영역 -->
+                          <div class="button-display form-1 sort-1 align-3">
+                            <div class="button-wrap form-1">
+                              <a href="javascript:void(0)" class="button design-1 case-2 medium align-3 fill-530 color-1">
+                                <span class="button-text-core"># 3A95D6</span>
+                              </a>
+                            </div>
+                          </div>
+                          <!--// 컨텐츠 복사 영역 -->
+                          <span class="text-guide-class-name">fill-530</span>
+                        </div>
+                        <div class="contents-box-item guide-button">
+                          <!-- 컨텐츠 복사 영역 -->
+                          <div class="button-display form-1 sort-1 align-3">
+                            <div class="button-wrap form-1">
+                              <a href="javascript:void(0)" class="button design-1 case-2 medium align-3 fill-541 color-1">
+                                <span class="button-text-core"># 1D6ECD</span>
+                              </a>
+                            </div>
+                          </div>
+                          <!--// 컨텐츠 복사 영역 -->
+                          <span class="text-guide-class-name">fill-541</span>
+                        </div>
+                        <div class="contents-box-item guide-button">
+                          <!-- 컨텐츠 복사 영역 -->
+                          <div class="button-display form-1 sort-1 align-3">
+                            <div class="button-wrap form-1">
+                              <a href="javascript:void(0)" class="button design-1 case-2 medium align-3 fill-580 color-1">
+                                <span class="button-text-core"># 1B4B66</span>
+                              </a>
+                            </div>
+                          </div>
+                          <!--// 컨텐츠 복사 영역 -->
+                          <span class="text-guide-class-name">fill-580</span>
+                        </div>
+                        <div class="contents-box-item guide-button">
+                          <!-- 컨텐츠 복사 영역 -->
+                          <div class="button-display form-1 sort-1 align-3">
+                            <div class="button-wrap form-1">
+                              <a href="javascript:void(0)" class="button design-1 case-2 medium align-3 fill-600 color-1">
+                                <span class="button-text-core"># 535353</span>
+                              </a>
+                            </div>
+                          </div>
+                          <!--// 컨텐츠 복사 영역 -->
+                          <span class="text-guide-class-name">fill-600</span>
+                        </div>
+                        <div class="contents-box-item guide-button">
+                          <!-- 컨텐츠 복사 영역 -->
+                          <div class="button-display form-1 sort-1 align-3">
+                            <div class="button-wrap form-1">
+                              <a href="javascript:void(0)" class="button design-1 case-2 medium align-3 fill-700 color-1">
+                                <span class="button-text-core"># 282828</span>
+                              </a>
+                            </div>
+                          </div>
+                          <!--// 컨텐츠 복사 영역 -->
+                          <span class="text-guide-class-name">fill-700</span>
+                        </div>
+                        <div class="contents-box-item guide-button">
+                          <!-- 컨텐츠 복사 영역 -->
+                          <div class="button-display form-1 sort-1 align-3">
+                            <div class="button-wrap form-1">
+                              <a href="javascript:void(0)" class="button design-1 case-2 medium align-3 fill-800 color-1">
+                                <span class="button-text-core"># 1B1F27</span>
+                              </a>
+                            </div>
+                          </div>
+                          <!--// 컨텐츠 복사 영역 -->
+                          <span class="text-guide-class-name">fill-800</span>
+                        </div>
+                        <div class="contents-box-item guide-button">
+                          <!-- 컨텐츠 복사 영역 -->
+                          <div class="button-display form-1 sort-1 align-3">
+                            <div class="button-wrap form-1">
+                              <a href="javascript:void(0)" class="button design-1 case-2 medium align-3 fill-900 color-1">
+                                <span class="button-text-core"># 000000</span>
+                              </a>
+                            </div>
+                          </div>
+                          <!--// 컨텐츠 복사 영역 -->
+                          <span class="text-guide-class-name">fill-900</span>
+                        </div>
+                      </fieldset>
+                      <fieldset class="categorization-wrap">
+                        <legend class="title-categorization">
+                          <em class="text-wrap">
+                            <span class="text">Line</span>
+                          </em>
+                        </legend>
+                        <div class="contents-box-item guide-button background-black">
+                          <!-- 컨텐츠 복사 영역 -->
+                          <div class="button-display form-1 sort-1 align-3">
+                            <div class="button-wrap form-1">
+                              <a href="javascript:void(0)" class="button design-1 case-2 medium align-3 line-000 color-1">
+                                <span class="button-text-core"># FFFFFF</span>
+                              </a>
+                            </div>
+                          </div>
+                          <!--// 컨텐츠 복사 영역 -->
+                          <span class="text-guide-class-name">line-000</span>
+                        </div>
+                        <div class="contents-box-item guide-button background-black">
+                          <!-- 컨텐츠 복사 영역 -->
+                          <div class="button-display form-1 sort-1 align-3">
+                            <div class="button-wrap form-1">
+                              <a href="javascript:void(0)" class="button design-1 case-2 medium align-3 line-000 color-1 opacity-1">
+                                <span class="button-text-core"># FFFFFF (0.2)</span>
+                              </a>
+                            </div>
+                          </div>
+                          <!--// 컨텐츠 복사 영역 -->
+                          <span class="text-guide-class-name">line-000</span>
+                        </div>
+                        <div class="contents-box-item guide-button background-black">
+                          <!-- 컨텐츠 복사 영역 -->
+                          <div class="button-display form-1 sort-1 align-3">
+                            <div class="button-wrap form-1">
+                              <a href="javascript:void(0)" class="button design-1 case-2 medium align-3 line-000 color-1 opacity-2">
+                                <span class="button-text-core"># FFFFFF (0.5)</span>
+                              </a>
+                            </div>
+                          </div>
+                          <!--// 컨텐츠 복사 영역 -->
+                          <span class="text-guide-class-name">line-000</span>
+                        </div>
+                        <div class="contents-box-item guide-button">
+                          <!-- 컨텐츠 복사 영역 -->
+                          <div class="button-display form-1 sort-1 align-3">
+                            <div class="button-wrap form-1">
+                              <a href="javascript:void(0)" class="button design-1 case-2 medium align-3 line-100 color-1">
+                                <span class="button-text-core"># CCCCCC</span>
+                              </a>
+                            </div>
+                          </div>
+                          <!--// 컨텐츠 복사 영역 -->
+                          <span class="text-guide-class-name">line-100</span>
+                        </div>
+                        <div class="contents-box-item guide-button">
+                          <!-- 컨텐츠 복사 영역 -->
+                          <div class="button-display form-1 sort-1 align-3">
+                            <div class="button-wrap form-1">
+                              <a href="javascript:void(0)" class="button design-1 case-2 medium align-3 line-101 color-1">
+                                <span class="button-text-core"># C4C4C4</span>
+                              </a>
+                            </div>
+                          </div>
+                          <!--// 컨텐츠 복사 영역 -->
+                          <span class="text-guide-class-name">line-101</span>
+                        </div>
+                        <div class="contents-box-item guide-button">
+                          <!-- 컨텐츠 복사 영역 -->
+                          <div class="button-display form-1 sort-1 align-3">
+                            <div class="button-wrap form-1">
+                              <a href="javascript:void(0)" class="button design-1 case-2 medium align-3 line-900 color-1">
+                                <span class="button-text-core"># 000000</span>
+                              </a>
+                            </div>
+                          </div>
+                          <!--// 컨텐츠 복사 영역 -->
+                          <span class="text-guide-class-name">line-900</span>
+                        </div>
+                      </fieldset>
+                      <fieldset class="categorization-wrap">
+                        <legend class="title-categorization">
+                          <em class="text-wrap">
+                            <span class="text">Border Width</span>
+                          </em>
+                        </legend>
+                        <div class="contents-box-item guide-button">
+                          <!-- 컨텐츠 복사 영역 -->
+                          <div class="button-display form-1 sort-1 align-3">
+                            <div class="button-wrap form-1">
+                              <a href="javascript:void(0)" class="button design-1 case-1 medium align-3 line-900 border-width-1">
+                                <span class="button-text-core">button</span>
+                              </a>
+                            </div>
+                          </div>
+                          <!--// 컨텐츠 복사 영역 -->
+                          <span class="text-guide-class-name">border-width-1</span>
+                        </div>
+                        <div class="contents-box-item guide-button">
+                          <!-- 컨텐츠 복사 영역 -->
+                          <div class="button-display form-1 sort-1 align-3">
+                            <div class="button-wrap form-1">
+                              <a href="javascript:void(0)" class="button design-1 case-1 medium align-3 line-900 border-width-2">
+                                <span class="button-text-core">button</span>
+                              </a>
+                            </div>
+                          </div>
+                          <!--// 컨텐츠 복사 영역 -->
+                          <span class="text-guide-class-name">border-width-2</span>
+                        </div>
+                        <div class="contents-box-item guide-button">
+                          <!-- 컨텐츠 복사 영역 -->
+                          <div class="button-display form-1 sort-1 align-3">
+                            <div class="button-wrap form-1">
+                              <a href="javascript:void(0)" class="button design-1 case-1 medium align-3 line-900 border-width-3">
+                                <span class="button-text-core">button</span>
+                              </a>
+                            </div>
+                          </div>
+                          <!--// 컨텐츠 복사 영역 -->
+                          <span class="text-guide-class-name">border-width-3</span>
+                        </div>
+                        <div class="contents-box-item guide-button">
+                          <!-- 컨텐츠 복사 영역 -->
+                          <div class="button-display form-1 sort-1 align-3">
+                            <div class="button-wrap form-1">
+                              <a href="javascript:void(0)" class="button design-1 case-1 medium align-3 line-900 border-width-4">
+                                <span class="button-text-core">button</span>
+                              </a>
+                            </div>
+                          </div>
+                          <!--// 컨텐츠 복사 영역 -->
+                          <span class="text-guide-class-name">border-width-4</span>
+                        </div>
+                      </fieldset>
+                      <fieldset class="categorization-wrap">
+                        <legend class="title-categorization">
+                          <em class="text-wrap">
+                            <span class="text">Icon Direction</span>
+                          </em>
+                        </legend>
+                        <div class="contents-box-item guide-button">
+                          <!-- 컨텐츠 복사 영역 -->
+                          <div class="button-display form-1 sort-1 align-3">
+                            <div class="button-wrap form-1">
+                              <a href="javascript:void(0)" class="button design-1 case-1 medium align-3 fill-800 color-1 rtl icon-sample">
+                                <span class="button-text-core">button</span>
+                              </a>
+                            </div>
+                          </div>
+                          <!--// 컨텐츠 복사 영역 -->
+                          <span class="text-guide-class-name">rtl</span>
+                        </div>
+                        <div class="contents-box-item guide-button">
+                          <!-- 컨텐츠 복사 영역 -->
+                          <div class="button-display form-1 sort-1 align-3">
+                            <div class="button-wrap form-1">
+                              <a href="javascript:void(0)" class="button design-1 case-1 medium align-3 fill-800 color-1 ltr icon-sample">
+                                <span class="button-text-core">button</span>
+                              </a>
+                            </div>
+                          </div>
+                          <!--// 컨텐츠 복사 영역 -->
+                          <span class="text-guide-class-name">ltr</span>
+                        </div>
+                      </fieldset>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+            <article class="contents">
+              <div class="contents-inner">
+                <div class="title-contents-wrap">
+                  <h3 class="title-contents-guide">
+                    <span class="text color-white">Cursor</span>
+                  </h3>
+                </div>
+                <div class="contents-box-wrap">
+                  <div class="contents-box-inner">
+                    <div class="contents-box-item">
+                      <!-- 컨텐츠 복사 영역 -->
+                      <!--// 컨텐츠 복사 영역 -->
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+            <article class="contents">
+              <div class="contents-inner">
+                <div class="title-contents-wrap">
+                  <h3 class="title-contents-guide">
+                    <span class="text color-white">Input Checkbox</span>
+                  </h3>
+                </div>
+                <div class="contents-box-wrap">
+                  <div class="contents-box-inner">
+                    <div class="contents-box-item">
+                      <!-- 컨텐츠 복사 영역 -->
+                      <!--// 컨텐츠 복사 영역 -->
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+            <article class="contents">
+              <div class="contents-inner">
+                <div class="title-contents-wrap">
+                  <h3 class="title-contents-guide">
+                    <span class="text color-white">Input Radio</span>
+                  </h3>
+                </div>
+                <div class="contents-box-wrap">
+                  <div class="contents-box-inner">
+                    <div class="contents-box-item">
+                      <!-- 컨텐츠 복사 영역 -->
+                      <!--// 컨텐츠 복사 영역 -->
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+            <article class="contents">
+              <div class="contents-inner">
+                <div class="title-contents-wrap">
+                  <h3 class="title-contents-guide">
+                    <span class="text color-white">Input Text 외</span>
+                  </h3>
+                </div>
+                <div class="contents-box-wrap">
+                  <div class="contents-box-inner">
+                    <div class="contents-box-item">
+                      <!-- 컨텐츠 복사 영역 -->
+                      <!--// 컨텐츠 복사 영역 -->
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+            <article class="contents">
+              <div class="contents-inner">
+                <div class="title-contents-wrap">
+                  <h3 class="title-contents-guide">
+                    <span class="text color-white">Logo</span>
+                  </h3>
+                </div>
+                <div class="contents-box-wrap">
+                  <div class="contents-box-inner">
+                    <div class="contents-box-item">
+                      <!-- 컨텐츠 복사 영역 -->
+                      <em class="logo logo-hyosung-tnc-eng color-blue">HYOSUNG TNC</em>
+                      <!--// 컨텐츠 복사 영역 -->
+                    </div>
+                    <div class="contents-box-item background-black">
+                      <!-- 컨텐츠 복사 영역 -->
+                      <em class="logo logo-hyosung-tnc-eng color-white">HYOSUNG TNC</em>
+                      <!--// 컨텐츠 복사 영역 -->
+                    </div>
+                    <div class="contents-box-item">
+                      <!-- 컨텐츠 복사 영역 -->
+                      <em class="logo logo-hyosung-tnc-eng color-black">HYOSUNG TNC</em>
+                      <!--// 컨텐츠 복사 영역 -->
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+            <article class="contents">
+              <div class="contents-inner">
+                <div class="title-contents-wrap">
+                  <h3 class="title-contents-guide">
+                    <span class="text color-white">Photo</span>
+                  </h3>
+                </div>
+                <div class="contents-box-wrap">
+                  <div class="contents-box-inner">
+                    <div class="contents-box-line">
+                      <div class="categorization-custom-wrap">
+                        <h4 class="title-categorization">
+                          <em class="text-wrap">
+                            <span class="text">상세 컨텐츠 타이틀</span>
+                          </em>
+                        </h4>
+                        <div class="contents-box-line">
+                          <!-- 컨텐츠 복사 영역 -->
+                          <div class="contents-section contents-section1" ui-interaction="animation-01" style="height: 100vh; display: flex; align-items: center; justify-content: center">
+                            <div class="local-info module-a style-a">
+                              <div class="local-info-wrap">
+                                <div class="local-subject">
+                                  <h2 class="local-name">
+                                    <span class="wbr">Sustainability</span>
+                                    <span class="wbr hide">보고서</span>
+                                  </h2>
+                                </div>
+                                <div class="local-subject">
+                                  <h2 class="local-name">
+                                    <span class="wbr hide">Sustainability</span>
+                                    <span class="wbr">보고서</span>
+                                  </h2>
+                                </div>
+                                <picture class="local-figure">
+                                  <source media="(max-width: 1023px)" srcset="../../assets/images/example/subintro-mo.jpg" />
+                                  <source media="(max-width: 1920px)" srcset="../../assets/images/example/subintro-pc.jpg" />
+                                  <img src="../../assets/images/example/subintro-pc.jpg" alt=" " />
+                                </picture>
+                              </div>
+                            </div>
+                          </div>
+                          <!--// 컨텐츠 복사 영역 -->
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+            <article class="contents">
+              <div class="contents-inner">
+                <div class="title-contents-wrap">
+                  <h3 class="title-contents-guide">
+                    <span class="text color-white">Progress Bar</span>
+                  </h3>
+                </div>
+                <div class="contents-box-wrap">
+                  <div class="contents-box-inner">
+                    <div class="contents-box-item">
+                      <!-- 컨텐츠 복사 영역 -->
+                      <!--// 컨텐츠 복사 영역 -->
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+            <article class="contents">
+              <div class="contents-inner">
+                <div class="title-contents-wrap">
+                  <h3 class="title-contents-guide">
+                    <span class="text color-white">Select &gt; Option</span>
+                  </h3>
+                </div>
+                <div class="contents-box-wrap">
+                  <div class="contents-box-inner">
+                    <div class="contents-box-item">
+                      <!-- 컨텐츠 복사 영역 -->
+                      <!--// 컨텐츠 복사 영역 -->
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+            <article class="contents">
+              <div class="contents-inner">
+                <div class="title-contents-wrap">
+                  <h3 class="title-contents-guide">
+                    <span class="text color-white">Text</span>
+                  </h3>
+                </div>
+                <div class="contents-box-wrap">
+                  <div class="contents-box-inner">
+                    <div class="contents-box-line">
+                      <div class="categorization-custom-wrap">
+                        <h4 class="title-categorization">
+                          <em class="text-wrap">
+                            <span class="text">상세 컨텐츠 타이틀</span>
+                          </em>
+                        </h4>
+                        <div class="contents-box-line">
+                          <!-- 컨텐츠 복사 영역 -->
+                          <!--// 컨텐츠 복사 영역 -->
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+            <article class="contents">
+              <div class="contents-inner">
+                <div class="title-contents-wrap">
+                  <h3 class="title-contents-guide">
+                    <span class="text color-white">TextArea</span>
+                  </h3>
+                </div>
+                <div class="contents-box-wrap">
+                  <div class="contents-box-inner">
+                    <div class="contents-box-item">
+                      <!-- 컨텐츠 복사 영역 -->
+                      <!--// 컨텐츠 복사 영역 -->
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+            <article class="contents">
+                <div class="contents-inner">
+                    <div class="title-contents-wrap">
+                        <h3 class="title-contents-guide">
+                            <span class="text color-white">Title</span>
+                        </h3>
+                    </div>
+                    <div class="contents-box-wrap">
+                        <div class="contents-box-inner">
+                            <div class="contents-box-line">
+                                <fieldset class="categorization-wrap">
+                                    <legend class="title-categorization">
+                                        <em class="text-wrap">
+                                            <span class="text">Case</span>
+                                        </em>
+                                    </legend>
+                                    <div class="contents-box-block">
+                                        <!-- 컨텐츠 복사 영역 -->
+                                        <h3 class="title design-1 case-1 align-1 medium">
+                                            <em class="name">case-1</em>
+                                        </h3>
+                                    <!--// 컨텐츠 복사 영역 -->
+                                    </div>
+                                    <div class="guide-br case-1"></div>
+                                    <div class="contents-box-block">
+                                        <!-- 컨텐츠 복사 영역 -->
+                                        <h3 class="title design-1 case-2 align-1 medium">
+                                            <em class="name">case-2</em>
+                                        </h3>
+                                        <!--// 컨텐츠 복사 영역 -->
+                                    </div>
+                                    <div class="guide-br case-1"></div>
+                                    <div class="contents-box-block">
+                                        <!-- 컨텐츠 복사 영역 -->
+                                        <h3 class="title design-1 case-2 align-1 medium">
+                                            <em class="name"><span class="dif-font">case</span>-2</em>
+                                        </h3>
+                                        <!--// 컨텐츠 복사 영역 -->
+                                    </div>
+                                </fieldset>
+                                <fieldset class="categorization-wrap">
+                                    <legend class="title-categorization">
+                                        <em class="text-wrap">
+                                            <span class="text">Align</span>
+                                        </em>
+                                    </legend>
+                                    <div class="contents-box-block">
+                                        <!-- 컨텐츠 복사 영역 -->
+                                        <h3 class="title design-1 case-1 align-1 medium">
+                                            <em class="name">align-1</em>
+                                        </h3>
+                                    <!--// 컨텐츠 복사 영역 -->
+                                    </div>
+                                    <div class="contents-box-block">
+                                        <!-- 컨텐츠 복사 영역 -->
+                                        <h3 class="title design-1 case-1 align-2 medium">
+                                            <em class="name">align-2</em>
+                                        </h3>
+                                        <!--// 컨텐츠 복사 영역 -->
+                                    </div>
+                                    <div class="contents-box-block">
+                                        <!-- 컨텐츠 복사 영역 -->
+                                        <h3 class="title design-1 case-1 align-3 medium">
+                                            <em class="name">align-3</em>
+                                        </h3>
+                                        <!--// 컨텐츠 복사 영역 -->
+                                    </div>
+                                </fieldset>
+                                <fieldset class="categorization-wrap">
+                                    <legend class="title-categorization">
+                                        <em class="text-wrap">
+                                            <span class="text">Color</span>
+                                        </em>
+                                    </legend>
+                                    <div class="contents-box-block background-black">
+                                        <!-- 컨텐츠 복사 영역 -->
+                                        <h3 class="title design-1 case-1 align-1 color-1 medium">
+                                            <em class="name"># FFFFFF</em>
+                                        </h3>
+                                        <!--// 컨텐츠 복사 영역 -->
+                                    </div>
+                                    <div class="contents-box-block">
+                                        <!-- 컨텐츠 복사 영역 -->
+                                        <h3 class="title design-1 case-1 align-1 color-2 medium">
+                                            <em class="name"># 000000</em>
+                                        </h3>
+                                        <!--// 컨텐츠 복사 영역 -->
+                                    </div>
+                                    <div class="contents-box-block">
+                                        <!-- 컨텐츠 복사 영역 -->
+                                        <h3 class="title design-1 case-1 align-1 color-10 medium">
+                                            <em class="name"># D9D9D9</em>
+                                        </h3>
+                                        <!--// 컨텐츠 복사 영역 -->
+                                    </div>
+                                    <div class="contents-box-block">
+                                        <!-- 컨텐츠 복사 영역 -->
+                                        <h3 class="title design-1 case-1 align-1 color-7 medium">
+                                            <em class="name"># 282828</em>
+                                        </h3>
+                                        <!--// 컨텐츠 복사 영역 -->
+                                    </div>
+                                    <div class="contents-box-block">
+                                        <!-- 컨텐츠 복사 영역 -->
+                                        <h3 class="title design-1 case-1 align-1 color-3 medium">
+                                            <em class="name"># 1B4B66</em>
+                                        </h3>
+                                        <!--// 컨텐츠 복사 영역 -->
+                                    </div>
+                                    <div class="contents-box-block">
+                                        <!-- 컨텐츠 복사 영역 -->
+                                        <h3 class="title design-1 case-1 align-1 color-4 medium">
+                                            <em class="name"># 2856CE</em>
+                                        </h3>
+                                        <!--// 컨텐츠 복사 영역 -->
+                                    </div>
+                                    <div class="contents-box-block">
+                                        <!-- 컨텐츠 복사 영역 -->
+                                        <h3 class="title design-1 case-1 align-1 color-5 medium">
+                                            <em class="name"># 4B84F0</em>
+                                        </h3>
+                                        <!--// 컨텐츠 복사 영역 -->
+                                    </div>
+                                    <div class="contents-box-block">
+                                        <!-- 컨텐츠 복사 영역 -->
+                                        <h3 class="title design-1 case-1 align-1 color-6 medium">
+                                            <em class="name"># 87D3FE</em>
+                                        </h3>
+                                        <!--// 컨텐츠 복사 영역 -->
+                                    </div>
+                                    <div class="contents-box-block">
+                                        <!-- 컨텐츠 복사 영역 -->
+                                        <h3 class="title design-1 case-1 align-1 color-8 medium">
+                                            <em class="name"># FF7C32</em>
+                                        </h3>
+                                        <!--// 컨텐츠 복사 영역 -->
+                                    </div>
+                                    <div class="contents-box-block">
+                                        <!-- 컨텐츠 복사 영역 -->
+                                        <h3 class="title design-1 case-1 align-1 color-9 medium">
+                                            <em class="name"># 1B4B66</em>
+                                        </h3>
+                                        <!--// 컨텐츠 복사 영역 -->
+                                    </div>
+                                    <div class="contents-box-block">
+                                        <!-- 컨텐츠 복사 영역 -->
+                                        <h3 class="title design-1 case-1 align-1 color-11 medium">
+                                            <em class="name"># A5A9FF</em>
+                                        </h3>
+                                        <!--// 컨텐츠 복사 영역 -->
+                                    </div>
+                                </fieldset>
+                                <fieldset class="categorization-wrap">
+                                    <legend class="title-categorization">
+                                        <em class="text-wrap">
+                                            <span class="text">Font size</span>
+                                        </em>
+                                    </legend>
+                                    <div class="contents-box-block">
+                                        <!-- 컨텐츠 복사 영역 -->
+                                        <h3 class="title design-1 case-1 align-1 small-v9 color-2">
+                                            <em class="name">Title</em>
+                                        </h3>
+                                        <!--// 컨텐츠 복사 영역 -->
+                                        <span class="text-guide-class-name guide-title-name"><span class="blur">class: </span>small-v9 / <span class="blur"> font-family:</span> 'Pretendard' / <span class="blur">font-size:</span> 18px / <span class="blur">font-weight:</span> 700 / <span class="blur">line-height:</span> 32px</span>
+                                    </div>
+                                    <div class="contents-box-block">
+                                        <!-- 컨텐츠 복사 영역 -->
+                                        <h3 class="title design-1 case-1 align-1 small-v6 color-2">
+                                            <em class="name">Title</em>
+                                        </h3>
+                                        <!--// 컨텐츠 복사 영역 -->
+                                        <span class="text-guide-class-name guide-title-name"><span class="blur">class: </span>small-v6 / <span class="blur"> font-family:</span> 'Hyosung' / <span class="blur">font-size:</span> 20px / <span class="blur">font-weight:</span> 700 / <span class="blur">line-height:</span> 32px</span>
+                                    </div>
+                                    <div class="contents-box-block">
+                                        <!-- 컨텐츠 복사 영역 -->
+                                        <h3 class="title design-1 case-1 align-1 small-v5 color-2">
+                                            <em class="name">Title</em>
+                                        </h3>
+                                        <!--// 컨텐츠 복사 영역 -->
+                                        <span class="text-guide-class-name guide-title-name"><span class="blur">class: </span>small-v5 / <span class="blur">font-family:</span> 'Hyosung' / <span class="blur">font-size:</span> 22px / <span class="blur">font-weight:</span> 700 / <span class="blur">line-height:</span> 32px</span>
+                                    </div>
+                                    <div class="contents-box-block">
+                                        <!-- 컨텐츠 복사 영역 -->
+                                        <h3 class="title design-1 case-1 align-1 small-v4 color-2">
+                                            <em class="name">Title</em>
+                                        </h3>
+                                        <!--// 컨텐츠 복사 영역 -->
+                                        <span class="text-guide-class-name guide-title-name"><span class="blur">class: </span>small-v4 / <span class="blur">font-family:</span> 'Hyosung' / <span class="blur">font-size:</span> 24px / <span class="blur">font-weight:</span> 700 / <span class="blur">line-height:</span> 36px</span>
+                                    </div>
+                                    <div class="contents-box-block">
+                                      <!-- 컨텐츠 복사 영역 -->
+                                      <h3 class="title design-1 case-1 align-1 small-v8 color-2">
+                                          <em class="name">Title</em>
+                                      </h3>
+                                      <!--// 컨텐츠 복사 영역 -->
+                                      <span class="text-guide-class-name guide-title-name"><span class="blur">class: </span>small-v8 / <span class="blur">font-family:</span> 'Hyosung' / <span class="blur">font-size:</span> 24px / <span class="blur">font-weight:</span> 500 / <span class="blur">line-height:</span> 36px</span>
+                                  </div>
+                                    <div class="contents-box-block">
+                                        <!-- 컨텐츠 복사 영역 -->
+                                        <h3 class="title design-1 case-1 align-1 small-v3 color-2">
+                                            <em class="name">Title</em>
+                                        </h3>
+                                        <!--// 컨텐츠 복사 영역 -->
+                                        <span class="text-guide-class-name guide-title-name"><span class="blur">class: </span>small-v3 / <span class="blur">font-family:</span> 'Hyosung' / <span class="blur">font-size:</span> 28px / <span class="blur">font-weight:</span> 700 / <span class="blur">line-height:</span> 36px</span>
+                                    </div>
+                                    <div class="contents-box-block">
+                                        <!-- 컨텐츠 복사 영역 -->
+                                        <h3 class="title design-1 case-1 align-1 small-v12 color-2">
+                                            <em class="name">Title</em>
+                                        </h3>
+                                        <!--// 컨텐츠 복사 영역 -->
+                                        <span class="text-guide-class-name guide-title-name"><span class="blur">class: </span>small-v12 / <span class="blur">font-family:</span> 'Hyosung' / <span class="blur">font-size:</span> 28px / <span class="blur">font-weight:</span> 700 / <span class="blur">line-height:</span> 48px</span>
+                                    </div>
+                                    <div class="contents-box-block">
+                                        <!-- 컨텐츠 복사 영역 -->
+                                        <h3 class="title design-1 case-1 align-1 small-v7 color-2">
+                                            <em class="name">Title</em>
+                                        </h3>
+                                        <!--// 컨텐츠 복사 영역 -->
+                                        <span class="text-guide-class-name guide-title-name"><span class="blur">class: </span>small-v7 / <span class="blur"> font-family:</span> 'Hyosung' / <span class="blur">font-size:</span> 28px / <span class="blur">font-weight:</span> 700 / <span class="blur">line-height:</span> 42px</span>
+                                    </div>
+                                    <div class="contents-box-block">
+                                        <!-- 컨텐츠 복사 영역 -->
+                                        <h3 class="title design-1 case-1 align-1 small-v2 color-2">
+                                            <em class="name">Title</em>
+                                        </h3>
+                                        <!--// 컨텐츠 복사 영역 -->
+                                        <span class="text-guide-class-name guide-title-name"><span class="blur">class: </span>small-v2 / <span class="blur">font-family:</span> 'Poppins' / <span class="blur">font-size:</span> 32px / <span class="blur">font-weight:</span> 700 / <span class="blur">line-height:</span> 48px</span>
+                                    </div>
+                                    <div class="contents-box-block">
+                                      <!-- 컨텐츠 복사 영역 -->
+                                      <h3 class="title design-1 case-1 align-1 small-v14 color-2">
+                                          <em class="name">Title</em>
+                                      </h3>
+                                      <!--// 컨텐츠 복사 영역 -->
+                                      <span class="text-guide-class-name guide-title-name"><span class="blur">class: </span>small-v14 / <span class="blur">font-family:</span> 'Hyosung' / <span class="blur">font-size:</span> 32px (mo → 24px) / <span class="blur">font-weight:</span> 700 / <span class="blur">line-height:</span> 48px</span>
+                                  </div>
+                                    <div class="contents-box-block">
+                                        <!-- 컨텐츠 복사 영역 -->
+                                        <h3 class="title design-1 case-1 align-1 small-v1 color-2">
+                                            <em class="name">Title</em>
+                                        </h3>
+                                        <!--// 컨텐츠 복사 영역 -->
+                                        <span class="text-guide-class-name guide-title-name"><span class="blur">class: </span>small-v1 / <span class="blur">font-family:</span> 'Hyosung' / <span class="blur">font-size:</span> 40px / <span class="blur">font-weight:</span> 700 / <span class="blur">line-height:</span> 60px</span>
+                                    </div>
+                                    <div class="contents-box-block">
+                                        <!-- 컨텐츠 복사 영역 -->
+                                        <h3 class="title design-1 case-1 align-1 small-v11 color-2">
+                                            <em class="name">Title</em>
+                                        </h3>
+                                        <!--// 컨텐츠 복사 영역 -->
+                                        <span class="text-guide-class-name guide-title-name"><span class="blur">class: </span>small-v11 / <span class="blur">font-family:</span> 'Hyosung' / <span class="blur">font-size:</span> 40px / <span class="blur">font-weight:</span> 700 / <span class="blur">line-height:</span> 72px</span>
+                                    </div>
+                                    <div class="contents-box-block">
+                                      <!-- 컨텐츠 복사 영역 -->
+                                      <h3 class="title design-1 case-1 align-1 small-v10 color-2">
+                                          <em class="name">Title</em>
+                                      </h3>
+                                      <!--// 컨텐츠 복사 영역 -->
+                                      <span class="text-guide-class-name guide-title-name"><span class="blur">class: </span>small-v10 / <span class="blur">font-family:</span> 'Hyosung' / <span class="blur">font-size:</span> 48px / <span class="blur">font-weight:</span> 700 / <span class="blur">line-height:</span> 64px</span>
+                                    </div>
+                                    <div class="contents-box-block">
+                                        <!-- 컨텐츠 복사 영역 -->
+                                        <h3 class="title design-1 case-1 align-1 small color-2">
+                                            <em class="name">Title</em>
+                                        </h3>
+                                        <!--// 컨텐츠 복사 영역 -->
+                                        <span class="text-guide-class-name guide-title-name"><span class="blur">class: </span>small / <span class="blur">font-family:</span> 'Poppins' / <span class="blur">font-size:</span> 50px / <span class="blur">font-weight:</span> 700 / <span class="blur">line-height:</span> 68px</span>
+                                    </div>
+                                    <div class="contents-box-block">
+                                        <!-- 컨텐츠 복사 영역 -->
+                                        <h3 class="title design-1 case-1 align-1 medium color-2">
+                                            <em class="name">Title</em>
+                                        </h3>
+                                        <!--// 컨텐츠 복사 영역 -->
+                                        <span class="text-guide-class-name guide-title-name"><span class="blur">class: </span>medium / <span class="blur">font-family:</span> 'Hyosung' / <span class="blur">font-size:</span> 52px / <span class="blur">font-weight:</span> 700 / <span class="blur">line-height:</span> 72px</span>
+                                    </div>
+                                    <div class="contents-box-block">
+                                        <!-- 컨텐츠 복사 영역 -->
+                                        <h3 class="title design-1 case-1 align-1 large color-2">
+                                            <em class="name">Title</em>
+                                        </h3>
+                                        <!--// 컨텐츠 복사 영역 -->
+                                        <span class="text-guide-class-name guide-title-name"><span class="blur">class: </span>large / <span class="blur">font-family:</span> 'Hyosung' / <span class="blur">font-size:</span> 56px / <span class="blur">font-weight:</span> 700 / <span class="blur">line-height:</span> 72px</span>
+                                    </div>
+                                    <div class="contents-box-block">
+                                        <!-- 컨텐츠 복사 영역 -->
+                                        <h3 class="title design-1 case-1 align-1 large-v6 color-2">
+                                            <em class="name">Title</em>
+                                        </h3>
+                                        <!--// 컨텐츠 복사 영역 -->
+                                        <span class="text-guide-class-name guide-title-name guide-title-name"><span class="blur">class: </span>large-v6 / <span class="blur">font-family:</span> 'Poppins' / <span class="blur">font-size:</span> 56px / <span class="blur">font-weight:</span> 700 / <span class="blur">line-height:</span> 72px</span>
+                                    </div>
+                                    <div class="contents-box-block">
+                                        <!-- 컨텐츠 복사 영역 -->
+                                        <h3 class="title design-1 case-1 align-1 large-v1 color-2">
+                                            <em class="name">Title</em>
+                                        </h3>
+                                        <!--// 컨텐츠 복사 영역 -->
+                                        <span class="text-guide-class-name guide-title-name"><span class="blur">class: </span>large-v1 / <span class="blur">font-family:</span> 'Poppins' / <span class="blur">font-size:</span> 64px / <span class="blur">font-weight:</span> 700 / <span class="blur">line-height:</span> 86px</span>
+                                    </div>
+                                    <div class="contents-box-block">
+                                        <!-- 컨텐츠 복사 영역 -->
+                                        <h3 class="title design-1 case-1 align-1 large-v2 color-2">
+                                            <em class="name">Title</em>
+                                        </h3>
+                                        <!--// 컨텐츠 복사 영역 -->
+                                        <span class="text-guide-class-name guide-title-name"><span class="blur">class: </span>large-v2 / <span class="blur">font-family:</span> 'Hyosung' / <span class="blur">font-size:</span> 65px / <span class="blur">font-weight:</span> 700 / <span class="blur">line-height:</span> 70px</span>
+                                    </div>
+                                    <div class="contents-box-block">
+                                        <!-- 컨텐츠 복사 영역 -->
+                                        <h3 class="title design-1 case-1 align-1 large-v3 color-2">
+                                            <em class="name">Title</em>
+                                        </h3>
+                                        <!--// 컨텐츠 복사 영역 -->
+                                        <span class="text-guide-class-name guide-title-name"><span class="blur">class: </span>large-v3 / <span class="blur">font-family:</span> 'Poppins' / <span class="blur">font-size:</span> 72px / <span class="blur">font-weight:</span> 600 / <span class="blur">line-height:</span> 92px</span>
+                                    </div>
+                                    <div class="contents-box-block">
+                                        <!-- 컨텐츠 복사 영역 -->
+                                        <h3 class="title design-1 case-1 align-1 large-v4 color-2">
+                                            <em class="name">Title</em>
+                                        </h3>
+                                        <!--// 컨텐츠 복사 영역 -->
+                                        <span class="text-guide-class-name guide-title-name guide-title-name"><span class="blur">class: </span>large-v4 / <span class="blur">font-family:</span> 'Poppins' / <span class="blur">font-size:</span> 80px / <span class="blur">font-weight:</span> 700 / <span class="blur">line-height:</span> 106px / <span class="blur">letter-spacing: </span>-0.48rem</span>
+                                    </div>
+                                    <div class="contents-box-block">
+                                        <!-- 컨텐츠 복사 영역 -->
+                                        <h3 class="title design-1 case-1 align-1 large-v5 color-2">
+                                            <em class="name">Title</em>
+                                        </h3>
+                                        <!--// 컨텐츠 복사 영역 -->
+                                        <span class="text-guide-class-name guide-title-name guide-title-name"><span class="blur">class: </span>large-v5 / <span class="blur">font-family:</span> 'Hyosung' / <span class="blur">font-size:</span> 64px / <span class="blur">font-weight:</span> 700 / <span class="blur">line-height:</span> 76px</span>
+                                    </div>
+                                </fieldset>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </article>
+          </div>
+        </section>
+      </main>
+      <%-include('../include/guide/GUT00103FOOTER.ejs') %>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <%-include('../include/kor/HTNCWK00HEADMETACOMMON.ejs') %>
+        <%-include('../meta-id/kor/HTNCWKD40D41W03.ejs') %>
+        <%-include('../include/kor/HTNCWK00HEADSTYLE.ejs') %>
+        <%-include('../include/kor/HTNCWK00HEADFAVICON.ejs') %>
+        <%-include('../include/kor/HTNCWK00HEADSCRIPTLIBRARY.ejs') %>
+        <%-include('../include/kor/HTNCWK00HEADSCRIPTGSAP.ejs') %>
+        <%-include('../include/kor/HTNCWK00HEADSCRIPTLOADER.ejs') %>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                scrollEvent();
+                resizeEvent();
+
+                subPageIntroWheel_02(); // 서브 공통 MouseWheel naviDepth3, naviDepth4
+                localInteraction_04_01(); // 서브 공통 Info Interaction
+                naviDepth3_Interaction_02(); // 서브 공통 naviDepth3 fixed,  naviDepth4 따라 내려옴
+
+                contentsSubScrollEventCustom(); // 서브 공통 Section Active
+            });
+
+            function scrollEvent(){
+                window.addEventListener('scroll', () => {
+                    contentsSubScrollEventCustom();
+                });
+            }
+
+            function resizeEvent(){
+                window.addEventListener('resize', () => {
+                });
+            }
+        </script>
+    </head>
+    <body class="tnc-site">
+        <%-include('../include/kor/HTNCWK01HEADER.ejs') %>
+        <main id="container" class="container tnc HTNCWKD40D41W03 sub">
+            <h2 class="blind">컨테이너 영역</h2>
+            <div class="container-inner">
+                <section class="contents-section contents-section1">
+                    <div class="contents-section-inner">
+                        <div class="local sustainability-common" local-interaction="sustainability-01">
+                            <div class="local-head design-1">
+                                <div class="local-head-wrap">
+                                    <div class="local-subject">
+                                        <h2 class="local-name">
+                                            <span class="wbr">Governance</span>
+                                            <span class="wbr hide">윤리경영</span>
+                                        </h2>
+                                    </div>
+                                    <div class="local-subject">
+                                        <h2 class="local-name">
+                                            <span class="wbr hide">Governance</span>
+                                            <span class="wbr">윤리경영</span>
+                                        </h2>
+                                    </div>
+                                    <picture class="local-figure">
+                                        <source media="(max-width: 1023px)" srcset="../../assets/images/photo/sustainability/ethical/local-mo.jpg">
+                                        <source media="(max-width: 1920px)" srcset="../../assets/images/photo/sustainability/ethical/local-pc.jpg">
+                                        <img src="../../assets/images/photo/sustainability/ethical/local-pc.jpg" alt=" ">
+                                    </picture>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <nav class="navi depth3">
+                    <div class="navi-wrap">
+                        <div class="navi-subject"><a href="#" title="현재 선택된 항목" class="navi-name">윤리경영</a></div>
+                        <div class="tab-display">
+                            <ul class="tab-list">
+                                <li class="tab-item current" title="현재 선택된 항목"><a href="#" class="tab-text">윤리경영</a></li>
+                                <li class="tab-item"><a href="#" class="tab-text">리스크 관리</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+                <nav class="navi depth4">
+                    <div class="navi-wrap">
+                        <div class="navi-subject"><a href="#" title="현재 선택된 항목" class="navi-name">윤리경영</a></div>
+                        <div class="tab-display navi-swiper">
+                            <ul class="tab-list swiper-wrapper">
+                                <li class="tab-item swiper-slide"><a href="#" class="tab-text">윤리강령</a></li>
+                                <li class="tab-item current swiper-slide" title="현재 선택된 항목"><a href="#" class="tab-text">제보센터</a></li>
+                                <li class="tab-item swiper-slide"><a href="#" class="tab-text">제보확인하기</a></li>
+                            </ul>
+                        </div>
+                        <script>
+                            const naviSwiper = new Swiper(".navi-swiper", {
+                                slidesPerView: 'auto',
+                                freeMode: true,
+                            });
+                        </script>
+                    </div>
+                </nav>
+                <section class="contents-section contents-section2">
+                    <div class="contents-section-inner">
+                        <div class="contents-section-head">
+                            <h4 class="title design-1 case-1 align-4 small-v10 color-2">
+                                <em class="name">익명으로<br class="br-mo" /> 제보하기</em>
+                            </h4>
+                            <div class="data-display design-1 case-7 color-2 align-3">
+                                <ul class="data-list">
+                                    <li class="data-item">
+                                        <div class="data-wrap">
+                                            <div class="data-body">
+                                                <p class="data-para">
+                                                    익명 제보 시 내용이 구체적이지 않고 사실 근거가 명확하지 않은 경우, 조사를 진행하지 않을 수 있습니다.<br />
+                                                    제보 등록 시 아이디와 비밀번호를 기록하셨다가 추후 접속하여 조치내역을 확인하실 수 있습니다.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="contents-section-body">
+                            <div class="contents-article contents-article1">
+                                <div class="contents-article-inner">
+                                    <div class="notice-line">
+                                        <span class="notice-text"><span class="accent">*</span>은 필수 입력항목 입니다.</span>
+                                    </div>
+                                    <div class="data-display design-4 case-1">
+                                        <div class="data-list">
+                                            <div class="data-item">
+                                                <h3 class="title design-1 case-1 align-1 small-v3 color-2">
+                                                    <em class="name">제보결과 확인 시 필요정보</em>
+                                                </h3>
+                                                <div class="submit-display design-1">
+                                                    <div class="form-list case-3">
+                                                        <div class="form-item">
+                                                            <div class="form-wrap">
+                                                                <div class="form-head">
+                                                                    <label for="dataType" class="form-name">제보확인 아이디
+                                                                        <span class="required">*</span>
+                                                                    </label>
+                                                                </div>
+                                                                <!-- 사용가능한 정보인 경우 
+                                                                        checkText.color-green클래스 display: block됨 -->
+                                                                <div class="form-body">
+                                                                    <div class="form-area">
+                                                                        <span class="form design-2 case-1 type-1">
+                                                                            <input id="textid" class="text" type="text" placeholder="제보확인 아이디를 입력하세요." value="">
+                                                                            <label for="textid" class="form-btn">중복확인</label>
+                                                                        </span>
+                                                                    </div>
+                                                                    <div class="checkText color-green" style="display: block;">사용가능한 아이디 입니다.</div>
+                                                                </div>
+                                                                <!-- // 사용가능한 정보인 경우 -->
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-list case-2">
+                                                        <div class="form-item">
+                                                            <div class="form-wrap">
+                                                                <div class="form-head">
+                                                                    <label for="dataType" class="form-name">제보확인 비밀번호
+                                                                        <span class="required">*</span>
+                                                                    </label>
+                                                                </div>
+                                                                <div class="form-body">
+                                                                    <div class="form-area">
+                                                                        <span class="form design-1 case-1 type-1">
+                                                                            <input id="text" class="text" type="text" placeholder="제보확인 아이디를 입력하세요." value="">
+                                                                        </span>
+                                                                    </div>
+                                                                    <div class="txt-error">※ 문자, 숫자, 특수문자 조합 8자리 이상</div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-item">
+                                                            <div class="form-wrap">
+                                                                <div class="form-head">
+                                                                    <label for="dataType" class="form-name">비밀번호 재확인
+                                                                        <span class="required">*</span>
+                                                                    </label>
+                                                                </div>
+                                                                <div class="form-body">
+                                                                    <div class="form-area">
+                                                                        <span class="form design-1 case-1 type-1">
+                                                                            <input id="text" class="text" type="text" placeholder="제보확인 비밀번호를 입력하세요." value="">
+                                                                        </span>
+                                                                    </div>
+                                                                    <div class="txt-error">※ 등록된 아이디와 비밀번호 분실 시 별도의 재확인 절차를 제공하지 않으므로 주의하여 등록하시기 바랍니다.</div>
+        
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="data-item">
+                                                <h3 class="title design-1 case-1 align-1 small-v3 color-2">
+                                                    <em class="name">제보대상</em>
+                                                </h3>
+                                                <div class="submit-display design-1">
+                                                    <div class="form-list case-1">
+                                                        <div class="form-item">
+                                                            <div class="form-wrap">
+                                                                <div class="form-head">
+                                                                    <label for="dataType" class="form-name">제보대상유형
+                                                                        <span class="required">*</span>
+                                                                    </label>
+                                                                </div>
+                                                                <div class="form-body">
+                                                                    <div class="form-area">
+                                                                        <span class="form design-2 case-2">
+                                                                            <input type="radio" name="ra1" id="ra1_1" checked="">
+                                                                            <label for="ra1_1">임직원</label>
+                                                                            <input type="radio" name="ra1" id="ra1_2">
+                                                                            <label for="ra1_2">부서</label>
+                                                                            <input type="radio" name="ra1" id="ra1_3">
+                                                                            <label for="ra1_3">사건</label>
+                                                                            <input type="radio" name="ra1" id="ra1_4">
+                                                                            <label for="ra1_4">기타</label>
+                                                                        </span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-list case-2">
+                                                        <div class="form-item">
+                                                            <div class="form-wrap">
+                                                                <div class="form-head">
+                                                                    <label for="dataType" class="form-name">제보대상자</label>
+                                                                </div>
+                                                                <div class="form-body">
+                                                                    <div class="form-area">
+                                                                        <span class="form design-1 case-1 type-1">
+                                                                            <input id="text" class="text" type="text" placeholder="제보대상자를 입력하세요." value="">
+                                                                        </span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-item">
+                                                            <div class="form-wrap">
+                                                                <div class="form-head">
+                                                                    <label for="dataType" class="form-name">부서/업무</label>
+                                                                </div>
+                                                                <div class="form-body">
+                                                                    <div class="form-area">
+                                                                        <span class="form design-1 case-1 type-1">
+                                                                            <input id="text" class="text" type="text" placeholder="부서/업무를 입력하세요." value="">
+                                                                        </span>
+                                                                    </div>
+        
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-list case-1">
+                                                        <div class="form-item">
+                                                            <div class="form-wrap">
+                                                                <div class="form-head">
+                                                                    <label for="dataType" class="form-name">사건의 주요내용(기타)</label>
+                                                                </div>
+                                                                <div class="form-body">
+                                                                    <div class="form-area">
+                                                                        <span class="form design-1 case-2 type-1">
+                                                                            <input id="text" class="text" type="text" placeholder="Ex) 하도급 거래계약 위반" value="">
+                                                                        </span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="data-item">
+                                                <h3 class="title design-1 case-1 align-1 small-v3 color-2">
+                                                    <em class="name">제보내용</em>
+                                                </h3>
+                                                <div class="submit-display design-1">
+                                                    <div class="form-list case-1">
+                                                        <div class="form-item">
+                                                            <div class="form-wrap">
+                                                                <div class="form-head">
+                                                                    <label for="dataType" class="form-name">제목
+                                                                        <span class="required">*</span>
+                                                                    </label>
+                                                                </div>
+                                                                <div class="form-body">
+                                                                    <div class="form-area">
+                                                                        <span class="form design-1 case-2 type-1">
+                                                                            <input id="text" class="text" type="text" placeholder="제목을 입력하세요." value="">
+        
+                                                                        </span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-list case-3">
+                                                        <div class="form-item">
+                                                            <div class="form-wrap">
+                                                                <div class="form-head">
+                                                                    <label for="dataType" class="form-name">내용
+                                                                        <span class="required">*</span>
+                                                                    </label>
+                                                                </div>
+                                                                <div class="form-body">
+                                                                    <div class="form-area">
+                                                                        <span class="form design-1 case-1 type-1">
+                                                                            <textarea class="textarea" id="purps" placeholder="제보내용 입력 시 사실에 근거한 내용을 육하원칙(누가, 언제, 어디서, 무엇을, 어떻게, 왜)에 따라 가급적 구체적으로 작성하여 주시기 바랍니다.&#10;근거 없는 소문, 타인을 비방할 목적의 음해성 제보의 경우 조사를 진행하지 않을 수 있습니다."></textarea>
+                                                                        </span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-list case-3">
+                                                        <div class="form-item">
+                                                            <div class="form-wrap">
+                                                                <div class="form-head">
+                                                                    <label for="dataType" class="form-name">첨부파일</label>
+                                                                </div>
+                                                                <div class="form-body">
+                                                                    <div class="form-area">
+                                                                        <span class="form design-2 case-1">
+                                                                            <input id="file" class="file" type="file" value="">
+                                                                            <input class="file-name" disabled="">
+                                                                            <label for="file" class="form-btn">파일첨부</label>
+                                                                        </span>
+                                                                    </div>
+                                                                    <div class="txt-error">※ 첨부파일은 1개만 등록 가능하며, 50Mb 미만의 문서, 그림, 압축 파일만 등록할 수 있습니다.</div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-list case-1">
+                                                        <div class="form-item">
+                                                            <div class="form-wrap">
+                                                                <div class="form-head">
+                                                                    <label for="dataType" class="form-name">소속회사와의 관계
+                                                                    </label>
+                                                                </div>
+                                                                <div class="form-body">
+                                                                    <div class="form-area">
+                                                                        <span class="form design-2 case-2">
+                                                                            <input type="radio" name="ra2" id="ra2_1" checked="">
+                                                                            <label for="ra2_1">임직원</label>
+                                                                            <input type="radio" name="ra2" id="ra2_2">
+                                                                            <label for="ra2_2">협력업체</label>
+                                                                            <input type="radio" name="ra2" id="ra2_3">
+                                                                            <label for="ra2_3">고객</label>
+                                                                            <input type="radio" name="ra2" id="ra2_4">
+                                                                            <label for="ra2_4">기타</label>
+                                                                        </span>
+                                                                    </div>
+        
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="data-item">
+                                                <div class="button-display form-1 sort-2 align-3">
+                                                    <div class="button-wrap form-1">
+                                                        <a href="javascript:void(0)" class="button design-1 case-9 medium align-3 fill-800 color-1">
+                                                            <span class="button-text-core">등록</span>
+                                                        </a>
+                                                        <a href="javascript:void(0)" class="button design-1 case-9 medium align-3 line-600 color-1 border-width-2">
+                                                            <span class="button-text-core">취소</span>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+        <%-include('../include/kor/HTNCWK03FOOTER.ejs') %>
+    </body>
+</html>

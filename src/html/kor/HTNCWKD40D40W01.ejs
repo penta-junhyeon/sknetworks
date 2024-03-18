@@ -1,0 +1,1196 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <%-include('../include/kor/HTNCWK00HEADMETACOMMON.ejs') %>
+        <%-include('../meta-id/kor/HTNCWKD40D40W01.ejs') %>
+        <%-include('../include/kor/HTNCWK00HEADSTYLE.ejs') %>
+        <%-include('../include/kor/HTNCWK00HEADFAVICON.ejs') %>
+        <%-include('../include/kor/HTNCWK00HEADSCRIPTLIBRARY.ejs') %>
+        <%-include('../include/kor/HTNCWK00HEADSCRIPTGSAP.ejs') %>
+        <%-include('../include/kor/HTNCWK00HEADSCRIPTLOADER.ejs') %>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                scrollEvent();
+                resizeEvent();
+                tncAccordion();
+
+                subPageIntroWheel_02(); // 서브 공통 MouseWheel naviDepth3, naviDepth4
+                localInteraction_04_01(); // 서브 공통 Info Interaction
+                naviDepth3_Interaction_02(); // 서브 공통 naviDepth3 fixed,  naviDepth4 따라 내려옴
+
+                contentsSubScrollEventCustom(); // 서브 공통 Section Active
+            });
+
+            function scrollEvent(){
+                window.addEventListener('scroll', () => {
+                    contentsSubScrollEventCustom();
+                });
+            }
+
+            function resizeEvent(){
+                window.addEventListener('resize', () => {
+                });
+            }
+        </script>
+    </head>
+    <body class="tnc-site">
+        <%-include('../include/kor/HTNCWK01HEADER.ejs') %>
+        <main id="container" class="container tnc HTNCWKD40D40W01 sub">
+            <div class="container-inner">
+                <section class="contents-section contents-section1">
+                    <div class="contents-section-inner">
+                        <div class="local sustainability-common" local-interaction="sustainability-01">
+                            <div class="local-head design-1">
+                                <div class="local-head-wrap">
+                                    <div class="local-subject">
+                                        <h2 class="local-name">
+                                            <span class="wbr">Governance</span>
+                                            <span class="wbr hide">윤리경영</span>
+                                        </h2>
+                                    </div>
+                                    <div class="local-subject">
+                                        <h2 class="local-name">
+                                            <span class="wbr hide">Governance</span>
+                                            <span class="wbr">윤리경영</span>
+                                        </h2>
+                                    </div>
+                                    <picture class="local-figure">
+                                        <source media="(max-width: 1023px)" srcset="../../assets/images/photo/sustainability/ethical/local-mo.jpg">
+                                        <source media="(max-width: 1920px)" srcset="../../assets/images/photo/sustainability/ethical/local-pc.jpg">
+                                        <img src="../../assets/images/photo/sustainability/ethical/local-pc.jpg" alt=" ">
+                                    </picture>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <nav class="navi depth3">
+                    <div class="navi-wrap">
+                        <div class="navi-subject"><a href="#" title="현재 선택된 항목" class="navi-name">윤리경영</a></div>
+                        <div class="tab-display">
+                            <ul class="tab-list">
+                                <li class="tab-item current" title="현재 선택된 항목"><a href="#" class="tab-text">윤리경영</a></li>
+                                <li class="tab-item"><a href="#" class="tab-text">리스크 관리</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+                <nav class="navi depth4">
+                    <div class="navi-wrap">
+                        <div class="navi-subject"><a href="#" title="현재 선택된 항목" class="navi-name">윤리경영</a></div>
+                        <div class="tab-display navi-swiper">
+                            <ul class="tab-list swiper-wrapper">
+                                <li class="tab-item current swiper-slide" title="현재 선택된 항목"><a href="#" class="tab-text">윤리강령</a></li>
+                                <li class="tab-item swiper-slide"><a href="#" class="tab-text">제보센터</a></li>
+                                <li class="tab-item swiper-slide"><a href="#" class="tab-text">제보확인하기</a></li>
+                            </ul>
+                        </div>
+                        <script>
+                            const naviSwiper = new Swiper(".navi-swiper", {
+                                slidesPerView: 'auto',
+                                freeMode: true,
+                            });
+                        </script>
+                    </div>
+                </nav>
+                <section class="contents-section contents-section2">
+                    <div class="contents-section-inner">
+                        <div class="contents-section-head">
+                            <div class="data-display design-1 case-2 color-2">
+                                <ul class="data-list">
+                                    <li class="data-item">
+                                        <div class="data-wrap">
+                                            <div class="data-head">
+                                                <h3 class="title design-1 case-1 small-v2">
+                                                    <em class="name">윤리경영 실천체계</em>
+                                                </h3>
+                                            </div>
+                                            <div class="data-body">
+                                                <p class="data-para">
+                                                    정도를 지키는 투명한 경영활동을 위해 효성은 ‘윤리강령’을 제정하여 전 임직원이 올바르고 윤리적으로 의사 결정을 내릴 수 있는 기준을 제시하고 있습니다.<br /> 효성은 지속적인 노력을 통해 깨끗한 기업문화를 정착하고 Global 기업시민으로서의 사회적 역할과 책임을 다하는 회사가 되겠습니다.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="contents-section-body">
+                            <div class="contents-article contents-article1">
+                                <div class="contents-article-inner">
+                                    <div class="diagram-display design-1">
+                                        <div class="diagram-wrap">
+                                            <div class="diagram-head">
+                                                <h3 class="title design-1 case-1 align-3 small-v11 color-8">
+                                                    <em class="name">윤리경영 7대 요소</em>
+                                                </h3>
+                                            </div>
+                                            <div class="diagram-body">
+                                                <picture class="picture">
+                                                    <source media="(max-width: 1023px)" srcset="../../assets/images/diagram/sustainability/ethical/diagram-ethicalmanagement-01-mo.png">
+                                                    <source media="(max-width: 1920px)" srcset="../../assets/images/diagram/sustainability/ethical/diagram-ethicalmanagement-01-pc.png">
+                                                    <img class="img" src="../../assets/images/diagram/sustainability/ethical/diagram-ethicalmanagement-01-pc.png" alt="아래 항목 참고">
+                                                </picture>
+                                            </div>
+                                            <div class="diagram-footer">
+                                                <em>윤리경영 7대 요소</em>
+                                                <p>협력사 동반성장 관리 조직 체계</p>
+                                                <ul>
+                                                    <li>사회 책임 경영</li>
+                                                    <li>법규 및 규정 준수</li>
+                                                    <li>협력사 상생 경영</li>
+                                                    <li>고객 존중 경영</li>
+                                                    <li>주주 중시 경영</li>
+                                                    <li>임직원 준법 경영</li>
+                                                    <li>임직원 존중 경영</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="contents-article contents-article2">
+                                <div class="contents-article-inner">
+                                    <div class="diagram-display design-1">
+                                        <div class="diagram-wrap">
+                                            <div class="diagram-head">
+                                                <h3 class="title design-1 case-1 align-5 small-v7 color-2">
+                                                    <em class="name">윤리경영 강화 프로세스</em>
+                                                </h3>
+                                            </div>
+                                            <div class="diagram-body">
+                                                <picture class="picture">
+                                                    <source media="(max-width: 1023px)" srcset="../../assets/images/diagram/sustainability/ethical/diagram-ethicalmanagement-02-mo.svg">
+                                                    <source media="(max-width: 1920px)" srcset="../../assets/images/diagram/sustainability/ethical/diagram-ethicalmanagement-02-pc.svg">
+                                                    <img class="img" src="../../assets/images/diagram/sustainability/ethical/diagram-ethicalmanagement-02-pc.svg" alt="아래 항목 참고">
+                                                </picture>
+                                            </div>
+                                            <div class="diagram-footer">
+                                                <em>윤리경영 및 실천지침 마련</em>
+                                                <ul>
+                                                    <li>
+                                                        <em>윤리경영 실천 체계</em>
+                                                        <ol>
+                                                            <li>조직체계 구성</li>
+                                                            <li>커뮤니케이션 채널 운영</li>
+                                                        </ol>
+                                                    </li>
+                                                    <li>
+                                                        <em>윤리경영 프로세스</em>
+                                                        <ol>
+                                                            <li>투입</li>
+                                                            <li>산출</li>
+                                                            <li>결과</li>
+                                                        </ol>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="contents-article contents-article3">
+                                <div class="contents-article-inner">
+                                    <div class="data-display design-1 case-19 color-2">
+                                        <ul class="data-list">
+                                            <li class="data-item">
+                                                <div class="data-wrap">
+                                                    <div class="data-head">
+                                                        <h3 class="title design-1 case-1 small-v7">
+                                                            <em class="name">윤리경영 조직체계</em>
+                                                        </h3>
+                                                    </div>
+                                                    <div class="data-body">
+                                                        <p class="data-para">
+                                                            효성은 최고경영자 중심의 강력한 윤리경영 추진 조직을 구성하고 있습니다. 최고경영자는 윤리경영 이념이 경영활동에 자연스럽게 반영될 수 있도록 노력하고 있습니다. 주요 윤리경영 활동은 준법지원팀의 주관 아래 운영되고 있으며, 준법지원팀의 구성원은 회사에 대해 풍부한 이해도를 갖춘 인력으로 구성함으로써 윤리경영 활동이 원활하게 추진될 수 있는 기반을 갖추고 있습니다. 그리고 각 현업부서 내에도 윤리 경영 활동 담당자를 지정하여 준법지원팀의 윤리경영 활동을 보조하고, 이행 성과를 효과적으로 관리할 수 있는 체계를 마련하였습니다. 또한, 회사와 이해관계가 없는 독립적인 내부감사를 선임하여 현장업무에서부터 본사업무 등 경영전반에 걸쳐 철저한 감독이 이루어지도록 하고 있습니다. ㈜효성, 효성티앤씨, 효성중공업, 효성중공업, 효성화학의 대표이사는 2020년부터 3년 연속 윤경ESG포럼 주최 ‘윤경CEO 서약식’에 참가해 대내외에 윤리경영 준수를 선포하였습니다.
+                                                        </p>
+                                                    </div>
+                                                    <div class="data-aside">
+                                                        <div class="diagram-display design-1">
+                                                            <div class="diagram-wrap">
+                                                                <div class="diagram-body">
+                                                                    <picture class="picture">
+                                                                        <source media="(max-width: 1023px)" srcset="../../assets/images/diagram/sustainability/ethical/diagram-ethicalmanagement-03-mo.svg">
+                                                                        <source media="(max-width: 1920px)" srcset="../../assets/images/diagram/sustainability/ethical/diagram-ethicalmanagement-03-pc.svg">
+                                                                        <img class="img" src="../../assets/images/diagram/sustainability/ethical/diagram-ethicalmanagement-03-pc.svg" alt="아래 항목 참고">
+                                                                    </picture>
+                                                                </div>
+                                                                <div class="diagram-footer">
+                                                                    <em>최고경영자</em>
+                                                                    <p>윤리경영 이념이 경영활동에 반영되도록 노력</p>
+                                                                    <ul>
+                                                                        <li>
+                                                                            <em>준법지원팀</em>
+                                                                            <ul>
+                                                                                <li>회사에 대한 높은 이해도를 갖춘 인력으로 구성</li>
+                                                                                <li>윤리경영 활동이 원활하게 추진될 수 있는 기반 형성</li>
+                                                                            </ul>
+                                                                        </li>
+                                                                        <li>
+                                                                            <em>각 부서내 윤리경영활동 담당자</em>
+                                                                            <ul>
+                                                                                <li>준법지원팀의 윤리 경영 활동 보조성</li>
+                                                                                <li>이행 성과를 효과적으로 관리할 수 있는 체계 마련</li>
+                                                                            </ul>
+                                                                        </li>
+                                                                        <li>
+                                                                            <em>감사팀</em>
+                                                                            <ul>
+                                                                                <li>회사와 이해관계 없는 자로 선임</li>
+                                                                                <li>경영전반에 걸쳐 감독 이행</li>
+                                                                            </ul>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="contents-article contents-article4">
+                                <div class="contents-article-inner">
+                                    <div class="data-display design-1 case-19 color-2">
+                                        <ul class="data-list">
+                                            <li class="data-item">
+                                                <div class="data-wrap">
+                                                    <div class="data-head">
+                                                        <h3 class="title design-1 case-1 small-v7">
+                                                            <em class="name">윤리경영 커뮤니케이션 채널</em>
+                                                        </h3>
+                                                    </div>
+                                                    <div class="data-body">
+                                                        <p class="data-para">
+                                                            효성은 성희롱, 인사 부정, 직장 내 괴롭힘 등 회사 내부에서 발생할 수 있는 임직원의 비윤리 행위 및 고충사항을 제보할 수 있고, 윤리기준 상담을 제공하는 HR 상담센터와 고충처리실을 운영하고 있습니다. 기본적인 대면 상담을 비롯하여 임직원의 신원 보호를 위해 온라인 익명 상담도 함께 받고 있으며, 이메일, 우편 등 다양한 커뮤니케이션 채널을 유지하고 있습니다. 또한 홈페이지 내 제보하기 채널을 마련하고 금품제공, 부정청탁, 불공정거래 등 공급망에서 발생 할 수 있는 비윤리적 행위에 대해 제보를 받을 수 있도록 운영하고 있습니다.
+                                                        </p>
+                                                    </div>
+                                                    <div class="data-aside">
+                                                        <div class="diagram-display design-1">
+                                                            <div class="diagram-wrap">
+                                                                <div class="diagram-body">
+                                                                    <picture class="picture">
+                                                                        <source media="(max-width: 1023px)" srcset="../../assets/images/diagram/sustainability/ethical/diagram-ethicalmanagement-04-mo.svg">
+                                                                        <source media="(max-width: 1920px)" srcset="../../assets/images/diagram/sustainability/ethical/diagram-ethicalmanagement-04-pc.svg">
+                                                                        <img class="img" src="../../assets/images/diagram/sustainability/ethical/diagram-ethicalmanagement-04-pc.svg" alt="아래 항목 참고">
+                                                                    </picture>
+                                                                </div>
+                                                                <div class="diagram-footer">
+                                                                    <em>효성 윤리경영 커뮤니케이션 채널</em>
+                                                                    <ul>
+                                                                        <li>HR 상담센터</li>
+                                                                        <li>고충처리</li>
+                                                                        <li>제보하기</li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="contents-article contents-article5">
+                                <div class="contents-article-inner">
+                                    <div class="data-display design-1 case-19 color-2">
+                                        <ul class="data-list">
+                                            <li class="data-item">
+                                                <div class="data-wrap">
+                                                    <div class="data-head">
+                                                        <h3 class="title design-1 case-1 small-v7">
+                                                            <em class="name">윤리강령</em>
+                                                        </h3>
+                                                    </div>
+                                                    <div class="data-body">
+                                                        <p class="data-para">
+                                                            우리는 법과 윤리를 준수하고, 고객과 임직원을 존중하며, 기업 본연의 역할과 사회적 책임을 다하기 위해 효성그룹의 행동기준이 되는 윤리강령을 제정하고 적극 실천할 것을 다짐합니다.
+                                                            본 윤리강령은 효성그룹의 모든 임직원이 지켜야 할 윤리적 가치 판단 및 행동의 기준으로 작용하며, 투명하고 지속적인 윤리경영을 위한 기업의 의사결정과 행동 판단 기준이 됩니다.
+                                                        </p>
+                                                    </div>
+                                                    <div class="data-aside">
+                                                        <div class="button-display form-1 sort-1 align-1">
+                                                            <div class="button-wrap form-1">
+                                                                <a href="javascript:void(0)" class="button design-1 case-2 medium align-4 fill-800 color-1 rtl icon-down-arrow01">
+                                                                    <span class="button-text-core">윤리강령</span>
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="contents-article contents-article6">
+                                <div class="contents-article-inner">
+                                    <div class="data-display design-1 case-19 color-2">
+                                        <ul class="data-list">
+                                            <li class="data-item">
+                                                <div class="data-wrap">
+                                                    <div class="data-head">
+                                                        <h3 class="title design-1 case-1 small-v7">
+                                                            <em class="name">윤리강령 실천지침</em>
+                                                        </h3>
+                                                    </div>
+                                                    <div class="data-body">
+                                                        <p class="data-para">
+                                                            정직한 경영활동으로 신뢰받는 기업이 되겠습니다.
+                                                        </p>
+                                                    </div>
+                                                    <div class="data-aside">
+                                                        <div class="button-display form-1 sort-1 align-1">
+                                                            <div class="button-wrap form-1">
+                                                                <a href="javascript:void(0)" class="button design-1 case-2 medium align-4 fill-800 color-1 rtl icon-down-arrow01">
+                                                                    <span class="button-text-core">윤리강령 실천지침</span>
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="contents-article contents-article7 case-1 active">
+                                <div class="contents-article-inner">
+                                    <div class="accordion-display design-1 case-2">
+                                        <ul class="accordion-list">
+                                            <!-- <li class="accordion-item">
+                                                <div class="accordion-wrap">
+                                                    <div class="accordion-head">
+                                                        <a href="javascript:void(0)" class="accordion-button case-1">
+                                                            <div class="accordion-button-body">
+                                                                <em class="accordion-title">윤리강령</em>
+                                                                <i class="accordion-icon">
+                                                                    <span class="blind">button</span>
+                                                                </i>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                    <div class="accordion-body design-1">
+                                                        <div class="accordion-content">
+                                                            <div class="data-display design-1 case-17 align-1 color-7">
+                                                                <ul class="data-list">
+                                                                    <li class="data-item">
+                                                                        <div class="data-wrap">
+                                                                            <div class="data-body">
+                                                                                <p class="data-para">
+                                                                                    우리는 법과 윤리를 준수하고, 고객과 임직원을 존중하며, 기업 본연의 역할과 사회적 책임을 다하기 위해 효성그룹의 행동기준이 되는 윤리강령을 제정하고 적극 실천할 것을 다짐합니다. 본 윤리강령은 효성그룹의 모든 임직원이 지켜야 할 윤리적 가치 판단 및 행동의 기준으로 작용하며, 투명하고 지속적인 윤리경영을 위한 기업의 의사결정과 행동 판단 기준이 됩니다.
+                                                                                </p>
+                                                                            </div>
+                                                                        </div>
+                                                                    </li>
+                                                                    <li class="data-item">
+                                                                        <div class="data-wrap">
+                                                                            <div class="data-head">
+                                                                                <h3 class="title design-1 case-1 align-1 small-v5 color-7">
+                                                                                    <em class="name">Ⅰ.법규 및 규정 준수</em>
+                                                                                </h3>
+                                                                            </div>
+                                                                            <div class="data-body">
+                                                                                <em class="data-title">“ 법규와 회사 규정을 철저히 준수합니다. ”</em>
+                                                                                <p class="data-para">
+                                                                                </p><ul class="order-list design-1 usual-1 case-6 medium type-2 align-1">
+                                                                                    <li class="order-item">
+                                                                                        ① 국가정책을 존중하고<br> 제반 법규와 사회 윤리규범을 준수합니다.
+                                                                                    </li>
+                                                                                    <li class="order-item">
+                                                                                        ② 회사의 경영방침과 제반 규정을 철저히 준수하고 책임과 의무를 다합니다.
+                                                                                    </li>
+                                                                                    <li class="order-item">
+                                                                                        ③ 국내뿐 아니라 사업활동을 영위하는 모든 지역의 시장경제 질서와 거래관습을 존중하고 법규를 준수합니다.
+                                                                                    </li>
+                                                                                    <li class="order-item">
+                                                                                        ④ 회사의 경영활동을 하는 국내뿐 아니라 모든 사업지역의 시장경제 질서와 거래관습을 존중하고 법규를 준수합니다.
+                                                                                    </li>
+                                                                                    <li class="order-item">
+                                                                                        ⑤ 불법적인 내부자 거래 및 자금세탁을 자행하거나 관여하지 않습니다.
+                                                                                    </li>
+                                                                                </ul>
+                                                                                <p></p>
+                                                                            </div>
+                                                                        </div>
+                                                                    </li>
+                                                                    <li class="data-item">
+                                                                        <div class="data-wrap">
+                                                                            <div class="data-head">
+                                                                                <h3 class="title design-1 case-1 align-1 small-v5 color-7">
+                                                                                    <em class="name">Ⅱ.고객 존중 경영</em>
+                                                                                </h3>
+                                                                            </div>
+                                                                            <div class="data-body">
+                                                                                <em class="data-title">“ 기업은 고객이 만족할 수 있는 가치를 제공하기 위하여 존재합니다. ”</em>
+                                                                                <p class="data-para">
+                                                                                </p><ul class="order-list design-1 usual-1 case-6 medium type-2 align-1">
+                                                                                    <li class="order-item">
+                                                                                        ① 고객으로부터의 신뢰를 최우선 가치로 삼습니다.
+                                                                                    </li>
+                                                                                    <li class="order-item">
+                                                                                        ② 고객이 만족할 수 있는 차별화된 품질을 갖춘 상품과 서비스를 제공합니다.
+                                                                                    </li>
+                                                                                    <li class="order-item">
+                                                                                        ③ 고객과의 투명하고 공정한 거래문화를 정착시키기 위해 노력하며, 건전한 파트너십을 발전시킵니다.
+                                                                                    </li>
+                                                                                </ul>
+                                                                                <p></p>
+                                                                            </div>
+                                                                        </div>
+                                                                    </li>
+                                                                    <li class="data-item">
+                                                                        <div class="data-wrap">
+                                                                            <div class="data-head">
+                                                                                <h3 class="title design-1 case-1 align-1 small-v5 color-7">
+                                                                                    <em class="name">Ⅲ.주주에 대한 책임</em>
+                                                                                </h3>
+                                                                            </div>
+                                                                            <div class="data-body">
+                                                                                <em class="data-title">“주주에게 신뢰를 줄 수 있는 기업이 되기 위해 책임을 다합니다.”</em>
+                                                                                <p class="data-para">
+                                                                                </p><ul class="order-list design-1 usual-1 case-6 medium type-2 align-1">
+                                                                                    <li class="order-item">
+                                                                                        ① 가치창출을 통해 경영성과를 높여 주주 및 투자자의 이익을 증대합니다.
+                                                                                    </li>
+                                                                                    <li class="order-item">
+                                                                                        ② 주주 및 투자자가 신뢰할 수 있도록 합리적이고 투명하게 경영합니다.
+                                                                                    </li>
+                                                                                    <li class="order-item">
+                                                                                        ③ 주주 및 투자자의 권리를 존중하고 건전한 이익실현을 위해 필요한 정보를 적기에 제공합니다.
+                                                                                    </li>
+                                                                                </ul>
+                                                                                <p></p>
+                                                                            </div>
+                                                                        </div>
+                                                                    </li>
+                                                                    <li class="data-item">
+                                                                        <div class="data-wrap">
+                                                                            <div class="data-head">
+                                                                                <h3 class="title design-1 case-1 align-1 small-v5 color-7">
+                                                                                    <em class="name">Ⅳ.임직원 존중 경영</em>
+                                                                                </h3>
+                                                                            </div>
+                                                                            <div class="data-body">
+                                                                                <em class="data-title">“ 임직원 개개인은 회사의 가장 중요한 자산입니다. “</em>
+                                                                                <p class="data-para">
+                                                                                </p><ul class="order-list design-1 usual-1 case-6 medium type-2 align-1">
+                                                                                    <li class="order-item">
+                                                                                        ① 임직원 상호간의 인격을 존중하고, 상호신뢰와 이해를 바탕으로 한 합리적이고 건전한 기업문화를 정착시킵니다.
+                                                                                    </li>
+                                                                                    <li class="order-item">
+                                                                                        ② 개인의 창의성을 자유로이 발휘할 수 있는 업무 분위기를 조성하고 쾌적하고 안전한 근무환경을 조성합니다.
+                                                                                    </li>
+                                                                                    <li class="order-item">
+                                                                                        ③ 성별, 종교, 장애, 나이, 사회적 신분, 출신국가, 출신 민족, 용모 등 신체조건, 혼인 여부, 가족 형태 또는 가족상황, 인종, 피부색, 사상 또는 정치적 의견, 성적 지향, 병력 등을 이유
+                                                                                        로 불합리한 차별을 하지 않습니다.
+                                                                                    </li>
+                                                                                </ul>
+                                                                                <p></p>
+                                                                            </div>
+                                                                        </div>
+                                                                    </li>
+                                                                    <li class="data-item">
+                                                                        <div class="data-wrap">
+                                                                            <div class="data-head">
+                                                                                <h3 class="title design-1 case-1 align-1 small-v5 color-7">
+                                                                                    <em class="name">Ⅴ.임직원 준법 경영</em>
+                                                                                </h3>
+                                                                            </div>
+                                                                            <div class="data-body">
+                                                                                <em class="data-title">“ 모든 임직원은 윤리경영 준수를 통해 투명하고 공정한 업무수행을 추구합니다. “</em>
+                                                                                <p class="data-para">
+                                                                                </p><ul class="order-list design-1 usual-1 case-6 medium type-2 align-1">
+                                                                                    <li class="order-item">
+                                                                                        ① 임직원은 조직 내 불공정하거나 비윤리적 업무를 강요 또는 지시를 하거나 응하지 않습니다.
+                                                                                    </li>
+                                                                                    <li class="order-item">
+                                                                                        ② 임직원은 업무 관련 대가성 금품이나, 향응 등을 수수 또는 제공하거나 이를 약속하지 않습니다.
+                                                                                    </li>
+                                                                                    <li class="order-item">
+                                                                                        ③ 임직원은 직무 수행 중 이해관계자에 대한 선물 지급 및 수취 시 국가 별 관련 법규를 준수하며 관련 회사 지침에 따릅니다.
+                                                                                    </li>
+                                                                                    <li class="order-item">
+                                                                                        ④ 임직원은 회사와 고객, 고객 간 이해상충이 발생하지 않도록 노력하며, 발생할 경우 회사와 고객의 이익을 우선시합니다.
+                                                                                    </li>
+                                                                                    <li class="order-item">
+                                                                                        ⑤ 임직원은 회사 업무로 인해 취득한 회사와 고객의 정보를 엄격히 관리하고 보호하며 사적인 목적으로 사용하지 않습니다.
+                                                                                    </li>
+                                                                                </ul>
+                                                                                <p></p>
+                                                                            </div>
+                                                                        </div>
+                                                                    </li>
+                                                                    <li class="data-item">
+                                                                        <div class="data-wrap">
+                                                                            <div class="data-head">
+                                                                                <h3 class="title design-1 case-1 align-1 small-v5 color-7">
+                                                                                    <em class="name">Ⅵ.협력사 상생 경영</em>
+                                                                                </h3>
+                                                                            </div>
+                                                                            <div class="data-body">
+                                                                                <em class="data-title">“ 협력사는 회사 경쟁력의 원천이며, 투명하고 공정한 거래를 통해 공동의 성장을 추구합니다. ”</em>
+                                                                                <p class="data-para">
+                                                                                </p><ul class="order-list design-1 usual-1 case-6 medium type-2 align-1">
+                                                                                    <li class="order-item">
+                                                                                        ① 협력사 선정과 거래에 있어 효성의 인권, 환경, 사회적 가치에 부합하는지 고려합니다.
+                                                                                    </li>
+                                                                                    <li class="order-item">
+                                                                                        ② 동등한 관계에서 거래하며 우월적 지위를 남용한 불공정 거래를 하지 않습니다.
+                                                                                    </li>
+                                                                                    <li class="order-item">
+                                                                                        ③ 협력사의 지속가능성을 위한 다방면의 지원 활동을 통해 서로 상생 발전할 수 있는 기반을 조성합니다.
+                                                                                    </li>
+                                                                                </ul>
+                                                                                <p></p>
+                                                                            </div>
+                                                                        </div>
+                                                                    </li>
+                                                                    <li class="data-item">
+                                                                        <div class="data-wrap">
+                                                                            <div class="data-head">
+                                                                                <h3 class="title design-1 case-1 align-1 small-v5 color-7">
+                                                                                    <em class="name">Ⅶ.사회 책임 경영</em>
+                                                                                </h3>
+                                                                            </div>
+                                                                            <div class="data-body">
+                                                                                <em class="data-title">“ 기업은 중요한 사회구성원으로서 사회와 조화를 이루어 성장하여야 합니다. “</em>
+                                                                                <p class="data-para">
+                                                                                </p><ul class="order-list design-1 usual-1 case-6 medium type-2 align-1">
+                                                                                    <li class="order-item">
+                                                                                        ① 사회로부터 요구되는 의무와 책임을 다하고, 사회 공헌활동을 통해 공동번영과 발전을 위해 노력합니다.
+                                                                                    </li>
+                                                                                    <li class="order-item">
+                                                                                        ② 환경친화적 기업을 지향하며 사회로부터 존경을 받기 위하여 최선을 다합니다.
+                                                                                    </li>
+                                                                                    <li class="order-item">
+                                                                                        ③ 지속가능한 공급망 형성을 위해 구매 활동 시, 협력사 및 제품의 지속가능성과 생산 과정의 정당함을 구매 기준에 반영합니다.
+                                                                                    </li>
+                                                                                </ul>
+                                                                                <p></p>
+                                                                            </div>
+                                                                        </div>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="accordion-item">
+                                                <div class="accordion-wrap">
+                                                    <div class="accordion-head">
+                                                        <a href="javascript:void(0)" class="accordion-button case-1">
+                                                            <div class="accordion-button-body">
+                                                                <em class="accordion-title">윤리강령 실천지침</em>
+                                                                <i class="accordion-icon">
+                                                                    <span class="blind">button</span>
+                                                                </i>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                    <div class="accordion-body design-1">
+                                                        <div class="accordion-content">
+                                                            <div class="data-display design-1 case-16 align-1 color-1">
+                                                                <ul class="data-list">
+                                                                    <li class="data-item">
+                                                                        <div class="data-wrap">
+                                                                            <div class="data-head">
+                                                                                <h3 class="title design-1 case-1 align-1 small-v7 color-2">
+                                                                                    <em class="name">윤리강령 실천지침</em>
+                                                                                </h3>
+                                                                            </div>
+                                                                            <div class="data-body">
+                                                                                <p class="data-para">
+                                                                                    정직한 경영활동으로 신뢰받는 기업이 되겠습니다.
+                                                                                </p>
+                                                                            </div>
+                                                                        </div>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                            <div class="data-display design-1 case-17 align-1 color-1">
+                                                                <ul class="data-list">
+                                                                    <li class="data-item">
+                                                                        <div class="data-wrap">
+                                                                            <div class="data-head">
+                                                                                <h3 class="title design-1 case-1 align-1 small-v5 color-7">
+                                                                                    <em class="name">Ⅰ.법규 및 규정 준수</em>
+                                                                                </h3>
+                                                                            </div>
+                                                                            <div class="data-body">
+                                                                                <em class="data-title">국가정책 및 법규 준수</em>
+                                                                                <p class="data-para">
+                                                                                </p><ul class="order-list design-1 usual-1 case-6 medium type-2 align-1">
+                                                                                    <li class="order-item">
+                                                                                        ① 국가정책을 존중하고 불법 및 위법행위를 하지 않습니다.
+                                                                                    </li>
+                                                                                    <li class="order-item">
+                                                                                        ② 영업활동에 있어 상품 및 서비스를 기반으로 경쟁사와 선의의 경쟁을 하며, 불공정 경쟁행위를 하지 않습니다.
+                                                                                    </li>
+                                                                                    <li class="order-item">
+                                                                                        ③ 관계법령을 위반하거나 비윤리적인 방법으로 정보를 취득하지 않습니다.
+                                                                                    </li>
+                                                                                    <li class="order-item">
+                                                                                        ④ 해외에 근무하고 있는 임직원은 주재국의 법령, 사회질서 등을 존중하고 준수하여, 회사의 업무수행에 지장이 없도록 합니다.
+                                                                                    </li>
+                                                                                    <li class="order-item">
+                                                                                        ⑤ 국내뿐만 아니라 국외 시장경제 질서, 거래 관습 및 법령을 존중·준수하여 사업 상대방과 적법하고 공정한 거래를 할 수 있도록 합니다.
+                                                                                    </li>
+                                                                                    <li class="order-item">
+                                                                                        ⑥ 국가 및 지역사회의 일원으로서 부패 · 뇌물 · 자금세탁의 방지 등과 관련된 각종 법규를 준수하며, 의심스러운 거래가 있을 경우 정당한 절차와 방법으로 제보하여야 합니다.
+                                                                                    </li>
+                                                                                    <li class="order-item">
+                                                                                        ⑦ 임직원의 횡령 및 배임을 엄격히 금지합니다. 회사 자산의 손실을 초래하는 공금횡령, 공금유용, 기물 유출, 타 용도 사용 등의 행위를 해서는 안 됩니다.
+                                                                                    </li>
+                                                                                </ul>
+                                                                                <p></p>
+                                                                            </div>
+                                                                        </div>
+                                                                    </li>
+                                                                    <li class="data-item">
+                                                                        <div class="data-wrap">
+                                                                            <div class="data-body">
+                                                                                <em class="data-title">회사규정 준수 및 회사에 대한 기본 윤리</em>
+                                                                                <p class="data-para">
+                                                                                </p><ul class="order-list design-1 usual-1 case-6 medium type-2 align-1">
+                                                                                    <li class="order-item">
+                                                                                        ① 회사의 경영이념 및 경영목표를 공유하고, 회사의 경영방침 및 제반 사규를 준수하며, 주인의식과 책임의식을 바탕으로 역량을 집중하여 부과된 업무를 신속 정확하게 완수합니다.
+                                                                                    </li>
+                                                                                    <li class="order-item">
+                                                                                        ② 업무수행시 개인의 입장보다는 회사의 이익을 우선으로 하여 객관적이고 합리적으로 업무를 수행합니다.
+                                                                                    </li>
+                                                                                    <li class="order-item">
+                                                                                        ③ 회사와 이해관계가 있는 타인 및 타회사를 위해 일하지 않으며 어떠한 특수관계도 형성하지 않습니다.
+                                                                                    </li>
+                                                                                    <li class="order-item">
+                                                                                        ④ 회사의 비공개 정보나 중요한 정보를 철저히 보호하며, 중요한 정보는 인지한 즉시 업무에 필요한 사람에게 전달하고, 정보를 왜곡하거나 허위사실을 유포하지 않습니다.
+                                                                                    </li>
+                                                                                </ul>
+                                                                                <p></p>
+                                                                            </div>
+                                                                        </div>
+                                                                    </li>
+                                                                    <li class="data-item">
+                                                                        <div class="data-wrap">
+                                                                            <div class="data-head">
+                                                                                <h3 class="title design-1 case-1 align-1 small-v5 color-7">
+                                                                                    <em class="name">Ⅱ.고객 존중 경영</em>
+                                                                                </h3>
+                                                                            </div>
+                                                                            <div class="data-body">
+                                                                                <em class="data-title">고객과의 거래</em>
+                                                                                <p class="data-para">
+                                                                                </p><ul class="order-list design-1 usual-1 case-6 medium type-2 align-1">
+                                                                                    <li class="order-item">
+                                                                                        ① 고객만족 및 신뢰를 최우선 기준으로 삼아, 최고 수준의 품질을 지닌 상품과 서비스를 제공토록 노력하며, 고객과 맺은 약속은 철저히 준수합니다.
+                                                                                    </li>
+                                                                                    <li class="order-item">
+                                                                                        ② 고객과의 거래 시 상호 존중하며, 동등한 위치에서 합리적이고 공정한 거래가 이루어지도록 노력합니다.
+                                                                                    </li>
+                                                                                    <li class="order-item">
+                                                                                        ③ 우월적 지위를 이용하여 고객으로부터 어떠한 형태의 대가나 부당한 요구를 하지 않습니다.
+                                                                                    </li>
+                                                                                    <li class="order-item">
+                                                                                        ④ 허위·과대 광고 및 표시, 정보 은폐 등을 하지 않으며, 고객이 알아야 할 정보를 정직하고 투명하게 공개합니다.
+                                                                                    </li>
+                                                                                    <li class="order-item">
+                                                                                        ⑤ 유해물질을 포함하지 않는 원재료, 부품 및 포장재 구입의 조달단계에서부터 제품의 개발, 제조, 물류, 사용 및 폐기에 이르기까지 고객 안전을 고려한 제품 전과정 책임주의를 실천합니다.
+                                                                                    </li>
+                                                                                </ul>
+                                                                                <p></p>
+                                                                            </div>
+                                                                        </div>
+                                                                    </li>
+                                                                    <li class="data-item">
+                                                                        <div class="data-wrap">
+                                                                            <div class="data-head">
+                                                                                <h3 class="title design-1 case-1 align-1 small-v5 color-7">
+                                                                                    <em class="name">Ⅲ.주주 중시 경영</em>
+                                                                                </h3>
+                                                                            </div>
+                                                                            <div class="data-body">
+                                                                                <em class="data-title">주주 및 투자자의 이익 보호</em>
+                                                                                <p class="data-para">
+                                                                                </p><ul class="order-list design-1 usual-1 case-6 medium type-2 align-1">
+                                                                                    <li class="order-item">
+                                                                                        ① 효율적인 경영활동을 통해 건전한 이익을 실현하고 합리적인 투자로 주주의 투자가치 증대를 위하여 최선을 다합니다.
+                                                                                    </li>
+                                                                                    <li class="order-item">
+                                                                                        ② 회계기준에 따라 정직하고 정확하게 재무상태를 기록·관리하며, 회계처리를 투명하게 합니다.
+                                                                                    </li>
+                                                                                    <li class="order-item">
+                                                                                        ③ 회사의 내부정보를 이용하여 자신 및 타인의 이익을 위해 증권거래 등의 불공정행위를 하지 않습니다.
+                                                                                    </li>
+                                                                                </ul>
+                                                                                <p></p>
+                                                                            </div>
+                                                                        </div>
+                                                                    </li>
+                                                                    <li class="data-item">
+                                                                        <div class="data-wrap">
+                                                                            <div class="data-body">
+                                                                                <em class="data-title">주주의 알 권리 보호</em>
+                                                                                <p class="data-para">
+                                                                                </p><ul class="order-list design-1 usual-1 case-6 medium type-2 align-1">
+                                                                                    <li class="order-item">
+                                                                                        ① 주주 및 투자자가 필요로 하는 경영전반에 대한 신뢰성 있고 유용한 정보를 적기에 성실히 제공합니다.
+                                                                                    </li>
+                                                                                    <li class="order-item">
+                                                                                        ② 적극적 홍보, IR 등을 통해 기업가치가 합당하게 평가받도록 노력합니다.
+                                                                                    </li>
+                                                                                </ul>
+                                                                                <p></p>
+                                                                            </div>
+                                                                        </div>
+                                                                    </li>
+                                                                    <li class="data-item">
+                                                                        <div class="data-wrap">
+                                                                            <div class="data-head">
+                                                                                <h3 class="title design-1 case-1 align-1 small-v5 color-7">
+                                                                                    <em class="name">Ⅳ.임직원 존중 경영</em>
+                                                                                </h3>
+                                                                            </div>
+                                                                            <div class="data-body">
+                                                                                <em class="data-title">임직원 존중</em>
+                                                                                <p class="data-para">
+                                                                                </p><ul class="order-list design-1 usual-1 case-6 medium type-2 align-1">
+                                                                                    <li class="order-item">
+    
+                                                                                    </li>
+                                                                                    <li class="order-item">
+    
+                                                                                    </li>
+                                                                                    <li class="order-item">
+    
+                                                                                    </li>
+                                                                                </ul>
+                                                                                <p></p>
+                                                                            </div>
+                                                                        </div>
+                                                                    </li>
+                                                                    <li class="data-item">
+                                                                        <div class="data-wrap">
+                                                                            <div class="data-body">
+                                                                                <em class="data-title">건전한 조직문화 조성</em>
+                                                                                <p class="data-para">
+                                                                                </p><ul class="order-list design-1 usual-1 case-6 medium type-2 align-1">
+                                                                                    <li class="order-item">
+    
+                                                                                    </li>
+                                                                                    <li class="order-item">
+    
+                                                                                    </li>
+                                                                                    <li class="order-item">
+    
+                                                                                    </li>
+                                                                                    <li class="order-item">
+    
+                                                                                    </li>
+                                                                                </ul>
+                                                                                <p></p>
+                                                                            </div>
+                                                                        </div>
+                                                                    </li>
+                                                                    <li class="data-item">
+                                                                        <div class="data-wrap">
+                                                                            <div class="data-head">
+                                                                                <h3 class="title design-1 case-1 align-1 small-v5 color-7">
+                                                                                    <em class="name">Ⅴ.임직원 준법 경영</em>
+                                                                                </h3>
+                                                                            </div>
+                                                                            <div class="data-body">
+                                                                                <em class="data-title">윤리경영 준수</em>
+                                                                                <p class="data-para">
+                                                                                </p><ul class="order-list design-1 usual-1 case-6 medium type-2 align-1">
+                                                                                    <li class="order-item">
+    
+                                                                                    </li>
+                                                                                    <li class="order-item">
+    
+                                                                                    </li>
+                                                                                </ul>
+                                                                                <p></p>
+                                                                            </div>
+                                                                        </div>
+                                                                    </li>
+                                                                    <li class="data-item">
+                                                                        <div class="data-wrap">
+                                                                            <div class="data-body">
+                                                                                <em class="data-title">투명하고 공정한 업무수행</em>
+                                                                                <p class="data-para">
+                                                                                </p><ul class="order-list design-1 usual-1 case-6 medium type-2 align-1">
+                                                                                    <li class="order-item">
+                                                                                        ① 임직원은 직무를 수행함에 있어 자기 또는 타인의 부당한 이익을 위하여 다른 임직원의 공정한 직무수행을 저해하는 알선·청탁 등을 하여서는 안되며, 업무 관련 대가성 금품이나, 뇌물, 향응 등을 수수 또는 제공하거나 이를 약속하지 않습니다.
+                                                                                    </li>
+                                                                                    <li class="order-item">
+                                                                                        ② 임직원은 우월적 지위 및 사적 이해관계 등을 이용하여 회사와 고객간, 또는 고객 간 이해상충이 발생하지 않도록 노력하며, 발생할 경우 이해당사자의 손해가 최소화할 수 있는 방안을 모색하여 해결할 수 있도록 노력합니다.
+                                                                                    </li>
+                                                                                    <li class="order-item">
+                                                                                        ③ 임직원은 업무로 인해 취득한 회사 등 고객의 정보를 관련 법규 및 사내 보안규정에 따라 엄격히 관리하고 보호하며, 외부로 유출하거나 개인적인 목적으로 사용하지 않습니다.
+                                                                                    </li>
+                                                                                </ul>
+                                                                                <p></p>
+                                                                            </div>
+                                                                        </div>
+                                                                    </li>
+                                                                    <li class="data-item">
+                                                                        <div class="data-wrap">
+                                                                            <div class="data-head">
+                                                                                <h3 class="title design-1 case-1 align-1 small-v5 color-7">
+                                                                                    <em class="name">Ⅵ.협력사 상생 경영</em>
+                                                                                </h3>
+                                                                            </div>
+                                                                            <div class="data-body">
+                                                                                <em class="data-title">공동의 성장 추구</em>
+                                                                                <p class="data-para">
+                                                                                </p><ul class="order-list design-1 usual-1 case-6 medium type-2 align-1">
+                                                                                    <li class="order-item">
+                                                                                        ① 협력사와 상호 신뢰와 존중의 자세를 견지하여 상호간의 이익 증대와 공동 발전을 추구합니다.
+                                                                                    </li>
+                                                                                    <li class="order-item">
+                                                                                        ② 우수 협력사 발굴 및 육성을 통해 발전적인 관계를 유지합니다.
+                                                                                    </li>
+                                                                                    <li class="order-item">
+                                                                                        ③ 협력사를 정하고 거래를 개시·계속함에 있어 회사가 추구하는 인권, 환경, 사회적 가치에 부합하는지를 고려합니다.
+                                                                                    </li>
+                                                                                    <li class="order-item">
+                                                                                        ④ 협력사와 지속 가능한 거래가 되도록 발전 및 성장을 위한 다방면의 지원활동을 하며, 이를 통해 상생 발전할 수 있는 기반을 조성합니다.
+                                                                                    </li>
+                                                                                    <li class="order-item">
+                                                                                        ⑤ 공급망 내 기업들의 지속가능경영을 위해 적극 지원하며, 협력사 선정 및 평가 시 지속가능경영 활동 여부를 고려합니다.
+                                                                                    </li>
+                                                                                </ul>
+                                                                                <p></p>
+                                                                            </div>
+                                                                        </div>
+                                                                    </li>
+                                                                    <li class="data-item">
+                                                                        <div class="data-wrap">
+                                                                            <div class="data-body">
+                                                                                <em class="data-title">협력사와의 파트너십</em>
+                                                                                <p class="data-para">
+                                                                                </p><ul class="order-list design-1 usual-1 case-6 medium type-2 align-1">
+                                                                                    <li class="order-item">
+                                                                                        ① 협력사와의 거래가 상호존중 및 동등한 관계를 통해 공정하게 이루어지도록 하며, 거래조건 및 거래절차에 대해 상호 충분히 협의하여 우월적 지위를 남용한 불공정 거래를 하지 않습니다.
+                                                                                    </li>
+                                                                                    <li class="order-item">
+                                                                                        ② 입찰이나 계약 등 협력사와 거래 시 평등한 기회를 부여하며, 대등한 위치에서 합리적으로 계약을 체결하여 거래를 수행합니다.
+                                                                                    </li>
+                                                                                    <li class="order-item">
+                                                                                        ③ 협력사의 물적∙지적 재산권을 보호하고 협력사의 모든 정보를 보호합니다.
+                                                                                    </li>
+                                                                                </ul>
+                                                                                <p></p>
+                                                                            </div>
+                                                                        </div>
+                                                                    </li>
+                                                                    <li class="data-item">
+                                                                        <div class="data-wrap">
+                                                                            <div class="data-head">
+                                                                                <h3 class="title design-1 case-1 align-1 small-v5 color-7">
+                                                                                    <em class="name">Ⅶ.사회 책임 경영</em>
+                                                                                </h3>
+                                                                            </div>
+                                                                            <div class="data-body">
+                                                                                <em class="data-title">사회 발전 기여</em>
+                                                                                <p class="data-para">
+                                                                                </p><ul class="order-list design-1 usual-1 case-6 medium type-2 align-1">
+                                                                                    <li class="order-item">
+                                                                                        ① 사업 및 영업활동을 영위하는 국내외 지역사회의 가치관을 존중하며, 지속적으로 고용을 창출하고, 사회 공동 일원으로서의 기본 책무를 충실히 수행합니다.
+                                                                                    </li>
+                                                                                    <li class="order-item">
+                                                                                        ② 모범적 사회구성원으로서 사회 공헌활동 등의 사회적 요구에 적극 부응하고, 지원합니다.
+                                                                                    </li>
+                                                                                    <li class="order-item">
+                                                                                        ③ 환경보호를 위해 노력하고, 지역사회 환경보호 활동 등에 적극 참여한다.
+                                                                                    </li>
+                                                                                </ul>
+                                                                                <p></p>
+                                                                            </div>
+                                                                        </div>
+                                                                    </li>
+                                                                    <li class="data-item">
+                                                                        <div class="data-wrap">
+                                                                            <div class="data-body">
+                                                                                <em class="data-title">건전한 사회생활</em>
+                                                                                <p class="data-para">
+                                                                                </p><ul class="order-list design-1 usual-1 case-6 medium type-2 align-1">
+                                                                                    <li class="order-item">
+                                                                                        ① 회사의 품위를 손상시키는 행위를 하지 않으며, 불건전한 사생활을 삼가고, 자기관리를 철저히 합니다.
+                                                                                    </li>
+                                                                                    <li class="order-item">
+                                                                                        ② 회사의 직위를 이용하여 특정 정당이나 사회단체의 이익이 되는 정치적 활동을 하지 않습니다.
+                                                                                    </li>
+                                                                                </ul>
+                                                                                <p></p>
+                                                                            </div>
+                                                                        </div>
+                                                                    </li>
+                                                                    <li class="data-item">
+                                                                        <div class="data-wrap">
+                                                                            <div class="data-body">
+                                                                                <em class="data-title">함께하는 사회책임 경영</em>
+                                                                                <p class="data-para">
+                                                                                </p><ul class="order-list design-1 usual-1 case-6 medium type-2 align-1">
+                                                                                    <li class="order-item">
+                                                                                        ① 녹색 구매방침 세부내역에 의거하여 친환경 구매를 적극 장려합니다.
+                                                                                    </li>
+                                                                                    <li class="order-item">
+                                                                                        ② 분쟁광물 등 생산 과정에서 인권 침해, 정치적 분쟁 등 문제가 있는 원·부재료를 구매하지 않으며, 협력사의 구매 과정에도 반영, 적용될 수 있도록 노력합니다.
+                                                                                    </li>
+                                                                                </ul>
+                                                                                <p></p>
+                                                                            </div>
+                                                                        </div>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="accordion-item">
+                                                <div class="accordion-wrap">
+                                                    <div class="accordion-head">
+                                                        <a href="javascript:void(0)" class="accordion-button case-1">
+                                                            <div class="accordion-button-body">
+                                                                <em class="accordion-title">윤리경영 조직체계</em>
+                                                                <i class="accordion-icon">
+                                                                    <span class="blind">button</span>
+                                                                </i>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                    <div class="accordion-body">
+                                                        <div class="accordion-content">
+                                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, nisi illo mollitia fugit quidem excepturi, molestiae ea velit, possimus iste corrupti eaque blanditiis porro cupiditate voluptate eos quaerat veritatis eligendi ab nihil culpa. Impedit assumenda necessitatibus ducimus nesciunt fuga iusto minus, nisi modi nostrum molestias perferendis dolor porro tempora temporibus.
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="accordion-item">
+                                                <div class="accordion-wrap">
+                                                    <div class="accordion-head">
+                                                        <a href="javascript:void(0)" class="accordion-button case-1">
+                                                            <div class="accordion-button-body">
+                                                                <em class="accordion-title">윤리경영 커뮤니케이션 채널</em>
+                                                                <i class="accordion-icon">
+                                                                    <span class="blind">button</span>
+                                                                </i>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                    <div class="accordion-body">
+                                                        <div class="accordion-content">
+                                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, nisi illo mollitia fugit quidem excepturi, molestiae ea velit, possimus iste corrupti eaque blanditiis porro cupiditate voluptate eos quaerat veritatis eligendi ab nihil culpa. Impedit assumenda necessitatibus ducimus nesciunt fuga iusto minus, nisi modi nostrum molestias perferendis dolor porro tempora temporibus.
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li> -->
+                                            <li class="accordion-item accordion-item1">
+                                                <div class="accordion-wrap">
+                                                    <div class="accordion-head">
+                                                        <a href="javascript:void(0)" class="accordion-button case-1">
+                                                            <div class="accordion-button-body">
+                                                                <em class="accordion-title">공정거래 자율준수 프로그램</em>
+                                                                <i class="accordion-icon">
+                                                                    <span class="blind">button</span>
+                                                                </i>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                    <div class="accordion-body">
+                                                        <div class="accordion-content">
+                                                            <div class="data-display design-1 case-20 align-1 color-6">
+                                                                <ul class="data-list">
+                                                                    <li class="data-item">
+                                                                        <div class="data-wrap">
+                                                                            <div class="data-head">
+                                                                                <h3 class="title design-1 case-1 align-1 small-v9 color-2">
+                                                                                    <em class="name">정의 및 추진 목표</em>
+                                                                                </h3>
+                                                                            </div>
+                                                                            <div class="data-body">
+                                                                                <p class="data-para">
+                                                                                    공정거래 자율 준수 프로그램(Compliance Program : 이하 CP)이란 공정거래 관련 법규를 기업이 스스로 준수하기 위해 내부적으로 운영하는 모니터링, 교육, 감독 제재 등의 일련의 프로그램 및 그 체제 입니다. 법규위반에서 초래되는 손실을 사전에 예방하고 경쟁 및 공정거래에 대한 바람직한 문화를 형성함은 물론 Business Ethics 부문에서 당사 책임을 충실하게 이행함으로써 책임경영을 실현하고자 합니다. 효성티앤씨㈜는 ㈜효성이 ‘06년 9월 도입한 CP를 ‘18년 6월 인적 분할 당시 승계하여 도입하였으며, 임직원이 프로그램 운영지침을 확인할 수 있는 공정거래 자율준수 편람을 매년 업데이트하여 안내하고 있습니다. CP 운영을 통해 법규 위반에 따른 리스크를 사전에 예방하고 임직원들의 준법∙윤리 경영을 정착하여 공정거래를 준수하는 모범회사로 거듭날 수 있도록 노력하겠습니다.
+                                                                                </p>
+                                                                            </div>
+                                                                        </div>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                            <div class="data-display design-1 case-20 align-1 color-6">
+                                                                <ul class="data-list">
+                                                                    <li class="data-item">
+                                                                        <div class="data-wrap">
+                                                                            <div class="data-head">
+                                                                                <h3 class="title design-1 case-1 align-1 small-v9 color-2">
+                                                                                    <em class="name">CP 추진 조직 및 자율준수관리자</em>
+                                                                                </h3>
+                                                                            </div>
+                                                                            <div class="data-body">
+                                                                                <p class="data-para">
+                                                                                    공정거래자율준수 업무는 준법지원팀이 담당하고 있으며, 모든 임직원을 대상으로 회사의 자율준수프로그램 운영지침의 숙지, 공정거래 교육, 모니터링 등의 활동을 통해 관련 리스크 최소화를 위해 노력하고 있습니다. 이사회가 선임한 준법지원인은 자율준수관리자로서 공정거래자율준수 프로그램을 운영하고 중요 사안을 이사회 및 최고경영진에 직접 보고하도록 권한을 위임받아, 정기적으로 이사회 및 최고경영진에 보고 중입니다.
+                                                                                </p>
+                                                                            </div>
+                                                                            <div class="data-aside">
+                                                                                <div class="diagram-display design-1">
+                                                                                    <div class="diagram-wrap">
+                                                                                        <div class="diagram-body">
+                                                                                            <picture class="picture">
+                                                                                                <source media="(max-width: 1023px)" srcset="../../assets/images/diagram/sustainability/ethical/diagram-ethicalmanagement-05-mo.svg">
+                                                                                                <source media="(max-width: 1920px)" srcset="../../assets/images/diagram/sustainability/ethical/diagram-ethicalmanagement-05-pc.svg">
+                                                                                                <img class="img" src="../../assets/images/diagram/sustainability/ethical/diagram-ethicalmanagement-05-pc.png" alt="아래 항목 참고">
+                                                                                            </picture>
+                                                                                        </div>
+                                                                                        <div class="diagram-footer">
+                                                                                            <ul>
+                                                                                                <li>ESG경영추진위원회</li>
+                                                                                                <li>대표이사</li>
+                                                                                                <li>이사회</li>
+                                                                                            </ul>
+                                                                                            <em>자율준수관리자</em>
+                                                                                            <ul>
+                                                                                                <li>준법지원팀</li>
+                                                                                                <li>감사, 인사, 교육</li>
+                                                                                            </ul>
+                                                                                            <ul>
+                                                                                                <li>
+                                                                                                    <em>리스크 관리</em>
+                                                                                                    <ul>
+                                                                                                        <li>모니터링</li>
+                                                                                                        <li>사내외 제보 시스템</li>
+                                                                                                    </ul>
+                                                                                                </li>
+                                                                                                <li>
+                                                                                                    <em>CP 교육</em>
+                                                                                                    <ul>
+                                                                                                        <li>주기적인 교육 및 편람 개정</li>
+                                                                                                    </ul>
+                                                                                                </li>
+                                                                                                <li>
+                                                                                                    <em>상벌 제도</em>
+                                                                                                    <ul>
+                                                                                                        <li>CP 관련 포상 및 징계</li>
+                                                                                                    </ul>
+                                                                                                </li>
+                                                                                            </ul>
+                                                                                            <p>CP 규정의 제정 및 개정</p>
+                                                                                            <p>최고경영진 자율준수 의지</p>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="button-display form-1 sort-1 align-3">
+                                                                                    <div class="button-wrap form-1">
+                                                                                        <a href="javascript:void(0)" class="button design-1 case-3 medium align-3 color-1 fill-800 rtl icon-down-arrow01">
+                                                                                            <span class="button-text-core">공정거래 자율준수편람</span>
+                                                                                        </a>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="accordion-item accordion-item2">
+                                                <div class="accordion-wrap">
+                                                    <div class="accordion-head">
+                                                        <a href="javascript:void(0)" class="accordion-button case-1">
+                                                            <div class="accordion-button-body">
+                                                                <em class="accordion-title">윤리경영 활동</em>
+                                                                <i class="accordion-icon">
+                                                                    <span class="blind">button</span>
+                                                                </i>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                    <div class="accordion-body">
+                                                        <div class="accordion-content">
+                                                            <div class="data-display design-1 case-20 align-1 color-6">
+                                                                <ul class="data-list">
+                                                                    <li class="data-item">
+                                                                        <div class="data-wrap">
+                                                                            <div class="data-head">
+                                                                                <h3 class="title design-1 case-1 align-1 small-v9 color-2">
+                                                                                    <em class="name">윤리경영 인식 확산</em>
+                                                                                </h3>
+                                                                            </div>
+                                                                            <div class="data-body">
+                                                                                <p class="data-para">
+                                                                                    효성은 입사 시 윤리경영 이념과 윤리강령, 윤리강령 실천지침을 숙지하고, 실천 약속을 다짐하는 윤리경영 실천서약서와 부정청탁 및 금품 등 제공금지 서약서를 작성하고 있습니다. 또한, 윤리의식을 효과적으로 개선하기 위하여 홍보영상과 매거진 형태의 기획물을 제작하고, 사내 그룹 웨어를 통해 배포하고 있습니다. <br>
+                                                                                    협력사를 대상으로 반부패 등 윤리경영을 실천하도록 “효성 협력회사 행동규범 준수서약서”를 받고 있으며, 협력사 ESG경영 컨설팅 지원을 통해 윤리경영 인식을 공급망까지 확산시키고 있습니다.
+                                                                                </p>
+                                                                            </div>
+                                                                        </div>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                            <div class="data-display design-1 case-20 align-1 color-6">
+                                                                <ul class="data-list">
+                                                                    <li class="data-item">
+                                                                        <div class="data-wrap">
+                                                                            <div class="data-head">
+                                                                                <h3 class="title design-1 case-1 align-1 small-v9 color-2">
+                                                                                    <em class="name">윤리경영 교육</em>
+                                                                                </h3>
+                                                                            </div>
+                                                                            <div class="data-body">
+                                                                                <p class="data-para">
+                                                                                    임직원의 윤리경영 실천 및 인식 확산을 위해 매년 정기적으로 윤리경영 교육을 실시 하고 있습니다. 신규 채용된 임직원 및 진급자를 대상으로 윤리경영 교육을 의무화하고, 협력사와의 직접적인 이해관계에 있어 리스크 발생 위험이 높은 부서를 선정하여 하도급법, 계약위반 사례교육 등을 주기적으로 실시하고 있습니다. 영업부서를 대상으로 영업비밀보호 및 영업비밀보호 위반사례, 횡령·금품수수·문서위조 사례, 공정거래법과 대리점법 등 관련 교육을 실시함으로써 법률로 정하는 절차와 기준에 대한 정보를 제공하고 있습니다. 또한 효성은 협력사 임직원을 대상으로 한 윤리교육 자료 및 교육장소도 지원하고 있습니다.
+                                                                                </p>
+                                                                            </div>
+                                                                            <div class="data-aside">
+                                                                                <div class="button-display form-1 sort-1 align-1">
+                                                                                    <div class="button-wrap form-1">
+                                                                                        <a href="javascript:void(0)" class="button design-1 case-3 medium align-4 fill-800 color-1 rtl icon-down-arrow01">
+                                                                                            <span class="button-text-core">윤리경영 교육 내역</span>
+                                                                                        </a>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                            <div class="data-display design-1 case-20 align-1 color-6">
+                                                                <ul class="data-list">
+                                                                    <li class="data-item">
+                                                                        <div class="data-wrap">
+                                                                            <div class="data-head">
+                                                                                <h3 class="title design-1 case-1 align-1 small-v9 color-2">
+                                                                                    <em class="name">내부 모니터링 및 사후관리 강화</em>
+                                                                                </h3>
+                                                                            </div>
+                                                                            <div class="data-body">
+                                                                                <p class="data-para">
+                                                                                    효성은 현장업무에서부터 각종 제보조사와 업무진단 등 경영전반에 대한 감사를 진행하고 있습니다. 특히 기술과 품질 영역을 포함하여 감사를 함께 진행하고 있습니다. 감사 활동의 독립성을 보장하고, 피감사자와 제보자가 부당한 대우를 받지 않도록 익명성을 보장하며, 불이익을 최소화하고 있습니다. 내부 감사규정에 따른 정기감사와 특정 주제 또는 현안이 발생했을 때 특별감사를 실시하고 있습니다. 감사에 따라 적발된 사건은 경중에 따라 주의, 징계, 변상 등 조치를 취하고 있습니다. 진행된 감사결과에 대해서는 대표이사에게 보고하고 있으며, 감사결과를 통보받은 감사대상 인원은 지적사항에 대해 즉각적으로 개선하고 있습니다. 이와 더불어 감사팀은 향후 동일한 문제가 발생하지 않도록 주기적으로 재점검하고 있습니다.
+                                                                                </p>
+                                                                            </div>
+                                                                        </div>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+        <%-include('../include/kor/HTNCWK03FOOTER.ejs') %>
+    </body>
+</html>

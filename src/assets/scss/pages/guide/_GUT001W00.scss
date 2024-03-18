@@ -1,0 +1,16 @@
+// guide
+@media screen and (max-width:1023px)  {
+    .GUT001W00 {
+        &.container {
+            &.guide {
+                .container-inner {
+                    .contents {
+                        ~ .contents {
+                            margin-top:1.5rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
