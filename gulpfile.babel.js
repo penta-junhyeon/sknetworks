@@ -12,7 +12,8 @@ const rename = require("gulp-rename");
 const browserSync = require("browser-sync").create();
 const del = require("del");
 
-const SRC_FOLDER = "./src";
+const SRC_FOLDER = "./src/";
+const DIST_FOLDER = "./dist";
 const HTML_FOLDER = "./dist/html";
 
 const SRC_PATH = {
@@ -54,9 +55,18 @@ gulp.task("clean", function() {
   return del(["dist"]);
 });
 
+gulp.task('html', () => {
+  return gulp.src([ SRC_FOLDER + '**/*.html' ], {
+    base: SRC_FOLDER,
+    since: gulp.lastRun('html')
+  })
+    .pipe(gulp.dest(DIST_FOLDER))
+    .pipe(browserSync.stream());
+});
+
 gulp.task("ejs", function () {
   return gulp
-    .src([SRC_FOLDER + "/html/**/!(_)*.ejs", SRC_FOLDER + "/*.ejs"])
+    .src([SRC_FOLDER + "/ejs/**/!(_)*.ejs", SRC_FOLDER + "/*.ejs"])
     .pipe(ejs())
     .pipe(rename({ extname: ".html" }))
     .pipe(fileinclude({
@@ -64,7 +74,7 @@ gulp.task("ejs", function () {
       basepath: '@file',
     }))
     .pipe(htmlbeautify({indentSize: 2}))
-    .pipe(gulp.dest(HTML_FOLDER))
+    .pipe(gulp.dest(DIST_FOLDER))
     .pipe(browserSync.stream());
 });
 
@@ -160,10 +170,10 @@ gulp.task("watch", function () {
 
 gulp.task("browserSync", function () {
   browserSync.init({
-    port: 8050,
+    port: 3000,
     server: {
       baseDir: ["dist"],
-      index: "./html/index.html",
+      // index: "./html/guide/intro/index.html",
       open: true,
     },
   });
@@ -171,7 +181,7 @@ gulp.task("browserSync", function () {
 
 gulp.task(
   "build",
-  gulp.series("ejs","scss:compile","js","ajax","modules","images","svg","fonts","doc","gltf","movies", gulp.parallel("browserSync", "watch"))
+  gulp.series('html',"ejs","scss:compile","js","ajax","modules","images","svg","fonts","doc","gltf","movies", gulp.parallel("browserSync", "watch"))
 );
 
 gulp.task(
