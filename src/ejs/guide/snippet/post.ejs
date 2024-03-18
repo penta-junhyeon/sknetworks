@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<%-include('../_templates/_data.header.front.ejs', {
+	pageStyle: 'bui.page.snippet.css',
+	pageJavascript: ''
+}) %>
+</head>
+<body>
+<div id="wrap">
+	<!-- page -->
+	<div id="page">
+<%-include('../_templates/_header.snippet.ejs') %>
+		<!-- page-body -->
+		<div class="page-body" id="local">
+			<!-- local-head -->
+			<div class="local-head">
+				<h2 class="local-subject" id="localTitle"><span class="local-name">snippet</span></h2>
+			</div>
+			<!-- //local-head -->
+			<!-- local-body -->
+			<div class="local-body" id="content">
+				<!-- content-head -->
+				<div class="content-head"><%- include('../_mixin/_title.content.ejs', {name: 'post'}) %></div>
+				<!-- //content-head -->
+				<!-- content-body -->
+				<div class="content-body">
+					<!-- section -->
+					<div class="section">
+						<div class="section-head"><%- include('../_mixin/_title.section.ejs', {name: 'post-display'}) %></div>
+						<div class="section-body">
+							<!-- subsection -->
+							<div class="subsection">
+								<div class="subsection-head"><%- include('../_mixin/_title.subsection.ejs', {name: 'module-a'}) %></div>
+								<div class="subsection-body">
+									<!-- posts-display -->
+									<div class="posts-display module-a type-a style-a">
+										<ul class="posts-list">
+											<li class="posts-item">
+												<div class="posts-wrap">
+													<div class="posts-prop">
+														<div class="data-list">
+															<span class="data-item fixed"><span class="text">고정</span></span>
+														</div>
+													</div>
+													<div class="posts-inform">
+														<div class="posts-head">
+															<p class="posts-subject">
+																<a class="posts-name" href="#">환경위성(GEMS) 위성영상 자료 서비스 오픈 알림(시험운영)</a>
+															</p>
+														</div>
+														<div class="posts-data">
+															<div class="data-list">
+																<span class="data-item date">
+																	<span class="head">등록일</span>
+																	<span class="body">2021.04.01</span>
+																</span>
+																<span class="data-item hit">
+																	<span class="head">조회수</span>
+																	<span class="body">100</span>
+																</span>
+															</div>
+														</div>
+													</div>
+													<div class="posts-util">
+														<div class="data-list">
+															<div class="data-item file">
+																<span class="head">첨부파일</span>
+																<span class="body"><a class="btn attachments" href="#"><span class="btn-text">첨부파일</span></a></span>
+															</div>
+														</div>
+													</div>
+												</div>
+											</li>
+											<li class="posts-item">
+												<div class="posts-wrap">
+													<div class="posts-prop">
+														<div class="data-list">
+															<span class="data-item"><span class="state proceed">진행중</span></span>
+														</div>
+													</div>
+													<div class="posts-inform">
+														<div class="posts-head">
+															<p class="posts-subject">
+																<a class="posts-name" href="#">고객만족도를 위한 환경위성센터 온라인 설문 조사</a>
+															</p>
+														</div>
+														<div class="posts-data">
+															<div class="data-list">
+																<span class="data-item period">
+																	<span class="head">설문 기간</span>
+																	<span class="body">2022.07.05 ~ 2021.07.31</span>
+																</span>
+																<span class="data-item entry">
+																	<span class="head">참여자수</span>
+																	<span class="body">100</span>
+																</span>
+															</div>
+														</div>
+													</div>
+												</div>
+											</li>
+											<li class="posts-item">
+												<div class="posts-wrap">
+													<div class="posts-prop">
+														<div class="data-list">
+															<span class="data-item"><span class="state finish">설문마감</span></span>
+														</div>
+													</div>
+													<div class="posts-inform">
+														<div class="posts-head">
+															<p class="posts-subject">
+																<a class="posts-name" href="#">고객만족도를 위한 환경위성센터 온라인 설문 조사</a>
+															</p>
+														</div>
+														<div class="posts-data">
+															<div class="data-list">
+																<span class="data-item period">
+																	<span class="head">설문 기간</span>
+																	<span class="body">2022.07.05 ~ 2021.07.31</span>
+																</span>
+																<span class="data-item entry">
+																	<span class="head">참여자수</span>
+																	<span class="body">100</span>
+																</span>
+															</div>
+														</div>
+													</div>
+												</div>
+											</li>
+											<li class="posts-item">
+												<div class="posts-wrap">
+													<div class="posts-prop">
+														<span class="posts-numb">999</span>
+													</div>
+													<div class="posts-inform">
+														<div class="posts-head">
+															<p class="posts-subject">
+																<a class="posts-name" href="#">환경위성(GEMS) 위성영상 자료 서비스 오픈 알림(시험운영)</a>
+															</p>
+														</div>
+														<div class="posts-data">
+															<div class="data-list">
+																<span class="data-item date">
+																	<span class="head">등록일</span>
+																	<span class="body">2021.04.01</span>
+																</span>
+																<span class="data-item hit">
+																	<span class="head">조회수</span>
+																	<span class="body">100</span>
+																</span>
+															</div>
+														</div>
+													</div>
+												</div>
+											</li>
+											<li class="posts-item">
+												<div class="posts-wrap">
+													<div class="posts-prop">
+														<span class="posts-numb">999</span>
+													</div>
+													<div class="posts-inform">
+														<div class="posts-head">
+															<p class="posts-subject">
+																<a class="posts-name" href="#">환경위성(GEMS) 위성영상 자료 서비스 오픈 알림(시험운영)</a>
+															</p>
+														</div>
+														<div class="posts-data">
+															<div class="data-list">
+																<span class="data-item date">
+																	<span class="head">등록일</span>
+																	<span class="body">2021.04.01</span>
+																</span>
+																<span class="data-item hit">
+																	<span class="head">조회수</span>
+																	<span class="body">100</span>
+																</span>
+															</div>
+														</div>
+													</div>
+													<div class="posts-util">
+														<div class="data-list">
+															<div class="data-item file">
+																<span class="head">첨부파일</span>
+																<span class="body"><a class="btn attachments" href="#"><span class="btn-text">첨부파일</span></a></span>
+															</div>
+														</div>
+													</div>
+												</div>
+											</li>
+										</ul>
+									</div>
+									<!-- //posts-display -->
+								</div>
+							</div>
+							<!-- //subsection -->
+
+							<!-- subsection -->
+							<div class="subsection">
+								<div class="subsection-head"><%- include('../_mixin/_title.subsection.ejs', {name: 'module-b'}) %></div>
+								<div class="subsection-body">
+									<!-- posts-display -->
+									<div class="posts-display module-b type-a style-a">
+										<ul class="posts-list">
+											<li class="posts-item">
+												<div class="posts-wrap">
+													<div class="posts-inform">
+														<div class="posts-head">
+															<p class="posts-subject">
+																<a class="posts-name" href="#">특이현상 영상 공개 (일본 사쿠라지마 화산)</a>
+															</p>
+														</div>
+														<div class="posts-body">
+															<!-- <p class="para">환경위성센터 홈페이지의 "위성영상 전시" 산출물 추가 및 "위성영상 자료" 기능의 오픈을 알려드립니다.</p> -->
+															<a href="#">환경위성센터 홈페이지의 "위성영상 전시" 산출물 추가 및 "위성영상 자료" 기능의 오픈을 알려드립니다.</a>
+														</div>
+														<div class="posts-data">
+															<div class="data-list">
+																<span class="data-item date">
+																	<span class="head">등록일</span>
+																	<span class="body">2021.04.01</span>
+																</span>
+																<span class="data-item hit">
+																	<span class="head">조회수</span>
+																	<span class="body">100</span>
+																</span>
+															</div>
+														</div>
+													</div>
+												</div>
+											</li>
+											<li class="posts-item">
+												<div class="posts-wrap">
+													<div class="posts-inform">
+														<div class="posts-head">
+															<p class="posts-subject">
+																<a class="posts-name" href="#">특이현상 영상 공개 (일본 사쿠라지마 화산)</a>
+															</p>
+														</div>
+														<div class="posts-body">
+															<!-- <p class="para">환경위성센터 홈페이지의 "위성영상 전시" 산출물 추가 및 "위성영상 자료" 기능의 오픈을 알려드립니다.</p> -->
+															<a href="#">환경위성센터 홈페이지의 "위성영상 전시" 산출물 추가 및 "위성영상 자료" 기능의 오픈을 알려드립니다.</a>
+														</div>
+														<div class="posts-data">
+															<div class="data-list">
+																<span class="data-item date">
+																	<span class="head">등록일</span>
+																	<span class="body">2021.04.01</span>
+																</span>
+																<span class="data-item hit">
+																	<span class="head">조회수</span>
+																	<span class="body">100</span>
+																</span>
+															</div>
+														</div>
+													</div>
+												</div>
+											</li>
+											<li class="posts-item">
+												<div class="posts-wrap">
+													<div class="posts-inform">
+														<div class="posts-head">
+															<p class="posts-subject">
+																<a class="posts-name" href="#">특이현상 영상 공개 (일본 사쿠라지마 화산)</a>
+															</p>
+														</div>
+														<div class="posts-body">
+															<!-- <p class="para">환경위성센터 홈페이지의 "위성영상 전시" 산출물 추가 및 "위성영상 자료" 기능의 오픈을 알려드립니다.</p> -->
+															<a href="#">환경위성센터 홈페이지의 "위성영상 전시" 산출물 추가 및 "위성영상 자료" 기능의 오픈을 알려드립니다.</a>
+														</div>
+														<div class="posts-data">
+															<div class="data-list">
+																<span class="data-item date">
+																	<span class="head">등록일</span>
+																	<span class="body">2021.04.01</span>
+																</span>
+																<span class="data-item hit">
+																	<span class="head">조회수</span>
+																	<span class="body">100</span>
+																</span>
+															</div>
+														</div>
+													</div>
+												</div>
+											</li>
+										</ul>
+										<!-- button-display -->
+										<div class="button-display module-a style-a type-c">
+											<span class="button-area">
+												<a class="btn module-b style-c type-none normal-02 large-3x flex" href="#"><span class="btn-text">더보기(7)</span></a>
+											</span>
+										</div>
+										<!-- //button-display -->
+									</div>
+									<!-- //posts-display -->
+								</div>
+							</div>
+							<!-- //subsection -->
+
+							<!-- subsection -->
+							<div class="subsection">
+								<div class="subsection-head"><%- include('../_mixin/_title.subsection.ejs', {name: 'module-c'}) %></div>
+								<div class="subsection-body">
+									<!-- posts-display -->
+									<div class="posts-display module-c">
+										<ul class="posts-list">
+											<li class="posts-item" data-bui-expand="qnaDisplay">
+												<div class="posts-wrap">
+													<div class="posts-inform">
+														<div class="posts-type"><span class="type">인공위성</span></div>
+														<div class="posts-head"><p class="posts-subject"><span class="posts-name">위성이란?</span></p></div>
+													</div>
+												</div>
+												<div class="posts-side">
+													<div class="posts-inform">
+														<div class="posts-body">
+															<p>환경위성(천리안 2B 위성)은 동경 128.2도의 적도 상공 35,786km 떨어진 위치에서 대기호나경 관측을 위한 초분광센서(환경위성탑재체)를 탑재하고 있다.</p>
+														</div>
+													</div>
+												</div>
+											</li>
+											<li class="posts-item" data-bui-expand="qnaDisplay">
+												<div class="posts-wrap">
+													<div class="posts-inform">
+														<div class="posts-type"><span class="type">기타</span></div>
+														<div class="posts-head"><p class="posts-subject"><span class="posts-name">위성센터의 기후변화 대응 기술은?</span></p></div>
+													</div>
+												</div>
+												<div class="posts-side">
+													<div class="posts-inform">
+														<div class="posts-body">
+															<p>환경위성(천리안 2B 위성)은 동경 128.2도의 적도 상공 35,786km 떨어진 위치에서 대기호나경 관측을 위한 초분광센서(환경위성탑재체)를 탑재하고 있다.</p>
+														</div>
+													</div>
+												</div>
+											</li>
+											<li class="posts-item" data-bui-expand="qnaDisplay">
+												<div class="posts-wrap">
+													<div class="posts-inform">
+														<div class="posts-type"><span class="type">환경위성</span></div>
+														<div class="posts-head"><p class="posts-subject"><span class="posts-name">환경위성의 제원은?</span></p></div>
+													</div>
+												</div>
+												<div class="posts-side">
+													<div class="posts-inform">
+														<div class="posts-body">
+															<p>환경위성(천리안 2B 위성)은 동경 128.2도의 적도 상공 35,786km 떨어진 위치에서 대기호나경 관측을 위한 초분광센서(환경위성탑재체)를 탑재하고 있다.</p>
+														</div>
+													</div>
+												</div>
+											</li>
+										</ul>
+									</div>
+									<!-- //posts-display -->
+
+									<script type="text/javascript">
+										// Q & A 목록
+										const qnaDisplay = new buiExpand('[data-bui-expand="qnaDisplay"]', {
+											accordion: true,
+											buttonClass: 'btn expand',
+											buttonText: '<svg width="24" height="24" viewBox="0 0 24 24" focusable="false" xmlns="http://www.w3.org/2000/svg"><title>펼치기</title><path d="M16.94,9.41c-.2-.2-.51-.2-.71,0l-4.24,4.24-4.23-4.23c-.2-.2-.51-.2-.71,0s-.2,.51,0,.71l4.38,4.38c.15,.15,.35,.23,.56,.23s.41-.08,.55-.23l4.39-4.39c.2-.2,.2-.51,0-.71Z"></path></svg>',
+											buttonActiveText: '<svg width="24" height="24" viewBox="0 0 24 24" focusable="false" xmlns="http://www.w3.org/2000/svg"><title>접기</title><path d="M16.94,13.87l-4.38-4.38c-.3-.3-.8-.3-1.11,0l-4.39,4.39c-.2,.2-.2,.51,0,.71,.1,.1,.23,.15,.35,.15s.26-.05,.35-.15l4.24-4.24,4.23,4.23c.2,.2,.51,.2,.71,0s.2-.51,0-.71Z"></path></svg>',
+											buttonAppendTo: '.posts-util',
+											
+											onloadCallBack: function(elem) {
+												const postUtil = document.createElement('div');
+												postUtil.className = 'posts-util';
+												elem.querySelector('.posts-wrap').appendChild(postUtil);
+											}
+										});
+									</script>
+								</div>
+							</div>
+							<!-- //subsection -->
+
+							<!-- subsection -->
+							<div class="subsection">
+								<div class="subsection-head"><%- include('../_mixin/_title.subsection.ejs', {name: 'pr-center'}) %></div>
+								<div class="subsection-body">
+									<!-- posts-display -->
+									<div class="posts-display pr-center">
+										<ul class="posts-list">
+											<li class="posts-item">
+												<div class="posts-wrap">
+													<div class="posts-figure">
+														<a class="posts-thumbnail" href="#"><img class="image" src="../../assets/images/information/promotion-01.png" alt="" /></a>
+													</div>
+													<div class="posts-inform">
+														<div class="posts-head">
+															<p class="posts-caption">대외 활동</p>
+															<p class="posts-subject"><a href="#" class="posts-name">환경위성 센터 브로슈어</a></p>
+															<p class="posts-summary">인공위성 및 환경위성의 이해와 정지궤도 위성 천리안 2B에 대해 알아보기!</p>
+														</div>
+														<div class="posts-data">
+															<p class="data-list">
+																<span class="data-item date">
+																	<span class="head">등록일</span>
+																	<span class="body">2022.06.28</span>
+																</span>
+															</p>
+														</div>
+													</div>
+												</a>
+											</li>
+											<li class="posts-item">
+												<div class="posts-wrap">
+													<div class="posts-figure">
+														<a class="posts-thumbnail" href="#"><img class="image" src="../../assets/images/information/promotion-02.png" alt="" /></a>
+													</div>
+													<div class="posts-inform">
+														<div class="posts-head">
+															<p class="posts-caption">대외 활동</p>
+															<p class="posts-subject"><a href="#" class="posts-name">환경위성 센터 브로슈어</a></p>
+															<p class="posts-summary">인공위성 및 환경위성의 이해와 정지궤도 위성 천리안 2B에 대해 알아보기!</p>
+														</div>
+														<div class="posts-data">
+															<p class="data-list">
+																<span class="data-item date">
+																	<span class="head">등록일</span>
+																	<span class="body">2022.06.28</span>
+																</span>
+															</p>
+														</div>
+													</div>
+												</a>
+											</li>
+											<li class="posts-item">
+												<div class="posts-wrap">
+													<div class="posts-figure">
+														<a class="posts-thumbnail" href="#"><img class="image" src="../../assets/images/information/promotion-03.png" alt="" /></a>
+													</div>
+													<div class="posts-inform">
+														<div class="posts-head">
+															<p class="posts-caption">대외 활동</p>
+															<p class="posts-subject"><a href="#" class="posts-name">환경위성 센터 브로슈어</a></p>
+															<p class="posts-summary">인공위성 및 환경위성의 이해와 정지궤도 위성 천리안 2B에 대해 알아보기!</p>
+														</div>
+														<div class="posts-data">
+															<p class="data-list">
+																<span class="data-item date">
+																	<span class="head">등록일</span>
+																	<span class="body">2022.06.28</span>
+																</span>
+															</p>
+														</div>
+													</div>
+												</a>
+											</li>
+											<li class="posts-item">
+												<div class="posts-wrap">
+													<div class="posts-figure">
+														<a class="posts-thumbnail" href="#"><img class="image" src="../../assets/images/information/promotion-04.png" alt="" /></a>
+													</div>
+													<div class="posts-inform">
+														<div class="posts-head">
+															<p class="posts-caption">대외 활동</p>
+															<p class="posts-subject"><a href="#" class="posts-name">환경위성 센터 브로슈어</a></p>
+															<p class="posts-summary">인공위성 및 환경위성의 이해와 정지궤도 위성 천리안 2B에 대해 알아보기!</p>
+														</div>
+														<div class="posts-data">
+															<p class="data-list">
+																<span class="data-item date">
+																	<span class="head">등록일</span>
+																	<span class="body">2022.06.28</span>
+																</span>
+															</p>
+														</div>
+													</div>
+												</a>
+											</li>
+											<li class="posts-item">
+												<div class="posts-wrap">
+													<div class="posts-figure">
+														<a class="posts-thumbnail" href="#"><img class="image" src="../../assets/images/information/promotion-05.png" alt="" /></a>
+													</div>
+													<div class="posts-inform">
+														<div class="posts-head">
+															<p class="posts-caption">대외 활동</p>
+															<p class="posts-subject"><a href="#" class="posts-name">환경위성 센터 브로슈어</a></p>
+															<p class="posts-summary">인공위성 및 환경위성의 이해와 정지궤도 위성 천리안 2B에 대해 알아보기!</p>
+														</div>
+														<div class="posts-data">
+															<p class="data-list">
+																<span class="data-item date">
+																	<span class="head">등록일</span>
+																	<span class="body">2022.06.28</span>
+																</span>
+															</p>
+														</div>
+													</div>
+												</a>
+											</li>
+											<li class="posts-item">
+												<div class="posts-wrap">
+													<div class="posts-figure">
+														<a class="posts-thumbnail" href="#"><img class="image" src="../../assets/images/information/promotion-06.png" alt="" /></a>
+													</div>
+													<div class="posts-inform">
+														<div class="posts-head">
+															<p class="posts-caption">대외 활동</p>
+															<p class="posts-subject"><a href="#" class="posts-name">환경위성 센터 브로슈어</a></p>
+															<p class="posts-summary">인공위성 및 환경위성의 이해와 정지궤도 위성 천리안 2B에 대해 알아보기!</p>
+														</div>
+														<div class="posts-data">
+															<p class="data-list">
+																<span class="data-item date">
+																	<span class="head">등록일</span>
+																	<span class="body">2022.06.28</span>
+																</span>
+															</p>
+														</div>
+													</div>
+												</a>
+											</li>
+										</ul>
+									</div>
+									<!-- //posts-display -->
+								</div>
+							</div>
+							<!-- //subsection -->
+						</div>
+					</div>
+					<!-- //section -->
+
+					<!-- section -->
+					<div class="section">
+						<div class="section-head"><%- include('../_mixin/_title.section.ejs', {name: 'post-read'}) %></div>
+						<div class="section-body">
+							<!-- subsection -->
+							<div class="subsection">
+								<div class="subsection-head"><%- include('../_mixin/_title.subsection.ejs', {name: 'module-a style-a'}) %></div>
+								<div class="subsection-body">
+									<!-- posts-read -->
+									<div class="posts-read module-a type-a style-a">
+										<!-- posts-list -->
+										<div class="posts-list">
+											<div class="posts-item">
+												<div class="posts-wrap">
+													<div class="posts-inform">
+														<div class="posts-head">
+															<p class="posts-subject"><span class="posts-name">환경위성(GEMS) 위성영상 자료 서비스 오픈 알림(시험운영)</span></p>
+														</div>
+														<div class="posts-data">
+															<p class="data-list">
+																<span class="data-item date"><span class="head">등록일</span> <span class="body">2022.06.04</span></span>
+																<span class="data-item view"><span class="head">조회수</span> <span class="body">100</span></span>
+															</p>
+														</div>
+														<div class="posts-atch">
+															<div class="data-wrap">
+																<div class="data-head"><p class="data-subject"><strong class="data-name">첨부파일</strong></p></div>
+																<div class="data-body">
+																	<ul class="data-list">
+																		<li class="data-item"><a href="#">환경위성센터_홍보동영상.mp4</a></li>
+																		<li class="data-item"><a href="#">환경위성센터_2023-1분기_서비스설문조사_결과보고서.hwp</a></li>
+																	</ul>
+																</div>
+															</div>
+														</div>
+														<div class="posts-body">
+															<div style="text-align: center;">
+																<img src="./../../../assets/images/information/publication-01.png" alt="" />
+															</div>
+															<br /><br />
+															환경위성센터에서는 세계최초 정지궤도 환경위성을 운영하고 있습니다.<br />
+															정지궤도 환경위성은 한반도를 포함하여 동서로는 일본부터 인도까지, 남북으로는 몽골부터 인도네시아의 미세먼지 및 그 생성기여 물질 등 대기오염 및 기후변화 유발물질을 주간 약 8회 관측할 수 있습니다.<br />
+															<br />
+															게시판 바로가기 : <a href="#">https://bit.ly/3P9JCdh</a><br />
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<!-- //posts-list -->
+
+										<!-- posts-direction -->
+										<div class="posts-direction">
+											<ul class="data-list">
+												<li class="data-item prev">
+													<div class="data-wrap">
+														<span class="data-head"><span class="data-name">다음글</span></span>
+														<span class="data-body">
+															<a href="#">환경위성센터 브로슈어</a>
+														</span>
+													</div>
+												</li>
+												<!-- <li class="data-item prev">
+													<div class="data-wrap">
+														<span class="data-head"><span class="data-name">이전글</span></span>
+														<span class="data-body">이전글이 없습니다.</span>
+													</div>
+												</li>
+												<li class="data-item next">
+													<div class="data-wrap">
+														<span class="data-head"><span class="data-name">다음글</span></span>
+														<span class="data-body">다음글이 없습니다.</span>
+													</div>
+												</li> -->
+												<li class="data-item next">
+													<div class="data-wrap">
+														<span class="data-head"><span class="data-name">이전글</span></span>
+														<span class="data-body">
+															<a href="#">환경위성센터 브로슈어</a>
+														</span>
+														<!-- <span class="data-date">2022.05.31</span> -->
+													</div>
+												</li>
+											</ul>
+										</div>
+										<!-- //posts-direction -->
+
+										<!-- button-display -->
+										<div class="button-display module-a style-a type-c">
+											<span class="button-area">
+												<a class="btn module-b style-a type-line normal-04 large-3x flex" href="#"><span class="btn-text">목록</span></a>
+											</span>
+										</div>
+										<!-- //button-display -->
+
+									</div>
+									<!-- //posts-read -->								
+								</div>
+							</div>
+							<!-- //subsection -->
+							<!-- subsection -->
+							<div class="subsection">
+								<div class="subsection-head"><%- include('../_mixin/_title.subsection.ejs', {name: 'module-a style-b'}) %></div>
+								<div class="subsection-body">
+									<!-- posts-read -->
+									<div class="posts-read module-a type-a style-b">
+										<!-- posts-list -->
+										<div class="posts-list">
+											<div class="posts-item">
+												<div class="posts-wrap">
+													<div class="posts-inform">
+														<div class="posts-prop">
+															<div class="data-list">
+																<span class="data-item"><span class="state proceed">진행중</span></span>
+															</div>
+														</div>
+														<div class="posts-head">
+															<p class="posts-subject"><span class="posts-name">환경위성(GEMS) 위성영상 자료 서비스 오픈 알림(시험운영)</span></p>
+														</div>
+														<div class="posts-data">
+															<p class="data-list">
+																<span class="data-item date"><span class="head">등록일</span> <span class="body">2022.06.04</span></span>
+																<span class="data-item view"><span class="head">조회수</span> <span class="body">100</span></span>
+															</p>
+														</div>
+														<div class="posts-body">
+															<div style="text-align: center;">
+																<!-- info-board -->
+																<div class="info-board module-b style-a type-c attr-survey">
+																	<div class="board-wrap">
+																		<div class="board-head">
+																			<p class="board-subject"><span class="board-name"><span class="wbr">설문조사에</span> <span class="wbr">참여해 주셔서 감사합니다.</span></span></p>
+																		</div>
+																	
+																		<div class="board-util">
+																			<div class="button-display">
+																				<span class="button-area">
+																					<a class="btn module-b style-a type-fill accent-01 large-3x" href="#"><span class="btn-text">확인</span></a>
+																				</span>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+																<!-- //info-board -->
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<!-- //posts-list -->
+
+										<!-- button-display -->
+										<div class="button-display module-a style-a type-c">
+											<span class="button-area">
+												<a class="btn module-b style-a type-line normal-04 large-3x flex" href="#"><span class="btn-text">목록</span></a>
+											</span>
+										</div>
+										<!-- //button-display -->
+
+									</div>
+									<!-- //posts-read -->						
+								</div>
+							</div>
+							<!-- //subsection -->
+						</div>
+					</div>
+					<!-- //section -->
+
+				</div>
+				<!-- content-body -->
+			</div>
+			<!-- //local-body -->
+		</div>
+		<!-- //page-body -->
+<%-include('../_templates/_footer.front.ejs') %>
+	</div>
+	<!-- //page -->
+</div>
+</body>
+</html>

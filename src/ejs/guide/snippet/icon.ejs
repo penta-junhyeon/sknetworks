@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<%-include('../_templates/_data.header.front.ejs', {
+	pageStyle: 'bui.page.snippet.css',
+	pageJavascript: ''
+}) %>
+</head>
+<body>
+<div id="wrap">
+	<!-- page -->
+	<div id="page">
+<%-include('../_templates/_header.snippet.ejs') %>
+		<!-- page-body -->
+		<div class="page-body" id="local">
+			<!-- local-head -->
+			<div class="local-head">
+				<h2 class="local-subject" id="localTitle"><span class="local-name">snippet</span></h2>
+			</div>
+			<!-- //local-head -->
+			<!-- local-body -->
+			<div class="local-body" id="content">
+				<!-- content-head -->
+				<div class="content-head">
+					<h3 class="content-subject" id="contentSubject"><span class="content-name">icon</span></h3>
+				</div>
+				<!-- //content-head -->
+				<!-- content-body -->
+				<div class="content-body">
+					<!-- section -->
+					<div class="section">
+						<div class="section-head"><%- include('../_mixin/_title.section.ejs', {name: 'SVG icon'}) %></div>
+						<div class="section-body">
+							<!-- subsection -->
+							<div class="subsection">
+								<div class="subsection-head"><%- include('../_mixin/_title.subsection.ejs', {name: 'HTML'}) %></div>
+								<div class="subsection-body">
+									<pre class="highlight-js">
+										<code class="html">&lt;svg width="24" height="24" viewBox="0 0 24 24" focusable="false" xmlns="http://www.w3.org/2000/svg"&gt;
+											&lt;title&gt;Text alternatives for non-text content&lt;/title&gt;
+											&lt;path d="..."&gt;&lt;/path&gt;
+										&lt;/svg&gt;</code></pre>
+								</div>
+							</div>
+							<!-- //subsection -->
+							<!-- subsection -->
+							<div class="subsection">
+								<div class="subsection-head"><%- include('../_mixin/_title.subsection.ejs', {name: 'SCSS'}) %></div>
+								<div class="subsection-body">
+									<pre class="highlight-js"><code class="scss">background-image: icon($name, $color);</code></pre>
+								</div>
+							</div>
+							<!-- //subsection -->
+							<!-- subsection -->
+							<div class="subsection">
+								<div class="subsection-head"><%- include('../_mixin/_title.subsection.ejs', {name: 'example'}) %></div>
+								<div class="subsection-body">
+									<pre class="highlight-js"><code class="scss">background-image: icon(info, color(base, 00));</code></pre>
+								</div>
+							</div>
+							<!-- //subsection -->
+							<!-- subsection -->
+							<div class="subsection">
+								<div class="subsection-head"><%- include('../_mixin/_title.subsection.ejs', {name: 'system'}) %></div>
+								<div class="subsection-body">
+									<!-- subsubsection -->
+									<div class="subsubsection">
+										<div class="subsubsection-head"><%- include('../_mixin/_title.subsubsection.ejs', {name: 'action'}) %></div>
+										<div class="subsubsection-body">
+											<ul class="data-list svg-icon">
+												<li class="data-item"><span class="data-name">arrow-down</span></li>
+												<li class="data-item"><span class="data-name">arrow-up-right</span></li>
+												<li class="data-item"><span class="data-name">arrow-down-right</span></li>
+												<li class="data-item"><span class="data-name">chevron-left-small</span></li>
+												<li class="data-item"><span class="data-name">chevron-right-small</span></li>
+												<li class="data-item"><span class="data-name">chevron-under-small</span></li>
+												<li class="data-item"><span class="data-name">chevron-up-small</span></li>
+												<li class="data-item"><span class="data-name">chevron-right</span></li>
+												<li class="data-item"><span class="data-name">chevron-under</span></li>
+												<li class="data-item"><span class="data-name">chevron-up</span></li>
+												<li class="data-item"><span class="data-name">play-prev</span></li>
+												<li class="data-item"><span class="data-name">pause</span></li>
+												<li class="data-item"><span class="data-name">play-next</span></li>
+												<li class="data-item"><span class="data-name">tune</span></li>
+												<li class="data-item"><span class="data-name">play</span></li>
+												<li class="data-item"><span class="data-name">menu</span></li>
+												<li class="data-item"><span class="data-name">file</span></li>
+												<li class="data-item"><span class="data-name">upload</span></li>
+												<li class="data-item"><span class="data-name">download</span></li>
+												<li class="data-item"><span class="data-name">downloadbox</span></li>
+												<li class="data-item"><span class="data-name">home</span></li>
+												<li class="data-item"><span class="data-name">language</span></li>
+												<li class="data-item"><span class="data-name">search</span></li>
+												<li class="data-item"><span class="data-name">share</span></li>
+												<li class="data-item"><span class="data-name">calendar</span></li>
+												<li class="data-item"><span class="data-name">close</span></li>
+												<li class="data-item"><span class="data-name">copy</span></li>
+												<li class="data-item"><span class="data-name">more-horiz</span></li>
+												<li class="data-item"><span class="data-name">question-mark</span></li>
+												<li class="data-item"><span class="data-name">search-plus</span></li>
+												<li class="data-item"><span class="data-name">trash</span></li>
+												<li class="data-item"><span class="data-name">pdf</span></li>
+												<li class="data-item"><span class="data-name">video</span></li>
+												<li class="data-item"><span class="data-name">chevron-under-circle</span></li>
+												<li class="data-item"><span class="data-name">chevron-up-circle</span></li>
+												<li class="data-item"><span class="data-name">folder-close</span></li>
+												<li class="data-item"><span class="data-name">folder-open</span></li>
+												<li class="data-item"><span class="data-name">plus</span></li>
+												<li class="data-item"><span class="data-name">minus</span></li>
+												<li class="data-item"><span class="data-name">round-arrow</span></li>
+											</ul>
+										</div>
+									</div>
+									<!-- //subsubsection -->
+
+									<div class="icon-test"></div>									
+
+									<!-- subsubsection -->
+									<div class="subsubsection">
+										<div class="subsubsection-head"><%- include('../_mixin/_title.subsubsection.ejs', {name: 'information'}) %></div>
+										<div class="subsubsection-body">
+											<ul class="data-list svg-icon">
+												<li class="data-item"><span class="data-name">alert</span></li>
+												<li class="data-item"><span class="data-name">call</span></li>
+												<li class="data-item"><span class="data-name">check-calendar</span></li>
+												<li class="data-item"><span class="data-name">text</span></li>
+												<li class="data-item"><span class="data-name">email</span></li>
+												<li class="data-item"><span class="data-name">view</span></li>
+												<li class="data-item"><span class="data-name">pin</span></li>
+												<li class="data-item"><span class="data-name">setting</span></li>
+												<li class="data-item"><span class="data-name">time</span></li>
+												<li class="data-item"><span class="data-name">users</span></li>
+												<li class="data-item"><span class="data-name">car</span></li>
+												<li class="data-item"><span class="data-name">bus</span></li>
+												
+											</ul>
+										</div>
+									</div>
+
+									<!-- subsubsection -->
+									<div class="subsubsection">
+										<div class="subsubsection-head"><%- include('../_mixin/_title.subsubsection.ejs', {name: 'bullet'}) %></div>
+										<div class="subsubsection-body">
+											<ul class="data-list svg-icon">
+												<li class="data-item"><span class="data-name">bullet-star</span></li>
+												<li class="data-item"><span class="data-name">bullet-dot</span></li>
+												<li class="data-item"><span class="data-name">bullet-dash</span></li>
+											</ul>
+										</div>
+									</div>
+									<!-- //subsubsection -->
+									<!-- subsubsection -->
+									<div class="subsubsection">
+										<div class="subsubsection-head"><%- include('../_mixin/_title.subsubsection.ejs', {name: 'radio, checkbox'}) %></div>
+										<div class="subsubsection-body">
+											<ul class="data-list svg-icon">
+												<li class="data-item"><span class="data-name">radio-off</span></li>
+												<li class="data-item"><span class="data-name">radio-on</span></li>
+												<li class="data-item"><span class="data-name">check-off</span></li>
+												<li class="data-item"><span class="data-name">check-on</span></li>
+											</ul>
+										</div>
+									</div>
+									<!-- //subsubsection -->
+									<!-- subsubsection -->
+									<div class="subsubsection">
+										<div class="subsubsection-head"><%- include('../_mixin/_title.subsubsection.ejs', {name: 'etc'}) %></div>
+										<div class="subsubsection-body">
+											<ul class="data-list svg-icon">
+												<li class="data-item"><span class="data-name">satellite-land</span></li>
+												<li class="data-item"><span class="data-name">satellite-sky</span></li>
+												<li class="data-item"><span class="data-name">satellite-space</span></li>
+												<li class="data-item"><span class="data-name">earth-hand</span></li>
+												<li class="data-item"><span class="data-name">earth-people</span></li>
+												<li class="data-item"><span class="data-name">earth-flag</span></li>
+												<li class="data-item"><span class="data-name">earth-up</span></li>
+											</ul>
+										</div>
+									</div>
+									<!-- //subsubsection -->
+								</div>
+							</div>
+							<!-- //subsection -->
+						</div>
+					</div>
+					<!-- //section -->
+				</div>
+				<!-- content-body -->
+			</div>
+			<!-- //local-body -->
+		</div>
+		<!-- //page-body -->
+<%-include('../_templates/_footer.front.ejs') %>
+	</div>
+	<!-- //page -->
+</div>
+<script type="text/javascript">
+	document.addEventListener('DOMContentLoaded', function() {
+		var svgIcons = document.querySelectorAll('.svg-icon .data-name');
+		Array.prototype.forEach.call(svgIcons, function(icon) {
+			icon.parentElement.classList.add(icon.textContent);
+		});
+	});
+</script>
+</body>
+</html>

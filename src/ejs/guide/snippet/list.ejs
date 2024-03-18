@@ -1,0 +1,1347 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<%-include('../_templates/_data.header.front.ejs', {
+	pageStyle: 'bui.page.snippet.css',
+	pageJavascript: ''
+}) %>
+</head>
+<body>
+<div id="wrap">
+	<!-- page -->
+	<div id="page">
+<%-include('../_templates/_header.snippet.ejs') %>
+		<!-- page-body -->
+		<div class="page-body" id="local">
+			<!-- local-head -->
+			<div class="local-head">
+				<h2 class="local-subject" id="localTitle"><span class="local-name">snippet</span></h2>
+			</div>
+			<!-- //local-head -->
+			<!-- local-body -->
+			<div class="local-body" id="content">
+				<!-- content-head -->
+				<div class="content-head">
+					<h3 class="content-subject" id="contentSubject"><span class="content-name">list</span></h3>
+				</div>
+				<!-- //content-head -->
+				<!-- content-body -->
+				<div class="content-body">
+					<!-- section -->
+					<div class="section">
+						<div class="section-head"><%- include('../_mixin/_title.section.ejs', {name: 'data list'}) %></div>
+						<div class="section-body">
+							<!-- subsection -->
+							<div class="subsection">
+								<div class="subsection-head"><%- include('../_mixin/_title.subsection.ejs', {name: 'HTML Structure'}) %></div>
+								<div class="subsection-body">
+									<pre class="highlight-js">
+<code class="html">&lt;ul class="data-list"&gt;
+	&lt;li class="data-item"&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="data-list"&gt;
+	&lt;p class="data-item"&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit.&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+								</div>
+							</div>
+							<!-- //subsection -->
+							<!-- subsection -->
+							<div class="subsection">
+								<div class="subsection-head"><%- include('../_mixin/_title.subsection.ejs', {name: 'Class Options'}) %></div>
+								<div class="subsection-body">
+									<!--data-table-->
+									<div class="data-table module-bui type-a">
+										<table>
+											<colgroup>
+												<col style="width: 128rem;">
+												<col>
+											</colgroup>
+											<tbody>
+												<tr>
+													<th scope="row">module</th>
+													<td>data-list</td>
+												</tr>
+												<tr>
+													<th scope="row">style</th>
+													<td>style-*</td>
+												</tr>
+												<tr>
+													<th scope="row">accent</th>
+													<td>normal-*, accent-*</td>
+												</tr>
+												<tr>
+													<th scope="row">outline</th>
+													<td>small-2x, small-1x, small, medium, large, large-1x, large-2x</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+									<!--//data-table-->
+								</div>
+							</div>
+							<!-- //subsection -->
+
+							<!-- subsection: type -->
+							<div class="subsection">
+								<div class="subsection-head"><%- include('../_mixin/_title.subsection.ejs', {name: 'type'}) %></div>
+								<div class="subsection-body">
+									<!-- subsubsection -->
+									<div class="subsubsection">
+										<!-- highlight-js -->
+										<pre class="highlight-js">
+<code class="html">&lt;ul class="data-list module-a type-a normal-00 small-1x"&gt
+&lt;ul class="data-list module-a type-b normal-00 small-1x"&gt;
+&lt;ul class="data-list module-a type-c normal-00 small-1x"&gt;
+&lt;ul class="data-list module-a type-d normal-00 small-1x"&gt;</code></pre>
+										<!-- //highlight-js -->
+										<div class="subsubsection-head"><%- include('../_mixin/_title.subsubsection.ejs', {name: 'type-a'}) %></div>
+										<div class="subsubsection-body">
+											<!-- data-list -->
+											<ul class="data-list module-a type-a normal-00 small-1x">
+												<li class="data-item">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</li>
+											</ul>
+											<!-- //data-list -->
+										</div>
+									</div>
+									
+									<!-- //subsubsection -->
+									<!-- subsubsection -->
+									<div class="subsubsection">
+										<div class="subsubsection-head"><%- include('../_mixin/_title.subsubsection.ejs', {name: 'type-b'}) %></div>
+										<div class="subsubsection-body">
+											<!-- data-list -->
+											<ul class="data-list module-a type-b normal-00 small-1x">
+												<li class="data-item">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</li>
+											</ul>
+											<!-- //data-list -->
+										</div>
+									</div>
+									<!-- //subsubsection -->
+									<!-- subsubsection -->
+									<div class="subsubsection">
+										<div class="subsubsection-head"><%- include('../_mixin/_title.subsubsection.ejs', {name: 'type-c'}) %></div>
+										<div class="subsubsection-body">
+											<!-- data-list -->
+											<ul class="data-list module-a type-c normal-00 small-1x">
+												<li class="data-item">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</li>
+											</ul>
+											<!-- //data-list -->
+										</div>
+									</div>
+									<!-- //subsubsection -->
+									<!-- subsubsection -->
+									<div class="subsubsection">
+										<div class="subsubsection-head"><%- include('../_mixin/_title.subsubsection.ejs', {name: 'type-d'}) %></div>
+										<div class="subsubsection-body">
+											<!-- data-list -->
+											<ul class="data-list module-a type-d normal-00 small-1x">
+												<li class="data-item">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</li>
+											</ul>
+											<!-- //data-list -->
+										</div>
+									</div>
+									<!-- //subsubsection -->
+								</div>
+							</div>
+							<!-- //subsection: type -->
+							
+							<!-- subsection: accent -->
+							<div class="subsection">
+								<div class="subsection-head"><%- include('../_mixin/_title.subsection.ejs', {name: 'accent'}) %></div>
+								<div class="subsection-body">
+									<!-- subsubsection -->
+									<div class="subsubsection">
+										<!-- highlight-js -->
+										<pre class="highlight-js">
+<code class="html">&lt;ul class="data-list module-a type-c normal-01 small-1x"&gt
+&lt;ul class="data-list module-a type-c normal-02 small-1x"&gt;
+&lt;ul class="data-list module-a type-c normal-03 small-1x"&gt;
+&lt;ul class="data-list module-a type-c normal-04 small-1x"&gt;</code></pre>
+										<!-- //highlight-js -->
+										<div class="subsubsection-head"><%- include('../_mixin/_title.subsubsection.ejs', {name: 'normal-01'}) %></div>
+										<div class="subsubsection-body">
+											<!-- data-list -->
+											<ul class="data-list module-a type-c normal-00 small-1x">
+												<li class="data-item">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</li>
+											</ul>
+											<!-- //data-list -->
+										</div>
+									</div>
+									
+									<!-- //subsubsection -->
+									<!-- subsubsection -->
+									<div class="subsubsection">
+										<div class="subsubsection-head"><%- include('../_mixin/_title.subsubsection.ejs', {name: 'normal-02'}) %></div>
+										<div class="subsubsection-body">
+											<!-- data-list -->
+											<ul class="data-list module-a type-c normal-01 small-1x">
+												<li class="data-item">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</li>
+											</ul>
+											<!-- //data-list -->
+										</div>
+									</div>
+									<!-- //subsubsection -->
+									<!-- subsubsection -->
+									<div class="subsubsection">
+										<div class="subsubsection-head"><%- include('../_mixin/_title.subsubsection.ejs', {name: 'normal-03'}) %></div>
+										<div class="subsubsection-body">
+											<!-- data-list -->
+											<ul class="data-list module-a type-c normal-02 small-1x">
+												<li class="data-item">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</li>
+											</ul>
+											<!-- //data-list -->
+										</div>
+									</div>
+									<!-- //subsubsection -->
+									<!-- subsubsection -->
+									<div class="subsubsection">
+										<div class="subsubsection-head"><%- include('../_mixin/_title.subsubsection.ejs', {name: 'normal-04'}) %></div>
+										<div class="subsubsection-body">
+											<!-- data-list -->
+											<ul class="data-list module-a type-c normal-03 small-1x">
+												<li class="data-item">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</li>
+											</ul>
+											<!-- //data-list -->
+										</div>
+									</div>
+									<!-- //subsubsection -->
+								</div>
+							</div>
+							<!-- //subsection: accent -->
+
+							<!-- subsection: outline -->
+							<div class="subsection">
+								<div class="subsection-head"><%- include('../_mixin/_title.subsection.ejs', {name: 'outline'}) %></div>
+								<div class="subsection-body">
+									<!-- subsubsection -->
+									<div class="subsubsection">
+										<!-- highlight-js -->
+										<pre class="highlight-js">
+<code class="html">&lt;ul class="data-list module-a type-b normal-00 small"&gt;
+&lt;ul class="data-list module-a type-b normal-00 medium"&gt;
+&lt;ul class="data-list module-a type-b normal-00 large"&gt;</code></pre>
+										<!-- //highlight-js -->
+										<div class="subsubsection-head"><%- include('../_mixin/_title.subsubsection.ejs', {name: 'small-1x'}) %></div>
+										<div class="subsubsection-body">
+											<!-- data-list -->
+											<ul class="data-list module-a type-b normal-00 small-1x">
+												<li class="data-item">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</li>
+											</ul>
+											<!-- //data-list -->
+										</div>
+									</div>
+									
+									<!-- //subsubsection -->
+									<!-- subsubsection -->
+									<div class="subsubsection">
+										<div class="subsubsection-head"><%- include('../_mixin/_title.subsubsection.ejs', {name: 'small'}) %></div>
+										<div class="subsubsection-body">
+											<!-- data-list -->
+											<ul class="data-list module-a type-b normal-00 small">
+												<li class="data-item">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</li>
+											</ul>
+											<!-- //data-list -->
+										</div>
+									</div>
+									<!-- //subsubsection -->
+									<!-- subsubsection -->
+									<div class="subsubsection">
+										<div class="subsubsection-head"><%- include('../_mixin/_title.subsubsection.ejs', {name: 'medium'}) %></div>
+										<div class="subsubsection-body">
+											<!-- data-list -->
+											<ul class="data-list module-a type-b normal-00 medium">
+												<li class="data-item">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</li>
+											</ul>
+											<!-- //data-list -->
+										</div>
+									</div>
+									<!-- //subsubsection -->
+								</div>
+							</div>
+							<!-- //subsection: outline -->
+				
+						</div>
+					</div>
+					<!-- //section -->
+					<!-- section -->
+					<div class="section">
+						<div class="section-head"><%- include('../_mixin/_title.section.ejs', {name: 'order list'}) %></div>
+						<div class="section-body">
+							<!-- subsection -->
+							<div class="subsection">
+								<div class="subsection-head"><%- include('../_mixin/_title.subsection.ejs', {name: 'HTML Structure'}) %></div>
+								<div class="subsection-body">
+									<pre class="highlight-js">
+<code class="html">&lt;ul class="order-list"&gt;
+	&lt;li class="order-item"&gt;
+		&lt;ul class="data-list"&gt;
+			&lt;li class="data-item"&gt;&lt;/li&gt;
+			&lt;li class="data-item"&gt;&lt;/li&gt;
+			&lt;li class="data-item"&gt;&lt;/li&gt;
+		&lt;/ul&gt;
+	&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+								</div>
+							</div>
+							<!-- //subsection -->
+							<!-- subsection -->
+							<div class="subsection">
+								<div class="subsection-head"><%- include('../_mixin/_title.subsection.ejs', {name: 'Class Options'}) %></div>
+								<div class="subsection-body">
+									<!--data-table-->
+									<div class="data-table module-bui type-a">
+										<table>
+											<colgroup>
+												<col style="width: 128rem;">
+												<col>
+											</colgroup>
+											<tbody>
+												<tr>
+													<th scope="row">module</th>
+													<td>data-list</td>
+												</tr>
+												<tr>
+													<th scope="row">style</th>
+													<td>style-*</td>
+												</tr>
+												<tr>
+													<th scope="row">accent</th>
+													<td>normal-*, accent-*</td>
+												</tr>
+												<tr>
+													<th scope="row">outline</th>
+													<td>small-2x, small-1x, small, medium, large, large-1x, large-2x</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+									<!--//data-table-->
+								</div>
+							</div>
+							<!-- //subsection -->
+			
+							<!-- subsection: type -->
+							<div class="subsection">
+								<div class="subsection-head"><%- include('../_mixin/_title.subsection.ejs', {name: 'order-list'}) %></div>
+								<div class="subsection-body">
+									<!-- subsubsection -->
+									<div class="subsubsection">
+										<!-- highlight-js -->
+										<pre class="highlight-js">
+<code class="html">&lt;ul class="order-list module-a type-a normal-00 medium"&gt;
+	&lt;li class="order-item"&gt;
+		&lt;ul class="data-list module-a type-a normal-00 small-2x"&gt;
+			&lt;li class="data-item"&gt;&lt;/li&gt;
+			&lt;li class="data-item"&gt;&lt;/li&gt;
+			&lt;li class="data-item"&gt;&lt;/li&gt;
+		&lt;/ul&gt;
+	&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+										<!-- //highlight-js -->
+										<div class="subsubsection-head"><%- include('../_mixin/_title.subsubsection.ejs', {name: 'type-a'}) %></div>
+										<div class="subsubsection-body">
+											<!-- order-list -->
+											<ol class="order-list module-a type-a small-1x normal-01">
+												<li class="order-item">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</li>
+												<li class="order-item">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</li>
+												<li class="order-item">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</li>
+												<li class="order-item">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</li>
+												<li class="order-item">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</li>
+											</ol>
+											<!-- //order-list -->
+											<br /><br /><br /><br /><br />
+											<!-- order-list -->
+											<ol class="order-list module-b style-a type-a small-1x normal-02">
+												<li class="order-item">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</li>
+												<li class="order-item">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</li>
+												<li class="order-item">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</li>
+												<li class="order-item">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</li>
+												<li class="order-item">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</li>
+											</ol>
+											<!-- //order-list -->
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- //subsection -->
+
+							<!-- subsection -->
+							<div class="subsection">
+								<div class="subsection-head"><%- include('../_mixin/_title.subsection.ejs', {name: 'demos'}) %></div>
+								<div class="subsection-body">															
+									<div class="subsubsection">
+										<div class="subsubsection-head"><%- include('../_mixin/_title.subsubsection.ejs', {name: '오시는길- 승용차'}) %></span></h6></div>
+										<div class="subsubsection-body">
+											<!-- order-list -->
+											<ol class="order-list module-b style-a type-a small-1x normal-02">
+												<li class="order-item">행주대교 남단 IC(부천(국도 39호선),수도권매립지방향)</li>
+												<li class="order-item">정서진로(경인아라뱃길)따라 직진 (약 11km진입 시 좌측 빨간 건물단지 보임)</li>
+												<li class="order-item">종합 환경연구단지로 좌회전하라는 표지판에서 좌회전</li>
+												<li class="order-item">국립환경과학원(종합환경연구단지)</li>
+											</ol>
+											<!-- //order-list -->
+											<br /><br />
+											<!-- order-list -->
+											<ol class="order-list module-b style-a type-a small-1x normal-02">
+												<li class="order-item">인천공항고속도로(북인천IC)</li>
+												<li class="order-item">지하차도 위 우측방향 진입</li>
+												<li class="order-item">사거리 좌회전</li>
+												<li class="order-item">생물자원관 정문 이용 진입</li>
+												<li class="order-item">국립환경과학원(종합환경연구단지)</li>
+											</ol>
+											<!-- //order-list -->
+										</div>
+									</div>
+
+								</div>
+							</div>
+							<!-- //subsection -->
+
+						</div>
+					</div>
+					<!-- //section -->
+
+					<!-- section -->
+					<div class="section">
+						<div class="section-head"><%- include('../_mixin/_title.section.ejs', {name: 'data-display'}) %></div>
+						<div class="section-body">
+							<!-- subsection -->
+							<div class="subsection">
+								<div class="subsection-head"><%- include('../_mixin/_title.subsection.ejs', {name: 'HTML Structure'}) %></div>
+								<div class="subsection-body">
+									<pre class="highlight-js">
+<code class="html">&lt;ul class="data-list"&gt;
+	&lt;li class="data-item"&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="data-list"&gt;
+	&lt;p class="data-item"&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit.&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+								</div>
+							</div>
+							<!-- //subsection -->
+							<!-- subsection -->
+							<div class="subsection">
+								<div class="subsection-head"><%- include('../_mixin/_title.subsection.ejs', {name: 'Class Options'}) %></div>
+								<div class="subsection-body">
+									<!--data-table-->
+									<div class="data-table module-bui type-a">
+										<table>
+											<colgroup>
+												<col style="width: 128rem;">
+												<col>
+											</colgroup>
+											<tbody>
+												<tr>
+													<th scope="row">module</th>
+													<td>data-list</td>
+												</tr>
+												<tr>
+													<th scope="row">type</th>
+													<td>type-*</td>
+												</tr>
+												<tr>
+													<th scope="row">style</th>
+													<td>style-*</td>
+												</tr>
+												<tr>
+													<th scope="row">accent</th>
+													<td>normal-*, accent-*</td>
+												</tr>
+												<tr>
+													<th scope="row">outline</th>
+													<td>small-1x, small, medium, large, large-1x</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+									<!--//data-table-->
+								</div>
+							</div>
+							<!-- //subsection -->
+							<!-- subsection -->
+							<div class="subsection">
+								<div class="subsection-head"><%- include('../_mixin/_title.subsection.ejs', {name: 'module-a'}) %></div>
+								<div class="subsection-body">
+									<!-- highlight-js -->
+									<pre class="highlight-js"><code class="html">&lt;div class="data-display module-c style-* type-* normal-* small"&gt;
+	&lt;ul class="data-list"&gt;
+		&lt;li class="data-item"&gt;
+			&lt;div class="data-wrap"&gt;
+				&lt;div class="data-head"&gt;
+					&lt;p class="data-subject"&gt;&lt;span class="data-name"&gt;name&lt;/span&gt;&lt;/p&gt;
+					&lt;p class="data-summary"&gt;&lt;/p&gt;
+				&lt;/div&gt;
+				&lt;div class="data-body"&gt;&lt;/div&gt;
+			&lt;/div&gt;
+		&lt;/li&gt;
+	&lt;/ul&gt;
+&lt;/div&gt;
+</code></pre>
+									<!-- //highlight-js -->
+									<div class="subsubsection">
+										<div class="subsubsection-head"><%- include('../_mixin/_title.subsubsection.ejs', {name: 'type-a'}) %></div>
+										<div class="subsubsection-body">
+
+											<!-- data-display -->
+											<div class="data-display module-a type-a small-1x">
+												<!-- data-list -->
+												<ul class="data-list">
+													<li class="data-item">
+														<div class="data-wrap">
+															<div class="data-head"><span class="data-name">수집&middot;이용 목적</span></div>
+															<div class="data-body">개인정보 수집 및 이용에 대해 동의를 거부할 권리가 있습니다. 단, 본 동의를 거부할 경우 SK브로드밴드 상품 가입이 제한될 수 있습니다.</div>
+														</div>
+													</li>
+												</ul>
+												<!-- //data-list -->
+											</div>
+										<!--// data-display -->	
+										</div>
+									</div>
+
+									<div class="subsubsection">
+										<div class="subsubsection-head"><%- include('../_mixin/_title.subsubsection.ejs', {name: 'type-b'}) %></div>
+										<div class="subsubsection-body">
+											<!-- data-display -->
+											<div class="data-display module-a type-b small-1x">
+												<!-- data-list -->
+												<ul class="data-list">
+													<li class="data-item">
+														<div class="data-wrap">           
+															<div class="data-head"><span class="data-name">수집&middot;이용 목적</span></div>
+															<div class="data-body">개인정보 수집 및 이용에 대해 동의를 거부할 권리가 있습니다. 단, 본 동의를 거부할 경우 SK브로드밴드 상품 가입이 제한될 수 있습니다.</div>
+														</div>
+													</li>
+												</ul>
+												<!-- //data-list -->
+											</div>
+											<!--// data-display -->
+										</div>
+									</div>
+
+									<div class="subsubsection">
+										<div class="subsubsection-head"><%- include('../_mixin/_title.subsubsection.ejs', {name: 'type-c'}) %></div>
+										<div class="subsubsection-body">
+											<!-- data-display -->
+											<div class="data-display module-a type-c small-1x">
+												<!-- data-list -->
+												<ul class="data-list">
+													<li class="data-item">
+														<div class="data-wrap">
+															<div class="data-head"><span class="data-name">수집&middot;이용 목적</span></div>
+															<div class="data-body">개인정보 수집 및 이용에 대해 동의를 거부할 권리가 있습니다. 단, 본 동의를 거부할 경우 SK브로드밴드 상품 가입이 제한될 수 있습니다.</div>
+														</div>
+													</li>
+												</ul>
+												<!-- //data-list -->
+											</div>
+											<!--// data-display -->
+										</div>
+									</div>
+
+									<div class="subsubsection">
+										<div class="subsubsection-head"><%- include('../_mixin/_title.subsubsection.ejs', {name: 'type-d'}) %></div>
+										<div class="subsubsection-body">
+											<!-- data-display -->
+											<div class="data-display module-a type-d small-1x">
+												<!-- data-list -->
+												<ul class="data-list">
+													<li class="data-item">
+														<div class="data-wrap">
+															<div class="data-head"><span class="data-name">수집&middot;이용 목적</span></div>
+															<div class="data-body">개인정보 수집 및 이용에 대해 동의를 거부할 권리가 있습니다. 단, 본 동의를 거부할 경우 SK브로드밴드 상품 가입이 제한될 수 있습니다.</div>
+														</div>
+													</li>
+												</ul>
+												<!-- //data-list -->
+											</div>
+											<!--// data-display -->
+										</div>
+									</div>
+
+									<br/><br/><br/>
+
+									<div class="subsubsection">
+										<div class="subsubsection-head"><%- include('../_mixin/_title.subsubsection.ejs', {name: '조직구성도'}) %></span></h6></div>
+										<div class="subsubsection-body">
+											<!-- data-display -->
+											<div class="data-display member-info">
+												<!-- data-list -->
+												<ul class="data-list">
+													<li class="data-item">
+														<div class="data-wrap">
+															<div class="data-head"><p class="data-subject"><span class="data-name">이동원</span></p></div>
+															<div class="data-body">
+																<p class="para">환경위성 정규운영 총괄, 자료공유관련 국내외 협력 업무</p>
+																<ul class="data-list">
+																	<li class="data-item tel"><span class="head">전화번호</span> <span class="body">030&#45;560&#45;8430</span></li>
+																	<li class="data-item mail"><span class="head">이메일</span> <span class="body">ex12&#64;korea.kr</span></li>
+																</ul>
+															</div>
+														</div>
+													</li>
+													<li class="data-item">
+														<div class="data-wrap">
+															<div class="data-head"><p class="data-subject"><span class="data-name">이동원</span></p></div>
+															<div class="data-body">
+																<p class="para">환경위성 정규운영 총괄, 자료공유관련 국내외 협력 업무</p>
+																<ul class="data-list">
+																	<li class="data-item tel"><span class="head">전화번호</span> <span class="body">030&#45;560&#45;8430</span></li>
+																	<li class="data-item mail"><span class="head">이메일</span> <span class="body">ex12&#64;korea.kr</span></li>
+																</ul>
+															</div>
+														</div>
+													</li>
+													<li class="data-item">
+														<div class="data-wrap">
+															<div class="data-head"><p class="data-subject"><span class="data-name">이동원</span></p></div>
+															<div class="data-body">
+																<p class="para">환경위성 정규운영 총괄, 자료공유관련 국내외 협력 업무</p>
+																<ul class="data-list">
+																	<li class="data-item tel"><span class="head">전화번호</span> <span class="body">030&#45;560&#45;8430</span></li>
+																	<li class="data-item mail"><span class="head">이메일</span> <span class="body">ex12&#64;korea.kr</span></li>
+																</ul>
+															</div>
+														</div>
+													</li>
+													<li class="data-item">
+														<div class="data-wrap">
+															<div class="data-head"><p class="data-subject"><span class="data-name">이동원</span></p></div>
+															<div class="data-body">
+																<p class="para">환경위성 정규운영 총괄, 자료공유관련 국내외 협력 업무</p>
+																<ul class="data-list">
+																	<li class="data-item tel"><span class="head">전화번호</span> <span class="body">030&#45;560&#45;8430</span></li>
+																	<li class="data-item mail"><span class="head">이메일</span> <span class="body">ex12&#64;korea.kr</span></li>
+																</ul>
+															</div>
+														</div>
+													</li>
+													<li class="data-item">
+														<div class="data-wrap">
+															<div class="data-head"><p class="data-subject"><span class="data-name">이동원</span></p></div>
+															<div class="data-body">
+																<p class="para">환경위성 정규운영 총괄, 자료공유관련 국내외 협력 업무</p>
+																<ul class="data-list">
+																	<li class="data-item tel"><span class="head">전화번호</span> <span class="body">030&#45;560&#45;8430</span></li>
+																	<li class="data-item mail"><span class="head">이메일</span> <span class="body">ex12&#64;korea.kr</span></li>
+																</ul>
+															</div>
+														</div>
+													</li>
+													<li class="data-item">
+														<div class="data-wrap">
+															<div class="data-head"><p class="data-subject"><span class="data-name">이동원</span></p></div>
+															<div class="data-body">
+																<p class="para">환경위성 정규운영 총괄, 자료공유관련 국내외 협력 업무</p>
+																<ul class="data-list">
+																	<li class="data-item tel"><span class="head">전화번호</span> <span class="body">030&#45;560&#45;8430</span></li>
+																	<li class="data-item mail"><span class="head">이메일</span> <span class="body">ex12&#64;korea.kr</span></li>
+																</ul>
+															</div>
+														</div>
+													</li>
+												</ul>
+												<!-- //data-list -->
+
+											</div>
+											<!--// data-display -->	
+										</div>
+									</div>
+
+									<br/><br/><br/>
+
+									<div class="subsubsection">
+										<div class="subsubsection-head"><%- include('../_mixin/_title.subsubsection.ejs', {name: '조직도'}) %></span></h6></div>
+										<div class="subsubsection-body">
+											<!-- data-display -->
+											<div class="data-display organization-chart">
+												<!-- data-list -->
+												<div class="data-list">
+													<div class="data-item">
+														<div class="data-wrap">
+															<div class="data-head">
+																<p class="data-subject"><span class="data-name">환경위성센터 센터장</span></p>
+																<p class="data-summary">환경위성센터 업무 총괄</p>
+															</div>
+															<div class="data-body">
+																<div class="data-display">
+																	<ul class="data-list">
+																		<li class="data-item">
+																			<div class="data-wrap">
+																				<div class="data-head">
+																					<p class="data-subject"><span class="data-name">개발팀</span></p>
+																				</div>
+																				<div class="data-body">
+																					<!-- data-list -->
+																					<ul class="data-list module-a type-c normal-02 small-1x">
+																						<li class="data-item">환경위성 자료처리 알고리즘 개발</li>
+																						<li class="data-item">환경위성 검증 네트워크 구축</li>
+																						<li class="data-item">차세대 환경 / 온실가스 위성 개발</li>
+																					</ul>
+																					<!-- //data-list -->
+																				</div>
+																			</div>
+																		</li>
+																		<li class="data-item">
+																			<div class="data-wrap">
+																				<div class="data-head">
+																					<p class="data-subject"><span class="data-name">운영팀</span></p>
+																				</div>
+																				<div class="data-body">
+																					<!-- data-list -->
+																					<ul class="data-list module-a type-c normal-02 small-1x">
+																						<li class="data-item">환경위성 지상국 운영</li>
+																						<li class="data-item">환경위성 전처리 자료 품질관리</li>
+																						<li class="data-item">환경위성센터 시설 관리 및 홍보</li>
+																					</ul>
+																					<!-- //data-list -->
+																				</div>
+																			</div>
+																		</li>
+																		<li class="data-item">
+																			<div class="data-wrap">
+																				<div class="data-head">
+																					<p class="data-subject"><span class="data-name">분석활용팀</span></p>
+																				</div>
+																				<div class="data-body">
+																					<!-- data-list -->
+																					<ul class="data-list module-a type-c normal-02 small-1x">
+																						<li class="data-item">위성자료 분석ㆍ활용 연구</li>
+																						<li class="data-item">환경위성 활용 기술 개발</li>
+																						<li class="data-item">위성자료 기반 대기질 예보 지원</li>
+																					</ul>
+																					<!-- //data-list -->
+																				</div>
+																			</div>
+																		</li>
+																	</ul>
+																</div>
+													
+															</div>
+														</div>
+													</div>
+												</div>
+												<!-- //data-list -->
+
+											</div>
+											<!--// data-display -->	
+										</div>
+									</div>
+
+									<br/><br/><br/>
+
+									<div class="subsubsection">
+										<div class="subsubsection-head"><%- include('../_mixin/_title.subsubsection.ejs', {name: '개인정보 수집 동의'}) %></span></h6></div>
+										<div class="subsubsection-body">
+											<!-- data-display -->
+											<div class="data-display module-a style-a type-c">
+												<!-- data-list -->
+												<ul class="data-list">
+													<li class="data-item">
+														<div class="data-wrap">
+															<div class="data-head"><p class="data-subject"><span class="data-name">1. 수집 이용 목적</span></p></div>
+															<div class="data-body">
+																<!-- data-list -->
+																<ul class="data-list module-a type-a normal-02 small-2x">
+																	<li class="data-item">환경위성센터 자료서비스 OPEN-API 서비스 키 발급</li>
+																</ul>
+																<!-- //data-list -->
+															</div>
+														</div>
+													</li>
+													<li class="data-item">
+														<div class="data-wrap">
+															<div class="data-head"><p class="data-subject"><span class="data-name">2. 수집 항목</span></p></div>
+															<div class="data-body">
+																<!-- data-list -->
+																<ul class="data-list module-a type-a normal-02 small-2x">
+																	<li class="data-item">이메일 주소</li>
+																</ul>
+																<!-- //data-list -->
+															</div>
+														</div>
+													</li>
+													<li class="data-item">
+														<div class="data-wrap">
+															<div class="data-head"><p class="data-subject"><span class="data-name">3. 보유, 이용기간</span></p></div>
+															<div class="data-body">
+																<!-- data-list -->
+																<ul class="data-list module-a type-a normal-02 small-2x">
+																	<li class="data-item">신청일로부터 3개월까지 보관/이용 후 파기</li>
+																</ul>
+																<!-- //data-list -->
+															</div>
+														</div>
+													</li>
+													<li class="data-item">
+														<div class="data-wrap">
+															<div class="data-head"><p class="data-subject"><span class="data-name">4. 개인정보의 수집 및 이용 거부</span></p></div>
+															<div class="data-body">
+																<!-- data-list -->
+																<ul class="data-list module-a type-a normal-02 small-2x">
+																	<li class="data-item">개인정보 수집 및 이용에 대한 동의를 거부할 권리가 있습니다. 단, 본 동의를 거부할 경우 환경위성센터 자료서비스 키 발급 신청이 제한될 수 있습니다.</li>
+																</ul>
+																<!-- //data-list -->
+															</div>
+														</div>
+													</li>
+
+												</ul>
+												<!-- //data-list -->
+											</div>
+											<!--// data-display -->	
+										</div>
+									</div>
+
+									<br/><br/><br/>
+
+									<div class="subsubsection">
+										<div class="subsubsection-head"><%- include('../_mixin/_title.subsubsection.ejs', {name: '연혁'}) %></span></h6></div>
+										<div class="subsubsection-body">
+											<!-- data-display -->
+											<div class="data-display module-a style-b type-c">
+												<!-- data-list -->
+												<ul class="data-list">
+													<li class="data-item">
+														<div class="data-wrap">
+															<div class="data-head"><p class="data-subject"><span class="data-name">2020</span></p></div>
+															<div class="data-body">
+																<ul class="data-list">
+																	<li class="data-item"><span class="head">2020.02</span> <span class="body">천리안 위성 2B호 발사</span></li>
+																</ul>
+															</div>
+														</div>
+													</li>
+													<li class="data-item">
+														<div class="data-wrap">
+															<div class="data-head"><p class="data-subject"><span class="data-name">2018</span></p></div>
+															<div class="data-body">
+																<ul class="data-list">
+																	<li class="data-item"><span class="head">2018.03</span> <span class="body">국립환경과학원 기후대기연구부 환경위성센터 신설</span></li>
+																	<li class="data-item"><span class="head">2018.02</span> <span class="body">환경위성센터 준공</span></li>
+																</ul>
+															</div>
+														</div>
+													</li>
+													<li class="data-item">
+														<div class="data-wrap">
+															<div class="data-head"><p class="data-subject"><span class="data-name">2012</span></p></div>
+															<div class="data-body">
+																<ul class="data-list">
+																	<li class="data-item"><span class="head">2012.09</span> <span class="body">천리안위성 2B호(GEMS) 개발 착수</span></li>
+																	<li class="data-item"><span class="head">2012.08</span> <span class="body">환경위성 사업추진단 </span></li>
+																</ul>
+															</div>
+														</div>
+													</li>
+													<li class="data-item">
+														<div class="data-wrap">
+															<div class="data-head"><p class="data-subject"><span class="data-name">2009</span></p></div>
+															<div class="data-body">
+																<ul class="data-list">
+																	<li class="data-item"><span class="head">2009.09</span> <span class="body">지구환경위성 사업단</span></li>
+																</ul>
+															</div>
+														</div>
+													</li>
+													<li class="data-item">
+														<div class="data-wrap">
+															<div class="data-head"><p class="data-subject"><span class="data-name">2008</span></p></div>
+															<div class="data-body">
+																<ul class="data-list">
+																	<li class="data-item"><span class="head">2008.07</span> <span class="body">환경위성탑재체 기획연구 수행</span></li>
+																</ul>
+															</div>
+														</div>
+													</li>
+
+
+												</ul>
+												<!-- //data-list -->
+											</div>
+											<!--// data-display -->	
+										</div>
+									</div>
+
+									<br/><br/><br/>
+
+								</div>
+							</div>
+							<!-- //subsection -->
+
+
+							<!-- subsection -->
+							<div class="subsection">
+								<div class="subsection-head"><%- include('../_mixin/_title.subsection.ejs', {name: 'module-b'}) %></div>
+								<div class="subsection-body">															
+									<div class="subsubsection">
+										<div class="subsubsection-head"><%- include('../_mixin/_title.subsubsection.ejs', {name: 'module-b style-a'}) %></span></h6></div>
+										<div class="subsubsection-body">
+											<!-- data-display -->
+											<div class="data-display module-b style-a type-c">
+												<!-- data-list -->
+												<ul class="data-list">
+													<li class="data-item">
+														<div class="data-wrap">
+															<div class="data-head"><p class="data-subject"><span class="data-name">선구자적인 역할</span></p></div>
+															<div class="data-body">국내 환경위성 최초 개발 및 세계 최초의 정지궤도 환경관측 위성 개발·운영으로 선구자적인 역할</div>
+														</div>
+													</li>
+													<li class="data-item">
+														<div class="data-wrap">
+															<div class="data-head"><p class="data-subject"><span class="data-name">세계적인 리더쉽 확보</span></p></div>
+															<div class="data-body">세계최초 정지궤도 복합위성 환경탑재체 운영 국가로 기후·대기 분야의 세계적 리더쉽 확보</div>
+														</div>
+													</li>
+													<li class="data-item">
+														<div class="data-wrap">
+															<div class="data-head"><p class="data-subject"><span class="data-name">수혜국에서 생산국으로 국격 향상</span></p></div>
+															<div class="data-body">동아시아 영역에 대한 환경위성 관측자료 생산·지원을 통해 위성자료 수혜국에서 생산국으로 국격 향상</div>
+														</div>
+													</li>
+													<li class="data-item">
+														<div class="data-wrap">
+															<div class="data-head"><p class="data-subject"><span class="data-name">환경감시의 중추적인 역할</span></p></div>
+															<div class="data-body">세계 3대 정지궤도 환경위성 보유국으로 미국, 유럽과 함께 전지구 환경감시의 중추적인 역할 수행</div>
+														</div>
+													</li>
+												</ul>
+												<!-- //data-list -->
+											</div>
+											<!--// data-display -->	
+										</div>
+									</div>
+
+									<br/><br/><br/>
+
+									<div class="subsubsection">
+										<div class="subsubsection-head"><%- include('../_mixin/_title.subsubsection.ejs', {name: 'module-b style-b'}) %></span></h6></div>
+										<div class="subsubsection-body">
+											<!-- data-display -->
+											<div class="data-display module-b style-b type-c">
+												<!-- data-list -->
+												<ul class="data-list">
+													<li class="data-item">
+														<div class="data-wrap">
+															<div class="data-head"><p class="data-subject"><span class="data-name">위성 운영</span></p></div>
+															<div class="data-body">
+																<!-- data-list -->
+																<ul class="data-list module-a type-c normal-02 small-1x">
+																	<li class="data-item">환경위성 운영 및 관측자료의 수신·처리·보존 및 배포</li>
+																	<li class="data-item">환경위성센터 장비의 운영 및 관리</li>
+																	<li class="data-item">환경위성 선진기술 도입 및 자료 공유를 위한 국내외 협력</li>
+																</ul>
+																<!-- //data-list -->
+															</div>
+														</div>
+													</li>
+													<li class="data-item">
+														<div class="data-wrap">
+															<div class="data-head"><p class="data-subject"><span class="data-name">위성 개발/검증</span></p></div>
+															<div class="data-body">
+																<!-- data-list -->
+																<ul class="data-list module-a type-c normal-02 small-1x">
+																	<li class="data-item">환경위성 자료 처리·분석 기술 개발 및 개선</li>
+																	<li class="data-item">환경위성 자료 검증 및 개선</li>
+																	<li class="data-item">차세대 위성 등 후속 위성 개발</li>
+																	<li class="data-item">아시아 환경위성 공동활용 플랫폼 구축 및 운영/제2차 대기질 국제공동조사 수행</li>
+																</ul>
+																<!-- //data-list -->
+															</div>
+														</div>
+													</li>
+													<li class="data-item">
+														<div class="data-wrap">
+															<div class="data-head"><p class="data-subject"><span class="data-name">위성 분석/활용</span></p></div>
+															<div class="data-body">
+																<!-- data-list -->
+																<ul class="data-list module-a type-c normal-02 small-1x">
+																	<li class="data-item">환경위성 자료 지상농도 산출 기술 개발 및 개선</li>
+																	<li class="data-item">환경위성 자료 분석 및 예보 지원</li>
+																	<li class="data-item">국가 환경정책 수립 및 평가를 위한 위성분석자료 제공</li>
+																	<li class="data-item">환경위성 관측자료 활용 기술 발굴 및 보급</li>
+																	<li class="data-item">국내외 위성 관측자료의 수집·분석 활용</li>
+																</ul>
+																<!-- //data-list -->
+															</div>
+														</div>
+													</li>
+												</ul>
+												<!-- //data-list -->
+											</div>
+											<!--// data-display -->	
+										</div>
+									</div>
+
+									<br/><br/><br/>
+
+								</div>
+							</div>
+							<!-- //subsection -->
+
+
+							<!-- subsection -->
+							<div class="subsection">
+								<div class="subsection-head"><%- include('../_mixin/_title.subsection.ejs', {name: 'data-display.vision'}) %></div>
+								<div class="subsection-body">															
+									<div class="subsubsection">
+										<div class="subsubsection-head"><%- include('../_mixin/_title.subsubsection.ejs', {name: 'vision.style-a'}) %></span></h6></div>
+										<div class="subsubsection-body">
+											<!-- data-display -->
+											<div class="data-display vision style-a">
+												<!-- data-list -->
+												<ul class="data-list">
+													<li class="data-item">
+														<div class="data-wrap">
+															<div class="data-head"><p class="data-subject"><span class="data-name">Observation</span></p></div>
+															<div class="data-body"><span class="wbr">동아시아</span> <span class="wbr">대기오염물질 등 관측</span></div>
+														</div>
+													</li>
+													<li class="data-item">
+														<div class="data-wrap">
+															<div class="data-head"><p class="data-subject"><span class="data-name">Development</span></p></div>
+															<div class="data-body"><span class="wbr">위성자료</span> <span class="wbr">활용 기술 개발</span></div>
+														</div>
+													</li>
+													<li class="data-item">
+														<div class="data-wrap">
+															<div class="data-head"><p class="data-subject"><span class="data-name">Environment</span></p></div>
+															<div class="data-body"><span class="wbr">한국 미국 유럽 공동</span> <span class="wbr">전지구 환경변화 관측</span></div>
+														</div>
+													</li>
+												</ul>
+												<!-- //data-list -->
+											</div>
+											<!--// data-display -->	
+										</div>
+									</div>
+
+									<br/><br/><br/>
+
+									<div class="subsubsection">
+										<div class="subsubsection-head"><%- include('../_mixin/_title.subsubsection.ejs', {name: 'vision.style-b'}) %></span></h6></div>
+										<div class="subsubsection-body">
+											<!-- data-display -->
+											<div class="data-display vision style-b">
+												<!-- data-list -->
+												<ul class="data-list">
+													<li class="data-item">
+														<div class="data-wrap">
+															<div class="data-head"><p class="data-subject"><span class="data-name"><span class="wbr">환경위성</span> <span class="wbr">개발 및 운영</span></span></p></div>
+														</div>
+													</li>
+													<li class="data-item">
+														<div class="data-wrap">
+															<div class="data-head"><p class="data-subject"><span class="data-name"><span class="data-name"><span class="wbr">동아시아</span> <span class="wbr">환경이슈 해결</span></span></p></div>
+														</div>
+													</li>
+													<li class="data-item">
+														<div class="data-wrap">
+															<div class="data-head"><p class="data-subject"><span class="data-name"><span class="data-name"><span class="wbr">환경위성 국제협력</span> <span class="wbr">및 경쟁력 제고</span></span></p></div>
+														</div>
+													</li>
+												</ul>
+												<!-- //data-list -->
+											</div>
+											<!--// data-display -->	
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- //subsection -->
+
+							<!-- subsection -->
+							<div class="subsection">
+								<div class="subsection-head"><%- include('../_mixin/_title.subsection.ejs', {name: 'data-display.'}) %></div>
+								<div class="subsection-body">															
+									<div class="subsubsection">
+										<div class="subsubsection-head"><%- include('../_mixin/_title.subsubsection.ejs', {name: 'Copyright'}) %></span></h6></div>
+										<div class="subsubsection-body">
+											<!-- data-display -->
+											<div class="data-display copyright">
+												<!-- data-list -->
+												<ul class="data-list">
+													<li class="data-item">
+														<div class="data-wrap">
+															<div class="data-head"><p class="data-subject"><span class="data-name">국립환경과학원 환경위성센터 홈페이지에서 제공하는 모든 자료는 저작권법에 의하여 보호받는 저작물로써 이용자는 아래의 저작권 보호정책을 준수하여야 합니다.
+																</span></p></div>
+															<div class="data-body">
+																<!-- order-list -->
+																<ol class="order-list module-b style-a type-a small-1x normal-02">
+																	<li class="order-item"><span class="wbr">저작권법 제24조의2에 따라 국립환경과학원 환경위성센터에서 저작재산권의 전부를 보유한 저작물의 경우에는 별도의 이용허락 없이 무료로 자유이용이 가능합니다.</span> <span class="wbr">단, 자유이용이 가능한 저작물은 “공공저작물 자유이용허락 표시 기준(공공누리,KOGL) 제1유형 공공누리 이미지 ”을 부착하여 개방하고 있으므로 공공누리 표시가 부착된 저작물인지를 확인한 이후에 자유이용하시기 바랍니다. 자유이용의 경우에는 반드시 저작물의 출처를 구체적으로 표시하여야 합니다.</span></li>
+																	<li class="order-item">환경위성센터 홈페이지에는 환경위성센터가 저작권 전부를 갖고 있지 아니한 자료도 제공되고 있습니다. 또한 우리 환경에 대한 관심과 애정, 환경보전활동에 동참하고자 개인이나 기관, 단체 등에서 무상으로 제공한 자료들도 많이 있으므로 이러한 자료를 자유롭게 이용하기 위해서는 반드시 해당 저작권자의 허락을 받으셔야 합니다. 즉, 공공누리가 부착되지 않은 자료들을 사용하고자 할 경우에는 담당자와 사전에 협의한 이후에 이용하여 주시기 바랍니다.</li>
+																	<li class="order-item">다른 인터넷 사이트 상의 화면에서 환경위성센터 홈페이지의 저작물을 직접 링크시킬 경우에는 링크 이용자가 본 인터넷 저작권 정책을 간과할 수 있으므로 본 인터넷 저작권 정책도 함께 링크해 주시기 바랍니다.</li>
+																	<li class="order-item">홈페이지에서 개방 중인 자료 중 환경위성센터가 저작권 전부를 갖고 있지 아니한 자료(다른 저작자와 저작권을 공유한 자료 등)의 경우에는 저작권 침해의 소지가 있으므로 단순 열람 외에 무단 변경, 복제·배포, 개작 등의 이용은 금지되며 이를 위반할 경우 관련법에 의거 법적 처벌을 받을 수 있음을 알려드립니다. 국립환경과학원은 모든 국민이 안전하게 환경관련 정보를 활용하실 수 있도록 지속적으로 노력하겠습니다.</li>
+																</ol>
+																<!-- //order-list -->
+															</div>
+														</div>
+													</li>
+												
+												</ul>
+												<!-- //data-list -->
+											</div>
+											<!--// data-display -->	
+										</div>
+									</div>
+
+									<br/><br/><br/>
+								</div>
+							</div>
+							<!-- //subsection -->
+
+							<!-- subsection -->
+							<div class="subsection">
+								<div class="subsection-head"><%- include('../_mixin/_title.subsection.ejs', {name: 'data-display.'}) %></div>
+								<div class="subsection-body">															
+									<div class="subsubsection">
+										<div class="subsubsection-head"><%- include('../_mixin/_title.subsubsection.ejs', {name: 'prop-detail'}) %></span></h6></div>
+										<div class="subsubsection-body">
+											<!-- data-display -->
+											<div class="data-display prop-detail">
+												<div class="data-list">
+													<div class="data-item">
+														<div class="data-wrap">
+															<div class="data-head">
+																<p class="data-subject"><a class="data-name" href="#"><span class="wbr">에어로졸</span> <span class="wbr">광학두께</span></a></p>
+															</div>
+															<div class="data-body"><strong>GEMS</strong>,<strong>L2</strong>,AERAOD443,FOR,KR,KR,KR</div>
+														</div>
+													</div>
+													<div class="data-item">
+														<div class="data-wrap">
+															<div class="data-head">
+																<p class="data-subject"><a class="data-name" href="#"><span class="wbr">단일산란</span> <span class="wbr">알베도</span></a></p>
+															</div>
+															<div class="data-body">
+																<strong>GEMS</strong>,<strong>L2</strong>,AERAOD443,FOR,KR
+															</div>
+														</div>
+													</div>
+													<div class="data-item">
+														<div class="data-wrap">
+															<div class="data-head">
+																<p class="data-subject"><a class="data-name" href="#"><span class="wbr">가시광</span> <span class="wbr">에어로졸</span> <span class="wbr">지수</span></a></p>
+															</div>
+															<div class="data-body">
+																<strong>GEMS</strong>,<strong>L2</strong>,AERAOD443,FOR,KR
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+											<!-- //data-display -->
+										</div>
+									</div>
+
+								</div>
+							</div>
+							<!-- //subsection -->
+
+							<!-- subsection -->
+							<div class="subsection">
+								<div class="subsection-head"><%- include('../_mixin/_title.subsection.ejs', {name: 'data-display.'}) %></div>
+								<div class="subsection-body">															
+									<div class="subsubsection">
+										<div class="subsubsection-head"><%- include('../_mixin/_title.subsubsection.ejs', {name: 'color-palette'}) %></span></h6></div>
+										<div class="subsubsection-body">
+											<!-- data-display -->
+											<div class="data-display color-palette">
+												<div class="data-list">
+													<div class="data-item">
+														<div class="data-wrap">
+															<div class="data-head">
+																<p class="data-subject"><span class="data-name">정부청색 GOK Blue</span></p>
+															</div>
+															<div class="data-body">
+																<span class="wbr">C100 M70 Y20 K40</span> <span class="wbr">R0 G55 B100</span> <span class="wbr">PANTONE PANTONE 2955C</span>
+															</div>
+														</div>
+													</div>
+													<div class="data-item">
+														<div class="data-wrap">
+															<div class="data-head">
+																<p class="data-subject"><span class="data-name">정부적색 GOK Red</span></p>
+															</div>
+															<div class="data-body">
+																<span class="wbr">M100 Y80</span> <span class="wbr">R228 G3 B46</span> <span class="wbr">PANTONE PANTONE 1935C</span>
+															</div>
+														</div>
+													</div>
+													<div class="data-item">
+														<div class="data-wrap">
+															<div class="data-head">
+																<p class="data-subject"><span class="data-name">정부회색 GOK Gray</span></p>
+															</div>
+															<div class="data-body">
+																<span class="wbr">K80</span> <span class="wbr">R87 G87 B87</span> <span class="wbr">PANTONE PANTONE Cool Gray 11C</span>
+															</div>
+														</div>
+													</div>
+													<div class="data-item">
+														<div class="data-wrap">
+															<div class="data-head">
+																<p class="data-subject"><span class="data-name">배경색상 : 백색 White</span></p>
+															</div>
+															<div class="data-body">
+																<span class="wbr">K0</span> <span class="wbr">R255 G255 B255</span> <span class="wbr">백색 White</span>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+											<!-- //data-display -->
+										</div>
+									</div>
+
+								</div>
+							</div>
+							<!-- //subsection -->
+
+							<!-- subsection -->
+							<div class="subsection">
+								<div class="subsection-head"><%- include('../_mixin/_title.subsection.ejs', {name: 'data-display.'}) %></div>
+								<div class="subsection-body">															
+									<div class="subsubsection">
+										<div class="subsubsection-head"><%- include('../_mixin/_title.subsubsection.ejs', {name: 'location-info'}) %></span></h6></div>
+										<div class="subsubsection-body">
+											<!-- data-display -->
+											<div class="data-display location-info">
+												<ul class="data-list">
+													<li class="data-item">
+														<div class="data-wrap">
+															<div class="data-head">
+																<p class="data-subject"><span class="data-name">검암역 탑승장 위치</span></p>
+															</div>
+															<div class="data-body">
+																<!-- data-list -->
+																<ul class="data-list">
+																	<li class="data-item">
+																		<div class="data-wrap">
+																			<div class="data-head"><span class="data-name"><span class="em accent-01">07:40~08:45</span>(출근시간)</span></div>
+																			<div class="data-body">공항철도 1번 출구 우측으로 공영주차장 입구(공항철도 사무실 입구)</div>
+																		</div>
+																	</li>
+																	<li class="data-item">
+																		<div class="data-wrap">
+																			<div class="data-head"><span class="data-name"><span class="em accent-01">09:10~22:20</span></span></div>
+																			<div class="data-body">공항철도 1번 출구 횡단보도 건너 셔틀버스 탑승장</div>
+																		</div>
+																	</li>
+																</ul>
+																<!-- //data-list -->
+															</div>
+														</div>
+													</li>
+													<li class="data-item">
+														<div class="data-wrap">
+															<div class="data-head">
+																<p class="data-subject"><span class="data-name">수도권매립지행 탑승장 위치</span></p>
+															</div>
+															<div class="data-body">
+																<!-- data-list -->
+																<ul class="data-list">
+																	<li class="data-item">
+																		<div class="data-wrap">
+																			<div class="data-body"><span class="em accent-01">공항철도 1번 출구 공항버스 탑승장</span></div>
+																		</div>
+																	</li>
+																</ul>
+																<!-- //data-list -->
+															</div>
+														</div>
+													</li>
+												</ul>
+											</div>
+											<!-- //data-display -->
+										</div>
+									</div>
+
+								</div>
+							</div>
+							<!-- //subsection -->
+
+							<!-- subsection -->
+							<div class="subsection">
+								<div class="subsection-head"><%- include('../_mixin/_title.subsection.ejs', {name: 'data-list.'}) %></div>
+								<div class="subsection-body">															
+									<div class="subsubsection">
+										<div class="subsubsection-head"><%- include('../_mixin/_title.subsubsection.ejs', {name: '셔틀버스 운행시간표'}) %></span></h6></div>
+										<div class="subsubsection-body">
+											<!-- data-list -->
+											<ul class="data-list module-a type-c normal-02 small-1x">
+												<li class="data-item">배차간격 30분</li>
+												<li class="data-item">과학원 &gt; 검암 10분 소요</li>
+												<li class="data-item">12시 40분, 18시 40분에는 운행하지 않습니다.</li>
+											</ul>
+											<!-- //data-list -->
+										</div>
+									</div>
+
+								</div>
+							</div>
+							<!-- //subsection -->
+
+							
+							<!-- subsection -->
+							<div class="subsection">
+								<div class="subsection-head"><%- include('../_mixin/_title.subsection.ejs', {name: 'data-display.'}) %></div>
+								<div class="subsection-body">															
+									<div class="subsubsection">
+										<div class="subsubsection-head"><%- include('../_mixin/_title.subsubsection.ejs', {name: '오시는길'}) %></span></h6></div>
+										<div class="subsubsection-body">
+											<!-- data-display -->
+											<div class="data-display way-to-come">
+												<ul class="data-list">
+													<li class="data-item">
+														<div class="data-wrap">
+															<div class="data-head">
+																<p class="data-subject"><span class="data-name">도로명주소 :</span></p>
+															</div>
+															<div class="data-body">인천 서구 환경로 42 국립환경과학원 환경위성센터 (우) 22689</div>
+														</div>
+													</li>
+													<li class="data-item">
+														<div class="data-wrap">
+															<div class="data-head">
+																<p class="data-subject"><span class="data-name">전화번호 :</span></p>
+															</div>
+															<div class="data-body">032-560-7114</div>
+														</div>
+													</li>
+												</ul>
+											</div>
+											<!-- //data-display -->
+										</div>
+									</div>
+
+								</div>
+							</div>
+							<!-- //subsection -->
+
+
+						</div>
+					</div>
+					<!-- //section -->
+				</div>
+				<!-- content-body -->
+			</div>
+			<!-- //local-body -->
+		</div>
+		<!-- //page-body -->
+<%-include('../_templates/_footer.front.ejs') %>
+	</div>
+	<!-- //page -->
+</div>
+<!-- <script type="text/javascript">
+	window.addEventListener('DOMContentLoaded', function() {
+		var buttons = document.querySelectorAll('.bui-button-area .btn');
+		Array.prototype.forEach.call(buttons, function(button) {
+			button.addEventListener('click', function(e) {
+				e.preventDefault();
+			});
+		});
+	});
+</script> -->
+</body>
+</html>

@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<%-include('../_templates/_data.header.front.ejs', {
+	pageStyle: 'bui.page.snippet.css',
+	pageJavascript: ''
+}) %>
+
+<link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+</head>
+<body>
+<div id="wrap">
+	<!-- page -->
+	<div id="page">
+<%-include('../_templates/_header.snippet.ejs') %>
+		<!-- page-body -->
+		<div class="page-body" id="local">
+			<!-- local-head -->
+			<div class="local-head">
+				<h2 class="local-subject" id="localTitle"><span class="local-name">snippet</span></h2>
+			</div>
+			<!-- //local-head -->
+			<!-- local-body -->
+			<div class="local-body" id="content">
+				<!-- content-head -->
+				<div class="content-head"><%- include('../_mixin/_title.content.ejs', {name: 'board'}) %></div>
+				<!-- //content-head -->
+				<!-- content-body -->
+				<div class="content-body">
+					<!-- section -->
+					<div class="section">
+						<div class="section-head"><%- include('../_mixin/_title.section.ejs', {name: 'system'}) %></div>
+						<div class="section-body">
+							<!-- subsection -->
+							<div class="subsection">
+								<div class="subsection-head"><%- include('../_mixin/_title.subsection.ejs', {name: 'HTML Structure'}) %></div>
+								<div class="subsection-body">
+									<!-- highlight-js -->
+									<pre class="highlight-js">
+<code class="html">&lt;!-- info-board --&gt;
+&lt;div class="info-board"&gt;
+	&lt;div class="board-wrap"&gt;
+		&lt;div class="board-head"&gt;
+			&lt;p class="board-caption"&gt;&lt;span class="wbr"&gt;&lt;/span&gt; &lt;span class="wbr"&gt;&lt;/span&gt;&lt;/p&gt;
+			&lt;p class="board-subject"&gt;&lt;span class="wbr"&gt;&lt;/span&gt; &lt;span class="wbr"&gt;&lt;/span&gt;&lt;/p&gt;
+			&lt;p class="board-summary"&gt;&lt;span class="wbr"&gt;&lt;/span&gt; &lt;span class="wbr"&gt;&lt;/span&gt;&lt;/p&gt;
+		&lt;/div&gt;
+		&lt;div class="board-body"&gt;
+			&lt;p class="para"&gt;&lt;span class="wbr"&gt;&lt;/span&gt; &lt;span class="wbr"&gt;&lt;/span&gt;&lt;/p&gt;
+			&lt;p class="para"&gt;&lt;span class="wbr"&gt;&lt;/span&gt; &lt;span class="wbr"&gt;&lt;/span&gt;&lt;/p&gt;
+		&lt;/div&gt;
+		&lt;div class="board-foot"&gt;&lt;/div&gt;
+		&lt;div class="board-util"&gt;&lt;/div&gt;
+		&lt;div class="board-side"&gt;&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+&lt;!-- //info-board --&gt;
+</code></pre>
+									<!-- //highlight-js -->
+								</div>
+							</div>
+							<!-- //subsection -->
+							<!-- subsection -->
+							<div class="subsection">
+								<div class="subsection-head"><%- include('../_mixin/_title.subsection.ejs', {name: 'Class Options'}) %></div>
+								<div class="subsection-body">
+									<!-- data-table -->
+									<div class="data-table module-bui type-a">
+										<table>
+											<colgroup>
+												<col style="width: 128rem;">
+												<col>
+											</colgroup>
+											<tbody>
+												<tr>
+													<th scope="row">module</th>
+													<td>module-*</td>
+												</tr>
+												<tr>
+													<th scope="row">style</th>
+													<td>style-*</td>
+												</tr>
+												<tr>
+													<th scope="row">type</th>
+													<td>type-*</td>
+												</tr>
+												<tr>
+													<th scope="row">accent</th>
+													<td>normal-*, accent-*</td>
+												</tr>
+												<tr>
+													<th scope="row">outline</th>
+													<td>small-1x, small, medium, large, large-1x</td>
+												</tr>
+												<tr>
+													<th scope="row">option</th>
+													<td>attr-*</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+									<!-- //data-table -->
+								</div>
+							</div>
+							<!-- //subsection -->							
+							<!-- subsection -->
+							<div class="subsection">
+								<div class="subsection-head"><%- include('../_mixin/_title.subsection.ejs', {name: 'type'}) %></div>
+								<div class="subsection-body">
+									<!-- subsubsection -->
+									<div class="subsubsection">
+										<div class="subsubsection-head"><%- include('../_mixin/_title.subsubsection.ejs', {name: 'type-a'}) %></div>
+										<div class="subsubsection-body">
+											<!-- info-board -->
+											<div class="info-board module-a type-a large">
+												<div class="board-wrap">
+													<div class="board-head">
+														<!-- <p class="board-caption"></p> -->
+														<p class="board-subject"><span class="board-name">subject name</span></p>
+														<p class="board-summary"><span class="wbr">summary Lorem ipsum dolor sit amet consectetur adipisicing elit.</span></p>
+													</div>
+												</div>
+												<!-- <div class="board-side">
+													asdfadsfsaf
+												</div> -->
+											</div>
+											<!-- //info-board -->
+										</div>
+									</div>
+									<!-- //subsubsection -->
+
+									<!-- subsubsection -->
+									<div class="subsubsection">
+										<div class="subsubsection-head"><%- include('../_mixin/_title.subsubsection.ejs', {name: 'type-b'}) %></div>
+										<div class="subsubsection-body">
+											<!-- info-board -->
+											<div class="info-board module-a type-b large">
+												<div class="board-wrap">
+													<div class="board-head">
+														<!-- <p class="board-caption"></p> -->
+														<p class="board-subject"><span class="board-name">subject name</span></p>
+														<p class="board-summary"><span class="wbr">summary Lorem ipsum dolor sit amet consectetur adipisicing elit.</span></p>
+													</div>
+												</div>
+												<!-- <div class="board-side">
+													asdfadsfsaf
+												</div> -->
+											</div>
+											<!-- //info-board -->
+										</div>
+									</div>
+									<!-- //subsubsection -->
+									<!-- subsubsection -->
+									<div class="subsubsection">
+										<div class="subsubsection-head"><%- include('../_mixin/_title.subsubsection.ejs', {name: 'type-c'}) %></div>
+										<div class="subsubsection-body">
+											<!-- info-board -->
+											<div class="info-board module-a type-c large">
+												<div class="board-wrap">
+													<div class="board-head">
+														<!-- <p class="board-caption"></p> -->
+														<p class="board-subject"><span class="board-name">subject name</span></p>
+														<p class="board-summary"><span class="wbr">summary Lorem ipsum dolor sit amet consectetur adipisicing elit.</span></p>
+													</div>
+												</div>
+												<!-- <div class="board-side">
+													asdfadsfsaf
+												</div> -->
+											</div>
+											<!-- //info-board -->
+										</div>
+									</div>
+									<!-- //subsubsection -->
+								</div>
+							</div>
+							<!-- //subsection -->
+						</div>
+					</div>
+					<!-- //section -->
+
+					<!-- section -->
+					<div class="section">
+						<div class="section-head"><%- include('../_mixin/_title.section.ejs', {name: 'info board'}) %></div>
+						<div class="section-body">
+							<!-- subsection -->
+							<div class="subsection">
+								<div class="subsection-head"><%- include('../_mixin/_title.subsection.ejs', {name: 'module-a'}) %></div>
+								<div class="subsection-body">
+									<!-- subsubsection -->
+									<div class="subsubsection">
+										<div class="subsubsection-head"><%- include('../_mixin/_title.subsubsection.ejs', {name: 'demos'}) %></div>
+										<div class="subsubsection-body">
+											<!-- info-board -->
+											<div class="info-board module-a type-c">
+												<div class="board-wrap">
+													<div class="board-head">
+														<p class="board-summary"><span class="wbr">검색 결과가 없습니다.</span> <span class="wbr">다른 단어로 검색해보세요.</span></p>
+													</div>
+												</div>
+											</div>
+											<!-- //info-board -->
+
+										</div>
+									</div>
+									<!-- //subsubsection -->
+
+									<!-- subsubsection -->
+									<div class="subsubsection">
+										<div class="subsubsection-head"><%- include('../_mixin/_title.subsubsection.ejs', {name: 'demos style-b'}) %></div>
+										<div class="subsubsection-body">
+											<!-- info-board -->
+											<div class="info-board module-a style-b type-c">
+												<div class="board-wrap">
+													<div class="board-head">
+														<p class="board-subject"><span class="board-name"><span class="wbr">세계 최고</span> <span class="em accent-01">환경위성 연구기관</span> 도약</span></p>
+														<p class="board-summary">Space Vision 2030 for the Environment</p>
+													</div>
+												</div>
+											</div>
+											<!-- //info-board -->
+
+										</div>
+									</div>
+									<!-- //subsubsection -->
+
+								</div>
+							<!-- //subsection -->        
+							</div>
+							<!-- //subsection -->
+							<!-- subsection -->
+							<div class="subsection">
+								<div class="subsection-head"><%- include('../_mixin/_title.subsection.ejs', {name: 'module-b'}) %></div>
+								<div class="subsection-body">
+									<!-- subsubsection -->
+									<div class="subsubsection">
+										<div class="subsubsection-head"><%- include('../_mixin/_title.subsubsection.ejs', {name: 'style-a'}) %></div>
+										<div class="subsubsection-body">
+											<!-- info-board -->
+											<div class="info-board module-b style-a type-c attr-nodata">
+												<div class="board-wrap">
+													<div class="board-head">
+														<p class="board-subject"><span class="board-name">원하시는 페이지를 찾을 수 없습니다.</span></p>
+														<p class="board-summary"><span class="wbr">찾으려는 페이지의 주소가 잘못 입력되었거나,</span> <span class="wbr">주소의 변경 혹은 삭제로 인해 사용하실 수 없습니다.</span></p>
+													</div>
+												
+													<div class="board-util">
+														<div class="button-display">
+															<span class="button-area">
+																<a class="btn module-b style-a type-fill accent-01 large-3x" href="#"><span class="btn-text">돌아가기</span></a>
+															</span>
+														</div>
+													</div>
+												</div>
+											</div>
+											<!-- //info-board -->
+											<br/><br/><br/><br/>
+											<!-- info-board -->
+											<div class="info-board module-b style-a type-c attr-survey">
+												<div class="board-wrap">
+													<div class="board-head">
+														<p class="board-subject"><span class="board-name"><span class="wbr">설문조사에</span> <span class="wbr">참여해 주셔서 감사합니다.</span></span></p>
+													</div>
+												
+													<div class="board-util">
+														<div class="button-display">
+															<span class="button-area">
+																<a class="btn module-b style-a type-fill accent-01 large-3x" href="#"><span class="btn-text">확인</span></a>
+															</span>
+														</div>
+													</div>
+												</div>
+											</div>
+											<!-- //info-board -->
+										</div>
+									</div>
+									<!-- //subsubsection -->
+								</div>
+							<!-- //subsection -->        
+							</div>
+							<!-- //subsection -->
+						</div>
+					</div>
+						<!-- //section -->
+
+					<!-- section -->
+					<div class="section">
+						<div class="section-head"><%- include('../_mixin/_title.section.ejs', {name: 'noti board'}) %></div>
+						<div class="section-body">
+							<!-- subsection -->
+							<div class="subsection">
+								<div class="subsection-head"><%- include('../_mixin/_title.subsection.ejs', {name: 'demos'}) %></div>
+								<div class="subsection-body">
+									<!-- highlight-js -->
+									<pre class="highlight-js">
+<code class="html">
+&lt;div class="noti-board module-a style-b type-a normal-03 small-2x symbol-ltr-info"&gt;
+	&lt;div class="board-wrap"&gt;
+		&lt;div class="board-head"&gt;&lt;p class="board-subject"&gt;&lt;span class="board-name"&gt;승인 이후 수정이 불가하오니 내용 확인 후 등록 바랍니다.&lt;/span&gt;&lt;/p&gt;&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+									<!-- //highlight-js -->
+									<!-- noti-board -->
+									<div class="noti-board module-a type-a normal-03 small-2x symbol-ltr-info">
+										<div class="board-wrap">
+											<div class="board-head"><p class="board-subject"><span class="board-name">당해 모집요강은 수시모집요강은 7월, 정시모집요강은 10월 이후 수령 가능하며 이전 신청 건에 대해서는 전년도 모집요강을 송부드리오니 추후 당해년도 모집요강을 반드시 확인하시기 바랍니다.</span></p></div>
+										</div>
+									</div>
+									<!-- //noti-board -->
+									<!-- noti-board -->
+									<div class="noti-board module-b style-a type-a normal-03 small-2x symbol-ltr-info">
+										<div class="board-wrap">
+											<div class="board-head"><p class="board-subject"><span class="board-name">당해 모집요강은 수시모집요강은 7월, 정시모집요강은 10월 이후 수령 가능하며 이전 신청 건에 대해서는 전년도 모집요강을 송부드리오니 추후 당해년도 모집요강을 반드시 확인하시기 바랍니다.</span></p></div>
+										</div>
+									</div>
+									<!-- //noti-board -->
+									<!-- noti-board -->
+									<div class="noti-board module-b style-b type-a normal-03 small-2x symbol-ltr-info">
+										<div class="board-wrap">
+											<div class="board-head"><p class="board-subject"><span class="board-name">당해 모집요강은 수시모집요강은 7월, 정시모집요강은 10월 이후 수령 가능하며 이전 신청 건에 대해서는 전년도 모집요강을 송부드리오니 추후 당해년도 모집요강을 반드시 확인하시기 바랍니다.</span></p></div>
+										</div>
+									</div>
+									<!-- //noti-board -->
+									<br /><br /><br />
+									<!-- noti-board -->
+									<div class="noti-board module-a type-c normal-03 small-1x symbol-ltr-info">
+										<div class="board-wrap">
+											<div class="board-head"><p class="board-subject"><span class="board-name">승인 이후 수정이 불가하오니 내용 확인 후 등록 바랍니다.</span></p></div>
+										</div>
+									</div>
+									<!-- //noti-board -->
+									<!-- noti-board -->
+									<div class="noti-board module-b style-a type-c normal-03 small-1x symbol-ltr-info">
+										<div class="board-wrap">
+											<div class="board-head"><p class="board-subject"><span class="board-name">승인 이후 수정이 불가하오니 내용 확인 후 등록 바랍니다.</span></p></div>
+										</div>
+									</div>
+									<!-- //noti-board -->
+									<!-- noti-board -->
+									<div class="noti-board module-b style-b type-c normal-03 small-1x symbol-ltr-info">
+										<div class="board-wrap">
+											<div class="board-head"><p class="board-subject"><span class="board-name">승인 이후 수정이 불가하오니 내용 확인 후 등록 바랍니다.</span></p></div>
+										</div>
+									</div>
+									<!-- //noti-board -->
+								</div>
+							</div>
+							<!-- //subsection -->
+						</div>
+					</div>
+					<!-- //section -->
+
+					<!-- section -->
+					<div class="section">
+						<div class="section-head"><%- include('../_mixin/_title.section.ejs', {name: 'guide board'}) %></div>
+						<div class="section-body">
+							<!-- subsection -->
+							<div class="subsection">
+								<div class="subsection-head"><%- include('../_mixin/_title.subsection.ejs', {name: 'demos'}) %></div>
+								<div class="subsection-body">
+									<!-- highlight-js -->
+									<pre class="highlight-js">
+<code class="html">&lt;div class="guide-board module-a style-a type-c"&gt;
+	&lt;div class="board-wrap"&gt;
+		&lt;div class="board-head"&gt;
+			&lt;p class="board-subject"&gt;&lt;p class="board-name"&gt;공지사항&lt;/p&gt;
+			&lt;p class="board-summary"&gt;summary Lorem ipsum&lt;/p&gt;
+		&lt;/div&gt;
+		&lt;div class="board-body"&gt;
+			&lt;p class="para"&gt;공지사항 목록&lt;/p&gt;
+			&lt;ul class="data-list module-a type-a normal-03 small"&gt;
+				&lt;li class="data-item"&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit.&lt;/li&gt;
+				&lt;li class="data-item"&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit.&lt;/li&gt;
+				&lt;li class="data-item"&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit.&lt;/li&gt;
+			&lt;/ul&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+									<!-- //highlight-js -->
+
+
+									<!-- guide-board -->
+									<div class="guide-board module-a type-a large">
+										<div class="board-wrap">
+											<div class="board-head">
+												<!-- <p class="board-caption"></p> -->
+												<p class="board-subject"><span class="board-name">공지사항</span></p>
+											</div>
+											<div class="board-body">
+												<p class="para">공지사항 목록</p>
+												<ul class="data-list module-a type-c normal-03 small-1x">
+													<li class="data-item">Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+													<li class="data-item">Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+													<li class="data-item">Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+									<!-- //guide-board -->
+								</div>
+							</div>
+							<!-- //subsection -->
+						</div>
+					</div>
+					<!-- //section -->
+				</div>
+				<!-- content-body -->
+			</div>
+			<!-- //local-body -->
+		</div>
+		<!-- //page-body -->
+
+<%-include('../_templates/_footer.front.ejs') %>
+	</div>
+	<!-- //page -->
+</div>
+</body>
+</html>
