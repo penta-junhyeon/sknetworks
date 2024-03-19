@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-<%-include('../_templates/_data.head.front.ejs', {
+<%-include('../_templates/_head.ejs', {
 	layoutTemplate: 'front',
 	pageStyle: 'main',
 	pageJavascript: ''
@@ -11,7 +11,7 @@
 <div id="wrap">
 	<!-- page -->
 	<div id="page">
-		<%-include('../_templates/_header.front.ejs', {
+		<%-include('../_templates/_header.ejs', {
 			current: '0',
 		}) %>
 		<!-- page-body -->
@@ -290,7 +290,7 @@
 			<!-- //local -->
 		</div>
 		<!-- //page-body -->
-		<%-include('../_templates/_footer.front.ejs') %>
+		<%-include('../_templates/_footer.ejs') %>
 	</div>
 	<!-- //page -->
 </div>
