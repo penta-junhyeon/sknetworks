@@ -27,7 +27,7 @@ const SRC_PATH = {
       GLTF: "./src/assets/gltf",
       MOVIES: "./src/assets/movies",
     },
-    EJS: "./src/html",
+    EJS: "./src/ejs",
   },
   DEST_PATH = {
     ASSETS: {
