@@ -14,7 +14,6 @@ const del = require("del");
 
 const SRC_FOLDER = "./src/";
 const DIST_FOLDER = "./dist";
-const HTML_FOLDER = "./dist/html";
 
 const SRC_PATH = {
     ASSETS: {

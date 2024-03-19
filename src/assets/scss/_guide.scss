@@ -1,4 +1,4 @@
-@import './guide/_guideMain';
-@import './guide/_guideList';
-@import './guide/_guidePage';
-@import './guide/_guideCommon';
+@import 'guide/_guide.common.scss';
+@import 'guide/_guide.intro.scss';
+@import 'guide/_guide.list.scss';
+@import 'guide/_guide.detail.scss';

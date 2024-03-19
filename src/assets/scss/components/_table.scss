@@ -1,0 +1,92 @@
+/**
+ * @type module
+ * @name data-table
+ */
+
+ .data-table.module-c {
+	&.attr-scroll {
+		overflow-x: auto;	
+		@include overflow-scroll($theme: dark);
+
+		>table {
+			min-width: 960rem;
+		}
+	}
+
+	&.type-c {
+		text-align: center;
+	}
+
+	border-top: 1px solid color(normal, 010);
+	border-bottom: 1px solid color(normal, 040);
+
+	>table {
+		table-layout: fixed;
+		width: 100%;
+		border-spacing: 0;
+		border-collapse: collapse;
+		border-right: hidden;
+		border-left: hidden;
+		
+		caption {
+			overflow: hidden;
+			margin: -1px;
+			padding: 0;
+			width: 1px;
+			height: 1px;
+			line-height: 1px;
+			font-size: 1px;
+			color: transparent;
+			border: 0;
+			clip: rect(0 0 0 0);
+			clip: rect(0,0,0,0);
+		}
+
+
+		>thead {
+			>tr {
+				>th {
+					padding: 20rem 0;
+					@include font((outline: head, size: small-2x, weight: medium)...);
+					color: color(normal, 010);
+					border-right: 1px solid color(normal, 040);
+					border-bottom: 1px solid color(normal, 040);
+					border-left: 1px solid color(normal, 040);
+					background-color: color(normal, 050);
+
+					@include respond-above(large-1x) {
+						padding: 24rem 0;
+						@include font((outline: head, size: small-1x, weight: medium)...);
+					}
+				}
+			}
+		}
+
+		>tbody {
+			>tr {
+				>td {
+					padding: 12rem 14rem;
+					@include font((outline: body, size: small-2x)...);
+					
+					color: color(normal, 020);
+					border-right: 1px solid color(normal, 040);
+					border-left: 1px solid color(normal, 040);
+					>.wbr {
+						display: block;
+					}
+					@include respond-above(large-1x) {
+						padding: 16rem 32rem;
+						@include font((outline: body, size: small-1x)...);
+					}
+					
+				}
+				+tr {
+					>td {
+						border-top: 1px solid color(normal, 040);
+					}
+				}
+			}
+		}
+	}
+}
+
