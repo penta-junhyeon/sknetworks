@@ -44,8 +44,6 @@
 		left: 0;
 		background-color: #2d2d2d;
 		color: #fff;
-		width: 100%;
-		min-width: 1400px;
 
 		.aside-body{
 			.section{
@@ -53,10 +51,43 @@
 					margin-bottom: 8rem;
 					.section-title{
 						.section-name{
-							font-size: 5rem;
+							font-size: 6rem;
 							font-weight: 600;
 							line-height: 5rem;
 							margin-bottom: 3rem;
+						}
+					}
+				}
+				.section-body{
+					position: relative;
+					.gnb-list{
+						.gnb-item{
+							margin-bottom: 10rem;
+							.gnb-name{
+								font-size: 4rem;
+								position: relative;
+								&::after{
+									content: '';
+									display: block;
+									position: absolute;
+									bottom: 0.8rem;
+									left: 20rem;
+									width: 100rem;
+									height: 0.1rem;
+									background-color: #fff;
+									opacity: 0.1;
+								}
+							}
+						}
+					}
+					.lnb-list{
+						position: absolute;
+						left: 20rem;
+						margin-top: 2rem;
+						display: flex;
+						gap: 5rem;
+						.lnb-item{
+							.lnb-name{}
 						}
 					}
 				}
@@ -83,5 +114,22 @@
 				height: 24rem;
 			}
 		}
+	}
+
+
+}
+
+
+// 푸터 scss
+.page-foot{
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	background-color: #2d2d2d;
+	text-align: center;
+	.copyright{
+		font-size: 1.5rem;
+		padding: 1rem;
+		color: #fff;
 	}
 }
