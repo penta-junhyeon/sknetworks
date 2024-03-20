@@ -1,12 +1,10 @@
-var frontCommon = frontCommon || {};
-frontCommon.Html = (function() {
+var guideCommon = guideCommon || {};
+guideCommon.Html = (function() {
     var instance = null;
     function init() {
         instance = {
             reset:function() {
-                console.log('resize ing');
-                frontCommonRisize();
-                frontCommonScroll();
+                console.log('hi');
             }
         }
         return instance;
@@ -18,13 +16,13 @@ frontCommon.Html = (function() {
     }
 })();
 
-function frontCommonRisize() {
+function guideCommonRisize() {
     window.addEventListener('resize',() => {
         console.log('resize ing')
     });
 }
 
-function frontCommonScroll() {
+function guideCommonScroll() {
     window.addEventListener('scroll',() => {
         console.log('scroll ing')
     });
