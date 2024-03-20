@@ -5,10 +5,16 @@
 				<!--page-control-->
 				<div class="page-control">
 					<div class="control-list">
-						<span class="control-item"><button class="control-name" onclick="layoutPageSide.active('aside');"><svg width="24" height="24" viewBox="0 0 24 24" focusable="false"><title>Go to Table of Content</title><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"></path></svg></button></span>
+						<span class="control-item"><button class="control-name" onclick="asideToggleActive()"><svg width="55" height="35" viewBox="0 0 55 35" focusable="false"><path d="M14.9082 0H54.9082V4.34375H14.9082V0ZM0 15.3281H55V19.6719H0V15.3281ZM54.9082 30.6562H14.9082V35H54.9082V30.6562Z"></path></svg></button></span>
 					</div>
 				</div>
 			</div>
 		</div>
+		<script>
+			function asideToggleActive() {
+				var layoutPageSide = document.getElementById("layoutPageSide");
+				layoutPageSide.classList.toggle("active");
+			}
+		</script>
 		<!--//page-head-->
 		<%-include('../_templates/_guide.aside.ejs') %>

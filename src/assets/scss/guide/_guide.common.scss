@@ -1,65 +1,68 @@
 // guide head
-#guide-list .page-head {
-    width: 100%;
-    background-color: #2d2d2d;
-    padding: 2rem 1.8rem;
-
-    .page-head-inner {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-    }
-    .page-subject {
-        .page-name {
-            font-size: 1.6rem;
-            color: #ffffff;
-        }
-    }
-    .page-control {
-        .control-name {
-            display: block;
-        }
-        .control-name svg {
-            fill: #ffffff;
-        }
-    }
-}
-
-#guide-list .page-body {
-    max-width: 120rem;
-    margin: 0 auto;
-}
-
-#guide-list .page-side {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	position: fixed;
-	z-index: 999;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	left: 0;
-	background-color: bui-color(normal, 100);
+#guide-list {
+	.page-head {
+		width: 100%;
+		background-color: #2d2d2d;
+		padding: 2rem 1.8rem;
 	
-	&:not(.active) {
-		display: none;
+		.page-head-inner {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+		}
+		.page-subject {
+			.page-name {
+				font-size: 1.6rem;
+				color: #ffffff;
+			}
+		}
+		.page-control {
+			z-index: 101;
+			.control-name {
+				display: block;
+			}
+			.control-name svg {
+				fill: #ffffff;
+			}
+		}
 	}
-    .close {
+
+	.page-body {
+		max-width: 120rem;
+		margin: 0 auto;
+	}
+
+	.page-side {
 		display: flex;
-		justify-content: center;
 		align-items: center;
-		position: absolute;
-		width: 72rem;
-		height: 72rem;
+		justify-content: center;
+		position: fixed;
+		z-index: 100;
 		top: 0;
 		right: 0;
-
-		svg {
-			display: block;
-			fill: bui-color(normal, 000);
-			width: 24rem;
-			height: 24rem;
+		bottom: 0;
+		left: 0;
+		background-color: #2d2d2d;
+		
+		&:not(.active) {
+			display: none;
+		}
+		.close {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			position: absolute;
+			width: 72rem;
+			height: 72rem;
+			top: 0;
+			right: 0;
+	
+			svg {
+				display: block;
+				fill: red;
+				width: 24rem;
+				height: 24rem;
+			}
 		}
 	}
 }
