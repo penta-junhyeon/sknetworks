@@ -1,59 +1,42 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-<%-include('../_templates/_guide.head.ejs', {
-	pageJavascript: ''
-}) %>
-</head>
+<head><%-include('../_templates/_guide.head.ejs') %></head>
 <body>
-<div id="wrap">
-	<!-- page -->
-	<div id="page-intro">
-		<!-- page-head -->
-		<div class="page-head" id="head">
-			<h1 class="page-subject" title="전우 APS">
-				<a class="page-name" href="/">< MARKUP GUIDE /></MARKUP>
-				</a>
-			</h1>
-			<h2 class="sub-title">전우 APS</h2>
-		</div>
-		<!-- //page-head -->
-
-		<!-- page-body -->
-		<div class="page-body" id="local">
-			<!-- local-body -->
-			<div class="local-body" id="content">
-				<!-- content-body -->
-				<div class="content-body">
-					<!-- info-board -->
-					<div class="info-board">
-						<div class="board-wrap">
-							<div class="board-head"></div>
-							<div class="board-body">
-								<!-- <p class="para"><strong>전우 APS</strong> 구축을 위한 마크업 가이드입니다. <br />마크업 가이드의 목적은 마크업 개발자가 지켜야 할 기준을 제시함으로써, <br />협력 부서 간의 이해도를 높여 프로젝트의 원활한 진행을 돕고 더욱 높은 수준의 결과물을 내는 것입니다. <br />말하자면 마크업 가이드에서 정의한 규칙에 따라 생산되는 결과물은, <br />일관성 있고 최적화된 코드로 불필요한 자원을 줄이게 됩니다. <br />또한, 향후 유지관리 시 작업능률 향상과 생산성 제고를 극대화할 것입니다.</p> -->
+	<div id="wrap">
+		<!-- guide -->
+		<div id="guide-intro">
+			<div class="guide-head">
+				<h1 class="guide-subject" title="전우 APS">
+					<a class="guide-name" href="/">
+						< MARKUP GUIDE />
+					</a>
+				</h1>
+				<h2 class="guide-title">전우 APS</h2>
+			</div>
+			<div class="guide-body">
+				<!-- board-display -->
+				<div class="board-display">
+					<div class="board-wrap">
+						<div class="board-head"></div>
+						<div class="board-body">
+							<!-- <p class="para"><strong>전우 APS</strong> 구축을 위한 마크업 가이드입니다. <br />마크업 가이드의 목적은 마크업 개발자가 지켜야 할 기준을 제시함으로써, <br />협력 부서 간의 이해도를 높여 프로젝트의 원활한 진행을 돕고 더욱 높은 수준의 결과물을 내는 것입니다. <br />말하자면 마크업 가이드에서 정의한 규칙에 따라 생산되는 결과물은, <br />일관성 있고 최적화된 코드로 불필요한 자원을 줄이게 됩니다. <br />또한, 향후 유지관리 시 작업능률 향상과 생산성 제고를 극대화할 것입니다.</p> -->
+						</div>
+						<div class="board-util">
+							<!-- button-area -->
+							<div class="button-display module-a">
+								<span class="button-area">
+									<a class="btn" href="./../list/front.html"><span class="btn-text">FRONT</span></a>
+								</span>
 							</div>
-							<div class="board-util">
-								<!-- button-area -->
-								<div class="button-display module-a">
-									<span class="button-area">
-										<a class="btn module-b style-a type-fill normal-00 large-3x" href="./../list/front.ejs"><span class="btn-text">FRONT</span></a>
-									</span>
-								</div>
-								<!-- //button-area -->
-							</div>
+							<!-- //button-area -->
 						</div>
 					</div>
-					<!-- //info-board -->
 				</div>
-				<!-- //content-body -->
+				<!-- //board display-->
 			</div>
-			<!-- //local-body -->
+			<%-include('../_templates/_guide.footer.ejs') %>
 		</div>
-		<!-- //page-body -->
-<%-include('../_templates/_guide.footer.ejs') %>
+		<!-- //guide -->
 	</div>
-	<!-- //page -->
-</div>
-
 </body>
 </html>
