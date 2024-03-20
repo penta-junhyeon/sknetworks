@@ -1,7 +1,7 @@
 @import '_variables';
 
 // IR
-@mixin hidden {
+@mixin hide {
 	display: block;
 	position: absolute;
 	overflow: hidden;
@@ -48,5 +48,13 @@
 @mixin web {
     @media (min-width:#{$web}) {
         @content;
+    }
+}
+
+//scroll hidden
+@mixin scroll-hidden {
+    scrollbar-width: none;
+    &::-webkit-scrollbar {
+        display: none;
     }
 }
