@@ -1,3 +1,4 @@
+
 // @import '_variables';
 
 body{
@@ -7,7 +8,7 @@ body{
     #wrap {
         position: relative;
         overflow: hidden;
-        #page{
+        #page-intro{
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -20,14 +21,16 @@ body{
             .page-head{
                 .page-subject{
                     a {
-                        font-size: 5rem;
-                        line-height: 5rem;
+                        font-size: 7rem;
+                        line-height: 7rem;
+                        font-weight: 700;
                         color: #2d2d2d;
                     }
                 }
                 .sub-title{
-                    font-size: 2rem;
-                    line-height: 2rem;
+                    font-size: 4rem;
+                    line-height: 4rem;
+                    font-weight: 500;
                     color: #2d2d2d;
                     margin: 3rem 0 2rem;
                 }
@@ -37,7 +40,7 @@ body{
                     .board-wrap{
                         .board-body{
                             .para{
-                                font-size: inherit;
+                                font-size: 1.5rem;
                                 line-height: 160%;
                             }
                         }
@@ -45,24 +48,26 @@ body{
                             margin-top: 5.125rem;
                             .button-display{
                                 .button-area{
-                                    padding: 0.5rem 1.25rem;
+                                    padding: 0.75rem 2rem;
                                     border: 0.1rem solid #000;
                                     border-radius: 3rem;
                                     position: relative;
                                     transition: 0.3s ease-out;
-                                    padding-left: 2rem;
+                                    padding-left: 3rem;
+                                    font-size: 1.5rem;
                                     .btn-text{
                                         &::before{
                                             content: '>';
                                             display: block;
                                             position: absolute;
-                                            left: 1rem;
+                                            left: 1.5rem;
                                         }
                                     }
 
                                     &:hover{
                                         background-color: #2d2d2d;
                                         color: #fff;
+                                        border: none;
                                     }
                                 }
                             }
@@ -77,7 +82,8 @@ body{
                 width: 100%;
                 background-color: #2d2d2d;
                 .copyright{
-                    padding: 1rem;
+                    font-size: 1.5rem;
+                    padding: 2rem;
                     color: #fff;
                 }
             }
