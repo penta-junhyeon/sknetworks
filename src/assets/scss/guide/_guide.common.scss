@@ -48,7 +48,7 @@
 		.aside-body{
 			.section{
 				.section-head{
-					margin-bottom: 8rem;
+					margin-bottom: 12rem;
 					.section-title{
 						.section-name{
 							font-size: 6rem;
@@ -77,17 +77,25 @@
 									background-color: #fff;
 									opacity: 0.1;
 								}
+
+							}
+							.lnb-flex{
+								display: flex;
 							}
 						}
 					}
 					.lnb-list{
-						position: absolute;
-						left: 20rem;
 						margin-top: 2rem;
-						display: flex;
-						gap: 5rem;
+						padding-left: 22rem;
 						.lnb-item{
-							.lnb-name{}
+							padding: 1rem 0;
+							text-transform: capitalize;
+							.lnb-name{
+								font-size: 2rem;
+								&:hover{
+									opacity: 0.5;
+								}
+							}
 						}
 					}
 				}
