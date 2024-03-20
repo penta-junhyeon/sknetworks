@@ -1,120 +1,126 @@
 
 // @import '_variables';
 
-#guide-intro{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-sizing: Border-box;
-    min-height: 100vh;
-    color: #2d2d2d;
-    width: 100%;
-
-    .guide-aside{
-        width: 50%;
-        position: relative;
-        .aside-line{
-            position: absolute;
-            width: 0.1rem;
-            height: 70rem;
-            background-color: #2d2d2d;
-            left: 10rem;
-            top: -39rem;
-        }
-        .aside-text{
-            position: absolute;
-            left: 6.5rem;
-            top: 2rem;
-            transform: rotate(180deg);
-            transform-origin: right top;
-            writing-mode: vertical-rl;
-            white-space: nowrap;
-            span{
-                font-size: 2rem;
-                background-color: #fff;
-                padding: 2rem 0;
-            }
-        }
-    }
-
-    .guide-content{
+#wrap{
+    background-color: #fbf8e1;
+    #guide-intro{
         display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        width: 50%;
-        .guide-head{
-            .guide-subject{
-                a {
-                    font-size: 7rem;
-                    line-height: 7rem;
-                    font-weight: 700;
-                }
+        justify-content: center;
+        align-items: center;
+        box-sizing: Border-box;
+        min-height: 100vh;
+        color: #2d2d2d;
+        width: 100%;
+    
+        .guide-aside{
+            width: 50%;
+            position: relative;
+            .aside-line{
+                position: absolute;
+                width: 0.1rem;
+                height: 70rem;
+                background-color: #2d2d2d;
+                left: 10rem;
+                top: -39rem;
             }
-            .guide-title{
-                margin: 4rem 0 2rem;
-                position: relative;
+            .aside-text{
+                position: absolute;
+                left: 6.5rem;
+                top: 2.5rem;
+                transform: rotate(180deg);
+                transform-origin: right top;
+                writing-mode: vertical-rl;
+                white-space: nowrap;
                 span{
-                    font-size: 3rem;
-                    line-height: 3rem;
-                    font-weight: 600;
-                    padding-left: 1.5rem;
-                }
-                &::before{
-                    content: '';
-                    display: block;
-                    width: 0.7rem;
-                    height: 0.7rem;
-                    border-radius: 100%;
+                    font-size: 2rem;
+                    padding: 2rem 0.5rem;
+                    border-radius: 3rem;
+                    border: 0.1rem solid #2d2d2d;
                     background-color: #2d2d2d;
-                    position: absolute;
-                    top: 1.2rem;
-                    left: 0;
+                    color: #fff;
                 }
             }
         }
-        .guide-body{
-            .board-display{
-                .board-wrap{
-                    .board-body{
-                        .para{
-                            font-size: 1.5rem;
-                            line-height: 160%;
-                            margin-left: 1.5rem;
-                        }
+    
+        .guide-content{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            width: 50%;
+            .guide-head{
+                .guide-subject{
+                    a {
+                        font-size: 7rem;
+                        line-height: 7rem;
+                        font-weight: 700;
                     }
-                    .board-util{
-                        margin-top: 4rem;
-                        .button-display{
-                            .btn{
-                                display: flex;
-                                align-items: center;
-                                .button-arrow{
-                                    border-radius: 3rem;
-                                    background-color: #2d2d2d;
-                                    transition: 0.3s ease-out;
-                                    color: #fff;
-                                    position: relative;
-                                    margin-left: 1.5rem;
-                                    width: 4rem;
-                                    height: 4rem;
-                                    border-radius: 100%;
-                                    &::before{
-                                        content: '';
-                                        display: block;
-                                        position: absolute;
-                                        top: 0.7rem;
-                                        left: 0.8rem;
-                                        background-image: url(../../../assets/images/intro/arrow-hover.png);
-                                        background-size: cover;
-                                        background-repeat: no-repeat;
-                                        width: 2.4rem;
-                                        height: 2.4rem;
-                                        
+                }
+                .guide-title{
+                    margin: 4rem 0 2rem;
+                    position: relative;
+                    span{
+                        font-size: 3rem;
+                        line-height: 3rem;
+                        font-weight: 600;
+                        padding-left: 1.5rem;
+                    }
+                    &::before{
+                        content: '';
+                        display: block;
+                        width: 0.7rem;
+                        height: 0.7rem;
+                        border-radius: 100%;
+                        background-color: #2d2d2d;
+                        position: absolute;
+                        top: 1.2rem;
+                        left: 0;
+                    }
+                }
+            }
+            .guide-body{
+                .board-display{
+                    .board-wrap{
+                        .board-body{
+                            .para{
+                                font-size: 1.5rem;
+                                line-height: 160%;
+                                margin-left: 1.5rem;
+                            }
+                        }
+                        .board-util{
+                            margin-top: 4rem;
+                            .button-display{
+                                .btn{
+                                    display: flex;
+                                    align-items: center;
+                                    .button-arrow{
+                                        border-radius: 3rem;
+                                        background-color: #2d2d2d;
+                                        transition: 0.3s ease-out;
+                                        color: #fff;
+                                        position: relative;
+                                        margin-left: 1.5rem;
+                                        width: 4rem;
+                                        height: 4rem;
+                                        border-radius: 100%;
+                                        &::before{
+                                            content: '';
+                                            display: block;
+                                            position: absolute;
+                                            top: 0.7rem;
+                                            left: 0.8rem;
+                                            background-image: url(../../../assets/images/intro/arrow-hover.png);
+                                            background-size: cover;
+                                            background-repeat: no-repeat;
+                                            width: 2.4rem;
+                                            height: 2.4rem;
+                                            
+                                        }
                                     }
-                                }
-                                .btn-text{
-                                    font-size: 2rem;
-                                    margin-left: 1rem;
+                                    .btn-text{
+                                        font-size: 2rem;
+                                        margin-left: 1rem;
+                                    }
                                 }
                             }
                         }
@@ -122,18 +128,18 @@
                 }
             }
         }
-    }
-
-    .page-foot{
-        position: absolute;
-        bottom: 0;
-        width: 100%;
-        background-color: #2d2d2d;
-        text-align: center;
-        .copyright{
-            font-size: 1.5rem;
-            padding: 2rem;
-            color: #fff;
+    
+        .page-foot{
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            background-color: #2d2d2d;
+            text-align: center;
+            .copyright{
+                font-size: 1.5rem;
+                padding: 2rem;
+                color: #fff;
+            }
         }
     }
 }
