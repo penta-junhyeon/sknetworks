@@ -5,7 +5,7 @@
 				<!--page-control-->
 				<div class="page-control">
 					<div class="control-list">
-						<span class="control-item"><button class="control-name" onclick="asideToggleActive()"><svg width="30" height="20" viewBox="0 0 30 20" focusable="false"><path d="M8.13 0H29.9482V2.48124H8.13V0ZM0 8.75789H30V11.2391H0V8.75789ZM29.9482 17.5156H8.13V19.9969H29.9482V17.5156Z"></path></svg></button></span>
+						<span class="control-item"><button class="control-name" onclick="asideToggleActive()"><svg width="40" height="40" viewBox="0 0 40 40" focusable="false"><path id="svgPath" d="M35 13H13V10H35V13ZM35 22H5V19H35V22ZM13 31H35V28H13V31Z"></path></svg></button></span>
 					</div>
 				</div>
 			</div>
@@ -14,6 +14,16 @@
 			function asideToggleActive() {
 				var layoutPageSide = document.getElementById("layoutPageSide");
 				layoutPageSide.classList.toggle("active");
+				var path = document.getElementById("svgPath");
+				var currentD = path.getAttribute("d");
+				var newPath = "";
+
+				if (currentD === "M35 13H13V10H35V13ZM35 22H5V19H35V22ZM13 31H35V28H13V31Z") {
+					newPath = "M20.0608 22.1821L28.9985 31.1198L31.1198 28.9985L22.1821 20.0608L31.12 11.1228L28.9987 9.00151L20.0608 17.9395L11.1213 9L9 11.1213L17.9395 20.0608L9.00023 29L11.1215 31.1213L20.0608 22.1821Z";
+				} else {
+					newPath = "M35 13H13V10H35V13ZM35 22H5V19H35V22ZM13 31H35V28H13V31Z";
+				}
+				path.setAttribute("d", newPath);
 			}
 		</script>
 		<!--//page-head-->
