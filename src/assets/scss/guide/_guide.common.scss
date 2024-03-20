@@ -1,0 +1,224 @@
+// guide head
+#guide-list {
+	.page-head {
+		width: 100%;
+		background-color: #2d2d2d;
+		padding: 1rem 1.8rem;
+
+		.page-head-inner {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+		}
+
+		.page-subject {
+			.page-name {
+				font-size: 1.6rem;
+				color: #ffffff;
+			}
+		}
+
+		.page-control {
+			z-index: 101;
+
+			.control-name {
+				display: block;
+			}
+
+			.control-name svg {
+				fill: #ffffff;
+			}
+		}
+	}
+
+	.page-body {
+		padding: 0 1.8rem;
+
+		.local-body {
+			max-width: 120rem;
+			margin: 0 auto;
+			padding-top: 10rem;
+			padding-bottom: 12rem;
+
+			.content-head {
+				.content-subject {
+					.content-name {
+						font-size: 10rem;
+						font-weight: 600;
+						color: #000;
+					}
+
+					&+.para {
+						padding-top: 2.5rem;
+						font-size: 1.6rem;
+						font-weight: 400;
+						line-height: 1.5;
+						color: #000;
+					}
+				}
+
+				+.content-body {
+					padding-top: 5rem;
+				}
+
+			}
+
+			.content-body {
+				.section {
+					.section-head {
+						.section-subject {
+							.section-name {
+								font-size: 4rem;
+								font-weight: 600;
+								letter-spacing: -0.2rem;
+							}
+
+							+.para {
+								padding-top: 1rem;
+								font-size: 1.6rem;
+								font-weight: 400;
+								line-height: 1.5;
+								color: #000;
+							}
+						}
+
+						+.section-body {
+							padding-top: 3rem;
+						}
+					}
+
+					.section-body {
+						.subsection {
+							.subsection-head {}
+
+							.subsection-body {
+								.data-list {}
+							}
+						}
+					}
+
+					// color
+					&.color-variation {
+						.subsection-body {
+							.data-list {
+								display: flex;
+								align-items: center;
+								flex-wrap: wrap;
+								gap: 0.5rem;
+
+								.data-item {
+									width: 10rem;
+									height: 10rem;
+									.data-name {
+									
+									}
+									.data-code {
+									
+									}
+									span[class^=data] {
+										color: #fff;
+									}
+								}
+							}
+						}
+						~ .color-variation {
+							padding-top: 5rem;
+						}
+					}
+				}
+			}
+		}
+	}
+	.page-side {
+		display: flex;
+		align-items: flex-start;
+		padding: 10rem 36rem;
+		position: fixed;
+		z-index: 100;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		background-color: #2d2d2d;
+		color: #fff;
+	
+		.aside-body{
+			.section{
+				.section-head{
+					margin-bottom: 12rem;
+					.section-title{
+						.section-name{
+							font-size: 6rem;
+							font-weight: 600;
+							line-height: 5rem;
+							margin-bottom: 3rem;
+						}
+					}
+				}
+				.section-body{
+					position: relative;
+					.gnb-list{
+						.gnb-item{
+							margin-bottom: 10rem;
+							.gnb-name{
+								font-size: 4rem;
+								position: relative;
+								&::after{
+									content: '';
+									display: block;
+									position: absolute;
+									bottom: 0.8rem;
+									left: 20rem;
+									width: 100rem;
+									height: 0.1rem;
+									background-color: #fff;
+									opacity: 0.1;
+								}
+	
+							}
+							.lnb-flex{
+								display: flex;
+							}
+						}
+					}
+					.lnb-list{
+						margin-top: 2rem;
+						padding-left: 22rem;
+						.lnb-item{
+							padding: 1rem 0;
+							text-transform: capitalize;
+							.lnb-name{
+								font-size: 2rem;
+								&:hover{
+									opacity: 0.5;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	
+		&:not(.active) {
+			display: none;
+		}
+	}
+}
+
+
+
+
+// 푸터 scss
+.page-foot {
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	background-color: #2d2d2d;
+	text-align: center;
+
+	.copyright {
+		font-size: 1.5rem;
+		padding: 1rem;
+		color: #fff;
+	}
+}

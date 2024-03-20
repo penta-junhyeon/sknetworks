@@ -1,12 +1,30 @@
 		<!--page-head-->
 		<div class="page-head" id="head">
-			<h1 class="page-subject" title="전우 APS"><a class="page-name" href="/">MARKUP GUIDE</a></h1>
-			<!--page-control-->
-			<div class="page-control">
-				<div class="control-list">
-					<span class="control-item"><a class="control-name" href="#aside" onclick="layoutPageSide.active('aside');"><svg width="24" height="24" viewBox="0 0 24 24" focusable="false"><title>Go to Table of Content</title><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"></path></svg></a></span>
+			<div class="page-head-inner">
+				<h1 class="page-subject"><a class="page-name" href="/">MARKUP GUIDE</a></h1>
+				<!--page-control-->
+				<div class="page-control">
+					<div class="control-list">
+						<span class="control-item"><button class="control-name" onclick="asideToggleActive()"><svg width="40" height="40" viewBox="0 0 40 40" focusable="false"><path id="svgPath" d="M35 13H13V10H35V13ZM35 22H5V19H35V22ZM13 31H35V28H13V31Z"></path></svg></button></span>
+					</div>
 				</div>
 			</div>
 		</div>
+		<script>
+			function asideToggleActive() {
+				var layoutPageSide = document.getElementById("layoutPageSide");
+				layoutPageSide.classList.toggle("active");
+				var path = document.getElementById("svgPath");
+				var currentD = path.getAttribute("d");
+				var newPath = "";
+
+				if (currentD === "M35 13H13V10H35V13ZM35 22H5V19H35V22ZM13 31H35V28H13V31Z") {
+					newPath = "M20.0608 22.1821L28.9985 31.1198L31.1198 28.9985L22.1821 20.0608L31.12 11.1228L28.9987 9.00151L20.0608 17.9395L11.1213 9L9 11.1213L17.9395 20.0608L9.00023 29L11.1215 31.1213L20.0608 22.1821Z";
+				} else {
+					newPath = "M35 13H13V10H35V13ZM35 22H5V19H35V22ZM13 31H35V28H13V31Z";
+				}
+				path.setAttribute("d", newPath);
+			}
+		</script>
 		<!--//page-head-->
-<%-include('../_templates/_guide.aside.ejs') %>
+		<%-include('../_templates/_guide.aside.ejs') %>
