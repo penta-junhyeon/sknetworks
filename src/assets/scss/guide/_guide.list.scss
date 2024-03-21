@@ -1,0 +1,52 @@
+#guide-list{
+    .pub-list{
+        .content-body {
+            .section {
+                .section-head {
+                    position: relative;
+                    .section-subject {
+                        .section-name {
+                            font-size: 4rem;
+                            font-weight: 600;
+                            letter-spacing: -0.2rem;
+                            text-transform: capitalize;
+                        }
+        
+                        +.para {
+                            padding-top: 1rem;
+                            font-size: 1.6rem;
+                            font-weight: 400;
+                            line-height: 1.5;
+                            color: #000;
+                        }
+                    }
+        
+                    +.section-body {
+                        padding-top: 3rem;
+                    }
+        
+                    button{
+                        position: absolute;
+                        right: 0;
+                        top: 1.5rem;
+                        font-size: 1.4rem;
+                        padding: 0.5rem 1rem;
+                        border-radius: 0.5rem;
+                        border: 0.1rem solid #2d2d2d;
+                    }
+                }
+        
+                .section-body {
+                    .subsection {
+                        .subsection-head {}
+        
+                        .subsection-body {
+                            .data-list {}
+                        }
+                    }
+                }
+        
+            }
+        }
+    }
+}

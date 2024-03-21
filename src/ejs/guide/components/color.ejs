@@ -13,7 +13,7 @@
 		<div class="page-body">
 			<!-- local-head -->
 			<div class="local-head">
-				<h2 class="local-subject"><span class="local-name blind">guide</span></h2>
+				<h2 class="local-subject"><span class="local-name blind">Components Guide</span></h2>
 			</div>
 			<!-- //local-head -->
 			<!-- local-body -->
@@ -24,6 +24,7 @@
 					<p class="para">웹 페이지의 컬러는 사용자에게 이정표와 같은 역할을 하므로 일관성 없이 남용된 컬러의 사용은 사용자에게 혼란을 주게 됩니다.<br />본 프로젝트의 컬러 시스템을 아래와 같이 정의하며, 반드시 약속된 값을 사용합니다.</p>
 				</div>
 				<!-- //content-head -->
+				
 				<!-- content-body -->
 				<div class="content-body">
 					<!-- section -->
@@ -52,7 +53,7 @@
 								</div>
 							</div>
 							<div class="subsection primary">
-								<div class="subsection-head">primary</div>
+								<div class="subsection-head">Primary</div>
 								<div class="subsection-body">
 									<ul class="data-list">
 										<li class="data-item" style="background-color: #052538"><span class="data-name">primary, 090</span> <span class="data-code">#052538</span></li>
@@ -70,7 +71,7 @@
 								</div>
 							</div>
 							<div class="subsection secondary">
-								<div class="subsection-head">secondary</div>
+								<div class="subsection-head">Secondary</div>
 								<div class="subsection-body">
 									<ul class="data-list">
 										<li class="data-item" style="background-color: #15bd68"><span class="data-name">secondary, 090</span> <span class="data-code">#15bd68</span></li>
@@ -86,12 +87,12 @@
 					<!-- section -->
 					<div class="section color-variation">
 						<div class="section-head">
-							<h4 class="section-subject"><span class="section-name">system</span></h4>
+							<h4 class="section-subject"><span class="section-name">Extract Color</span></h4>
 							<p class="para">Normal Color는 base의 Variants를 포함하며, Accent Color는 Primary, Secondary가 존재합니다.</p>
 						</div>
 						<div class="section-body">
 							<div class="subsection normal">
-								<div class="subsection-head">normal</div>
+								<div class="subsection-head">Normal</div>
 								<div class="subsection-body">
 									<ul class="data-list">
 										<li class="data-item" style="background-color: #000000"><span class="data-name">normal, 100</span> <span class="data-code">#000000</span></li>
@@ -105,7 +106,7 @@
 								</div>
 							</div>
 							<div class="subsection accent">
-								<div class="subsection-head">accent</div>
+								<div class="subsection-head">Accent</div>
 								<div class="subsection-body">
 									<ul class="data-list">
 										<li class="data-item" style="background-color: #0184d0"><span class="data-name">accent, 010</span> <span class="data-code">#0184d0</span></li>
@@ -122,11 +123,14 @@
 
 					<!-- section -->
 					<div class="section color-variation">
-						<div class="section-head"></div>
+						<div class="section-head">
+							<h4 class="section-subject"><span class="section-name">SCSS Usage</span></h4>
+							<p class="para">이렇게 작성하세요.</p>
+						</div>
 						<div class="section-body">
 							<!-- subsection -->
 							<div class="subsection">
-								<div class="subsection-head"></div>
+								<div class="subsection-head">Argument</div>
 								<div class="subsection-body">
 									<pre class="highlight-js"><code class="scss">color($theme, $variant, $opacity);</code></pre>
 								</div>
@@ -134,7 +138,7 @@
 							<!-- //subsection -->
 							<!-- subsection -->
 							<div class="subsection">
-								<div class="subsection-head"></div>
+								<div class="subsection-head">Example</div>
 								<div class="subsection-body">
 									<pre class="highlight-js">
 <code class="scss">color: color(base, 020);
