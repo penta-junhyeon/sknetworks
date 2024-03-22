@@ -12,3 +12,16 @@
     clip: rect(0, 0, 0, 0);
     clip-path: inset(50%);
 }
+
+.moOnly {
+    display: none;
+}
+
+@include mobile {
+    .pcOnly {
+        display: none;
+    }
+    .moOnly {
+        display: block;
+    }
+}

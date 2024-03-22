@@ -1,5 +1,3 @@
-@import '_variables';
-
 // IR
 @mixin hide {
 	display: block;
@@ -57,4 +55,8 @@
     &::-webkit-scrollbar {
         display: none;
     }
+}
+
+@include mobile {
+    body {background-color: red;}
 }

@@ -15,7 +15,7 @@
 					<div class="local-head">
 						<h2 class="local-subject">
 							<span class="local-name">Button</span>
-							<span class="local-desc">버튼은 디자인 시스템의 비주얼 스타일을 보여주는 중요한 구성요소입니다. 컬러, 사이즈, 여백 및 기타 세부사항을 모아 정의합니다.</span>
+							<span class="local-desc">버튼은 디자인 시스템의 비주얼 스타일을 보여주는 중요한 구성요소입니다. 컬러, 사이즈, 여백 및 기타 세부사항을 통합하여 정의합니다.</span>
 						</h2>
 					</div>
 					<!-- //local-head -->
@@ -43,7 +43,7 @@
 									<div class="subsection-head">Class options</div>
 									<div class="subsection-body">
 										<!-- data-table -->
-										<div class="data-table design-bui type-a">
+										<div class="data-table design2 type1">
 											<table>
 												<colgroup>
 													<col style="width: 128rem;">
@@ -52,7 +52,7 @@
 												<tbody>
 													<tr>
 														<th scope="row">module</th>
-														<td>design-*</td>
+														<td>design*</td>
 													</tr>
 													<tr>
 														<th scope="row">style</th>
@@ -60,7 +60,7 @@
 													</tr>
 													<tr>
 														<th scope="row">type</th>
-														<td>type-none, type-line, type-fill</td>
+														<td>type2, type1, type3</td>
 													</tr>
 													<tr>
 														<th scope="row">outline</th>
@@ -87,18 +87,18 @@
 								<!-- //subsection -->
 								<!-- subsection -->
 								<div class="subsection">
-									<div class="subsection-head">Style</div>
+									<div class="subsection-head">Design</div>
 									<div class="subsection-body">
 										<!-- highlight-js -->
 										<pre class="highlight-js">
-	<code class="html">&lt;a href="#" class="btn design-b case-a"&gt;&lt;span class="btn-text"&gt;Button Text&lt;/span&gt;&lt;/a&gt;
-&lt;a href="#" class="btn design-b case-b"&gt;&lt;span class="btn-text"&gt;Button Text&lt;/span&gt;&lt;/a&gt;
-&lt;a href="#" class="btn design-b case-c"&gt;&lt;span class="btn-text"&gt;Button Text&lt;/span&gt;&lt;/a&gt;</code></pre>
+	<code class="html">&lt;a href="#" class="btn design1 case1"&gt;&lt;span class="btn-text"&gt;Button Text&lt;/span&gt;&lt;/a&gt;
+&lt;a href="#" class="btn design1 case2"&gt;&lt;span class="btn-text"&gt;Button Text&lt;/span&gt;&lt;/a&gt;
+&lt;a href="#" class="btn design1 case3"&gt;&lt;span class="btn-text"&gt;Button Text&lt;/span&gt;&lt;/a&gt;</code></pre>
 										<!-- //highlight-js -->
-										<div class="bui-button-area">
-											<a class="btn design-b case-a type-line normal-00 large-1x" href="#"><span class="btn-text">Button case-a</span></a>
-											<a class="btn design-b case-b type-line normal-00 large-1x" href="#"><span class="btn-text">Button case-b</span></a>
-											<a class="btn design-b case-c type-line normal-00 large-1x" href="#"><span class="btn-text">Button case-c</span></a>
+										<div class="guide-button-area">
+											<a class="btn design1 case1 type1 normal-00 large-1x" href="#"><span class="btn-text">Button case1</span></a>
+											<a class="btn design1 case2 type1 normal-00 large-1x" href="#"><span class="btn-text">Button case2</span></a>
+											<a class="btn design1 case3 type1 normal-00 large-1x" href="#"><span class="btn-text">Button case3</span></a>
 										</div>
 									</div>
 								</div>
@@ -107,14 +107,15 @@
 									<div class="subsection-body">
 										<!-- highlight-js -->
 										<pre class="highlight-js">
-	<code class="html">&lt;a href="#" class="btn design-b type-none"&gt;&lt;span class="btn-text"&gt;Button Text&lt;/span&gt;&lt;/a&gt;
-&lt;a href="#" class="btn design-b type-line"&gt;&lt;span class="btn-text"&gt;Button Text&lt;/span&gt;&lt;/a&gt;
-&lt;a href="#" class="btn design-b type-fill"&gt;&lt;span class="btn-text"&gt;Button Text&lt;/span&gt;&lt;/a&gt;</code></pre>
+	<code class="html">&lt;a href="#" class="btn design1 type1"&gt;&lt;span class="btn-text"&gt;Button Text&lt;/span&gt;&lt;/a&gt;
+&lt;a href="#" class="btn design1 type2"&gt;&lt;span class="btn-text"&gt;Button Text&lt;/span&gt;&lt;/a&gt;
+&lt;a href="#" class="btn design1 type3"&gt;&lt;span class="btn-text"&gt;Button Text&lt;/span&gt;&lt;/a&gt;
+</code></pre>
 										<!-- //highlight-js -->
-										<div class="bui-button-area">
-											<a class="btn design-b case-a type-none normal-00 large-1x" href="#"><span class="btn-text">Button type-line</span></a>
-											<a class="btn design-b case-a type-line normal-00 large-1x" href="#"><span class="btn-text">Button type-line</span></a>
-											<a class="btn design-b case-a type-fill normal-00 large-1x" href="#"><span class="btn-text">Button type-fill</span></a>
+										<div class="guide-button-area">
+											<a class="btn design1 case1 type2 normal-00 large-1x" href="#"><span class="btn-text">Button type1</span></a>
+											<a class="btn design1 case1 type1 normal-00 large-1x" href="#"><span class="btn-text">Button type1</span></a>
+											<a class="btn design1 case1 type3 normal-00 large-1x" href="#"><span class="btn-text">Button type3</span></a>
 										</div>
 									</div>
 								</div>
@@ -125,134 +126,122 @@
 									<div class="subsection-body">
 										<!-- highlight-js -->
 										<pre class="highlight-js">
-	<code class="html">&lt;a href="#" class="btn design-b normal-01"&gt;&lt;span class="btn-text"&gt;Button Text&lt;/span&gt;&lt;/a&gt;
-&lt;a href="#" class="btn design-b normal-02"&gt;&lt;span class="btn-text"&gt;Button Text&lt;/span&gt;&lt;/a&gt;
-&lt;a href="#" class="btn design-b normal-03"&gt;&lt;span class="btn-text"&gt;Button Text&lt;/span&gt;&lt;/a&gt;
+	<code class="html">&lt;a href="#" class="btn design1 accent1"&gt;&lt;span class="btn-text"&gt;Button Text&lt;/span&gt;&lt;/a&gt;
+&lt;a href="#" class="btn design1 accent2"&gt;&lt;span class="btn-text"&gt;Button Text&lt;/span&gt;&lt;/a&gt;
+&lt;a href="#" class="btn design1 accent3"&gt;&lt;span class="btn-text"&gt;Button Text&lt;/span&gt;&lt;/a&gt;
 	</code></pre>
 										<!-- //highlight-js -->
-										<!-- subsubsection -->
-										<div class="subsubsection">
-											<div class="subsubsection-head">type-none</div>
+										<!-- subcategory -->
+										<div class="subcategory">
+											<div class="subcategory-head">accent1</div>
 											<!-- border 색 기준 -->
-											<div class="subsubsection-body">
-												<div class="bui-button-area">
-													<a class="btn design-b case-a type-none normal-01 large-1x" href="#"><span class="btn-text">btn normal-01</span></a>
-													<a class="btn design-b case-a type-none normal-02 large-1x" href="#"><span class="btn-text">btn normal-02</span></a>
-													<a class="btn design-b case-a type-none normal-03 large-1x" href="#"><span class="btn-text">btn normal-03</span></a>
-													<a class="btn design-b case-a type-none normal-04 large-1x" href="#"><span class="btn-text">btn normal-04</span></a>
-													<a class="btn design-b case-a type-none normal-05 large-1x" href="#"><span class="btn-text">btn normal-05</span></a>
+											<div class="subcategory-body">
+												<div class="guide-button-area">
+													<a class="btn design1 case1 type2 accent1 large-1x" href="#"><span class="btn-text">btn accent1</span></a>
+													<a class="btn design1 case1 type2 accent2 large-1x" href="#"><span class="btn-text">btn accent2</span></a>
+													<a class="btn design1 case1 type2 accent3 large-1x" href="#"><span class="btn-text">btn accent3</span></a>
+													<a class="btn design1 case1 type2 normal-04 large-1x" href="#"><span class="btn-text">btn normal-04</span></a>
+													<a class="btn design1 case1 type2 normal-05 large-1x" href="#"><span class="btn-text">btn normal-05</span></a>
 												</div>
 											</div>
 										</div>
-										<!-- //subsubsection -->
-										<!-- subsubsection -->
-										<div class="subsubsection">
-											<div class="subsubsection-head">type-line</div>
+										<!-- //subcategory -->
+										<!-- subcategory -->
+										<div class="subcategory">
+											<div class="subcategory-head">accent2</div>
 											<!-- border 색 기준 -->
-											<div class="subsubsection-body">
-												<div class="bui-button-area">
-													<a class="btn design-b case-a type-line normal-01 large-1x" href="#"><span class="btn-text">btn normal-01</span></a>
-													<a class="btn design-b case-a type-line normal-02 large-1x" href="#"><span class="btn-text">btn normal-02</span></a>
-													<a class="btn design-b case-a type-line normal-03 large-1x" href="#"><span class="btn-text">btn normal-03</span></a>
-													<a class="btn design-b case-a type-line normal-04 large-1x" href="#"><span class="btn-text">btn normal-04</span></a>
-													<a class="btn design-b case-a type-line normal-05 large-1x" href="#"><span class="btn-text">btn normal-05</span></a>
+											<div class="subcategory-body">
+												<div class="guide-button-area">
+													<a class="btn design2 case1 type1 accent1 large-1x" href="#"><span class="btn-text">btn accent1</span></a>
+													<a class="btn design2 case1 type1 accent2 large-1x" href="#"><span class="btn-text">btn accent2</span></a>
+													<a class="btn design2 case1 type1 accent3 large-1x" href="#"><span class="btn-text">btn accent3</span></a>
+													<a class="btn design2 case1 type1 normal-04 large-1x" href="#"><span class="btn-text">btn normal-04</span></a>
+													<a class="btn design2 case1 type1 normal-05 large-1x" href="#"><span class="btn-text">btn normal-05</span></a>
 												</div>
 											</div>
 										</div>
-										<!-- //subsubsection -->
-										<!-- subsubsection -->
-										<div class="subsubsection">
-											<div class="subsubsection-head">type-fill</div>
-											<div class="subsubsection-body">
-												<div class="bui-button-area">
-													<a class="btn design-b case-a type-fill normal-01 large-1x" href="#"><span class="btn-text">btn normal-01</span></a>
-													<a class="btn design-b case-a type-fill normal-02 large-1x" href="#"><span class="btn-text">btn normal-02</span></a>
-													<a class="btn design-b case-a type-fill normal-03 large-1x" href="#"><span class="btn-text">btn normal-03</span></a>
-													<a class="btn design-b case-a type-fill normal-04 large-1x" href="#"><span class="btn-text">btn normal-04</span></a>
-													<a class="btn design-b case-a type-fill normal-05 large-1x" href="#"><span class="btn-text">btn normal-05</span></a>
+										<!-- //subcategory -->
+										<!-- subcategory -->
+										<div class="subcategory">
+											<div class="subcategory-head">accent3</div>
+											<div class="subcategory-body">
+												<div class="guide-button-area">
+													<a class="btn design2 case1 type3 accent1 large-1x" href="#"><span class="btn-text">btn accent1</span></a>
+													<a class="btn design2 case1 type3 accent2 large-1x" href="#"><span class="btn-text">btn accent2</span></a>
+													<a class="btn design2 case1 type3 accent3 large-1x" href="#"><span class="btn-text">btn accent3</span></a>
+													<a class="btn design2 case1 type3 normal-04 large-1x" href="#"><span class="btn-text">btn normal-04</span></a>
+													<a class="btn design2 case1 type3 normal-05 large-1x" href="#"><span class="btn-text">btn normal-05</span></a>
 												</div>
 											</div>
 										</div>
-										<!-- //subsubsection -->
+										<!-- //subcategory -->
 									</div>
 								</div>
 								<!-- //subsection -->
 								<!-- subsection -->
 								<div class="subsection">
-									<div class="subsection-head">disabled</div>
+									<div class="subsection-head">Disabled</div>
 									<div class="subsection-body">
 										<!-- highlight-js -->
 										<pre class="highlight-js">
-	<code class="html">&lt;a class="btn design-b disabled" href="#"&gt;&lt;span class="btn-text"&gt;btn normal-01&lt;/span&gt;&lt;/a&gt;
-&lt;button type="button" class="btn design-b  type-fill" disabled="disabled"&gt;&lt;span class="btn-text"&gt;btn normal-02&lt;/span&gt;&lt;/button&gt;
+	<code class="html">&lt;a class="btn design2 disabled" href="#"&gt;&lt;span class="btn-text"&gt;Button Text&lt;/span&gt;&lt;/a&gt;
+&lt;button type="button" class="btn design2 type3" disabled="disabled"&gt;&lt;span class="btn-text"&gt;Button Text&lt;/span&gt;&lt;/button&gt;
 	</code></pre>
 										<!-- //highlight-js -->
-										<!-- subsubsection -->
-										<div class="subsubsection">
-											<div class="subsubsection-head">type-line</div>
+										<!-- subcategory -->
+										<div class="subcategory">
+											<div class="subcategory-head">disabled</div>
 											<!-- border 색 기준 -->
-											<div class="subsubsection-body">
-												<div class="bui-button-area">
-													<a class="btn design-b case-a type-line normal-01 large-1x disabled" href="#"><span class="btn-text">btn normal-01</span></a>
-													<a class="btn design-b case-a type-line normal-01 large-1x disabled" href="#"><span class="btn-text">btn normal-01</span></a>
+											<div class="subcategory-body">
+												<div class="guide-button-area">
+													<a class="btn design2 case1 type1 accent1 large-1x disabled" href="#"><span class="btn-text">btn accent1</span></a>
+													<a class="btn design2 case1 type1 accent1 large-1x disabled" href="#"><span class="btn-text">btn accent1</span></a>
 												</div>
 											</div>
 										</div>
-										<!-- //subsubsection -->
-										<!-- subsubsection -->
-										<div class="subsubsection">
-											<div class="subsubsection-head">type-fill</div>
-											<!-- border 색 기준 -->
-											<div class="subsubsection-body">
-												<div class="bui-button-area">
-													<a class="btn design-b case-a type-fill normal-01 large-1x disabled" href="#"><span class="btn-text">btn normal-01</span></a>
-													<a class="btn design-b case-a type-fill normal-01 large-1x disabled" href="#"><span class="btn-text">btn normal-01</span></a>
-												</div>
-											</div>
-										</div>
-										<!-- //subsubsection -->
+										<!-- //subcategory -->
 									</div>
 								</div>
 								<!-- //subsection -->
 								<!-- subsection -->
 								<div class="subsection">
-									<div class="subsection-head">outline</div>
+									<div class="subsection-head">Outline</div>
 									<div class="subsection-body">
 										<!-- highlight-js -->
 										<pre class="highlight-js">
 	<code class="html">
-&lt;a href="#" class="btn design-b case-a x-large"&gt;&lt;span class="btn-text"&gt;Button Text&lt;/span&gt;&lt;/a&gt;
-&lt;a href="#" class="btn design-b case-a large"&gt;&lt;span class="btn-text"&gt;Button Text&lt;/span&gt;&lt;/a&gt;
-&lt;a href="#" class="btn design-b case-a medium"&gt;&lt;span class="btn-text"&gt;Button Text&lt;/span&gt;&lt;/a&gt;
-&lt;a href="#" class="btn design-b case-a small"&gt;&lt;span class="btn-text"&gt;Button Text&lt;/span&gt;&lt;/a&gt;
-&lt;a href="#" class="btn design-b case-a x-small"&gt;&lt;span class="btn-text"&gt;Button Text&lt;/span&gt;&lt;/a&gt;
+&lt;a href="#" class="btn design2 case1 x-large"&gt;&lt;span class="btn-text"&gt;Button Text&lt;/span&gt;&lt;/a&gt;
+&lt;a href="#" class="btn design2 case1 large"&gt;&lt;span class="btn-text"&gt;Button Text&lt;/span&gt;&lt;/a&gt;
+&lt;a href="#" class="btn design2 case1 medium"&gt;&lt;span class="btn-text"&gt;Button Text&lt;/span&gt;&lt;/a&gt;
+&lt;a href="#" class="btn design2 case1 small"&gt;&lt;span class="btn-text"&gt;Button Text&lt;/span&gt;&lt;/a&gt;
+&lt;a href="#" class="btn design2 case1 x-small"&gt;&lt;span class="btn-text"&gt;Button Text&lt;/span&gt;&lt;/a&gt;
 	</code></pre>
 										<!-- //highlight-js -->
-										<div class="bui-button-area">
-											<a class="btn design-b case-a type-line normal-00 small-1x" href="#"><span class="btn-text">small-1x</span></a>
-											<a class="btn design-b case-a type-line normal-00 small" href="#"><span class="btn-text">small</span></a>
-											<a class="btn design-b case-a type-line normal-00 medium" href="#"><span class="btn-text">medium</span></a>
-											<a class="btn design-b case-a type-line normal-00 large" href="#"><span class="btn-text">large</span></a>
-											<a class="btn design-b case-a type-line normal-00 large-1x" href="#"><span class="btn-text">large-1x</span></a>
-											<a class="btn design-b case-a type-line normal-00 large-2x" href="#"><span class="btn-text">large-2x</span></a>
-											<a class="btn design-b case-a type-line normal-00 large-3x" href="#"><span class="btn-text">large-3x</span></a>
+										<div class="guide-button-area">
+											<a class="btn design2 case1 type1 normal-00 small-1x" href="#"><span class="btn-text">small-1x</span></a>
+											<a class="btn design2 case1 type1 normal-00 small" href="#"><span class="btn-text">small</span></a>
+											<a class="btn design2 case1 type1 normal-00 medium" href="#"><span class="btn-text">medium</span></a>
+											<a class="btn design2 case1 type1 normal-00 large" href="#"><span class="btn-text">large</span></a>
+											<a class="btn design2 case1 type1 normal-00 large-1x" href="#"><span class="btn-text">large-1x</span></a>
+											<a class="btn design2 case1 type1 normal-00 large-2x" href="#"><span class="btn-text">large-2x</span></a>
+											<a class="btn design2 case1 type1 normal-00 large-3x" href="#"><span class="btn-text">large-3x</span></a>
 										</div>
 									</div>
 								</div>
 								<!-- //subsection -->
 								<!-- subsection -->
 								<div class="subsection">
-									<div class="subsection-head">symbols</div>
+									<div class="subsection-head">Symbols</div>
 									<div class="subsection-body">
 										<!-- highlight-js -->
 										<pre class="highlight-js">
-	<code class="html">&lt;a href="#" class="btn design-b symbol-ltr-*"&gt;&lt;span class="btn-text"&gt;Button Text&lt;/span&gt;&lt;/a&gt;
-&lt;a href="#" class="btn design-b symbol-rtl-*"&gt;&lt;span class="btn-text"&gt;Button Text&lt;/span&gt;&lt;/a&gt;</code></pre>
+	<code class="html">&lt;a href="#" class="btn design2 symbol-ltr-*"&gt;&lt;span class="btn-text"&gt;Button Text&lt;/span&gt;&lt;/a&gt;
+&lt;a href="#" class="btn design2 symbol-rtl-*"&gt;&lt;span class="btn-text"&gt;Button Text&lt;/span&gt;&lt;/a&gt;</code></pre>
 										<!-- //highlight-js -->
 										<!-- button-area -->
-										<div class="bui-button-area">
-											<a class="btn design-b case-a type-line normal-00 large-1x symbol-ltr-chevron-left" href="./../snippet/icon.html"><span class="btn-text">design-a insert before</span></a>
-											<a class="btn design-b case-a type-line normal-00 large-1x symbol-rtl-chevron-right" href="./../snippet/icon.html"><span class="btn-text">design-a insert after</span></a>
+										<div class="guide-button-area">
+											<a class="btn design2 case1 type1 normal-00 large-1x symbol-ltr-chevron-left" href="./../snippet/icon.html"><span class="btn-text">design1 insert before</span></a>
+											<a class="btn design2 case1 type1 normal-00 large-1x symbol-rtl-chevron-right" href="./../snippet/icon.html"><span class="btn-text">design1 insert after</span></a>
 										</div>
 										<!-- //button-area -->
 										<p class="para">버튼 모듈에 사용되는 아이콘의 이름은 <a href="./../snippet/icon.html">snippet/icon.html</a> 참조하세요</p>
@@ -270,62 +259,58 @@
 							</div>
 							<div class="section-body">
 								<div class="subsection">
-									<div class="subsection-head">accent</div>
+									<div class="subsection-head">Accent</div>
 									<div class="subsection-body">
 										<!-- highlight-js -->
 										<pre class="highlight-js">
-	<code class="html">&lt;a href="#" class="btn design-b accent-02"&gt;&lt;span class="btn-text"&gt;Button Text&lt;/span&gt;&lt;/a&gt;
-&lt;a href="#" class="btn design-b accent-01"&gt;&lt;span class="btn-text"&gt;Button Text&lt;/span&gt;&lt;/a&gt;
-&lt;a href="#" class="btn design-b normal-01"&gt;&lt;span class="btn-text"&gt;Button Text&lt;/span&gt;&lt;/a&gt;
-&lt;a href="#" class="btn design-b normal-02"&gt;&lt;span class="btn-text"&gt;Button Text&lt;/span&gt;&lt;/a&gt;
-&lt;a href="#" class="btn design-b normal-03"&gt;&lt;span class="btn-text"&gt;Button Text&lt;/span&gt;&lt;/a&gt;
-	</code></pre>
+	<code class="html">&lt;a href="#" class="btn design2 accent1"&gt;&lt;span class="btn-text"&gt;Button Text&lt;/span&gt;&lt;/a&gt;
+&lt;a href="#" class="btn design2 accent2"&gt;&lt;span class="btn-text"&gt;Button Text&lt;/span&gt;&lt;/a&gt;</code></pre>
 										<!-- //highlight-js -->
-										<!-- subsubsection -->
-										<div class="subsubsection">
-											<div class="subsubsection-head">type-none</div>
-											<div class="subsubsection-body">
-												<div class="bui-button-area">
-													<a class="btn design-b case-a type-none accent-01 large-1x" href="#"><span class="btn-text">btn accent-01</span></a>
-													<a class="btn design-b case-a type-none normal-01 large-1x" href="#"><span class="btn-text">btn normal-01</span></a>
-													<a class="btn design-b case-a type-none normal-02 large-1x" href="#"><span class="btn-text">btn normal-02</span></a>
-													<a class="btn design-b case-a type-none normal-03 large-1x" href="#"><span class="btn-text">btn normal-03</span></a>
-													<a class="btn design-b case-a type-none normal-04 large-1x" href="#"><span class="btn-text">btn normal-04</span></a>
-													<a class="btn design-b case-a type-none normal-05 large-1x" href="#"><span class="btn-text">btn normal-05</span></a>
+										<!-- subcategory -->
+										<div class="subcategory">
+											<div class="subcategory-head">type1</div>
+											<div class="subcategory-body">
+												<div class="guide-button-area">
+													<a class="btn design2 case1 type1 accent1 large-1x" href="#"><span class="btn-text">btn accent1</span></a>
+													<a class="btn design2 case1 type1 accent1 large-1x" href="#"><span class="btn-text">btn accent1</span></a>
+													<a class="btn design2 case1 type1 accent2 large-1x" href="#"><span class="btn-text">btn accent2</span></a>
+													<a class="btn design2 case1 type1 accent3 large-1x" href="#"><span class="btn-text">btn accent3</span></a>
+													<a class="btn design2 case1 type1 normal-04 large-1x" href="#"><span class="btn-text">btn normal-04</span></a>
+													<a class="btn design2 case1 type1 normal-05 large-1x" href="#"><span class="btn-text">btn normal-05</span></a>
 												</div>
 											</div>
 										</div>
-										<!-- //subsubsection -->
-										<!-- subsubsection -->
-										<div class="subsubsection">
-											<div class="subsubsection-head">type-line</div>
-											<div class="subsubsection-body">
-												<div class="bui-button-area">
-													<a class="btn design-b case-a type-line accent-01 large-1x" href="#"><span class="btn-text">btn accent-01</span></a>
-													<a class="btn design-b case-a type-line normal-01 large-1x" href="#"><span class="btn-text">btn normal-01</span></a>
-													<a class="btn design-b case-a type-line normal-02 large-1x" href="#"><span class="btn-text">btn normal-02</span></a>
-													<a class="btn design-b case-a type-line normal-03 large-1x" href="#"><span class="btn-text">btn normal-03</span></a>
-													<a class="btn design-b case-a type-line normal-04 large-1x" href="#"><span class="btn-text">btn normal-04</span></a>
-													<a class="btn design-b case-a type-line normal-05 large-1x" href="#"><span class="btn-text">btn normal-05</span></a>
+										<!-- //subcategory -->
+										<!-- subcategory -->
+										<div class="subcategory">
+											<div class="subcategory-head">type2</div>
+											<div class="subcategory-body">
+												<div class="guide-button-area">
+													<a class="btn design2 case1 type2 accent1 large-1x" href="#"><span class="btn-text">btn accent1</span></a>
+													<a class="btn design2 case1 type2 accent1 large-1x" href="#"><span class="btn-text">btn accent1</span></a>
+													<a class="btn design2 case1 type2 accent2 large-1x" href="#"><span class="btn-text">btn accent2</span></a>
+													<a class="btn design2 case1 type2 accent3 large-1x" href="#"><span class="btn-text">btn accent3</span></a>
+													<a class="btn design2 case1 type2 normal-04 large-1x" href="#"><span class="btn-text">btn normal-04</span></a>
+													<a class="btn design2 case1 type2 normal-05 large-1x" href="#"><span class="btn-text">btn normal-05</span></a>
 												</div>
 											</div>
 										</div>
-										<!-- //subsubsection -->
-										<!-- subsubsection -->
-										<div class="subsubsection">
-											<div class="subsubsection-head">type-fill</div>
-											<div class="subsubsection-body">
-												<div class="bui-button-area">
-													<a class="btn design-b case-a type-fill accent-01 large-1x" href="#"><span class="btn-text">btn accent-01</span></a>
-													<a class="btn design-b case-a type-fill normal-01 large-1x" href="#"><span class="btn-text">btn normal-01</span></a>
-													<a class="btn design-b case-a type-fill normal-02 large-1x" href="#"><span class="btn-text">btn normal-02</span></a>
-													<a class="btn design-b case-a type-fill normal-03 large-1x" href="#"><span class="btn-text">btn normal-03</span></a>
-													<a class="btn design-b case-a type-fill normal-04 large-1x" href="#"><span class="btn-text">btn normal-04</span></a>
-													<a class="btn design-b case-a type-fill normal-05 large-1x" href="#"><span class="btn-text">btn normal-05</span></a>
+										<!-- //subcategory -->
+										<!-- subcategory -->
+										<div class="subcategory">
+											<div class="subcategory-head">type3</div>
+											<div class="subcategory-body">
+												<div class="guide-button-area">
+													<a class="btn design2 case1 type3 accent1 large-1x" href="#"><span class="btn-text">btn accent1</span></a>
+													<a class="btn design2 case1 type3 accent1 large-1x" href="#"><span class="btn-text">btn accent1</span></a>
+													<a class="btn design2 case1 type3 accent2 large-1x" href="#"><span class="btn-text">btn accent2</span></a>
+													<a class="btn design2 case1 type3 accent3 large-1x" href="#"><span class="btn-text">btn accent3</span></a>
+													<a class="btn design2 case1 type3 normal-04 large-1x" href="#"><span class="btn-text">btn normal-04</span></a>
+													<a class="btn design2 case1 type3 normal-05 large-1x" href="#"><span class="btn-text">btn normal-05</span></a>
 												</div>
 											</div>
 										</div>
-										<!-- //subsubsection -->
+										<!-- //subcategory -->
 									</div>
 								</div>
 								<!-- //subsection -->
@@ -345,8 +330,8 @@
 										<!-- highlight-js -->
 										<pre class="highlight-js">
 	<code class="html">&lt;!-- button-display --&gt;
-&lt;div class="button-display design-a case-a type-a"&gt;
-&lt;span class="button-area design-a case-a type-a"&gt;
+&lt;div class="button-display design1 case1 type1"&gt;
+&lt;span class="button-area design1 case1 type1"&gt;
 	&lt;a class="btn" href="#"&gt;&lt;span class="btn-text"&gt;button name&lt;/span&gt;&lt;/a&gt;
 	&lt;a class="btn" href="#"&gt;&lt;span class="btn-text"&gt;button name&lt;/span&gt;&lt;/a&gt;
 	&lt;a class="btn" href="#"&gt;&lt;span class="btn-text"&gt;button name&lt;/span&gt;&lt;/a&gt;
@@ -363,7 +348,7 @@
 									<div class="subsection-head">Class options</div>
 									<div class="subsection-body">
 										<!-- data-table -->
-										<div class="data-table design-bui type-a">
+										<div class="data-table design2 type1">
 											<table>
 												<colgroup>
 													<col style="width: 128rem;">
@@ -372,7 +357,7 @@
 												<tbody>
 													<tr>
 														<th scope="row">design</th>
-														<td>design-*</td>
+														<td>design*</td>
 													</tr>
 													<tr>
 														<th scope="row">case</th>
@@ -393,86 +378,86 @@
 								<div class="subsection">
 									<div class="subsection-head">demos</div>
 									<div class="subsection-body">
-										<!-- subsubsection -->
-										<div class="subsubsection">
-											<div class="subsubsection-head">type-a</div>
-											<div class="subsubsection-body">
+										<!-- subcategory -->
+										<div class="subcategory">
+											<div class="subcategory-head">type1</div>
+											<div class="subcategory-body">
 												<!-- button-display -->
-												<div class="button-display design-a case-a type-a">
+												<div class="button-display design1 case1 type1">
 													<span class="button-area">
-														<a class="btn design-b case-c type-line normal-00 large-1x" href="#"><span class="btn-text">Button case-a</span></a>
-														<a class="btn design-b case-c type-line normal-00 large-1x" href="#"><span class="btn-text">Button case-b</span></a>
-														<a class="btn design-b case-c type-line normal-00 large-1x" href="#"><span class="btn-text">Button case-c</span></a>
+														<a class="btn design2 case3 type1 normal-00 large-1x" href="#"><span class="btn-text">Button case1</span></a>
+														<a class="btn design2 case3 type1 normal-00 large-1x" href="#"><span class="btn-text">Button case2</span></a>
+														<a class="btn design2 case3 type1 normal-00 large-1x" href="#"><span class="btn-text">Button case3</span></a>
 													</span>
 												</div>
 												<!-- //button-display -->
 											</div>
 										</div>
-										<!-- //subsubsection -->
-										<!-- subsubsection -->
-										<div class="subsubsection">
-											<div class="subsubsection-head">type-b</div>
-											<div class="subsubsection-body">
+										<!-- //subcategory -->
+										<!-- subcategory -->
+										<div class="subcategory">
+											<div class="subcategory-head">type2</div>
+											<div class="subcategory-body">
 												<!-- button-display -->
-												<div class="button-display design-a case-a type-b">
+												<div class="button-display design1 case1 type2">
 													<span class="button-area">
-														<a class="btn design-b case-c type-line normal-00 large-1x" href="#"><span class="btn-text">Button case-a</span></a>
-														<a class="btn design-b case-c type-line normal-00 large-1x" href="#"><span class="btn-text">Button case-b</span></a>
-														<a class="btn design-b case-c type-line normal-00 large-1x" href="#"><span class="btn-text">Button case-c</span></a>
+														<a class="btn design2 case3 type1 normal-00 large-1x" href="#"><span class="btn-text">Button case1</span></a>
+														<a class="btn design2 case3 type1 normal-00 large-1x" href="#"><span class="btn-text">Button case2</span></a>
+														<a class="btn design2 case3 type1 normal-00 large-1x" href="#"><span class="btn-text">Button case3</span></a>
 													</span>
 												</div>
 												<!-- //button-display -->
 											</div>
 										</div>
-										<!-- //subsubsection -->
-										<!-- subsubsection -->
-										<div class="subsubsection">
-											<div class="subsubsection-head">type-c</div>
-											<div class="subsubsection-body">
+										<!-- //subcategory -->
+										<!-- subcategory -->
+										<div class="subcategory">
+											<div class="subcategory-head">type3</div>
+											<div class="subcategory-body">
 												<!-- button-display -->
-												<div class="button-display design-a case-a type-c">
+												<div class="button-display design1 case1 type-c">
 													<span class="button-area">
-														<a class="btn design-b case-c type-line normal-00 large-1x" href="#"><span class="btn-text">Button case-a</span></a>
-														<a class="btn design-b case-c type-line normal-00 large-1x" href="#"><span class="btn-text">Button case-b</span></a>
-														<a class="btn design-b case-c type-line normal-00 large-1x" href="#"><span class="btn-text">Button case-c</span></a>
+														<a class="btn design2 case3 type1 normal-00 large-1x" href="#"><span class="btn-text">Button case1</span></a>
+														<a class="btn design2 case3 type1 normal-00 large-1x" href="#"><span class="btn-text">Button case2</span></a>
+														<a class="btn design2 case3 type1 normal-00 large-1x" href="#"><span class="btn-text">Button case3</span></a>
 													</span>
 												</div>
 												<!-- //button-display -->
 											</div>
 										</div>
-										<!-- //subsubsection -->
-										<!-- subsubsection -->
-										<div class="subsubsection">
-											<div class="subsubsection-head">type-d</div>
-											<div class="subsubsection-body">
+										<!-- //subcategory -->
+										<!-- subcategory -->
+										<div class="subcategory">
+											<div class="subcategory-head">type4</div>
+											<div class="subcategory-body">
 												<!-- button-display -->
-												<div class="button-display design-a case-a type-d">
+												<div class="button-display design1 case1 type-d">
 													<span class="button-area">
-														<a class="btn design-b case-c type-line normal-00 large-1x" href="#"><span class="btn-text">Button case-a</span></a>
-														<a class="btn design-b case-c type-line normal-00 large-1x" href="#"><span class="btn-text">Button case-b</span></a>
-														<a class="btn design-b case-c type-line normal-00 large-1x" href="#"><span class="btn-text">Button case-c</span></a>
+														<a class="btn design2 case3 type1 normal-00 large-1x" href="#"><span class="btn-text">Button case1</span></a>
+														<a class="btn design2 case3 type1 normal-00 large-1x" href="#"><span class="btn-text">Button case2</span></a>
+														<a class="btn design2 case3 type1 normal-00 large-1x" href="#"><span class="btn-text">Button case3</span></a>
 													</span>
 												</div>
 												<!-- //button-display -->
 											</div>
 										</div>
-										<!-- //subsubsection -->
-										<!-- subsubsection -->
-										<div class="subsubsection" style="display: none;">
-											<div class="subsubsection-head">case-b</div>
-											<div class="subsubsection-body">
+										<!-- //subcategory -->
+										<!-- subcategory -->
+										<div class="subcategory" style="display: none;">
+											<div class="subcategory-head">case2</div>
+											<div class="subcategory-body">
 												<!-- button-display -->
-												<div class="button-display design-a case-b type-d">
+												<div class="button-display design1 case2 type-d">
 													<span class="button-area">
-														<a class="btn design-b case-c type-line normal-00 large-1x" href="#"><span class="btn-text">Button case-a</span></a>
-														<a class="btn design-b case-c type-line normal-00 large-1x" href="#"><span class="btn-text">Button case-b</span></a>
-														<a class="btn design-b case-c type-line normal-00 large-1x" href="#"><span class="btn-text">Button case-c</span></a>
+														<a class="btn design2 case3 type1 normal-00 large-1x" href="#"><span class="btn-text">Button case1</span></a>
+														<a class="btn design2 case3 type1 normal-00 large-1x" href="#"><span class="btn-text">Button case2</span></a>
+														<a class="btn design2 case3 type1 normal-00 large-1x" href="#"><span class="btn-text">Button case3</span></a>
 													</span>
 												</div>
 												<!-- //button-display -->
 											</div>
 										</div>
-										<!-- //subsubsection -->
+										<!-- //subcategory -->
 									</div>
 								</div>
 								<!-- //subsection --> 
