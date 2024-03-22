@@ -287,6 +287,11 @@
 						.subsection-body {
 							> .guide-button-area {
 								padding-top: 1.8rem;
+								.btn {
+									~ .btn {
+										margin-left: 0.5rem;
+									}
+								}
 							}
 						}
 					}
