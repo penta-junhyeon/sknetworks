@@ -1,12 +1,4 @@
-// guide head
 #guide-list {
-	&.fixed {
-		position: fixed;
-		width: 100%;
-		height: 100%;
-		overflow: hidden;
-	}
-
 	.page-head {
 		width: 100%;
 		background-color: #ffffff;
@@ -129,7 +121,7 @@
 							color: #1c1c1c;
 						}
 
-						+.para {
+						+.section-desc {
 							padding-top: 0.8rem;
 							font-size: 1.6rem;
 							font-weight: 400;
@@ -152,12 +144,16 @@
 							color: #1c1c1c;
 
 							+.subsection-body {
-								padding-top: 2rem;
+								padding-top: 1.8rem;
 							}
 						}
 
 						~.subsection {
 							padding-top: 5rem;
+						}
+						&.line {
+							border-top: 0.1rem solid #e9e9e9;
+							margin-top: 5rem;
 						}
 					}
 				}
@@ -211,10 +207,9 @@
 							}
 						}
 					}
-
-					~.color-variation {
-						padding-top: 12rem;
-					}
+				}
+				~.section {
+					padding-top: 12rem;
 				}
 			}
 		}
@@ -281,7 +276,6 @@
 
 								+.lnb-list {
 									padding-top: 5rem;
-									padding-left: 4.5rem;
 								}
 							}
 
@@ -305,7 +299,7 @@
 								font-size: 2rem;
 								font-weight: 300;
 								color: #c1c1c1;
-								padding: 0.5rem 0;
+								padding: 1rem 1rem 1rem 4rem;
 								display: inline-block;
 								transition: 0.3s ease;
 								text-transform: capitalize;
@@ -318,7 +312,7 @@
 									height: 0.1rem;
 									background-color: #ffffff;
 									position: absolute;
-									left: -1rem;
+									left: 3rem;
 									bottom: 0;
 									transition: 0.5s ease;
 									opacity: 0;
@@ -374,6 +368,13 @@
 		scrollbar-color: #cdcdcd #f0f0f0;
 		background: #ffffff;
 		border: 0.1rem solid #f3f3f3;
+	}
+
+	&.fixed {
+		position: fixed;
+		width: 100%;
+		height: 100%;
+		overflow: hidden;
 	}
 }
 
