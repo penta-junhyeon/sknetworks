@@ -1,64 +1,113 @@
 .btn {
     display: inline-block;
     text-align: center;
-    white-space: nowrap;
     border: 1px solid transparent;
+    transition: 0.3s ease;
     &.design1 {
-        color: #fff;
-        font-weight: 500;
-        line-height: 100%;
-        background-color: #007bff;
-        border-color: #007bff;
-        border-radius: 0.25rem;
+        font-size: 1.6rem;
+        font-weight: 700;
+        line-height: 125%;
         &.case1 {
-            padding: 1rem 2rem;
-            font-size: 1.2rem;
+            padding: 1.5rem 3rem;
+            border-radius: 0.4rem;
         }
         &.case2 {
-            padding: 1rem 3rem;
-            font-size: 1.4rem;
+            padding: 0.8rem 1.6rem;
+            border-radius: 0.4rem;
         }
         &.case3 {
-            padding: 1rem 4rem;
-            font-size: 1.6rem;
-        }
-        &.type1 {
-            
-        }
-        &.type2 {
-            
-        }
-        &.type3 {
-            
-        }
-        &.accent1 {
-            box-shadow: 3px 3px 2px 1px rgba(0, 0, 255, .2);
-        }
-        &.accent2 {
-            box-shadow: 3px 3px 2px 1px rgb(140, 140, 255);
-        }
-        &.accent3 {
-            transform-origin: top center; 
-            animation-name: swing; 
-            animation-iteration-count: infinite;
-            animation-duration: 2s;
-            animation-timing-function: linear;
-            animation-fill-mode: forwards;
+            padding: 2.2rem 5rem;
+            border-radius: 3.9rem;
         }
     }
     &.design2 {
-
+        font-size: 1.3rem;
+        font-weight: 600;
+        line-height: 100%;
+        &.case1 {
+            padding: 1.2rem 1.8rem;
+            border-radius: 0.4rem;
+        }
+        &.case2 {
+            padding: 1.8rem 1.8rem;
+            border-radius: 0.4rem;
+        }
+        &.case3 {
+            padding: 1.2rem 1.8rem;
+            border-radius: 3.9rem;
+        }
+    }
+    &.type1 {
+        background-color: #ffffff;
+        border-color: #CDCDCD;
+        color: #222222;
+    }
+    &.type2 {
+        background-color: #222222;
+        border-color: #222222;
+        color: #ffffff;
+    }
+    &.type3 {
+        background-color: transparent;
+        border-color: #ffffff;
+        color: #ffffff;
+    }
+    &.type4 {
+        background-color: #2970FF;
+        border-color: #2970FF;
+        color: #ffffff;
+    }
+    &.disabled {
+        background-color: #9A9A9A !important;
+        border-color: #9A9A9A !important;
+        pointer-events: none;
+        color: #ffffff !important;
+        &:hover {
+            background-color: #9A9A9A !important;
+            border-color: #9A9A9A !important;
+        }
+    }
+    &:hover {
+        background-color: #2970FF;
+        border-color: #2970FF;
+        color: #ffffff;
     }
 
-    @keyframes swing {
-        0% {
-        transform: translateY(50%);
+    .btn-text {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        white-space: nowrap;
+        text-align: center;
+    }
+}
+
+//button display
+.btn-display {
+    display: flex;
+    &.design1 {
+        &.case1 {
+            gap: 0.5rem 0.5rem;
         }
-        50% {
-        transform: translateY(0);
+        &.case2 {
+            gap: 1rem 1rem;
         }
-        100% {
-        transform: translateY(50%);
+        &.case3 {
+            gap: 2rem;
+        }
+        &.type1 {
+            justify-content: flex-start;
+        }
+        &.type2 {
+            justify-content: center;
+        }
+        &.type3 {
+            justify-content: end;
+        }
+    }
+    &.flex {
+        .btn {
+            width: 100%;
         }
     }
 }

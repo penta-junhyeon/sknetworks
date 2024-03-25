@@ -292,6 +292,11 @@
 										margin-left: 0.5rem;
 									}
 								}
+								.flex {
+									~ .flex {
+										margin-top: 0.5rem;
+									}
+								}
 							}
 						}
 					}
