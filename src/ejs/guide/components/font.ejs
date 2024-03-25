@@ -1,56 +1,80 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-<%-include('../_templates/_guide.head.ejs', {
-
-	pageJavascript: ''
-}) %>
+	<%-include('../_templates/_guide.head.ejs', {
+		pageJavascript: ''
+	}) %>
 </head>
 <body>
-<div id="wrap">
-	<div id="guide-list">
-		<%-include('../_templates/_guide.header.ejs') %>
-		<!-- page-body -->
-		<div class="page-body">
-			<!-- local-head -->
-			<div class="local-head">
-				<h2 class="local-subject">
-					<span class="local-name">Font</span>
-					<span class="local-desc">폰트를 어떻게 쓰느냐에 따라 전달하려는 내용을 더 효과적으로 보여줄 수 있습니다. 폰트 스타일이 일관되면 가독성도 향상됩니다.</span>
-				</h2>
-			</div>
-			<!-- //local-head -->
-			<!-- local-body -->
-			<div class="local-body">
-				<!-- section -->
-				<div class="section font-guide">
-					<div class="section-head">
-						<h4 class="section-subject"><span class="section-name">Font System</span></h4>
-						<p class="section-desc">콘텐츠의 헤드라인, 타이틀, 바디, 라벨, 버튼 등에 사용되는 텍스트의 class 를 통일해주세요.</p>
+	<div id="wrap">
+		<div id="guide-list">
+			<%-include('../_templates/_guide.header.ejs') %>
+				<!-- page-body -->
+				<div class="page-body">
+					<!-- local-head -->
+					<div class="local-head">
+						<h2 class="local-subject">
+							<span class="local-name">Font</span>
+							<span class="local-desc">폰트를 어떻게 쓰느냐에 따라 전달하려는 내용을 더 효과적으로 보여줄 수 있습니다. 폰트 스타일이 일관되면 가독성도 향상됩니다.</span>
+						</h2>
 					</div>
-					<div class="section-body">
-						<div class="subsection">
-							<div class="subsection-head">Type Style</div>
-							<div class="subsection-body">
-								
+					<!-- //local-head -->
+					<!-- local-body -->
+					<div class="local-body">
+						<!-- section -->
+						<div class="section font-guide">
+							<div class="section-head">
+								<h4 class="section-subject"><span class="section-name">Font System</span></h4>
+								<p class="section-desc">콘텐츠의 헤드라인, 타이틀, 바디, 라벨, 버튼 등에 사용되는 텍스트의 class 를 통일해주세요.</p>
+							</div>
+							<div class="section-body">
+								<div class="subsection">
+									<div class="subsection-body">
+										<div class="guide-font-area">
+											<table class="table">
+												<caption>Font 가이드</caption>
+												<colgroup>
+													<col style="">
+													<col style="">
+													<col style="">
+													<col style="">
+													<col style="">
+													<col style="">
+												</colgroup>
+												<thead>
+													<tr>
+														<th scope="col"></th>
+														<th scope="col">SIZE</th>
+														<th scope="col">LINE</th>
+														<th scope="col">SIZE</th>
+														<th scope="col">LINE</th>
+														<th scope="col">WEIGHT</th>
+													</tr>
+													<thead>
+													<tbody>
+														<tr>
+															<td></th>
+															<td></th>
+															<td></th>
+															<td></th>
+															<td></th>
+															<td></th>
+														</tr>
+													</tbody>
+											</table>
+										</div>
+									</div>
+								</div>
 							</div>
 						</div>
-						<div class="subsection">
-							<div class="subsection-head">Font Size</div>
-							<table></table>
-							<div class="subsection-body">
-
-							</div>
-						</div>
+						<!-- //section -->
 					</div>
+					<!-- //local-body -->
 				</div>
-				<!-- //section -->
-			</div>
-			<!-- //local-body -->
+				<!-- //page-body -->
+				<%-include('../_templates/_guide.footer.ejs') %>
 		</div>
-		<!-- //page-body -->
-		<%-include('../_templates/_guide.footer.ejs') %>
 	</div>
-</div>
 </body>
+
 </html>
