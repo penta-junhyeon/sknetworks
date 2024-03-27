@@ -64,9 +64,17 @@ table {
 }
 
 table caption {
-    font-size: 0;
-    line-height: 0;
-    text-indent: -99999px;
+    overflow: hidden;
+    margin: -1px;
+    padding: 0;
+    width: 1px;
+    height: 1px;
+    line-height: 1px;
+    font-size: 1px;
+    color: transparent;
+    border: 0;
+    clip: rect(0 0 0 0);
+    clip: rect(0,0,0,0);
 }
 
 button {

@@ -1,0 +1,78 @@
+.t-list {
+    &.design1 {
+		>thead {
+			>tr {
+				>th {
+
+				}
+			}
+		}
+
+		>tbody {
+			>tr {
+				>td {
+					
+				}
+				+tr {
+					>td {
+						border-top: 1px solid color(normal, 040);
+					}
+				}
+			}
+		}
+        &.case1 {}
+    }
+    &.design2 {
+		>thead {
+			>tr {
+				>th {
+
+				}
+			}
+		}
+
+		>tbody {
+			>tr {
+				>td {
+					
+				}
+				+tr {
+					>td {
+						border-top: 1px solid color(normal, 040);
+					}
+				}
+			}
+		}
+    }
+
+    .t-info {
+        margin-top: 1rem;
+        color: color(achromatic, 544);
+        font-size: 1.3rem;
+        line-height: 1.8rem;
+    }
+
+    .t-tit {
+        font-size: 3.2rem;
+        font-weight: 600;
+        line-height: 3.8rem;
+        margin-bottom: 4rem;
+    }
+
+    //align
+    &.al {
+        tbody {
+            text-align: left;
+        }
+    }
+    &.ar {
+        tbody {
+            text-align: right;
+        }
+    }
+    &.ac {
+        tbody {
+            text-align: center;
+        }
+    }
+}

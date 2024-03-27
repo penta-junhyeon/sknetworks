@@ -74,14 +74,15 @@
 						.subsection-body {
 							> .guide-button-area {
 								padding-top: 1.8rem;
-								.btn {
-									~ .btn {
-										margin-left: 0.5rem;
-									}
-								}
-								.flex {
-									~ .flex {
-										margin-top: 0.5rem;
+								display: flex;
+								align-items: baseline;
+								gap: 0.8rem;
+							}
+							.btn {
+								&.text {
+									&[class*=al-icon] .btn-text::before,
+									&[class*=ar-icon] .btn-text::after {
+										background-color: red;
 									}
 								}
 							}
@@ -93,7 +94,43 @@
 				&.font-guide {
 					.subsection {
 						.subsection-body {
-							
+							.table {
+								thead {
+									background-color: #14121F;
+								}
+								tbody {
+									tr {
+										height: 12rem;
+										border-bottom: 0.1rem solid #b9b9b9;
+									}
+								}
+								th {
+									font-size: 1.4rem;
+									font-weight: 500;
+									line-height: normal;
+									color: #ffffff;
+									padding: 1.2rem;
+									&:first-child {
+										border-radius: 1.2rem 0 0 0;
+									}
+									&:last-child {
+										border-radius: 0 1.2rem 0 0;
+									}
+								}
+								td {
+									&:first-child {
+										text-align: left;
+										padding-left: 1rem;
+									}
+									text-align: center;
+									span {
+										font-size: 1.4rem;
+										font-weight: 500;
+										line-height: 150%;
+										color: #1a1a1a;
+									}
+								}
+							}
 						}
 					}
 				}
