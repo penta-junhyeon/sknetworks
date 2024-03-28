@@ -461,9 +461,14 @@
                         }
                     } else if(current < frontLine) {
                         anchorItem[i].classList.remove('active')
-                        anchorItem[i-1].classList.add('active')
+                        if(i == 0) {
+                            anchorItem[0].classList.add('active')
+                            i=0;
+                        } else {
+                            anchorItem[i-1].classList.add('active')
+                            i -= 1;
+                        }
 
-                        i -= 1;
                     } else if(current > endLine) {
                         anchorItem[i].classList.remove('active')
                         anchorItem[i+1].classList.add('active')
@@ -526,6 +531,22 @@
                         })
                     });
                     noResult.classList.remove('active')
+                })
+            });
+
+            // 페이지 완료 상태에 따른 버튼 활성/비활성
+            
+            const pageStatus = Object.values(page).flatMap(pageAll => pageAll.map(item => item.status));
+            const statusBtn = selectBox.querySelector('.data-status');
+
+            pageSection.forEach(element => {
+                const dataItem = element.querySelectorAll('.data-item')
+                dataItem.forEach(item => {
+                    const status = item.querySelector('.data-status')
+                    const viewBtn = item.querySelector('.data-view .data-text')
+                    if(status.innerText != '완료') {
+                        viewBtn.classList.add('disabled')
+                    }
                 })
             });
 	    });
