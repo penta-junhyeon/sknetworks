@@ -1,0 +1,604 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  font-weight: normal;
+  font-style: normal;
+  box-sizing: border-box;
+  touch-action: auto;
+  -webkit-tap-highlight-color: transparent !important;
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0) !important;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1rem;
+}
+
+html,
+body {
+  font-family: "Pretendard", sans-serif;
+  letter-spacing: 0;
+  -webkit-overflow-scrolling: touch;
+  -moz-overflow-scrolling: touch;
+  text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -o-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+ul,
+ol,
+li {
+  list-style: none;
+}
+
+em,
+i,
+cite,
+code,
+address {
+  font-style: normal;
+  font-weight: normal;
+}
+
+a,
+u,
+ins {
+  text-decoration: none;
+  color: inherit;
+}
+
+table {
+  width: 100%;
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+
+table caption {
+  font-size: 0;
+  line-height: 0;
+  text-indent: -99999px;
+}
+
+button {
+  border: none;
+  background: none;
+  font-family: "Pretendard", sans-serif;
+  cursor: pointer;
+}
+
+label,
+img,
+input,
+select,
+textarea,
+button,
+a {
+  vertical-align: middle;
+}
+
+input,
+button,
+select,
+textarea {
+  appearance: none;
+  border-radius: 0;
+}
+
+sup {
+  vertical-align: super;
+  font-size: smaller;
+}
+
+sub {
+  vertical-align: text-bottom;
+  font-size: smaller;
+}
+
+.blind {
+  position: absolute;
+  margin: -1px;
+  width: 0;
+  height: 0;
+  padding: 0;
+  border: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  clip-path: inset(50%);
+}
+
+#guide-list.fixed {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+#guide-list .page-head {
+  width: 100%;
+  background-color: #ffffff;
+  border-bottom: 0.1rem solid #E9E9E9;
+  padding: 1rem 1.8rem;
+}
+#guide-list .page-head .page-head-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#guide-list .page-head .page-subject {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+#guide-list .page-head .page-subject .page-name {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #1c1c1c;
+}
+#guide-list .page-head .page-subject::after {
+  content: "";
+  flex: 1;
+  display: block;
+  margin-right: 2rem;
+  width: 100%;
+  font-weight: 300;
+  color: rgb(255, 255, 255);
+  text-align: right;
+  font-size: 2rem;
+}
+#guide-list .page-head .page-subject::before {
+  content: "< / >";
+  width: 3rem;
+  height: 2.5rem;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.4rem;
+  font-weight: 600;
+  padding-right: 1rem;
+}
+#guide-list .page-head .page-search {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  max-width: 30rem;
+}
+#guide-list .page-head .page-search .search-category {
+  padding: 0.5rem;
+  border: 0.1rem solid #000000;
+  border-radius: 0.4rem;
+}
+#guide-list .page-head .page-search .search-input {
+  border: 0.1rem solid #000000;
+}
+#guide-list .page-head .page-search .search-btn {
+  flex-shrink: 0;
+}
+#guide-list .page-head .page-control {
+  z-index: 101;
+}
+#guide-list .page-head .page-control .control-name {
+  display: block;
+}
+#guide-list .page-head .page-control .control-name svg {
+  fill: #1c1c1c;
+}
+#guide-list .page-head .page-control.active .control-name svg {
+  fill: #ffffff;
+}
+#guide-list .page-body {
+  background-color: #fafafa;
+}
+#guide-list .page-body .local-head {
+  padding: 0 1.8rem;
+}
+#guide-list .page-body .local-head .local-subject {
+  max-width: 120rem;
+  margin: 0 auto;
+  padding: 10rem 0 2.5rem;
+  border-bottom: 0.1rem solid #CACACA;
+}
+#guide-list .page-body .local-head .local-subject .local-name {
+  font-size: 8rem;
+  font-weight: 800;
+  letter-spacing: -0.05rem;
+  color: #000000;
+  display: block;
+}
+#guide-list .page-body .local-head .local-subject .local-name + .local-desc {
+  padding-top: 1rem;
+}
+#guide-list .page-body .local-head .local-subject .local-desc {
+  font-size: 1.8rem;
+  font-weight: 400;
+  line-height: 150%;
+  color: #1c1c1c;
+  display: block;
+}
+#guide-list .page-body .local-head + .local-body {
+  padding-top: 7rem;
+}
+#guide-list .page-body .local-body {
+  padding: 15rem 1.8rem;
+}
+#guide-list .page-body .local-body .section {
+  max-width: 120rem;
+  margin: 0 auto;
+}
+#guide-list .page-body .local-body .section .section-head .section-subject .section-name {
+  font-size: 3.8rem;
+  font-weight: 700;
+  letter-spacing: -0.05rem;
+  color: #1c1c1c;
+}
+#guide-list .page-body .local-body .section .section-head .section-subject + .para {
+  padding-top: 0.8rem;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 150%;
+  color: #1c1c1c;
+}
+#guide-list .page-body .local-body .section .section-head + .section-body {
+  padding-top: 6rem;
+  padding-left: 7rem;
+}
+#guide-list .page-body .local-body .section .section-body .subsection .subsection-head {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #1c1c1c;
+}
+#guide-list .page-body .local-body .section .section-body .subsection .subsection-head + .subsection-body {
+  padding-top: 2rem;
+}
+#guide-list .page-body .local-body .section .section-body .subsection ~ .subsection {
+  padding-top: 5rem;
+}
+#guide-list .page-body .local-body .section.color-variation .subsection-body .data-list {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+#guide-list .page-body .local-body .section.color-variation .subsection-body .data-list .data-item {
+  width: 10rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#guide-list .page-body .local-body .section.color-variation .subsection-body .data-list .data-item .data-box {
+  width: 7.5rem;
+  height: 8rem;
+  border-radius: 1rem;
+  box-shadow: -0.3rem -0.4rem 0.7rem rgba(0, 0, 0, 0.1) inset;
+}
+#guide-list .page-body .local-body .section.color-variation .subsection-body .data-list .data-item .data-box + .data-name {
+  padding-top: 0.8rem;
+}
+#guide-list .page-body .local-body .section.color-variation .subsection-body .data-list .data-item .data-name {
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: #555555;
+}
+#guide-list .page-body .local-body .section.color-variation .subsection-body .data-list .data-item .data-name + .data-code {
+  padding-top: 0.7rem;
+}
+#guide-list .page-body .local-body .section.color-variation .subsection-body .data-list .data-item .data-code {
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: #8C8C8C;
+}
+#guide-list .page-body .local-body .section.color-variation .subsection-body .data-list .data-item span[class^=data] {
+  text-align: center;
+  display: block;
+}
+#guide-list .page-body .local-body .section.color-variation ~ .color-variation {
+  padding-top: 12rem;
+}
+#guide-list .page-side {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  opacity: 1;
+  z-index: 100;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #1c1c1c;
+}
+#guide-list .page-side .aside-body {
+  width: 100%;
+  max-width: 120rem;
+}
+#guide-list .page-side .aside-body .section .section-head {
+  padding-bottom: 3rem;
+  border-bottom: 0.1rem solid #484848;
+}
+#guide-list .page-side .aside-body .section .section-head .section-title .section-name {
+  font-size: 3rem;
+  font-weight: 600;
+  line-height: 5rem;
+  margin-bottom: 3rem;
+  color: #fafafa;
+}
+#guide-list .page-side .aside-body .section .section-head .section-title .section-name + .para {
+  padding-top: 1rem;
+}
+#guide-list .page-side .aside-body .section .section-head .section-title .para {
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: #6F6F6F;
+}
+#guide-list .page-side .aside-body .section .section-head + .section-body {
+  padding-top: 9rem;
+}
+#guide-list .page-side .aside-body .section .section-body {
+  position: relative;
+}
+#guide-list .page-side .aside-body .section .section-body .gnb-list .gnb-item .gnb-name {
+  font-size: 4.8rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+#guide-list .page-side .aside-body .section .section-body .gnb-list .gnb-item .gnb-name + .lnb-list {
+  padding-top: 5rem;
+  padding-left: 4.5rem;
+}
+#guide-list .page-side .aside-body .section .section-body .gnb-list .gnb-item ~ .gnb-item {
+  padding-top: 10rem;
+}
+#guide-list .page-side .aside-body .section .section-body .lnb-list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  row-gap: 4rem;
+  z-index: 100;
+}
+#guide-list .page-side .aside-body .section .section-body .lnb-list .lnb-item {
+  width: 16.6666666667%;
+}
+#guide-list .page-side .aside-body .section .section-body .lnb-list .lnb-item .lnb-name {
+  font-size: 2rem;
+  font-weight: 300;
+  color: #c1c1c1;
+  padding: 0.5rem 0;
+  display: inline-block;
+  transition: 0.3s ease;
+  text-transform: capitalize;
+  width: 100%;
+  position: relative;
+}
+#guide-list .page-side .aside-body .section .section-body .lnb-list .lnb-item .lnb-name::after {
+  content: "";
+  width: 0;
+  height: 0.1rem;
+  background-color: #ffffff;
+  position: absolute;
+  left: -1rem;
+  bottom: 0;
+  transition: 0.5s ease;
+  opacity: 0;
+}
+#guide-list .page-side .aside-body .section .section-body .lnb-list .lnb-item .lnb-name:hover {
+  opacity: 0.6;
+}
+#guide-list .page-side .aside-body .section .section-body .lnb-list .lnb-item .lnb-name:hover::after {
+  opacity: 0.6;
+  width: 60%;
+}
+#guide-list .page-side::after {
+  content: "";
+  width: 30%;
+  max-width: 50rem;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.15);
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: -1;
+}
+#guide-list .page-side:not(.active) {
+  display: none;
+}
+#guide-list .highlight-js .hljs {
+  padding: 1.5rem;
+  font-size: 1.2rem;
+  line-height: 1.5;
+  font-family: Consolas, Courier New, monospace, Apple SD Gothic Neo, Malgun Gothic, 맑은 고딕, dotum, 돋움, sans-serif;
+  scrollbar-color: #cdcdcd #f0f0f0;
+}
+#guide-list .highlight-js .hljs {
+  padding: 1.5rem;
+  font-size: 1.2rem;
+  line-height: 1.5;
+  font-family: Consolas, Courier New, monospace, Apple SD Gothic Neo, Malgun Gothic, 맑은 고딕, dotum, 돋움, sans-serif;
+  scrollbar-color: #cdcdcd #f0f0f0;
+  background: #ffffff;
+  border: 0.1rem solid #f3f3f3;
+}
+
+.page-foot {
+  width: 100%;
+  background-color: #1A1A1A;
+  text-align: center;
+}
+.page-foot .copyright {
+  font-size: 1.4rem;
+  font-weight: 300;
+  color: #ffffff;
+  padding: 2rem;
+}
+.page-foot .copyright .email {
+  color: inherit;
+  font-weight: inherit;
+}
+
+#wrap #guide-intro {
+  position: relative;
+  min-height: 100vh;
+}
+#wrap #guide-intro .guide-wrap {
+  display: flex;
+  height: 100vh;
+}
+#wrap #guide-intro .guide-wrap .guide-head {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-top: 300px;
+  padding-left: 230px;
+}
+#wrap #guide-intro .guide-wrap .guide-head::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 350px;
+  width: 2px;
+  height: 200px;
+  background-color: #454545;
+}
+#wrap #guide-intro .guide-wrap .guide-head .guide-summary {
+  font-size: 20px;
+  font-weight: 100;
+  color: #202020;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+#wrap #guide-intro .guide-wrap .guide-head .guide-summary + .guide-subject {
+  margin-top: 10px;
+}
+#wrap #guide-intro .guide-wrap .guide-head .guide-subject {
+  font-size: 120px;
+  font-weight: 900;
+  color: #434343;
+  line-height: 120px;
+}
+#wrap #guide-intro .guide-wrap .guide-head .guide-subject + .guide-title {
+  margin-top: 270px;
+}
+#wrap #guide-intro .guide-wrap .guide-head .guide-title {
+  padding-left: 10px;
+  font-size: 24px;
+  font-weight: 900;
+  color: #454545;
+}
+#wrap #guide-intro .guide-wrap::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 500px;
+  height: 100%;
+  background-color: #fafafa;
+}
+#wrap #guide-intro .guide-wrap .guide-body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#guide-list .pub-list .content-body .section .section-head {
+  position: relative;
+}
+#guide-list .pub-list .content-body .section .section-head .section-subject .section-name {
+  font-size: 4rem;
+  font-weight: 600;
+  letter-spacing: -0.2rem;
+  text-transform: capitalize;
+}
+#guide-list .pub-list .content-body .section .section-head .section-subject + .para {
+  padding-top: 1rem;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #000;
+}
+#guide-list .pub-list .content-body .section .section-head + .section-body {
+  padding-top: 3rem;
+}
+#guide-list .pub-list .content-body .section .section-head button {
+  position: absolute;
+  right: 0;
+  top: 1.5rem;
+  font-size: 1.4rem;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  border: 0.1rem solid #2d2d2d;
+}
+/* font-family:"Pretendard" */
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 100;
+  font-style: normal;
+  src: url("../fonts/pretendard/Pretendard-Thin.woff2") format("woff"), url("../fonts/pretendard/Pretendard-Thin.woff") format("woff"), url("../fonts/pretendard/Pretendard-Thin.otf") format("opentype"), url("../fonts/pretendard/Pretendard-Thin.ttf") format("truetype"), url("../fonts/pretendard/Pretendard-Thin.svg") format("svg");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 200;
+  font-style: normal;
+  src: url("../fonts/pretendard/Pretendard-ExtraLight.woff2") format("woff2"), url("../fonts/pretendard/Pretendard-ExtraLight.woff") format("woff"), url("../fonts/pretendard/Pretendard-ExtraLight.otf") format("opentype"), url("../fonts/pretendard/Pretendard-ExtraLight.ttf") format("truetype"), url("../fonts/pretendard/Pretendard-ExtraLight.svg") format("svg");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 300;
+  font-style: normal;
+  src: url("../fonts/pretendard/Pretendard-Light.woff2") format("woff2"), url("../fonts/pretendard/Pretendard-Light.woff") format("woff"), url("../fonts/pretendard/Pretendard-Light.otf") format("opentype"), url("../fonts/pretendard/Pretendard-Light.ttf") format("truetype"), url("../fonts/pretendard/Pretendard-Light.svg") format("svg");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 400;
+  font-style: normal;
+  src: url("../fonts/pretendard/Pretendard-Regular.woff2") format("woff2"), url("../fonts/pretendard/Pretendard-Regular.woff") format("woff"), url("../fonts/pretendard/Pretendard-Regular.otf") format("opentype"), url("../fonts/pretendard/Pretendard-Regular.ttf") format("truetype"), url("../fonts/pretendard/Pretendard-Regular.svg") format("svg");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 500;
+  font-style: normal;
+  src: url("../fonts/pretendard/Pretendard-Medium.woff2") format("woff2"), url("../fonts/pretendard/Pretendard-Medium.woff") format("woff"), url("../fonts/pretendard/Pretendard-Medium.otf") format("opentype"), url("../fonts/pretendard/Pretendard-Medium.ttf") format("truetype"), url("../fonts/pretendard/Pretendard-Medium.svg") format("svg");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 600;
+  font-style: normal;
+  src: url("../fonts/pretendard/Pretendard-SemiBold.woff2") format("woff2"), url("../fonts/pretendard/Pretendard-SemiBold.woff") format("woff"), url("../fonts/pretendard/Pretendard-SemiBold.otf") format("opentype"), url("../fonts/pretendard/Pretendard-SemiBold.ttf") format("truetype"), url("../fonts/pretendard/Pretendard-SemiBold.svg") format("svg");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 700;
+  font-style: normal;
+  src: url("../fonts/pretendard/Pretendard-Bold.woff2") format("woff2"), url("../fonts/pretendard/Pretendard-Bold.woff") format("woff"), url("../fonts/pretendard/Pretendard-Bold.otf") format("opentype"), url("../fonts/pretendard/Pretendard-Bold.ttf") format("truetype"), url("../fonts/pretendard/Pretendard-Bold.svg") format("svg");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 800;
+  font-style: normal;
+  src: url("../fonts/pretendard/Pretendard-ExtraBold.woff2") format("woff2"), url("../fonts/pretendard/Pretendard-ExtraBold.woff") format("woff"), url("../fonts/pretendard/Pretendard-ExtraBold.otf") format("opentype"), url("../fonts/pretendard/Pretendard-ExtraBold.ttf") format("truetype"), url("../fonts/pretendard/Pretendard-ExtraBold.svg") format("svg");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 900;
+  font-style: normal;
+  src: url("../fonts/pretendard/Pretendard-Black.woff2") format("woff2"), url("../fonts/pretendard/Pretendard-Black.woff") format("woff"), url("../fonts/pretendard/Pretendard-Black.otf") format("opentype"), url("../fonts/pretendard/Pretendard-Black.ttf") format("truetype"), url("../fonts/pretendard/Pretendard-Black.svg") format("svg");
+  font-display: swap;
+}

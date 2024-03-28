@@ -4,6 +4,11 @@
    <%-include('../_templates/_guide.head.ejs', {
 	pageJavascript: ''
 }) %>
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+/>
+
 </head>
 <body>
 <div id="wrap">
@@ -15,15 +20,44 @@
 			<!-- local-head -->
 			<div class="local-head">
 				<div class="local-subject blind"><h2 class="local-name" id="localName">preview</h2></div>
+                <div id="pubListSearch" class="page-search">
+                    <div class="select-wrap">
+                        <div class="search-select">
+                            <span class="select-item choice">All</span>
+                        </div>
+                        <ul class="search-category">
+                            <li class="select-item menu">All</option>
+                            <li class="select-item menu">Menu</option>
+                            <li class="select-item menu">Worker</option>
+                        </ul>
+                    </div>
+                    <div class="search-input-wrap"><input type="text" class="search-input" placeholder="Please enter the keyword" /></div>
+                </div>
+                <div class="menu-anchor">
+                    <div class="anchor-list swiper">
+                        <ul class="swiper-wrapper">
+                            <li class="anchor-item swiper-slide active"><span class="anchor-btn">About Junwoo</span></li>
+                            <li class="anchor-item swiper-slide"><span class="anchor-btn">Brand</span></li>
+                            <li class="anchor-item swiper-slide"><span class="anchor-btn">Sustainability</span></li>
+                            <li class="anchor-item swiper-slide"><span class="anchor-btn">Product</span></li>
+                            <li class="anchor-item swiper-slide"><span class="anchor-btn">Service</span></li>
+                            <li class="anchor-item swiper-slide"><span class="anchor-btn">Solution</span></li>
+                            <li class="anchor-item swiper-slide"><span class="anchor-btn">Info</span></li>
+                            <li class="anchor-item swiper-slide"><span class="anchor-btn">Introduce</span></li>
+                        </ul>
+                    </div>
+                </div>
 			</div>
 			<!-- //local-head -->
 			<!-- local-body -->
 			<div class="local-body" id="content">
-				<!-- content-head -->
-				<div class="content-head"></div>
-				<!-- //content-head -->
 				<!-- content-body -->
 				<div class="content-body">
+                    <div class="no-result">
+                        <div class="no-result-inner">
+                            <p class="des">검색결과가 없습니다.</p>
+                        </div>
+                    </div>
 				</div>
 				<!-- //content-body -->
 			</div>
@@ -35,158 +69,98 @@
 	<!-- //page -->
 </div>
 <script stype="text/javascript">
+    var category = ['No', 'Page ID', 'Menu', 'File Root', 'Completion', 'View']
 	var page = {
-      "layout": [
-         {"id": "page.default", "status": "완료", "name": "default"},
-		 {"id": "layout.front", "status": "완료", "name": "goods-display (+ pagination)"},
-         {"id": "layer.popup", "status": "완료", "name": "공통 팝업"},
+      "About Junwoo": [
+         {"id": "page.default", "menu": "default", "root": "kr/about/introduce/history/project.html", "status": "완료", "worker": "강예인", 
+         "history": 
+         "- 24-03-21 ko/pc table 클래스 추가" + "<br />" +
+         "- 24-03-20 ko/mo 폰트 사이즈 수정"},
 
-		 {"id": "page.default.en", "status": "영문완료", "name": "default"},
-		 {"id": "layout.front.en", "status": "영문완료", "name": "goods-display (+ pagination)"},
-         {"id": "layer.popup.en", "status": "영문완료", "name": "공통 팝업"},
+		 {"id": "layout.front", "menu": "goods-display (+ pagination)", "root": "kr/about/introduce/history/project.html", "status": "완료", "worker": "최준현"},
+         {"id": "layer.popup", "menu": "공통 팝업", "root": "kr/about/introduce/history/project.html", "status": "완료", "worker": "최준현"},
       ],
-	  "main": [
-         {"id": "MAIN.00.00", "status": "미정", "name": "메인"},
-         {"id": "EN.MAIN.00.00", "status": "미정", "name": "메인"},
+	  "Brand": [
+         {"id": "MAIN.00.00", "menu": "메인", "root": "kr/about/introduce/history/project.html", "status": "미정", "worker": "홍수기"},
+         {"id": "EN.MAIN.00.00", "menu": "메인", "root": "kr/about/introduce/history/project.html", "status": "미정", "worker": "주은소"},
       ],
-      "etc": [
-	     {"id": "SEAR.01.00", "status": "완료", "name": "통합검색"},
-         {"id": "SEAR.01.01", "status": "완료", "name": "검색 상세페이지"},
-         {"id": "SEAR.01.01.01", "status": "완료", "name": "검색 상세페이지 > 더보기"},
-         {"id": "SEAR.01.01.02", "status": "완료", "name": "검색 상세페이지 > 결과없음"},
-         {"id": "FOOT.02.00", "status": "완료", "name": "저작권 보호 정책 상세페이지"},
-		 {"id": "FOOT.03.00", "status": "완료", "name": "사이트맵"},
-         {"id": "CM.01.00", "status": "완료", "name": "페이지 없음"},
-
-		 {"id": "EN.SEAR.01.00", "status": "영문완료", "name": "통합검색"},
-         {"id": "EN.SEAR.01.01", "status": "영문완료", "name": "검색 상세페이지"},
-         {"id": "EN.SEAR.01.01.01", "status": "영문완료", "name": "검색 상세페이지 > 더보기"},
-         {"id": "EN.SEAR.01.01.02", "status": "영문완료", "name": "검색 상세페이지 > 결과없음"},
-         {"id": "EN.FOOT.02.00", "status": "영문완료", "name": "저작권 보호 정책 상세페이지"},
-		 {"id": "EN.FOOT.03.00", "status": "영문완료", "name": "사이트맵"},
-         {"id": "EN.CM.01.00", "status": "영문완료", "name": "페이지 없음"},
+      "Sustainability": [
+	     {"id": "SEAR.01.00", "menu": "통합검색", "root": "kr/about/introduce/history/project.html", "status": "완료", "worker": "강예인"},
+         {"id": "SEAR.01.01", "menu": "검색 상세페이지", "root": "kr/about/introduce/history/project.html", "status": "완료", "worker": "홍수기"},
+         {"id": "SEAR.01.01.01", "menu": "검색 상세페이지 > 더보기", "root": "kr/about/introduce/history/project.html", "status": "완료", "worker": "주은소"},
+         {"id": "SEAR.01.01.02", "menu": "검색 상세페이지 > 결과없음", "root": "kr/about/introduce/history/project.html", "status": "완료", "worker": ""},
+         {"id": "FOOT.02.00", "menu": "저작권 보호 정책 상세페이지", "root": "kr/about/introduce/history/project.html", "status": "완료", "worker": ""},
+		 {"id": "FOOT.03.00", "menu": "사이트맵", "root": "kr/about/introduce/history/project.html", "status": "완료", "worker": ""},
+         {"id": "CM.01.00", "menu": "페이지 없음", "root": "kr/about/introduce/history/project.html", "status": "완료", "worker": ""},
       ],
-      "products": [
-         {"id": "PROD.01.00", "status": "완료", "name": "위성영상 전시"},
-         {"id": "PROD.01.00.01", "status": "완료", "name": "위성영상 전시 > 2분할"},
-        //  {"id": "PROD.01.00.02", "status": "미정", "name": "위성영상 전시 > 속성검색_1"},
-        //  {"id": "PROD.01.00.03", "status": "미정", "name": "위성영상 전시 > 속성검색_2"},
-         {"id": "PROD.01.01", "status": "완료", "name": "알고리즘 문서"},
-
-		 {"id": "EN.PROD.01.00", "status": "미정", "name": "위성영상 전시"},
-         {"id": "EN.PROD.01.00.01", "status": "미정", "name": "위성영상 전시 > 2분할"},
-         {"id": "EN.PROD.01.01", "status": "영문완료", "name": "알고리즘 문서"},
+      "Product": [
+         {"id": "PROD.01.00", "menu": "위성영상 전시", "root": "kr/about/introduce/history/project.html", "status": "완료", "worker": ""},
+         {"id": "PROD.01.00.01", "menu": "위성영상 전시 > 2분할", "root": "kr/about/introduce/history/project.html", "status": "완료", "worker": ""},
+         {"id": "PROD.01.01", "menu": "알고리즘 문서", "root": "kr/about/introduce/history/project.html", "status": "완료", "worker": ""},
       ],
-      "data": [
-         {"id": "DATA.01.00", "status": "완료", "name": "자료서비스 > 목록"},
-         {"id": "DATA.01.01", "status": "완료", "name": "자료서비스 > 산출물 상세페이지"},
-         {"id": "DATA.01.02", "status": "완료", "name": "자료서비스 > 영상뷰어"},
-         {"id": "DATA.01.03", "status": "완료", "name": "자료서비스 > 자료신청 현황 페이지"},
-         {"id": "DATA.02.00", "status": "완료", "name": "OPEN-API > OPEN-API 키 발급"},
-         {"id": "DATA.02.01", "status": "완료", "name": "OPEN-API > OPEN-API URL 생성"},
-         {"id": "DATA.02.02", "status": "완료", "name": "OPEN-API > OPEN-API 란?"},
-         {"id": "CART.01.00", "status": "완료", "name": "장바구니 상세페이지"},
-
-		 {"id": "EN.DATA.01.00", "status": "영문완료", "name": "자료서비스 > 목록"},
-         {"id": "EN.DATA.01.01", "status": "영문완료", "name": "자료서비스 > 산출물 상세페이지"},
-         {"id": "EN.DATA.01.02", "status": "영문완료", "name": "자료서비스 > 영상뷰어"},
-         {"id": "EN.DATA.01.03", "status": "영문완료", "name": "자료서비스 > 자료신청 현황 페이지"},
-         {"id": "EN.DATA.02.00", "status": "미정", "name": "OPEN-API > OPEN-API 키 발급"},
-         {"id": "EN.DATA.02.01", "status": "미정", "name": "OPEN-API > OPEN-API URL 생성"},
-         {"id": "EN.DATA.02.02", "status": "미정", "name": "OPEN-API > OPEN-API 란?"},
-         {"id": "EN.CART.01.00", "status": "영문완료", "name": "장바구니 상세페이지"},
+      "Service": [
+         {"id": "DATA.01.00", "menu": "자료서비스 > 목록", "root": "kr/about/introduce/history/project.html", "status": "완료", "worker": ""},
+         {"id": "DATA.01.01", "menu": "자료서비스 > 산출물 상세페이지", "root": "kr/about/introduce/history/project.html", "status": "완료", "worker": ""},
+         {"id": "DATA.01.02", "menu": "자료서비스 > 영상뷰어", "root": "kr/about/introduce/history/project.html", "status": "완료", "worker": ""},
+         {"id": "DATA.01.03", "menu": "자료서비스 > 자료신청 현황 페이지", "root": "kr/about/introduce/history/project.html", "status": "완료", "worker": ""},
+         {"id": "DATA.02.00", "menu": "OPEN-API > OPEN-API 키 발급", "root": "kr/about/introduce/history/project.html", "status": "완료", "worker": ""},
+         {"id": "DATA.02.01", "menu": "OPEN-API > OPEN-API URL 생성", "root": "kr/about/introduce/history/project.html", "status": "완료", "worker": ""},
+         {"id": "DATA.02.02", "menu": "OPEN-API > OPEN-API 란?", "root": "kr/about/introduce/history/project.html", "status": "완료", "worker": ""},
+         {"id": "CART.01.00", "menu": "장바구니 상세페이지", "root": "kr/about/introduce/history/project.html", "status": "완료", "worker": ""},
       ],
-      "satellite": [
-         {"id": "SATE.01.00", "status": "완료", "name": "위성 소개"},
-         {"id": "SATE.02.00", "status": "완료", "name": "환경탑재체"},
-         {"id": "SATE.03.00", "status": "완료", "name": "산출물 > 개요"},
-         {"id": "SATE.03.01", "status": "완료", "name": "산출물 > 에어로졸"},
-         {"id": "SATE.03.02", "status": "완료", "name": "산출물 > 에어로졸 유효 고도"},
-         {"id": "SATE.03.03", "status": "완료", "name": "산출물 > 구름정보"},
-         {"id": "SATE.03.04", "status": "완료", "name": "산출물 > 지표면 반사도"},
-         {"id": "SATE.03.05", "status": "완료", "name": "산출물 > 오존전량"},
-         {"id": "SATE.03.06", "status": "완료", "name": "산출물 > 오존프로파일"},
-         {"id": "SATE.03.07", "status": "완료", "name": "산출물 > 포름알데하이드"},
-         {"id": "SATE.03.08", "status": "완료", "name": "산출물 > 글리옥살"},
-         {"id": "SATE.03.09", "status": "완료", "name": "산출물 > 이산화질소 농도"},
-         {"id": "SATE.03.10", "status": "완료", "name": "산출물 > 이산화황"},
-         {"id": "SATE.03.11", "status": "완료", "name": "산출물 > 자외선지수"},
-         {"id": "SATE.03.12", "status": "완료", "name": "산출물 > 에어로졸 이동량(L4)"},
-         {"id": "SATE.04.00", "status": "완료", "name": "운영정보"},
-         {"id": "SATE.05.00", "status": "완료", "name": "프로그램 > 소개"},
-         {"id": "SATE.05.01", "status": "완료", "name": "프로그램 > 가이드"},
-
-		 {"id": "EN.SATE.01.00", "status": "영문완료", "name": "위성 소개"},
-         {"id": "EN.SATE.02.00", "status": "영문완료", "name": "환경탑재체"},
-         {"id": "EN.SATE.03.00", "status": "영문완료", "name": "산출물 > 개요"},
-         {"id": "EN.SATE.03.01", "status": "영문완료", "name": "산출물 > 에어로졸"},
-         {"id": "EN.SATE.03.02", "status": "영문완료", "name": "산출물 > 에어로졸 유효 고도"},
-         {"id": "EN.SATE.03.03", "status": "영문완료", "name": "산출물 > 구름정보"},
-         {"id": "EN.SATE.03.04", "status": "영문완료", "name": "산출물 > 지표면 반사도"},
-         {"id": "EN.SATE.03.05", "status": "영문완료", "name": "산출물 > 오존전량"},
-         {"id": "EN.SATE.03.06", "status": "영문완료", "name": "산출물 > 오존프로파일"},
-         {"id": "EN.SATE.03.07", "status": "영문완료", "name": "산출물 > 포름알데하이드"},
-         {"id": "EN.SATE.03.08", "status": "영문완료", "name": "산출물 > 글리옥살"},
-         {"id": "EN.SATE.03.09", "status": "영문완료", "name": "산출물 > 이산화질소 농도"},
-         {"id": "EN.SATE.03.10", "status": "영문완료", "name": "산출물 > 이산화황"},
-         {"id": "EN.SATE.03.11", "status": "영문완료", "name": "산출물 > 자외선지수"},
-         {"id": "EN.SATE.03.12", "status": "영문완료", "name": "산출물 > 에어로졸 이동량(L4)"},
-         {"id": "EN.SATE.04.00", "status": "영문완료", "name": "운영정보"},
-         {"id": "EN.SATE.05.00", "status": "영문완료", "name": "프로그램 > 소개"},
-         {"id": "EN.SATE.05.01", "status": "영문완료", "name": "프로그램 > 가이드"},
+      "Solution": [
+         {"id": "SATE.01.00", "menu": "위성 소개", "root": "kr/about/introduce/history/project.html", "status": "완료", "worker": ""},
+         {"id": "SATE.02.00", "menu": "환경탑재체", "root": "kr/about/introduce/history/project.html", "status": "완료", "worker": ""},
+         {"id": "SATE.03.00", "menu": "산출물 > 개요", "root": "kr/about/introduce/history/project.html", "status": "완료", "worker": ""},
+         {"id": "SATE.03.01", "menu": "산출물 > 에어로졸", "root": "kr/about/introduce/history/project.html", "status": "완료", "worker": ""},
+         {"id": "SATE.03.02", "menu": "산출물 > 에어로졸 유효 고도", "root": "kr/about/introduce/history/project.html", "status": "완료", "worker": ""},
+         {"id": "SATE.03.03", "menu": "산출물 > 구름정보", "root": "kr/about/introduce/history/project.html", "status": "완료", "worker": ""},
+         {"id": "SATE.03.04", "menu": "산출물 > 지표면 반사도", "root": "kr/about/introduce/history/project.html", "status": "완료", "worker": ""},
+         {"id": "SATE.03.05", "menu": "산출물 > 오존전량", "root": "kr/about/introduce/history/project.html", "status": "완료", "worker": ""},
+         {"id": "SATE.03.06", "menu": "산출물 > 오존프로파일", "root": "kr/about/introduce/history/project.html", "status": "완료", "worker": ""},
+         {"id": "SATE.03.07", "menu": "산출물 > 포름알데하이드", "root": "kr/about/introduce/history/project.html", "status": "완료", "worker": ""},
+         {"id": "SATE.03.08", "menu": "산출물 > 글리옥살", "root": "kr/about/introduce/history/project.html", "status": "완료", "worker": ""},
+         {"id": "SATE.03.09", "menu": "산출물 > 이산화질소 농도", "root": "kr/about/introduce/history/project.html", "status": "완료", "worker": ""},
+         {"id": "SATE.03.10", "menu": "산출물 > 이산화황", "root": "kr/about/introduce/history/project.html", "status": "완료", "worker": ""},
+         {"id": "SATE.03.11", "menu": "산출물 > 자외선지수", "root": "kr/about/introduce/history/project.html", "status": "완료", "worker": ""},
+         {"id": "SATE.03.12", "menu": "산출물 > 에어로졸 이동량(L4)", "root": "kr/about/introduce/history/project.html", "status": "완료", "worker": ""},
+         {"id": "SATE.04.00", "menu": "운영정보", "root": "kr/about/introduce/history/project.html", "status": "완료", "worker": ""},
+         {"id": "SATE.05.00", "menu": "프로그램 > 소개", "root": "kr/about/introduce/history/project.html", "status": "완료", "worker": ""},
+         {"id": "SATE.05.01", "menu": "프로그램 > 가이드", "root": "kr/about/introduce/history/project.html", "status": "완료", "worker": ""},
       ],
-      "info": [
-         {"id": "INFO.05.00", "status": "완료", "name": "공지사항 > 목록"},
-         {"id": "INFO.05.01", "status": "완료", "name": "공지사항 > 상세"},
-         {"id": "INFO.06.00", "status": "완료", "name": "홍보마당 > 목록"},
-         {"id": "INFO.06.01", "status": "완료", "name": "홍보마당 > 상세"},
-         {"id": "INFO.07.00", "status": "완료", "name": "간행물 > 목록"},
-         {"id": "INFO.07.01", "status": "완료", "name": "간행물 > 상세"},
-         {"id": "INFO.08.00", "status": "완료", "name": "설문조사 > 목록"},
-         {"id": "INFO.08.01", "status": "완료", "name": "설문조사 > 참여"},
-         {"id": "INFO.08.02.01", "status": "완료", "name": "설문조사 > 상세"},
-         {"id": "INFO.08.02.02", "status": "완료", "name": "설문조사 > 응답제출"},
-         {"id": "INFO.08.02", "status": "완료", "name": "설문조사 > 제출완료"},
-         {"id": "INFO.09.00", "status": "완료", "name": "Q&A"},
-
-		 {"id": "EN.INFO.05.00", "status": "영문완료", "name": "공지사항 > 목록"},
-         {"id": "EN.INFO.05.01", "status": "영문완료", "name": "공지사항 > 상세"},
-         {"id": "EN.INFO.06.00", "status": "영문완료", "name": "홍보마당 > 목록"},
-         {"id": "EN.INFO.06.01", "status": "영문완료", "name": "홍보마당 > 상세"},
-         {"id": "EN.INFO.07.00", "status": "영문완료", "name": "간행물 > 목록"},
-         {"id": "EN.INFO.07.01", "status": "영문완료", "name": "간행물 > 상세"},
-         {"id": "EN.INFO.08.00", "status": "영문완료", "name": "설문조사 > 목록"},
-         {"id": "EN.INFO.08.01", "status": "영문완료", "name": "설문조사 > 참여"},
-         {"id": "EN.INFO.08.02.01", "status": "영문완료", "name": "설문조사 > 상세"},
-         {"id": "EN.INFO.08.02.02", "status": "영문완료", "name": "설문조사 > 응답제출"},
-         {"id": "EN.INFO.08.02", "status": "영문완료", "name": "설문조사 > 제출완료"},
-         {"id": "EN.INFO.09.00", "status": "영문완료", "name": "Q&A"},
+      "Info": [
+         {"id": "INFO.05.00", "menu": "공지사항 > 목록", "root": "kr/about/introduce/history/project.html", "status": "완료", "worker": ""},
+         {"id": "INFO.05.01", "menu": "공지사항 > 상세", "root": "kr/about/introduce/history/project.html", "status": "완료", "worker": ""},
+         {"id": "INFO.06.00", "menu": "홍보마당 > 목록", "root": "kr/about/introduce/history/project.html", "status": "완료", "worker": ""},
+         {"id": "INFO.06.01", "menu": "홍보마당 > 상세", "root": "kr/about/introduce/history/project.html", "status": "완료", "worker": ""},
+         {"id": "INFO.07.00", "menu": "간행물 > 목록", "root": "kr/about/introduce/history/project.html", "status": "완료", "worker": ""},
+         {"id": "INFO.07.01", "menu": "간행물 > 상세", "root": "kr/about/introduce/history/project.html", "status": "완료", "worker": ""},
+         {"id": "INFO.08.00", "menu": "설문조사 > 목록", "root": "kr/about/introduce/history/project.html", "status": "완료", "worker": ""},
+         {"id": "INFO.08.01", "menu": "설문조사 > 참여", "root": "kr/about/introduce/history/project.html", "status": "완료", "worker": ""},
+         {"id": "INFO.08.02.01", "menu": "설문조사 > 상세", "root": "kr/about/introduce/history/project.html", "status": "완료", "worker": ""},
+         {"id": "INFO.08.02.02", "menu": "설문조사 > 응답제출", "root": "kr/about/introduce/history/project.html", "status": "완료", "worker": ""},
+         {"id": "INFO.08.02", "menu": "설문조사 > 제출완료", "root": "kr/about/introduce/history/project.html", "status": "완료", "worker": ""},
+         {"id": "INFO.09.00", "menu": "Q&A", "root": "kr/about/introduce/history/project.html", "status": "완료", "worker": ""},
       ],
-      "introduce": [
-         {"id": "INTR.10.00", "status": "완료", "name": "인사말"},
-         {"id": "INTR.11.00", "status": "완료", "name": "연혁"},
-         {"id": "INTR.12.00", "status": "완료", "name": "비전/임무"},
-         {"id": "INTR.13.00", "status": "완료", "name": "주요업무"},
-         {"id": "INTR.14.00", "status": "완료", "name": "조직 구성도"},
-         {"id": "INTR.15.00", "status": "완료", "name": "오시는 길"},
-         {"id": "INTR.16.00", "status": "완료", "name": "상징 (MI)"},
-
-		 {"id": "EN.INTR.10.00", "status": "영문완료", "name": "인사말"},
-         {"id": "EN.INTR.11.00", "status": "영문완료", "name": "연혁"},
-         {"id": "EN.INTR.12.00", "status": "영문완료", "name": "비전/임무"},
-         {"id": "EN.INTR.13.00", "status": "영문완료", "name": "주요업무"},
-         {"id": "EN.INTR.14.00", "status": "영문완료", "name": "조직 구성도"},
-         {"id": "EN.INTR.15.00", "status": "미정", "name": "오시는 길"},
-         {"id": "EN.INTR.16.00", "status": "미정", "name": "상징 (MI)"},
+      "Introduce": [
+         {"id": "INTR.10.00", "menu": "인사말", "root": "kr/about/introduce/history/project.html", "status": "완료", "worker": ""},
+         {"id": "INTR.11.00", "menu": "연혁", "root": "kr/about/introduce/history/project.html", "status": "완료", "worker": ""},
+         {"id": "INTR.12.00", "menu": "비전/임무", "root": "kr/about/introduce/history/project.html", "status": "완료", "worker": ""},
+         {"id": "INTR.13.00", "menu": "주요업무", "root": "kr/about/introduce/history/project.html", "status": "완료", "worker": ""},
+         {"id": "INTR.14.00", "menu": "조직 구성도", "root": "kr/about/introduce/history/project.html", "status": "완료", "worker": ""},
+         {"id": "INTR.15.00", "menu": "오시는 길", "root": "kr/about/introduce/history/project.html", "status": "완료", "worker": ""},
+         {"id": "INTR.16.00", "menu": "상징 (MI)", "root": "kr/about/introduce/history/project.html", "status": "완료", "worker": ""},
       ],
-      
    };
-
 
 	document.addEventListener('DOMContentLoaded', function() {
 		var listup = function(selector) {
 			var directory = './../../front/';
 			var dataContainer = document.querySelector(selector);
+            
+            const searchInput = document.querySelector('.page-search .search-input')
+            const pageSection = document.querySelectorAll('.pub-list .local-body .content-body .section')
+            var pageName = Object.values(page).flatMap(pageAll => pageAll.map(item => item.name));
 
 			Object.keys(page).forEach(function(dir) {
 				var section = document.createElement('div');
@@ -195,8 +169,14 @@
 				var sectionName = document.createElement('span');
 				var sectionBody = document.createElement('div');
 				var dataDisplay = document.createElement('div');
+				var dataHead = document.createElement('div');
+                var cateList = document.createElement('ul');
+                var dataBody = document.createElement('div');
 				var dataList = document.createElement('ul');
-
+			    var dataItem = document.createElement('li');
+                var dataArea = document.createElement('div');
+                var no = 1;
+                
 				section.className = 'section';
 				sectionHead.className = 'section-head';
 				sectionTitle.className = 'section-subject';
@@ -208,63 +188,348 @@
 				sectionTitle.appendChild(sectionName);
 				sectionHead.appendChild(sectionTitle);
 
+                dataHead.classList.add('data-head')
+                cateList.classList.add('cate-list')
+
+                dataBody.classList.add('data-body')
+
+                category.map(category => {
+			        var cateItem = document.createElement('li');
+
+                    cateItem.classList.add('cate-item')
+                    if(category == 'No' || category == 'Page ID' || category == 'Completion' || category == 'View') {
+                        cateItem.classList.add('ac')
+                    } else {
+                        cateItem.classList.add('al')
+                    }
+                    cateItem.textContent = category
+
+                    cateList.appendChild(cateItem);
+                })
+
 				Array.prototype.forEach.call(page[dir], function(data) {
 					var dataItem = document.createElement('li');
-					var dataArea = document.createElement('a');
-					var dataHead = document.createElement('span');
-					var dataName = document.createElement('span');
-					var dataBody = document.createElement('span');
+					var dataDefault = document.createElement('div');
+					var dataDefaultInner = document.createElement('div');
+					var dataNo = document.createElement('span');
+					var dataId = document.createElement('span');
+					var dataMenu = document.createElement('span');
+					var dataRoot = document.createElement('span');
+					var dataStatus = document.createElement('span');
+					var dataView = document.createElement('div');
+					var dataViewText = document.createElement('a');
+					var detailBtnWrap = document.createElement('div');
+                    var detailBtn = document.createElement('button')
+                    var detailBtnText = document.createElement('span')
 
-					dataDisplay.className = 'data-display style-bui type-a';
+					var dataDetail = document.createElement('div');
+					var dataDetailInner = document.createElement('div');
+					var dataWorker = document.createElement('div');
+					var dataWorkerTitle = document.createElement('span');
+					var dataWorkerName = document.createElement('strong');
+					var dataHistory = document.createElement('div');
+					var dataHistoryTitle = document.createElement('span');
+					var dataHistoryContents = document.createElement('strong');
+
+					dataDisplay.className = 'data-display';
 					dataList.classList.add('data-list');
 
-					dataItem.title = data.status;
 					dataItem.classList.add('data-item');
-					
-					dataHead.classList.add('data-head');
-					dataName.textContent = data.name;
-					dataName.classList.add('data-name');
-					
-					dataArea.classList.add('data-area');
-					dataArea.setAttribute('target', '_blank');
-					dataArea.setAttribute('href', directory + section.id + '/' + data.id + '.html');
+					dataDefault.className = 'data-area default';
+					dataDefaultInner.className = 'data-inner';
+					dataNo.className = 'data data-no';
+					dataId.className = 'data data-id';
+					dataMenu.className = 'data data-menu';
+					dataRoot.className = 'data data-root';
+					dataStatus.className = 'data data-status';
+					dataView.className = 'data data-view';
+					dataViewText.className = 'data-text';
+					detailBtnWrap.className = 'data data-btn';
+					detailBtn.className = 'btn open-close';
+					detailBtnText.className = 'blind';
 
-					// if (dataItem.title == "미정") {
-					// 	dataArea.setAttribute('onclick', 'return false');
-					// }
+					dataDetail.className = 'data-area detail';
+					dataDetailInner.className = 'data-inner';
+					dataWorker.className = 'data-list worker';
+                    dataWorkerTitle.className = 'data title';
+                    dataWorkerName.className = 'data name';
+					dataHistory.className = 'data-list history';
+                    dataHistoryTitle.className = 'data title';
+                    dataHistoryContents.className = 'data contents';
+
+                    dataNo.textContent = no
+					dataId.textContent = data.id;
+					dataMenu.textContent = data.menu;
+					dataRoot.textContent = data.root;
+					dataStatus.textContent = data.status;
+					dataViewText.textContent = 'Go';
+                    detailBtnText.textContent = '상세 보기 버튼'
+
+                    dataWorkerTitle.textContent = 'Worker'
+                    dataWorkerName.textContent = data.worker;
+
+                    dataHistoryTitle.textContent = 'History'
+                    dataHistoryContents.innerHTML = data.history;
+
+					dataViewText.setAttribute('target', '_blank');
+					dataViewText.setAttribute('href', data.root);
 					
-					dataBody.classList.add('data-body');
-					dataBody.textContent = data.id + '.html';
-					
-					dataHead.appendChild(dataName);
-					dataArea.appendChild(dataHead);
-					dataArea.appendChild(dataBody);
-					dataItem.appendChild(dataArea);
+                    dataDefaultInner.appendChild(dataNo);
+                    dataDefaultInner.appendChild(dataId);
+                    dataDefaultInner.appendChild(dataMenu);
+                    dataDefaultInner.appendChild(dataRoot);
+                    dataDefaultInner.appendChild(dataStatus);
+                    dataView.appendChild(dataViewText);
+                    dataDefaultInner.appendChild(dataView);
+                    detailBtn.appendChild(detailBtnText);
+                    detailBtnWrap.appendChild(detailBtn);
+                    dataDefaultInner.appendChild(detailBtnWrap);
+                    dataDefault.appendChild(dataDefaultInner);
+					dataItem.appendChild(dataDefault);
+					dataWorker.appendChild(dataWorkerTitle);
+					dataWorker.appendChild(dataWorkerName);
+					dataDetailInner.appendChild(dataWorker);
+                    dataHistory.appendChild(dataHistoryTitle);
+                    dataHistory.appendChild(dataHistoryContents);
+					dataDetailInner.appendChild(dataHistory);
+                    dataDetail.appendChild(dataDetailInner);
+					dataItem.appendChild(dataDetail);
 					dataList.appendChild(dataItem);
+
+					no += 1;
 				});
 				
-				dataDisplay.appendChild(dataList);
+
+                dataHead.appendChild(cateList);
+                dataBody.appendChild(dataList);
+				dataDisplay.appendChild(dataHead);
+				dataDisplay.appendChild(dataBody);
 				sectionBody.appendChild(dataDisplay);
 
 				section.appendChild(sectionHead);
 				section.appendChild(sectionBody);
 				dataContainer.appendChild(section);
-
-				// 페이지 전체 열기
-				var openPage = document.createElement('button');
-				openPage.textContent = '모두열기';
-				sectionHead.appendChild(openPage);
-				openPage.addEventListener('click', function() {
-					var container = document.getElementById(section.id);
-					Array.prototype.forEach.call(container.querySelectorAll('a'), function(page) {
-						page.click();
-					});
-				});
 			});
 		}
 
 		listup('.content-body');
-	});
-</script>
+
+        // 검색 기능
+        const searchInput = document.querySelector('.page-search .search-input')
+        const pageSection = document.querySelectorAll('.pub-list .local-body .content-body .section')
+        var pageName = Object.values(page).flatMap(pageAll => pageAll.map(item => item.menu));
+        var workerName = Object.values(page).flatMap(pageAll => pageAll.map(item => item.worker));
+
+        
+        const pubListSearch = document.querySelector("#pubListSearch")
+        const selectBox = pubListSearch.querySelector('.search-select')
+        const choiceCate = selectBox.querySelector('.select-item');
+        const noResult = document.querySelector('.pub-list .no-result')
+
+        searchInput.addEventListener("keyup", () => {
+            if(searchInput.value == '') {
+                pageSection.forEach(element => {
+                    element.classList.remove('hidden')
+                    const dataItem = element.querySelectorAll('.data-item')
+                    dataItem.forEach(item => {
+                        item.classList.remove('hidden')
+                    })
+                });
+                noResult.classList.remove('active')
+            } else {
+                pageSection.forEach(element => {
+                    element.classList.add('hidden')
+                });
+            }
+            if(searchInput.value) {
+                let filterPageName = pageName.filter(menu => menu.includes(searchInput.value))
+                let filterWorkerName = workerName.filter(worker => worker.includes(searchInput.value))
+                var idValueByAll = Object.keys(page).filter(key => page[key].some(item => filterPageName.includes(item.menu) || filterWorkerName.includes(item.worker)));
+                var idValueByMenu = Object.keys(page).filter(key => page[key].some(item => filterPageName.includes(item.menu)));
+                var idValueByWorker = Object.keys(page).filter(key => page[key].some(item => filterWorkerName.includes(item.worker)));
+                var idValue = idValueByAll;
+
+                if(choiceCate.innerText == 'All') {
+                    idValue = idValueByAll;
+                } else if(choiceCate.innerText == 'Menu') {
+                    idValue = idValueByMenu;
+                } else if(choiceCate.innerText == 'Worker') {
+                    idValue = idValueByWorker;
+                }
+
+                if(idValue.length == 0 && searchInput.value != '') {
+                    noResult.classList.add('active')
+                } else {
+                    noResult.classList.remove('active')
+                }
+
+                idValue.map(id => {
+                    pageSection.forEach(element => {
+                        let sectionID = element.getAttribute('id');
+                        if(sectionID == id) {
+                            element.classList.remove('hidden')
+                            
+                            const menuName = element.querySelectorAll('.data-menu')
+                            const dataWorkerName = element.querySelectorAll('.data-list.worker .name')
+                            const pubDataList = element.querySelectorAll('.data-item')
+                            pubDataList.forEach(list => {
+                                list.classList.add('hidden')
+                            });
+
+                            if(choiceCate.innerText == 'All' || choiceCate.innerText == 'Menu') {
+                                menuName.forEach(menuName => {
+                                    filterPageName.forEach(filterPageName => {
+                                        if(menuName.innerText == filterPageName) {
+                                            menuName.closest('.data-item').classList.remove('hidden');
+                                        }
+                                    });
+                                });
+                            }
+                            if(choiceCate.innerText == 'All' || choiceCate.innerText == 'Worker') {
+                                dataWorkerName.forEach(dataWorkerName => {
+                                    filterWorkerName.forEach(filterWorkerName => {
+                                        if(dataWorkerName.innerText == filterWorkerName) {
+                                            dataWorkerName.closest('.data-item').classList.remove('hidden');
+                                        }
+                                    })
+                                })
+                            }
+                        }
+                    });
+                });
+            }
+        })
+
+        // 아코디언 열기/닫기 기능
+        const detailBtn = document.querySelectorAll('.data-area.default .data-btn .btn');
+        detailBtn.forEach(btn => {
+            btn.addEventListener("click", function() {
+                var dataItem = btn.closest('.data-item')
+                var dataInner = dataItem.querySelector('.detail .data-inner')
+                var heightValue = dataInner.offsetHeight;
+                if(!dataItem.classList.contains('active')) {
+                    dataItem.classList.add('active')
+                    dataInner.closest('.detail').style.height = heightValue + "px";
+                } else {
+                    dataItem.classList.remove('active')
+                    dataInner.closest('.detail').style.height = 0;
+                }
+            })
+        })
+
+        const menuAnchor = document.querySelector('#guide-list .menu-anchor')
+        const menuAnchorTop = window.pageYOffset + menuAnchor.getBoundingClientRect().top;
+
+            // 앵커 Fix 구간 설정
+            window.addEventListener("scroll", function() {
+                if(menuAnchorTop <= window.scrollY) {
+                    menuAnchor.classList.add('fix')
+                } else {
+                    menuAnchor.classList.remove('fix')
+                }
+            })
+
+            // 앵커 기능
+            const anchorItem = menuAnchor.querySelectorAll('.anchor-item')
+            const section = document.querySelectorAll('.pub-list .section')
+            var anchorTitle;
+            anchorItem.forEach(item => {
+                item.addEventListener("click", function() {
+                    anchorTitle = item.querySelector('.anchor-btn').innerText
+                    
+                    section.forEach(section => {
+                        var sectionId = section.getAttribute('id');
+
+                        if(sectionId == anchorTitle) {
+                            var sectionTop = window.pageYOffset + section.getBoundingClientRect().top;
+                            window.scrollTo({top: sectionTop-20, behavior: "smooth"})
+                        }
+                    });
+                })
+            })
+
+            var i = 0;
+            window.addEventListener("scroll", function() {
+                const current = window.scrollY+21;
+                if (i < section.length-1) {
+                    const frontLine = window.pageYOffset + section[i].getBoundingClientRect().top;
+                    const endLine = window.pageYOffset + section[i+1].getBoundingClientRect().top;
+
+                    if(frontLine <= current && current < endLine) {
+                        if(!anchorItem[i].classList.contains('active')) {
+                            anchorItem[i].classList.add('active');
+                        }
+                    } else if(current < frontLine) {
+                        anchorItem[i].classList.remove('active')
+                        anchorItem[i-1].classList.add('active')
+
+                        i -= 1;
+                    } else if(current > endLine) {
+                        anchorItem[i].classList.remove('active')
+                        anchorItem[i+1].classList.add('active')
+
+                        i += 1;
+                    }
+                } else {
+                    const frontLine = window.pageYOffset + section[1].getBoundingClientRect().top;
+
+                    if(current > frontLine) {
+                        anchorItem[i-1].classList.remove('active')
+                        anchorItem[i].classList.add('active')
+
+                        i -= 1;
+                    }
+                }
+                if(window.scrollY == document.documentElement.scrollHeight - window.innerHeight) {
+                    anchorItem.forEach(item => {
+                        item.classList.remove('active')
+                    });
+                    anchorItem[anchorItem.length - 1].classList.add('active')
+                } else {
+                    if(i != anchorItem.length-1) {
+                        anchorItem[anchorItem.length - 1].classList.remove('active')
+                    }
+                }
+            })
+
+            // 앵커 스와이퍼
+            new Swiper(menuAnchor.querySelector('.swiper'), {
+                slidesPerView: 'auto',
+                freeMode: true,
+            })
+
+            // 셀렉트 열기/닫기 기능
+            selectBox.addEventListener("click", function() {
+                if(selectBox.classList.contains('active')) {
+                    this.classList.remove('active')
+                } else {
+                    this.classList.add('active')
+                }
+            })
+
+            // 셀렉트 선택 기능
+            const categoryBox = pubListSearch.querySelector('.search-category');
+            const selectCate = categoryBox.querySelectorAll('.select-item');
+
+            selectCate.forEach(category => {
+                category.addEventListener("click", function() {
+                    const choiceText = category.innerText;
+                    choiceCate.innerText = choiceText
+                    
+                    selectBox.classList.remove('active')
+                    searchInput.value = ''
+                    pageSection.forEach(element => {
+                        element.classList.remove('hidden')
+                        const dataItem = element.querySelectorAll('.data-item')
+                        dataItem.forEach(item => {
+                            item.classList.remove('hidden')
+                        })
+                    });
+                    noResult.classList.remove('active')
+                })
+            });
+	    });
+    </script>
 </body>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 </html>
