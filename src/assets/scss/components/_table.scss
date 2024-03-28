@@ -1,63 +1,104 @@
 .t-list {
     &.design1 {
-		>thead {
-			>tr {
-				>th {
+		width: 100%;
+		max-width: 120rem;
+		margin: 0 auto;
 
+		table {
+			thead {
+				tr {
+					th {
+	
+					}
 				}
 			}
-		}
-
-		>tbody {
-			>tr {
-				>td {
-					
-				}
-				+tr {
-					>td {
-						border-top: 1px solid color(normal, 040);
+	
+			tbody {
+				tr {
+					td {
+						
+					}
+					+tr {
+						td {
+							border-top: 1px solid color(normal, 040);
+						}
 					}
 				}
 			}
 		}
-        &.case1 {}
+
+		&.case1 {}
+		&.case2 {}
+		&.case3 {}
     }
     &.design2 {
-		>thead {
-			>tr {
-				>th {
+		thead {
+			tr {
+				th {
 
 				}
 			}
 		}
 
-		>tbody {
-			>tr {
-				>td {
+		tbody {
+			tr {
+				td {
 					
 				}
 				+tr {
-					>td {
+					td {
 						border-top: 1px solid color(normal, 040);
 					}
 				}
 			}
 		}
+
+		&.case1 {}
+		&.case2 {}
+		&.case3 {}
     }
 
+	//common
+	thead,
+	tbody {
+		tr {
+			th,
+			td {
+				&.al {
+					text-align: left;
+				}
+				&.ar {
+					text-align: right;
+				}
+				&.ac {
+					text-align: center;
+				}
+			}
+		}
+	}
+
+	// table info
     .t-info {
-        margin-top: 1rem;
-        color: color(achromatic, 544);
-        font-size: 1.3rem;
-        line-height: 1.8rem;
+		&.type1 {
+			color: color(normal, 010);
+			font-size: 3.2rem;
+			font-weight: 600;
+			line-height: 3.8rem;
+		}
+		&.type2 {
+			color: color(normal, 010);
+			font-size: 1.3rem;
+			font-weight: 600;
+			line-height: 1.8rem;
+		}
+		+ table {
+			margin-top: 2ren;
+		}
     }
 
-    .t-tit {
-        font-size: 3.2rem;
-        font-weight: 600;
-        line-height: 3.8rem;
-        margin-bottom: 4rem;
-    }
+	table + .t-info {
+		margin-top: 2rem;
+	}
 
     //align
     &.al {
@@ -75,4 +116,9 @@
             text-align: center;
         }
     }
+
+	// table 정보가 없는 경우
+	.no-results {
+		padding: 6.6rem 0 7.8rem;
+	}
 }
