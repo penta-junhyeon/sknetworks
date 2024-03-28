@@ -535,10 +535,6 @@
             });
 
             // 페이지 완료 상태에 따른 버튼 활성/비활성
-            
-            const pageStatus = Object.values(page).flatMap(pageAll => pageAll.map(item => item.status));
-            const statusBtn = selectBox.querySelector('.data-status');
-
             pageSection.forEach(element => {
                 const dataItem = element.querySelectorAll('.data-item')
                 dataItem.forEach(item => {
