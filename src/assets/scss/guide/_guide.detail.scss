@@ -92,6 +92,9 @@
 
 				// 폰트
 				&.font-guide {
+					.section-body {
+						padding-left: 0;
+					}
 					.subsection {
 						.subsection-body {
 							.table {
