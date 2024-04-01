@@ -131,6 +131,21 @@
 									}
 								}
 							}
+							@include mobile {
+								overflow: auto;
+								margin-right: -1.8rem;
+								margin-left: -1.8rem;
+								padding-right: 1.8rem;
+								padding-left: 1.8rem;
+								.table {
+									min-width: 80rem;
+									th {
+										&:first-child {
+											width: 40%;
+										}
+									}
+								}
+							}
 						}
 					}
 				}
