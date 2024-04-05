@@ -90,7 +90,7 @@ gulp.task("scss:compile", function () {
 
 gulp.task("js", () => {
   return gulp
-    .src(SRC_PATH.ASSETS.JS + "/*.js")
+    .src(SRC_PATH.ASSETS.JS + "/**/*.js")
     .pipe(babel())
     .pipe(uglify()) //자바스크립트 코드를 압축해 용량을 줄임
     .pipe(gulp.dest(DEST_PATH.ASSETS.JS))
@@ -156,9 +156,9 @@ gulp.task("movies", () => {
 gulp.task("watch", function () {
   gulp.watch(SRC_PATH.EJS + "/**/*.ejs", gulp.series("ejs"));
   gulp.watch(SRC_PATH.ASSETS.SCSS + "/**/*.scss", gulp.series("scss:compile"));
-  gulp.watch(SRC_PATH.ASSETS.JS + "/*.js", gulp.series("js"));
+  gulp.watch(SRC_PATH.ASSETS.JS + "/**/*.js", gulp.series("js"));
   gulp.watch(SRC_PATH.ASSETS.AJAX + "/*.js", gulp.series("ajax"));
-  gulp.watch(SRC_PATH.ASSETS.MODULES + "/*.js", gulp.series("modules"));
+  gulp.watch(SRC_PATH.ASSETS.MODULES + "/**/*.js", gulp.series("modules"));
   gulp.watch(SRC_PATH.ASSETS.IMAGES + "/**/*.+(png|jpg|jpeg|gif|ico)",gulp.series("images"));
   gulp.watch(SRC_PATH.ASSETS.IMAGES + "/**/*.svg", gulp.series("svg"));
   gulp.watch(SRC_PATH.ASSETS.FONTS + "/**/*.+(eot|otf|svg|ttf|woff|woff2)",gulp.series("fonts"));
