@@ -8,21 +8,10 @@
 <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/styles/github.min.css" />
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/languages/bash.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/ScrollToPlugin.min.js"></script>
+<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
 <script>hljs.initHighlightingOnLoad();</script>
 <script src="./../../assets/js/guide.js"></script>
 <%-include('../_templates/_guide.component.script.ejs') %>
-
-<!-- <script type="text/javascript">
-	document.addEventListener('DOMContentLoaded', function() {
-		var currentPage = function(pageItem, pageName) {
-			var localItems = document.querySelectorAll(pageItem);
-			Array.prototype.forEach.call(localItems, function(localItem, index) {
-				var localName = localItem.querySelector(pageName).getAttribute('href');
-				if (localName.substring(localName.lastIndexOf('/') + 1) === document.URL.substring(document.URL.lastIndexOf('/') + 1)) {
-					localItem.classList.add('current');
-				}
-			});
-		}
-		currentPage('#tableOfContent .lnb-item', '.lnb-name');		
-	});
-</script> -->
