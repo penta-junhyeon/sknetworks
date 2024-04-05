@@ -247,10 +247,14 @@
 }
 
 #guide-list .page-head {
+  position: sticky;
+  top: 0;
   width: 100%;
   background-color: #ffffff;
   border-bottom: 0.1rem solid #E9E9E9;
   padding: 1rem 1.8rem;
+  z-index: 101;
+  transition: background-color 0.3s ease;
 }
 #guide-list .page-head .page-head-inner {
   display: flex;
@@ -273,11 +277,6 @@
   border: 0.1rem solid #e3e3e3;
   border-radius: 0.6rem;
 }
-@media (min-width: 320px) and (max-width: 1023px) {
-  #guide-list .page-head .page-control .control-btn.guide-intro {
-    padding: 1rem 1.4rem;
-  }
-}
 #guide-list .page-head .page-control .control-btn.guide-intro .btn-txt {
   display: inline-block;
   font-weight: 600;
@@ -285,6 +284,11 @@
   line-height: 1.7rem;
   letter-spacing: -0.05rem;
   color: #fff;
+}
+@media (min-width: 320px) and (max-width: 1023px) {
+  #guide-list .page-head .page-control .control-btn.guide-intro {
+    padding: 1rem 1.4rem;
+  }
 }
 #guide-list .page-head .page-control .control-btn.guide-menu {
   position: relative;
@@ -318,13 +322,6 @@
 }
 #guide-list .page-head .page-control .control-btn ~ .control-btn {
   margin-left: 1.5rem;
-}
-@media (min-width: 320px) and (max-width: 1023px) {
-  #guide-list .page-head {
-    position: relative;
-    margin-right: 1.6rem;
-    z-index: 101;
-  }
 }
 #guide-list .page-body {
   min-height: calc(100vh - 12rem);
@@ -557,9 +554,6 @@
   width: 60%;
 }
 @media (min-width: 320px) and (max-width: 1023px) {
-  #guide-list .page-side {
-    padding-top: 6.1rem;
-  }
   #guide-list .page-side .aside-body {
     padding: 2rem 1.8rem;
     height: 100%;
@@ -605,43 +599,36 @@
   overflow: hidden;
 }
 #guide-list.open-aside {
-  padding-right: 1.6rem;
-}
-@media (min-width: 320px) and (max-width: 1023px) {
-  #guide-list.open-aside {
-    padding-right: 0;
-  }
+  background-color: #1C1C1C;
+  overflow-y: auto;
 }
 #guide-list.open-aside .page-head {
   background-color: #1c1c1c;
+  border: none;
 }
-#guide-list.open-aside .page-head .page-control .guide-menu .line.top {
+#guide-list.open-aside .page-head .page-head-inner .page-control .guide-menu .line.top {
   left: 1.3rem;
   transform: rotate(45deg);
   transform-origin: top left;
 }
-#guide-list.open-aside .page-head .page-control .guide-menu .line.middle {
+#guide-list.open-aside .page-head .page-head-inner .page-control .guide-menu .line.middle {
   transform: translateX(-20px);
   opacity: 0;
 }
-#guide-list.open-aside .page-head .page-control .guide-menu .line.bottom {
+#guide-list.open-aside .page-head .page-head-inner .page-control .guide-menu .line.bottom {
   right: 0.7rem;
   transform: rotate(-45deg);
   transform-origin: bottom left;
 }
+#guide-list.open-aside .page-head.back-white {
+  background-color: #ffffff;
+}
 #guide-list.open-aside .page-side {
   display: block;
-  width: 100vw;
-  height: 100vh;
-  position: fixed;
-  opacity: 1;
-  z-index: 100;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background-color: #1c1c1c;
-  overflow: hidden;
+}
+#guide-list.open-aside .pub-list,
+#guide-list.open-aside .page-body {
+  display: none;
 }
 
 .page-foot {
@@ -1048,7 +1035,7 @@
 }
 #guide-list .page-body.pub-list .local-head .menu-anchor.fix {
   position: fixed;
-  top: 0;
+  top: 6.1rem;
   z-index: 999;
 }
 #guide-list .page-body.pub-list .local-body {
