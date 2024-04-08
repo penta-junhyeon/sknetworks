@@ -187,6 +187,8 @@
 								> .subcategory {
 									padding-top: 1.8rem;
 								}
+
+								//demo 있는 경우
 								.subcategory {
 									.subcategory-head {
 										font-size: 1.6rem;
@@ -198,6 +200,63 @@
 									}
 									~ .subcategory {
 										padding-top: 1.8rem;
+									}
+								}
+
+								//텍스트 위주
+								.subcontent-wrap {
+									.subcontent-head {
+										font-size: 1.6rem;
+										line-height: 150%;
+										font-weight: 500;
+										color: #2196F3;
+										+ .subcontent-body {
+											margin-top: 0.6rem;
+										}
+									}
+									.subcontent-body {
+										.data-list {
+											.data {
+												position: relative;
+												padding-left: 1.2rem;
+												font-size: 1.6rem;
+												line-height: 150%;
+												font-weight: 500;
+												color: #1c1c1c;
+												~ .data {
+													margin-top: 0.2rem;
+												}
+												&::before {
+													content: '·';
+													font-size: 2rem;
+													position: absolute;
+													left: 0.2rem;
+													top: 0;
+												}
+												.para-list {
+													// padding-top: 0.2rem;
+												}
+											}
+										}
+										.para-list {
+											.para {
+												position: relative;
+												padding-left: 1.3rem;
+												font-size: 1.6rem;
+												line-height: 150%;
+												font-weight: 500;
+												color: #1c1c1c;
+												&::before {
+													content: '-';
+													position: absolute;
+													left: 0.2rem;
+													top: 0;
+												}
+											}
+										}
+									}
+									~ .subcontent-wrap {
+										margin-top: 2rem;
 									}
 								}
 								.highlight-js {

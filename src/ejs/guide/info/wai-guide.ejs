@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<%-include('../_templates/_guide.head.ejs', {
+	pageJavascript: ''
+}) %>
+</head>
+<body>
+<div id="wrap">
+	<div id="guide-list">
+		<%-include('../_templates/_guide.header.ejs') %>
+				<!-- page-body -->
+				<div class="page-body">
+					<!-- local-head -->
+					<div class="local-head">
+						<h2 class="local-subject">
+							<span class="local-name">웹접근성</span>
+							<span class="local-desc">
+								웹 접근성(Web Accessibility) 이란 장애인, 고령자 등이 웹 사이트에서 제공하는 정보에 비장애인과 동등하게 접근하고 이해할 수 있도록 보장하는 것입니다.<br>
+								W3C가 제시한 표준에 따라 웹사이트에 접속하는 사용자가 어떤 운영체제나 브라우저를 사용하더라도 동일한 경험을 할 수 있도록 작업해야 합니다.
+							</span>
+						</h2>
+					</div>
+					<!-- //local-head -->
+					<!-- local-body -->
+					<div class="local-body">
+						<!-- section -->
+						<div class="section wai-guide">
+							<div class="section-head">
+								<h4 class="section-subject"><span class="section-name">실무가이드</span></h4>
+							</div>
+							<div class="section-body">
+								<!-- subsection -->
+								<div class="subsection">
+									<div class="subsection-head">1. 인식의 용이성 (Perceivable) : 모든 콘텐츠는 사용자가 인식할 수 있어야 한다.</div>
+									<div class="subsection-body">
+										<div class="subcontent-wrap">
+											<div class="subcontent-head">1-1. 대체 텍스트 제공</div>
+											<div class="subcontent-body">
+												<ul class="data-list">
+													<li class="data">
+														텍스트 아닌 콘텐츠는 그 의미나 용도를 인식할 수 있도록 대체 텍스트를 제공해야 한다.
+														<div class="para-list">
+															<p class="para">이미지가 제공하는 모든 내용을 'alt' 속성에 제공하여 이미지의 정보를 이해할 수 있음</p>
+															<p class="para">꾸밈용으로 제공된 불릿 이미지의 경우 'alt' 속성을 '빈 값'으로 제공해야 함</p>
+														</div>
+													</li>
+													<li class="data">
+														이미지에 내용이 많은 경우 alt 속성에 값은 이미지의 제목 정도로 제공하고, 자세한 내용은 숨김 텍스트로 제공해야 함.
+														<div class="para-list">
+															<p class="para">본 프로젝트에서는 'blind' 클래스 사용</p>
+														</div>
+													</li>
+												</ul>
+											</div>
+										</div>
+										<div class="subcontent-wrap">
+											<div class="subcontent-head">1-2. 멀티미디어 자막제공</div>
+											<div class="subcontent-body">
+												<ul class="data-list">
+													<li class="data">멀티미디어 콘텐츠에는 '자막', 원고 또는 수화를 제공해야 한다.</li>
+													<li class="data">영상의 음성정보 이외에 핵심 자막과 원고를 제공한다.</li>
+													<li class="data">음성이 나오지 않는 멀티미디어인 경우 청각적으로도 인식이 가능하도록 원고 등의 대체 콘텐츠를 제공한다.</li>
+												</ul>
+											</div>
+										</div>
+										<div class="subcontent-wrap">
+											<div class="subcontent-head">1-3. 색에 무관한 콘텐츠 인식</div>
+											<div class="subcontent-body">
+												<ul class="data-list">
+													<li class="data">
+														콘텐츠가 색에 관계없이 인식될 수 있어야 한다.
+														<div class="para-list">
+															<p class="para">그래프, 차트, 지도, 필수 입력항목, 슬라이드 버튼 선택 여부, 탭 버튼 선택 여부, 페이지내이션 등</p>
+															<p class="para">색이 아닌 패턴, 굵기, 모양, 테두리 등의 다양한 방법으로 구분할 수 있도록 제공함</p>
+														</div>
+													</li>
+												</ul>
+											</div>
+										</div>
+										<div class="subcontent-wrap">
+											<div class="subcontent-head">1-4. 명확한 지시 사항 제공</div>
+											<div class="subcontent-body">
+												<ul class="data-list">
+													<li class="data">
+														지시사항은 모양, 크기, 위치, 방향, 색, 소리 등에 관계없이 인식될 수 있어야 한다.
+														<div class="para-list">
+															<p class="para">클릭 해야 할 대상을 명확하게 제공</p>
+														</div>
+													</li>
+													<li class="data">
+														자동으로 소리가 재생되지 않아야 한다.
+														<div class="para-list">
+															<p class="para">자동 재생 금지</p>
+															<p class="para">불가피하게 제공 해야 하는 경우 3초 내 정지하거나 ESC 키 선택 시 정지하거나 소스 상 가장 먼저 위치해 정지 기능 실행 가능하도록 제공</p>
+														</div>
+													</li>
+												</ul>
+											</div>
+										</div>
+										<div class="subcontent-wrap">
+											<div class="subcontent-head">1-5. 텍스트 콘텐츠의 명도 대비</div>
+											<div class="subcontent-body">
+												<ul class="data-list">
+													<li class="data">텍스트 콘텐츠와 배경 간의 명도 대비는 4.5 대 1 이상이어야 한다.</li>
+												</ul>
+											</div>
+										</div>
+										<div class="subcontent-wrap">
+											<div class="subcontent-head">1-6. 자동 재생 금지</div>
+											<div class="subcontent-body">
+												<ul class="data-list">
+													<li class="data">
+														자동으로 소리가 재생되지 않아야 한다.
+														<div class="para-list">
+															<p class="para">자동 재생 금지</p>
+															<p class="para">불가피하게 제공 해야 하는 경우 3초 내 정지하거나 ESC 키 선택 시 정지</p>
+															<p class="para">소스 상 가장 먼저 위치해 정지 기능 실행 가능하도록 제공</p>
+														</div>
+													</li>
+												</ul>
+											</div>
+										</div>
+										<div class="subcontent-wrap">
+											<div class="subcontent-head">1-7. 콘텐츠 간의 구분</div>
+											<div class="subcontent-body">
+												<ul class="data-list">
+													<li class="data">
+														이웃한 콘텐츠는 구분될 수 있어야 한다.
+														<div class="para-list">
+															<p class="para">'테두리'를 이용하여 구분</p>
+															<p class="para">콘텐츠 사이에 시각적인 '구분선'을 삽입하여 구분</p>
+															<p class="para">'서로 다른 무늬'를 이용하여 구분</p>
+															<p class="para">콘텐츠 배경색 간의 '명도대비(채도)'를 달리하여 구분</p>
+															<p class="para">'줄 간격' 및 '글자 간격'을 조절하여 구분</p>
+															<p class="para">기타 콘텐츠를 시각적으로 구분할 수 있는 방법 등으로 구분</p>
+														</div>
+													</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!-- //subsection -->
+								<!-- subsection -->
+								<div class="subsection line">
+									<div class="subsection-head">2. 운용의 용이성(Operable) : 사용자 인터페이스 구성요소는 조작 가능하고 내비게이션 할 수 있어야 한다.</div>
+									<div class="subsection-body">
+										<div class="subcontent-wrap">
+											<div class="subcontent-head">2-1. 키보드 사용 보장</div>
+											<div class="subcontent-body">
+												<ul class="data-list">
+													<li class="data">
+														모든 기능은 키보드만으로도 사용할 수 있어야 한다.
+														<div class="para-list">
+															<p class="para">드롭 다운 메뉴 : 키보드 접근 시에도 드롭 다운 되도록 제공</p>
+															<p class="para">자동 롤링 콘텐츠 마우스 오버 시 전체 콘텐츠 노출 : 키보드 접근 시에도 전체 콘텐츠가 노출되도록 제공</p>
+															<p class="para">특정 버튼에 마우스 오버 시 레이어 노출 : 키보드 접근 시에도 레이어가 노출되도록 제공</p>
+															<p class="para">이미지 또는 초점을 받을 수 없는 요소에 마우스 이벤트 적용 : 키보드로도 운용 가능하도록 제공하거나 초점을 받을 수 있는 요소로 제공</p>
+															<p class="para">a링크 요소에 href 속성이 없는 경우 : a 태그 사용시에는 키보드 접근이 가능하도록 href 속성을 제공한다.</p>
+															<p class="para">키보드가 함정에 빠진 경우 : 키보드 접근 시 다음 컨트롤로 이동이 가능하도록 제공한다.</p>
+														</div>
+													</li>
+												</ul>
+											</div>
+										</div>
+										<div class="subcontent-wrap">
+											<div class="subcontent-head">2-2. 초점 이동과 표시</div>
+											<div class="subcontent-body">
+												<ul class="data-list">
+													<li class="data">
+														키보드에 의한 초점은 논리적으로 이동해야 하며, 시각적으로 구별할 수 있어야 한다.
+														<div class="para-list">
+															<p class="para">초점은 논리적 순서로 이동하도록 제공<br> (좌에서 우, 상에서 하)</p>
+															<p class="para">레이어 팝업 노출 시 레이어 내부로 초점이 이동한 후 닫는 경우에는 다시 레이어를 노출시킨 컨트롤로 초점이 이동하도록 제공</p>
+															<p class="para">초점이 논리적 순서로 이동하는 선에서 tabindex 사용을 제한</p>
+															<p class="para">hideFocus, outline:none, onfocus=”this.blur();” 사용 제한 : 키보드 접근 시 초점이 표시되도록 제공<br> (outline:none이나 outline:0; 사용하지 않기)</p>
+														</div>
+													</li>
+												</ul>
+											</div>
+										</div>
+										<div class="subcontent-wrap">
+											<div class="subcontent-head">2-3. 조작 가능</div>
+											<div class="subcontent-body">
+												<ul class="data-list">
+													<li class="data">
+														사용자 입력 및 콘트롤은 조작 가능하도록 제공되어야 한다.
+														<div class="para-list">
+															<p class="para">컨트롤의 크기는 대각선 길이가 6mm 이상이 되도록 제공</p>
+															<p class="para">컨트롤 간에는 1픽셀 이상의 여백이 존재하도록 제공</p>
+														</div>
+													</li>
+												</ul>
+											</div>
+										</div>
+										<div class="subcontent-wrap">
+											<div class="subcontent-head">2-4. 응답 시간 조절 (충분한 시간 제공)</div>
+											<div class="subcontent-body">
+												<ul class="data-list">
+													<li class="data">
+														시간제한이 있는 콘텐츠는 응답시간을 조절할 수 있어야 한다.
+														<div class="para-list">
+															<p class="para">시간 연장이 불가능한 콘텐츠 : 충분한 시간 제공하거나 종료 안내를 하거나 조절 수단 제공</p>
+														</div>
+													</li>
+												</ul>
+											</div>
+										</div>
+										<div class="subcontent-wrap">
+											<div class="subcontent-head">2-5. 정지 기능 제공</div>
+											<div class="subcontent-body">
+												<ul class="data-list">
+													<li class="data">
+														자동으로 변경되는 콘텐츠는 움직임을 제어할 수 있어야 한다.
+														<div class="para-list">
+															<p class="para">자동으로 변경되는 슬라이드 : 이전, 다음, 정지 기능을 제공</p>
+															<p class="para">자동으로 변경되는 콘텐츠 : 이전, 다음, 정지 기능이나 전체 보기 기능을 제공</p>
+															<p class="para">페이지 자동 전환 : 연장 또는 해제 가능 수단이나 페이지 이동을 회피할 수 있는 수단을 제공</p>
+														</div>
+													</li>
+												</ul>
+											</div>
+										</div>
+										<div class="subcontent-wrap">
+											<div class="subcontent-head">2-6. 깜빡임과 번쩍임 사용 제한 (광과민성 발작 예방)</div>
+											<div class="subcontent-body">
+												<ul class="data-list">
+													<li class="data">
+														초당 3~50회 주기로 깜박이거나 번쩍이는 콘텐츠를 제공하지 않아야 한다.
+													</li>
+													<li class="data">
+														깜빡이거나 번쩍이는 콘텐츠를 제공할 경우 (다음 해결 방안들을 모두 충족하면 준수)
+														<div class="para-list">
+															<p class="para">시간을 3초 미만으로 제한</p>
+															<p class="para">사전에 경고하고 중단 가능한 수단을 제공</p>
+															<p class="para">번쩍이는 콘텐츠가 차지하는 면적의 합이 화면 전체 면적의 10% 미만으로 제공</p>
+															<p class="para">ESC로 정지할 수 있도록 기능을 제공</p>
+														</div>
+													</li>
+												</ul>
+											</div>
+										</div>
+										<div class="subcontent-wrap">
+											<div class="subcontent-head">2-7. 반복 영역 건너뛰기</div>
+											<div class="subcontent-body">
+												<ul class="data-list">
+													<li class="data">
+														콘텐츠의 반복되는 영역은 건너뛸 수 있어야 한다.
+													</li>
+													<li class="data">
+														페이지마다 반복되는 영역이 있는 경우 (다음 해결 방안들을 모두 충족하면 준수)
+														<div class="para-list">
+															<p class="para">마크업상 최 상단에 위치</p>
+															<p class="para">건너뛰기 링크가 페이지 내에 존재</p>
+															<p class="para">키보드 접근 시 화면에 노출</p>
+															<p class="para">'하단 메뉴로 바로 가기'와 같은 위치 정보 제공은 부적절</p>
+														</div>
+													</li>
+												</ul>
+											</div>
+										</div>
+										<div class="subcontent-wrap">
+											<div class="subcontent-head">2-8. 제목 제공</div>
+											<div class="subcontent-body">
+												<ul class="data-list">
+													<li class="data">
+														페이지, 프레임, 콘텐츠 블록에는 적절한 제목을 제공해야 한다.
+														<div class="para-list">
+															<p class="para">페이지 내용을 유추할 수 있는 적절한 제목을 제공</p>
+															<p class="para">프레임에 적절한 제목을 제공</p>
+															<p class="para">콘텐츠에 적절한 제목을 제공</p>
+														</div>
+													</li>
+												</ul>
+											</div>
+										</div>
+										<div class="subcontent-wrap">
+											<div class="subcontent-head">2-9. 적절한 링크 텍스트</div>
+											<div class="subcontent-body">
+												<ul class="data-list">
+													<li class="data">
+														링크 텍스트는 용도나 목적을 이해할 수 있도록 제공해야 한다.
+														<div class="para-list">
+															<p class="para">빈 링크 : 빈 링크는 제거하거나 키보드가 접근할 수 없도록 제공</p>
+															<p class="para">독립적 이미지 링크 : 이미지에 대체 텍스트를 제공</p>
+															<p class="para">독립적 배경 이미지 링크 : IR 기법으로 대체 텍스트를 제공</p>
+															<p class="para">썸네일 이미지 링크 : 이미지에 해당하는 텍스트를 a태그로 묶어서 중복 제공되지 않도록 제공, 묶을 수 없는 경우에는 중복되더라도 이미지에 대한 대체 텍스트를 제공</p>
+														</div>
+													</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!-- //subsection -->
+								<!-- subsection -->
+								<div class="subsection line">
+									<div class="subsection-head">3. 이해의 용이성(Understandable) : 콘텐츠는 이해할 수 있어야 한다.</div>
+									<div class="subsection-body">
+										<div class="subcontent-wrap">
+											<div class="subcontent-head">3-1. 기본 언어 표시</div>
+											<div class="subcontent-body">
+												<ul class="data-list">
+													<li class="data">
+														주로 사용하는 언어를 명시해야 한다.
+														<div class="para-list">
+															<p class="para">highlight-js 사용</p>
+														</div>
+													</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!-- //subsection -->
+								<!-- subsection -->
+								<div class="subsection line">
+									<div class="subsection-head">4. 견고성(Robust) : 웹 콘텐츠는 미래의 기술로도 접근할 수 있도록 견고하게 만들어야 한다.</div>
+									<div class="subsection-body">
+										<div class="subcontent-wrap">
+											<div class="subcontent-head">4-1. 마크업 오류 방지</div>
+											<div class="subcontent-body">
+												<ul class="data-list">
+													<li class="data">
+														마크업 언어의 요소는 열고 닫음, 중첩 관계 및 속성 선언에 오류가 없어야 한다.
+														<div class="para-list">
+															<p class="para">내용</p>
+														</div>
+													</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!-- //subsection -->
+							</div>
+						</div>
+						<!-- //section -->
+					</div>
+					<!-- local-body -->
+				</div>
+				<!-- //page-body -->
+				<%-include('../_templates/_guide.footer.ejs') %>
+	</div>
+</div>
+</body>
+</html>
