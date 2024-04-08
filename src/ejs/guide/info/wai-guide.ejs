@@ -27,7 +27,9 @@
 						<!-- section -->
 						<div class="section wai-guide">
 							<div class="section-head">
-								<h4 class="section-subject"><span class="section-name">실무가이드</span></h4>
+								<h4 class="section-subject">
+									<span class="section-name">실무가이드</span>
+								</h4>
 							</div>
 							<div class="section-body">
 								<!-- subsection -->
@@ -42,14 +44,24 @@
 														텍스트 아닌 콘텐츠는 그 의미나 용도를 인식할 수 있도록 대체 텍스트를 제공해야 한다.
 														<div class="para-list">
 															<p class="para">이미지가 제공하는 모든 내용을 'alt' 속성에 제공하여 이미지의 정보를 이해할 수 있음</p>
-															<p class="para">꾸밈용으로 제공된 불릿 이미지의 경우 'alt' 속성을 '빈 값'으로 제공해야 함</p>
+															<p class="para">꾸밈, 장식용으로 제공된 불릿 이미지의 경우 'alt' 속성을 '빈 값'으로 제공해야 함 (디자인용 이미지에 대체 텍스트 사용하지 않음)</p>
+															<p class="para">단어 사이에 _(언더 바)보다 띄어쓰기 사용 (스크린리더에서 '언더바'라고 들림)</p>
 														</div>
+<!-- highlight-js -->
+<pre class="highlight-js"><code class="html">&lt;img src=&quot;pix.jpg&quot; alt=&quot;pix 이미지의 의미나 용도를 인식할 수 있는 대체 텍스트&quot; /&gt;</code></pre>
+<!-- //highlight-js -->
+<!-- highlight-js -->
+<pre class="highlight-js"><code class="html">&lt;img src=&quot;dot.jpg&quot; alt=&quot;&quot; /&gt;</code></pre>
+<!-- //highlight-js -->
 													</li>
 													<li class="data">
-														이미지에 내용이 많은 경우 alt 속성에 값은 이미지의 제목 정도로 제공하고, 자세한 내용은 숨김 텍스트로 제공해야 함.
+														이미지에 내용이 많은 경우 alt 속성에 값은 이미지의 제목 정도로 제공하고, 자세한 내용은 숨김 텍스트로 제공해야 함. (IR 기법)
 														<div class="para-list">
 															<p class="para">본 프로젝트에서는 'blind' 클래스 사용</p>
 														</div>
+<!-- highlight-js -->
+<pre class="highlight-js"><code class="html">&lt;span class=&quot;blind&quot;&gt;특수문자, 기호 포함, 조직도, 차트 등 복잡한 콘텐츠의 경우 숨김 처리로 대체 텍스트를 제공&lt;/span&gt;</code></pre>
+<!-- //highlight-js -->
 													</li>
 												</ul>
 											</div>
@@ -92,7 +104,7 @@
 														자동으로 소리가 재생되지 않아야 한다.
 														<div class="para-list">
 															<p class="para">자동 재생 금지</p>
-															<p class="para">불가피하게 제공 해야 하는 경우 3초 내 정지하거나 ESC 키 선택 시 정지하거나 소스 상 가장 먼저 위치해 정지 기능 실행 가능하도록 제공</p>
+															<p class="para">불가피하게 제공 해야 하는 경우 : <br> 3초 내 정지하거나 ESC 키 선택 시 정지하거나 소스 상 가장 먼저 위치해 정지 기능 실행 가능하도록 제공</p>
 														</div>
 													</li>
 												</ul>
@@ -122,7 +134,7 @@
 														<div class="para-list">
 															<p class="para">자동 소리 재생 금지 (여기서 소리는 동영상, 오디오, 음성, 배경 음악 등 콘텐츠가 제공하는 모든 소리를 말함)</p>
 															<p class="para">
-																불가피하게 제공 해야 하는 경우<br>
+																불가피하게 제공 해야 하는 경우 :<br>
 																3초 내에 정지<br>
 																ESC 키 선택 시 정지<br>
 																소스 상 가장 먼저 제공하여 정지 기능 실행 가능하도록 구현
@@ -191,7 +203,7 @@
 											<div class="subcontent-body">
 												<ul class="data-list">
 													<li class="data">
-														키보드에 의한 초점은 논리적으로 이동해야 하며, 시각적으로 구별할 수 있어야 한다.
+														키보드에 의한 초점은 논리적으로 이동해야 하며, 시각적으로 구별할 수 있어야 한다. (키보드의 Tab키(다음으로 이동)와 Shift + Tab(이전으로 이동)키로 확인)
 														<div class="para-list">
 															<p class="para">초점은 논리적 순서로 이동하도록 제공<br> (일반적으로 좌에서 우, 상에서 하. 즉, 사용자가 예측하는 이동 순서와 일치해야 함)</p>
 															<p class="para">
@@ -338,8 +350,8 @@
 														<div class="para-list">
 															<p class="para">
 																웹 페이지의 제목은 유일하고 서로 다르게 페이지 내용을 유추할 수 있는 적절한 제목을 제공<br>
-																페이지 제목은 해당 내용을 이해할 수 있도록 제일 하위분류로 적절하게 제공<br>
-																뉴스 상세 페이지 제목도 마찬가지로 해당 뉴스에 대한 타이틀을 제목으로 제공해야 하며 게시판의 경우에도 글 읽기, 글 보기, 목록 등 각각의 게시판 용도에 맞게 페이지 제목을 제공<br>
+																상세 페이지도 마찬가지로 해당 페이지에 대한 타이틀을 제목으로 제공<br>
+																게시판의 경우 글 읽기, 글 보기, 목록 등 각각의 게시판 용도에 맞게 페이지 제목을 제공<br>
 																각 페이지의 핵심 내용을 제목으로 제공
 															</p>
 															<p class="para">
@@ -347,15 +359,28 @@
 																프레임이나 아이프레임에도 각 프레임을 설명하는 간단 명료한 제목을 제공<br>
 																내용이 없는 빈 프레임의 경우에도 title을 다음과 같이 "빈 프레임" 또는 "내용 없음" 등으로 제공
 															</p>
+														</div>
+										<!-- highlight-js -->
+<pre class="highlight-js"><code class="html">&lt;title&gt;PIX 웹접근성 마크업 가이드&lt;/title&gt;</code></pre>
+										<!-- //highlight-js -->
+										<!-- highlight-js -->
+<pre class="highlight-js"><code class="html">&lt;iframe title=&quot;유튜브 영상 타이틀&quot;&gt;&mldr;&lt;iframe&gt;
+&lt;iframe title=&quot;내용 없음&quot;&gt;&mldr;&lt;iframe&gt;
+</code></pre>
+<!-- //highlight-js -->
+														<div class="para-list">
 															<p class="para">
-																콘텐츠 제목 제공<br>
-																제목을 숨김 처리할 경우 "display:none"나 "visibility:hidden"속성은 스크린리더에서 읽어주지 않기 때문에 다른 방법으로 보이지 않게 처리해
+																콘텐츠 블록 제목 제공<br>
+																콘텐츠에 적절한 제목을 제공
 															</p>
 															<p class="para">
 																특수 기호 사용 제한<br>
 																특수기호를 사용하게 되면 스크린리더에서 불필요한 음성을 반복해서 출력하게 되므로 반복되는 특수문자는 제공하지 않아야 하며 특수 기호는 1개까지만 사용 제한
 															</p>
 														</div>
+<!-- highlight-js -->
+<pre class="highlight-js"><code class="html">&lt;div&gt;&lt;h3&gt;&#xBE14;&#xB85D; &#xC81C;&#xBAA9;&lt;/h3&gt;...&lt;div&gt;</code></pre>
+<!-- //highlight-js -->														
 													</li>
 												</ul>
 											</div>
@@ -373,6 +398,11 @@
 															<p class="para">썸네일 이미지 링크 : 이미지에 해당하는 텍스트를 a태그로 묶어서 중복 제공되지 않도록 제공, 묶을 수 없는 경우에는 중복되더라도 이미지에 대한 대체 텍스트를 제공</p>
 															<p class="para">명확한 링크 제공 : 링크의 용도나 목적을 알 수 있도록 적절한 링크 텍스트를 제공</p>
 														</div>
+<!-- highlight-js -->
+<pre class="highlight-js"><code class="html">&lt;a href=&quot;#&quot;&gt;다음 콘텐츠 보기&lt;/a&gt;
+&lt;a href=&quot;#&quot;&gt;이전 콘텐츠 보기&lt;/a&gt;
+</code></pre>
+<!-- //highlight-js -->															
 													</li>
 												</ul>
 											</div>
@@ -391,14 +421,14 @@
 													<li class="data">
 														주로 사용하는 언어를 명시해야 한다.
 <!-- highlight-js -->
-<pre class="highlight-js"><code class="html">&lt;html lang="ko"&gt;
+<pre class="highlight-js"><code class="html">&lt;html lang=&quot;ko&quot;&gt;
 </code></pre>
 <!-- //highlight-js -->
 														<div class="data-table">
 															<table>
 																<caption>국가별 기본 언어 설명</caption>
-																<thead class="blind">
-																	<tr>
+																<thead>
+																	<tr class="blind">
 																		<th scope="col">구분</th>
 																		<th scope="col">내용</th>
 																	</tr>
@@ -450,10 +480,27 @@
 																화면을 가리는 레이어 팝업 (화면을 가리는 레이어 팝업을 제공한 경우도 오류) : <br>
 																팝업을 제어할 수 있도록 구현하거나 화면을 가리지 않고 가장 상단에 레이어 팝업을 제공해야 함
 															</p>
+														</div>
+<!-- highlight-js -->
+<pre class="highlight-js"><code class="html">&lt;body&gt;
+	&lt;div&gt;레이어 팝업 내용(최상단에 마크업)&lt;/div&gt;
+	&mldr;
+&lt;/body&gt;
+</code></pre>
+<!-- //highlight-js -->
+														<div class="para-list">
 															<p class="para">
 																사전에 인식할 수 없는 새 창 : <br>
 																링크 요소 내부에 blind로 새 창이라는 텍스트를 넣어주거나 title로 새 창이라고 제공하거나 target="blank"로 적용하여 새 창이 열릴 것이라고 사전에 알려 주어야 함
 															</p>
+														</div>
+<!-- highlight-js -->
+<pre class="highlight-js"><code class="html">&lt;a href=&quot;&mldr;&quot;&gt;개인정보처리방침&lt;span class=&quot;blind&quot;&gt;새 창 열림&lt;/span&gt;&lt;/a&gt;
+&lt;a href=&quot;&mldr;&quot; title=&quot;새 창 열림&quot;&gt;개인정보처리방침&lt;/a&gt;
+&lt;a href=&quot;&mldr;&quot; target=&quot;_blank&quot;&gt;개인정보처리방침&lt;/a&gt;
+</code></pre>
+<!-- //highlight-js -->
+														<div class="para-list">
 															<p class="para">
 																컨트롤 선택 시 기능 실행 : <br>
 																콤보 상자, 라디오 버튼, 체크 상자 등의 컨트롤을 선택했을 때 기능이 실행되거나 서식 제출이 일어나지 않아야 함<br>
@@ -461,7 +508,7 @@
 															</p>
 															<p class="para">
 																select에 onchange 이벤트 적용 : <br>
-																select에 onchange 이벤트가 적용되어 option을 선택하자마자 페이지가 이동된 경우 오류<br>
+																option을 선택하자마자 페이지가 이동된 경우 오류<br>
 																onFocus나 onKeypress등의 이벤트에 의해, 포커스를 옮기는 동작만으로, 초점을 받은 것만으로, 새 창이나 레이어가 뜨거나 페이지가 바뀌는 경우 모두 사용자가 원하지 않은 기능이 실행되는 것이므로 오류 (즉, 사용자가 의도하지 않은 기능이 실행되지 않도록 구현해야 함)
 															</p>
 														</div>
@@ -477,13 +524,29 @@
 														콘텐츠는 논리적인 순서로 제공해 전후 맥락, 주종 관계를 이해할 수 있어야 한다. 
 														<div class="para-list">
 															<p class="para">
-																탭 제목-내용 콘텐츠 : <br>
-																제목-내용-제목-내용 순서로 마크업하거나 해당 내용에 대한 제목을 숨김 처리로 제공한다.
-															</p>
-															<p class="para">
-																더보기가 존재하는 콘텐츠 : 제목-내용-더보기 순서로 마크업한다.
+																탭 제목 & 내용 콘텐츠 : <br>
+																제목 &gt; 내용 &gt; 제목 &gt; 내용 순서로 마크업하거나 해당 내용에 대한 제목을 숨김 처리로 제공한다.
 															</p>
 														</div>
+<!-- highlight-js -->
+<pre class="highlight-js"><code class="html">&lt;a href=&quot;#&quot;&gt;첫 번째 탭 명&lt;/a&gt;
+&lt;div&gt;첫 번째 탭 콘텐츠&lt;/div&gt;
+&lt;a href=&quot;#&quot;&gt;두 번째 탭 명&lt;/a&gt;
+&lt;div&gt;두 번째 탭 콘텐츠&lt;/div&gt;
+</code></pre>
+<!-- //highlight-js -->
+														<div class="para-list">
+															<p class="para">
+																더보기가 존재하는 콘텐츠 : <br>
+																제목 &gt; 내용 &gt; 더보기 순서로 마크업한다.
+															</p>
+														</div>
+<!-- highlight-js -->
+<pre class="highlight-js"><code class="html">&lt;h3&gt;&#xACF5;&#xC9C0;&#xC0AC;&#xD56D;&lt;/h3&gt;
+&lt;table&gt;...&lt;/table&gt;
+&lt;a href=&quot;#&quot;&gt;&#xB354; &#xBCF4;&#xAE30;&lt;/a&gt;
+</code></pre>
+<!-- //highlight-js -->														
 													</li>
 												</ul>
 											</div>
@@ -499,9 +562,23 @@
 																표의 제목과 요약정보를 제공<br>
 																※ 주의사항 : html5 문서에서는 summary 속성을 제공하지 않으므로 caption 속성에 제목과 요약정보를 제공해야 함.
 															</p>
-															<p class="para">다단, 병합 등 복잡한 표 제공시 scope, id, headers 속성을 통해 제목 셀과 내용 셀을 연결</p>
+															<p class="para">다단, 병합 등 '복잡한 표' 제공시 scope, id, headers 속성을 통해 제목 셀과 내용 셀을 연결</p>
 															<p class="para">데이터가 아닌 콘텐츠는 table로 마크업하지 않도록 함</p>
 														</div>
+<!-- highlight-js -->
+<pre class="highlight-js"><code class="html">&lt;table&gt;
+	&lt;caption&gt;공지사항&lt;span&gt;공지사항의 제목, 작성일, 조회의 정보 제공&lt;/span&gt;&lt;/caption&gt;
+	&mldr;
+&lt;/table&gt;
+</code></pre>
+<!-- //highlight-js -->		
+<!-- highlight-js -->
+<pre class="highlight-js"><code class="html">&lt;th rowspan=&quot;2&quot; scope=&quot;col&quot; id=&quot;name&quot;&gt;&lt;a href=&quot;#&quot;&gt;이름&lt;/a&gt;&lt;/th&gt;
+&lt;th colspan=&quot;2&quot; scope=&quot;col&quot; id=&quot;number&quot;&gt;번호&lt;/th&gt;
+&lt;td scope=&quot;row&quot; id=&quot;nation&quot;&gt;&lt;a href=&quot;#&quot;&gt;한국&lt;/a&gt;&lt;/td&gt;
+&lt;td headers=&quot;name nation number&quot;&gt;777&lt;/td&gt;
+</code></pre>
+<!-- //highlight-js -->	
 													</li>
 												</ul>
 											</div>
@@ -517,9 +594,25 @@
 																input, textarea, select 요소에 1:1 대응하는 label 요소 또는 title 속성을 제공</p>
 															<p class="para">'input의 id'와 'label의 for'가 일치하게 제공</p>
 															<p class="para">페이지 내 ID 값이 중복 선언되지 않도록 제공</p>
-															<p class="para">레이블이 시각적으로 노출되어 있는 경우 입력 서식과 레이블을 1:1로 매칭</p>
-															<p class="para">레이블이 시각적으로 노출되어 있지 않은 경우 1:1로 매칭하거나 입력 서식에 title을 제공</p>
+															<p class="para">레이블이 시각적으로 노출되어 있는 경우 : <br> 입력 서식과 레이블을 1:1로 매칭</p>
 														</div>
+<!-- highlight-js -->
+<pre class="highlight-js"><code class="html">&lt;label for=&quot;user_id&quot;&gt;아이디&lt;/label&gt;
+&lt;input type=&quot;text&quot; id=&quot;user_id&quot; /&gt;
+</code></pre>
+<!-- //highlight-js -->	
+														<div class="para-list">
+															<p class="para">레이블이 시각적으로 노출되어 있지 않은 경우 : <br> 1:1로 매칭하거나 입력 서식에 title을 제공</p>
+														</div>
+<!-- highlight-js -->
+<pre class="highlight-js"><code class="html">&lt;label for=&quot;user_id&quot;&gt;아이디&lt;/label&gt;
+&lt;input type=&quot;text&quot; id=&quot;user_id&quot; /&gt;
+
+or
+
+&lt;input type=&quot;text&quot; id=&quot;user_id&quot; title=&quot;아이디&quot; /&gt;
+</code></pre>
+<!-- //highlight-js -->															
 													</li>
 												</ul>
 											</div>
@@ -576,6 +669,129 @@
 																예를 들어, 접근성이 어려운 플래시의 경우 HTML 버전을 선택할 수 있는 대체 수단이나 대체 텍스트를 제공
 															</p>
 														</div>
+													</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!-- //subsection -->
+								<!-- subsection -->
+								<div class="subsection line">
+									<div class="subsection-head">웹접근성 지원도구</div>
+									<div class="subsection-body">
+										<div class="subcontent-wrap">
+											<div class="subcontent-head">
+												<a href="https://jigsaw.w3.org/css-validator/" target="_blank" class="link">W3C Validation &gt;</a>
+											</div>
+											<div class="subcontent-body">
+												<ul class="data-list">
+													<li class="data">
+														마크업 및 웹 접근성 오류를 확인하고 웹 표준을 검사해 볼 수 있는 사이트
+													</li>
+												</ul>
+											</div>
+										</div>
+										<div class="subcontent-wrap">
+											<div class="subcontent-head">
+												<a href="https://wave.webaim.org/" target="_blank" class="link">WAVE(PC) &gt;</a>
+											</div>
+											<div class="subcontent-body">
+												<ul class="data-list">
+													<li class="data">
+														웹접근성 개선이 필요한 부분을 자동으로 검출해주는 프로그램<br>
+														웹페이지 위에 아이콘이 바로 떠서 어떤 속성이 어떻게 사용되고 있는지를 한 눈에 확인
+													</li>
+												</ul>
+											</div>
+										</div>
+										<div class="subcontent-wrap">
+											<div class="subcontent-head">
+												<a href="https://chromewebstore.google.com/detail/openwax/bfahpbmaknaeohgdklfbobogpdngngoe" target="_blank" class="link">오픈왁스(Openwax) &gt;</a>
+											</div>
+											<div class="subcontent-body">
+												<ul class="data-list">
+													<li class="data">
+														웹접근성을 체크하는 브라우저 확장 프로그램 (크롬, 파이어폭스)
+													</li>
+												</ul>
+											</div>
+										</div>
+										<div class="subcontent-wrap">
+											<div class="subcontent-head">
+												<a href="https://chromewebstore.google.com/detail/web-developer/bfbameneiokkgbdmiekhjnmfkcnldhhm?utm_source=chrome-ntp-icon" target="_blank" class="link">Web Developer &gt;</a>
+											</div>
+											<div class="subcontent-body">
+												<ul class="data-list">
+													<li class="data">
+														웹 브라우저 개발자 도구 (웹 콘텐츠 구성 요소를 탐색할 수 있으며 대부분의 브라우저가 지원)
+													</li>
+												</ul>
+											</div>
+										</div>
+										<div class="subcontent-wrap">
+											<div class="subcontent-head">
+												<a href="https://chrome.google.com/webstore/detail/wcag-color-contrast-check/plnahcmalebffmaghcpcmpaciebdhgdf/related?utm_source=ext_app_menu" target="_blank" class="link">WCAG Color contrast checker &gt;</a>
+											</div>
+											<div class="subcontent-body">
+												<ul class="data-list">
+													<li class="data">
+														명도대비 측정을 위한 확장 프로그램 (크롬)
+													</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!-- //subsection -->
+								<!-- subsection -->
+								<div class="subsection line">
+									<div class="subsection-head">참고 사이트</div>
+									<div class="subsection-body">
+										<div class="subcontent-wrap">
+											<div class="subcontent-head">
+												<a href="https://www.wa.or.kr/m1/sub1.asp" target="_blank" class="link">한국웹접근성인증평가원 &gt;</a>
+											</div>
+											<div class="subcontent-body">
+												<ul class="data-list">
+													<li class="data">
+														과학기술정보통신부 웹접근성 공식기관
+													</li>
+												</ul>
+											</div>
+										</div>
+										<div class="subcontent-wrap">
+											<div class="subcontent-head">
+												<a href="http://www.websoul.co.kr/consulting/guide1_01.asp" target="_blank" class="link">웹소울랩 &gt;</a>
+											</div>
+											<div class="subcontent-body">
+												<ul class="data-list">
+													<li class="data">
+														웹 접근성, 웹 호환성, 웹 성능 등 다양한 솔루션 개발 전문 컨설팅 사이트
+													</li>
+												</ul>
+											</div>
+										</div>
+										<div class="subcontent-wrap">
+											<div class="subcontent-head">
+												<a href="https://nuli.navercorp.com/" target="_blank" class="link">널리(nuli) &gt;</a>
+											</div>
+											<div class="subcontent-body">
+												<ul class="data-list">
+													<li class="data">
+														네이버에서 제공하는 웹접근성 가이드라인
+													</li>
+												</ul>
+											</div>
+										</div>
+										<div class="subcontent-wrap">
+											<div class="subcontent-head">
+												<a href="https://accessibility.naver.com/accessibility" target="_blank" class="link">NAVER accessibility &gt;</a>
+											</div>
+											<div class="subcontent-body">
+												<ul class="data-list">
+													<li class="data">
+														네이버에서 제공하는 웹접근성 지침
 													</li>
 												</ul>
 											</div>

@@ -188,7 +188,7 @@
 									padding-top: 1.8rem;
 								}
 
-								//demo 있는 경우
+								//demo가 있는 경우
 								.subcategory {
 									.subcategory-head {
 										font-size: 1.6rem;
@@ -224,7 +224,7 @@
 												font-weight: 500;
 												color: #1c1c1c;
 												~ .data {
-													margin-top: 0.5rem;
+													margin-top: 0.8rem;
 												}
 												&::before {
 													content: '·';
@@ -237,9 +237,14 @@
 													margin-top: 1.2rem;
 												}
 												.highlight-js {
-													margin-top: 1.2rem;
+													margin-top: 0.8rem;
 													+ .para-list {
 														margin-top: 1.2rem;
+													}
+												}
+												.link {
+													&:hover {
+														text-decoration: underline;
 													}
 												}
 											}
@@ -261,16 +266,28 @@
 											}
 										}
 										.data-table {
+											overflow: auto;
+											border: 1px solid #626262;
+											table {
+												min-width: 72rem;
+												border-right: hidden;
+												border-left: hidden;
+											}
+
 											tbody {
 												th, td {
-													border: 1px solid #626262;
 													padding: 1rem;
 												}
 												th {
+													border-top: 1px solid #626262;
+													border-right: 1px solid #626262;
+													border-left: 1px solid #626262;
 													background-color: #e5e5e5;
 												}
 												td {
-
+													border-top: 1px solid #626262;
+													border-right: 1px solid #626262;
+													border-left: 1px solid #626262;
 												}
 											}
 											+ .para-list {
