@@ -209,90 +209,9 @@
 										font-size: 1.6rem;
 										line-height: 150%;
 										font-weight: 500;
-										color: #2196F3;
+										color: #0058e6;
 										+ .subcontent-body {
 											margin-top: 0.6rem;
-										}
-									}
-									.subcontent-body {
-										.data-list {
-											.data {
-												position: relative;
-												padding-left: 1.2rem;
-												font-size: 1.6rem;
-												line-height: 150%;
-												font-weight: 500;
-												color: #1c1c1c;
-												~ .data {
-													margin-top: 0.8rem;
-												}
-												&::before {
-													content: '·';
-													font-size: 2rem;
-													position: absolute;
-													left: 0.2rem;
-													top: 0;
-												}
-												.data-table {
-													margin-top: 1.2rem;
-												}
-												.highlight-js {
-													margin-top: 0.8rem;
-													+ .para-list {
-														margin-top: 1.2rem;
-													}
-												}
-												.link {
-													&:hover {
-														text-decoration: underline;
-													}
-												}
-											}
-										}
-										.para-list {
-											.para {
-												position: relative;
-												padding-left: 1.3rem;
-												font-size: 1.6rem;
-												line-height: 150%;
-												font-weight: 500;
-												color: #1c1c1c;
-												&::before {
-													content: '-';
-													position: absolute;
-													left: 0.2rem;
-													top: 0;
-												}
-											}
-										}
-										.data-table {
-											overflow: auto;
-											border: 1px solid #626262;
-											table {
-												min-width: 72rem;
-												border-right: hidden;
-												border-left: hidden;
-											}
-
-											tbody {
-												th, td {
-													padding: 1rem;
-												}
-												th {
-													border-top: 1px solid #626262;
-													border-right: 1px solid #626262;
-													border-left: 1px solid #626262;
-													background-color: #e5e5e5;
-												}
-												td {
-													border-top: 1px solid #626262;
-													border-right: 1px solid #626262;
-													border-left: 1px solid #626262;
-												}
-											}
-											+ .para-list {
-												margin-top: 1.8rem;
-											}
 										}
 									}
 									~ .subcontent-wrap {
@@ -305,9 +224,6 @@
 									}
 								}
 							}
-							.bold {
-								font-weight: 700;
-							}
 						}
 						~.subsection {
 							padding-top: 5rem;
@@ -316,6 +232,97 @@
 							border-top: 0.1rem solid #cacaca;
 							margin-top: 5rem;
 						}
+					}
+					.data-list {
+						.data {
+							position: relative;
+							padding-left: 1.2rem;
+							font-size: 1.6rem;
+							line-height: 150%;
+							font-weight: 500;
+							color: #1c1c1c;
+							~ .data {
+								margin-top: 0.8rem;
+							}
+							&::before {
+								content: '·';
+								font-size: 2rem;
+								position: absolute;
+								left: 0.2rem;
+								top: 0;
+							}
+							.data-table {
+								margin-top: 1.2rem;
+							}
+							.highlight-js {
+								margin-top: 0.8rem;
+								+ .para-list {
+									margin-top: 1.2rem;
+								}
+							}
+							.link {
+								&:hover {
+									text-decoration: underline;
+								}
+							}
+						}
+					}
+					.para-list {
+						.para {
+							position: relative;
+							padding-left: 1.3rem;
+							font-size: 1.6rem;
+							line-height: 150%;
+							font-weight: 500;
+							color: #1c1c1c;
+							&::before {
+								content: '-';
+								position: absolute;
+								left: 0.2rem;
+								top: 0;
+							}
+						}
+					}
+					.data-table {
+						overflow: auto;
+						border: 1px solid #626262;
+						table {
+							min-width: 72rem;
+							border-right: hidden;
+							border-left: hidden;
+						}
+
+						tbody {
+							th, td {
+								padding: 1rem 1.5rem;
+								font-size: 1.6rem;
+								line-height: 150%;
+							}
+							th {
+								border-top: 1px solid #626262;
+								border-right: 1px solid #626262;
+								border-left: 1px solid #626262;
+								background-color: #e5e5e5;
+								text-align: left;
+							}
+							td {
+								border-top: 1px solid #626262;
+								border-right: 1px solid #626262;
+								border-left: 1px solid #626262;
+							}
+						}
+						+ .para-list {
+							margin-top: 1.8rem;
+						}
+					}
+					.link {
+						display: inline-block;
+						&:hover {
+							text-decoration: underline;
+						}
+					}
+					.bold {
+						font-weight: 700;
 					}
 					@include mobile {
 						.subsection {
