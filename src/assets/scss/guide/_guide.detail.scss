@@ -92,9 +92,12 @@
 
 				// 폰트
 				&.font-guide {
-					.section-body {
-						padding-left: 0;
+					.section-head {
+						+ .section-body {
+							padding-left: 0;
+						}
 					}
+
 					.subsection {
 						.subsection-body {
 							.table {
@@ -199,6 +202,16 @@
 							}
 						}
 					}
+				}
+				//source-guide
+				&.source-guide {
+					.section-head {
+						+ .section-body {
+							padding-top: 3rem;
+							padding-left: 0;
+						}
+					}
+
 				}
             }
         }

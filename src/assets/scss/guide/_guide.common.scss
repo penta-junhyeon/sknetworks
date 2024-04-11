@@ -244,13 +244,13 @@
 							~ .data {
 								margin-top: 0.8rem;
 							}
-							&::before {
-								content: '·';
-								font-size: 2rem;
-								position: absolute;
-								left: 0.2rem;
-								top: 0;
-							}
+							// &::before {
+							// 	content: '·';
+							// 	font-size: 2rem;
+							// 	position: absolute;
+							// 	left: 0.2rem;
+							// 	top: 0;
+							// }
 							.data-table {
 								margin-top: 1.2rem;
 							}
@@ -302,7 +302,7 @@
 								border-top: 1px solid #626262;
 								border-right: 1px solid #626262;
 								border-left: 1px solid #626262;
-								background-color: #e5e5e5;
+								background-color: #e7e7e7;
 								text-align: left;
 							}
 							td {
