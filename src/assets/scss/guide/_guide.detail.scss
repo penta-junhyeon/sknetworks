@@ -203,6 +203,62 @@
 						}
 					}
 				}
+
+				//wai-guide
+				&.wai-guide {
+					.section-body {
+						.para-list {
+							.para {
+								position: relative;
+								padding-left: 1.3rem;
+								font-size: 1.6rem;
+								line-height: 150%;
+								font-weight: 500;
+								color: #1c1c1c;
+								&::before {
+									content: '-';
+									position: absolute;
+									left: 0.2rem;
+									top: 0;
+								}
+							}
+						}
+						.data-list {
+							.data {
+								position: relative;
+								padding-left: 1.2rem;
+								font-size: 1.6rem;
+								line-height: 150%;
+								font-weight: 500;
+								color: #1c1c1c;
+								~ .data {
+									margin-top: 0.8rem;
+								}
+								&::before {
+									content: '·';
+									font-size: 2rem;
+									position: absolute;
+									left: 0.2rem;
+									top: 0;
+								}
+								.data-table {
+									margin-top: 1.2rem;
+								}
+								.highlight-js {
+									margin-top: 0.8rem;
+									+ .para-list {
+										margin-top: 1.2rem;
+									}
+								}
+								.link {
+									&:hover {
+										text-decoration: underline;
+									}
+								}
+							}
+						}
+					}
+				}
 				//source-guide
 				&.source-guide {
 					.section-head {
