@@ -34,19 +34,5 @@
     "gulp-sourcemaps": "^3.0.0",
     "gulp-uglify": "^3.0.2",
     "three": "^0.146.0"
-  },
-  "name": "project_hyosung_group",
-  "description": "To make it easy for you to get started with GitLab, here's a list of recommended next steps.",
-  "version": "1.0.0",
-  "main": "gulpfile.babel.js",
-  "repository": {
-    "type": "git",
-    "url": "git+https://gitlab.com/hkkim220602/project_hyosung_group.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://gitlab.com/hkkim220602/project_hyosung_group/issues"
-  },
-  "homepage": "https://gitlab.com/hkkim220602/project_hyosung_group#readme"
+  }
 }
