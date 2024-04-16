@@ -466,6 +466,7 @@
                                                             @include mobile {
                                                                 width: 100%;
                                                                 padding: 0;
+                                                                max-width: 23rem;
                                                             }
                                                         }
                                                         &.btn {
@@ -518,7 +519,7 @@
                                                             }
                                                             &.status {
                                                                 position: absolute;
-                                                                right: 5.5rem;
+                                                                right: 6.5rem;
                                                                 bottom: 0;
                                                                 width: auto;
                                                                 font-size: 1.2rem;
