@@ -419,8 +419,10 @@
                                                                         pointer-events: none;
                                                                     }
                                                                 }
-                                                                +.data-view {
-                                                                    margin-top: .4rem;
+                                                                @include mobile {
+                                                                    +.data-view {
+                                                                        margin-top: .4rem;
+                                                                    }
                                                                 }
                                                             }
                                                             +.data {
