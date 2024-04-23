@@ -8,7 +8,6 @@
 					.subsection-body {
 						.data-list {
 							display: flex;
-							align-items: center;
 							flex-wrap: wrap;
 							gap: 2rem;
 
@@ -23,7 +22,16 @@
 									height: 8rem;
 									border-radius: 1rem;
 									box-shadow: -0.3rem -0.4rem 0.7rem rgba(0, 0, 0, 0.1) inset;
-
+									position: relative;
+									.use {
+										position: absolute;
+										top: 50%;
+										left: 50%;
+										transform: translate(-50%,-50%);
+										font-size: 1.2rem;
+										color: #fff;
+										text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.3);
+									}
 									+.data-name {
 										padding-top: 0.8rem;
 									}
@@ -42,7 +50,9 @@
 								.data-code {
 									font-size: 1.2rem;
 									font-weight: 400;
+									line-height: 130%;
 									color: #8C8C8C;
+									width: 100%;
 								}
 
 								span[class^=data] {
@@ -55,7 +65,7 @@
 					@include mobile {
 						.subsection-body {
 							.data-list {
-								gap: 1.5rem 0;
+								gap: 2rem 0;
 								.data-item {
 									.data-name {
 										+.data-code {
