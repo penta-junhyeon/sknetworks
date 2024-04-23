@@ -82,9 +82,10 @@
 	.page-body {
 		min-height: calc(100vh - 12rem);
 		background-color: #f6f4f5;
+		position: relative;
 		.local-head {
 			padding: 0 1.8rem;
-
+			position: relative;
 			.local-subject {
 				max-width: 120rem;
 				margin: 0 auto;
@@ -92,17 +93,21 @@
 				border-bottom: 0.1rem solid #b9b9b9;
 
 				.local-name {
-					font-size: 8rem;
 					font-weight: 800;
 					letter-spacing: -0.05rem;
+					line-height: 150%;
 					color: #000000;
 					display: block;
-
+					&.case1 {
+						font-size: 8rem;
+					}
+					&.case2 {
+						font-size: 7rem;
+					}
 					+.local-desc {
 						padding-top: 1rem;
 					}
 				}
-
 				.local-desc {
 					font-size: 1.8rem;
 					font-weight: 400;
@@ -111,9 +116,17 @@
 					display: block;
 				}
             }
-            +.local-body {
-                padding-top: 7rem;
-            }
+			&.anchor-area {
+				+ .local-body {
+					padding: 12rem 1.8rem 15rem;
+					@include mobile {
+						padding: 9rem 1.8rem 15rem;
+					}
+				}
+			}
+			+ .local-body {
+				padding: 7rem 1.8rem 15rem;
+			}
 			@include mobile {
 				.local-subject {
 					padding: 5rem 0 2.5rem;
@@ -131,8 +144,6 @@
 		}
 
 		.local-body {
-			padding: 15rem 1.8rem;
-
 			.section {
 				max-width: 120rem;
 				margin: 0 auto;
@@ -390,21 +401,21 @@
 								font-size: 2rem;
 								font-weight: 500;
 								color: #dddddd;
-								padding: 1rem 1rem 1rem 4rem;
+								padding: 1rem;
 								display: inline-block;
-								transition: 0.3s ease;
+								transition: 0.4s ease;
 								width: 100%;
 								position: relative;
 
 								&::after {
 									content: '';
 									width: 0;
-									height: 0.1rem;
+									height: 1px;
 									background-color: #ffffff;
 									position: absolute;
-									left: 3rem;
+									left: 0;
 									bottom: 0;
-									transition: 0.5s ease;
+									transition: 0.4s ease;
 									opacity: 0;
 								}
 
@@ -413,7 +424,7 @@
 
 									&::after {
 										opacity: 0.8;
-										width: 60%;
+										width: 80%;
 									}
 								}
 							}
@@ -452,26 +463,6 @@
                 }
             }
 		}
-	}
-
-	// highlight
-	.highlight-js .hljs {
-		padding: 1.5rem;
-		font-size: 1.2rem;
-		line-height: 1.5;
-		font-family: Consolas, Courier New, monospace, Apple SD Gothic Neo, Malgun Gothic, 맑은 고딕, dotum, 돋움, sans-serif;
-		scrollbar-color: #cdcdcd #f0f0f0;
-	}
-
-	// highlight
-	.highlight-js .hljs {
-		padding: 1.5rem;
-		font-size: 1.2rem;
-		line-height: 1.5;
-		font-family: Consolas, Courier New, monospace, Apple SD Gothic Neo, Malgun Gothic, 맑은 고딕, dotum, 돋움, sans-serif;
-		scrollbar-color: #cdcdcd #f0f0f0;
-		background: #ffffff;
-		border: 0.1rem solid #f3f3f3;
 	}
 
     &.open-aside,
@@ -522,6 +513,26 @@
             display: none;
         }
     }
+
+	// highlight
+	.highlight-js .hljs {
+		padding: 1.5rem;
+		font-size: 1.2rem;
+		line-height: 1.5;
+		font-family: Consolas, Courier New, monospace, Apple SD Gothic Neo, Malgun Gothic, 맑은 고딕, dotum, 돋움, sans-serif;
+		scrollbar-color: #cdcdcd #f0f0f0;
+	}
+
+	// highlight
+	.highlight-js .hljs {
+		padding: 1.5rem;
+		font-size: 1.2rem;
+		line-height: 1.5;
+		font-family: Consolas, Courier New, monospace, Apple SD Gothic Neo, Malgun Gothic, 맑은 고딕, dotum, 돋움, sans-serif;
+		scrollbar-color: #cdcdcd #f0f0f0;
+		background: #ffffff;
+		border: 0.1rem solid #f3f3f3;
+	}
 }
 
 

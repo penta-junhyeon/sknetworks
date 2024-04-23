@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<%-include('../_templates/_guide.head.ejs', {
+		pageJavascript: ''
+	}) %>
+
+	<script>
+		document.addEventListener("DOMContentLoaded", () => {
+			anchorItemActive()
+		});
+	</script>
+</head>
+<body>
+<div id="wrap">
+	<div id="guide-list">
+		<%-include('../_templates/_guide.header.ejs') %>
+				<!-- page-body -->
+				<div class="page-body">
+					<!-- local-head -->
+					<div class="local-head">
+						<h2 class="local-subject">
+							<span class="local-name case2">공통 레이아웃 구조</span>
+							<span class="local-desc">
+								공통 마크업 구조
+							</span>
+						</h2>
+					</div>
+					<!-- //local-head -->
+					<!-- local-body -->
+					<div class="local-body">
+						<!-- section -->
+						<div class="section wai-guide">
+							<div class="section-head">
+								<h4 class="section-subject">
+									<span class="section-name">html 기본 구조</span>
+								</h4>
+							</div>
+							<div class="section-body">
+								<!-- subsection -->
+								<div class="subsection">
+									<div class="subsection-head">head</div>
+									<div class="subsection-body">
+										<div class="subcontent-wrap">
+											<div class="subcontent-body">
+<!-- highlight-js -->
+<pre class="highlight-js"><code class="html">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;ko&quot;&gt;
+&lt;head&gt;
+	&lt;meta charset=&quot;UTF-8&quot;&gt;
+	&lt;title&gt;Document&lt;/title&gt;
+	&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+	&lt;meta name=&quot;Robots&quot; content=&quot;index,follow&quot;&gt;
+	&lt;meta name=&quot;title&quot; content=&quot;&quot;&gt;
+	&lt;meta name=&quot;author&quot; content=&quot;&quot;&gt;
+	&lt;meta name=&quot;description&quot; content=&quot;&quot;&gt;
+	&lt;meta name=&quot;keywords&quot; content=&quot;&quot;&gt;
+	&lt;meta property=&quot;og:url&quot; content=&quot;&quot;&gt;
+	&lt;meta property=&quot;og:site_name&quot; content=&quot;&quot;&gt;
+	&lt;meta property=&quot;og:title&quot; content=&quot;&quot;&gt;
+	&lt;meta name=&quot;google-site-verification&quot; content=&quot;&quot;&gt;
+	&lt;meta property=&quot;og:description&quot; content=&quot;&quot;&gt;
+	&lt;meta property=&quot;og:type&quot; content=&quot;website&quot;&gt;
+	&lt;meta property=&quot;og:image&quot; content=&quot;&quot;&gt;
+	&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;&quot;&gt;
+	&lt;script type=&quot;text/javascript&quot; src=&quot;&quot;&gt;&lt;/script&gt;
+&lt;/head&gt;
+</code></pre>
+<!-- //highlight-js -->
+											</div>
+										</div>
+									</div>
+								</div>
+								<!-- //subsection -->
+								<!-- subsection -->
+								<div class="subsection">
+									<div class="subsection-head">body 공통</div>
+									<div class="subsection-body">
+										<div class="subcontent-wrap">
+											<div class="subcontent-body">
+<!-- highlight-js -->
+<pre class="highlight-js"><code class="html">&lt;body&gt;
+    &lt;div id=&quot;wrap&quot;&gt;
+        &lt;nav class=&quot;skip&quot;&gt;
+            &lt;span class=&quot;blind&quot;&gt;skip navigation&lt;/span&gt;
+            &lt;ul&gt;
+                &lt;li&gt;&lt;a href=&quot;#naviMenu&quot;&gt;&#xBA54;&#xB274;&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href=&quot;#main&quot;&gt;&#xBCF8;&#xBB38;&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href=&quot;#footer&quot;&gt;&#xD558;&#xB2E8; &#xC815;&#xBCF4;(&#xB9C1;&#xD06C;)&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/nav&gt;
+        &lt;div class=&quot;header&quot; id=&quot;header&quot;&gt;
+            &lt;div class=&quot;header-inner&quot;&gt;
+                &lt;div class=&quot;gnb&quot; id=&quot;naviMenu&quot;&gt;
+		...
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;main&quot; id=&quot;main&quot;&gt;
+            &lt;div class=&quot;main-inner&quot;&gt;
+		...
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;footer&quot; id=&quot;footer&quot;&gt;
+            &lt;div class=&quot;footer-inner&quot;&gt;
+		...
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+</code></pre>
+<!-- //highlight-js -->
+											</div>
+										</div>
+									</div>
+								</div>
+								<!-- //subsection -->
+							</div>
+						</div>
+						<!-- //section -->
+					</div>
+					<!-- local-body -->
+				</div>
+				<!-- //page-body -->
+				<%-include('../_templates/_guide.footer.ejs') %>
+	</div>
+</div>
+</body>
+</html>
