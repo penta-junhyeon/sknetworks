@@ -22,7 +22,7 @@
 						<h2 class="local-subject">
 							<span class="local-name">공통 레이아웃 구조</span>
 							<span class="local-desc">
-								공통 마크업 구조
+								공통 마크업 구조를 정의함으로써 웹사이트의 일관성을 유지합니다. 모든 페이지에서 동일한 구조를 사용하고 일관된 마크업 원칙을 준수해야 합니다.
 							</span>
 						</h2>
 					</div>
@@ -35,6 +35,7 @@
 								<h4 class="section-subject">
 									<span class="section-name">html 기본 구조</span>
 								</h4>
+								<!-- <p class="section-desc">가이드라인을 준수하여 일관된 방식으로 작업할 수 있도록 합니다.</p> -->
 							</div>
 							<div class="section-body">
 								<!-- subsection -->
@@ -87,23 +88,20 @@
                 &lt;li&gt;&lt;a href=&quot;#footer&quot;&gt;&#xD558;&#xB2E8; &#xC815;&#xBCF4;(&#xB9C1;&#xD06C;)&lt;/a&gt;&lt;/li&gt;
             &lt;/ul&gt;
         &lt;/nav&gt;
-        &lt;div class=&quot;header&quot; id=&quot;header&quot;&gt;
+        &lt;header id=&quot;header&quot;&gt;
             &lt;div class=&quot;header-inner&quot;&gt;
-                &lt;div class=&quot;gnb&quot; id=&quot;naviMenu&quot;&gt;
-&#x9;&#x9;...
-                &lt;/div&gt;
+                &lt;h1 class=&quot;site-logo&quot;&gt;
+                    &lt;a href=&quot;#&quot; class=&quot;site-name&quot;&gt;&lt;/a&gt;
+                &lt;/h1&gt;
+                &lt;div class=&quot;site-navi&quot; id=&quot;naviMenu&quot;&gt; ... &lt;/div&gt;
             &lt;/div&gt;
-        &lt;/div&gt;
+        &lt;/header&gt;
         &lt;div class=&quot;main&quot; id=&quot;main&quot;&gt;
-            &lt;div class=&quot;main-inner&quot;&gt;
-&#x9;&#x9;...
-            &lt;/div&gt;
+            &lt;div class=&quot;main-inner&quot;&gt; ... &lt;/div&gt;
         &lt;/div&gt;
-        &lt;div class=&quot;footer&quot; id=&quot;footer&quot;&gt;
-            &lt;div class=&quot;footer-inner&quot;&gt;
-&#x9;&#x9;...
-            &lt;/div&gt;
-        &lt;/div&gt;
+        &lt;footer id=&quot;footer&quot;&gt;
+            &lt;div class=&quot;footer-inner&quot;&gt; ... &lt;/div&gt;
+        &lt;/footer&gt;
     &lt;/div&gt;
 &lt;/body&gt;
 </code></pre>
@@ -120,18 +118,22 @@
 										<div class="subcontent-wrap">
 											<div class="subcontent-body">
 <!-- highlight-js -->
-<pre class="highlight-js"><code class="html">&lt;div class=&quot;header&quot; id=&quot;header&quot;&gt;
+<pre class="highlight-js"><code class="html">&lt;header id=&quot;header&quot;&gt;
     &lt;div class=&quot;header-inner&quot;&gt;
-        &lt;h1 class=&quot;data-logo&quot;&gt;
-            &lt;a href=&quot;#&quot; class=&quot;data-name&quot;&gt;&lt;/a&gt;
+        &lt;h1 class=&quot;site-logo&quot;&gt;
+            &lt;a href=&quot;#&quot; class=&quot;site-name&quot;&gt;&lt;/a&gt;
         &lt;/h1&gt;
-        &lt;div class=&quot;data-navi&quot; id=&quot;naviMenu&quot;&gt;
-
+        &lt;div class=&quot;site-navi&quot; id=&quot;naviMenu&quot;&gt;
+            &lt;ul class=&quot;navi-list&quot;&gt;
+                &lt;li class=&quot;navi-item&quot;&gt;Company&lt;/li&gt;
+                &lt;li class=&quot;navi-item&quot;&gt;Business&lt;/li&gt;
+                &lt;li class=&quot;navi-item&quot;&gt;ESG&lt;/li&gt;
+            &lt;/ul&gt;
         &lt;/div&gt;
-        &lt;div class=&quot;data-util&quot;&gt;&lt;/div&gt;
-        &lt;div class=&quot;data-control&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;site-util&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;site-control&quot;&gt;&lt;/div&gt;
     &lt;/div&gt;
-&lt;/div&gt;
+&lt;/header&gt;
 </code></pre>
 <!-- //highlight-js -->
 											</div>
@@ -160,44 +162,69 @@
                 &lt;/div&gt;
             &lt;/div&gt;
             &lt;div class=&quot;content-body&quot;&gt;
-                &lt;div class=&quot;content content1&quot;&gt; &lt;!-- content1 : 고유 네이밍 사용 --&gt;
-                    &lt;div class=&quot;cont-area&quot;&gt;
-                        &lt;div class=&quot;cont-area-inner&quot;&gt;
-                            &lt;div class=&quot;cont-area-head&quot;&gt;
-                                &lt;h3 class=&quot;tit&quot;&gt;&lt;/h3&gt;
-                            &lt;/div&gt;
-                            &lt;div class=&quot;cont-area-body&quot;&gt;
-                                ...
-                            &lt;/div&gt;
+                &lt;div class=&quot;section lorem-ipsum1&quot;&gt; &lt;!-- &#xACE0;&#xC720; &#xD074;&#xB798;&#xC2A4; &#xCD94;&#xAC00; &#xC0AC;&#xC6A9; --&gt;
+                    &lt;div class=&quot;section-head&quot;&gt;
+                        &lt;div class=&quot;section-title&quot;&gt;
+                            &lt;h4 class=&quot;section-name&quot;&gt;&lt;/h4&gt;
                         &lt;/div&gt;
                     &lt;/div&gt;
-                    &lt;div class=&quot;cont-area&quot;&gt;
-                        &lt;div class=&quot;cont-area-inner&quot;&gt;
-                            &lt;div class=&quot;cont-area-head&quot;&gt;
-                                &lt;h3 class=&quot;tit&quot;&gt;&lt;/h3&gt;
-                            &lt;/div&gt;
-                            &lt;div class=&quot;cont-area-body&quot;&gt;
-                                ...
-                            &lt;/div&gt;
-                        &lt;/div&gt;
+                    &lt;div class=&quot;section-body&quot;&gt;
+                        &lt;!-- &#xCEF4;&#xD3EC;&#xB10C;&#xD2B8; &#xC0BD;&#xC785; --&gt;
                     &lt;/div&gt;
                 &lt;/div&gt;
-                &lt;div class=&quot;content content2&quot;&gt; &lt;!-- content2 : 고유 네이밍 사용 --&gt;
-                    &lt;div class=&quot;cont-area&quot;&gt;
-                        &lt;div class=&quot;cont-area-inner&quot;&gt;
-                            &lt;div class=&quot;cont-area-head&quot;&gt;
-                                &lt;h3 class=&quot;tit&quot;&gt;&lt;/h3&gt;
-                            &lt;/div&gt;
-                            &lt;div class=&quot;cont-area-body&quot;&gt;
-                                ...
-                            &lt;/div&gt;
+                &lt;div class=&quot;section lorem-ipsum1&quot;&gt; &lt;!-- &#xACE0;&#xC720; &#xD074;&#xB798;&#xC2A4; &#xCD94;&#xAC00; &#xC0AC;&#xC6A9; --&gt;
+                    &lt;div class=&quot;section-head&quot;&gt;
+                        &lt;div class=&quot;section-title&quot;&gt;
+                            &lt;h4 class=&quot;section-name&quot;&gt;&lt;/h4&gt;
                         &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;section-body&quot;&gt;
+                        &lt;!-- &#xCEF4;&#xD3EC;&#xB10C;&#xD2B8; &#xC0BD;&#xC785; --&gt;
                     &lt;/div&gt;
                 &lt;/div&gt;
             &lt;/div&gt;
         &lt;/div&gt;
     &lt;/div&gt;
 &lt;/div&gt;
+</code></pre>
+<!-- //highlight-js -->
+											</div>
+										</div>
+									</div>
+								</div>
+								<!-- //subsection -->
+								<!-- subsection -->
+								<div class="subsection">
+									<div class="subsection-head">footer</div>
+									<div class="subsection-body">
+										<div class="subcontent-wrap">
+											<div class="subcontent-body">
+<!-- highlight-js -->
+<pre class="highlight-js"><code class="html">&lt;footer id=&quot;footer&quot;&gt;
+    &lt;div class=&quot;footer-inner&quot;&gt;
+        &lt;div class=&quot;footer-head&quot;&gt;
+            &lt;div class=&quot;site-logo&quot;&gt;
+                &lt;a href=&quot;#&quot; class=&quot;site-name&quot;&gt;&lt;/a&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;footer-body&quot;&gt;
+            &lt;div class=&quot;section service&quot;&gt;&lt;/div&gt;
+            &lt;div class=&quot;section info&quot;&gt;
+                &lt;div class=&quot;section-head&quot;&gt;&lt;/div&gt;
+                &lt;div class=&quot;section-body&quot;&gt;
+                    &lt;ul class=&quot;info-list&quot;&gt;
+                        &lt;li class=&quot;info-item&quot;&gt;&#xD68C;&#xC0AC;&#xC18C;&#xAC1C;&lt;/li&gt;
+                        &lt;li class=&quot;info-item&quot;&gt;&#xC0AC;&#xC6A9;&#xAD8C; &#xC57D;&#xAD00;&lt;/li&gt;
+                        &lt;li class=&quot;info-item&quot;&gt;&#xAC1C;&#xC778;&#xC815;&#xBCF4;&#xCC98;&#xB9AC;&#xBC29;&#xCE68;&lt;/li&gt;
+                        &lt;li class=&quot;info-item&quot;&gt;&#xC774;&#xC6A9;&#xC57D;&#xAD00;&lt;/li&gt;
+                    &lt;/ul&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;section company&quot;&gt;&lt;/div&gt;
+            &lt;div class=&quot;section sns&quot;&gt;&lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/footer&gt;
 </code></pre>
 <!-- //highlight-js -->
 											</div>
