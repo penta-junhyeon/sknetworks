@@ -93,17 +93,12 @@
 				border-bottom: 0.1rem solid #b9b9b9;
 
 				.local-name {
+					font-size: 8rem;
 					font-weight: 800;
 					letter-spacing: -0.05rem;
 					line-height: 150%;
 					color: #000000;
 					display: block;
-					&.case1 {
-						font-size: 8rem;
-					}
-					&.case2 {
-						font-size: 7rem;
-					}
 					+.local-desc {
 						padding-top: 1rem;
 					}
