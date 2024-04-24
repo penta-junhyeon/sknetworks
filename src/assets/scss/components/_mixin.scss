@@ -38,8 +38,18 @@
         @content;
     }
 }
+@mixin mobile-large {
+    @media (min-width:#{$mobile-large}) and (max-width:#{$tablet - 1}){
+        @content;
+    }
+}
 @mixin tablet {
     @media (min-width:#{$tablet}) and (max-width:#{$web - 1}){
+        @content;
+    }
+}
+@mixin web-small {
+    @media (min-width:#{$web-small}) and (max-width:#{$web - 1}){
         @content;
     }
 }
