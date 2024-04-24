@@ -1,4 +1,4 @@
-# SK NETWORKS APS
+# SK NETWORKS
 
 ## Getting started
 
