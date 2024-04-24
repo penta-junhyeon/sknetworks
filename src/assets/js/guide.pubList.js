@@ -1,7 +1,7 @@
 function pubListUp() {
   var category = ["No", "Page ID", "Menu", "File Root", "Completion", "View"];
   var page = {
-    "About Junwoo": [
+    "About SK": [
       {
         id_ko: "page.default.ko",
         id_en: "page.default.en",
