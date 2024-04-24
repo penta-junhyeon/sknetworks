@@ -78,7 +78,7 @@
 					}
 				}
 
-                // 버튼
+                //버튼
 				&.button-guide {
 					.subsection {
 						.subsection-body {
@@ -100,7 +100,7 @@
 					}
 				}
 
-				// 폰트
+				//폰트
 				&.font-guide {
 					.section-head {
 						+ .section-body {
@@ -277,7 +277,53 @@
 							padding-left: 0;
 						}
 					}
+				}
 
+				//아이콘
+				&.icon-guide {
+					.data-list.svg-icon {
+						display: flex;
+						flex-wrap: wrap;
+						.data-item {
+							margin-right: 2rem;
+							margin-bottom: 2rem;
+							.data-name {
+								display: flex;
+								flex-direction: column;
+								align-items: center;
+								width: 9rem;
+								min-height: 10rem;
+								text-align: center;
+								font-size: 1.4rem;
+								&::before {
+									content: "";
+									margin-top: 1rem;
+									margin-bottom: 1.6rem;
+									width: 3rem;
+									min-width: 3rem;
+									height: 3rem;
+									min-height: 3rem;
+									background-repeat: no-repeat;
+									background-position: center center;
+									background-size: contain;
+								}
+							}
+							&.link {
+								&:hover {
+									text-decoration: none;
+								}
+							}
+							@each $name, $color in $icon {
+								&.#{$name} {
+									.data-name {
+										&::before {
+											background-image: icon($name, #000000);
+										}
+									}
+								}
+							}
+						}
+					}
 				}
             }
         }
