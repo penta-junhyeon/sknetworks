@@ -1,7 +1,14 @@
-// color palettes
+/* breakpoints */
+$mobile : 320px;
+$mobile-large : 768px;
+$tablet : 1024px;
+$web-small : 1416px;
+$web : 1920px;
+
+
+/* color palettes */
 $color-palettes: (
-    primary: (
-        100: #EA002C,
+    primary: (100: #EA002C,
         090: #AD0021,
         080: #6D0CA6,
         070: #9735D0,
@@ -14,8 +21,7 @@ $color-palettes: (
         005: #000000,
         000: #000000,
     ),
-    secondary: (
-        100: #F47725,
+    secondary: (100: #F47725,
         090: #C24D00,
         080: #27272A,
         070: #F6F6F7,
@@ -28,8 +34,7 @@ $color-palettes: (
         005: #ffffff,
         000: #ffffff,
     ),
-    neutral: (
-        100: #09090B,
+    neutral: (100: #09090B,
         090: #27272A,
         080: #3F3F46,
         070: #71717A,
@@ -42,8 +47,7 @@ $color-palettes: (
         005: #ffffff,
         000: #ffffff,
     ),
-    system: (
-        100: #000000,
+    system: (100: #000000,
         090: #000000,
         080: #000000,
         070: #FFFFFF,
@@ -56,8 +60,7 @@ $color-palettes: (
         005: #D93232,
         000: #FF4444,
     ),
-    semantic: (
-        100: #000000,
+    semantic: (100: #000000,
         090: #000000,
         080: #000000,
         070: #000000,
@@ -70,8 +73,7 @@ $color-palettes: (
         005: #D4D4D8,
         000: #F4F4F5,
     ),
-    typo: (
-        100: #FFFFFF,
+    typo: (100: #FFFFFF,
         090: #FFFFFF,
         080: #FFFFFF,
         070: #FFFFFF,
@@ -93,9 +95,48 @@ $color-palettes: (
     @return $create-color;
 }
 
-// breakpoints
-$mobile : 320px;
-$mobile-large : 768px;
-$tablet : 1024px;
-$web-small : 1416px;
-$web : 1920px;
+/* font */
+$font-size: (
+    small-6x: 1.2rem,
+    small-5x: 1.4rem,
+    small-4x: 1.6rem,
+    small-3x: 1.8rem,
+    small-2x: 2rem,
+    small-1x: 2.4rem,
+    small: 2.8rem,
+    medium: 3.2rem,
+    large: 3.6rem,
+    large-1x: 4rem,
+    large-2x: 4.5rem,
+    large-3x: 5.6rem,
+    large-4x: 6.4rem,
+    large-5x: 7.2rem,
+    large-6x: 8rem,
+    large-7x: 8.8rem,
+);
+
+$font-weight: (
+    light: 300,
+    regular: 400,
+    medium: 500,
+    semibold: 600,
+    bold: 700,
+    extrabold: 800,
+    heavy: 900,
+);
+
+// @mixin font($type: "headline") {
+//     @if ($type=="headline") {
+//         font-size: map-get($font-size, large-6x);
+//         font-weight: map-get($font-weight, bold);
+//     }
+//     @if ($type=="title1") {
+//         font-size: map-get($font-size, large-4x);
+//         font-weight: map-get($font-weight, bold);
+//     }
+// }
+
+@mixin font($size, $weight: regular) {
+    font-size: map-get($font-size, $size);
+    font-weight: map-get($font-weight, $weight);
+}

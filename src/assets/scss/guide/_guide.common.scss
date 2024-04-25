@@ -35,7 +35,6 @@
                         color: #fff;
                         font-weight: 600;
                         font-size: 1.4rem;
-                        line-height: 1.7rem;
                         letter-spacing: -0.05rem;
                     }
                     @include mobile {
@@ -95,10 +94,8 @@
 				.local-name {
 					display: block;
 					color: #000000;
-					font-weight: 800;
-					font-size: 8rem;
-					line-height: 150%;
 					letter-spacing: -0.05rem;
+					@include font(large-6x, extrabold);
 					+.local-desc {
 						padding-top: 1rem;
 					}
@@ -106,9 +103,7 @@
 				.local-desc {
 					display: block;
 					color: #1c1c1c;
-					font-weight: 400;
-					font-size: 1.8rem;
-					line-height: 150%;
+					@include font(small-3x, regular);
 				}
             }
 			&.anchor-area {
@@ -126,10 +121,10 @@
 				.local-subject {
 					padding: 5rem 0 2.5rem;
 					.local-name {
-						font-size: 4.5rem;
+						@include font(large-2x);
 					}
 					.local-desc {
-						font-size: 1.4rem;
+						@include font(small-5x);
 					}
 				}
 				+.local-body {
