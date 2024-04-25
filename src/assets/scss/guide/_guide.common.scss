@@ -3,9 +3,9 @@
         position: sticky;
         top: 0;
 		width: 100%;
+		padding: 1rem 1.8rem;
 		background-color: #ffffff;
 		border-bottom: 0.1rem solid #E9E9E9;
-		padding: 1rem 1.8rem;
         z-index: 101;
         transition: background-color .3s ease;
 		.page-head-inner {
@@ -27,29 +27,29 @@
                 &.guide-intro {
                     display: block;
                     padding: 1rem 3.7rem;
-                    background-color: #14121f;
                     border: .1rem solid #e3e3e3;
+                    background-color: #14121f;
                     border-radius: 0.6rem;
                     .btn-txt {
                         display: inline-block;
+                        color: #fff;
                         font-weight: 600;
                         font-size: 1.4rem;
                         line-height: 1.7rem;
                         letter-spacing: -0.05rem;
-                        color: #fff;
                     }
                     @include mobile {
                         padding: 1rem 1.4rem;
                     }
                 }
                 &.guide-menu {
-                    position: relative;
                     display: block;
+                    position: relative;
                     width: 4rem;
                     height: 4rem;
                     padding: 1.2rem 1rem;
-                    background-color: #f6f6f6;
                     border: .1rem solid #e3e3e3;
+                    background-color: #f6f6f6;
                     border-radius: .6rem;
                     .line {
                         display: block;
@@ -80,35 +80,35 @@
 	}
 
 	.page-body {
-		min-height: calc(100vh - 12rem);
-		background-color: #f7f7f7;
 		position: relative;
+		min-height: calc(100vh - 12rem);
+		background-color: #ececec;
 		.local-head {
-			padding: 0 1.8rem;
 			position: relative;
+			padding: 0 1.8rem;
 			.local-subject {
-				max-width: 120rem;
-				margin: 0 auto;
 				padding: 10rem 0 2.5rem;
+				margin: 0 auto;
+				max-width: 120rem;
 				border-bottom: 0.1rem solid #b9b9b9;
 
 				.local-name {
-					font-size: 8rem;
-					font-weight: 800;
-					letter-spacing: -0.05rem;
-					line-height: 150%;
-					color: #000000;
 					display: block;
+					color: #000000;
+					font-weight: 800;
+					font-size: 8rem;
+					line-height: 150%;
+					letter-spacing: -0.05rem;
 					+.local-desc {
 						padding-top: 1rem;
 					}
 				}
 				.local-desc {
-					font-size: 1.8rem;
-					font-weight: 400;
-					line-height: 150%;
-					color: #1c1c1c;
 					display: block;
+					color: #1c1c1c;
+					font-weight: 400;
+					font-size: 1.8rem;
+					line-height: 150%;
 				}
             }
 			&.anchor-area {
@@ -140,24 +140,24 @@
 
 		.local-body {
 			.section {
-				max-width: 120rem;
 				margin: 0 auto;
+				max-width: 120rem;
 
 				.section-head {
 					.section-subject {
 						.section-name {
-							font-size: 3.8rem;
-							font-weight: 700;
-							letter-spacing: -0.05rem;
 							color: #1c1c1c;
+							font-weight: 700;
+							font-size: 3.8rem;
+							letter-spacing: -0.05rem;
 						}
 
 						+.section-desc {
-							padding-top: 0.8rem;
-							font-size: 1.6rem;
-							font-weight: 400;
-							line-height: 150%;
 							color: #1c1c1c;
+							font-weight: 400;
+							font-size: 1.6rem;
+							line-height: 150%;
+							padding-top: 0.8rem;
 						}
 					}
 
@@ -184,9 +184,9 @@
 				.section-body {
 					.subsection {
 						.subsection-head {
-							font-size: 2.2rem;
-							font-weight: 600;
 							color: #1c1c1c;
+							font-weight: 600;
+							font-size: 2.2rem;
 
 							+.subsection-body {
 								padding-top: 1.8rem;
@@ -197,9 +197,9 @@
 								//demo가 있는 경우
 								.subcategory {
 									.subcategory-head {
-										font-size: 1.6rem;
-										font-weight: 500;
 										color: #1c1c1c;
+										font-weight: 500;
+										font-size: 1.6rem;
 										+ .subcategory-body {
 											padding-top: 1rem;
 										}
@@ -212,10 +212,10 @@
 								//텍스트 위주
 								.subcontent-wrap {
 									.subcontent-head {
+										color: #0058e6;
+										font-weight: 500;
 										font-size: 1.6rem;
 										line-height: 150%;
-										font-weight: 500;
-										color: #0058e6;
 										+ .subcontent-body {
 											margin-top: 0.6rem;
 										}
@@ -240,8 +240,8 @@
 						}
 					}
 					.data-table {
-						overflow: auto;
 						border: 1px solid #626262;
+						overflow: auto;
 						table {
 							min-width: 72rem;
 							border-right: hidden;
@@ -255,11 +255,11 @@
 								line-height: 150%;
 							}
 							th {
+								text-align: left;
 								border-top: 1px solid #626262;
 								border-right: 1px solid #626262;
 								border-left: 1px solid #626262;
 								background-color: #e7e7e7;
-								text-align: left;
 							}
 							td {
 								border-top: 1px solid #626262;
@@ -313,9 +313,9 @@
 		.aside-body {
 			width: 100%;
 			height: 100%;
-			max-width: 120rem;
-			margin: 0 auto;
 			padding: 10rem 1.8rem;
+			margin: 0 auto;
+			max-width: 120rem;
 			overflow: auto;
 
 			.section {
@@ -325,11 +325,11 @@
 
 					.section-title {
 						.section-name {
-							font-size: 3rem;
+							color: #fafafa;
 							font-weight: 600;
+							font-size: 3rem;
 							line-height: 150%;
 							margin-bottom: 3rem;
-							color: #fafafa;
 
 							+.para {
 								padding-top: 1rem;
@@ -337,9 +337,9 @@
 						}
 
 						.para {
-							font-size: 1.4rem;
-							font-weight: 400;
 							color: #6F6F6F;
+							font-weight: 400;
+							font-size: 1.4rem;
 						}
 					}
 
@@ -367,9 +367,9 @@
 					.gnb-list {
 						.gnb-item {
 							.gnb-name {
-								font-size: 4.8rem;
-								font-weight: 700;
 								color: #ffffff;
+								font-weight: 700;
+								font-size: 4.8rem;
 
 								+.lnb-list {
 									padding-top: 5rem;
@@ -393,23 +393,23 @@
 							width: calc(100% / 6);
 
 							.lnb-name {
-								font-size: 2rem;
-								font-weight: 500;
-								color: #dddddd;
-								padding: 1rem;
 								display: inline-block;
-								transition: 0.4s ease;
-								width: 100%;
 								position: relative;
+								width: 100%;
+								padding: 1rem;
+								color: #dddddd;
+								font-weight: 500;
+								font-size: 2rem;
+								transition: 0.4s ease;
 
 								&::after {
-									content: '';
+									position: absolute;
+									bottom: 0;
+									left: 0;
 									width: 0;
 									height: 1px;
+									content: '';
 									background-color: #ffffff;
-									position: absolute;
-									left: 0;
-									bottom: 0;
 									transition: 0.4s ease;
 									opacity: 0;
 								}
@@ -418,8 +418,8 @@
 									opacity: 0.8;
 
 									&::after {
-										opacity: 0.8;
 										width: 80%;
+										opacity: 0.8;
 									}
 								}
 							}
@@ -428,8 +428,8 @@
 				}
 			}
             @include mobile {
-                padding: 2rem 1.8rem;
                 height: 100%;
+                padding: 2rem 1.8rem;
                 .section {
                     .section-body {
                         .gnb-list {
@@ -443,8 +443,8 @@
                                         .lnb-item {
                                             width: 100%;
                                             .lnb-name {
-                                                font-size: 1.8rem;
                                                 padding: 1.5rem 3rem;
+                                                font-size: 1.8rem;
                                             }
                                         }
                                     }
@@ -472,8 +472,8 @@
         background-color: #1C1C1C;
         overflow-y: auto;
         .page-head {
-            background-color: #1c1c1c;
             border: none;
+            background-color: #1c1c1c;
             .page-head-inner {
                 .page-control {
                     .guide-menu {
@@ -521,12 +521,12 @@
 	// highlight
 	.highlight-js .hljs {
 		padding: 1.5rem;
+		border: 0.1rem solid #f3f3f3;
+		background: #ffffff;
 		font-size: 1.2rem;
 		line-height: 1.5;
 		font-family: Consolas, Courier New, monospace, Apple SD Gothic Neo, Malgun Gothic, 맑은 고딕, dotum, 돋움, sans-serif;
 		scrollbar-color: #cdcdcd #f0f0f0;
-		background: #ffffff;
-		border: 0.1rem solid #f3f3f3;
 	}
 }
 
@@ -534,14 +534,14 @@
 // 푸터 scss
 .page-foot {
 	width: 100%;
-	background-color: #1A1A1A;
 	text-align: center;
+	background-color: #1A1A1A;
 
 	.copyright {
-		font-size: 1.4rem;
-		font-weight: 300;
-		color: #ffffff;
 		padding: 2rem;
+		color: #ffffff;
+		font-weight: 300;
+		font-size: 1.4rem;
 
 		.email {
 			color: inherit;

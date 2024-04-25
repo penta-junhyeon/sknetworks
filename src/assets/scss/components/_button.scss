@@ -1,31 +1,31 @@
 .btn {
     display: inline-flex;
+    border: 1px solid transparent;
+    text-align: center;
     align-items: center;
     justify-content: center;
-    text-align: center;
-    border: 1px solid transparent;
     transition: 0.3s ease;
     
     // 텍스트 버튼
     &.text {
         .btn-text {
             display: flex;
+            position: relative;
+            text-align: center;
+            white-space: nowrap;
             align-items: center;
             justify-content: center;
-            white-space: nowrap;
-            text-align: center;
-            position: relative;
         }
     
         // shape
         &.design1 {
-            padding: 1.5rem 3rem;
-            border-radius: 0.4rem;
+            padding: 1.45rem 3.1rem;
+            border-radius: 5rem;
         }
     
         &.design2 {
-            padding: 2.2rem 5rem;
-            border-radius: 3.9rem;
+            padding: .9rem .9rem .9rem 3.1rem;
+            border-radius: 5rem;
         }
 
         &.design3 {
@@ -38,74 +38,132 @@
 
         // font
         &.case1 {
-            font-size: 1.6rem;
             font-weight: 700;
-            line-height: 125%;
+            font-size: 1.8rem;
+            line-height: 160%;
         }
         &.case2 {
-            font-size: 1.4rem;
             font-weight: 700;
-            line-height: 125%;
-        }
-        &.case3 {
-            font-size: 1.2rem;
-            font-weight: 700;
-            line-height: 125%;
+            font-size: 1.6rem;
+            line-height: 160%;
         }
     
         // color
         &.color1 {
-            background-color: #ffffff;
-            border-color: #CDCDCD;
-            color: #222222;
+            color: #FFFFFF;
+            background-color: #27272A;
+            border-color: #27272A;
+            transition: .3s ease;
+            &:hover {
+                background-color: #52525B;
+                border-color: #52525B;
+            }
+            &.disabled,
+            &:disabled {
+                color: #D4D4D8 !important;
+                background-color: #F6F6F7 !important;
+                border-color: #F6F6F7 !important;
+                .btn-text {
+                    &::after {
+                        background-color: #D4D4D8 !important;
+                        background-image: icon(arrow-right2, #FFFFFF);
+                    }
+                }
+            }
         }
         &.color2 {
-            background-color: #222222;
-            border-color: #222222;
-            color: #ffffff;
+            color: #000000;
+            background-color: #FFFFFF;
+            border-color: #E4E4E7;
+            &:hover {
+                color: #FFFFFF;
+                background-color: #27272A;
+                border-color: #27272A;
+            }
+            &.disabled,
+            &:disabled {
+                color: #D4D4D8 !important;
+                border-color: #F6F6F7 !important;
+                .btn-text {
+                    &::after {
+                        background-color: #D4D4D8 !important;
+                        background-image: icon(arrow-right2, #FFFFFF);
+                    }
+                }
+            }
         }
         &.color3 {
+            color: #FFFFFF;
             background-color: transparent;
-            border-color: #ffffff;
-            color: #ffffff;
+            border-color: #FFFFFF;
+            &:hover {
+                color: #000000;
+                background-color: #FFFFFF;
+                border-color: #FFFFFF;
+            }
+            &.disabled,
+            &:disabled {
+                color: #71717A !important;
+                border-color: #71717A !important;
+                .btn-text {
+                    &::after {
+                        background-color: #71717A !important;
+                        background-image: icon(arrow-right2, #52525B);
+                    }
+                }
+            }
         }
         &.color4 {
+            color: #000000;
             background-color: transparent;
-            border-color: #2970FF;
-            color: #2970FF;
-        }
-        &.color5 {
-            background-color: #2970FF;
-            border-color: #2970FF;
-            color: #ffffff;
+            border-color: transparent;
+            &:hover {
+                color: #EA002C;
+            }
+            &.disabled,
+            &:disabled {
+                color: #D4D4D8 !important;
+            }
         }
 
         &[class*=-icon] {
             &[class*=al] .btn-text::before,
             &[class*=ar] .btn-text::after {
-                content: '';
                 display: block;
-                width: 1.5em;
-                height: 1.5em;
+                content: '';
                 background-repeat: no-repeat;
                 background-position: center center;
-                background-size: 100% auto;
+                // background-size: 100% auto;
             }
     
     
-            &[class*=al] {
-                .btn-text {
-                    &::before {
-                        margin-right: 0.25em;
-                    }
-                }
-            }
+            // &[class*=al] {
+            //     .btn-text {
+            //         &::before {
+            //             margin-right: 0.25em;
+            //         }
+            //     }
+            // }
         
-            &[class*=ar] {
-                .btn-text {
-                    &::after {
-                        margin-left: 0.25em;
-                    }
+            // &[class*=ar] {
+            //     .btn-text {
+            //         &::after {
+            //             margin-left: 0.25em;
+            //         }
+            //     }
+            // }
+        }
+        &.ar-icon-arrow2 {
+            position: relative;
+            .btn-text {
+                &::after {
+                    width: 4rem;
+                    height: 4rem;
+                    margin-left: 2.4rem;
+                    background-image: icon(arrow-right2,#ffffff);
+                    background-size: 1.5rem 1.4rem;
+                    background-color: #3F3F46;
+                    border-radius: 100%;
                 }
             }
         }
@@ -113,21 +171,21 @@
 
     // 아이콘 버튼
     &.icon {
-
+        &.case1 {
+            width: 4rem;
+            height: 4rem;
+            background-color: #F6F6F7;
+            border-radius: 100%;
+            background-image: icon(arrow-right2, #000000);
+            background-repeat: no-repeat;
+            background-position: center;
+        }
     }
 
     &.disabled,
     &:disabled {
-        background-color: #9A9A9A !important;
-        border-color: #9A9A9A !important;
-        color: #ffffff !important;
         pointer-events: none;
         cursor: not-allowed;
-
-        &:hover {
-            background-color: #9A9A9A !important;
-            border-color: #9A9A9A !important;
-        }
     }
 }
 
