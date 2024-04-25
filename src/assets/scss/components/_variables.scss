@@ -1,12 +1,3 @@
-// breakpoints
-$mobile : 320px;
-$mobile-large : 768px;
-$tablet : 1024px;
-$web-small : 1416px;
-$web : 1920px;
-
-
-
 // color palettes
 $color-palettes: (
     primary: (
@@ -94,3 +85,17 @@ $color-palettes: (
         000: #FFFFFF,
     ),
 );
+
+/* create color */
+@function color($theme: neutral, $variant: 000, $opacity: 1) {
+    $set-color: map-get($color-palettes, $theme, $variant);
+    $create-color: rgba(red($set-color), green($set-color), blue($set-color), $opacity);
+    @return $create-color;
+}
+
+// breakpoints
+$mobile : 320px;
+$mobile-large : 768px;
+$tablet : 1024px;
+$web-small : 1416px;
+$web : 1920px;
