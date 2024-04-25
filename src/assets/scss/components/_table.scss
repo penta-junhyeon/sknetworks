@@ -1,22 +1,48 @@
 .t-display {
+	width: 100%;
+	max-width: 120rem;
+	margin: 0 auto;
+	table {
+		table-layout: fixed;
+		border-spacing: 0;
+		border-collapse: collapse;
+		border-right: hidden;
+		border-left: hidden;
+	}
     &.design1 {
-		width: 100%;
-		max-width: 120rem;
-		margin: 0 auto;
-
 		table {
 			thead {
 				tr {
 					th {
-	
+						color: color(typo, 020);
+						font-weight: 600;
+						font-size: 1.8rem;
+						text-align: center;
+						line-height: 160%;
+						padding: 1.4rem 1.15rem;
+						background-color: color(neutral, 050);
+						border-right: 1px solid color(neutral, 060);
+						border-bottom: 1px solid color(neutral, 060);
 					}
 				}
 			}
 	
 			tbody {
 				tr {
+					th {
+						font-weight: 600;
+						font-size: 1.8rem;
+						color: color(typo, 020);
+						padding: 1.4rem 1.15rem;
+						border-right: 1px solid color(neutral, 020);
+					}
 					td {
-						
+						font-weight: 400;
+						font-size: 1.8rem;
+						line-height: 160%;
+						color: color(typo, 020);
+						vertical-align: middle;
+						border-right: 1px solid color(neutral, 020);
 					}
 					+tr {
 						td {
@@ -47,7 +73,7 @@
 				}
 				+tr {
 					td {
-						border-top: 1px solid color(normal, 040);
+						border-top: 1px solid color(neutral, 060);
 					}
 				}
 			}
@@ -58,38 +84,49 @@
 		&.case3 {}
     }
 
-	//common
-	thead,
-	tbody {
-		tr {
-			th,
-			td {
-				&.al {
-					text-align: left;
-				}
-				&.ar {
-					text-align: right;
-				}
-				&.ac {
-					text-align: center;
-				}
-			}
+	//align
+	&.al {
+		tbody {
+			text-align: left;
+		}
+	}
+	&.ar {
+		tbody {
+			text-align: right;
+		}
+	}
+	&.ac {
+		tbody {
+			text-align: center;
+		}
+	}
+
+	th,
+	td {
+		&.al {
+			text-align: left;
+		}
+		&.ar {
+			text-align: right;
+		}
+		&.ac {
+			text-align: center;
 		}
 	}
 
 	// table info
     .t-info {
 		&.type1 {
-			color: color(normal, 010);
+			color: color(neutral, 050);
 			font-size: 3.2rem;
 			font-weight: 600;
-			line-height: 3.8rem;
+			line-height: 160%;
 		}
 		&.type2 {
-			color: color(normal, 010);
+			color: color(neutral, 050);
 			font-size: 1.3rem;
 			font-weight: 600;
-			line-height: 1.8rem;
+			line-height: 160%;
 		}
 		+ table {
 			margin-top: 2ren;
@@ -99,23 +136,6 @@
 	table + .t-info {
 		margin-top: 2rem;
 	}
-
-    //align
-    &.al {
-        tbody {
-            text-align: left;
-        }
-    }
-    &.ar {
-        tbody {
-            text-align: right;
-        }
-    }
-    &.ac {
-        tbody {
-            text-align: center;
-        }
-    }
 
 	// table 정보가 없는 경우
 	.no-results {

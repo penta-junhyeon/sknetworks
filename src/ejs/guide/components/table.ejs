@@ -25,33 +25,42 @@
 				<div class="section table-guide">
 					<div class="section-head">
 						<h4 class="section-subject"><span class="section-name">Data table</span></h4>
+						<p class="section-desc">design 클래스는 테이블의 형태,  </p>
 					</div>
 					<div class="section-body">
 						<div class="subsection">
-							<div class="subsection-head">HTML structure</div>
 							<div class="subsection-body">
 									<!-- highlight-js -->
 <pre class="highlight-js">
 <code class="html">&lt;!-- table-list --&gt;
-&lt;div class="t-display design1 case1 type1"&gt;
-	&lt;table&gt;
-		&lt;colgroup&gt;
-			&lt;col style="width: value;" /&gt;
-			&lt;col /&gt;
-		&lt;/colgroup&gt;
-		&lt;thead&gt;
-			&lt;tr&gt;
-				&lt;th scope="col"&gt;thead text&lt;/th&gt;
-				&lt;th scope="col"&gt;thead text&lt;/th&gt;
-			&lt;/tr&gt;
-		&lt;/thead&gt;
-		&lt;tbody&gt;
-			&lt;tr&gt;
-				&lt;td&gt;tbody text&lt;/td&gt;
-				&lt;td&gt;tbody text&lt;/td&gt;
-			&lt;/tr&gt;
-		&lt;/tbody&gt;
-	&lt;/table&gt;
+&lt;div class=&quot;t-display design1 case1 type1&quot;&gt;
+&#x9;&lt;table&gt;
+&#x9;&#x9;&lt;caption&gt;&#xD45C;&#xC758; &#xC81C;&#xBAA9;&#xC744; &#xD45C;&#xD604;&#xD558;&#xAE30; &#xC704;&#xD574; &#xBC18;&#xB4DC;&#xC2DC; &#xC120;&#xC5B8;&#xD569;&#xB2C8;&#xB2E4;.&lt;/caption&gt;
+&#x9;&#x9;&lt;colgroup&gt;
+&#x9;&#x9;&#x9;&lt;col&gt;
+&#x9;&#x9;&#x9;&lt;col&gt;
+&#x9;&#x9;&#x9;&lt;col&gt;
+&#x9;&#x9;&lt;/colgroup&gt;
+&#x9;&#x9;&lt;thead&gt;
+&#x9;&#x9;&#x9;&lt;tr&gt;
+&#x9;&#x9;&#x9;&#x9;&lt;th scope=&quot;col&quot;&gt;&#xAD6C;&#xBD84;&lt;/th&gt;
+&#x9;&#x9;&#x9;&#x9;&lt;th scope=&quot;col&quot;&gt;&#xAC00;&#xACA9;(won)&lt;/th&gt;
+&#x9;&#x9;&#x9;&#x9;&lt;th scope=&quot;col&quot;&gt;&#xC5F4;&#xB7C9;(kcal)&lt;/th&gt;
+&#x9;&#x9;&#x9;&lt;/tr&gt;
+&#x9;&#x9;&lt;/thead&gt;
+&#x9;&#x9;&lt;tbody&gt;
+&#x9;&#x9;&#x9;&lt;tr&gt;
+&#x9;&#x9;&#x9;&#x9;&lt;td&gt;3,000&lt;/td&gt;
+&#x9;&#x9;&#x9;&#x9;&lt;td&gt;3,000&lt;/td&gt;
+&#x9;&#x9;&#x9;&#x9;&lt;td&gt;300&lt;/td&gt;
+&#x9;&#x9;&#x9;&lt;/tr&gt;
+&#x9;&#x9;&#x9;&lt;tr&gt;
+&#x9;&#x9;&#x9;&#x9;&lt;td&gt;3,500&lt;/td&gt;
+&#x9;&#x9;&#x9;&#x9;&lt;td&gt;3,500&lt;/td&gt;
+&#x9;&#x9;&#x9;&#x9;&lt;td&gt;350&lt;/td&gt;
+&#x9;&#x9;&#x9;&lt;/tr&gt;
+&#x9;&#x9;&lt;/tbody&gt;
+&#x9;&lt;/table&gt;
 &lt;/div&gt;
 &lt;!-- //table-list --&gt;</code></pre>
 										<!-- //highlight-js -->
@@ -60,40 +69,35 @@
 						<div class="subsection">
 							<div class="subsection-head">demo</div>
 							<div class="subsection-body">
-								<table>
-									<caption>표의 제목을 표현하기 위해 사용합니다. 반드시 선언합니다.</caption>
-									<colgroup>
-										<col>
-										<col>
-										<col>
-									</colgroup>
-									<thead>
-										<tr>
-											<th scope="col">구분</th>
-											<th scope="col">가격(won)</th>
-											<th scope="col">열량(kcal)</th>
-										</tr>
-									</thead>
-									<tfoot>
-										<tr>
-											<td>6,500</td>
-											<td>6,500</td>
-											<td>650</td>
-										</tr>
-									</tfoot>
-									<tbody>
-										<tr>
-											<td>3,000</td>
-											<td>3,000</td>
-											<td>300</td>
-										</tr>
-										<tr>
-											<td>3,500</td>
-											<td>3,500</td>
-											<td>350</td>
-										</tr>
-									</tbody>
-								</table>
+<div class="t-display design1 case1 type1">
+	<table>
+		<caption>표의 제목을 표현하기 위해 반드시 선언합니다.</caption>
+		<colgroup>
+			<col>
+			<col>
+			<col>
+		</colgroup>
+		<thead>
+			<tr>
+				<th scope="col">구분</th>
+				<th scope="col">가격(won)</th>
+				<th scope="col">열량(kcal)</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>3,000</td>
+				<td>3,000</td>
+				<td>300</td>
+			</tr>
+			<tr>
+				<td>3,500</td>
+				<td>3,500</td>
+				<td>350</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
 							</div>
 						</div>
 					</div>
