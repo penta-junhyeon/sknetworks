@@ -82,19 +82,11 @@
 				&.button-guide {
 					.subsection {
 						.subsection-body {
-							> .guide-button-area {
+							.guide-button-area {
 								display: flex;
+								align-items: center;
 								padding-top: 1.8rem;
-								align-items: baseline;
 								gap: 0.8rem;
-							}
-							.btn {
-								&.text {
-									&[class*=al-icon] .btn-text::before,
-									&[class*=ar-icon] .btn-text::after {
-										// background-color: red;
-									}
-								}
 							}
 						}
 					}
