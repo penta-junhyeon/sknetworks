@@ -1,6 +1,20 @@
 function pubListUp() {
   var category = ["No", "Page ID", "Menu", "File Root", "Completion", "View"];
   var page = {
+    Main: [
+      {
+        id_ko: "main.kr",
+        id_en: "main.en",
+        menu: "default",
+        root_ko: "ko/",
+        root_en: "en/",
+        status_ko: "미정",
+        status_en: "미정",
+        worker_ko: "미정",
+        worker_en: "미정",
+        history: "",
+      },
+    ],
     "About SK": [
       {
         id_ko: "page.default.ko",

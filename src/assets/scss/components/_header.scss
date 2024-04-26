@@ -1,0 +1,186 @@
+body {
+    background-color: gray;
+}
+#header {
+    position: relative;
+    height: 7.2rem;
+    background-color: color(system, 070);
+    transition: height .3s ease;
+    .header-inner {
+        display: flex;
+        height: 100%;
+        padding: 0 6rem;
+        max-height: 7.2rem;
+        justify-content: space-between;
+        align-items: center;
+        .site-logo {
+            display: inline-block;
+            max-height: 7.2rem;
+            .site-name {
+                display: inline-block;
+                width: 104px;
+                height: 36px;
+                background: url('../images/logo/logo-c-e-2.svg') no-repeat;
+                background-size: 100% 100%;
+            }
+        }
+        .site-navi {
+            .depth1-list {
+                display: flex;
+                .depth1-item {
+                    .depth1 {
+                        display: inline-block;
+                        position: relative;
+                        padding: 2.3rem 3rem;
+                        transition: color .3s ease;
+                        @include font(small-4x, bold);
+                        &::after {
+                            position: absolute;
+                            bottom: 0;
+                            left: 50%;
+                            width: 0;
+                            height: 0.3rem;
+                            content: '';
+                            background-color: color(primary, 070);
+                            transform: translateX(-50%);
+                            transition: width .3s ease;
+                        }
+                    }
+                    .depth2-wrap {
+                        position: absolute;
+                        left: 50%;
+                        width: 100%;
+                        transform: translate(-50%, -1rem);
+                        // transform: translateX(-50%);
+                        opacity: 0;
+                        transition: opacity .4s ease, transform .3s ease;
+                        visibility: hidden;
+                        .depth2-list {
+                            display: flex;
+                            height: auto;
+                            flex-wrap: wrap;
+                            justify-content: flex-start;
+                            align-self: flex-start;
+                            row-gap: 2.4rem;
+                            margin-top: 4rem;
+                            // opacity: 0;
+                            // transition: opacity .3s ease;
+                            .depth2-item {
+                                display: block;
+                                min-width: 13.5rem;
+                                margin-left: 4.1rem;
+                                .depth2 {
+                                    display: inline-block;
+                                    position: relative;
+                                    color: color(typo, 020);
+                                    transition: color .3s ease;
+                                    @include font(small-3x, bold);
+                                    &::before {
+                                        display: inline-block;
+                                        position: absolute;
+                                        top: 50%;
+                                        left: -2.5rem;
+                                        width: 0.1rem;
+                                        height: 1.9rem;
+                                        content: '';
+                                        background-color: #E4E4E7;
+                                        transform: translateY(-50%);
+                                    }
+                                    @include web {
+                                        &:hover,
+                                        &:focus {
+                                            color: color(primary, 070);
+                                        }
+                                    }
+                                }
+                                .depth3-wrap {
+                                    padding-top: 2.4rem;
+                                    padding-left: 0.1rem;
+                                    .depth3-item {
+                                        .depth3 {
+                                            color: color(typo, 005);
+                                            transition: color .3s ease;
+                                            @include font(small-4x, medium);
+                                            @include web {
+                                                &:hover,
+                                                &:focus {
+                                                    color: color(primary, 070);
+                                                }
+                                            }
+                                        }
+                                        +.depth3-item {
+                                            padding-top: 1.6rem;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        &.active {
+                            display: flex;
+                            justify-content: center;
+                        }
+                    }
+                    @include web {
+                        &:hover,
+                        &:focus {
+                            .depth1 {
+                                color: color(primary, 070);
+                                &::after {
+                                    width: calc(100% - 3.6rem);
+                                }
+                            }
+                            .depth2-wrap {
+                                display: flex;
+                                height: 40rem;
+                                justify-content: center;
+                                opacity: 1;
+                                visibility: visible;
+                                transform: translate(-50%, 0);
+                            }
+                        }
+                    }
+                }
+            }
+            &::after {
+                position: absolute;
+                top: 7.2rem;
+                left: 0;
+                width: 100%;
+                height: 0;
+                content: '';
+                background-color: color(system, 070);
+                z-index: -1;
+                transition: height .3s ease;
+            }
+            @include web {
+                &:hover,
+                &:focus {
+                    &::after {
+                        height: 40rem;
+                    }
+                }
+            }
+        }
+        .site-util {
+            display: flex;
+            .contact-wrap {
+                ~.lang-wrap {
+                    margin-left: 3.2rem;
+                }
+            }
+            
+        }
+    }
+    &::before {
+        position: absolute;
+        top: 7.1rem;
+        left: 0;
+        width: 100%;
+        height: 0.1rem;
+        content: '';
+        background-color: color(secondary, 070);
+    }
+    &.on {
+        height: 47.2rem;
+    }
+}
