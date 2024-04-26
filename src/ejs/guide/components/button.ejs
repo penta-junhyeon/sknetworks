@@ -27,7 +27,7 @@
 								<h4 class="section-subject">
 									<span class="section-name">Text Button</span>
 								</h4>
-								<p class="section-desc">design클래스는 버튼의 모양(shape), case는 여백(padding), type은 폰트 정보, color는 버튼의 모든 색상(bg, border, text color, hover)을 정의합니다.</p>
+								<p class="section-desc">design클래스는 버튼의 모양(shape), case는 여백(padding), type은 폰트 정보, color는 버튼의 색상(bg, border, text color 등)을 정의합니다.</p>
 							</div>
 							<div class="section-body">
 								<!-- subsection -->
@@ -86,9 +86,9 @@
 										<!-- highlight-js -->
 										<pre class="highlight-js"><code class="html">&lt;a href="#" class="btn design1 case1 type1 color1"&gt;&lt;span class="btn-text"&gt;Button Text&lt;/span&gt;&lt;/a&gt;
 &lt;a href="#" class="btn design1 case1 type1 color2"&gt;&lt;span class="btn-text"&gt;Button Text&lt;/span&gt;&lt;/a&gt;
-&lt;a href="#" class="btn design1 case1 type1 color3"&gt;&lt;span class="btn-text"&gt;Button Text&lt;/span&gt;&lt;/a&gt;   /*line*/
+&lt;a href="#" class="btn design1 case1 type1 color3"&gt;&lt;span class="btn-text"&gt;Button Text&lt;/span&gt;&lt;/a&gt;
 &lt;a href="#" class="btn design2 case1 type1 color4"&gt;&lt;span class="btn-text"&gt;Button Text&lt;/span&gt;&lt;/a&gt;
-&lt;a href="#" class="btn design2 case1 type1 color5"&gt;&lt;span class="btn-text"&gt;Button Text&lt;/span&gt;&lt;/a&gt;   /* hover 색상 없음 */
+&lt;a href="#" class="btn design2 case1 type1 color5"&gt;&lt;span class="btn-text"&gt;Button Text&lt;/span&gt;&lt;/a&gt;
 </code></pre>
 										<!-- //highlight-js -->
 										<div class="guide-button-area">
@@ -124,9 +124,11 @@
 											<a class="btn design3 case1 type1 color1 ar-icon-arrow-right2-bg" href="#"><span class="btn-text">ar-icon btn</span></a>
 											<a class="btn design3 case1 type1 color2 ar-icon-arrow-right2-bg" href="#"><span class="btn-text">ar-icon btn</span></a>
 											<a class="btn design3 case1 type1 color3 ar-icon-arrow-right2-bg" href="#"><span class="btn-text">ar-icon btn</span></a>
+											<a class="btn design3 case3 type1 color6 ar-icon-arrow-right-up2" href="#"><span class="btn-text">ar-icon btn</span></a>
+										</div>
+										<div class="guide-button-area">
 											<a class="btn design3 case2 type1 color4 ar-icon-arrow-right2" href="#"><span class="btn-text">ar-icon btn</span></a>
 											<a class="btn design3 case2 type2 color5 ar-icon-arrow-fill-down" href="#"><span class="btn-text">ar-icon btn</span></a>
-
 											<a class="btn design3 case2 type1 color4 al-icon-arrow-left2" href="#"><span class="btn-text">al-icon btn</span></a>
 											<a class="btn design3 case2 type2 color5 al-icon-info" href="#"><span class="btn-text">ar-icon btn</span></a>
 										</div>
@@ -140,7 +142,7 @@
 						<div class="section button-guide">
 							<div class="section-head">
 								<h4 class="section-subject"><span class="section-name">Icon Only Button</span></h4>
-								<p class="section-desc">icon 이름을 클래스로 추가합니다. [btn, icon] 클래스가 디폴트입니다.</p>
+								<p class="section-desc">[btn, icon] 클래스가 디폴트입니다. icon 이름을 클래스로 추가합니다.</p>
 								<p class="section-desc"></p>
 							</div>
 							<div class="section-body">
@@ -180,8 +182,8 @@
 									<div class="subsection-head">disabled</div>
 									<div class="subsection-body">
 										<!-- highlight-js -->
-										<pre class="highlight-js"><code class="html">&lt;a class="btn design1 case1 color1 disabled" href="#"&gt;&lt;span class="btn-text"&gt;Button Text&lt;/span&gt;&lt;/a&gt;
-&lt;button type="button" class="btn design1 case1 color1 disabled" disabled="disabled"&gt;&lt;span class="btn-text"&gt;Button Text&lt;/span&gt;&lt;/button&gt;</code></pre>
+										<pre class="highlight-js"><code class="html">&lt;a class="btn design1 case1 type1 color1 disabled" href="#"&gt;&lt;span class="btn-text"&gt;Button Text&lt;/span&gt;&lt;/a&gt;
+&lt;button type="button" class="btn design1 case1 type1 color1 disabled" disabled="disabled"&gt;&lt;span class="btn-text"&gt;Button Text&lt;/span&gt;&lt;/button&gt;</code></pre>
 										<!-- //highlight-js -->
 										<div class="guide-button-area">
                                             <a class="btn design1 case1 type1 color1 disabled" href="#"><span class="btn-text">disabled</span></a>
@@ -190,8 +192,9 @@
                                             <a class="btn design3 case1 type1 color1 ar-icon-arrow-right2-bg disabled" href="#"><span class="btn-text">disabled</span></a>
                                             <a class="btn design3 case1 type1 color2 ar-icon-arrow-right2-bg disabled" href="#"><span class="btn-text">disabled</span></a>
                                             <a class="btn design3 case1 type1 color3 ar-icon-arrow-right2-bg disabled" href="#"><span class="btn-text">disabled</span></a>
-											<a class="btn design2 case1 type1 color4 disabled" href="#"><span class="btn-text">disabled</span></a>
+											<a class="btn design3 case3 type1 color6 ar-icon-arrow-right-up2 disabled" href="#"><span class="btn-text">disabled</span></a>
 											<a class="btn icon case1 arrow-right2-bg disabled" href="#"><span class="btn-text blind">Button Text</span></a>
+											<a class="btn design2 case1 type1 color4 disabled" href="#"><span class="btn-text">disabled</span></a>
 										</div>
 									</div>
 								</div>
