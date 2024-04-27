@@ -15,6 +15,7 @@
         white-space: nowrap;
         align-items: center;
         justify-content: center;
+
         &::after,
         &::before {
             transition: 0.3s ease;
@@ -25,6 +26,12 @@
     &.design1 {
         &.case1 {
             padding: 1.45rem 3.1rem;
+            border-radius: 5rem;
+        }
+
+        // 헤더 문의·제안 버튼으로 만들어놨어요 아직 버튼 코드 리뷰를 못들어서 일단 case2로 넣어놨는데 수정이 필요하면 말씀주세여!
+        &.case2 {
+            padding: 0.7rem 1.5rem;
             border-radius: 5rem;
         }
     }
@@ -40,9 +47,11 @@
             padding: 0.9rem 0.9rem 0.9rem 3.1rem;
             border-radius: 5rem;
         }
+
         &.case2 {
             padding: 1.5rem 0;
         }
+
         &.case3 {
             padding: 1.6rem;
             border-radius: 0.8rem;
@@ -53,6 +62,7 @@
     &.type1 {
         @include font(small-3x, bold)
     }
+
     &.type2 {
         @include font(small-5x, bold)
     }
@@ -62,14 +72,12 @@
         color: color(system, 070);
         background-color: color(semantic, 020);
         border-color: color(semantic, 020);
-        &:hover {
-            background-color: color(neutral, 070);
-            border-color: color(neutral, 070);
-        }
+
         &.disabled {
             color: color(neutral, 040) !important;
             background-color: color(neutral, 020) !important;
             border-color: color(neutral, 020) !important;
+
             &[class*=-icon] {
                 &[class*=arrow-right2-bg] .btn-text::after {
                     background-color: color(neutral, 040) !important;
@@ -77,19 +85,26 @@
                 }
             }
         }
+
+        @include web {
+
+            &:hover,
+            &:focus {
+                background-color: color(neutral, 070);
+                border-color: color(neutral, 070);
+            }
+        }
     }
+
     &.color2 {
         color: color(system, 080);
         background-color: color(system, 070);
         border-color: color(neutral, 030);
-        &:hover {
-            color: color(system, 070);
-            background-color: color(semantic, 020);
-            border-color: color(semantic, 020);
-        }
+
         &.disabled {
             color: color(neutral, 040) !important;
             border-color: color(neutral, 020) !important;
+
             &[class*=-icon] {
                 &[class*=arrow-right2-bg] .btn-text::after {
                     background-color: color(neutral, 040) !important;
@@ -97,19 +112,27 @@
                 }
             }
         }
+
+        @include web {
+
+            &:hover,
+            &:focus {
+                color: color(system, 070);
+                background-color: color(semantic, 020);
+                border-color: color(semantic, 020);
+            }
+        }
     }
+
     &.color3 {
         color: color(system, 070);
         background-color: transparent;
         border-color: color(system, 070);
-        &:hover {
-            color: color(system, 080);
-            background-color: color(system, 070);
-            border-color: color(system, 070);
-        }
+
         &.disabled {
             color: color(semantic, 010) !important;
             border-color: color(semantic, 010) !important;
+
             &[class*=-icon] {
                 &[class*=arrow-right2-bg] .btn-text::after {
                     background-color: color(semantic, 010) !important;
@@ -117,59 +140,90 @@
                 }
             }
         }
+
+        @include web {
+
+            &:hover,
+            &:focus {
+                color: color(system, 080);
+                background-color: color(system, 070);
+                border-color: color(system, 070);
+            }
+        }
     }
+
     &.color4 {
         color: color(system, 080);
         background-color: transparent;
         border-color: transparent;
-        &:hover {
-            color: color(primary,070);
+
+        &.disabled {
+            color: color(neutral, 040) !important;
+
             &[class*=-icon] {
                 &[class*=arrow-left2] .btn-text::before {
-                    background-image: icon(arrow-left2,color(primary,070));
+                    background-image: icon(arrow-left2, color(neutral, 040));
                 }
+
                 &[class*=arrow-right2] .btn-text::after {
-                    background-image: icon(arrow-right2,color(primary,070));
+                    background-image: icon(arrow-right2, color(neutral, 040));
                 }
             }
         }
-        &.disabled {
-            color: color(neutral, 040) !important;
-            &[class*=-icon] {
-                &[class*=arrow-left2] .btn-text::before {
-                    background-image: icon(arrow-left2,color(neutral, 040));
-                }
-                &[class*=arrow-right2] .btn-text::after {
-                    background-image: icon(arrow-right2,color(neutral, 040));
+
+        @include web {
+
+            &:hover,
+            &:focus {
+                color: color(primary, 070);
+
+                &[class*=-icon] {
+                    &[class*=arrow-left2] .btn-text::before {
+                        background-image: icon(arrow-left2, color(primary, 070));
+                    }
+
+                    &[class*=arrow-right2] .btn-text::after {
+                        background-image: icon(arrow-right2, color(primary, 070));
+                    }
                 }
             }
         }
     }
+
     &.color5 {
         color: color(system, 080);
         background-color: transparent;
         border-color: transparent;
     }
+
     &.color6 {
         color: color(system, 080);
         background-color: color(system, 070);
         border-color: color(neutral, 030);
-        &:hover {
-            color: color(system, 070);
-            background-color: color(primary,070);
-            &[class*=-icon] {
-                &[class*=arrow-right-up2] .btn-text::after {
-                    background-image: icon(arrow-right-up2,color(system, 070));
-                }
-            }
-        }
+
         &.disabled {
             color: color(semantic, 005) !important;
             background-color: color(system, 070) !important;
             border-color: color(neutral, 020) !important;
+
             &[class*=-icon] {
                 &[class*=arrow-right-up2] .btn-text::after {
                     background-image: icon(arrow-right-up2, color(neutral, 040)) !important;
+                }
+            }
+        }
+
+        @include web {
+
+            &:hover,
+            &:focus {
+                color: color(system, 070);
+                background-color: color(primary, 070);
+
+                &[class*=-icon] {
+                    &[class*=arrow-right-up2] .btn-text::after {
+                        background-image: icon(arrow-right-up2, color(system, 070));
+                    }
                 }
             }
         }
@@ -177,6 +231,7 @@
 
     /* icon + text */
     &[class*=-icon] {
+
         &[class*=al] .btn-text::before,
         &[class*=ar] .btn-text::after {
             display: block;
@@ -185,52 +240,56 @@
             background-position: center center;
         }
     }
-    
+
     // icon right
     &.ar-icon- {
         position: relative;
+
         &arrow-right2-bg {
             .btn-text {
                 &::after {
                     width: 4rem;
                     height: 4rem;
                     margin-left: 2.4rem;
-                    background-image: icon(arrow-right2,color(system, 070));
+                    background-image: icon(arrow-right2, color(system, 070));
                     background-size: 1.5rem 1.4rem;
                     background-color: color(neutral, 080);
                     border-radius: 100%;
                 }
             }
         }
+
         &arrow-right2 {
             .btn-text {
                 &::after {
                     width: 2.4rem;
                     height: 2.4rem;
                     margin-left: 0.8rem;
-                    background-image: icon(arrow-right2,color(semantic,100));
+                    background-image: icon(arrow-right2, color(semantic, 100));
                     background-size: 1.5rem 1.4rem;
                 }
             }
         }
+
         &arrow-fill-down {
             .btn-text {
                 &::after {
                     width: 1.6rem;
                     height: 1.6rem;
                     margin-left: 0.8rem;
-                    background-image: icon(arrow-fill-down,color(semantic,100));
+                    background-image: icon(arrow-fill-down, color(semantic, 100));
                     background-size: 0.8rem 0.6rem;
                 }
             }
         }
+
         &arrow-right-up2 {
             .btn-text {
                 &::after {
                     width: 1.6rem;
                     height: 1.6rem;
                     margin-left: 0.8rem;
-                    background-image: icon(arrow-right-up2,color(primary,070));
+                    background-image: icon(arrow-right-up2, color(primary, 070));
                     background-size: 1.1rem 1.1rem;
                 }
             }
@@ -240,24 +299,26 @@
     // icon left
     &.al-icon- {
         position: relative;
+
         &arrow-left2 {
             .btn-text {
                 &::before {
                     width: 2.4rem;
                     height: 2.4rem;
                     margin-right: 0.8rem;
-                    background-image: icon(arrow-left2,color(semantic,100));
+                    background-image: icon(arrow-left2, color(semantic, 100));
                     background-size: 1.5rem 1.4rem;
                 }
             }
         }
+
         &info {
             .btn-text {
                 &::before {
                     width: 1.6rem;
                     height: 1.6rem;
                     margin-right: 0.8rem;
-                    background-image: icon(info,color(semantic,100));
+                    background-image: icon(info, color(semantic, 100));
                     background-size: 1.4rem 1.4rem;
                 }
             }
@@ -268,22 +329,26 @@
     &.icon {
         background-repeat: no-repeat;
         background-position: center;
+
         &.case1 {
             width: 4rem;
             height: 4rem;
         }
+
         &.arrow-right2-bg {
             background-color: color(neutral, 020);
             border-radius: 100%;
             background-image: icon(arrow-right2, color(system, 080));
             background-size: 1.6rem 1.4rem;
+
             &:hover {
-                background-color: color(secondary,080);
-                background-image: icon(arrow-right2, color(semantic,000));
+                background-color: color(secondary, 080);
+                background-image: icon(arrow-right2, color(semantic, 000));
             }
+
             &.disabled {
-                background-color: color(neutral,040) !important;
-                background-image: icon(arrow-right2, color(semantic,000)) !important;
+                background-color: color(neutral, 040) !important;
+                background-image: icon(arrow-right2, color(semantic, 000)) !important;
             }
         }
     }
@@ -297,6 +362,7 @@
 /* button display */
 .btn-display {
     display: flex;
+
     &.design1 {
         .btn {
             &.flex {
@@ -304,6 +370,7 @@
             }
         }
     }
+
     &.design2 {
         flex-direction: column;
     }

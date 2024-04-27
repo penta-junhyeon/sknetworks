@@ -1,29 +1,31 @@
 // IR
 @mixin hide {
-	display: block;
-	position: absolute;
-	overflow: hidden;
-	visibility: hidden;
-	margin: -1px;
-	padding: 0;
-	width: 1px;
-	height: 1px;
-	line-height: 1px;
-	font-size: 1px;
-	border: 0;
-	clip: rect(0 0 0 0);
-	clip: rect(0,0,0,0);
-	pointer-events: none;
+    display: block;
+    position: absolute;
+    overflow: hidden;
+    visibility: hidden;
+    margin: -1px;
+    padding: 0;
+    width: 1px;
+    height: 1px;
+    line-height: 1px;
+    font-size: 1px;
+    border: 0;
+    clip: rect(0 0 0 0);
+    clip: rect(0, 0, 0, 0);
+    pointer-events: none;
 }
 
 // ellipsis
 // @inlcude ellipsis(2);
-@mixin ellipsis($line:1) {
-    @if $line == 1 {
+@mixin ellipsis($line: 1) {
+    @if $line ==1 {
         overflow: hidden;
         text-overflow: ellipsis;
         white-space: nowrap;
-    }@else{
+    }
+
+    @else {
         display: -webkit-box;
         overflow: hidden;
         text-overflow: ellipsis;
@@ -34,27 +36,31 @@
 
 // 반응형
 @mixin mobile {
-    @media (min-width:#{$mobile}) and (max-width:#{$tablet - 1}){
+    @media (min-width:#{$mobile}) and (max-width:#{$tablet - 1}) {
         @content;
     }
 }
+
 @mixin mobile-large {
-    @media (min-width:#{$mobile-large}) and (max-width:#{$tablet - 1}){
+    @media (min-width:#{$mobile-large}) and (max-width:#{$tablet - 1}) {
         @content;
     }
 }
+
 @mixin tablet {
-    @media (min-width:#{$tablet}) and (max-width:#{$web - 1}){
+    @media (min-width:#{$tablet}) and (max-width:#{$web - 1}) {
         @content;
     }
 }
+
 @mixin web-small {
-    @media (min-width:#{$web-small}) and (max-width:#{$web - 1}){
+    @media (min-width:#{$web-small}) and (max-width:#{$web - 1}) {
         @content;
     }
 }
+
 @mixin web {
-    @media (min-width:#{$web}) {
+    @media (min-width:#{$tablet}) {
         @content;
     }
 }
@@ -62,11 +68,10 @@
 //scroll hidden
 @mixin scroll-hidden {
     scrollbar-width: none;
+
     &::-webkit-scrollbar {
         display: none;
     }
 }
 
-@include mobile {
-
-}
+@include mobile {}
