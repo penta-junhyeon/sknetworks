@@ -1,7 +1,8 @@
 #header {
-    position: relative;
+    position: absolute;
+    top: 0;
+    width: 100%;
     height: 7.2rem;
-    background-color: color(system, 070);
     transition: height .3s ease;
 
     .header-inner {
@@ -40,19 +41,19 @@
                         transition: color .3s ease;
                         @include font(small-4x, bold);
 
-                        &::after {
-                            position: absolute;
-                            bottom: 0;
-                            left: 50%;
-                            width: 0;
-                            height: 0.3rem;
-                            content: '';
-                            background-color: color(primary, 070);
-                            transform: translateX(-50%);
-                            transition: width .3s ease;
-                        }
-
                         @include web {
+
+                            &::after {
+                                position: absolute;
+                                bottom: 0;
+                                left: 50%;
+                                width: 0;
+                                height: 0.3rem;
+                                content: '';
+                                background-color: color(primary, 070);
+                                transform: translateX(-50%);
+                                transition: width .3s ease;
+                            }
 
                             &:hover,
                             &:focus {
@@ -78,13 +79,6 @@
                     }
 
                     .depth2-wrap {
-                        position: absolute;
-                        left: 50%;
-                        width: 100%;
-                        transform: translate(-50%, -1rem);
-                        opacity: 0;
-                        transition: opacity .4s ease, transform .3s ease;
-                        visibility: hidden;
 
                         .depth2-list {
                             display: flex;
@@ -132,6 +126,7 @@
                                     padding-left: 0.1rem;
 
                                     .depth3-item {
+
                                         .depth3 {
                                             color: color(typo, 005);
                                             transition: color .3s ease;
@@ -146,8 +141,10 @@
                                             }
                                         }
 
-                                        +.depth3-item {
-                                            padding-top: 1.6rem;
+                                        @include web {
+                                            +.depth3-item {
+                                                padding-top: 1.6rem;
+                                            }
                                         }
                                     }
                                 }
@@ -156,6 +153,15 @@
                     }
 
                     @include web {
+                        .depth2-wrap {
+                            position: absolute;
+                            left: 50%;
+                            width: 100%;
+                            transform: translate(-50%, -1rem);
+                            opacity: 0;
+                            transition: opacity .4s ease, transform .3s ease;
+                            visibility: hidden;
+                        }
 
                         &:hover,
                         &:focus-within {
@@ -214,9 +220,11 @@
                     }
                 }
 
-                &#lang {
-                    .option-area {
-                        min-width: 7.2rem;
+                @include web {
+                    &#lang {
+                        .option-area {
+                            min-width: 7.2rem;
+                        }
                     }
                 }
 
@@ -227,92 +235,278 @@
         }
     }
 
-    &::before {
-        position: absolute;
-        top: 7.1rem;
-        left: 0;
-        width: 100%;
-        height: 0.1rem;
-        content: '';
-        background-color: color(secondary, 070);
+    @include web {
+        &::after {
+            position: absolute;
+            top: 7.1rem;
+            left: 0;
+            width: 100%;
+            height: 0.1rem;
+            content: '';
+        }
     }
 
-    // 헤더 작업 후 삭제
-    &::before {
-        content: '';
-        position: fixed;
-        top: 0;
-        left: 0;
-        bottom: 0;
-        right: 0;
-        height: 100%;
-        z-index: -1;
-        background-color: gray;
-    }
-}
+    &.light {
+        background-color: color(system, 070);
 
-.field {
-    &.select {
-        position: relative;
+        &::after {
+            background-color: color(secondary, 070);
+        }
+    }
+
+    &.dark {
+        background: rgba(32, 32, 32, 0.12);
+        backdrop-filter: blur(40px);
+
+        .depth1 {
+            color: color(system, 070);
+        }
 
         .selected {
-            display: inline-block;
-            padding: 1rem 0;
-            cursor: pointer;
-
             .select-text {
-                display: inline-block;
-                vertical-align: middle;
-                @include font(small-4x, bold)
+                color: color(system, 070);
             }
 
             &::after {
-                content: '';
-                display: inline-block;
-                width: 1.6rem;
-                height: 1.6rem;
-                margin-left: 0.8rem;
-                background-image: icon(arrow-fill-down, #000);
-                background-repeat: no-repeat;
-                background-position: center;
-                vertical-align: middle;
+                background-image: icon(arrow-fill-down, #fff);
             }
         }
 
-        .option-area {
-            position: absolute;
-            top: 100%;
-            transform: translateY(-1rem);
-            opacity: 0;
-            transition: .3s ease;
+        &::after {
+            background-color: rgba(238, 238, 238, 0.20);
+        }
+    }
 
-            .option-wrap {
-                padding: 0.7rem;
-                border: .1rem solid color(neutral, 030);
-                border-radius: .2rem;
-                background-color: color(system, 070);
+    @include mobile {
+        height: 100%;
 
-                .option-list {
+        .header-inner {
+            flex-direction: column-reverse;
+            justify-content: flex-end;
+            padding: 0;
+            padding-top: 5.8rem;
+            max-height: unset;
 
-                    .option {
-                        display: inline-block;
-                        padding: 0.5rem 1rem;
-                        @include font(small-4x, medium);
+            .site-logo {
+                position: absolute;
+                top: 0;
+                width: 100%;
+                padding: 1.4rem 1.8rem;
 
-                        @include web {
+                .site-name {
+                    width: 9rem;
+                    height: 3rem;
 
-                            &:hover,
-                            &:focus {
-                                @include font(small-4x, bold);
+                    >img {
+                        vertical-align: top;
+                    }
+                }
+            }
+
+            .site-navi {
+                padding-top: 3.2rem;
+                width: 100%;
+                overflow-y: auto;
+
+                .depth1-list {
+                    flex-direction: column;
+
+                    .depth1-item {
+                        overflow: hidden;
+
+                        .depth1 {
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-between;
+                            width: 100%;
+                            padding: 0 1.8rem;
+                            @include font(medium, bold);
+
+                            &::after {
+                                content: '';
+                                display: block;
+                                width: 1.7rem;
+                                height: 1.7rem;
+                                padding: 0.5rem;
+                                margin-right: 0.5rem;
+                                background-image: icon(plus, #000);
+                                background-position: center;
+                                background-repeat: no-repeat;
                             }
+                        }
+
+                        .depth2-wrap {
+                            height: 0;
+                            transition: height .3s ease;
+
+                            .depth2-list {
+                                flex-direction: column;
+                                gap: 0;
+                                padding-top: 2rem;
+                                margin-top: 0;
+
+                                .depth2-item {
+                                    padding-left: 3.4rem;
+                                    margin-left: 0;
+
+                                    .depth2 {
+                                        padding: 2.7rem 0 2rem;
+
+                                        &::before {
+                                            display: none;
+                                        }
+                                    }
+
+                                    .depth3-wrap {
+                                        padding-top: 0;
+                                        padding-left: 0.8rem;
+                                        padding-bottom: 1.5rem;
+
+                                        .depth3-item {
+                                            .depth3 {
+                                                display: block;
+                                                padding: 0.4rem 0;
+                                            }
+                                        }
+                                    }
+
+                                    +.depth2-item {
+                                        border-top: .1rem solid color(neutral, 030);
+                                    }
+
+                                }
+                            }
+                        }
+
+                        +.depth1-item {
+                            margin-top: 1.6rem;
                         }
                     }
                 }
             }
 
-            &.active {
-                transform: translateY(0);
-                opacity: 1;
+            .site-util {
+                width: 100%;
+                justify-content: space-between;
+                padding: 1.3rem 1.8rem 1.6rem;
+                border-bottom: .1rem solid color(neutral, 030);
+
+                .util {
+                    &.contact-wrap {
+                        .btn.contact {
+                            padding: 0;
+                            color: color(typo, 010);
+                            background-color: transparent;
+                            border: none;
+                            @include font(small-4x, medium);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.field {
+    &.select {
+        &.case1 {
+            position: relative;
+
+            .selected {
+                display: inline-block;
+                padding: 1rem 0;
+                cursor: pointer;
+
+                .select-text {
+                    display: inline-block;
+                    vertical-align: middle;
+                    @include font(small-4x, bold)
+                }
+
+                &::after {
+                    content: '';
+                    display: inline-block;
+                    width: 1.6rem;
+                    height: 1.6rem;
+                    margin-left: 0.8rem;
+                    background-image: icon(arrow-fill-down, #000);
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    vertical-align: middle;
+                }
+            }
+
+            .option-area {
+
+                .option-wrap {
+                    padding: 0.7rem;
+                    border: .1rem solid color(neutral, 030);
+                    border-radius: .2rem;
+                    background-color: color(system, 070);
+
+                    .option-list {
+
+                        .option {
+                            display: inline-block;
+                            padding: 0.5rem 1rem;
+                            @include font(small-4x, medium);
+
+                            @include web {
+
+                                &:hover,
+                                &:focus {
+                                    @include font(small-4x, bold);
+                                }
+                            }
+                        }
+                    }
+                }
+
+                @include web {
+                    position: absolute;
+                    top: 100%;
+                    transform: translateY(-1rem);
+                    opacity: 0;
+                    transition: .3s ease;
+
+                    &.active {
+                        transform: translateY(0);
+                        opacity: 1;
+                    }
+
+                }
+            }
+
+            @include mobile {
+                .selected {
+                    display: none;
+                }
+
+                .option-area {
+                    padding: 0 0.8rem;
+
+                    .option-wrap {
+                        display: flex;
+                        padding: 0;
+                        border: none;
+
+                        .option-list {
+                            .option {
+                                padding: 0;
+                                color: color(typo, 010);
+                                @include font(small-5x, medium);
+
+                                &.active {
+                                    text-decoration: underline;
+                                }
+                            }
+
+                            +.option-list {
+                                margin-left: 2.4rem;
+                            }
+                        }
+                    }
+                }
             }
         }
     }

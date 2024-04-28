@@ -229,6 +229,12 @@
         }
     }
 
+    &.color7 {
+        color: color(system, 100);
+        background-color: color(secondary, 070);
+        border-color: color(secondary, 070);
+    }
+
     /* icon + text */
     &[class*=-icon] {
 

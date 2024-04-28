@@ -31,7 +31,6 @@ function frontCommonScroll() {
 }
 
 function header() {
-
   const _header = document.getElementById("header")
   const depth1Item = _header.querySelectorAll(".depth1-item")
 
@@ -53,6 +52,34 @@ function header() {
 
     selected.addEventListener("click", function () {
       optionArea.classList.contains("active") ? optionArea.classList.remove("active") : optionArea.classList.add("active")
+    })
+
+    // MO depth2 드롭다운 열림/닫힘 기능
+    document.addEventListener("click", function (e) {
+      const depth1 = e.target
+      if (depth1.classList.contains("depth1")) {
+        const depth1All = document.querySelectorAll('.depth1')
+        const depth2WrapAll = document.querySelectorAll(".depth2-wrap")
+        const depth1Item = depth1.closest(".depth1-item")
+        const depth2Wrap = depth1Item.querySelector(".depth2-wrap")
+        const depth2ListH = depth2Wrap.querySelector(".depth2-list").offsetHeight
+        const _width = window.innerWidth
+        if (_width < 1024) {
+          if (depth1.classList.contains("active")) {
+            depth1.classList.remove("active")
+            depth2Wrap.style.height = "0"
+          } else {
+            depth1All.forEach(all => {
+              all.classList.remove("active")
+            });
+            depth2WrapAll.forEach(all => {
+              all.style.height = "0"
+            })
+            depth1.classList.add("active")
+            depth2Wrap.style.height = depth2ListH + "px"
+          }
+        }
+      }
     })
   }
 }

@@ -1,11 +1,11 @@
 <div id="skip" class="page-skip">
     <a class="skip-item" href="#content">본문 바로가기</a>
 </div>
-<header class="light" id="header">
+<% if(type == 'light') { %><header class="light" id="header"><% } else if(type == 'dark') {%><header class="dark" id="header"><% } %>
     <div class="header-inner">
         <h1 class="site-logo">
             <a href="javascript:void(0)" class="site-name">
-                <img src="../../../assets/images/logo/logo-c-e-2.svg" alt="SK 네트웍스 로고">
+                <% if(type == 'light') { %><img src="../../../assets/images/logo/logo-c-e-2.svg" alt="SK 네트웍스 로고"><% } else if(type == 'dark') {%><img src="../../../assets/images/logo/logo-w-e.svg" alt="SK 네트웍스 로고"><% } %>
             </a>
         </h1>
         <div class="site-navi" id="naviMenu">
@@ -150,7 +150,6 @@
                                         <li class="depth3-item">
                                             <a href="javascript:void(0)" target="_self" class="depth3">수상 및 인증</a>
                                         </li>
-                                        </li>
                                     </ul>
                                 </div>
                             </li>
@@ -252,21 +251,21 @@
         </div>
         <div class="site-util">
             <div class="util contact-wrap">
-                <a href="javascript:void(0)" class="btn text design1 case2 color1 contact">
+                <% if(type == 'light') { %><a href="javascript:void(0)" class="btn text design1 case2 color1 contact"><% } else if(type == 'dark') {%><a href="javascript:void(0)" class="btn text design1 case2 color7 contact"><% } %>
                     <span class="btn-text">문의·제안</span>
                 </a>
             </div>
-            <div class="util field select" id="lang">
+            <div class="util field select case1" id="lang">
                 <button title="언어 선택" aria-label="언어 선택" aria-haspopup="true" class="selected">
                     <span class="select-text cur-lang">KR</span>
                 </button>
                 <div class="option-area">
                     <ul class="option-wrap">
                         <li class="option-list">
-                            <a href="javascript:void(0)" class="option">KOR</a>
+                            <a href="javascript:void(0)" class="option active">KR</a>
                         </li>
                         <li class="option-list">
-                            <a href="javascript:void(0)" class="option">ENG</a>
+                            <a href="javascript:void(0)" class="option">EN</a>
                         </li>
                     </ul>
                 </div>
