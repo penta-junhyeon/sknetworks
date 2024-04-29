@@ -102,24 +102,32 @@
 }
 
 .mark-display {
-    display: flex;
-    flex-wrap: wrap;
+    .mark-list {
+        display: flex;
+        flex-wrap: wrap;
+    }
     &.case1 {
-        gap: 1.6rem;
-        @include mobile {
-            gap: 0.8rem 1.2rem;
+        .mark-list {
+            gap: 1.6rem;
+            @include mobile {
+                gap: 0.8rem 1.2rem;
+            }
         }
     }
     &.case2 {
-        flex-direction: column;
-        gap: 0.8rem;
-        @include mobile {
-            flex-direction: row;
-            gap: 0.8rem 2.4rem;
+        .mark-list {
+            flex-direction: column;
+            gap: 0.8rem;
+            @include mobile {
+                flex-direction: row;
+                gap: 0.8rem 2.4rem;
+            }
         }
     }
     &.case3 {
-        flex-direction: column;
-        gap: 1.2rem;
+        .mark-list {
+            flex-direction: column;
+            gap: 1.2rem;
+        }
     }
 }

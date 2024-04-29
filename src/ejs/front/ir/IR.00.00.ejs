@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<%-include('../_templates/_head.ejs', {
+	layoutTemplate: 'front',
+	pageJavascript: ''
+}) %>
+</head>
+<body>
+<div id="wrap">
+    <%-include('../_templates/_header.ejs', {
+        type: 'light',
+    }) 
+    %>
+    <div class="main" id="main">
+        <div class="main-inner">
+            <div class="local-head case3">
+                <div class="local-title">
+                    <h2 class="local-name">타이틀</h2>
+                </div>
+            </div>
+            <div class="local-body">
+                <div class="content-head">
+                    <div class="content-title">
+                        <h3 class="content-name">
+
+                        </h3>
+                    </div>
+                </div>
+                <div class="content-info">
+                </div>
+                <div class="content-body">
+                    <div class="section lorem-ipsum1">
+                        <div class="section-head">
+                            <div class="section-title">
+                                <h4 class="section-name"></h4>
+                                <span class="section-summary">타이틀</span>
+                            </div>
+                        </div>
+                        <div class="section-body">
+
+                        </div>
+                    </div>
+                    <div class="section lorem-ipsum1">
+                        <div class="section-head">
+                            <div class="section-title">
+                                <h4 class="section-name"></h4>
+                            </div>
+                        </div>
+                        <div class="section-body">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <%-include('../_templates/_footer.ejs')%>
+</div>
+</body>
+</html>
