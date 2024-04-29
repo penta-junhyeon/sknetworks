@@ -78,7 +78,7 @@ function header() {
         if(_header.classList.contains("dark")) {
             _header.classList.add("hover")
         }
-    })
+    }) 
     _header.addEventListener("mouseleave", () => {
         if(_header.classList.contains("dark")) {
             _header.classList.remove("hover")
