@@ -13,71 +13,104 @@
 			margin-top: 1.6rem
 		}
 	}
+	&.scroll {
+		@include mobile {
+			width: calc(100% + 1.8rem);
+			padding-right: 1.8rem;
+			overflow: auto;
+			table {
+				padding-right: 1.8rem;
+			}
+		}
+	}
     &.design1 {
-		table {
-			>thead {
-				>tr {
-					>th {
-						@include font(small-3x, bold);
-						color: color(typo, 000);
-						padding: 1.8rem 2rem;
-						background-color: color(secondary, 080);
-						border-right: 1px solid color(neutral, 060);
-						border-left: 1px solid color(neutral, 060);
-						&:first-child {
-							border-radius: 0.8rem 0 0 0.8rem;
+		&.case1 {
+			table {
+				>thead {
+					>tr {
+						>th {
+							@include font(small-3x, bold);
+							color: color(typo, 000);
+							padding: 1.8rem;
+							background-color: color(secondary, 080);
+							border-right: 1px solid color(neutral, 060);
+							border-left: 1px solid color(neutral, 060);
+							&:first-child {
+								border-radius: 0.8rem 0 0 0.8rem;
+							}
+							&:last-child {
+								border-radius: 0 0.8rem 0.8rem 0;
+							}
+							@include mobile {
+								@include font(small-4x, bold);
+								padding: 1.5rem 1rem;
+							}
 						}
-						&:last-child {
-							border-radius: 0 0.8rem 0.8rem 0;
+					}
+				}
+	
+				>tbody {
+					>tr {
+						>td {
+							@include font(small-3x, bold);
+							color: color(typo, 010);
+							padding: 1.8rem;
+							vertical-align: middle;
+							background-color: color(neutral, 010);
+							border-right: 1px solid color(neutral, 030);
+							border-bottom: 1px solid color(neutral, 030);
+							@include mobile {
+								@include font(small-4x, bold);
+								padding: 1.5rem 1rem;
+							}
+						}
+					}
+				}
+			}
+		}
+
+		// 모바일에서 첫번째 th, td 요소 숨김
+		&.type1 {
+			@include mobile {
+				table {
+					>colgroup {
+						col:first-child {
+							display: none;
+						}
+					}
+					>thead {
+						>tr {
+							>th {
+								&:first-child {
+									display: none;
+								}
+								&:nth-child(2) {
+									border-radius: 0.8rem 0 0 0.8rem;
+								}
+							}
+						}
+					}
+					>tbody {
+						>tr {
+							>td {
+								&:first-child {
+									display: none;
+								}
+								&.fs-0 {
+									.btn .btn-text {
+										font-size: 0;
+										&::after {
+											margin-left: 0;
+										}
+									}
+								}
+							}
 						}
 					}
 				}
 			}
 
-			>tbody {
-				>tr {
-					>td {
-						@include font(small-3x, bold);
-						color: color(typo, 010);
-						padding: 1.8rem 2rem;
-						vertical-align: middle;
-						background-color: color(neutral, 010);
-						border-right: 1px solid color(neutral, 030);
-						border-bottom: 1px solid color(neutral, 030);
-					}
-				}
-			}
 		}
-
-		&.case1 {}
-		&.case2 {}
-		&.case3 {}
-    }
-    &.design2 {
-		thead {
-			tr {
-				th {
-
-				}
-			}
-		}
-
-		tbody {
-			tr {
-				td {
-					
-				}
-				+tr {
-					td {
-						border-top: 1px solid color(neutral, 060);
-					}
-				}
-			}
-		}
-
-		&.case1 {}
-		&.case2 {}
-		&.case3 {}
     }
 
 	//align
