@@ -30,22 +30,24 @@ body {
     /* Accent */
     .accent {
         &.case1 {
-            font-weight: 400;
+            font-weight: 400 !important;
         }
         &.case2 {
-            font-weight: 400;
+            font-weight: 500 !important;
         }
-    
         &.case3 {
-            font-weight: 600;
+            font-weight: 600 !important;
         }
-    
         &.case4 {
-            font-weight: 700;
+            font-weight: 700 !important;
         }
     
-        &.color1 {}
-        &.color2 {}
+        &.color1 {
+            color: color(primary,100) !important;
+        }
+        &.color2 {
+            color: color(etc,100) !important;
+        }
         &.color3 {}
         &.color4 {}
     }

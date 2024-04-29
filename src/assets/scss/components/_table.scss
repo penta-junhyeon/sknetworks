@@ -9,6 +9,9 @@
 		border-collapse: collapse;
 		border-right: hidden;
 		border-left: hidden;
+		+ .comment {
+			margin-top: 1.6rem
+		}
 	}
     &.design1 {
 		table {
