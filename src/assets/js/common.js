@@ -87,7 +87,6 @@ function header() {
 
     document.addEventListener("focusin", function(e) {
         const _target = e.target
-        console.log(_target.closest(".dark"));
         if(_target.closest(".dark")) {
             _header.classList.add("hover")
         } else {
