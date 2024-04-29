@@ -49,6 +49,7 @@
     
                                     &:hover,
                                     &:focus {
+                                        color: color(primary, 070);
                                         @include font(small-4x, bold);
                                     }
                                 }
