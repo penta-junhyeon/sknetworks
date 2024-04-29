@@ -48,7 +48,9 @@ body {
         &.color2 {
             color: color(etc,100) !important;
         }
-        &.color3 {}
+        &.color3 {
+            color: color(neutral,060) !important;
+        }
         &.color4 {}
     }
 }

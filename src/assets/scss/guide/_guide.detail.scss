@@ -337,6 +337,20 @@
 						}
 					}
 				}
+
+				//마크
+				&.mark-guide {
+					.subsection {
+						.subsection-body {
+							.guide-mark-area {
+								display: flex;
+								flex-wrap: wrap;
+								padding-top: 1.8rem;
+								gap: 2rem;
+							}
+						}
+					}
+				}
             }
         }
     }
