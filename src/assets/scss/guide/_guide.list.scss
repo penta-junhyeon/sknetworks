@@ -236,6 +236,12 @@
                         position: fixed;
                         top: 0;
                         z-index: 999;
+                        .swiper-wrapper {
+                            justify-content: center;
+                            @include mobile {
+                                justify-content: flex-start;
+                            }
+                        }
                     }
                 }
             }
@@ -652,15 +658,13 @@
                                         &.active {
                                             .default {
                                                 border-color: #14121f;
-                                                .data-list {
-                                                    .data {
-                                                        &.data-btn {
-                                                            .btn {
-                                                                background-color: #000;
-                                                                &::after {
-                                                                    background-position: center;
-                                                                    transform: rotate(180deg);
-                                                                }
+                                                .default-list {
+                                                    .default-item.btn {
+                                                        .btn {
+                                                            background-color: #000;
+                                                            &::after {
+                                                                background-position: center;
+                                                                transform: rotate(180deg);
                                                             }
                                                         }
                                                     }
