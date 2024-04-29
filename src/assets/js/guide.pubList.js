@@ -421,7 +421,7 @@ function pubListUp() {
 
     // 앵커 Fix 구간 설정
     window.addEventListener("scroll", function () {
-      if (menuAnchorTop <= window.scrollY + headH) {
+      if (menuAnchorTop <= window.scrollY) {
         menuAnchor.classList.add("fix");
       } else {
         menuAnchor.classList.remove("fix");
