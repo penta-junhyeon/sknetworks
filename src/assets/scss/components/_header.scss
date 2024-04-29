@@ -228,6 +228,9 @@
             display: none;
         }
     }
+    &:after {
+        transition: background-color .3s ease;
+    }
 
     @include web {
         &::after {
