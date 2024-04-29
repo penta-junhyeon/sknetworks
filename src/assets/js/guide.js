@@ -16,3 +16,16 @@ function asideToggleActive() {
     const layoutGuideList = document.getElementById("guide-list");
     layoutGuideList.classList.toggle("open-aside");
 }
+
+function select() {
+    const select = document.querySelectorAll(".field.select")
+  
+    select.forEach(select => {
+      const selected = select.querySelector(".selected")
+      const optionArea = select.querySelector(".option-area")
+  
+      selected.addEventListener("click", function () {
+        optionArea.classList.contains("active") ? optionArea.classList.remove("active") : optionArea.classList.add("active")
+      })
+    });
+  }

@@ -1,0 +1,110 @@
+
+.field {
+    &.select {
+        &.design1 {
+
+            // case 기준은 다른 case 셀렉트가 나올 때까지 미지정
+            &.case1 {
+                position: relative;
+    
+                .selected {
+                    display: inline-block;
+                    padding: 1rem 0;
+                    cursor: pointer;
+    
+                    .select-text {
+                        display: inline-block;
+                        vertical-align: middle;
+                        @include font(small-4x, bold)
+                    }
+    
+                    &::after {
+                        display: inline-block;
+                        width: 1.6rem;
+                        height: 1.6rem;
+                        content: '';
+                        margin-left: 0.8rem;
+                        background-image: icon(arrow-fill-down, #000);
+                        background-repeat: no-repeat;
+                        background-position: center;
+                        vertical-align: middle;
+                    }
+                }
+    
+                .option-area {
+                    .option-list {
+                        padding: 0.7rem;
+                        border: .1rem solid color(neutral, 030);
+                        border-radius: .2rem;
+                        background-color: color(system, 070);
+    
+                        .option-item {
+                            text-align: center;
+                            .option {
+                                display: inline-block;
+                                padding: 0.5rem 1rem;
+                                @include font(small-4x, medium);
+    
+                                @include web {
+    
+                                    &:hover,
+                                    &:focus {
+                                        @include font(small-4x, bold);
+                                    }
+                                }
+                            }
+                        }
+                    }
+    
+                    @include web {
+                        position: absolute;
+                        top: 100%;
+                        transform: translateY(-1rem);
+                        opacity: 0;
+                        transition: .3s ease;
+                        z-index: 10;
+                        min-width: 5.9rem;  
+    
+                        &.active {
+                            transform: translateY(0);
+                            opacity: 1;
+                        }
+    
+                    }
+                }
+    
+                @include mobile {
+                    .selected {
+                        display: none;
+                    }
+    
+                    .option-area {
+                        padding: 0 0.8rem;
+    
+                        .option-list {
+                            display: flex;
+                            padding: 0;
+                            border: none;
+    
+                            .option-item {
+                                .option {
+                                    padding: 0;
+                                    color: color(typo, 010);
+                                    @include font(small-5x, medium);
+    
+                                    &.active {
+                                        text-decoration: underline;
+                                    }
+                                }
+    
+                                +.option-item {
+                                    margin-left: 2.4rem;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

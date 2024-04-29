@@ -33,8 +33,25 @@ function frontCommonScroll() {
 function header() {
   const _header = document.getElementById("header")
   const depth1Item = _header.querySelectorAll(".depth1-item")
+  const depth1All = document.querySelectorAll('.depth1')
+  const depth2WrapAll = document.querySelectorAll(".depth2-wrap")
 
   if (_header) {
+    window.addEventListener("resize", () => {
+        const _width = window.innerWidth
+        if(_width >= 1024) {
+            _header.classList.remove("open")
+            _header.removeAttribute("style")
+
+            for (const item of depth1All) {
+                item.classList.remove("active")
+            }
+            for (const item of depth2WrapAll) {
+                item.removeAttribute("style")
+            }
+        }
+    })
+
     // depth2가 8개 이상일 때 고유 스타일 추가
     depth1Item.forEach(depth1Item => {
       const depth2List = depth1Item.querySelector(".depth2-list")
@@ -54,12 +71,46 @@ function header() {
       optionArea.classList.contains("active") ? optionArea.classList.remove("active") : optionArea.classList.add("active")
     })
 
-    // MO depth2 드롭다운 열림/닫힘 기능
+    // MO > 메뉴 열기/닫기
+    const navi = _header.querySelector(".site-navi")
+    const util = _header.querySelector(".site-util")
+    const menuHeader = _header.querySelector(".btn.menu-header")
+    const menuHeadertxt = menuHeader.querySelector(".btn-text")
+    
+    let i = 1;
+    for (const item of depth1Item) {
+        item.style.animationDelay = (0.15 * i) + "s";
+        i++;
+    }
+
+    menuHeader.addEventListener("click", function() {
+        if(_header.classList.contains("open")) {
+            menuHeadertxt.innerHTML = "메뉴 열기"
+            _header.style.height = "5.8rem"
+            setTimeout(() => {
+                _header.classList.remove("open")
+                for (const item of depth1All) {
+                    item.classList.remove("active")
+                }
+                for (const item of depth2WrapAll) {
+                    item.style.height = "0"
+                }
+            }, 300);
+        } else {
+            menuHeadertxt.innerHTML = "메뉴 닫기"
+            navi.style.display = "block"
+            util.style.display = "flex"
+            _header.style.height = "100%"
+            setTimeout(() => {
+                _header.classList.add("open")
+            }, 300);
+        }
+    })
+
+    // MO > depth1 드롭다운 열림/닫힘 기능
     document.addEventListener("click", function (e) {
       const depth1 = e.target
       if (depth1.classList.contains("depth1")) {
-        const depth1All = document.querySelectorAll('.depth1')
-        const depth2WrapAll = document.querySelectorAll(".depth2-wrap")
         const depth1Item = depth1.closest(".depth1-item")
         const depth2Wrap = depth1Item.querySelector(".depth2-wrap")
         const depth2ListH = depth2Wrap.querySelector(".depth2-list").offsetHeight
@@ -90,7 +141,6 @@ function select() {
   select.forEach(select => {
     const selected = select.querySelector(".selected")
     const optionArea = select.querySelector(".option-area")
-    const optionList = optionArea.querySelectorAll(".option-list")
 
     selected.addEventListener("click", function () {
       optionArea.classList.contains("active") ? optionArea.classList.remove("active") : optionArea.classList.add("active")

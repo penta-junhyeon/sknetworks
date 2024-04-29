@@ -1,9 +1,9 @@
+
 #header {
     position: absolute;
     top: 0;
     width: 100%;
     height: 7.2rem;
-    transition: height .3s ease;
 
     .header-inner {
         display: flex;
@@ -86,7 +86,7 @@
                             justify-content: flex-start;
                             align-self: flex-start;
                             row-gap: 2.4rem;
-                            margin-top: 4rem;
+                            padding-top: 4rem;
 
                             .depth2-item {
                                 display: block;
@@ -220,18 +220,13 @@
                     }
                 }
 
-                @include web {
-                    &#lang {
-                        .option-area {
-                            min-width: 7.2rem;
-                        }
-                    }
-                }
-
                 ~.util {
                     margin-left: 3.2rem;
                 }
             }
+        }
+        .site-control {
+            display: none;
         }
     }
 
@@ -243,6 +238,7 @@
             width: 100%;
             height: 0.1rem;
             content: '';
+            pointer-events: none;
         }
     }
 
@@ -278,12 +274,14 @@
     }
 
     @include mobile {
-        height: 100%;
+        height: 5.8rem;
+        overflow: hidden;
+        transition: height .3s ease;
 
         .header-inner {
+            padding: 0;
             flex-direction: column-reverse;
             justify-content: flex-end;
-            padding: 0;
             padding-top: 5.8rem;
             max-height: unset;
 
@@ -304,8 +302,12 @@
             }
 
             .site-navi {
-                padding-top: 3.2rem;
+                display: none;
                 width: 100%;
+                height: 100%;
+                padding: 3.2rem 0 4rem;
+                opacity: 0;
+                transition: opacity .3s ease;
                 overflow-y: auto;
 
                 .depth1-list {
@@ -316,22 +318,29 @@
 
                         .depth1 {
                             display: flex;
-                            align-items: center;
-                            justify-content: space-between;
                             width: 100%;
                             padding: 0 1.8rem;
+                            align-items: center;
+                            justify-content: space-between;
                             @include font(medium, bold);
 
                             &::after {
-                                content: '';
                                 display: block;
                                 width: 1.7rem;
                                 height: 1.7rem;
                                 padding: 0.5rem;
+                                content: '';
                                 margin-right: 0.5rem;
                                 background-image: icon(plus, #000);
                                 background-position: center;
                                 background-repeat: no-repeat;
+                                transition: background-image .1s;
+                            }
+                            &.active {
+                                color: color(primary, 070);
+                                &::after {
+                                    background-image: icon(minus, #000);
+                                }
                             }
                         }
 
@@ -343,11 +352,11 @@
                                 flex-direction: column;
                                 gap: 0;
                                 padding-top: 2rem;
-                                margin-top: 0;
 
                                 .depth2-item {
                                     padding-left: 3.4rem;
                                     margin-left: 0;
+                                    background-color: color(secondary, 070);
 
                                     .depth2 {
                                         padding: 2.7rem 0 2rem;
@@ -386,126 +395,60 @@
             }
 
             .site-util {
+                display: none;
                 width: 100%;
-                justify-content: space-between;
                 padding: 1.3rem 1.8rem 1.6rem;
+                justify-content: space-between;
                 border-bottom: .1rem solid color(neutral, 030);
+                opacity: 0;
+                transition: opacity .3s ease;
 
                 .util {
                     &.contact-wrap {
                         .btn.contact {
                             padding: 0;
+                            border: none;
                             color: color(typo, 010);
                             background-color: transparent;
-                            border: none;
                             @include font(small-4x, medium);
                         }
                     }
+                }
+            }
+            .site-control {
+                display: inline-block;
+                position: absolute;
+                top: 1.4rem;
+                right: 1.8rem;
+                .menu-header {
+                    transition: .1s ease;
                 }
             }
         }
     }
-}
-
-.field {
-    &.select {
-        &.case1 {
-            position: relative;
-
-            .selected {
-                display: inline-block;
-                padding: 1rem 0;
-                cursor: pointer;
-
-                .select-text {
-                    display: inline-block;
-                    vertical-align: middle;
-                    @include font(small-4x, bold)
-                }
-
-                &::after {
-                    content: '';
-                    display: inline-block;
-                    width: 1.6rem;
-                    height: 1.6rem;
-                    margin-left: 0.8rem;
-                    background-image: icon(arrow-fill-down, #000);
-                    background-repeat: no-repeat;
-                    background-position: center;
-                    vertical-align: middle;
-                }
+    &.open {
+        .header-inner {
+            .site-navi,
+            .site-util {
+                opacity: 1;
             }
-
-            .option-area {
-
-                .option-wrap {
-                    padding: 0.7rem;
-                    border: .1rem solid color(neutral, 030);
-                    border-radius: .2rem;
-                    background-color: color(system, 070);
-
-                    .option-list {
-
-                        .option {
-                            display: inline-block;
-                            padding: 0.5rem 1rem;
-                            @include font(small-4x, medium);
-
-                            @include web {
-
-                                &:hover,
-                                &:focus {
-                                    @include font(small-4x, bold);
-                                }
-                            }
-                        }
-                    }
-                }
-
-                @include web {
-                    position: absolute;
-                    top: 100%;
-                    transform: translateY(-1rem);
+            .site-navi {
+                .depth1-item {
+                    animation: depth1Fade .3s forwards;
+                    transform: translateY(2rem);
                     opacity: 0;
-                    transition: .3s ease;
-
-                    &.active {
-                        transform: translateY(0);
-                        opacity: 1;
-                    }
-
                 }
             }
-
-            @include mobile {
-                .selected {
-                    display: none;
+            @keyframes depth1Fade {
+                to {
+                    transform: translateY(0);
+                    opacity: 1;
                 }
-
-                .option-area {
-                    padding: 0 0.8rem;
-
-                    .option-wrap {
-                        display: flex;
-                        padding: 0;
-                        border: none;
-
-                        .option-list {
-                            .option {
-                                padding: 0;
-                                color: color(typo, 010);
-                                @include font(small-5x, medium);
-
-                                &.active {
-                                    text-decoration: underline;
-                                }
-                            }
-
-                            +.option-list {
-                                margin-left: 2.4rem;
-                            }
-                        }
-                    }
+            }
+            .site-control {
+                .menu-header {
+                    background-image: icon(close, #000);
+                    background-size: 1.8rem;
                 }
             }
         }

@@ -229,6 +229,7 @@
         }
     }
 
+    // 헤더 dark 버전 (hover는 디자인이 다 완성되면 추가)
     &.color7 {
         color: color(system, 100);
         background-color: color(secondary, 070);
@@ -341,6 +342,11 @@
             height: 4rem;
         }
 
+        &.case2 {
+            width: 3.2rem;
+            height: 3.2rem;
+        }
+
         &.arrow-right2-bg {
             background-color: color(neutral, 020);
             border-radius: 100%;
@@ -356,6 +362,11 @@
                 background-color: color(neutral, 040) !important;
                 background-image: icon(arrow-right2, color(semantic, 000)) !important;
             }
+        }
+
+        &.menu-header {
+            display: inline-block;
+            background-image: icon(menu-header, #000);
         }
     }
 
