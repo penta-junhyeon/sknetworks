@@ -55,24 +55,25 @@ body {
     }
 }
 
-#skip {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	position: absolute;
-	z-index: 100;
-	top: -10rem;
-	right: 0;
-	left: 0;
-	height: 5.6rem;
-	background-color: color(system, 100);
-
-	.skip-item {
-		color: color(typo, 100);
-		@include font(small-5x, regular);
-	}
-	
-	&:focus-within {
-		top: 0;
-	}
+.skip {
+    ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        z-index: 100;
+        top: -10rem;
+        right: 0;
+        left: 0;
+        height: 5.6rem;
+        background-color: color(system, 100);
+        li {
+            color: color(typo, 100);
+            @include font(small-5x, regular);
+        }
+        &:focus-within {
+            top: 0;
+        }
+    }
 }
