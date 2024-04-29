@@ -196,6 +196,7 @@
                 background-color: color(system, 070);
                 z-index: -1;
                 transition: height .3s ease;
+                box-sizing: content-box;
             }
 
             @include web {
@@ -203,7 +204,8 @@
                 &:hover,
                 &:focus-within {
                     &::after {
-                        height: 40rem;
+                        height: 39.9rem;
+                        border: .1rem solid color(secondary, 070);
                     }
                 }
             }
