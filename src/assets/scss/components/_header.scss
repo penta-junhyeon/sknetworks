@@ -4,6 +4,7 @@
     top: 0;
     width: 100%;
     height: 7.2rem;
+    z-index: 999;
 
     .header-inner {
         display: flex;
@@ -192,7 +193,6 @@
                 content: '';
                 z-index: -1;
                 transition: height .3s ease;
-                box-sizing: content-box;
             }
 
             @include web {
@@ -228,6 +228,9 @@
             display: none;
         }
     }
+    &:after {
+        transition: background-color .3s ease;
+    }
 
     @include web {
         &::after {
@@ -256,7 +259,7 @@
             }
         }
         &::after {
-            background-color: color(secondary, 070);
+            background-color: #eeeeee;
         }
     }
 
@@ -272,7 +275,7 @@
             }
             .site-navi {
                 &::after {
-                    background: rgba(32, 32, 32, 0.12);
+                    background-color: rgba(32, 32, 32, 0.12);
                     backdrop-filter: blur(40px);
                     transition: .3s ease;
                 }
@@ -281,8 +284,7 @@
                     &:hover,
                     &:focus-within {
                         &::after {
-                            background-color: color(secondary, 070);
-                            
+                            background-color: color(system, 070);
                         }
                     }
                 }
@@ -309,7 +311,7 @@
             &.hover {
                 &:hover,
                 &:focus-within {
-                    background-color: color(secondary, 070);
+                    background-color: color(system, 070);
                     .site-logo {
                         .site-name {
                             background-image: url('../images/logo/logo-c-e-2.svg');
@@ -347,6 +349,9 @@
                                 }
                             }
                         }
+                    }
+                    &::after {
+                        background-color: #eeeeee;
                     }
                 }
             }
@@ -557,4 +562,8 @@
             }
         }
     }
+}
+
+.temp {
+    background-color: #050505;
 }
