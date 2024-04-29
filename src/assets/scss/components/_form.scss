@@ -15,6 +15,7 @@
                     .select-text {
                         display: inline-block;
                         vertical-align: middle;
+                        transition: color .3s ease;
                         @include font(small-4x, bold)
                     }
     
@@ -28,6 +29,7 @@
                         background-repeat: no-repeat;
                         background-position: center;
                         vertical-align: middle;
+                        transition: background-image .3s ease;
                     }
                 }
     
@@ -65,10 +67,12 @@
                         transition: .3s ease;
                         z-index: 10;
                         min-width: 5.9rem;  
+                        visibility: hidden;
     
                         &.active {
                             transform: translateY(0);
                             opacity: 1;
+                            visibility: visible;
                         }
     
                     }

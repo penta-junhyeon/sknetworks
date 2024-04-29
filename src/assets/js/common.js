@@ -52,6 +52,7 @@ function header() {
         }
     })
 
+
     // depth2가 8개 이상일 때 고유 스타일 추가
     depth1Item.forEach(depth1Item => {
       const depth2List = depth1Item.querySelector(".depth2-list")
@@ -69,6 +70,29 @@ function header() {
 
     selected.addEventListener("click", function () {
       optionArea.classList.contains("active") ? optionArea.classList.remove("active") : optionArea.classList.add("active")
+    })
+    
+    // 
+
+    _header.addEventListener("mouseenter", () => {
+        if(_header.classList.contains("dark")) {
+            _header.classList.add("hover")
+        }
+    })
+    _header.addEventListener("mouseleave", () => {
+        if(_header.classList.contains("dark")) {
+            _header.classList.remove("hover")
+        }
+    })
+
+    document.addEventListener("focusin", function(e) {
+        const _target = e.target
+        console.log(_target.closest(".dark"));
+        if(_target.closest(".dark")) {
+            _header.classList.add("hover")
+        } else {
+            _header.classList.remove("hover")
+        }
     })
 
     // MO > 메뉴 열기/닫기
@@ -136,7 +160,7 @@ function header() {
 }
 
 function select() {
-  const select = document.querySelectorAll(".field.select")
+  const select = document.querySelectorAll(".form.select")
 
   select.forEach(select => {
     const selected = select.querySelector(".selected")
