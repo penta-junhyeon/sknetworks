@@ -15,15 +15,15 @@ body {
     }
     
     .moOnly {
-        display: none;
+        display: none !important;
     }
     
     @include mobile {
         .pcOnly {
-            display: none;
+            display: none !important;
         }
         .moOnly {
-            display: block;
+            display: block !important;
         }
     }
     
