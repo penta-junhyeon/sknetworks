@@ -328,6 +328,15 @@
 						}
 					}
 				}
+
+				//테이블
+				&.table-guide {
+					.t-display {
+						+ .t-display {
+							margin-top: 7rem;
+						}
+					}
+				}
             }
         }
     }

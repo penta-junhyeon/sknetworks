@@ -102,27 +102,44 @@
 								&.large {
 									.para {
 										@include font(small-3x, medium);
-										+ .para {
-											margin-top: 1.6rem
+									}
+								}
+								&.medium {
+									.para {
+										@include font(small-4x, medium);
+									}
+									&.bold {
+										.para {
+											@include font(small-4x, bold);
 										}
 									}
 								}
 								&.small {
 									.para {
-										@include font(small-4x, medium);
-										+ .para {
-											margin-top: 1.6rem
+										@include font(small-5x, medium);
+									}
+									&.bold {
+										.para {
+											@include font(small-5x, bold);
 										}
 									}
 								}
-
+								&.small-x {
+									.para {
+										@include font(small-6x, medium);
+									}
+								}
+								.para {
+									+ .para {
+										margin-top: 1.6rem
+									}
+								}
 							}
 						}
 					}
-
-					.comment {
-						@include font(small-5x, medium);
-					}
+				}
+				.comment {
+					@include font(small-5x, medium);
 				}
 			}
 		}

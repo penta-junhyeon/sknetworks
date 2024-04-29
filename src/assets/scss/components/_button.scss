@@ -67,6 +67,10 @@
         @include font(small-5x, bold)
     }
 
+    &.type3 {
+        @include font(small-4x, bold)
+    }
+
     /* color */
     &.color1 {
         color: color(system, 070);
@@ -87,7 +91,6 @@
         }
 
         @include web {
-
             &:hover,
             &:focus {
                 background-color: color(neutral, 070);
@@ -236,6 +239,12 @@
         border-color: color(secondary, 070);
     }
 
+    &.color8 {
+        color: color(typo, 010);
+        background-color: transparent;
+        border-color: transparent;
+    }
+
     /* icon + text */
     &[class*=-icon] {
 
@@ -265,7 +274,6 @@
                 }
             }
         }
-
         &arrow-right2 {
             .btn-text {
                 &::after {
@@ -277,7 +285,6 @@
                 }
             }
         }
-
         &arrow-fill-down {
             .btn-text {
                 &::after {
@@ -289,7 +296,6 @@
                 }
             }
         }
-
         &arrow-right-up2 {
             .btn-text {
                 &::after {
@@ -298,6 +304,54 @@
                     margin-left: 0.8rem;
                     background-image: icon(arrow-right-up2, color(primary, 070));
                     background-size: 1.1rem 1.1rem;
+                }
+            }
+        }
+        &download-bg {
+            .btn-text {
+                &::after {
+                    width: 4rem;
+                    height: 4rem;
+                    margin-left: 2.4rem;
+                    background-image: icon(download, color(system, 070));
+                    background-size: 1.8rem 1.7rem;
+                    background-color: color(neutral, 080);
+                    border-radius: 100%;
+                }
+            }
+        }
+        &download {
+            .btn-text {
+                &::after {
+                    width: 2.4rem;
+                    height: 2.4rem;
+                    margin-left: 0.8rem;
+                    background-image: icon(download, color(semantic, 100));
+                    background-size: 1.8rem 1.7rem;
+                }
+            }
+        }
+        &plus-bg {
+            .btn-text {
+                &::after {
+                    width: 4rem;
+                    height: 4rem;
+                    margin-left: 2.4rem;
+                    background-image: icon(plus, color(system, 070));
+                    background-size: 1.5rem 1.4rem;
+                    background-color: color(neutral, 080);
+                    border-radius: 100%;
+                }
+            }
+        }
+        &refresh {
+            .btn-text {
+                &::after {
+                    width: 1.6rem;
+                    height: 1.6rem;
+                    margin-left: 0.8rem;
+                    background-image: icon(refresh, color(typo, 010));
+                    background-size: 1.4rem 1.2rem;
                 }
             }
         }
@@ -318,7 +372,6 @@
                 }
             }
         }
-
         &info {
             .btn-text {
                 &::before {
@@ -330,12 +383,39 @@
                 }
             }
         }
+        &printer {
+            .btn-text {
+                &::before {
+                    width: 2.4rem;
+                    height: 2.4rem;
+                    margin-right: 0.8rem;
+                    background-image: icon(printer, color(semantic, 100));
+                    background-size: 2.2rem 2.2rem;
+                }
+            }
+        }
+        &share {
+            .btn-text {
+                &::before {
+                    width: 2.4rem;
+                    height: 2.4rem;
+                    margin-right: 0.8rem;
+                    background-image: icon(share, color(semantic, 100));
+                    background-size: 1.8rem 2rem;
+                }
+            }
+        }
     }
 
-    /* icon only button */
+    /* icon only */
     &.icon {
+        align-items: center;
+        justify-content: center;
+        vertical-align: middle;
         background-repeat: no-repeat;
-        background-position: center;
+        background-position: center center;
+        border-radius: 100%;
+        transition: all 0.3s;
 
         &.case1 {
             width: 4rem;
@@ -349,18 +429,40 @@
 
         &.arrow-right2-bg {
             background-color: color(neutral, 020);
-            border-radius: 100%;
-            background-image: icon(arrow-right2, color(system, 080));
-            background-size: 1.6rem 1.4rem;
 
-            &:hover {
-                background-color: color(secondary, 080);
-                background-image: icon(arrow-right2, color(semantic, 000));
+            &.arrow-right2-bg {
+                background-image: icon(arrow-right2, color(system, 080));
+                background-size: 1.6rem 1.4rem;
+
+                &.disabled {
+                    background-color: color(neutral, 040) !important;
+                    background-image: icon(arrow-right2, color(semantic, 000)) !important;
+                }
+
+                @include web {
+                    &:hover,
+                    &:focus {
+                        background-color: color(secondary, 080);
+                        background-image: icon(arrow-right2, color(semantic, 000));
+                    }
+                }
             }
+            &.arrow-left2-bg {
+                background-image: icon(arrow-left2, color(system, 080));
+                background-size: 1.6rem 1.4rem;
+                
+                &.disabled {
+                    background-color: color(neutral, 040) !important;
+                    background-image: icon(arrow-left2, color(semantic, 000)) !important;
+                }
 
-            &.disabled {
-                background-color: color(neutral, 040) !important;
-                background-image: icon(arrow-right2, color(semantic, 000)) !important;
+                @include web {
+                    &:hover,
+                    &:focus {
+                        background-color: color(secondary, 080);
+                        background-image: icon(arrow-left2, color(semantic, 000));
+                    }
+                }
             }
         }
 
