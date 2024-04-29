@@ -406,10 +406,10 @@
                                                                 .data-text {
                                                                     display: inline-block;
                                                                     width: 6rem;
-                                                                    color: #ffffff;
+                                                                    border: .1rem solid #e1e1e1;
+                                                                    color: #4e4e4e;
                                                                     border-radius: .6rem;
-                                                                    background-color: #39d979;
-                                                                    border-color: #39d979;
+                                                                    background-color: #f3f3f3;
                                                                     transition: .3s ease;
                                                                     @include mobile {
                                                                         width: auto;
@@ -419,10 +419,12 @@
                                                                         margin-top: 0.5rem;
                                                                     }
                                                                     &.disabled {
-                                                                        border: .1rem solid #e1e1e1;
-                                                                        color: #4e4e4e;
-                                                                        background-color: #f3f3f3;
                                                                         pointer-events: none;
+                                                                    }
+                                                                    &.complete {
+                                                                        color: #ffffff;
+                                                                        background-color: #39d979;
+                                                                        border-color: #39d979;
                                                                     }
                                                                 }
                                                                 @include mobile {

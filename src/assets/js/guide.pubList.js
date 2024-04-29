@@ -6,7 +6,7 @@ function pubListUp() {
         id_ko: "",
         id_en: "",
         menu: "MAIN",
-        root_ko: "",
+        root_ko: "/front/main/MAIN.00.00.html",
         root_en: "",
         status_ko: "미정",
         status_en: "미정",
@@ -719,9 +719,9 @@ function pubListUp() {
           dataHistoryContents.innerHTML = data.history;
 
           dataViewText.setAttribute("target", "_blank");
-          dataViewText.setAttribute("href", data.root);
+          dataViewText.setAttribute("href", data.root_ko);
           dataViewTextEn.setAttribute("target", "_blank");
-          dataViewTextEn.setAttribute("href", data.root);
+          dataViewTextEn.setAttribute("href", data.root_en);
 
           dataDefaultList.appendChild(dataDefaultItemNo);
           dataDefaultList.appendChild(dataDefaultItemId);
@@ -1007,13 +1007,13 @@ function pubListUp() {
         status.forEach((status) => {
           if (status.classList.contains("ko")) {
             const viewBtn = item.querySelector(".data-view.ko .data-text");
-            if (viewBtn && status.innerText != "완료") {
-              viewBtn.classList.add("disabled");
+            if (viewBtn && status.innerText == "완료") {
+              viewBtn.classList.add("complete");
             }
           } else if (status.classList.contains("en")) {
             const viewBtn = item.querySelector(".data-view.en .data-text");
-            if (viewBtn && status.innerText != "완료") {
-              viewBtn.classList.add("disabled");
+            if (viewBtn && status.innerText == "완료") {
+              viewBtn.classList.add("complete");
             }
           }
         });
