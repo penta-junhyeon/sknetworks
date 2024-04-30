@@ -2,7 +2,7 @@
 
 body {
     .blind {
-        position: absolute; 
+        position: absolute;
         width: 1px;
         height: 1px;
         padding: 0;
@@ -13,66 +13,74 @@ body {
         clip-path: inset(50%);
         overflow: hidden;
     }
-    
+
     .moOnly {
         display: none !important;
     }
-    
+
     @include mobile {
         .pcOnly {
             display: none !important;
         }
+
         .moOnly {
             display: block !important;
         }
     }
-    
+
     /* Accent */
     .accent {
         &.case1 {
             font-weight: 400 !important;
         }
+
         &.case2 {
             font-weight: 500 !important;
         }
+
         &.case3 {
             font-weight: 600 !important;
         }
+
         &.case4 {
             font-weight: 700 !important;
         }
-    
+
         &.color1 {
-            color: color(primary,100) !important;
+            color: color(primary, 100) !important;
         }
+
         &.color2 {
-            color: color(etc,100) !important;
+            color: color(etc, 100) !important;
         }
+
         &.color3 {
-            color: color(neutral,060) !important;
+            color: color(neutral, 060) !important;
         }
+
         &.color4 {}
     }
 }
 
 .skip {
-    ul {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+    ul li a {
         position: absolute;
-        z-index: 100;
         top: -10rem;
         right: 0;
         left: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background: color(neutral, 080);
         height: 5.6rem;
-        background-color: color(system, 100);
-        li {
-            color: color(typo, 100);
-            @include font(small-5x, regular);
-        }
-        &:focus-within {
+        line-height: 5.6rem;
+        color: color(system, 070);
+        font-size: 16px;
+        text-align: center;
+        z-index: 100;
+        &:focus-within,
+        &:focus,
+        &:active {
             top: 0;
         }
     }
