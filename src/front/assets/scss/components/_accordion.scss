@@ -1,0 +1,21 @@
+.accordion-display {
+    .accordion-head {
+        cursor: pointer;
+        .btn {
+            display: block;
+            width: 100%;
+        }
+    }
+
+    &.design1 {
+        .accordion-body {
+            transition: max-height 0.3s ease;
+            overflow: hidden;
+        }
+        &.case1 {
+            .accordion-body {
+                max-height: 0;
+            }
+        }
+    }
+}

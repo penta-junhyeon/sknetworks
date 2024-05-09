@@ -1,0 +1,159 @@
+/* IR CSS */
+.ir { 
+    .section {
+
+        // 신용등급
+        &.credit-rating {
+            background: url(../../../assets/images/ir/banner-ir.jpg);
+            width: 100%;
+            height: 240px;
+            margin: 0 auto;
+            border-radius: 24px;
+            position: relative;
+            .section-head{
+                position: absolute;
+                top: 50%; 
+                left: 50%;
+                transform: translate(-50%, -50%);
+                .section-name{
+                    @include font(small-2x, bold);
+                    margin-bottom: 2.4rem;
+                }
+            }
+        }
+        &.credit-area {
+            .section-wrap {
+                gap: 2rem;
+            }
+            .section-head {
+                width: 18.3%;
+            }
+            .section-body {
+                width: calc(100% - 18.3%);
+            }
+        }
+
+        // 감사보고서
+        &.audit-report{
+            .section-wrap {
+                gap: 2rem;
+            }
+            .section-head {
+                width: 32.25%;
+                .section-name{
+                    @include font(small-2x, bold);
+                    color: color(typo, 100);
+                    margin-bottom: 2.4rem;
+                }
+            }
+            .section-body {
+                width: calc(100% - 32.25%);
+                .board-list{
+                    .board-item{
+                        width: 38.6rem;
+                    }
+                }
+            }
+            & ~ .section{
+                margin-top: 16rem;
+            }
+            @include mobile {
+                .section-head {
+                    width: 100%;
+                }
+                .section-body {
+                    width: 100%;
+                    .board-list{
+                        .board-item{
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+
+        // 주요재무현황
+        &.financial-status{
+            .section-wrap{
+                flex-direction: column;
+                .section-head{
+                    margin-bottom: 4rem;
+                }
+                .section-body{
+                    // 차트
+                }
+            }
+        }
+
+        // IR 일정
+        &.ir-schedule{
+            .section-wrap{
+                flex-direction: column;
+                gap: 4rem;
+                .btn-display{
+                    margin-top: 8rem;
+                    justify-content: center;
+                }
+            }
+        }
+
+        // IR 자료
+        &.ir-document{
+            .panel-display{
+                .panel-head{
+                    .data-display{
+                        margin: 6.4rem 0 4rem;
+                    }
+                }
+                .panel-body{
+                    .pagination{
+                        margin-top: 6.4rem;
+                    }
+                }
+            }
+        }
+
+        & ~ .section{
+            margin-top: 16rem;
+            width: 100%;
+            &.hidden {
+                display: none;
+            }
+            .section-wrap{
+                margin-top: 16rem;
+            }
+        }
+
+
+        @include mobile {
+            .section-head {
+                width: 100%;
+            }
+            .section-body {
+                width: 100%;
+            }
+            
+            .btn-display{
+                margin-top: 4.8rem;
+            }
+        }
+    }
+
+    // bg
+    &.bg-color{
+        position: relative;
+        padding-top: 8rem;
+        &::after{
+            content: '';
+            background-color: color(secondary, 070);
+            position: absolute;
+            top: 0;
+            left: 50%;
+            width: 100vw;
+            height: 100%;
+            transform: translateX(-50%);
+            z-index: -1;
+            
+        }
+    }
+}

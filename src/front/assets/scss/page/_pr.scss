@@ -1,0 +1,144 @@
+.pr {
+    &.news-room {
+        .section {
+            + .section {
+                margin-top: 12rem;
+                @include mobile {
+                    margin-top: 6.4rem;
+                }
+            }
+        }
+        .tab-display {
+            + .panel-display {
+                margin-top: 6.4rem;
+                .submit-form {
+                    + .post-list {
+                        margin-top: 4rem;
+                        + .btn-display {
+                            margin-top: 8rem;
+                        }
+                    }
+                }
+                .board-list {
+                    + .post-list {
+                        margin-top: 8rem;
+                        + .btn-display {
+                            margin-top: 8rem;
+                        }
+                    }
+                }
+            }
+        }
+        @include mobile {
+            .tab-display {
+                + .panel-display {
+                    margin-top: 3.2rem;
+                    .submit-form {
+                        + .post-list {
+                            margin-top: 2.4rem;
+                            + .btn-display {
+                                margin-top: 4.8rem;
+                            }
+                        }
+                    }
+                    .board-list {
+                        + .post-list {
+                            margin-top: 4.8rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &.brand {
+        .section {
+            + .section {
+                margin-top: 16rem;
+            }
+            &.brand-ci {
+                .section-body {
+                    display: flex;
+                }
+            }
+            &.regulation-util {
+                .section-body {
+                    + .section-util {
+                        margin-top: 8rem;
+                    }
+                }
+            }
+            &.spatial-regulation {
+                position: relative;
+                padding-top: 5.6rem;
+                padding-bottom: 5.6rem;
+                margin-top: 6.4rem;
+                &::after {
+                    content: '';
+                    background: url(../../../assets/images/pr/brand-bg-01.jpg) no-repeat center center;
+                    background-size: cover;
+                    position: absolute;
+                    top: 0;
+                    left: 50%;
+                    width: 100vw;
+                    height: 100%;
+                    transform: translateX(-50%);
+                    z-index: -1;
+                }
+            }
+            &.color-regulation {
+                .section-body {
+                    .data-display.design1.case1.type1 {
+                        margin-top: 8rem;
+                        > .data-list {
+                            > .data-item {
+                                + .data-item {
+                                    margin-top: 6.4rem;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            @include mobile {
+                + .section {
+                    @include mobile {
+                        margin-top: 8rem;
+                    }
+                }
+                &.brand-ci {
+                    .section-body {
+                        flex-direction: column;
+                    }
+                }
+                &.regulation-util {
+                    .section-body {
+                        + .section-util {
+                            margin-top: 4.8rem;
+                        }
+                    }
+                }
+                &.spatial-regulation {
+                    position: relative;
+                    padding-top: 5.6rem;
+                    padding-bottom: 5.6rem;
+                    margin-top: 6.4rem;
+                }
+                &.color-regulation {
+                    .section-body {
+                        .data-display.design1.case1.type1 {
+                            margin-top: 8rem;
+                            > .data-list {
+                                > .data-item {
+                                    + .data-item {
+                                        margin-top: 6.4rem;
+                                    }
+                                }
+                            }
+                        }
+
+                    }
+                }
+            }
+        }
+    }
+}

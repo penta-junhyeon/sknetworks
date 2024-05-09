@@ -1,0 +1,65 @@
+/* IR */
+@mixin blind {
+    display: block;
+    position: absolute;
+    overflow: hidden;
+    visibility: hidden;
+    margin: -1px;
+    padding: 0;
+    width: 1px;
+    height: 1px;
+    line-height: 1px;
+    font-size: 1px;
+    border: 0;
+    clip: rect(0 0 0 0);
+    clip: rect(0, 0, 0, 0);
+    pointer-events: none;
+}
+
+/* ellipsis */
+// @inlcude ellipsis(2);
+@mixin ellipsis($line: 1) {
+    @if $line ==1 {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    @else {
+        display: -webkit-box;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: $line;
+    }
+}
+
+/* 반응형 */
+@mixin mobile {
+    @media (max-width:#{$tablet - 1}) {
+        @content;
+    }
+}
+
+@mixin web2 {
+    @media (max-width:#{$tablet - 1}) {
+        @content;
+    }
+}
+
+@mixin web {
+    @media (min-width:#{$tablet}) {
+        @content;
+    }
+}
+
+/* scroll hidden */
+@mixin scroll-hidden {
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+@include mobile {}

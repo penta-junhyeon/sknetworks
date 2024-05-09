@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<%-include('../_templates/_head.ejs', {
+	layoutTemplate: 'front',
+	pageJavascript: ''
+}) %>
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        Tab();
+
+        //인트로 슬라이드
+        var sync1 = new Swiper(".sync1", {
+            slidesPerView: 1,
+            loopAdditionalSlides: 1,
+            effect: "fade",
+            loop: true,
+            controller: {
+                control: sync2
+            }
+        });
+        var sync2 = new Swiper(".sync2", {
+            slidesPerView: 1,
+            loopAdditionalSlides: 1,
+            loop: true,
+            navigation: {
+                nextEl: ".sync2 .swiper-button-next",
+                prevEl: ".sync2 .swiper-button-prev",
+            },
+            controller: {
+                control: sync1
+            }
+        });
+
+        sync1.controller.control = sync2;
+        sync2.controller.control = sync1;
+
+        //영상 라이브러리 슬라이드
+        var prSwiperDesign1 = new Swiper(".pr-swiper1", {
+            slidesPerView: 3,
+            allowTouchMove: true,
+            spaceBetween: 24,
+            loop: true,
+            centeredSlides: false,
+            navigation: {
+                nextEl: ".pr-swiper-area .swiper-button-next",
+                prevEl: ".pr-swiper-area .swiper-button-prev",
+            },
+            breakpoints: {
+                280: {
+                    slidesPerView: 'auto',
+                    spaceBetween: 16,
+                    centeredSlides: false,
+                },
+                1024: {
+                    slidesPerView: 3,
+                    spaceBetween: 24,
+                    centeredSlides: true,
+                },
+            },
+        });
+    });
+</script>
+</head>
+<body class="kr">
+<div id="wrap">
+    <%-include('../_templates/_header.ejs', {
+        type: 'light',
+    }) 
+    %>
+    <div class="main pr news-room" id="main">
+        <div class="main-inner">
+            <div class="local design1">
+                <%-include('../_templates/_local-info.ejs', {
+                    depth1: 'PR',
+                    depth2: '뉴스룸',
+                    depth3: '',
+                }) %>
+                <div class="local-head design3"> 
+                    <div class="local-subject">
+                        <h2 class="local-name">뉴스룸</h2>
+                    </div>
+                </div>
+                <div class="local-body">
+                    <div class="content-head">뉴스룸 페이지</div>
+                    <div class="content-info">
+                    </div>
+                    <div class="content-body">
+                        <div class="section">
+                            <div class="section-body">
+                                <div class="swiper-area design1">
+                                    <div class="swiper-display sync1 swiper">
+                                        <ul class="swiper-wrapper">
+                                            <li class="swiper-slide">
+                                                <img src="../../../assets/images/pr/news-slide-01.jpg" alt="SK렌터카, 'IF 디자인 어워드 2024' 본상 수상">
+                                            </li>
+                                            <li class="swiper-slide">
+                                                <img src="../../../assets/images/pr/news-slide-01.jpg" alt="SK렌터카, 'IF 디자인 어워드 2024' 본상 수상">
+                                            </li>
+                                            <li class="swiper-slide">
+                                                <img src="../../../assets/images/pr/news-slide-01.jpg" alt="SK렌터카, 'IF 디자인 어워드 2024' 본상 수상">
+                                            </li>
+                                            <li class="swiper-slide">
+                                                <img src="../../../assets/images/pr/news-slide-01.jpg" alt="SK렌터카, 'IF 디자인 어워드 2024' 본상 수상">
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="swiper-display sync2 swiper">
+                                        <ul class="swiper-wrapper">
+                                            <li class="swiper-slide">
+                                                <div class="slide-head">
+                                                    <span class="cate">SK렌터카1</span>
+                                                    <strong class="tit">SK렌터카, 'IF 디자인 어워드 2024' 본상 수상</strong>
+                                                </div>
+                                                <div class="slide-body">
+                                                    <p class="des">SK렌터카(대표이사:황일문)가 세계 3대 디자인 공모전 중 하나로 꼽히는 ‘IF 디자인 어워드 2024＇에서 ＇플랫폼ㆍUI (사용자 인터페이스)’ 부문 본상을 수상했다고 20일 밝혔다.</p>
+                                                    <span class="date">2024.02.01</span>
+                                                </div>
+                                            </li>
+                                            <li class="swiper-slide">
+                                                <div class="slide-head">
+                                                    <span class="cate">SK렌터카2</span>
+                                                    <strong class="tit">SK렌터카, 'IF 디자인 어워드 2024' 본상 수상</strong>
+                                                </div>
+                                                <div class="slide-body">
+                                                    <p class="des">SK렌터카(대표이사:황일문)가 세계 3대 디자인 공모전 중 하나로 꼽히는 ‘IF 디자인 어워드 2024＇에서 ＇플랫폼ㆍUI (사용자 인터페이스)’ 부문 본상을 수상했다고 20일 밝혔다.</p>
+                                                    <span class="date">2024.02.01</span>
+                                                </div>
+                                            </li>
+                                            <li class="swiper-slide">
+                                                <div class="slide-head">
+                                                    <span class="cate">SK렌터카3</span>
+                                                    <strong class="tit">SK렌터카, 'IF 디자인 어워드 2024' 본상 수상</strong>
+                                                </div>
+                                                <div class="slide-body">
+                                                    <p class="des">SK렌터카(대표이사:황일문)가 세계 3대 디자인 공모전 중 하나로 꼽히는 ‘IF 디자인 어워드 2024＇에서 ＇플랫폼ㆍUI (사용자 인터페이스)’ 부문 본상을 수상했다고 20일 밝혔다.</p>
+                                                    <span class="date">2024.02.01</span>
+                                                </div>
+                                            </li>
+                                            <li class="swiper-slide">
+                                                <div class="slide-head">
+                                                    <span class="cate">SK렌터카4</span>
+                                                    <strong class="tit">SK렌터카, 'IF 디자인 어워드 2024' 본상 수상</strong>
+                                                </div>
+                                                <div class="slide-body">
+                                                    <p class="des">SK렌터카(대표이사:황일문)가 세계 3대 디자인 공모전 중 하나로 꼽히는 ‘IF 디자인 어워드 2024＇에서 ＇플랫폼ㆍUI (사용자 인터페이스)’ 부문 본상을 수상했다고 20일 밝혔다.</p>
+                                                    <span class="date">2024.02.01</span>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                        <div class="swiper-control">
+                                            <button class="btn icon case1 arrow-left2-bg swiper-button-prev"><span class="btn-text blind">이전</span></button>
+                                            <button class="btn icon case1 arrow-right2-bg swiper-button-next"><span class="btn-text blind">다음</span></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="section">
+                            <div class="section-body">
+                                <div class="tab-display design1 case1 type1">
+                                    <div class="swiper tab-wrap">
+                                        <ul class="swiper-wrapper tab-list">
+                                            <li class="swiper-slide tab-item">
+                                                <button class="tab-text">보도자료</button>
+                                            </li>
+                                            <li class="swiper-slide tab-item">
+                                                <button class="tab-text">소셜 미디어</button>
+                                            </li>
+                                            <li class="swiper-slide tab-item">
+                                                <button class="tab-text">영상 라이브러리</button>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                
+                                <div class="panel-display design1">
+                                    <ul class="panel-list">
+                                        <!-- 보도자료 -->
+                                        <li class="panel-item">
+                                            <div class="panel-wrap">
+                                                <div class="submit-form design1 case1 align2">
+                                                    <div class="form-list">
+                                                        <div class="form-item">
+                                                            <div class="form search design1 case1 type1">
+                                                                <label for="temp-search" class="blind">
+                                                                    검색
+                                                                </label>
+                                                                <input id="temp-search" class="input-elem" type="text" placeholder="검색어를 입력하세요.">
+                                                                <div class="input-icon">
+                                                                    <button class="btn icon case3 remove">
+                                                                        <span class="btn-text blind">삭제</span>
+                                                                    </button>
+                                                                    <button class="btn icon case3 search">
+                                                                        <span class="btn-text blind">검색</span>
+                                                                    </button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="post-list design1 case2 type1">
+                                                    <a href="#" class="post-item">
+                                                        <div class="post-wrap">
+                                                            <div class="post-figure">
+                                                                <img src="../../../assets/images/ir/thumb-01.jpg" alt="ir뉴스 썸네일 이미지">
+                                                            </div>
+                                                            <div class="post-info">
+                                                                <div class="post-head">
+                                                                    <p class="post-caption">SK네트웍스</p>
+                                                                    <p class="post-subject">이호정 SK네트웍스 대표이사, 구성원들과 묘목 식재 활동</p>
+                                                                    <p class="post-summary">SK네트웍스, 2023년 영업이익 2,373억원 달성 전년비 33.6% 증가 배당 증액·자사주 소각 통해 주주가치 제고 추진!SK네트웍스, 2023년 영업이익 2,373억원 달성 전년비 33.6% 증가 배당 증액·자사주 소각 통해 주주가치 제고 추진!SK네트웍스, 2023년 영업이익 2,373억원 달성 전년비 33.6% 증가 배당 증액·자사주 소각 통해 주주가치 제
+                                                                    </p>
+                                                                </div>
+                                                                <div class="post-body">
+                                                                    <p class="post-date" title="등록일">2024.03.19</p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                    <a href="#" class="post-item">
+                                                        <div class="post-wrap">
+                                                            <div class="post-figure">
+                                                                <img src="../../../assets/images/ir/thumb-02.jpg" alt="ir뉴스 썸네일 이미지">
+                                                            </div>
+                                                            <div class="post-info">
+                                                                <div class="post-head">
+                                                                    <p class="post-caption">SK네트웍스</p>
+                                                                    <p class="post-subject">SK렌터카, 창립 36주년 맞아 전사 봉사활동 실시</p>
+                                                                    <p class="post-summary">SK렌터카(대표이사 : 황일문)가 세계 3대 디자인 공모전 중 SK렌터카(대표이사 : 황일문)가 세계 3대 디자인 공모전 중 하나로 꼽히는 ‘IF 디자인 어워드 2024’에서 ‘플랫폼·UI(사용자 인터페이스)’ 부문 본상을 수상했다고 20일 밝혔다. ‘IF 디자인 어워드’는 독일 ‘인터내셔널 포럼 디자인’이 주관하는 디자인 공모전으로, 매년 50…
+                                                                    </p>
+                                                                </div>
+                                                                <div class="post-body">
+                                                                    <p class="post-date" title="등록일">2024.03.19</p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                    <a href="#" class="post-item">
+                                                        <div class="post-wrap">
+                                                            <div class="post-figure">
+                                                                <img src="../../../assets/images/ir/thumb-02.jpg" alt="ir뉴스 썸네일 이미지">
+                                                            </div>
+                                                            <div class="post-info">
+                                                                <div class="post-head">
+                                                                    <p class="post-caption">SK네트웍스</p>
+                                                                    <p class="post-subject">SK렌터카, 창립 36주년 맞아 전사 봉사활동 실시</p>
+                                                                    <p class="post-summary">SK렌터카(대표이사 : 황일문)가 세계 3대 디자인 공모전 중 SK렌터카(대표이사 : 황일문)가 세계 3대 디자인 공모전 중 하나로 꼽히는 ‘IF 디자인 어워드 2024’에서 ‘플랫폼·UI(사용자 인터페이스)’ 부문 본상을 수상했다고 20일 밝혔다. ‘IF 디자인 어워드’는 독일 ‘인터내셔널 포럼 디자인’이 주관하는 디자인 공모전으로, 매년 50…
+                                                                    </p>
+                                                                </div>
+                                                                <div class="post-body">
+                                                                    <p class="post-date" title="등록일">2024.03.19</p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                    <a href="#" class="post-item">
+                                                        <div class="post-wrap">
+                                                            <div class="post-figure">
+                                                                <img src="../../../assets/images/ir/thumb-02.jpg" alt="ir뉴스 썸네일 이미지">
+                                                            </div>
+                                                            <div class="post-info">
+                                                                <div class="post-head">
+                                                                    <p class="post-caption">SK네트웍스</p>
+                                                                    <p class="post-subject">SK렌터카, 창립 36주년 맞아 전사 봉사활동 실시</p>
+                                                                    <p class="post-summary">SK렌터카(대표이사 : 황일문)가 세계 3대 디자인 공모전 중 SK렌터카(대표이사 : 황일문)가 세계 3대 디자인 공모전 중 하나로 꼽히는 ‘IF 디자인 어워드 2024’에서 ‘플랫폼·UI(사용자 인터페이스)’ 부문 본상을 수상했다고 20일 밝혔다. ‘IF 디자인 어워드’는 독일 ‘인터내셔널 포럼 디자인’이 주관하는 디자인 공모전으로, 매년 50…
+                                                                    </p>
+                                                                </div>
+                                                                <div class="post-body">
+                                                                    <p class="post-date" title="등록일">2024.03.19</p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                                <div class="btn-display case1 align3">
+                                                    <div class="btn-area">
+                                                        <a class="btn design3 case1 type1 color2 ar-icon-plus-bg" href="#"><span class="btn-text">더보기</span></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <!-- //보도자료 -->
+                                        <!-- 소셜미디어 -->
+                                        <li class="panel-item">
+                                            <div class="panel-wrap">
+                                                <div class="board-list design3 case1 type1">
+                                                    <div class="board-item">
+                                                        <div class="board-wrap">
+                                                            <span class="board-info">
+                                                                <span class="board-name">SK네트웍스의 최신 소식과 더 많은 이야기를 들으시려면?</span>
+                                                            </span>
+                                                            <span class="board-util">
+                                                                <div class="btn-display design1 case2">
+                                                                    <div class="btn-area">
+                                                                        <a class="btn design1 case1 type1 color1" href="#"><span class="btn-text">구독</span></a>
+                                                                        <a class="btn design1 case1 type1 color2" href="#"><span class="btn-text">ㅅㅋN 방문</span></a>
+                                                                    </div>
+                                                                </div>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="post-list design1 case1 type2">
+                                                    <a href="#" class="post-item">
+                                                        <div class="post-wrap">
+                                                            <div class="post-figure">
+                                                                <img src="../../../assets/images/ir/thumb-04.jpg" alt="소셜미디어 썸네일 이미지">
+                                                                <span class="figure-name">비즈N</span>
+                                                            </div>
+                                                            <div class="post-info">
+                                                                <div class="post-head">
+                                                                    <p class="post-subject">이제는 개인 비서 시대?! 온디바이스 Ai가 만들어갈 미래 알아보기!</p>
+                                                                </div>
+                                                                <div class="post-body">
+                                                                    <p class="tag-list">
+                                                                        <span class="tag">#SK네트웍스</span>
+                                                                        <span class="tag">#ㅅㅋN</span>
+                                                                        <span class="tag">#생성형AI</span>
+                                                                        <span class="tag">#온디바이스AI</span>
+                                                                    </p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                    <a href="#" class="post-item">
+                                                        <div class="post-wrap">
+                                                            <div class="post-figure">
+                                                                <img src="../../../assets/images/ir/thumb-05.jpg" alt="소셜미디어 썸네일 이미지">
+                                                                <span class="figure-name">비즈N</span>
+                                                            </div>
+                                                            <div class="post-info">
+                                                                <div class="post-head">
+                                                                    <p class="post-subject">SK네트웍스, 탄소중립 경영 글로벌 기관 인정!</p>
+                                                                </div>
+                                                                <div class="post-body">
+                                                                    <p class="tag-list">
+                                                                        <span class="tag">#SK네트웍스</span>
+                                                                        <span class="tag">#ESG</span>
+                                                                        <span class="tag">#탄소</span>
+                                                                        <span class="tag">#글로벌경영</span>
+                                                                    </p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                    <a href="#" class="post-item">
+                                                        <div class="post-wrap">
+                                                            <div class="post-figure">
+                                                                <img src="../../../assets/images/ir/thumb-06.jpg" alt="소셜미디어 썸네일 이미지">
+                                                                <span class="figure-name">비즈N</span>
+                                                            </div>
+                                                            <div class="post-info">
+                                                                <div class="post-head">
+                                                                    <p class="post-subject">이제는 개인 비서 시대?! 온디바이스 Ai가 만들어갈 미래 알아보기!</p>
+                                                                </div>
+                                                                <div class="post-body">
+                                                                    <p class="tag-list">
+                                                                        <span class="tag">#SK네트웍스</span>
+                                                                        <span class="tag">#ㅅㅋN</span>
+                                                                        <span class="tag">#기업소식</span>
+                                                                        <span class="tag">#이슈콘텐츠</span>
+                                                                    </p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                    <a href="#" class="post-item">
+                                                        <div class="post-wrap">
+                                                            <div class="post-figure">
+                                                                <img src="../../../assets/images/ir/thumb-04.jpg" alt="소셜미디어 썸네일 이미지">
+                                                                <span class="figure-name">비즈N</span>
+                                                            </div>
+                                                            <div class="post-info">
+                                                                <div class="post-head">
+                                                                    <p class="post-subject">이제는 개인 비서 시대?! 온디바이스 Ai가 만들어갈 미래 알아보기!</p>
+                                                                </div>
+                                                                <div class="post-body">
+                                                                    <p class="tag-list">
+                                                                        <span class="tag">#SK네트웍스</span>
+                                                                        <span class="tag">#ㅅㅋN</span>
+                                                                        <span class="tag">#생성형AI</span>
+                                                                        <span class="tag">#온디바이스AI</span>
+                                                                    </p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                    <a href="#" class="post-item">
+                                                        <div class="post-wrap">
+                                                            <div class="post-figure">
+                                                                <img src="../../../assets/images/ir/thumb-05.jpg" alt="소셜미디어 썸네일 이미지">
+                                                                <span class="figure-name">비즈N</span>
+                                                            </div>
+                                                            <div class="post-info">
+                                                                <div class="post-head">
+                                                                    <p class="post-subject">SK네트웍스, 탄소중립 경영 글로벌 기관 인정!</p>
+                                                                </div>
+                                                                <div class="post-body">
+                                                                    <p class="tag-list">
+                                                                        <span class="tag">#SK네트웍스</span>
+                                                                        <span class="tag">#ESG</span>
+                                                                        <span class="tag">#탄소</span>
+                                                                        <span class="tag">#글로벌경영</span>
+                                                                    </p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                    <a href="#" class="post-item">
+                                                        <div class="post-wrap">
+                                                            <div class="post-figure">
+                                                                <img src="../../../assets/images/ir/thumb-06.jpg" alt="소셜미디어 썸네일 이미지">
+                                                                <span class="figure-name">비즈N</span>
+                                                            </div>
+                                                            <div class="post-info">
+                                                                <div class="post-head">
+                                                                    <p class="post-subject">이제는 개인 비서 시대?! 온디바이스 Ai가 만들어갈 미래 알아보기!</p>
+                                                                </div>
+                                                                <div class="post-body">
+                                                                    <p class="tag-list">
+                                                                        <span class="tag">#SK네트웍스</span>
+                                                                        <span class="tag">#ㅅㅋN</span>
+                                                                        <span class="tag">#기업소식</span>
+                                                                        <span class="tag">#이슈콘텐츠</span>
+                                                                    </p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                                <div class="btn-display case1 align3">
+                                                    <div class="btn-area">
+                                                        <a class="btn design3 case1 type1 color2 ar-icon-plus-bg" href="#"><span class="btn-text">더보기</span></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                         <!-- //소셜미디어 -->
+                                        <!-- 영상 라이브러리 -->
+                                        <li class="panel-item">
+                                            <div class="panel-wrap">
+                                                <div class="data-display video-layout">
+                                                    <div class="data-list">
+                                                        <div class="data-item">
+                                                            <div class="data-wrap">
+                                                                <div class="data-figure"> 
+                                                                    <iframe width="560" height="315" loading="lazy" src="https://www.youtube.com/embed/ZDs9Q9Cmyes" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                                                                </div>
+                                                                <div class="data-script">
+                                                                    <p class="head">비대면으로 편리하게 중고폰 ATM, 민팃</p>
+                                                                    <div class="body">
+                                                                        <p class="para">
+                                                                            영상 스크립트<br> 노출영역
+                                                                        </p>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="data-swiper">
+                                                                    <div class="swiper-area pr-swiper-area">
+                                                                        <div class="swiper-display swiper pr-swiper1">
+                                                                            <ul class="swiper-wrapper">
+                                                                                <li class="swiper-slide">
+                                                                                    <div class="img">
+                                                                                        <img src="../../../assets/images/pr/news-slide-01.jpg" alt="SK렌터카, 'IF 디자인 어워드 2024' 본상 수상">
+                                                                                    </div>
+                                                                                    <p class="para">
+                                                                                        집에서도 5성급 호텔처럼 숙면하는 방법은? SK매직 워커힐 스위트 룸 매트리스 편
+                                                                                    </p>
+                                                                                </li>
+                                                                                <li class="swiper-slide">
+                                                                                    <div class="img">
+                                                                                        <img src="../../../assets/images/pr/news-slide-01.jpg" alt="SK렌터카, 'IF 디자인 어워드 2024' 본상 수상">
+                                                                                    </div>
+                                                                                    <p class="para">
+                                                                                        집에서도 5성급 호텔처럼 숙면하는 방법은? SK매직 워커힐 스위트 룸 매트리스 편
+                                                                                    </p>
+                                                                                </li>
+                                                                                <li class="swiper-slide">
+                                                                                    <div class="img">
+                                                                                        <img src="../../../assets/images/pr/news-slide-01.jpg" alt="SK렌터카, 'IF 디자인 어워드 2024' 본상 수상">
+                                                                                    </div>
+                                                                                    <p class="para">
+                                                                                        집에서도 5성급 호텔처럼 숙면하는 방법은? SK매직 워커힐 스위트 룸 매트리스 편
+                                                                                    </p>
+                                                                                </li>
+                                                                                <li class="swiper-slide">
+                                                                                    <div class="img">
+                                                                                        <img src="../../../assets/images/pr/news-slide-01.jpg" alt="SK렌터카, 'IF 디자인 어워드 2024' 본상 수상">
+                                                                                    </div>
+                                                                                    <p class="para">
+                                                                                        집에서도 5성급 호텔처럼 숙면하는 방법은? SK매직 워커힐 스위트 룸 매트리스 편
+                                                                                    </p>
+                                                                                </li>
+                                                                            </ul>
+                                                                        </div>
+                                                                        <div class="swiper-control">
+                                                                            <button class="btn icon case1 arrow-left2-bg swiper-button-prev"><span class="btn-text blind">이전</span></button>
+                                                                            <button class="btn icon case1 arrow-right2-bg swiper-button-next"><span class="btn-text blind">다음</span></button>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <!-- //영상 라이브러리 -->
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <%-include('../_templates/_footer.ejs')%>
+</div>
+</body>
+</html>

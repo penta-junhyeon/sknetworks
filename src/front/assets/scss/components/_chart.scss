@@ -1,0 +1,365 @@
+.chart-display{
+    &.design1{
+        @include mobile {
+            .chart-wrap {
+                flex-direction: column;
+                gap: 2.4rem !important;
+                margin-bottom: 6.8rem !important;
+                .chart-aside{
+                    .chart-bar-color{
+                        display: flex;
+                        gap: 2.4rem;
+                        justify-content: center;
+                        flex-wrap: wrap;
+                    }
+                    .chart-util{
+                        @include font(small-5x, bold);
+                    }
+                    .chart-util{
+                        @include font(small-5x, bold);
+                    }
+                }
+                .mo-only{
+                    overflow: auto;
+                    img{
+                        width: 100%;
+                        min-width: 49.9rem;
+                    }
+                }
+            }
+        }
+        
+        &.case1{
+            .chart-list{
+                .chart-item{
+                    .chart-wrap{
+                        @include font(small-4x, medium);
+                        color: color(neutral, 080);
+                        display: flex;
+                        gap: 9.4rem;
+                        margin-bottom: 8rem;
+                        .chart-aside{
+                            .chart-bar-color{
+                                padding: 2.4rem;
+                                border: 0.1rem solid color(neutral, 030);
+                                border-radius: 8px;
+                                margin-bottom: 2.4rem;
+                            }
+                        }
+                        .chart-body{
+                            position: relative;
+                            .unit-list{
+                                display: flex;
+                                flex-direction: column;
+                                padding-bottom: 2.7rem;
+                                gap: 1.4rem;
+                                .unit-item{
+                                    position: relative;
+                                    display: flex;
+                                    align-items: center;
+                                    @include font(small-4x, bold);
+                                    color: color(neutral, 080);
+                                    &::after{
+                                        content: '';
+                                        display: block;
+                                        width: 89.5rem;
+                                        height: 0.1rem;
+                                        background-color: color(neutral, 030);
+                                        position: absolute;
+                                        margin-left: 7.6rem;
+                                    }
+                                    .num{
+                                        width: 100%;
+                                        text-align: right;
+                                    }
+                                }
+                            }
+
+                            .year-list{
+                                position: absolute;
+                                bottom: 0rem;
+                                display: flex;
+                                padding-left: 22.3rem;
+                                gap: 16.1rem;
+                                .year-item{
+                                    width: 12.4rem;
+                                    text-align: center;
+                                    @include font(small-3x, bold);
+                                    position: relative;
+                                    .graph-list{
+                                        position: absolute;
+                                        bottom: 0;
+                                        left: 0;
+                                        display: flex;
+                                        margin-bottom: 4rem;
+                                        gap: 2.4rem;
+                                        align-items: baseline;
+                                        justify-content: center;
+                                        .graph-item {
+                                            width: 3.2rem;
+                                            border-radius: 0.4rem 0.4rem 0 0;
+                                            cursor: pointer;
+                                            position: relative;
+
+                                            &.color1 {
+                                                background: linear-gradient(180deg, #9735D0 0%, rgba(151, 53, 208, 0.40) 100%);
+                                                .graph-subject::before {
+                                                    background: linear-gradient(180deg, #9735D0 0%, rgba(151, 53, 208, 0.40) 100%);
+                                                }
+                                            }
+                                            &.color2 {
+                                                background: linear-gradient(180deg, #6D0CA6 0%, rgba(109, 12, 166, 0.40) 100%);
+                                                .graph-subject::before {
+                                                    background: linear-gradient(180deg, #6D0CA6 0%, rgba(109, 12, 166, 0.40) 100%);
+                                                }
+                                            }
+                                            &.color3 {
+                                                background: linear-gradient(180deg, #E4E4E7 0%, rgba(228, 228, 228, 0.40) 100%);
+                                                .graph-subject::before {
+                                                    background: linear-gradient(180deg, #E4E4E7 0%, rgba(228, 228, 228, 0.40) 100%);
+                                                }
+                                            }
+                                        
+                                            // graph-info 기본 스타일
+                                            .graph-info {
+                                                position: absolute;
+                                                width: max-content;
+                                                display: flex;
+                                                align-items: center;
+                                                top: 0;
+                                                left: 50%;
+                                                transform: translateX(-50%);
+                                                padding: 0.8rem 1.6rem;
+                                                background: rgba(255, 255, 255, 0.85);
+                                                border-radius: 0.8rem;
+                                                border: 0.1rem solid color(semantic, 010);
+                                                opacity: 0;
+                                                transition: all 0.5s ease;
+                                                box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.08);
+                                                backdrop-filter: blur(2px);
+                                                z-index: 10;
+                                        
+                                                .graph-subject {
+                                                    position: relative;
+                                                    padding-left: 2.4rem;
+                                                    &::before {
+                                                        content: '';
+                                                        display: block;
+                                                        position: absolute;
+                                                        top: 50%;
+                                                        left: 0;
+                                                        transform: translateY(-50%);
+                                                        width: 1.6rem;
+                                                        height: 1.6rem;
+                                                        border-radius: 0.4rem;
+                                                    }
+                                                }
+                                            }
+                                        
+                                            // hover 효과
+                                            &:hover {
+                                                .graph-info {
+                                                    opacity: 1;
+                                                    z-index: 10;
+                                                }
+                                                &::after {
+                                                    content: attr(data-percent); /* data-percent 속성값을 content로 사용 */
+                                                    position: absolute;
+                                                    top: -1.5rem;
+                                                    left: 50%;
+                                                    transform: translateX(-50%);
+                                                    font-size: 1.2rem;
+                                                    color: #333; /* 텍스트 색상 */
+                                                    display: inline-block;
+                                                    z-index: 10;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        .chart-body-mobile{
+                          display: none;
+                        }
+                    }
+                }
+            }
+        }
+
+        &.case2{
+            .chart-list{
+                .chart-item{
+                    .chart-wrap{
+                        @include font(small-4x, medium);
+                        color: color(neutral, 080);
+                        display: flex;
+                        gap: 9.4rem;
+                        margin-bottom: 8rem;
+                        .chart-aside{
+                            .chart-bar-color{
+                                padding: 2.4rem;
+                                border: 0.1rem solid color(neutral, 030);
+                                border-radius: 8px;
+                                margin-bottom: 2.4rem;
+                            }
+                        }
+                        .chart-body{
+                            position: relative;
+                            .unit-list{
+                                display: flex;
+                                flex-direction: column;
+                                padding-bottom: 2.7rem;
+                                gap: 1.4rem;
+                                .unit-item{
+                                    position: relative;
+                                    display: flex;
+                                    align-items: center;
+                                    @include font(small-4x, bold);
+                                    color: color(neutral, 080);
+                                    &::after{
+                                        content: '';
+                                        display: block;
+                                        width: 89.5rem;
+                                        height: 0.1rem;
+                                        background-color: color(neutral, 030);
+                                        position: absolute;
+                                        margin-left: 7.6rem;
+                                    }
+                                    .num{
+                                        width: 100%;
+                                        text-align: right;
+                                    }
+                                }
+                            }
+
+                            .year-list{
+                                position: absolute;
+                                bottom: 3.8rem;
+                                display: flex;
+                                padding-left: 11.9rem;
+                                gap: 5.6rem;
+                                .year-item{
+                                    width: 12.4rem;
+                                    text-align: center;
+                                    @include font(small-3x, bold);
+                                    position: relative;
+                                    .year-head{
+                                        .year-subject{
+                                            position: absolute;
+                                            top: 1.1rem;
+                                            left: 50%;
+                                            transform: translateX(-50%);
+                                        }
+                                    }
+                                    .year-body{
+                                        .graph-list{
+                                            position: absolute;
+                                            bottom: 0;
+                                            left: 0;
+                                            display: flex;
+                                            margin-bottom: 4.1rem;
+                                            gap: 1.2rem;
+                                            align-items: baseline;
+                                            justify-content: center;
+                                            .graph-item {
+                                                width: 3.2rem;
+                                                border-radius: 0.4rem 0.4rem 0 0;
+                                                cursor: pointer;
+                                                position: relative;
+                                            
+                                                &.color1 {
+                                                    background: linear-gradient(180deg, #9735D0 0%, rgba(151, 53, 208, 0.40) 100%);
+                                                    .graph-subject::before {
+                                                        background: linear-gradient(180deg, #9735D0 0%, rgba(151, 53, 208, 0.40) 100%);
+                                                    }
+                                                }
+                                                &.color2 {
+                                                    background: linear-gradient(180deg, #6D0CA6 0%, rgba(109, 12, 166, 0.40) 100%);
+                                                    .graph-subject::before {
+                                                        background: linear-gradient(180deg, #6D0CA6 0%, rgba(109, 12, 166, 0.40) 100%);
+                                                    }
+                                                }
+                                                &.color3 {
+                                                    background: linear-gradient(180deg, #E4E4E7 0%, rgba(228, 228, 228, 0.40) 100%);
+                                                    .graph-subject::before {
+                                                        background: linear-gradient(180deg, #E4E4E7 0%, rgba(228, 228, 228, 0.40) 100%);
+                                                    }
+                                                }
+                                                &.mines{
+                                                    top: 0.7rem;
+                                                    border-radius: 0 0 0.4rem 0.4rem;
+                                                    background: linear-gradient(360deg, #E4E4E7 0%, rgba(228, 228, 228, 0.40) 100%);
+                                                    z-index: 9;
+                                                }
+                                            
+                                                // graph-info 기본 스타일
+                                                .graph-info {
+                                                    position: absolute;
+                                                    width: max-content;
+                                                    display: flex;
+                                                    align-items: center;
+                                                    top: 0;
+                                                    left: 50%;
+                                                    transform: translateX(-50%);
+                                                    padding: 0.8rem 1.6rem;
+                                                    background: rgba(255, 255, 255, 0.85);
+                                                    border-radius: 0.8rem;
+                                                    border: 0.1rem solid color(semantic, 010);
+                                                    opacity: 0;
+                                                    transition: all 0.5s ease;
+                                                    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.08);
+                                                    backdrop-filter: blur(2px);
+                                                    z-index: 10;
+                                            
+                                                    .graph-subject {
+                                                        position: relative;
+                                                        padding-left: 2.4rem;
+                                                        &::before {
+                                                            content: '';
+                                                            display: block;
+                                                            position: absolute;
+                                                            top: 50%;
+                                                            left: 0;
+                                                            transform: translateY(-50%);
+                                                            width: 1.6rem;
+                                                            height: 1.6rem;
+                                                            border-radius: 0.4rem;
+                                                        }
+                                                    }
+                                                }
+                                            
+                                                // hover 효과
+                                                &:hover {
+                                                    .graph-info {
+                                                        opacity: 1;
+                                                        z-index: 10;
+                                                    }
+                                                    &::after {
+                                                        content: attr(data-percent); /* data-percent 속성값을 content로 사용 */
+                                                        position: absolute;
+                                                        top: -1.5rem;
+                                                        left: 50%;
+                                                        transform: translateX(-50%);
+                                                        font-size: 1.2rem;
+                                                        color: #333; /* 텍스트 색상 */
+                                                        display: inline-block;
+                                                        z-index: 10;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        .chart-body-mobile{
+                          display: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}

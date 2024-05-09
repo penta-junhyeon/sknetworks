@@ -1,0 +1,216 @@
+
+#footer {
+    width: 100%;
+    padding: 6rem 6rem 4rem 6rem;
+    background-image: url(../images/common/bg-footer-pc.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-sizing: border-box;
+    @include mobile {
+        padding: 4rem 1.8rem;
+        background-image: url(../images/common/bg-footer-mo.jpg);
+    }
+
+   .footer-inner {
+        position: relative;
+        width: 100%;
+        .footer-head {
+            position: absolute;
+            top: 0.4rem;
+            left: 0;
+            width: 18rem;
+            height: 6.4rem;
+            z-index: 1;
+            @include mobile {
+                position: static;
+                width: 11.8rem;
+                height: 4.2rem;
+            }
+            .footer-subject {
+                display: block;
+                width: 100%;
+                height: 100%;
+                background-image: url(../images/logo/logo-w-e.svg);
+                background-repeat: no-repeat;
+                background-size: 100%;
+                box-sizing: border-box;
+            }
+
+            & + .footer-body {
+                @include mobile {
+                    margin-top: 4rem;
+                }
+            }
+        }
+        .footer-body {
+            .section {
+                &.policy {
+                    width: 100%;
+                    padding-left: 18rem;
+                    @include mobile {
+                        padding-left: 0;
+                    }
+                    .section-wrap {
+                        .section-body {
+                            display: flex;
+                            flex-direction: column;
+                            align-items: flex-end;
+                            @include mobile {
+                                flex-direction: row;
+                                justify-content: space-between;
+                            }
+                            .navi-list {
+                                display: flex;
+                                @include mobile {
+                                    flex-direction: column;
+                                }
+                                .navi-item {
+                                    position: relative;
+                                    .navi-text {
+                                        @include font(small-4x, medium); 
+                                        color: color(typo, 000);
+
+                                        @include mobile {
+                                            @include font(small-5x, bold);
+                                        }
+                                    }
+                                    & + .navi-item {
+                                        margin-left: 3rem;
+                                        @include mobile {
+                                            margin: 1.8rem 0 0 0;
+                                        }
+                                        &::before {
+                                            position: absolute;
+                                            top: 50%;
+                                            left: -1.5rem;
+                                            width: 0.1rem;
+                                            height: 1rem;
+                                            content: '';
+                                            transform: translateY(-50%);
+                                            background-color: color(neutral, 060);
+                                            opacity: 0.2;
+
+                                            @include mobile {
+                                                display: none;
+                                            }
+                                        }
+                                    }
+                                }
+                                & + .info-list {
+                                    margin-top: 2.4rem;
+                                    @include mobile {
+                                        margin-top: 0;
+                                    }
+                                }
+                            }
+                            .info-list {
+                                display: flex;
+                                .info-item {
+                                    background-repeat: no-repeat;
+                                    background-size: 100%;
+                                    &.ncsi {
+                                        width: 4.8rem;
+                                        height: 4rem;
+                                        background-image: url(../images/logo/logo-ncsi.svg);
+                                    }
+                                    &.isms {
+                                        width: 4.4rem;
+                                        height: 4rem;
+                                        background-image: url(../images/logo/logo-isms.svg);
+                                    }
+                                    & + .info-item {
+                                        margin-left: 2.4rem;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    & + .info {
+                        margin-top: 3.6rem;
+                        @include mobile {
+                            margin-top: 5.6rem;
+                        }
+                    }
+                }
+                &.info {
+                    padding: 2rem 42.2rem 0 0;
+                    @include mobile {
+                        padding: 0;
+                    }
+                    .section-wrap {
+                        .section-body {
+                            .data-list {
+                                display: flex;
+                                width: 43rem;
+                                flex-wrap: wrap;
+                                column-gap: 2rem;
+                                row-gap: 0.8rem;
+                                @include mobile {
+                                    width: 100%;
+                                }
+                                .data-item {
+                                    .data-text {
+                                        @include font(small-5x, medium);
+                                        color: color(neutral, 030);
+
+                                        @include mobile {
+                                            @include font(small-6x, medium);
+                                        }
+                                    }
+                                    &:last-child {
+                                        @media screen and (max-width: 760px) {
+                                            margin-top: 0.8rem;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    & + .family-site {
+                        @include mobile {
+                            margin-top: 3.2rem;
+                        }
+                    }
+                }
+                &.family-site {
+                    position: absolute;
+                    right: 0;
+                    bottom: 0;
+                    width: 42.3rem;
+                    height: 7rem;
+                    border-radius: .8rem;
+                    background-color: color(system, 100);
+                    z-index: 1;
+                    .btn-family {
+                        display: flex;
+                        position: relative;
+                        width: 100%;
+                        height: 100%;
+                        padding: 0 4rem;
+                        text-align: left;
+                        align-items: center;
+                        .btn-text {
+                            display: inline-block;
+                            color: color(secondary, 070);
+                            @include font(small-4x, medium);
+                        }
+                        &::after {
+                            position: absolute;
+                            right: 4rem;
+                            width: 2rem;
+                            height: 2rem;
+                            content: '';
+                            background-image: icon(arrow-down1, color(neutral, 030));
+                            background-position: center;
+                            background-repeat: no-repeat;
+                        }
+                    }
+                    @include mobile {
+                        position: static;
+                        width: 100% !important;
+                    }
+                }
+            }
+        }
+   }
+}
