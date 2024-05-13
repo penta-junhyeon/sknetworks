@@ -1,0 +1,11 @@
+"/sknetworks/dist/front" + 
+
+// front.html > local-body 밑에 추가
+<span class="date" style="
+    position: absolute;
+    top: 1rem;
+    right: 1.8rem;
+    font-size: 14px;
+    font-weight: 500;
+    color: #151515;
+">* 2024. 05. 10(금) 10:00시 기준</span>

@@ -343,7 +343,7 @@
                                     <div class="section-body">
                                         <div class="t-display design1 case1 type1 align3 scroll">
                                             <table style="min-width: 680px;">
-                                                <caption>표의 제목을 표현하기 위해 반드시 선언합니다.</caption>
+                                                <caption>발행한 주식의 총수, 소각한 주식의 총수, 발행주식 수, 자기주식 보유현황</caption>
                                                 <colgroup>
                                                     <col>
                                                     <col>
@@ -396,8 +396,8 @@
                                                     </div>
                                                     <div class="chart-body">
                                                         <div class="t-display design1 case1 type1 align3 scroll">
-                                                            <table style="min-width: 550px;">
-                                                                <caption>표의 제목을 표현하기 위해 반드시 선언합니다.</caption>
+                                                            <table>
+                                                                <caption>구분, 주식 수, 지분율</caption>
                                                                 <colgroup>
                                                                     <col>
                                                                     <col>
@@ -449,8 +449,8 @@
                                                     </div>
                                                     <div class="chart-body">
                                                         <div class="t-display design1 case1 type1 align3 scroll">
-                                                            <table style="min-width: 550px;">
-                                                                <caption>표의 제목을 표현하기 위해 반드시 선언합니다.</caption>
+                                                            <table>
+                                                                <caption>구분, 주식 수, 지분율</caption>
                                                                 <colgroup>
                                                                     <col>
                                                                     <col>
@@ -491,8 +491,8 @@
                                                                     </tr>
                                                                 </tbody>
                                                             </table>
-                                                            <p class="comment">* 2022.12.31 기준 </p>
                                                         </div>
+                                                        <p class="comment">* 2022.12.31 기준 </p>
                                                     </div>
                                                 </li>
                                             </ul>
@@ -510,11 +510,11 @@
                                     </div>
                                     <div class="section-body sk">
                                         <div class="table-result">
-                                            <div class="result-data">8,200</div>
+                                            <div class="result-data">8,200 <em><img src="../../../assets/images/ir/arrow-up.png" alt="증가"></em></div>
                                         </div>
                                         <div class="t-display design1 case1 type1 align3 scroll pc-only">
-                                            <table style="min-width: 680px;">
-                                                <caption>표의 제목을 표현하기 위해 반드시 선언합니다.</caption>
+                                            <table>
+                                                <caption>전일대비, 등락율, 고가, 저가, 거래량</caption>
                                                 <colgroup>
                                                     <col>
                                                     <col>
@@ -615,23 +615,27 @@
                                                             <div class="form radio design1 case1 type1">
                                                                 <ul class="radio-list">
                                                                     <li class="radio-item">
-                                                                        <label for="radio1">
-                                                                            <input type="radio" name="temp" value="r1" id="radio1" checked>2개월
+                                                                        <label for="two-month">
+                                                                            <input type="radio" name="year-sel" value="r1" id="radio1" checked>
+                                                                            <span class="option">2개월</span>
                                                                         </label>
                                                                     </li>
                                                                     <li class="radio-item">
                                                                         <label for="radio2">
-                                                                            <input type="radio" name="temp" value="r2" id="radio2">1년
+                                                                            <input type="radio" name="year-sel" value="r2" id="radio2">
+                                                                            <span class="option">1년</span>
                                                                         </label>
                                                                     </li>
                                                                     <li class="radio-item">
                                                                         <label for="radio3">
-                                                                            <input type="radio" name="temp" value="r3" id="radio3">2년
+                                                                            <input type="radio" name="year-sel" value="r3" id="radio3">
+                                                                            <span class="option">2년</span>
                                                                         </label>
                                                                     </li>
                                                                     <li class="radio-item">
                                                                         <label for="radio4">
-                                                                            <input type="radio" name="temp" value="r4" id="radio4">분단위
+                                                                            <input type="radio" name="year-sel" value="r4" id="radio4">
+                                                                            <span class="option">분단위</span>
                                                                         </label>
                                                                     </li>
                                                                 </ul>
@@ -639,7 +643,7 @@
                                                             <button class="refresh">새로고침</button>
                                                         </div>
                                                         <div class="chart-img-body">
-                                                            <img src="../../../assets/images/ir/main_chart.jpg" alt="">
+                                                            <img src="../../../assets/images/ir/main_chart.jpg" alt="시세 차트">
                                                         </div>
                                                     </div>
                                                 </li>
