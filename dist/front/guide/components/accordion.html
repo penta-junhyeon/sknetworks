@@ -25,7 +25,7 @@
 
     <script>
         document.addEventListener("DOMContentLoaded", () => {
-            Accoridion();
+            Accordion();
         });
     </script>
 </head>
@@ -148,20 +148,59 @@
                         </div>
                         <div class="section-body">
                             <div class="subsection">
-                                <div class="subsection-head">design1</div>
+                                <div class="subsection-head">열림 → 닫힘</div>
+                                <div class="subsection-body">
+                                    <!-- highlight-js -->
+                                    <pre class="highlight-js"><code class="html">&lt;div class=&quot;accordion-display collapse design1 case1 type1&quot;&gt;
+	&lt;div class=&quot;accordion-list&quot;&gt;
+		&lt;div class=&quot;accordion-item&quot;&gt;
+			&lt;div class=&quot;accordion-head&quot;&gt;
+				&lt;button type=&quot;button&quot; class=&quot;btn&quot; href=&quot;#&quot; aria-expanded=&quot;열림&quot; aria-controls=&quot;아코디언1&quot;&gt;
+					&lt;span class=&quot;btn-text&quot;&gt;Accordion Component&lt;/span&gt;
+				&lt;/button&gt;
+			&lt;/div&gt;
+			&lt;div class=&quot;accordion-body&quot; id=&quot;아코디언1&quot;&gt;
+				...
+			&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                                    <!-- //highlight-js -->
+                                    <div class="guide-accordion-area">
+                                        <!-- accordion-display -->
+                                        <div class="accordion-display collapse design1 case1 type1">
+                                            <div class="accordion-list">
+                                                <div class="accordion-item">
+                                                    <div class="accordion-head">
+                                                        <button type="button" class="btn design3 case4 type3 color5" href="#" aria-expanded="열림" aria-controls="아코디언1"><span class="btn-text">Accordion Component</span></button>
+                                                    </div>
+                                                    <div class="accordion-body" id="아코디언1">
+                                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos, suscipit neque error doloribus quia impedit exercitationem sapiente voluptates nemo totam.
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- //accordion-display -->
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="subsection">
+                                <div class="subsection-head">닫힘 → 열림</div>
                                 <div class="subsection-body">
                                     <!-- highlight-js -->
                                     <pre class="highlight-js"><code class="html">&lt;div class=&quot;accordion-display design1 case1 type1&quot;&gt;
-    &lt;div class=&quot;accordion-list&quot;&gt;
-        &lt;div class=&quot;accordion-item&quot;&gt;
-            &lt;div class=&quot;accordion-head&quot;&gt;
-                &lt;button type=&quot;button&quot; class=&quot;btn&quot; href=&quot;#&quot;&gt;&lt;span class=&quot;btn-text&quot;&gt;...&lt;/span&gt;&lt;/button&gt;
-            &lt;/div&gt;
-            &lt;div class=&quot;accordion-body&quot;&gt;
-                ...
-            &lt;/div&gt;
-        &lt;/div&gt;
-    &lt;/div&gt;
+	&lt;div class=&quot;accordion-list&quot;&gt;
+		&lt;div class=&quot;accordion-item&quot;&gt;
+			&lt;div class=&quot;accordion-head&quot;&gt;
+				&lt;button type=&quot;button&quot; class=&quot;btn&quot; href=&quot;#&quot; aria-expanded=&quot;닫힘&quot; aria-controls=&quot;아코디언2&quot;&gt;
+					&lt;span class=&quot;btn-text&quot;&gt;Accordion Component&lt;/span&gt;
+				&lt;/button&gt;
+			&lt;/div&gt;
+			&lt;div class=&quot;accordion-body&quot; id=&quot;아코디언2&quot;&gt;
+				...
+			&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
 &lt;/div&gt;</code></pre>
                                     <!-- //highlight-js -->
                                     <div class="guide-accordion-area">
@@ -170,9 +209,9 @@
                                             <div class="accordion-list">
                                                 <div class="accordion-item">
                                                     <div class="accordion-head">
-                                                        <button type="button" class="btn design3 case4 type3 color5" href="#"><span class="btn-text">Accordion name</span></button>
+                                                        <button type="button" class="btn design3 case4 type3 color5" href="#" aria-expanded="닫힘" aria-controls="아코디언2"><span class="btn-text">Accordion Component</span></button>
                                                     </div>
-                                                    <div class="accordion-body">
+                                                    <div class="accordion-body" id="아코디언2">
                                                         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos, suscipit neque error doloribus quia impedit exercitationem sapiente voluptates nemo totam.
                                                     </div>
                                                 </div>
@@ -185,6 +224,7 @@
                         </div>
                     </div>
                     <!-- //section -->
+
                 </div>
                 <!-- //local-body -->
             </div>

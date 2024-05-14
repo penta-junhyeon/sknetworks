@@ -321,7 +321,7 @@
 
                         </ul>
                     </div>
-                    <div class="local-head design5" local-animation="greetings">
+                    <div class="local-head design5" local-animation="case-2">
                         <div class="local-subject">
                             <h2 class="local-name">SK네트웍스는<br> 사회적 가치를 창출합니다.</h2>
                         </div>
@@ -331,8 +331,7 @@
                             </div>
                         </div>
                         <div class="local-figure">
-                            <img src="../../assets/images/company/bg-local-head-greetings-pc.jpg" alt=" " class="pc-only">
-                            <img src="../../assets/images/company/bg-local-head-greetings-mo.jpg" alt=" " class="mo-only">
+                            <img src="../../assets/images/company/bg-local-head-greetings-pc.jpg" alt=" ">
                         </div>
                         <div class="local-util">
                             <p class="scroll-guide">Scroll Down</p>
@@ -341,7 +340,7 @@
                     <div class="local-body">
                         <div class="content-head blind">주가정보 페이지</div>
                         <div class="content-body">
-                            <div class="section representative-greetings" style="height:100vh; position: relative;" data-bui-animation="type-1">
+                            <div class="section representative-greetings" style="height:100vh; position: relative;">
 
                             </div>
                         </div>
@@ -407,57 +406,7 @@
     </div>
     <script>
         $(document).ready(function() {
-            localAnimations_Greetings();
-
-            function localAnimations_Greetings() {
-                $('[local-animation="greetings"]').each(function() {
-                    $header = $('header');
-                    $this = $(this);
-                    $breadcrumb = $this.prev('.local-info').find('.data-list.breadcrumb');
-                    $main = $this.parents('.main');
-                    $breadcrumb.removeClass('case1').addClass('case2');
-
-                    setTimeout(function() {
-                        $breadcrumb.addClass('active1');
-                        $this.addClass('active1');
-                    }, 500);
-
-                    setTimeout(function() {
-                        $header.removeClass('light').addClass('transparent');
-                        $breadcrumb.removeClass('dark').addClass('light');
-                        $breadcrumb.addClass('active2');
-                        $this.addClass('active2');
-                        setTimeout(function() {
-                            main.classList.add('active1');
-                        }, 500);
-                    }, 1500);
-                });
-
-                gsap.utils.toArray('[local-animation="greetings"]').forEach((section, index) => {
-                    var header = $(section).closest('.main').prev('header');
-                    var breadcrumb = $(section).closest('.main').find('.local-info .data-list.breadcrumb');
-                    var representativeGreetings = $(section).closest('.main').find('.representative-greetings');
-                    var main = $(section).closest('.main');
-
-                    gsap.to(section, {
-                        scrollTrigger: {
-                            //markers: true,
-                            trigger: section,
-                            start: '105% bottom',
-                            end: 'top bottom',
-
-                            onEnter: function(self) {
-                                section.classList.add('active3');
-                                main.addClass('active2');
-                            },
-                            onLeaveBack: function(self) {
-                                section.classList.remove('active3');
-                                main.removeClass('active2');
-                            },
-                        }
-                    });
-                });
-            }
+            localAnimations_Case02();
         });
     </script>
 </body>

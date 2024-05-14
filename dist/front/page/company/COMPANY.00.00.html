@@ -23,6 +23,11 @@
         });
     </script>
 </head>
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        Tab();
+    });
+</script>
 
 <body class="kr">
     <div id="wrap">
@@ -332,8 +337,8 @@
                             </div>
                         </div>
                         <div class="local-figure">
-                            <img src="../../assets/images/company/bg-local-head-greetings-pc.jpg" alt=" " class="pc-only">
-                            <img src="../../assets/images/company/bg-local-head-introduction-pc.jpg" alt=" " class="mo-only">
+                            <!-- <img src="../../assets/images/company/bg-local-head-introduction-pc.jpg" alt=" "> -->
+                            <video preload="auto" autoplay="true" loop="loop" muted="muted" poster="" src="../../assets/movies/bg-local-head-company-introduction.mp4"></video>
                         </div>
                         <div class="local-util">
                             <p class="scroll-guide">Scroll Down</p>
@@ -342,7 +347,157 @@
                     <div class="local-body">
                         <div class="content-head blind">주가정보 페이지</div>
                         <div class="content-body">
-                            <div class="section" style="height:1000px; background-color: #fff;"></div>
+                            <!-- tab-display -->
+                            <div class="tab-display design1 case1 type1">
+                                <div class="swiper tab-wrap">
+                                    <ul class="swiper-wrapper tab-list" role="tablist">
+                                        <li id="tab1" class="swiper-slide tab-item" aria-controls="tab-panel1"><button role="tab" class="tab-text">본사 소개</button></li>
+                                        <li id="tab2" class="swiper-slide tab-item" aria-controls="tab-panel2"><button role="tab" class="tab-text">자회사 소개</button></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <!-- //tab-display -->
+                            <!-- panel-display -->
+                            <div class="panel-display design1">
+                                <ul class="panel-list">
+                                    <li id="tab-panel1" class="panel-item" role="tabpanel">
+                                        <div class="panel-wrap">
+                                            <div class="section story1">
+                                                <div class="section-body">
+                                                    <div class="post-list">
+                                                        <div class="post-item">
+                                                            <div class="post-wrap">
+                                                                <div class="post-figure"></div>
+                                                                <div class="post-body">
+                                                                    <p class="para">SK네트웍스는 사회적 책임 활동을 다하고<br>제공하는 제품과 서비스의 혁신을 통해</p>
+                                                                    <p class="para">우리사회가 갖고 있는 다양한 문제를 해결해 나감으로써<br>다양한 이해관계자로부터 사랑과 지지를 받고 지속가능한 성장을 이룰 것입니다.</p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="section story2">
+                                                <div class="section-body">
+                                                    <div class="post-list">
+                                                        <div class="post-item">
+                                                            <div class="post-wrap">
+                                                                <div class="post-figure"></div>
+                                                                <div class="post-body">
+                                                                    <p class="para">
+                                                                        구성원이 즐겁게 일하고<br>
+                                                                        가치가 올라가는 회사가 될 수 있는<br>
+                                                                        기업문화를 조성하고 있습니다.<br>
+                                                                    </p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="section story3">
+                                                <div class="section-body">
+                                                    <div class="post-list">
+                                                        <div class="post-item">
+                                                            <div class="post-wrap">
+                                                                <div class="post-head">
+                                                                    <em class="post-sub">이러한 기업문화를 바탕으로</em>
+                                                                </div>
+                                                                <div class="post-body">
+                                                                    <p class="para">
+                                                                        고객중심의 새로운 가치를 찾는<br>
+                                                                        SK네트웍스의 모습을 완성하겠습니다.
+                                                                    </p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="section story4">
+                                                <div class="section-body">
+                                                    <div class="post-list">
+                                                        <div class="post-item">
+                                                            <div class="post-wrap">
+                                                                <div class="post-figure">
+                                                                    <img src="../../assets/images/company/story4-mountaion.png" alt=" ">
+                                                                </div>
+                                                                <div class="post-body">
+                                                                    <div class="data-list">
+                                                                        <div class="data-item one">
+                                                                            <p class="data-text">고객과</p>
+                                                                        </div>
+                                                                        <div class="data-item two">
+                                                                            <p class="data-text">함께한</p>
+                                                                        </div>
+                                                                        <div class="data-item three">
+                                                                            <p class="data-text"><em class="accent">70년</em></p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="section story5">
+                                                <div class="section-head">
+                                                    <div class="section-subject">
+                                                        <h4 class="section-name">business development</h4>
+                                                    </div>
+                                                    ` <p class="section-summary">
+                                                        SK네트웍스는 작은 직물회사에서 시작해 시대와 산업 변화에 발맞춰 패션, 무역, 에너지 도/소매 및 자동차 경정비,<br class="pc-only">
+                                                        정보통신 유통, 호텔, 가전 및 자동차 렌털 사업 등으로 사업모델을 전환하며 지속적인 도전과 개척의 시간을 거쳐왔습니다.
+                                                    </p>
+                                                </div>
+                                                <div class="section-body">
+                                                    <div class="post-list">
+                                                        <div class="post-item">
+                                                            <div class="product-list">
+                                                                <div class="product-item">
+                                                                    <div class="product-wrap">
+                                                                        <div class="product-figure"><img src="" alt=""></div>
+                                                                        <div class="product-body">
+                                                                            <p class="para">
+                                                                                SK네트웍스는 디지털 전환, Web3, 지속가능성 영역 등<br class="pc-only">
+                                                                                미래 유망 사업에 대한 투자를 중심으로 포트폴리오를 확장하고<br class="pc-only">
+                                                                                지속 가능한 사업형 투자회사로의 전환을 가속화하고 있습니다.
+                                                                            </p>
+                                                                            <a href="#" class="btn design3 case1 type1 color2 ar-icon-arrow-right2-bg"><span class="btn-text">VIEW MORE</span></a>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="post-item">
+                                                            <div class="product-list">
+                                                                <div class="product-item">
+                                                                    <div class="product-wrap">
+                                                                        <div class="product-figure"></div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li id="tab-panel2" class="panel-item" role="tabpanel">
+                                        <div class="panel-wrap">
+                                            <div class="section">
+                                                <div class="section-head blind">
+                                                    <h4 class="section-name">본사 소개</h4>
+                                                </div>
+                                                <div class="section-body">
+                                                    <a href="#">2asdfasdfdfgdfasdf</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- //panel-display -->
                         </div>
                     </div>
                 </div>
@@ -407,6 +562,20 @@
     <script>
         $(document).ready(function() {
             localAnimations_Case01();
+
+            gsap.utils.toArray('.story4 .data-list .data-item').forEach((item, index) => {
+                gsap.to(item, {
+                    y: -100,
+                    ease: "none",
+                    scrollTrigger: {
+                        trigger: ".story4",
+                        // markers: true,
+                        start: "center bottom",
+                        end: "top top",
+                        scrub: true
+                    },
+                });
+            });
         });
     </script>
 </body>

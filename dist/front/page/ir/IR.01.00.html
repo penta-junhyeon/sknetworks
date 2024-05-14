@@ -24,7 +24,7 @@
     </script>
     <script>
         document.addEventListener("DOMContentLoaded", () => {
-            AccordionOpen();
+            Accordion();
         });
     </script>
 </head>
@@ -336,7 +336,7 @@
                     <div class="local-body">
                         <div class="content-head">주가정보 페이지</div>
                         <div class="content-body ir">
-                            <div class="section financial-sit design1 case1 type1 area-1">
+                            <div class="section design1 case1 type1 ">
                                 <div class="section-wrap">
                                     <div class="section-head">
                                         <div class="section-title">
@@ -427,7 +427,7 @@
 
                                                                                 <div class="graph-item color2" style="height: 13.7rem;">
                                                                                     <div class="graph-info">
-                                                                                        <span class="graph-subject">부채총계 : </span><span class="graph-data">&nbsp;70,485</span>
+                                                                                        <span class="graph-subject">부채총계 : </span><span class="graph-data">&nbsp;50,395</span>
                                                                                     </div>
                                                                                 </div>
 
@@ -463,19 +463,19 @@
                                                                     </div>
                                                                 </div>
                                                                 <div class="data-body">
-                                                                    <div class="accordion-display design1 case1">
+                                                                    <div class="accordion-display collapse design1 case1">
                                                                         <div class="accordion-list">
                                                                             <div class="accordion-item">
                                                                                 <div class="accordion-head">
                                                                                     <div class="data-tr">
                                                                                         <span class="data-th al">
-                                                                                            <button type="button" class="btn design3 case4 type1 color8 ar-icon-arrow-down1-line" href="#"><span class="btn-text">자산총계</span></button>
+                                                                                            <button type="button" class="btn design3 case4 type1 color8 ar-icon-arrow-down1-line" aria-expanded="열림" aria-controls="total-assets"><span class="btn-text">자산총계</span></button>
                                                                                         </span>
                                                                                         <span class="data-th">91,104</span>
                                                                                         <span class="data-th">94,993</span>
                                                                                     </div>
                                                                                 </div>
-                                                                                <div class="accordion-body">
+                                                                                <div class="accordion-body" id="total-assets">
                                                                                     <div class="data-tr">
                                                                                         <span class="data-td">유동자산</span>
                                                                                         <span class="data-td">23,715</span>
@@ -490,19 +490,19 @@
                                                                             </div>
                                                                         </div>
                                                                     </div>
-                                                                    <div class="accordion-display design1 case1">
+                                                                    <div class="accordion-display collapse design1 case1">
                                                                         <div class="accordion-list">
                                                                             <div class="accordion-item">
                                                                                 <div class="accordion-head">
                                                                                     <div class="data-tr">
                                                                                         <span class="data-th al">
-                                                                                            <button type="button" class="btn design3 case4 type1 color8 ar-icon-arrow-down1-line" href="#"><span class="btn-text">부채총계</span></button>
+                                                                                            <button type="button" class="btn design3 case4 type1 color8 ar-icon-arrow-down1-line" aria-expanded="열림" aria-controls="total-liabilities"><span class="btn-text">부채총계</span></button>
                                                                                         </span>
                                                                                         <span class="data-th">69,545</span>
                                                                                         <span class="data-th">70,485</span>
                                                                                     </div>
                                                                                 </div>
-                                                                                <div class="accordion-body">
+                                                                                <div class="accordion-body" id="total-liabilities">
                                                                                     <div class="data-tr">
                                                                                         <span class="data-td">유동부채</span>
                                                                                         <span class="data-td">39,084</span>
@@ -527,19 +527,19 @@
                                                                         <span class="data-th">6,889</span>
                                                                         <span class="data-th">8,450</span>
                                                                     </div>
-                                                                    <div class="accordion-display design1 case1">
+                                                                    <div class="accordion-display collapse design1 case1">
                                                                         <div class="accordion-list">
                                                                             <div class="accordion-item">
                                                                                 <div class="accordion-head">
                                                                                     <div class="data-tr">
                                                                                         <span class="data-th al">
-                                                                                            <button type="button" class="btn design3 case4 type1 color8 ar-icon-arrow-down1-line" href="#"><span class="btn-text">차입금</span></button>
+                                                                                            <button type="button" class="btn design3 case4 type1 color8 ar-icon-arrow-down1-line" aria-expanded="열림" aria-controls="debt"><span class="btn-text">차입금</span></button>
                                                                                         </span>
                                                                                         <span class="data-th">51,625</span>
                                                                                         <span class="data-th">70,485</span>
                                                                                     </div>
                                                                                 </div>
-                                                                                <div class="accordion-body">
+                                                                                <div class="accordion-body" id="debt">
                                                                                     <div class="data-tr">
                                                                                         <span class="data-td">단기차입금</span>
                                                                                         <span class="data-td">10,411</span>
@@ -570,7 +570,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="section financial-sit design1 case1 type1 area-1">
+                            <div class="section design1 case1 type1 ">
                                 <div class="section-wrap">
                                     <div class="section-head">
                                         <div class="section-title">
@@ -578,7 +578,7 @@
                                         </div>
                                     </div>
                                     <div class="section-body">
-                                        <div class="chart-display design1 case2">
+                                        <div class="chart-display design1 case2 scroll">
                                             <div class="chart-list">
                                                 <div class="chart-item">
                                                     <div class="chart-wrap">
@@ -820,8 +820,8 @@
                                                     </tbody>
                                                 </table>
                                             </div>
+                                            <p class="comment">* K-IFRS연결대차대조표 기준</p>
                                         </div>
-                                        <p class="comment">* K-IFRS연결대차대조표 기준</p>
                                     </div>
                                 </div>
                             </div>

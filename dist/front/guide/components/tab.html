@@ -167,12 +167,12 @@
                                     <div class="guide-tab-area">
                                         <div class="tab-display design1 case1 type1">
                                             <div class="swiper tab-wrap">
-                                                <ul class="swiper-wrapper tab-list">
-                                                    <li class="swiper-slide tab-item">
-                                                        <button class="tab-text">Tab 1</button>
+                                                <ul class="swiper-wrapper tab-list" role="tablist">
+                                                    <li id="tab1" class="swiper-slide tab-item" aria-controls="tab-panel1">
+                                                        <button role="tab" class="tab-text">Tab 1</button>
                                                     </li>
-                                                    <li class="swiper-slide tab-item">
-                                                        <button class="tab-text">Tab 2</button>
+                                                    <li id="tab2" class="swiper-slide tab-item" aria-controls="tab-panel2">
+                                                        <button role="tab" class="tab-text">Tab 2</button>
                                                     </li>
                                                 </ul>
                                             </div>
@@ -207,12 +207,12 @@
                                     <div class="guide-tab-panel-area">
                                         <div class="panel-display design1">
                                             <ul class="panel-list">
-                                                <li class="panel-item">
+                                                <li id="tab-panel1" class="panel-item" role="tabpanel">
                                                     <div class="panel-wrap">
                                                         <span>Panel 1</span>
                                                     </div>
                                                 </li>
-                                                <li class="panel-item">
+                                                <li id="tab-panel2" class="panel-item" role="tabpanel">
                                                     <div class="panel-wrap">
                                                         <span>Panel 2</span>
                                                     </div>
