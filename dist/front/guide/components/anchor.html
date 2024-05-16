@@ -10,22 +10,25 @@
     <!-- <link rel="shortcut icon" href="./../../assets/images/bui/favicon.ico" /> -->
     <link rel="stylesheet" type="text/css" href="../../assets/css/style.css" />
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/styles/github.min.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/languages/bash.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/ScrollToPlugin.min.js"></script>
-    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
-
+    <script src="../../assets/js/gsap.min.js"></script>
+    <script src="../../assets/js/ScrollTrigger.min.js"></script>
+    <script src="../../assets/js/ScrollToPlugin.min.js"></script>
+    <script src="../../assets/js/swiper-bundle.min.js"></script>
     <script>
         hljs.initHighlightingOnLoad();
     </script>
     <script src="./../../assets/js/guide.js"></script>
+    <script src="./../../assets/js/bootstrap.bundle.min.js"></script>
 
     <script>
         document.addEventListener("DOMContentLoaded", () => {
             Anchor()
+
+            var scrollSpy = new bootstrap.ScrollSpy(document.body, {
+                target: '#navbar-example2'
+            })
         });
     </script>
 </head>
@@ -201,6 +204,42 @@
                                     </div>
                                     <div class="anchor-panel" id="Beginning" style="width: 100%; height: 50vh; background-color: rgb(0, 32, 128);">
 
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="subsection" style="position: relative;">
+                                <div class="subsection-head">demos</div>
+                                <div class="subsection-body">
+                                    <nav id="navbar-example2" class="navbar navbar-light bg-light px-3">
+                                        <ul class="nav nav-pills" style="display: flex;">
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="#scrollspyHeading1">First</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="#scrollspyHeading2">Second</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="#scrollspyHeading3">3</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="#scrollspyHeading4">4</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="#scrollspyHeading5">5</a>
+                                            </li>
+                                        </ul>
+                                    </nav>
+                                    <div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-offset="0" class="scrollspy-example" tabindex="0">
+                                        <h4 id="scrollspyHeading1">First heading</h4>
+                                        <p style="font-size: 20px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem et alias ipsam ullam modi dicta molestiae voluptatum laboriosam veniam voluptates maiores quasi, facere aliquid, atque accusantium est adipisci voluptatibus cupiditate soluta, saepe recusandae! Voluptatibus incidunt, temporibus nam ea reiciendis iure explicabo quo consequuntur cumque optio harum, earum sed consequatur enim officiis. Molestiae nesciunt non ullam. A repellendus praesentium ex molestias aut doloribus, sit ad velit aspernatur earum provident, quo ipsum natus dolor quod minus delectus dolores ipsam nemo facilis magnam blanditiis. Assumenda nihil ipsa exercitationem laboriosam quia autem unde maiores ipsam, cupiditate accusantium eveniet repellat rem ea quidem expedita velit?</p>
+                                        <h4 id="scrollspyHeading2">Second heading</h4>
+                                        <p style="font-size: 20px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem et alias ipsam ullam modi dicta molestiae voluptatum laboriosam veniam voluptates maiores quasi, facere aliquid, atque accusantium est adipisci voluptatibus cupiditate soluta, saepe recusandae! Voluptatibus incidunt, temporibus nam ea reiciendis iure explicabo quo consequuntur cumque optio harum, earum sed consequatur enim officiis. Molestiae nesciunt non ullam. A repellendus praesentium ex molestias aut doloribus, sit ad velit aspernatur earum provident, quo ipsum natus dolor quod minus delectus dolores ipsam nemo facilis magnam blanditiis. Assumenda nihil ipsa exercitationem laboriosam quia autem unde maiores ipsam, cupiditate accusantium eveniet repellat rem ea quidem expedita velit?</p>
+                                        <h4 id="scrollspyHeading3">Third heading</h4>
+                                        <p style="font-size: 20px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem et alias ipsam ullam modi dicta molestiae voluptatum laboriosam veniam voluptates maiores quasi, facere aliquid, atque accusantium est adipisci voluptatibus cupiditate soluta, saepe recusandae! Voluptatibus incidunt, temporibus nam ea reiciendis iure explicabo quo consequuntur cumque optio harum, earum sed consequatur enim officiis. Molestiae nesciunt non ullam. A repellendus praesentium ex molestias aut doloribus, sit ad velit aspernatur earum provident, quo ipsum natus dolor quod minus delectus dolores ipsam nemo facilis magnam blanditiis. Assumenda nihil ipsa exercitationem laboriosam quia autem unde maiores ipsam, cupiditate accusantium eveniet repellat rem ea quidem expedita velit?</p>
+                                        <h4 id="scrollspyHeading4">Fourth heading</h4>
+                                        <p style="font-size: 20px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem et alias ipsam ullam modi dicta molestiae voluptatum laboriosam veniam voluptates maiores quasi, facere aliquid, atque accusantium est adipisci voluptatibus cupiditate soluta, saepe recusandae! Voluptatibus incidunt, temporibus nam ea reiciendis iure explicabo quo consequuntur cumque optio harum, earum sed consequatur enim officiis. Molestiae nesciunt non ullam. A repellendus praesentium ex molestias aut doloribus, sit ad velit aspernatur earum provident, quo ipsum natus dolor quod minus delectus dolores ipsam nemo facilis magnam blanditiis. Assumenda nihil ipsa exercitationem laboriosam quia autem unde maiores ipsam, cupiditate accusantium eveniet repellat rem ea quidem expedita velit?</p>
+                                        <h4 id="scrollspyHeading5">Fifth heading</h4>
+                                        <p style="font-size: 20px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem et alias ipsam ullam modi dicta molestiae voluptatum laboriosam veniam voluptates maiores quasi, facere aliquid, atque accusantium est adipisci voluptatibus cupiditate soluta, saepe recusandae! Voluptatibus incidunt, temporibus nam ea reiciendis iure explicabo quo consequuntur cumque optio harum, earum sed consequatur enim officiis. Molestiae nesciunt non ullam. A repellendus praesentium ex molestias aut doloribus, sit ad velit aspernatur earum provident, quo ipsum natus dolor quod minus delectus dolores ipsam nemo facilis magnam blanditiis. Assumenda nihil ipsa exercitationem laboriosam quia autem unde maiores ipsam, cupiditate accusantium eveniet repellat rem ea quidem expedita velit?</p>
                                     </div>
                                 </div>
                             </div>

@@ -17,12 +17,25 @@
     <script src="./../../assets/js/ScrollToPlugin.min.js"></script>
     <script src="./../../assets/js/swiper-bundle.min.js"></script>
     <script src="./../../assets/js/common.js"></script>
+    <script src="./../../assets/js/bootstrap.bundle.min.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             frontCommon.Html.reset();
         });
     </script>
 </head>
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const brandInquiry = document.querySelector(".section.brand-inquiry")
+        const brandInquiryItem = brandInquiry.querySelectorAll(".board-item")
+
+        brandInquiryItem.forEach(item => {
+            item.addEventListener("mouseenter", function() {
+                brandInquiry.dataset.back = item.dataset.list
+            })
+        });
+    });
+</script>
 
 <body class="kr">
     <div id="wrap">
@@ -339,7 +352,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="section design1 case1 type1 brand-inquiry">
+                            <div class="section design1 case1 type1 brand-inquiry" data-back="none">
                                 <div class="section-wrap">
                                     <div class="section-head">
                                         <div class="section-subject">
@@ -351,45 +364,43 @@
                                     </div>
                                     <div class="section-body">
                                         <ul class="board-list brand-inquiry">
-                                            <li class="board-item">
+                                            <li class="board-item" data-list="skMagic">
                                                 <div class="board-wrap">
                                                     <a href="https://service.skmagic.com/web/main/main.do" target='_blank'>
                                                         <img src="../../assets/images/etc/logo-skMagic.svg" alt="SK매직 로고">
+                                                        <strong class="board-name">SK매직</strong>
                                                     </a>
                                                 </div>
                                             </li>
-                                            <li class="board-item">
+                                            <li class="board-item" data-list="rentarCar">
                                                 <div class="board-wrap">
                                                     <a href="https://www.skcarrental.com/rent/custcnte/counsel/long_reqt_form.do#none" target='_blank'>
                                                         <img src="../../assets/images/etc/logo-rentalCar.svg" alt="SK렌터카 로고">
+                                                        <strong class="board-name">SK렌터카</strong>
                                                     </a>
                                                 </div>
                                             </li>
-                                            <li class="board-item">
+                                            <li class="board-item" data-list="speedMate">
                                                 <div class="board-wrap">
                                                     <a href="https://www.speedmate.com/customer/FAQ" target='_blank'>
                                                         <img src="../../assets/images/etc/logo-speedMate.svg" alt="스피드메이트 로고">
+                                                        <strong class="board-name">스피드메이트</strong>
                                                     </a>
                                                 </div>
                                             </li>
-                                            <li class="board-item">
-                                                <div class="board-wrap">
-                                                    <a href="https://www.tire-pick.com/cs-center" target='_blank'>
-                                                        <img src="../../assets/images/etc/logo-tirePick.svg" alt="타이어픽 로고">
-                                                    </a>
-                                                </div>
-                                            </li>
-                                            <li class="board-item">
+                                            <li class="board-item" data-list="grandWalkerHill">
                                                 <div class="board-wrap">
                                                     <a href="https://www.walkerhill.com/customer/VOCForm.wh" target='_blank'>
                                                         <img src="../../assets/images/etc/logo-grandWalkerhillSeoul.svg" alt="그랜드워커힐서울 로고">
+                                                        <strong class="board-name">그랜드워커힐</strong>
                                                     </a>
                                                 </div>
                                             </li>
-                                            <li class="board-item">
+                                            <li class="board-item" data-list="mintit">
                                                 <div class="board-wrap">
                                                     <a href="https://www.mintit.co.kr/cscenter/faq.do" target='_blank'>
                                                         <img src="../../assets/images/etc/logo-mintit.svg" alt="민팃 로고">
+                                                        <strong class="board-name">MINTIT</strong>
                                                     </a>
                                                 </div>
                                             </li>
@@ -435,7 +446,7 @@
                                             </h4>
                                         </div>
                                     </div>
-                                    <div class="section-body">
+                                    <div class="section-body scroll">
                                         <div class="board-list inquiry-process">
                                             <div class="board-item regi">
                                                 <div class="board-wrap">

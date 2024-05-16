@@ -17,9 +17,77 @@
     <script src="./../../assets/js/ScrollToPlugin.min.js"></script>
     <script src="./../../assets/js/swiper-bundle.min.js"></script>
     <script src="./../../assets/js/common.js"></script>
+    <script src="./../../assets/js/bootstrap.bundle.min.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             frontCommon.Html.reset();
+        });
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+
+            // bootstrap scrollspy
+            var scrollSpy = new bootstrap.ScrollSpy(document.body, {
+                target: '#navbar-history'
+            })
+
+            // scroll smooth
+            document.querySelectorAll('.anchor-display a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            });
+
+            // scroll ani
+            const hisItem = document.querySelectorAll('.history-list .history-item');
+            const hisAnchor = document.querySelector('.anchor-area');
+            const hisHead = document.querySelectorAll('.history-item .head');
+
+            hisItem.forEach(item => {
+                gsap.to(item, {
+                    scrollTrigger: {
+                        trigger: item,
+                        start: 'top top',
+                        end: 'bottom top',
+                        onEnter: () => item.classList.add('active'),
+                        onLeave: () => item.classList.remove('active'),
+                        onEnterBack: () => item.classList.add('active'),
+                        onLeaveBack: () => item.classList.remove('active'),
+                        markers: true,
+                        toggleActions: 'play none none reverse'
+                    },
+                });
+            });
+
+            hisHead.forEach(head => {
+                gsap.to(head, {
+                    scrollTrigger: {
+                        trigger: head.closest('.history-item'),
+                        start: 'top top',
+                        end: 'bottom top',
+                        onEnter: () => head.classList.add('fixed'),
+                        onLeave: () => head.classList.remove('fixed'),
+                        onEnterBack: () => head.classList.add('fixed'),
+                        onLeaveBack: () => head.classList.remove('fixed'),
+                        markers: true,
+                        toggleActions: 'play none none reverse'
+                    },
+                });
+            });
+
+            ScrollTrigger.create({
+                trigger: hisAnchor,
+                start: "top 12",
+                endTrigger: "html",
+                end: "bottom top",
+                onEnter: () => hisAnchor.classList.add('fixed'),
+                onLeaveBack: () => hisAnchor.classList.remove('fixed'),
+                markers: true,
+            });
         });
     </script>
 </head>
@@ -310,7 +378,7 @@
         </header>
         <div class="main company history" id="main">
             <div class="main-inner">
-                <div class="local case2">
+                <div class="local design1">
                     <div class="local-info">
                         <ul class="data-list breadcrumb design1 case1 dark">
                             <li class="data-item"><span class="item-text">Home</span></li>
@@ -340,9 +408,168 @@
                     <div class="local-body">
                         <div class="content-head blind">연혁 페이지</div>
                         <div class="content-body">
-                            <div class="section period-leap">
-                                <div class="data-display history">
-
+                            <div class="section anchor-area">
+                                <div id="navbar-history" class="anchor-display">
+                                    <ul class="nav anchor-list">
+                                        <li class="nav-item anchor-item">
+                                            <a class="nav-link anchor-link" href="#historyArea1">
+                                                <p class="link-text">도약기<span class="date">2003.10~현재</span></p>
+                                            </a>
+                                        </li>
+                                        <li class="nav-item anchor-item">
+                                            <a class="nav-link anchor-link" href="#historyArea2">
+                                                <p class="link-text">성장기<span class="date">1997~2002</span></p>
+                                            </a>
+                                        </li>
+                                        <li class="nav-item anchor-item">
+                                            <a class="nav-link anchor-link" href="#historyArea3">
+                                                <p class="link-text">태동기<span class="date">1953~1973</span></p>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="section history-area">
+                                <div data-bs-spy="scroll" data-bs-target="#navbar-history" data-bs-offset="0" class="navbar-scroll">
+                                    <div class="history-list">
+                                        <!-- 도약기 -->
+                                        <div class="history-item anchor1" id="historyArea1">
+                                            <div class="history-wrap">
+                                                <div class="head">
+                                                    <div class="subject">
+                                                        <p class="summary">2003.10~현재</p>
+                                                        <p class="name">SK네트웍스, 글로벌 컴퍼니의 탄생</p>
+                                                    </div>
+                                                </div>
+                                                <div class="body">
+                                                    <div class="data-display history-layout">
+                                                        <div class="data-list">
+                                                            <div class="data-item">
+                                                                <div class="data-wrap">
+                                                                    <div class="data-inform">
+                                                                        <div class="data-subject">
+                                                                            <p class="data-name">에스에스차저, SK일렉링크 사명 변경</p>
+                                                                            <p class="data-name">데이터 관리 선도기업 ‘엔코아’ 인수 완료</p>
+                                                                        </div>
+                                                                        <p class="data-date">2023</p>
+                                                                    </div>
+                                                                    <div class="data-figure">
+                                                                        <img src="https://place-hold.it/488x264" alt="">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="data-item">
+                                                                <div class="data-wrap">
+                                                                    <div class="data-inform">
+                                                                        <div class="data-subject">
+                                                                            <p class="data-name">에스에스차저, SK일렉링크 사명 변경</p>
+                                                                        </div>
+                                                                        <p class="data-date">2023</p>
+                                                                    </div>
+                                                                    <div class="data-figure">
+                                                                        <img src="https://place-hold.it/488x264" alt="">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- //도약기 -->
+                                        <!-- 성장기 -->
+                                        <div class="history-item anchor2" id="historyArea2">
+                                            <div class="history-wrap">
+                                                <div class="head">
+                                                    <div class="subject">
+                                                        <p class="summary">1973~2002</p>
+                                                        <p class="name">㈜ 선경 출범, 종합상사의 새 역사를 열다</p>
+                                                    </div>
+                                                </div>
+                                                <div class="body">
+                                                    <div class="data-display history-layout">
+                                                        <div class="data-list">
+                                                            <div class="data-item">
+                                                                <div class="data-wrap">
+                                                                    <div class="data-inform">
+                                                                        <div class="data-subject">
+                                                                            <p class="data-name">에스에스차저, SK일렉링크 사명 변경</p>
+                                                                            <p class="data-name">데이터 관리 선도기업 ‘엔코아’ 인수 완료</p>
+                                                                        </div>
+                                                                        <p class="data-date">2023</p>
+                                                                    </div>
+                                                                    <div class="data-figure">
+                                                                        <img src="https://place-hold.it/488x264" alt="">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="data-item">
+                                                                <div class="data-wrap">
+                                                                    <div class="data-inform">
+                                                                        <div class="data-subject">
+                                                                            <p class="data-name">에스에스차저, SK일렉링크 사명 변경</p>
+                                                                            <p class="data-name">데이터 관리 선도기업 ‘엔코아’ 인수 완료</p>
+                                                                        </div>
+                                                                        <p class="data-date">2023</p>
+                                                                    </div>
+                                                                    <div class="data-figure">
+                                                                        <img src="https://place-hold.it/488x264" alt="">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- //성장기 -->
+                                        <!-- 태동기 -->
+                                        <div class="history-item anchor3" id="historyArea3">
+                                            <div class="history-wrap">
+                                                <div class="head">
+                                                    <div class="subject">
+                                                        <p class="summary">1953~1973</p>
+                                                        <p class="name">無에서 有를 창조하다! 선경의 탄생</p>
+                                                    </div>
+                                                </div>
+                                                <div class="body">
+                                                    <div class="data-display history-layout">
+                                                        <div class="data-list">
+                                                            <div class="data-item">
+                                                                <div class="data-wrap">
+                                                                    <div class="data-inform">
+                                                                        <div class="data-subject">
+                                                                            <p class="data-name">에스에스차저, SK일렉링크 사명 변경</p>
+                                                                            <p class="data-name">데이터 관리 선도기업 ‘엔코아’ 인수 완료</p>
+                                                                        </div>
+                                                                        <p class="data-date">2023</p>
+                                                                    </div>
+                                                                    <div class="data-figure">
+                                                                        <img src="https://place-hold.it/488x264" alt="">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="data-item">
+                                                                <div class="data-wrap">
+                                                                    <div class="data-inform">
+                                                                        <div class="data-subject">
+                                                                            <p class="data-name">에스에스차저, SK일렉링크 사명 변경</p>
+                                                                            <p class="data-name">데이터 관리 선도기업 ‘엔코아’ 인수 완료</p>
+                                                                        </div>
+                                                                        <p class="data-date">2023</p>
+                                                                    </div>
+                                                                    <div class="data-figure">
+                                                                        <img src="https://place-hold.it/488x264" alt="">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- //태동기 -->
+                                    </div>
                                 </div>
                             </div>
                         </div>
