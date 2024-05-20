@@ -29,7 +29,7 @@
             // bootstrap scrollspy
             var scrollSpy = new bootstrap.ScrollSpy(document.body, {
                 target: '#navbar-history'
-            })
+            });
 
             // scroll smooth
             document.querySelectorAll('.anchor-display a[href^="#"]').forEach(anchor => {
@@ -43,51 +43,120 @@
             });
 
             // scroll ani
+            gsap.registerPlugin(ScrollTrigger);
+
             const hisItem = document.querySelectorAll('.history-list .history-item');
             const hisAnchor = document.querySelector('.anchor-area');
-            const hisHead = document.querySelectorAll('.history-item .head');
+            const mainHis = document.querySelector('.main.company.history');
+            const wrapHis = mainHis.closest('#wrap');
+            const bodyHis = mainHis.querySelector('.content-body');
+            const headerHis = wrapHis.querySelector('header');
 
             hisItem.forEach(item => {
+                const headElement = item.querySelector('.head');
+                const progressBar = item.querySelector('.progress-bar');
+
                 gsap.to(item, {
                     scrollTrigger: {
                         trigger: item,
-                        start: 'top top',
-                        end: 'bottom top',
-                        onEnter: () => item.classList.add('active'),
-                        onLeave: () => item.classList.remove('active'),
-                        onEnterBack: () => item.classList.add('active'),
-                        onLeaveBack: () => item.classList.remove('active'),
-                        markers: true,
-                        toggleActions: 'play none none reverse'
+                        start: 'top 12',
+                        end: 'bottom bottom',
+                        onEnter: () => {
+                            item.classList.add('active1');
+                        },
+                        onLeaveBack: () => {
+                            item.classList.remove('active1');
+                        },
+                        // markers: true,
+                    },
+                });
+
+                gsap.to(item, {
+                    scrollTrigger: {
+                        trigger: item,
+                        start: 'top -13%',
+                        end: 'bottom bottom',
+                        onEnter: () => {
+                            item.classList.add('active2');
+                        },
+                        onLeaveBack: () => {
+                            item.classList.remove('active2');
+                        },
+                        // markers: true,
+                    },
+                });
+
+                // gsap.to(item, {
+                //     scrollTrigger: {
+                //         trigger: item,
+                //         start: 'top -100%',
+                //         end: 'bottom bottom',
+                //         onEnter: () => {
+                //             item.classList.add('active3');
+                //         },
+                //         onLeaveBack: () => {
+                //             item.classList.remove('active3');
+                //         },
+                //         // markers: true,
+                //     },
+                // });
+
+                gsap.to(progressBar, {
+                    width: '100%',
+                    scrollTrigger: {
+                        trigger: item,
+                        start: 'top 10%',
+                        end: 'bottom bottom',
+                        scrub: true,
+                        onUpdate: self => {
+                            const progress = self.progress;
+                            progressBar.style.width = `${progress * 100}%`;
+                        },
                     },
                 });
             });
 
-            hisHead.forEach(head => {
-                gsap.to(head, {
-                    scrollTrigger: {
-                        trigger: head.closest('.history-item'),
-                        start: 'top top',
-                        end: 'bottom top',
-                        onEnter: () => head.classList.add('fixed'),
-                        onLeave: () => head.classList.remove('fixed'),
-                        onEnterBack: () => head.classList.add('fixed'),
-                        onLeaveBack: () => head.classList.remove('fixed'),
-                        markers: true,
-                        toggleActions: 'play none none reverse'
-                    },
-                });
-            });
+            // 현재 고정 상태를 추적하는 변수
+            let isAnchorFixed = false;
 
             ScrollTrigger.create({
-                trigger: hisAnchor,
+                trigger: bodyHis,
                 start: "top 12",
-                endTrigger: "html",
-                end: "bottom top",
-                onEnter: () => hisAnchor.classList.add('fixed'),
-                onLeaveBack: () => hisAnchor.classList.remove('fixed'),
-                markers: true,
+                end: "bottom bottom",
+                onEnter: () => {
+                    hisAnchor.classList.add('fixed');
+                    wrapHis.style.overflow = 'visible';
+                    // headerHis.style.overflow = 'hidden';
+                    isAnchorFixed = true;
+                },
+                onLeaveBack: () => {
+                    hisAnchor.classList.remove('fixed');
+                    wrapHis.style.overflow = '';
+                    // headerHis.style.overflow = '';
+                    isAnchorFixed = false;
+                },
             });
+
+            function debounce(func, wait) {
+                let timeout;
+                return function(...args) {
+                    const context = this;
+                    clearTimeout(timeout);
+                    timeout = setTimeout(() => func.apply(context, args), wait);
+                };
+            }
+
+            const debouncedRefresh = debounce(() => {
+                ScrollTrigger.refresh();
+
+                if (isAnchorFixed) {
+                    // headerHis.style.overflow = 'hidden'; // 리사이즈 후 고정 상태라면 다시 스타일 적용
+                }
+            }, 200);
+
+            window.addEventListener("resize", debouncedRefresh);
+
+            ScrollTrigger.refresh();
         });
     </script>
 </head>
@@ -378,7 +447,7 @@
         </header>
         <div class="main company history" id="main">
             <div class="main-inner">
-                <div class="local design1">
+                <div class="local design2">
                     <div class="local-info">
                         <ul class="data-list breadcrumb design1 case1 dark">
                             <li class="data-item"><span class="item-text">Home</span></li>
@@ -399,7 +468,7 @@
                             </div>
                         </div>
                         <div class="local-figure">
-                            <img src="../../assets/images/company/bg-local-head-greetings-pc.jpg" alt=" ">
+                            <img src="../../assets/images/company/bg-local-head-history-pc.jpg" alt=" ">
                         </div>
                         <div class="local-util">
                             <p class="scroll-guide">Scroll Down</p>
@@ -440,6 +509,7 @@
                                                         <p class="summary">2003.10~현재</p>
                                                         <p class="name">SK네트웍스, 글로벌 컴퍼니의 탄생</p>
                                                     </div>
+                                                    <div class="progress-bar"></div>
                                                 </div>
                                                 <div class="body">
                                                     <div class="data-display history-layout">
@@ -453,8 +523,15 @@
                                                                         </div>
                                                                         <p class="data-date">2023</p>
                                                                     </div>
-                                                                    <div class="data-figure">
-                                                                        <img src="https://place-hold.it/488x264" alt="">
+                                                                </div>
+                                                            </div>
+                                                            <div class="data-item">
+                                                                <div class="data-wrap">
+                                                                    <div class="data-inform">
+                                                                        <div class="data-subject">
+                                                                            <p class="data-name">에스에스차저 인수</p>
+                                                                        </div>
+                                                                        <p class="data-date">2022</p>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -462,12 +539,94 @@
                                                                 <div class="data-wrap">
                                                                     <div class="data-inform">
                                                                         <div class="data-subject">
-                                                                            <p class="data-name">에스에스차저, SK일렉링크 사명 변경</p>
+                                                                            <p class="data-name">민팃, 카티니 분사</p>
                                                                         </div>
-                                                                        <p class="data-date">2023</p>
+                                                                        <p class="data-date">2021</p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="data-item">
+                                                                <div class="data-wrap">
+                                                                    <div class="data-inform">
+                                                                        <div class="data-subject">
+                                                                            <p class="data-name">SK렌터카 통합법인 출범</p>
+                                                                        </div>
+                                                                        <p class="data-date">2020</p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="data-item">
+                                                                <div class="data-wrap">
+                                                                    <div class="data-inform">
+                                                                        <div class="data-subject">
+                                                                            <p class="data-name">AJ렌터카 인수</p>
+                                                                        </div>
+                                                                        <p class="data-date">2019</p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="data-item">
+                                                                <div class="data-wrap">
+                                                                    <div class="data-inform">
+                                                                        <div class="data-subject">
+                                                                            <p class="data-name">워커힐 국내 최초 캡슐호텔 ‘다락 휴’ 오픈</p>
+                                                                        </div>
+                                                                        <p class="data-date">2017</p>
                                                                     </div>
                                                                     <div class="data-figure">
-                                                                        <img src="https://place-hold.it/488x264" alt="">
+                                                                        <div class="figure-item"><img src="../../assets/images/company/thumb-history-2017.jpg" alt=""></div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="data-item">
+                                                                <div class="data-wrap">
+                                                                    <div class="data-inform">
+                                                                        <div class="data-subject">
+                                                                            <p class="data-name">동양매직 인수</p>
+                                                                        </div>
+                                                                        <p class="data-date">2016</p>
+                                                                    </div>
+                                                                    <div class="data-figure">
+                                                                        <div class="figure-item"><img src="../../assets/images/company/thumb-history-2016.jpg" alt=""></div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="data-item">
+                                                                <div class="data-wrap">
+                                                                    <div class="data-inform">
+                                                                        <div class="data-subject">
+                                                                            <p class="data-name">SK렌터카 론칭</p>
+                                                                        </div>
+                                                                        <p class="data-date">2014</p>
+                                                                    </div>
+                                                                    <div class="data-figure">
+                                                                        <div class="figure-item"><img src="../../assets/images/company/thumb-history-2014.jpg" alt=""></div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="data-item">
+                                                                <div class="data-wrap">
+                                                                    <div class="data-inform">
+                                                                        <div class="data-subject">
+                                                                            <p class="data-name">12월 워커힐 합병</p>
+                                                                        </div>
+                                                                        <p class="data-date">2009</p>
+                                                                    </div>
+                                                                    <div class="data-figure">
+                                                                        <div class="figure-item"><img src="../../assets/images/company/thumb-history-2009.jpg" alt=""></div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="data-item">
+                                                                <div class="data-wrap">
+                                                                    <div class="data-inform">
+                                                                        <div class="data-subject">
+                                                                            <p class="data-name">10월 SK네트웍스 출범</p>
+                                                                        </div>
+                                                                        <p class="data-date">2003</p>
+                                                                    </div>
+                                                                    <div class="data-figure">
+                                                                        <div class="figure-item"><img src="../../assets/images/company/thumb-history-2003.jpg" alt=""></div>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -485,6 +644,7 @@
                                                         <p class="summary">1973~2002</p>
                                                         <p class="name">㈜ 선경 출범, 종합상사의 새 역사를 열다</p>
                                                     </div>
+                                                    <div class="progress-bar"></div>
                                                 </div>
                                                 <div class="body">
                                                     <div class="data-display history-layout">
@@ -493,13 +653,12 @@
                                                                 <div class="data-wrap">
                                                                     <div class="data-inform">
                                                                         <div class="data-subject">
-                                                                            <p class="data-name">에스에스차저, SK일렉링크 사명 변경</p>
-                                                                            <p class="data-name">데이터 관리 선도기업 ‘엔코아’ 인수 완료</p>
+                                                                            <p class="data-name">초대형마케팅 컴퍼니인 SK글로벌 출범</p>
                                                                         </div>
-                                                                        <p class="data-date">2023</p>
+                                                                        <p class="data-date">2000</p>
                                                                     </div>
                                                                     <div class="data-figure">
-                                                                        <img src="https://place-hold.it/488x264" alt="">
+                                                                        <div class="figure-item"><img src="../../assets/images/company/thumb-history-2000.jpg" alt=""></div>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -507,13 +666,106 @@
                                                                 <div class="data-wrap">
                                                                     <div class="data-inform">
                                                                         <div class="data-subject">
-                                                                            <p class="data-name">에스에스차저, SK일렉링크 사명 변경</p>
-                                                                            <p class="data-name">데이터 관리 선도기업 ‘엔코아’ 인수 완료</p>
+                                                                            <p class="data-name">SK 상사 턴 어라운드 (Turn-Around) 비전 선포식</p>
+                                                                            <p class="data-name">스피드메이트, SK유통 합병</p>
                                                                         </div>
-                                                                        <p class="data-date">2023</p>
+                                                                        <p class="data-date">1999</p>
                                                                     </div>
                                                                     <div class="data-figure">
-                                                                        <img src="https://place-hold.it/488x264" alt="">
+                                                                        <div class="figure-item"><img src="../../assets/images/company/thumb-history-1999-01.jpg" alt=""></div>
+                                                                        <div class="figure-item"><img src="../../assets/images/company/thumb-history-1999-02.jpg" alt=""></div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="data-item">
+                                                                <div class="data-wrap">
+                                                                    <div class="data-inform">
+                                                                        <div class="data-subject">
+                                                                            <p class="data-name">SK상사로 사명 변경</p>
+                                                                        </div>
+                                                                        <p class="data-date">1998</p>
+                                                                    </div>
+                                                                    <div class="data-figure">
+                                                                        <div class="figure-item"><img src="../../assets/images/company/thumb-history-1998.jpg" alt=""></div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="data-item">
+                                                                <div class="data-wrap">
+                                                                    <div class="data-inform">
+                                                                        <div class="data-subject">
+                                                                            <p class="data-name">이동통신 대리점 1,000개 소 돌파</p>
+                                                                        </div>
+                                                                        <p class="data-date">1996</p>
+                                                                    </div>
+                                                                    <div class="data-figure">
+                                                                        <div class="figure-item"><img src="../../assets/images/company/thumb-history-1996.jpg" alt=""></div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="data-item">
+                                                                <div class="data-wrap">
+                                                                    <div class="data-inform">
+                                                                        <div class="data-subject">
+                                                                            <p class="data-name">SK주유소 3,000개 소 돌파</p>
+                                                                        </div>
+                                                                        <p class="data-date">1995</p>
+                                                                    </div>
+                                                                    <div class="data-figure">
+                                                                        <div class="figure-item"><img src="../../assets/images/company/thumb-history-1995.jpg" alt=""></div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="data-item">
+                                                                <div class="data-wrap">
+                                                                    <div class="data-inform">
+                                                                        <div class="data-subject">
+                                                                            <p class="data-name">대한석유공사 (유공) 인수</p>
+                                                                        </div>
+                                                                        <p class="data-date">1980</p>
+                                                                    </div>
+                                                                    <div class="data-figure">
+                                                                        <div class="figure-item"><img src="../../assets/images/company/thumb-history-1980-01.jpg" alt=""></div>
+                                                                        <div class="figure-item"><img src="../../assets/images/company/thumb-history-1980-02.jpg" alt=""></div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="data-item">
+                                                                <div class="data-wrap">
+                                                                    <div class="data-inform">
+                                                                        <div class="data-subject">
+                                                                            <p class="data-name">㈜ 선경 기업 공개 및 주식 상장</p>
+                                                                        </div>
+                                                                        <p class="data-date">1977</p>
+                                                                    </div>
+                                                                    <div class="data-figure">
+                                                                        <div class="figure-item"><img src="../../assets/images/company/thumb-history-1977.jpg" alt=""></div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="data-item">
+                                                                <div class="data-wrap">
+                                                                    <div class="data-inform">
+                                                                        <div class="data-subject">
+                                                                            <p class="data-name">수출1억불탑 수상, 종합무역상사 지정</p>
+                                                                        </div>
+                                                                        <p class="data-date">1976</p>
+                                                                    </div>
+                                                                    <div class="data-figure">
+                                                                        <div class="figure-item"><img src="../../assets/images/company/thumb-history-1976.jpg" alt=""></div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="data-item">
+                                                                <div class="data-wrap">
+                                                                    <div class="data-inform">
+                                                                        <div class="data-subject">
+                                                                            <p class="data-name">금탑산업 훈장수상</p>
+                                                                        </div>
+                                                                        <p class="data-date">1973</p>
+                                                                    </div>
+                                                                    <div class="data-figure">
+                                                                        <div class="figure-item"><img src="../../assets/images/company/thumb-history-1973-01.jpg" alt=""></div>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -531,6 +783,7 @@
                                                         <p class="summary">1953~1973</p>
                                                         <p class="name">無에서 有를 창조하다! 선경의 탄생</p>
                                                     </div>
+                                                    <div class="progress-bar"></div>
                                                 </div>
                                                 <div class="body">
                                                     <div class="data-display history-layout">
@@ -539,13 +792,12 @@
                                                                 <div class="data-wrap">
                                                                     <div class="data-inform">
                                                                         <div class="data-subject">
-                                                                            <p class="data-name">에스에스차저, SK일렉링크 사명 변경</p>
-                                                                            <p class="data-name">데이터 관리 선도기업 ‘엔코아’ 인수 완료</p>
+                                                                            <p class="data-name">최종현 회장 취임</p>
                                                                         </div>
-                                                                        <p class="data-date">2023</p>
+                                                                        <p class="data-date">1973</p>
                                                                     </div>
                                                                     <div class="data-figure">
-                                                                        <img src="https://place-hold.it/488x264" alt="">
+                                                                        <div class="figure-item"><img src="../../assets/images/company/thumb-history-1973-02.jpg" alt=""></div>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -553,13 +805,41 @@
                                                                 <div class="data-wrap">
                                                                     <div class="data-inform">
                                                                         <div class="data-subject">
-                                                                            <p class="data-name">에스에스차저, SK일렉링크 사명 변경</p>
-                                                                            <p class="data-name">데이터 관리 선도기업 ‘엔코아’ 인수 완료</p>
+                                                                            <p class="data-name">금탑산업훈장 수상</p>
                                                                         </div>
-                                                                        <p class="data-date">2023</p>
+                                                                        <p class="data-date">1963</p>
                                                                     </div>
                                                                     <div class="data-figure">
-                                                                        <img src="https://place-hold.it/488x264" alt="">
+                                                                        <div class="figure-item"><img src="../../assets/images/company/thumb-history-1963.jpg" alt=""></div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="data-item">
+                                                                <div class="data-wrap">
+                                                                    <div class="data-inform">
+                                                                        <div class="data-subject">
+                                                                            <p class="data-name">업계 최초 레이온 직물 홍콩 수출</p>
+                                                                        </div>
+                                                                        <p class="data-date">1962</p>
+                                                                    </div>
+                                                                    <div class="data-figure">
+                                                                        <div class="figure-item"><img src="../../assets/images/company/thumb-history-1962.jpg" alt=""></div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="data-item">
+                                                                <div class="data-wrap">
+                                                                    <div class="data-inform">
+                                                                        <div class="data-subject">
+                                                                            <p class="data-name">전쟁의 페허 속에서 시작된 작은 직물회사</p>
+                                                                        </div>
+                                                                        <p class="data-date">1953</p>
+                                                                    </div>
+                                                                    <div class="data-figure">
+                                                                        <div class="figure-item"><img src="../../assets/images/company/thumb-history-1953-01.jpg" alt=""></div>
+                                                                        <div class="figure-item"><img src="../../assets/images/company/thumb-history-1953-02.jpg" alt=""></div>
+                                                                        <div class="figure-item"><img src="../../assets/images/company/thumb-history-1953-03.jpg" alt=""></div>
+                                                                        <div class="figure-item"><img src="../../assets/images/company/thumb-history-1953-04.jpg" alt=""></div>
                                                                     </div>
                                                                 </div>
                                                             </div>
