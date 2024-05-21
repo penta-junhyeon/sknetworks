@@ -721,6 +721,16 @@
                 </div>
             </div>
         </div>
+        <script>
+            document.addEventListener("DOMContentLoaded", () => {
+                const familySite = document.querySelector(".family-site");
+                const btnFamily = familySite.querySelector(".btn-family");
+
+                btnFamily.addEventListener("click", function() {
+                    familySite.classList.contains("active") ? familySite.classList.remove("active") : familySite.classList.add("active")
+                })
+            })
+        </script>
         <!-- page-foot -->
         <footer id="footer">
             <div class="footer-inner">
@@ -764,10 +774,37 @@
                         <div class="site-area">
                             <ul class="site-list">
                                 <li class="site-item">
-                                    <a href="javascript:void(0)" class="site">KR</a>
+                                    <a href="javascript:void(0)" target="_blank" class="site">그랜드 워커힐 서울</a>
                                 </li>
                                 <li class="site-item">
-                                    <a href="javascript:void(0)" class="site">EN</a>
+                                    <a href="javascript:void(0)" target="_blank" class="site">비스타 워커힐 서울</a>
+                                </li>
+                                <li class="site-item">
+                                    <a href="javascript:void(0)" target="_blank" class="site">다락휴</a>
+                                </li>
+                                <li class="site-item">
+                                    <a href="javascript:void(0)" target="_blank" class="site">SK네트웍스 서비스</a>
+                                </li>
+                                <li class="site-item">
+                                    <a href="javascript:void(0)" target="_blank" class="site">SK매직</a>
+                                </li>
+                                <li class="site-item">
+                                    <a href="javascript:void(0)" target="_blank" class="site">SK렌터카</a>
+                                </li>
+                                <li class="site-item">
+                                    <a href="javascript:void(0)" target="_blank" class="site">SK일렉링크</a>
+                                </li>
+                                <li class="site-item">
+                                    <a href="javascript:void(0)" target="_blank" class="site">민팃</a>
+                                </li>
+                                <li class="site-item">
+                                    <a href="javascript:void(0)" target="_blank" class="site">타이어픽</a>
+                                </li>
+                                <li class="site-item">
+                                    <a href="javascript:void(0)" target="_blank" class="site">엔코아</a>
+                                </li>
+                                <li class="site-item">
+                                    <a href="javascript:void(0)" target="_blank" class="site">하이코캐피탈</a>
                                 </li>
                             </ul>
                         </div>
