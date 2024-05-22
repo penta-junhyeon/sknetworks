@@ -25,138 +25,89 @@
     </script>
     <script>
         document.addEventListener("DOMContentLoaded", () => {
+            Tab();
+            btnChange();
+            attributeChange();
+            accordion();
 
-            // bootstrap scrollspy
-            var scrollSpy = new bootstrap.ScrollSpy(document.body, {
-                target: '#navbar-history'
-            });
 
-            // scroll smooth
-            document.querySelectorAll('.anchor-display a[href^="#"]').forEach(anchor => {
-                anchor.addEventListener('click', function(e) {
-                    e.preventDefault();
+            window.addEventListener("resize", () => {
+                btnChange();
+                attributeChange();
 
-                    document.querySelector(this.getAttribute('href')).scrollIntoView({
-                        behavior: 'smooth'
+                let _width = window.innerWidth
+                const boardItem = document.querySelectorAll('.board-item')
+                const boardActive = document.querySelectorAll('.board-item.active')
+
+                if (_width < 1024) {
+                    if (boardActive) {
+                        boardActive.forEach(board => {
+                            const boardBody = board.querySelector(".board-body")
+                            const boardInner = boardBody.querySelector(".board-inner")
+                            boardBody.style.height = boardInner.offsetHeight + "px"
+                        })
+                    }
+                } else {
+                    boardItem.forEach(board => {
+                        const boardBody = board.querySelector(".board-body")
+                        boardBody.style.removeProperty("height");
+                        board.classList.remove("active")
                     });
-                });
-            });
+                }
+            })
 
-            // scroll ani
-            gsap.registerPlugin(ScrollTrigger);
-
-            const hisItem = document.querySelectorAll('.history-list .history-item');
-            const hisAnchor = document.querySelector('.anchor-area');
-            const mainHis = document.querySelector('.main.company.history');
-            const wrapHis = mainHis.closest('#wrap');
-            const bodyHis = mainHis.querySelector('.content-body');
-            const headerHis = wrapHis.querySelector('header');
-
-            hisItem.forEach(item => {
-                const headElement = item.querySelector('.head');
-                const progressBar = item.querySelector('.progress-bar');
-
-                gsap.to(item, {
-                    scrollTrigger: {
-                        trigger: item,
-                        start: 'top 12',
-                        end: 'bottom bottom',
-                        onEnter: () => {
-                            item.classList.add('active1');
-                        },
-                        onLeaveBack: () => {
-                            item.classList.remove('active1');
-                        },
-                        // markers: true,
-                    },
-                });
-
-                gsap.to(item, {
-                    scrollTrigger: {
-                        trigger: item,
-                        start: 'top -13%',
-                        end: 'bottom bottom',
-                        onEnter: () => {
-                            item.classList.add('active2');
-                        },
-                        onLeaveBack: () => {
-                            item.classList.remove('active2');
-                        },
-                        // markers: true,
-                    },
-                });
-
-                // gsap.to(item, {
-                //     scrollTrigger: {
-                //         trigger: item,
-                //         start: 'top -100%',
-                //         end: 'bottom bottom',
-                //         onEnter: () => {
-                //             item.classList.add('active3');
-                //         },
-                //         onLeaveBack: () => {
-                //             item.classList.remove('active3');
-                //         },
-                //         // markers: true,
-                //     },
-                // });
-
-                gsap.to(progressBar, {
-                    width: '100%',
-                    scrollTrigger: {
-                        trigger: item,
-                        start: 'top 10%',
-                        end: 'bottom bottom',
-                        scrub: true,
-                        onUpdate: self => {
-                            const progress = self.progress;
-                            progressBar.style.width = `${progress * 100}%`;
-                        },
-                    },
-                });
-            });
-
-            // 현재 고정 상태를 추적하는 변수
-            let isAnchorFixed = false;
-
-            ScrollTrigger.create({
-                trigger: bodyHis,
-                start: "top 12",
-                end: "bottom bottom",
-                onEnter: () => {
-                    hisAnchor.classList.add('fixed');
-                    wrapHis.style.overflow = 'visible';
-                    // headerHis.style.overflow = 'hidden';
-                    isAnchorFixed = true;
-                },
-                onLeaveBack: () => {
-                    hisAnchor.classList.remove('fixed');
-                    wrapHis.style.overflow = '';
-                    // headerHis.style.overflow = '';
-                    isAnchorFixed = false;
-                },
-            });
-
-            function debounce(func, wait) {
-                let timeout;
-                return function(...args) {
-                    const context = this;
-                    clearTimeout(timeout);
-                    timeout = setTimeout(() => func.apply(context, args), wait);
-                };
+            function btnChange() {
+                const _width = window.innerWidth
+                const buttons = document.querySelectorAll(".board-body .btn")
+                if (_width >= 1024) {
+                    buttons.forEach(btn => {
+                        btn.className = "btn design1 case1 type1 color1"
+                    });
+                } else {
+                    buttons.forEach(btn => {
+                        btn.className = "btn design3 case3 type1 color6 ar-icon-arrow-right-up2"
+                    });
+                }
             }
 
-            const debouncedRefresh = debounce(() => {
-                ScrollTrigger.refresh();
+            function attributeChange() {
+                let _width = window.innerWidth
+                const boardHead = document.querySelectorAll(".board-head")
 
-                if (isAnchorFixed) {
-                    // headerHis.style.overflow = 'hidden'; // 리사이즈 후 고정 상태라면 다시 스타일 적용
+                if (_width < 1024) {
+                    boardHead.forEach(head => {
+                        head.setAttribute("role", "button")
+                        head.setAttribute("tabindex", "0")
+                    });
+                } else {
+                    boardHead.forEach(head => {
+                        head.removeAttribute("role")
+                        head.removeAttribute("tabindex")
+                    });
                 }
-            }, 200);
+            }
 
-            window.addEventListener("resize", debouncedRefresh);
+            function accordion() {
+                const boardHead = document.querySelectorAll(".board-head")
+                boardHead.forEach(head => {
+                    head.addEventListener("click", () => {
+                        let _width = window.innerWidth
+                        if (_width < 1024) {
+                            const boardItem = head.closest(".board-item")
+                            const boardBody = boardItem.querySelector(".board-body")
+                            const boardInner = boardBody.querySelector(".board-inner")
 
-            ScrollTrigger.refresh();
+                            if (boardItem.classList.contains("active")) {
+                                boardItem.classList.remove("active")
+                                boardBody.style.height = "0"
+                            } else {
+                                boardItem.classList.add("active")
+                                boardBody.style.height = boardInner.offsetHeight + "px"
+                            }
+                        }
+                    })
+                });
+            }
         });
     </script>
 </head>
@@ -442,188 +393,381 @@
                 </div>
             </div>
         </header>
-        <div class="main company history" id="main">
+        <div class="main company globalnetwork" id="main">
             <div class="main-inner">
-                <div class="local design2">
+                <div class="local case2">
                     <div class="local-info">
                         <ul class="data-list breadcrumb design1 case1 dark">
                             <li class="data-item"><span class="item-text">Home</span></li>
                             <li class="data-item"><span class="item-text">Company</span></li>
 
-                            <li class="data-item"><span class="item-text">연혁</span></li>
+                            <li class="data-item"><span class="item-text">글로벌 네트워크</span></li>
 
 
                         </ul>
                     </div>
                     <div class="local-head design5" local-animation="case-2">
                         <div class="local-subject">
-                            <h2 class="local-name">SK네트웍스의<br> 성장과 도약의 발자취</h2>
+                            <h2 class="local-name">WE NETWORK<br>함께 만들어가는 더 큰 행복</h2>
                         </div>
                         <div class="local-aside">
                             <div class="local-wrap">
-                                <h3 class="local-title">HISTORY</h3>
+                                <h3 class="local-title">글로벌 네트워크</h3>
                             </div>
                         </div>
                         <div class="local-figure">
-                            <img src="../../assets/images/company/bg-local-head-history-pc.jpg" alt=" ">
+                            <img src="../../assets/images/company/bg-local-head-globalnetwork-pc.jpg" alt=" ">
                         </div>
                         <div class="local-util">
                             <p class="scroll-guide">Scroll Down</p>
                         </div>
                     </div>
                     <div class="local-body">
-                        <div class="content-head blind">연혁 페이지</div>
+                        <div class="content-head blind">글로벌 네트워크 페이지</div>
                         <div class="content-body">
-                            <div class="section anchor-area">
-                                <div id="navbar-history" class="anchor-display">
-                                    <ul class="nav anchor-list">
-                                        <li class="nav-item anchor-item">
-                                            <a class="nav-link anchor-link" href="#historyArea1">
-                                                <p class="link-text">도약기<span class="date">2003.10~현재</span></p>
-                                            </a>
+                            <div class="tab-display design1 case1 type1">
+                                <div class="swiper tab-wrap">
+                                    <ul class="swiper-wrapper tab-list" role="tablist">
+                                        <li id="tab1" class="swiper-slide tab-item" aria-controls="tab-panel1">
+                                            <button role="tab" class="tab-text">국내</button>
                                         </li>
-                                        <li class="nav-item anchor-item">
-                                            <a class="nav-link anchor-link" href="#historyArea2">
-                                                <p class="link-text">성장기<span class="date">1997~2002</span></p>
-                                            </a>
-                                        </li>
-                                        <li class="nav-item anchor-item">
-                                            <a class="nav-link anchor-link" href="#historyArea3">
-                                                <p class="link-text">태동기<span class="date">1953~1973</span></p>
-                                            </a>
+                                        <li id="tab2" class="swiper-slide tab-item" aria-controls="tab-panel2">
+                                            <button role="tab" class="tab-text">해외</button>
                                         </li>
                                     </ul>
                                 </div>
                             </div>
-                            <div class="section history-area">
-                                <div data-bs-spy="scroll" data-bs-target="#navbar-history" data-bs-offset="0" class="navbar-scroll">
-                                    <div class="history-list">
-                                        <!-- 도약기 -->
-                                        <div class="history-item anchor1" id="historyArea1">
-                                            <div class="history-wrap">
-                                                <div class="head">
-                                                    <div class="subject">
-                                                        <p class="summary">2003.10~현재</p>
-                                                        <p class="name">SK네트웍스, 글로벌 컴퍼니의 탄생</p>
+                            <div class="panel-display design1">
+                                <ul class="panel-list">
+                                    <li id="tab-panel1" class="panel-item" role="tabpanel">
+                                        <div class="panel-wrap">
+                                            <div class="section design1 type1">
+                                                <div class="section-wrap">
+                                                    <div class="section-head">
+                                                        <div class="section-subject">
+                                                            <h4 class="section-name">서울특별시</h4>
+                                                        </div>
                                                     </div>
-                                                    <div class="progress-bar"></div>
+                                                    <div class="section-body">
+                                                        <div class="board-list">
+                                                            <div class="board-item">
+                                                                <div class="board-wrap">
+                                                                    <div class="board-head" role="button" tabindex="0">
+                                                                        <strong class="board-subject">서울 오피스</strong>
+                                                                    </div>
+                                                                    <div class="board-body">
+                                                                        <div class="board-inner">
+                                                                            <div class="info-list">
+                                                                                <div class="info-item">
+                                                                                    <strong class="info-title">국가</strong>
+                                                                                    <span class="info-content">한국</span>
+                                                                                </div>
+                                                                                <div class="info-item">
+                                                                                    <strong class="info-title">주소</strong>
+                                                                                    <span class="info-content">서울특별시 종로구 청계천로 85(관철동 10-2) 삼일빌딩</span>
+                                                                                </div>
+                                                                                <div class="info-item">
+                                                                                    <strong class="info-title">전화번호</strong>
+                                                                                    <span class="info-content">070-7800-2114</span>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="btn-display design1 case1">
+                                                                                <div class="btn-area">
+                                                                                    <a class="btn design1 case1 type1 color1" href="javascript:void(0)"><span class="btn-text">MAP</span></a>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="board-figure">
+
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
                                                 </div>
-                                                <div class="body">
-                                                    <div class="data-display history-layout">
-                                                        <div class="data-list">
-                                                            <div class="data-item">
-                                                                <div class="data-wrap">
-                                                                    <div class="data-inform">
-                                                                        <div class="data-subject">
-                                                                            <p class="data-name">에스에스차저, SK일렉링크 사명 변경</p>
-                                                                            <p class="data-name">데이터 관리 선도기업 ‘엔코아’ 인수 완료</p>
+                                            </div>
+                                            <div class="section design1 type1">
+                                                <div class="section-wrap">
+                                                    <div class="section-head">
+                                                        <div class="section-subject">
+                                                            <h4 class="section-name">대전</h4>
+                                                        </div>
+                                                    </div>
+                                                    <div class="section-body">
+                                                        <div class="board-list">
+                                                            <div class="board-item">
+                                                                <div class="board-wrap">
+                                                                    <div class="board-head">
+                                                                        <strong class="board-subject">정보통신 중부지사</strong>
+                                                                    </div>
+                                                                    <div class="board-body">
+                                                                        <div class="board-inner">
+                                                                            <div class="info-list">
+                                                                                <div class="info-item">
+                                                                                    <strong class="info-title">국가</strong>
+                                                                                    <span class="info-content">한국</span>
+                                                                                </div>
+                                                                                <div class="info-item">
+                                                                                    <strong class="info-title">주소</strong>
+                                                                                    <span class="info-content">대전광역시 서구 대덕대로 247 아모레퍼시픽 빌딩 9층</span>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="btn-display design1 case1">
+                                                                                <div class="btn-area">
+                                                                                    <a class="btn design1 case1 type1 color1" href="javascript:void(0)"><span class="btn-text">MAP</span></a>
+                                                                                </div>
+                                                                            </div>
                                                                         </div>
-                                                                        <p class="data-date">2023</p>
+                                                                    </div>
+                                                                    <div class="board-figure">
+
                                                                     </div>
                                                                 </div>
                                                             </div>
-                                                            <div class="data-item">
-                                                                <div class="data-wrap">
-                                                                    <div class="data-inform">
-                                                                        <div class="data-subject">
-                                                                            <p class="data-name">에스에스차저 인수</p>
+                                                            <div class="board-item">
+                                                                <div class="board-wrap">
+                                                                    <div class="board-head">
+                                                                        <strong class="board-subject">정보통신 대전물류센터</strong>
+                                                                    </div>
+                                                                    <div class="board-body">
+                                                                        <div class="board-inner">
+                                                                            <div class="info-list">
+                                                                                <div class="info-item">
+                                                                                    <strong class="info-title">국가</strong>
+                                                                                    <span class="info-content">한국</span>
+                                                                                </div>
+                                                                                <div class="info-item">
+                                                                                    <strong class="info-title">주소</strong>
+                                                                                    <span class="info-content">대전광역시 대덕구 대화로 132번길 162</span>
+                                                                                </div>
+                                                                                <div class="info-item">
+                                                                                    <strong class="info-title">전화번호</strong>
+                                                                                    <span class="info-content">070-4773-7600</span>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="btn-display design1 case1">
+                                                                                <div class="btn-area">
+                                                                                    <a class="btn design1 case1 type1 color1" href="javascript:void(0)"><span class="btn-text">MAP</span></a>
+                                                                                </div>
+                                                                            </div>
                                                                         </div>
-                                                                        <p class="data-date">2022</p>
+                                                                    </div>
+                                                                    <div class="board-figure">
+
                                                                     </div>
                                                                 </div>
                                                             </div>
-                                                            <div class="data-item">
-                                                                <div class="data-wrap">
-                                                                    <div class="data-inform">
-                                                                        <div class="data-subject">
-                                                                            <p class="data-name">민팃, 카티니 분사</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="section design1 type1">
+                                                <div class="section-wrap">
+                                                    <div class="section-head">
+                                                        <div class="section-subject">
+                                                            <h4 class="section-name">부산</h4>
+                                                        </div>
+                                                    </div>
+                                                    <div class="section-body">
+                                                        <div class="board-list">
+                                                            <div class="board-item">
+                                                                <div class="board-wrap">
+                                                                    <div class="board-head">
+                                                                        <strong class="board-subject">정보통신 부산지사</strong>
+                                                                    </div>
+                                                                    <div class="board-body">
+                                                                        <div class="board-inner">
+                                                                            <div class="info-list">
+                                                                                <div class="info-item">
+                                                                                    <strong class="info-title">국가</strong>
+                                                                                    <span class="info-content">한국</span>
+                                                                                </div>
+                                                                                <div class="info-item">
+                                                                                    <strong class="info-title">주소</strong>
+                                                                                    <span class="info-content">부산광역시 해운대구 센텀중앙로 97 센텀스카이비드 31층 3111호</span>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="btn-display design1 case1">
+                                                                                <div class="btn-area">
+                                                                                    <a class="btn design1 case1 type1 color1" href="javascript:void(0)"><span class="btn-text">MAP</span></a>
+                                                                                </div>
+                                                                            </div>
                                                                         </div>
-                                                                        <p class="data-date">2021</p>
+                                                                    </div>
+                                                                    <div class="board-figure">
+
                                                                     </div>
                                                                 </div>
                                                             </div>
-                                                            <div class="data-item">
-                                                                <div class="data-wrap">
-                                                                    <div class="data-inform">
-                                                                        <div class="data-subject">
-                                                                            <p class="data-name">SK렌터카 통합법인 출범</p>
+                                                            <div class="board-item">
+                                                                <div class="board-wrap">
+                                                                    <div class="board-head">
+                                                                        <strong class="board-subject">정보통신 부산물류센터</strong>
+                                                                    </div>
+                                                                    <div class="board-body">
+                                                                        <div class="board-inner">
+                                                                            <div class="info-list">
+                                                                                <div class="info-item">
+                                                                                    <strong class="info-title">국가</strong>
+                                                                                    <span class="info-content">한국</span>
+                                                                                </div>
+                                                                                <div class="info-item">
+                                                                                    <strong class="info-title">주소</strong>
+                                                                                    <span class="info-content">경상남도 김해시 김해대로 2635번길 52</span>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="btn-display design1 case1">
+                                                                                <div class="btn-area">
+                                                                                    <a class="btn design1 case1 type1 color1" href="javascript:void(0)"><span class="btn-text">MAP</span></a>
+                                                                                </div>
+                                                                            </div>
                                                                         </div>
-                                                                        <p class="data-date">2020</p>
+                                                                    </div>
+                                                                    <div class="board-figure">
+
                                                                     </div>
                                                                 </div>
                                                             </div>
-                                                            <div class="data-item">
-                                                                <div class="data-wrap">
-                                                                    <div class="data-inform">
-                                                                        <div class="data-subject">
-                                                                            <p class="data-name">AJ렌터카 인수</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="section design1 type1">
+                                                <div class="section-wrap">
+                                                    <div class="section-head">
+                                                        <div class="section-subject">
+                                                            <h4 class="section-name">경기도</h4>
+                                                        </div>
+                                                    </div>
+                                                    <div class="section-body">
+                                                        <div class="board-list">
+                                                            <div class="board-item">
+                                                                <div class="board-wrap">
+                                                                    <div class="board-head">
+                                                                        <strong class="board-subject">정보통신 수도권물류센터</strong>
+                                                                    </div>
+                                                                    <div class="board-body">
+                                                                        <div class="board-inner">
+                                                                            <div class="info-list">
+                                                                                <div class="info-item">
+                                                                                    <strong class="info-title">국가</strong>
+                                                                                    <span class="info-content">한국</span>
+                                                                                </div>
+                                                                                <div class="info-item">
+                                                                                    <strong class="info-title">주소</strong>
+                                                                                    <span class="info-content">경기도 이천시 마장면 덕평로 663번길 127</span>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="btn-display design1 case1">
+                                                                                <div class="btn-area">
+                                                                                    <a class="btn design1 case1 type1 color1" href="javascript:void(0)"><span class="btn-text">MAP</span></a>
+                                                                                </div>
+                                                                            </div>
                                                                         </div>
-                                                                        <p class="data-date">2019</p>
+                                                                    </div>
+                                                                    <div class="board-figure">
+
                                                                     </div>
                                                                 </div>
                                                             </div>
-                                                            <div class="data-item">
-                                                                <div class="data-wrap">
-                                                                    <div class="data-inform">
-                                                                        <div class="data-subject">
-                                                                            <p class="data-name">워커힐 국내 최초 캡슐호텔 ‘다락 휴’ 오픈</p>
-                                                                        </div>
-                                                                        <p class="data-date">2017</p>
+                                                            <div class="board-item">
+                                                                <div class="board-wrap">
+                                                                    <div class="board-head">
+                                                                        <strong class="board-subject">정보통신 안성물류센터</strong>
                                                                     </div>
-                                                                    <div class="data-figure">
-                                                                        <div class="figure-item"><img src="../../assets/images/company/thumb-history-2017.jpg" alt=""></div>
+                                                                    <div class="board-body">
+                                                                        <div class="board-inner">
+                                                                            <div class="info-list">
+                                                                                <div class="info-item">
+                                                                                    <strong class="info-title">국가</strong>
+                                                                                    <span class="info-content">한국</span>
+                                                                                </div>
+                                                                                <div class="info-item">
+                                                                                    <strong class="info-title">주소</strong>
+                                                                                    <span class="info-content">경기도 안성시 공도읍 기업단지로 264</span>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="btn-display design1 case1">
+                                                                                <div class="btn-area">
+                                                                                    <a class="btn design1 case1 type1 color1" href="javascript:void(0)"><span class="btn-text">MAP</span></a>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="board-figure">
+
                                                                     </div>
                                                                 </div>
                                                             </div>
-                                                            <div class="data-item">
-                                                                <div class="data-wrap">
-                                                                    <div class="data-inform">
-                                                                        <div class="data-subject">
-                                                                            <p class="data-name">동양매직 인수</p>
-                                                                        </div>
-                                                                        <p class="data-date">2016</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="section design1 type1">
+                                                <div class="section-wrap">
+                                                    <div class="section-head">
+                                                        <div class="section-subject">
+                                                            <h4 class="section-name">전라남도</h4>
+                                                        </div>
+                                                    </div>
+                                                    <div class="section-body">
+                                                        <div class="board-list">
+                                                            <div class="board-item">
+                                                                <div class="board-wrap">
+                                                                    <div class="board-head">
+                                                                        <strong class="board-subject">정보통신 서부지사</strong>
                                                                     </div>
-                                                                    <div class="data-figure">
-                                                                        <div class="figure-item"><img src="../../assets/images/company/thumb-history-2016.jpg" alt=""></div>
+                                                                    <div class="board-body">
+                                                                        <div class="board-inner">
+                                                                            <div class="info-list">
+                                                                                <div class="info-item">
+                                                                                    <strong class="info-title">국가</strong>
+                                                                                    <span class="info-content">한국</span>
+                                                                                </div>
+                                                                                <div class="info-item">
+                                                                                    <strong class="info-title">주소</strong>
+                                                                                    <span class="info-content">광주광역시 서구 상무중앙로 110 우체국보험회관 4층</span>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="btn-display design1 case1">
+                                                                                <div class="btn-area">
+                                                                                    <a class="btn design1 case1 type1 color1" href="javascript:void(0)"><span class="btn-text">MAP</span></a>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="board-figure">
+
                                                                     </div>
                                                                 </div>
                                                             </div>
-                                                            <div class="data-item">
-                                                                <div class="data-wrap">
-                                                                    <div class="data-inform">
-                                                                        <div class="data-subject">
-                                                                            <p class="data-name">SK렌터카 론칭</p>
+                                                            <div class="board-item">
+                                                                <div class="board-wrap">
+                                                                    <div class="board-head">
+                                                                        <strong class="board-subject">정보통신 광주물류센터</strong>
+                                                                    </div>
+                                                                    <div class="board-body">
+                                                                        <div class="board-inner">
+                                                                            <div class="info-list">
+                                                                                <div class="info-item">
+                                                                                    <strong class="info-title">국가</strong>
+                                                                                    <span class="info-content">한국</span>
+                                                                                </div>
+                                                                                <div class="info-item">
+                                                                                    <strong class="info-title">주소</strong>
+                                                                                    <span class="info-content">전라남도 장성군 황룡면 뱃나드리로 13</span>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="btn-display design1 case1">
+                                                                                <div class="btn-area">
+                                                                                    <a class="btn design1 case1 type1 color1" href="javascript:void(0)"><span class="btn-text">MAP</span></a>
+                                                                                </div>
+                                                                            </div>
                                                                         </div>
-                                                                        <p class="data-date">2014</p>
                                                                     </div>
-                                                                    <div class="data-figure">
-                                                                        <div class="figure-item"><img src="../../assets/images/company/thumb-history-2014.jpg" alt=""></div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="data-item">
-                                                                <div class="data-wrap">
-                                                                    <div class="data-inform">
-                                                                        <div class="data-subject">
-                                                                            <p class="data-name">12월 워커힐 합병</p>
-                                                                        </div>
-                                                                        <p class="data-date">2009</p>
-                                                                    </div>
-                                                                    <div class="data-figure">
-                                                                        <div class="figure-item"><img src="../../assets/images/company/thumb-history-2009.jpg" alt=""></div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="data-item">
-                                                                <div class="data-wrap">
-                                                                    <div class="data-inform">
-                                                                        <div class="data-subject">
-                                                                            <p class="data-name">10월 SK네트웍스 출범</p>
-                                                                        </div>
-                                                                        <p class="data-date">2003</p>
-                                                                    </div>
-                                                                    <div class="data-figure">
-                                                                        <div class="figure-item"><img src="../../assets/images/company/thumb-history-2003.jpg" alt=""></div>
+                                                                    <div class="board-figure">
+
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -632,137 +776,236 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <!-- //도약기 -->
-                                        <!-- 성장기 -->
-                                        <div class="history-item anchor2" id="historyArea2">
-                                            <div class="history-wrap">
-                                                <div class="head">
-                                                    <div class="subject">
-                                                        <p class="summary">1973~2002</p>
-                                                        <p class="name">㈜ 선경 출범, 종합상사의 새 역사를 열다</p>
+                                    </li>
+                                    <li id="tab-panel2" class="panel-item" role="tabpanel">
+                                        <div class="panel-wrap">
+                                            <div class="section design1 type1">
+                                                <div class="section-wrap">
+                                                    <div class="section-head">
+                                                        <div class="section-subject">
+                                                            <div class="section-name">중국</div>
+                                                        </div>
                                                     </div>
-                                                    <div class="progress-bar"></div>
+                                                    <div class="section-body">
+                                                        <div class="board-list">
+                                                            <div class="board-item">
+                                                                <div class="board-wrap">
+                                                                    <div class="board-head">
+                                                                        <strong class="board-subject">SK Networks (Shanghai) Co., Ltd.</strong>
+                                                                    </div>
+                                                                    <div class="board-body">
+                                                                        <div class="board-inner">
+                                                                            <div class="info-list">
+                                                                                <div class="info-item">
+                                                                                    <strong class="info-title">국가</strong>
+                                                                                    <span class="info-content">중국</span>
+                                                                                </div>
+                                                                                <div class="info-item">
+                                                                                    <strong class="info-title">주소</strong>
+                                                                                    <span class="info-content">Room No. 1012A, MT1, the Mixc Office Building,<br />
+                                                                                        No. 3999, Hongxin Road, Minhang District, Shanghai, China</span>
+                                                                                </div>
+                                                                                <div class="info-item">
+                                                                                    <strong class="info-title">전화번호</strong>
+                                                                                    <span class="info-content">86-21-6295-0088 (821)</span>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="btn-display design1 case1">
+                                                                                <div class="btn-area">
+                                                                                    <a class="btn design1 case1 type1 color1" href="javascript:void(0)"><span class="btn-text">MAP</span></a>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="board-item">
+                                                                <div class="board-wrap">
+                                                                    <div class="board-head">
+                                                                        <strong class="board-subject">POSK(PingHu) Steel Processing Center Co., Ltd.</strong>
+                                                                    </div>
+                                                                    <div class="board-body">
+                                                                        <div class="board-inner">
+                                                                            <div class="info-list">
+                                                                                <div class="info-item">
+                                                                                    <strong class="info-title">국가</strong>
+                                                                                    <span class="info-content">중국</span>
+                                                                                </div>
+                                                                                <div class="info-item">
+                                                                                    <strong class="info-title">주소</strong>
+                                                                                    <span class="info-content">2222, Xingming Road, Economic Development Zone, Pinghu City,<br />
+                                                                                        Zhejiang Province, CHINA(314200)</span>
+                                                                                </div>
+                                                                                <div class="info-item">
+                                                                                    <strong class="info-title">전화번호</strong>
+                                                                                    <span class="info-content">86-573-8522-3333</span>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="btn-display design1 case1">
+                                                                                <div class="btn-area">
+                                                                                    <a class="btn design1 case1 type1 color1" href="javascript:void(0)"><span class="btn-text">MAP</span></a>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="board-item">
+                                                                <div class="board-wrap">
+                                                                    <div class="board-head">
+                                                                        <strong class="board-subject">SK Networks (Xiamen) Steel Processing Center Co., Ltd.</strong>
+                                                                    </div>
+                                                                    <div class="board-body">
+                                                                        <div class="board-inner">
+                                                                            <div class="info-list">
+                                                                                <div class="info-item">
+                                                                                    <strong class="info-title">국가</strong>
+                                                                                    <span class="info-content">중국</span>
+                                                                                </div>
+                                                                                <div class="info-item">
+                                                                                    <strong class="info-title">주소</strong>
+                                                                                    <span class="info-content">8-14 Hongxi Road, Torch Hi-tech Industal Development Zone<br />
+                                                                                        (XiangAn), Xiamen City, FuJian Province, CHINA(361100)</span>
+                                                                                </div>
+                                                                                <div class="info-item">
+                                                                                    <strong class="info-title">전화번호</strong>
+                                                                                    <span class="info-content">86-592-776-9672</span>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="btn-display design1 case1">
+                                                                                <div class="btn-area">
+                                                                                    <a class="btn design1 case1 type1 color1" href="javascript:void(0)"><span class="btn-text">MAP</span></a>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
                                                 </div>
-                                                <div class="body">
-                                                    <div class="data-display history-layout">
-                                                        <div class="data-list">
-                                                            <div class="data-item">
-                                                                <div class="data-wrap">
-                                                                    <div class="data-inform">
-                                                                        <div class="data-subject">
-                                                                            <p class="data-name">초대형마케팅 컴퍼니인 SK글로벌 출범</p>
-                                                                        </div>
-                                                                        <p class="data-date">2000</p>
+                                            </div>
+                                            <div class="section design1 type1">
+                                                <div class="section-wrap">
+                                                    <div class="section-head">
+                                                        <div class="section-subject">
+                                                            <div class="section-name">베트남</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="section-body">
+                                                        <div class="board-list">
+                                                            <div class="board-item">
+                                                                <div class="board-wrap">
+                                                                    <div class="board-head">
+                                                                        <strong class="board-subject">MINTIT VINA</strong>
                                                                     </div>
-                                                                    <div class="data-figure">
-                                                                        <div class="figure-item"><img src="../../assets/images/company/thumb-history-2000.jpg" alt=""></div>
+                                                                    <div class="board-body">
+                                                                        <div class="board-inner">
+                                                                            <div class="info-list">
+                                                                                <div class="info-item">
+                                                                                    <strong class="info-title">국가</strong>
+                                                                                    <span class="info-content">베트남</span>
+                                                                                </div>
+                                                                                <div class="info-item">
+                                                                                    <strong class="info-title">주소</strong>
+                                                                                    <span class="info-content">MINTITVina, Pearl Plaza 31F, 561A Dien Bien Phu Street, Ward 25,<br />
+                                                                                        Binh Thanh District, Ho Chi Minh City, Vietnam (VN)</span>
+                                                                                </div>
+                                                                                <div class="info-item">
+                                                                                    <strong class="info-title">전화번호</strong>
+                                                                                    <span class="info-content">84-28-3823-1397</span>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="btn-display design1 case1">
+                                                                                <div class="btn-area">
+                                                                                    <a class="btn design1 case1 type1 color1" href="javascript:void(0)"><span class="btn-text">MAP</span></a>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
                                                                     </div>
                                                                 </div>
                                                             </div>
-                                                            <div class="data-item">
-                                                                <div class="data-wrap">
-                                                                    <div class="data-inform">
-                                                                        <div class="data-subject">
-                                                                            <p class="data-name">SK 상사 턴 어라운드 (Turn-Around) 비전 선포식</p>
-                                                                            <p class="data-name">스피드메이트, SK유통 합병</p>
-                                                                        </div>
-                                                                        <p class="data-date">1999</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="section design1 type1">
+                                                <div class="section-wrap">
+                                                    <div class="section-head">
+                                                        <div class="section-subject">
+                                                            <div class="section-name">미국</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="section-body">
+                                                        <div class="board-list">
+                                                            <div class="board-item">
+                                                                <div class="board-wrap">
+                                                                    <div class="board-head">
+                                                                        <strong class="board-subject">HICO CAPITAL LLC</strong>
                                                                     </div>
-                                                                    <div class="data-figure">
-                                                                        <div class="figure-item"><img src="../../assets/images/company/thumb-history-1999-01.jpg" alt=""></div>
-                                                                        <div class="figure-item"><img src="../../assets/images/company/thumb-history-1999-02.jpg" alt=""></div>
+                                                                    <div class="board-body">
+                                                                        <div class="board-inner">
+                                                                            <div class="info-list">
+                                                                                <div class="info-item">
+                                                                                    <strong class="info-title">국가</strong>
+                                                                                    <span class="info-content">미국</span>
+                                                                                </div>
+                                                                                <div class="info-item">
+                                                                                    <strong class="info-title">주소</strong>
+                                                                                    <span class="info-content">HICO CAPITAL LLC, 459 Hamilton Ave Suite 201, Palo Alto, CA,<br />
+                                                                                        94301, USA</span>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="btn-display design1 case1">
+                                                                                <div class="btn-area">
+                                                                                    <a class="btn design1 case1 type1 color1" href="javascript:void(0)"><span class="btn-text">MAP</span></a>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
                                                                     </div>
                                                                 </div>
                                                             </div>
-                                                            <div class="data-item">
-                                                                <div class="data-wrap">
-                                                                    <div class="data-inform">
-                                                                        <div class="data-subject">
-                                                                            <p class="data-name">SK상사로 사명 변경</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="section design1 type1">
+                                                <div class="section-wrap">
+                                                    <div class="section-head">
+                                                        <div class="section-subject">
+                                                            <div class="section-name">일본</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="section-body">
+                                                        <div class="board-list">
+                                                            <div class="board-item">
+                                                                <div class="board-wrap">
+                                                                    <div class="board-head">
+                                                                        <strong class="board-subject">SK Networks Japan Co., Ltd.</strong>
+                                                                    </div>
+                                                                    <div class="board-body">
+                                                                        <div class="board-inner">
+                                                                            <div class="info-list">
+                                                                                <div class="info-item">
+                                                                                    <strong class="info-title">국가</strong>
+                                                                                    <span class="info-content">일본</span>
+                                                                                </div>
+                                                                                <div class="info-item">
+                                                                                    <strong class="info-title">주소</strong>
+                                                                                    <span class="info-content">SK Networks Japan Co., Ltd ORIX BLDG 10F, 5-8-11 SHIMBASHI,<br />
+                                                                                        MINATO-KU, TOKYO, JAPAN ZIP CODE (105-0004) (JP)</span>
+                                                                                </div>
+                                                                                <div class="info-item">
+                                                                                    <strong class="info-title">전화번호</strong>
+                                                                                    <span class="info-content">81-3-5403-7791</span>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="btn-display design1 case1">
+                                                                                <div class="btn-area">
+                                                                                    <a class="btn design1 case1 type1 color1" href="javascript:void(0)"><span class="btn-text">MAP</span></a>
+                                                                                </div>
+                                                                            </div>
                                                                         </div>
-                                                                        <p class="data-date">1998</p>
-                                                                    </div>
-                                                                    <div class="data-figure">
-                                                                        <div class="figure-item"><img src="../../assets/images/company/thumb-history-1998.jpg" alt=""></div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="data-item">
-                                                                <div class="data-wrap">
-                                                                    <div class="data-inform">
-                                                                        <div class="data-subject">
-                                                                            <p class="data-name">이동통신 대리점 1,000개 소 돌파</p>
-                                                                        </div>
-                                                                        <p class="data-date">1996</p>
-                                                                    </div>
-                                                                    <div class="data-figure">
-                                                                        <div class="figure-item"><img src="../../assets/images/company/thumb-history-1996.jpg" alt=""></div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="data-item">
-                                                                <div class="data-wrap">
-                                                                    <div class="data-inform">
-                                                                        <div class="data-subject">
-                                                                            <p class="data-name">SK주유소 3,000개 소 돌파</p>
-                                                                        </div>
-                                                                        <p class="data-date">1995</p>
-                                                                    </div>
-                                                                    <div class="data-figure">
-                                                                        <div class="figure-item"><img src="../../assets/images/company/thumb-history-1995.jpg" alt=""></div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="data-item">
-                                                                <div class="data-wrap">
-                                                                    <div class="data-inform">
-                                                                        <div class="data-subject">
-                                                                            <p class="data-name">대한석유공사 (유공) 인수</p>
-                                                                        </div>
-                                                                        <p class="data-date">1980</p>
-                                                                    </div>
-                                                                    <div class="data-figure">
-                                                                        <div class="figure-item"><img src="../../assets/images/company/thumb-history-1980-01.jpg" alt=""></div>
-                                                                        <div class="figure-item"><img src="../../assets/images/company/thumb-history-1980-02.jpg" alt=""></div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="data-item">
-                                                                <div class="data-wrap">
-                                                                    <div class="data-inform">
-                                                                        <div class="data-subject">
-                                                                            <p class="data-name">㈜ 선경 기업 공개 및 주식 상장</p>
-                                                                        </div>
-                                                                        <p class="data-date">1977</p>
-                                                                    </div>
-                                                                    <div class="data-figure">
-                                                                        <div class="figure-item"><img src="../../assets/images/company/thumb-history-1977.jpg" alt=""></div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="data-item">
-                                                                <div class="data-wrap">
-                                                                    <div class="data-inform">
-                                                                        <div class="data-subject">
-                                                                            <p class="data-name">수출1억불탑 수상, 종합무역상사 지정</p>
-                                                                        </div>
-                                                                        <p class="data-date">1976</p>
-                                                                    </div>
-                                                                    <div class="data-figure">
-                                                                        <div class="figure-item"><img src="../../assets/images/company/thumb-history-1976.jpg" alt=""></div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="data-item">
-                                                                <div class="data-wrap">
-                                                                    <div class="data-inform">
-                                                                        <div class="data-subject">
-                                                                            <p class="data-name">금탑산업 훈장수상</p>
-                                                                        </div>
-                                                                        <p class="data-date">1973</p>
-                                                                    </div>
-                                                                    <div class="data-figure">
-                                                                        <div class="figure-item"><img src="../../assets/images/company/thumb-history-1973-01.jpg" alt=""></div>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -771,83 +1014,8 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <!-- //성장기 -->
-                                        <!-- 태동기 -->
-                                        <div class="history-item anchor3" id="historyArea3">
-                                            <div class="history-wrap">
-                                                <div class="head">
-                                                    <div class="subject">
-                                                        <p class="summary">1953~1973</p>
-                                                        <p class="name">無에서 有를 창조하다! 선경의 탄생</p>
-                                                    </div>
-                                                    <div class="progress-bar"></div>
-                                                </div>
-                                                <div class="body">
-                                                    <div class="data-display history-layout">
-                                                        <div class="data-list">
-                                                            <div class="data-item">
-                                                                <div class="data-wrap">
-                                                                    <div class="data-inform">
-                                                                        <div class="data-subject">
-                                                                            <p class="data-name">최종현 회장 취임</p>
-                                                                        </div>
-                                                                        <p class="data-date">1973</p>
-                                                                    </div>
-                                                                    <div class="data-figure">
-                                                                        <div class="figure-item"><img src="../../assets/images/company/thumb-history-1973-02.jpg" alt=""></div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="data-item">
-                                                                <div class="data-wrap">
-                                                                    <div class="data-inform">
-                                                                        <div class="data-subject">
-                                                                            <p class="data-name">금탑산업훈장 수상</p>
-                                                                        </div>
-                                                                        <p class="data-date">1963</p>
-                                                                    </div>
-                                                                    <div class="data-figure">
-                                                                        <div class="figure-item"><img src="../../assets/images/company/thumb-history-1963.jpg" alt=""></div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="data-item">
-                                                                <div class="data-wrap">
-                                                                    <div class="data-inform">
-                                                                        <div class="data-subject">
-                                                                            <p class="data-name">업계 최초 레이온 직물 홍콩 수출</p>
-                                                                        </div>
-                                                                        <p class="data-date">1962</p>
-                                                                    </div>
-                                                                    <div class="data-figure">
-                                                                        <div class="figure-item"><img src="../../assets/images/company/thumb-history-1962.jpg" alt=""></div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="data-item">
-                                                                <div class="data-wrap">
-                                                                    <div class="data-inform">
-                                                                        <div class="data-subject">
-                                                                            <p class="data-name">전쟁의 페허 속에서 시작된 작은 직물회사</p>
-                                                                        </div>
-                                                                        <p class="data-date">1953</p>
-                                                                    </div>
-                                                                    <div class="data-figure">
-                                                                        <div class="figure-item"><img src="../../assets/images/company/thumb-history-1953-01.jpg" alt=""></div>
-                                                                        <div class="figure-item"><img src="../../assets/images/company/thumb-history-1953-02.jpg" alt=""></div>
-                                                                        <div class="figure-item"><img src="../../assets/images/company/thumb-history-1953-03.jpg" alt=""></div>
-                                                                        <div class="figure-item"><img src="../../assets/images/company/thumb-history-1953-04.jpg" alt=""></div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- //태동기 -->
-                                    </div>
-                                </div>
+                                    </li>
+                                </ul>
                             </div>
                         </div>
                     </div>

@@ -24,7 +24,8 @@
 
     <script>
         document.addEventListener("DOMContentLoaded", () => {
-            AccordionOpen();
+            Accordion();
+            select();
         });
     </script>
 </head>
@@ -351,6 +352,40 @@
                                 </div>
                                 <div class="subsection">
                                     <!-- data-display -->
+                                    <div class="data-display design2 case4 type2">
+                                        <ul class="data-list">
+                                            <li class="data-item">
+                                                <div class="item-wrap">
+                                                    <div class="item-head">
+                                                        <p class="item-subject">2023</p>
+                                                    </div>
+                                                    <div class="item-util">
+                                                        <div class="submit-form design1 case1 align1">
+                                                            <div class="form-list">
+                                                                <div class="form-item">
+                                                                    <div class="form select design1 case1 type1">
+                                                                        <label for="temp" class="blind">Label</label>
+                                                                        <select name="name" id="temp">
+                                                                            <option value="option1">Option1</option>
+                                                                            <option value="option2">Option2</option>
+                                                                            <option value="option3">Option3</option>
+                                                                            <option value="option4">Option4</option>
+                                                                            <option value="option5">Option5</option>
+                                                                        </select>
+                                                                        <div class="arrow"><span class="blind">닫힘</span></div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <!-- //data-display -->
+                                </div>
+                                <div class="subsection">
+                                    <!-- data-display -->
                                     <div class="data-display design3 case1 type1">
                                         <ul class="data-list">
                                             <li class="data-item">
@@ -368,7 +403,7 @@
                                     </div>
                                     <!-- //data-display -->
                                 </div>
-                                <div class="subsection">
+                                <div class="subsection line">
                                     <div class="subsection-head">bullet list</div>
                                     <div class="subsection-body">
                                         <!-- highlight-js -->
@@ -395,175 +430,7 @@
                                     <!-- data-display -->
                                     <div class="subsection-head">special list</div>
                                     <div class="subsection-body">
-                                        <div class="data-display sk-color">
-                                            <ul class="data-list">
-                                                <li class="data-item">
-                                                    <div class="item-wrap">
-                                                        <div class="item-head" style="background-color: #EA002C;">
-                                                            <em class="item-subject">SK Red</em>
-                                                        </div>
-                                                        <div class="item-body">
-                                                            <ul class="color-list">
-                                                                <li class="list-item">
-                                                                    <span class="head">PANTONE</span>
-                                                                    <span class="body">186C</span>
-                                                                </li>
-                                                                <li class="list-item">
-                                                                    <span class="head">CMYK</span>
-                                                                    <span class="body">0 / 100 / 81 / 4</span>
-                                                                </li>
-                                                                <li class="list-item">
-                                                                    <span class="head">RGB</span>
-                                                                    <span class="body">234 / 0 / 44</span>
-                                                                </li>
-                                                                <li class="list-item">
-                                                                    <span class="head">HEX</span>
-                                                                    <span class="body">#EA002C</span>
-                                                                </li>
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                                </li>
-                                                <li class="data-item">
-                                                    <div class="item-wrap">
-                                                        <div class="item-head" style="background-color: #F47725;">
-                                                            <em class="item-subject">SK Orange</em>
-                                                        </div>
-                                                        <div class="item-body">
-                                                            <ul class="color-list">
-                                                                <li class="list-item">
-                                                                    <span class="head">PANTONE</span>
-                                                                    <span class="body">158C</span>
-                                                                </li>
-                                                                <li class="list-item">
-                                                                    <span class="head">CMYK</span>
-                                                                    <span class="body">0 / 66 / 91 / 4</span>
-                                                                </li>
-                                                                <li class="list-item">
-                                                                    <span class="head">RGB</span>
-                                                                    <span class="body">255 / 122 / 0</span>
-                                                                </li>
-                                                                <li class="list-item">
-                                                                    <span class="head">HEX</span>
-                                                                    <span class="body">#F47725</span>
-                                                                </li>
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                                </li>
-                                                <li class="data-item">
-                                                    <div class="item-wrap">
-                                                        <div class="item-head" style="background-color: #fff; border-color: #27272A;">
-                                                            <em class="item-subject accent color5">SK White</em>
-                                                        </div>
-                                                        <div class="item-body">
-                                                            <ul class="color-list">
-                                                                <li class="list-item">
-                                                                    <span class="head">PANTONE</span>
-                                                                    <span class="body">White</span>
-                                                                </li>
-                                                                <li class="list-item">
-                                                                    <span class="head">CMYK</span>
-                                                                    <span class="body">0 / 0 / 0 / 0</span>
-                                                                </li>
-                                                                <li class="list-item">
-                                                                    <span class="head">RGB</span>
-                                                                    <span class="body">255 / 255 / 255</span>
-                                                                </li>
-                                                                <li class="list-item">
-                                                                    <span class="head">HEX</span>
-                                                                    <span class="body">#FFFFFF</span>
-                                                                </li>
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <!-- //data-display -->
-                                </div>
-                                <div class="subsection line">
-                                    <!-- data-display -->
-                                    <div class="subsection-body">
-                                        <div class="data-display table-layout case1">
-                                            <div class="data-list">
-                                                <div class="data-item">
-                                                    <div class="data-wrap">
-                                                        <div class="data-head">
-                                                            <div class="data-tr">
-                                                                <span class="data-th">번호</span>
-                                                                <span class="data-th">보고서명</span>
-                                                                <span class="data-th">제출인</span>
-                                                                <span class="data-th">접수일자</span>
-                                                            </div>
-                                                        </div>
-                                                        <div class="data-body">
-                                                            <div class="data-tr">
-                                                                <span class="data-td num">10000</span>
-                                                                <span class="data-td title">최대주주등소유주식변동신고서</span>
-                                                                <span class="data-td name">SK네트웍스</span>
-                                                                <span class="data-td date">2024.03.13</span>
-                                                            </div>
-                                                            <div class="data-tr">
-                                                                <span class="data-td num">10000</span>
-                                                                <span class="data-td title">주식등의대량보유상황보고서(일반)</span>
-                                                                <span class="data-td name">SK네트웍스</span>
-                                                                <span class="data-td date">2024.03.13</span>
-                                                            </div>
-                                                            <div class="data-tr">
-                                                                <span class="data-td num">10000</span>
-                                                                <span class="data-td title">의결권대리행사권유참고서류</span>
-                                                                <span class="data-td name">SK네트웍스</span>
-                                                                <span class="data-td date">2024.03.13</span>
-                                                            </div>
-                                                            <div class="data-tr">
-                                                                <span class="data-td num">10000</span>
-                                                                <span class="data-td title">주주총회소집공고</span>
-                                                                <span class="data-td name">SK네트웍스</span>
-                                                                <span class="data-td date">2024.03.13</span>
-                                                            </div>
-                                                            <div class="data-tr">
-                                                                <span class="data-td num">10000</span>
-                                                                <span class="data-td title">최대주주등소유주식변동신고서</span>
-                                                                <span class="data-td name">SK네트웍스</span>
-                                                                <span class="data-td date">2024.03.13</span>
-                                                            </div>
-                                                            <div class="data-tr">
-                                                                <span class="data-td num">10000</span>
-                                                                <span class="data-td title">주식등의대량보유상황보고서(일반)</span>
-                                                                <span class="data-td name">SK네트웍스</span>
-                                                                <span class="data-td date">2024.03.13</span>
-                                                            </div>
-                                                            <div class="data-tr">
-                                                                <span class="data-td num">10000</span>
-                                                                <span class="data-td title">의결권대리행사권유참고서류</span>
-                                                                <span class="data-td name">SK네트웍스</span>
-                                                                <span class="data-td date">2024.03.13</span>
-                                                            </div>
-                                                            <div class="data-tr">
-                                                                <span class="data-td num">10000</span>
-                                                                <span class="data-td title">주주총회소집공고</span>
-                                                                <span class="data-td name">SK네트웍스</span>
-                                                                <span class="data-td date">2024.03.13</span>
-                                                            </div>
-                                                            <div class="data-tr">
-                                                                <span class="data-td num">10000</span>
-                                                                <span class="data-td title">최대주주등소유주식변동신고서</span>
-                                                                <span class="data-td name">SK네트웍스</span>
-                                                                <span class="data-td date">2024.03.13</span>
-                                                            </div>
-                                                            <div class="data-tr">
-                                                                <span class="data-td num">10000</span>
-                                                                <span class="data-td title">주식등의대량보유상황보고서(일반)</span>
-                                                                <span class="data-td name">SK네트웍스</span>
-                                                                <span class="data-td date">2024.03.13</span>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
+
                                     </div>
                                     <!-- //data-display -->
                                 </div>
