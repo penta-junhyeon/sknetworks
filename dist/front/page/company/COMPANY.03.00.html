@@ -30,7 +30,6 @@
             attributeChange();
             accordion();
 
-
             window.addEventListener("resize", () => {
                 btnChange();
                 attributeChange();
@@ -61,54 +60,97 @@
                 const buttons = document.querySelectorAll(".board-body .btn")
                 if (_width >= 1024) {
                     buttons.forEach(btn => {
-                        btn.className = "btn design1 case1 type1 color1"
+                        btn.className = "btn design1 case1 type1 color1 map"
                     });
                 } else {
                     buttons.forEach(btn => {
-                        btn.className = "btn design3 case3 type1 color6 ar-icon-arrow-right-up2"
+                        btn.className = "btn design3 case3 type4 color6 ar-icon-arrow-right-up2 map"
                     });
                 }
             }
 
             function attributeChange() {
                 let _width = window.innerWidth
-                const boardHead = document.querySelectorAll(".board-head")
+                const boardHead = document.querySelectorAll(".board-item .board-head")
+                const mapBtn = document.querySelectorAll(".board-item .map")
 
                 if (_width < 1024) {
                     boardHead.forEach(head => {
                         head.setAttribute("role", "button")
                         head.setAttribute("tabindex", "0")
                     });
+                    mapBtn.forEach(map => {
+                        map.setAttribute("tabindex", "-1")
+                    });
                 } else {
                     boardHead.forEach(head => {
                         head.removeAttribute("role")
                         head.removeAttribute("tabindex")
+                    });
+                    mapBtn.forEach(map => {
+                        map.setAttribute("tabindex", "0")
                     });
                 }
             }
 
             function accordion() {
                 const boardHead = document.querySelectorAll(".board-head")
-                boardHead.forEach(head => {
-                    head.addEventListener("click", () => {
-                        let _width = window.innerWidth
-                        if (_width < 1024) {
-                            const boardItem = head.closest(".board-item")
-                            const boardBody = boardItem.querySelector(".board-body")
-                            const boardInner = boardBody.querySelector(".board-inner")
 
-                            if (boardItem.classList.contains("active")) {
-                                boardItem.classList.remove("active")
-                                boardBody.style.height = "0"
-                            } else {
-                                boardItem.classList.add("active")
-                                boardBody.style.height = boardInner.offsetHeight + "px"
-                            }
+                const func = (head) => {
+                    let _width = window.innerWidth
+                    if (_width < 1024) {
+                        const boardItem = head.closest(".board-item")
+                        const boardBody = boardItem.querySelector(".board-body")
+                        const boardInner = boardBody.querySelector(".board-inner")
+                        const mapBtn = boardBody.querySelector(".map")
+
+                        if (boardItem.classList.contains("active")) {
+                            boardItem.classList.remove("active")
+                            boardBody.style.height = "0"
+                            mapBtn.setAttribute("tabindex", "-1")
+                        } else {
+                            boardItem.classList.add("active")
+                            boardBody.style.height = boardInner.offsetHeight + "px"
+                            mapBtn.setAttribute("tabindex", "0")
+                        }
+                    }
+                }
+
+                boardHead.forEach(head => {
+                    head.addEventListener("click", () => func(head));
+                    head.addEventListener("keydown", e => {
+                        e = event || window.event;
+                        let keycode = e.keyCode || e.which;
+
+                        if (!e.shiftKey && (keycode === 13 || keycode === 32)) {
+                            func(head);
                         }
                     })
                 });
             }
-        });
+
+            const mapBtn = document.querySelectorAll(".btn.map")
+            mapBtn.forEach(map => {
+                map.addEventListener("click", (e) => {
+                    e.preventDefault();
+                    let _width = window.innerWidth
+                    if (_width >= 1024) {
+                        const boardFigure = map.closest(".board-item").querySelector(".board-figure")
+                        if (boardFigure) {
+                            if (boardFigure.classList.contains("active")) {
+                                boardFigure.classList.remove("active")
+                                boardFigure.style.height = "0"
+                            } else {
+                                boardFigure.classList.add("active")
+                                boardFigure.style.height = boardFigure.querySelector(".map-area").offsetHeight + "px"
+                            }
+                        }
+                    } else {
+                        window.location.href = map.getAttribute("href")
+                    }
+                });
+            })
+        })
     </script>
 </head>
 
@@ -441,7 +483,7 @@
                                 <ul class="panel-list">
                                     <li id="tab-panel1" class="panel-item" role="tabpanel">
                                         <div class="panel-wrap">
-                                            <div class="section design1 type1">
+                                            <div class="section design2 type1">
                                                 <div class="section-wrap">
                                                     <div class="section-head">
                                                         <div class="section-subject">
@@ -473,13 +515,16 @@
                                                                             </div>
                                                                             <div class="btn-display design1 case1">
                                                                                 <div class="btn-area">
-                                                                                    <a class="btn design1 case1 type1 color1" href="javascript:void(0)"><span class="btn-text">MAP</span></a>
+                                                                                    <a class="btn design1 case1 type1 color1 map" href="javascript:void(0)" type="_blank"><span class="btn-text">MAP</span></a>
                                                                                 </div>
                                                                             </div>
                                                                         </div>
                                                                     </div>
                                                                     <div class="board-figure">
-
+                                                                        <div class="map-area">
+                                                                            <!-- 구글맵 영역 (임시로 이미지 처리) -->
+                                                                            <img src="https://place-hold.it/713x384" alt=" ">
+                                                                        </div>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -487,7 +532,7 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="section design1 type1">
+                                            <div class="section design2 type1">
                                                 <div class="section-wrap">
                                                     <div class="section-head">
                                                         <div class="section-subject">
@@ -515,13 +560,16 @@
                                                                             </div>
                                                                             <div class="btn-display design1 case1">
                                                                                 <div class="btn-area">
-                                                                                    <a class="btn design1 case1 type1 color1" href="javascript:void(0)"><span class="btn-text">MAP</span></a>
+                                                                                    <a class="btn design1 case1 type1 color1 map" href="javascript:void(0)" type="_blank"><span class="btn-text">MAP</span></a>
                                                                                 </div>
                                                                             </div>
                                                                         </div>
                                                                     </div>
                                                                     <div class="board-figure">
-
+                                                                        <div class="map-area">
+                                                                            <!-- 구글맵 영역 (임시로 이미지 처리) -->
+                                                                            <img src="https://place-hold.it/713x384" alt=" ">
+                                                                        </div>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -548,13 +596,16 @@
                                                                             </div>
                                                                             <div class="btn-display design1 case1">
                                                                                 <div class="btn-area">
-                                                                                    <a class="btn design1 case1 type1 color1" href="javascript:void(0)"><span class="btn-text">MAP</span></a>
+                                                                                    <a class="btn design1 case1 type1 color1 map" href="javascript:void(0)" type="_blank"><span class="btn-text">MAP</span></a>
                                                                                 </div>
                                                                             </div>
                                                                         </div>
                                                                     </div>
                                                                     <div class="board-figure">
-
+                                                                        <div class="map-area">
+                                                                            <!-- 구글맵 영역 (임시로 이미지 처리) -->
+                                                                            <img src="https://place-hold.it/713x384" alt=" ">
+                                                                        </div>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -562,7 +613,7 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="section design1 type1">
+                                            <div class="section design2 type1">
                                                 <div class="section-wrap">
                                                     <div class="section-head">
                                                         <div class="section-subject">
@@ -590,13 +641,16 @@
                                                                             </div>
                                                                             <div class="btn-display design1 case1">
                                                                                 <div class="btn-area">
-                                                                                    <a class="btn design1 case1 type1 color1" href="javascript:void(0)"><span class="btn-text">MAP</span></a>
+                                                                                    <a class="btn design1 case1 type1 color1 map" href="javascript:void(0)" type="_blank"><span class="btn-text">MAP</span></a>
                                                                                 </div>
                                                                             </div>
                                                                         </div>
                                                                     </div>
                                                                     <div class="board-figure">
-
+                                                                        <div class="map-area">
+                                                                            <!-- 구글맵 영역 (임시로 이미지 처리) -->
+                                                                            <img src="https://place-hold.it/713x384" alt=" ">
+                                                                        </div>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -619,13 +673,16 @@
                                                                             </div>
                                                                             <div class="btn-display design1 case1">
                                                                                 <div class="btn-area">
-                                                                                    <a class="btn design1 case1 type1 color1" href="javascript:void(0)"><span class="btn-text">MAP</span></a>
+                                                                                    <a class="btn design1 case1 type1 color1 map" href="javascript:void(0)" type="_blank"><span class="btn-text">MAP</span></a>
                                                                                 </div>
                                                                             </div>
                                                                         </div>
                                                                     </div>
                                                                     <div class="board-figure">
-
+                                                                        <div class="map-area">
+                                                                            <!-- 구글맵 영역 (임시로 이미지 처리) -->
+                                                                            <img src="https://place-hold.it/713x384" alt=" ">
+                                                                        </div>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -633,7 +690,7 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="section design1 type1">
+                                            <div class="section design2 type1">
                                                 <div class="section-wrap">
                                                     <div class="section-head">
                                                         <div class="section-subject">
@@ -661,13 +718,16 @@
                                                                             </div>
                                                                             <div class="btn-display design1 case1">
                                                                                 <div class="btn-area">
-                                                                                    <a class="btn design1 case1 type1 color1" href="javascript:void(0)"><span class="btn-text">MAP</span></a>
+                                                                                    <a class="btn design1 case1 type1 color1 map" href="javascript:void(0)" type="_blank"><span class="btn-text">MAP</span></a>
                                                                                 </div>
                                                                             </div>
                                                                         </div>
                                                                     </div>
                                                                     <div class="board-figure">
-
+                                                                        <div class="map-area">
+                                                                            <!-- 구글맵 영역 (임시로 이미지 처리) -->
+                                                                            <img src="https://place-hold.it/713x384" alt=" ">
+                                                                        </div>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -690,13 +750,16 @@
                                                                             </div>
                                                                             <div class="btn-display design1 case1">
                                                                                 <div class="btn-area">
-                                                                                    <a class="btn design1 case1 type1 color1" href="javascript:void(0)"><span class="btn-text">MAP</span></a>
+                                                                                    <a class="btn design1 case1 type1 color1 map" href="javascript:void(0)" type="_blank"><span class="btn-text">MAP</span></a>
                                                                                 </div>
                                                                             </div>
                                                                         </div>
                                                                     </div>
                                                                     <div class="board-figure">
-
+                                                                        <div class="map-area">
+                                                                            <!-- 구글맵 영역 (임시로 이미지 처리) -->
+                                                                            <img src="https://place-hold.it/713x384" alt=" ">
+                                                                        </div>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -704,7 +767,7 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="section design1 type1">
+                                            <div class="section design2 type1">
                                                 <div class="section-wrap">
                                                     <div class="section-head">
                                                         <div class="section-subject">
@@ -732,13 +795,16 @@
                                                                             </div>
                                                                             <div class="btn-display design1 case1">
                                                                                 <div class="btn-area">
-                                                                                    <a class="btn design1 case1 type1 color1" href="javascript:void(0)"><span class="btn-text">MAP</span></a>
+                                                                                    <a class="btn design1 case1 type1 color1 map" href="javascript:void(0)" type="_blank"><span class="btn-text">MAP</span></a>
                                                                                 </div>
                                                                             </div>
                                                                         </div>
                                                                     </div>
                                                                     <div class="board-figure">
-
+                                                                        <div class="map-area">
+                                                                            <!-- 구글맵 영역 (임시로 이미지 처리) -->
+                                                                            <img src="https://place-hold.it/713x384" alt=" ">
+                                                                        </div>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -761,13 +827,16 @@
                                                                             </div>
                                                                             <div class="btn-display design1 case1">
                                                                                 <div class="btn-area">
-                                                                                    <a class="btn design1 case1 type1 color1" href="javascript:void(0)"><span class="btn-text">MAP</span></a>
+                                                                                    <a class="btn design1 case1 type1 color1 map" href="javascript:void(0)" type="_blank"><span class="btn-text">MAP</span></a>
                                                                                 </div>
                                                                             </div>
                                                                         </div>
                                                                     </div>
                                                                     <div class="board-figure">
-
+                                                                        <div class="map-area">
+                                                                            <!-- 구글맵 영역 (임시로 이미지 처리) -->
+                                                                            <img src="https://place-hold.it/713x384" alt=" ">
+                                                                        </div>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -779,7 +848,7 @@
                                     </li>
                                     <li id="tab-panel2" class="panel-item" role="tabpanel">
                                         <div class="panel-wrap">
-                                            <div class="section design1 type1">
+                                            <div class="section design2 type1">
                                                 <div class="section-wrap">
                                                     <div class="section-head">
                                                         <div class="section-subject">
@@ -812,9 +881,15 @@
                                                                             </div>
                                                                             <div class="btn-display design1 case1">
                                                                                 <div class="btn-area">
-                                                                                    <a class="btn design1 case1 type1 color1" href="javascript:void(0)"><span class="btn-text">MAP</span></a>
+                                                                                    <a class="btn design1 case1 type1 color1 map" href="javascript:void(0)" type="_blank"><span class="btn-text">MAP</span></a>
                                                                                 </div>
                                                                             </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="board-figure">
+                                                                        <div class="map-area">
+                                                                            <!-- 구글맵 영역 (임시로 이미지 처리) -->
+                                                                            <img src="https://place-hold.it/713x384" alt=" ">
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -843,9 +918,15 @@
                                                                             </div>
                                                                             <div class="btn-display design1 case1">
                                                                                 <div class="btn-area">
-                                                                                    <a class="btn design1 case1 type1 color1" href="javascript:void(0)"><span class="btn-text">MAP</span></a>
+                                                                                    <a class="btn design1 case1 type1 color1 map" href="javascript:void(0)" type="_blank"><span class="btn-text">MAP</span></a>
                                                                                 </div>
                                                                             </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="board-figure">
+                                                                        <div class="map-area">
+                                                                            <!-- 구글맵 영역 (임시로 이미지 처리) -->
+                                                                            <img src="https://place-hold.it/713x384" alt=" ">
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -874,9 +955,15 @@
                                                                             </div>
                                                                             <div class="btn-display design1 case1">
                                                                                 <div class="btn-area">
-                                                                                    <a class="btn design1 case1 type1 color1" href="javascript:void(0)"><span class="btn-text">MAP</span></a>
+                                                                                    <a class="btn design1 case1 type1 color1 map" href="javascript:void(0)" type="_blank"><span class="btn-text">MAP</span></a>
                                                                                 </div>
                                                                             </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="board-figure">
+                                                                        <div class="map-area">
+                                                                            <!-- 구글맵 영역 (임시로 이미지 처리) -->
+                                                                            <img src="https://place-hold.it/713x384" alt=" ">
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -885,7 +972,7 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="section design1 type1">
+                                            <div class="section design2 type1">
                                                 <div class="section-wrap">
                                                     <div class="section-head">
                                                         <div class="section-subject">
@@ -918,9 +1005,15 @@
                                                                             </div>
                                                                             <div class="btn-display design1 case1">
                                                                                 <div class="btn-area">
-                                                                                    <a class="btn design1 case1 type1 color1" href="javascript:void(0)"><span class="btn-text">MAP</span></a>
+                                                                                    <a class="btn design1 case1 type1 color1 map" href="javascript:void(0)" type="_blank"><span class="btn-text">MAP</span></a>
                                                                                 </div>
                                                                             </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="board-figure">
+                                                                        <div class="map-area">
+                                                                            <!-- 구글맵 영역 (임시로 이미지 처리) -->
+                                                                            <img src="https://place-hold.it/713x384" alt=" ">
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -929,7 +1022,7 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="section design1 type1">
+                                            <div class="section design2 type1">
                                                 <div class="section-wrap">
                                                     <div class="section-head">
                                                         <div class="section-subject">
@@ -958,9 +1051,15 @@
                                                                             </div>
                                                                             <div class="btn-display design1 case1">
                                                                                 <div class="btn-area">
-                                                                                    <a class="btn design1 case1 type1 color1" href="javascript:void(0)"><span class="btn-text">MAP</span></a>
+                                                                                    <a class="btn design1 case1 type1 color1 map" href="javascript:void(0)" type="_blank"><span class="btn-text">MAP</span></a>
                                                                                 </div>
                                                                             </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="board-figure">
+                                                                        <div class="map-area">
+                                                                            <!-- 구글맵 영역 (임시로 이미지 처리) -->
+                                                                            <img src="https://place-hold.it/713x384" alt=" ">
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -969,7 +1068,7 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="section design1 type1">
+                                            <div class="section design2 type1">
                                                 <div class="section-wrap">
                                                     <div class="section-head">
                                                         <div class="section-subject">
@@ -1002,9 +1101,15 @@
                                                                             </div>
                                                                             <div class="btn-display design1 case1">
                                                                                 <div class="btn-area">
-                                                                                    <a class="btn design1 case1 type1 color1" href="javascript:void(0)"><span class="btn-text">MAP</span></a>
+                                                                                    <a class="btn design1 case1 type1 color1 map" href="javascript:void(0)" type="_blank"><span class="btn-text">MAP</span></a>
                                                                                 </div>
                                                                             </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="board-figure">
+                                                                        <div class="map-area">
+                                                                            <!-- 구글맵 영역 (임시로 이미지 처리) -->
+                                                                            <img src="https://place-hold.it/713x384" alt=" ">
                                                                         </div>
                                                                     </div>
                                                                 </div>
