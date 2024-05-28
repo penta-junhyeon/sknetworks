@@ -23,6 +23,8 @@
             frontCommon.Html.reset();
         });
     </script>
+
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.32/dist/lenis.min.js"></script>
     <script>
         document.addEventListener("DOMContentLoaded", () => {
             Tab();
@@ -1353,7 +1355,7 @@
                                                                         </div>
                                                                     </div>
                                                                     <div class="section-body">
-                                                                        <div class="data-display design1 case1 type3">
+                                                                        <div class="data-display roadmap case1 type7">
                                                                             <div class="data-list">
                                                                                 <div class="data-item">
                                                                                     <div class="data-wrap">
@@ -1545,7 +1547,7 @@
                                                                         </div>
                                                                     </div>
                                                                     <div class="section-body">
-                                                                        <div class="data-display design1 case1 type3">
+                                                                        <div class="data-display roadmap case1 type7">
                                                                             <div class="data-list">
                                                                                 <div class="data-item">
                                                                                     <div class="data-wrap">
@@ -1713,7 +1715,7 @@
                                                                     </div>
                                                                     <div class="section-body">
                                                                         <p class="para">SK네트웍스는 사회공헌 활동 추진 시, 해당 활동이 대기업의 사회적 책임에 해당하는지, 당사의 정체성(사업/지역사회 연계 여부 등)에 부합하는지 등을 고려하여 내부 검토 후 진행합니다.</p>
-                                                                        <div class="data-display design1 case1 type3">
+                                                                        <div class="data-display roadmap case1 type7">
                                                                             <div class="data-list">
                                                                                 <div class="data-item">
                                                                                     <div class="data-wrap">
@@ -1832,8 +1834,8 @@
                                                                                                                     </div>
                                                                                                                     <div class="data-body">
                                                                                                                         <p class="para str"><strong>SV 행복플러스</strong></p>
-                                                                                                                        <p class="para">
-                                                                                                                            산업-교육간 4차 산업혁명 ‘매치업’ 교육 참여
+                                                                                                                        <p class="para pop">
+                                                                                                                            <button data-bs-toggle="modal" data-bs-target="#modalTable">산업-교육간 4차 산업혁명 ‘매치업’ 교육 참여</button>
                                                                                                                         </p>
                                                                                                                         <p class="para">
                                                                                                                             SK네트웍스 프로보노
@@ -1841,8 +1843,8 @@
                                                                                                                         <p class="para">
                                                                                                                             요리를 통한 도시재생 사회적협동조합 후원
                                                                                                                         </p>
-                                                                                                                        <p class="para">
-                                                                                                                            ‘스피드메이트와 함께하는 장애인 무상점검’ 지원
+                                                                                                                        <p class="para pop">
+                                                                                                                            <button data-bs-toggle="modal" data-bs-target="#modalTxt">‘스피드메이트와 함께하는 장애인 무상점검’ 지원</button>
                                                                                                                         </p>
                                                                                                                         <p class="para">
                                                                                                                             [워커힐]가정간편식(HMR) 및 김치 기부 (광진구청)
@@ -1885,7 +1887,7 @@
                                                                         </div>
                                                                         <div class="btn-display align3">
                                                                             <div class="btn-area">
-                                                                                <a class="btn design3 case1 type1 color2 ar-icon-download-bg" href="#"><span class="btn-text">사회 공헌 활동 상세 다운로드</span></a>
+                                                                                <a class="btn design3 case1 type1 color2 ar-icon-download-bg" href="#" target="_blank"><span class="btn-text">사회 공헌 활동 상세 다운로드</span></a>
                                                                             </div>
                                                                         </div>
                                                                     </div>
@@ -1913,7 +1915,7 @@
                                                                         </div>
                                                                     </div>
                                                                     <div class="section-body">
-                                                                        <div class="data-display design1 case1 type3">
+                                                                        <div class="data-display roadmap case1 type7">
                                                                             <div class="data-list">
                                                                                 <div class="data-item">
                                                                                     <div class="data-wrap">
@@ -1987,8 +1989,10 @@
                                                                                             2022년 Target형 프로보노는 SK네트웍스의 사업군 중 ‘Mobility, 깨끗한 공기, 자원순환‘ 관련 사회문제를 해결하고자 하는 3개 사회적기업/소셜벤처를 대상으로 자문을 진행하였습니다. Spot성 프로보노는 자문 Needs가 있는 사회적 기업과 관련 역량을 보유한 구성원을 매칭하여 Needs 발생 시 자문을 진행하고 있으며, 자문 분야는 경영기획, 마케팅, 법률, 재무/회계, 사업기획, 통번역, R&D, 사용성테스트 등 입니다.
                                                                                         </p>
                                                                                     </div>
-                                                                                    <div class="post-figure">
-                                                                                        <img src="../../assets/images/esg/zoom.jpg" alt=" ">
+                                                                                    <div class="post-fig-comm">
+                                                                                        <div class="post-figure">
+                                                                                            <img src="../../assets/images/esg/zoom.jpg" alt=" ">
+                                                                                        </div>
                                                                                         <p class="comment design1">2023년 SK네트웍스 프로보노 발대식</p>
                                                                                     </div>
                                                                                 </div>
@@ -2193,7 +2197,117 @@
             </div>
         </footer>
         <!-- //page-foot -->
+        <!-- modal -->
+        <div class="modal design1 medium" id="modalTable" tabindex="-1" aria-labelledby="GRAND WALKERHILL SEOUL 소개" aria-hidden="true">
+            <div class="modal-inner modal-dialog">
+                <div class="modal-area">
+                    <div class="modal-wrap">
+                        <div class="modal-list">
+                            <div class="modal-item">
+                                <div class="modal-head">
+                                    <em class="modal-subjec"><span class="modal-name">법/규제 관리 체계 및 대응 전략</span></em>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="section design1 case7 type4 align1">
+                                        <div class="section-wrap">
+                                            <div class="section-body">
+                                                <p class="para">
+                                                    SK네트웍스는 4차 산업혁명 분야의 직무능력 향상을 희망하는 대학생, 구직자, 재직자 등을 위해 개설된 온라인 직무인중 과정인 ‘매치업’에 참여하고 있으며, 블록 체인 분야에서 필요한 직무능력을 제시하고 학습자의 직무능력을 평가 및 인증하여 이에 따른 인증결과를 자사의 취업 인사제도에 활용하고 있습니다.
+                                                </p>
+                                            </div>
+
+                                            <div class="t-display design2 case1 type1 align1 scroll">
+                                                <table style="min-width: 497px;">
+                                                    <caption>환경 법/규제 관리 체계 및 대응 전략</caption>
+                                                    <colgroup>
+                                                        <col width="25%">
+                                                        <col width="25%">
+                                                        <col width="25%">
+                                                        <col>
+                                                    </colgroup>
+                                                    <thead>
+                                                        <tr>
+                                                            <th scope="col"></th>
+                                                            <th scope="col">수강자 수</th>
+                                                            <th scope="col">이수자 수</th>
+                                                            <th scope="col">합격자 수*</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td class="t-bg">‘20년</td>
+                                                            <td class="align3">457</td>
+                                                            <td class="align3">85</td>
+                                                            <td class="align3">17</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="t-bg">‘21년</td>
+                                                            <td class="align3">1,081</td>
+                                                            <td class="align3">325</td>
+                                                            <td class="align3">40</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="t-bg">‘22년 01월 ~ 09월</td>
+                                                            <td class="align3">589</td>
+                                                            <td class="align3">284</td>
+                                                            <td class="align3">16</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                            <p class="comment design1">* 대표기업이 교육강좌 이수자를 대상으로 실시한 직무 인증평가 통과자<br>
+                                                (인증 평가 방식 : 온/오프라인 시험, 발표회, 시연 등)</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-fuc">
+                            <button type="button" data-bs-dismiss="modal" class="btn icon case1 modal-close"><span class="btn-text blind">닫기</span></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal design1 medium" id="modalTxt" tabindex="-1" aria-labelledby="GRAND WALKERHILL SEOUL 소개" aria-hidden="true">
+            <div class="modal-inner modal-dialog">
+                <div class="modal-area">
+                    <div class="modal-wrap">
+                        <div class="modal-list">
+                            <div class="modal-item">
+                                <div class="modal-head">
+                                    <em class="modal-subjec"><span class="modal-name">법/규제 관리 체계 및 대응 전략</span></em>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="section design1 case7 type4 align1">
+                                        <div class="section-wrap">
+                                            <div class="section-body">
+                                                <p class="para">
+                                                    **실행성과
+                                                </p>
+                                            </div>
+                                            <div class="bullet-display design1 case2 type1">
+                                                <ul class="data-list">
+                                                    <li class="data-item">2018 : 2개 시설 지원 (경기 2개)</li>
+                                                    <li class="data-item">2019 : 5개 시설 지원 (서울 2, 경기 1, 기타 2)</li>
+                                                    <li class="data-item">2020 : 4개 시설 지원 (서울 1, 기타 3)</li>
+                                                    <li class="data-item">2021 : 한국장애인종합복지관협회와 MOU<br>체결을 통한 추천 지역 내 복지관 서비스 제공 계획 중<br>(코로나 19 사회적 거리두기 정책으로 시행 중단중이며 정책 완화시 서비스 재개 예정)</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-fuc">
+                            <button type="button" data-bs-dismiss="modal" class="btn icon case1 modal-close"><span class="btn-text blind">닫기</span></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
+
 </body>
 
 </html>
