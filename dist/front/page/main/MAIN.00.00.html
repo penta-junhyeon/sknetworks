@@ -37,9 +37,12 @@
                 entries.forEach(entry => {
                     const Intro = entry.target.closest(".intro")
                     if (entry.isIntersecting) {
+                        Intro.classList.remove("active3-reverse")
                         Intro.classList.add("active3")
+                        Intro.classList.add("active3-ani")
                     } else {
-                        Intro.classList.remove("active3")
+                        Intro.classList.add("active3-reverse")
+                        Intro.classList.remove("active3-ani")
                     }
                 })
             }, {
@@ -382,6 +385,18 @@
                                     <a class="btn design3 case1 type1 color3 ar-icon-arrow-right2-bg" href="#">
                                         <span class="btn-text">Our ESG</span>
                                     </a>
+                                </div>
+                                <div class="section-figure">
+                                    <div class="figure-bundle">
+                                        <span class="figure1"></span>
+                                        <span class="figure2"></span>
+                                        <span class="figure3"></span>
+                                    </div>
+                                    <div class="figure-bundle">
+                                        <span class="figure4"></span>
+                                        <span class="figure5"></span>
+                                        <span class="figure6"></span>
+                                    </div>
                                 </div>
                             </div>
                         </div>
