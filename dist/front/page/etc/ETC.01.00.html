@@ -25,19 +25,19 @@
     </script>
 
     <script src="https://unpkg.com/@studio-freight/lenis@1.0.32/dist/lenis.min.js"></script>
-</head>
-<script>
-    document.addEventListener("DOMContentLoaded", () => {
-        const brandInquiry = document.querySelector(".section.brand-inquiry")
-        const brandInquiryItem = brandInquiry.querySelectorAll(".board-item")
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const brandInquiry = document.querySelector(".section.brand-inquiry")
+            const brandInquiryItem = brandInquiry.querySelectorAll(".board-item")
 
-        brandInquiryItem.forEach(item => {
-            item.addEventListener("mouseenter", function() {
-                brandInquiry.dataset.back = item.dataset.list
-            })
+            brandInquiryItem.forEach(item => {
+                item.addEventListener("mouseenter", function() {
+                    brandInquiry.dataset.back = item.dataset.list
+                })
+            });
         });
-    });
-</script>
+    </script>
+</head>
 
 <body class="kr">
     <div id="wrap">

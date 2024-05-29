@@ -25,21 +25,21 @@
     </script>
 
     <script src="https://unpkg.com/@studio-freight/lenis@1.0.32/dist/lenis.min.js"></script>
-</head>
-<script>
-    document.addEventListener("DOMContentLoaded", () => {
-        const dataItem = document.querySelectorAll(".business-profile .data-item")
-        dataItem.forEach(item => {
-            item.addEventListener("click", function(e) {
-                e.preventDefault();
-                const href = item.querySelector("a").getAttribute('href')
-                document.querySelector(href).scrollIntoView({
-                    behavior: 'smooth'
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const dataItem = document.querySelectorAll(".business-profile .data-item")
+            dataItem.forEach(item => {
+                item.addEventListener("click", function(e) {
+                    e.preventDefault();
+                    const href = item.querySelector("a").getAttribute('href')
+                    document.querySelector(href).scrollIntoView({
+                        behavior: 'smooth'
+                    })
                 })
-            })
+            });
         });
-    });
-</script>
+    </script>
+</head>
 
 <body class="kr">
     <div id="wrap">
