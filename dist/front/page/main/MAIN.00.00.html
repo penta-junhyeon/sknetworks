@@ -35,11 +35,14 @@
             const network = company.querySelector(".network")
             const esg = company.querySelector(".esg")
             const media = document.querySelector(".section.media")
+            let press = media.querySelector(".press-media")
             const investment = document.querySelector(".section.investment")
 
             intro.classList.add("active1")
             setTimeout(() => {
                 intro.classList.add("active2")
+                let press = media.querySelector(".press-media")
+                press.style.top = window.innerHeight - press.offsetHeight + "px"
             }, 1500);
 
             const io = new IntersectionObserver(entries => {
@@ -145,6 +148,19 @@
                 },
             });
 
+            window.addEventListener('beforeunload', function() {
+                localStorage.setItem('scrollPosition', window.scrollY);
+            });
+
+            window.addEventListener('load', function() {
+                if (localStorage.getItem('scrollPosition') !== null) {
+                    window.scrollTo(0, localStorage.getItem('scrollPosition'));
+                }
+                setTimeout(() => {
+                    console.log(intro.classList.contains("active4"));
+
+                }, 100);
+            });
 
         });
     </script>
