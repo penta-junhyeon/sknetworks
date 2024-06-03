@@ -2,14 +2,15 @@
 <html lang="ko">
 
 <head>
-    <meta charset="utf-8" />
+    <meta charset="utf-8">
     <title>SK Networks</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
-    <meta name="format-detection" content="telephone=no, date=no, address=no, email=no" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <meta name="keywords" content="SK Networks" />
-    <!-- <link rel="shortcut icon" href="./../../assets/images/bui/favicon.ico" /> -->
-    <link rel="stylesheet" type="text/css" href="../../assets/css/style.css" />
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="format-detection" content="telephone=no, date=no, address=no, email=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="keywords" content="SK Networks">
+    <!-- <link rel="shortcut icon" href="./../../assets/images/bui/favicon.ico"> -->
+    <link rel="stylesheet" type="text/css" href="../../assets/css/style.css">
 
     <script src="./../../assets/js/jquery.js"></script>
     <script src="./../../assets/js/gsap.min.js"></script>
@@ -25,12 +26,12 @@
     </script>
 
     <script src="https://unpkg.com/@studio-freight/lenis@1.0.32/dist/lenis.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            localAnimations_Case02();
+        });
+    </script>
 </head>
-<script>
-    document.addEventListener("DOMContentLoaded", () => {
-        localAnimations_Case02();
-    });
-</script>
 
 <body class="kr">
     <div id="wrap">
@@ -326,7 +327,7 @@
 
                         </ul>
                     </div>
-                    <div class="local-head design5" local-animation="case-2">
+                    <div class="local-head design5" data-local-animation="case-2">
                         <div class="local-subject">
                             <h2 class="local-name">지속가능한 지구를 위한<br>
                                 경영을 하겠습니다.</h2>
@@ -371,7 +372,7 @@
                                             <div class="post-item">
                                                 <div class="post-wrap">
                                                     <div class="post-figure">
-                                                        <img src="../../assets/images/esg/esg-daigram2.jpg" alt="기후변화 거버넌스 체계 이미지입니다. 자세한 설명은 하단 내용을 참고하세요." style="min-width: 56.4rem;">
+                                                        <img src="../../assets/images/esg/esg-daigram2.jpg" alt="기후변화 Governance 체계 이미지입니다. 자세한 설명은 하단 내용을 참고하세요." style="min-width: 56.4rem;">
                                                     </div>
                                                     <div class="blind">
                                                         <div>
@@ -504,9 +505,9 @@
                                                     <table style="min-width: 1020px;">
                                                         <caption>2023 ESG 경영 위원회 회차, 개최일자, 주요안건, 세부내용</caption>
                                                         <colgroup>
-                                                            <col width="10%">
-                                                            <col width="14%">
-                                                            <col width="34%">
+                                                            <col style="width: 10%;">
+                                                            <col style="width: 14%;">
+                                                            <col style="width: 34%;">
                                                             <col>
                                                         </colgroup>
                                                         <thead>
@@ -545,9 +546,9 @@
                                                     <table style="min-width: 1020px;">
                                                         <caption>2022 ESG 경영 위원회 회차, 개최일자, 주요안건, 세부내용</caption>
                                                         <colgroup>
-                                                            <col width="10%">
-                                                            <col width="14%">
-                                                            <col width="34%">
+                                                            <col style="width: 10%;">
+                                                            <col style="width: 14%;">
+                                                            <col style="width: 34%;">
                                                             <col>
                                                         </colgroup>
                                                         <thead>
@@ -588,9 +589,9 @@
                                                     <table style="min-width: 1020px;">
                                                         <caption>2021 ESG 경영 위원회 회차, 개최일자, 주요안건, 세부내용</caption>
                                                         <colgroup>
-                                                            <col width="10%">
-                                                            <col width="14%">
-                                                            <col width="34%">
+                                                            <col style="width: 10%;">
+                                                            <col style="width: 14%;">
+                                                            <col style="width: 34%;">
                                                             <col>
                                                         </colgroup>
                                                         <thead>
@@ -668,8 +669,8 @@
                                                     <table style="min-width: 610px;">
                                                         <caption>2023 전사ESG추진위원회 논의 회차, 개최월, 주요내용</caption>
                                                         <colgroup>
-                                                            <col width="10%">
-                                                            <col width="13.75%">
+                                                            <col style="width: 10%;">
+                                                            <col style="width: 13.75%;">
                                                             <col>
                                                         </colgroup>
                                                         <thead>
@@ -737,8 +738,8 @@
                                                     <table style="min-width: 610px;">
                                                         <caption>2022 전사ESG추진위원회 논의 회차, 개최월, 주요내용</caption>
                                                         <colgroup>
-                                                            <col width="10%">
-                                                            <col width="13.75%">
+                                                            <col style="width: 10%;">
+                                                            <col style="width: 13.75%;">
                                                             <col>
                                                         </colgroup>
                                                         <thead>
@@ -890,8 +891,8 @@
                                                     <table style="min-width: 610px;">
                                                         <caption>2021 전사ESG추진위원회 논의 회차, 개최월, 주요내용</caption>
                                                         <colgroup>
-                                                            <col width="10%">
-                                                            <col width="13.75%">
+                                                            <col style="width: 10%;">
+                                                            <col style="width: 13.75%;">
                                                             <col>
                                                         </colgroup>
                                                         <thead>
@@ -1049,14 +1050,13 @@
                                                         <img src="../../assets/images/esg/esg-re100-mo.jpg" alt="2040 RE100 Roadmap 이미지 입니다. 자세한 설명은 하단 내용을 참고하세요." style="min-width: 73rem;" class="mo-only">
                                                     </div>
                                                     <div class="blind">
-                                                        <strong>온실가스 배출량* 및 Net Zero 2040 시나리오 (단위: 천tCO2eq)</strong>
+                                                        <strong>2040 RE100 Roadmap (녹색프리미엄, 제3자 PPA, 태양광)</strong>
                                                         <ul>
-                                                            <li>2021년 - 45.6</li>
-                                                            <li>2022년 - 45.6(1.5℃) / 42.1(Well below 3.5℃) / 47.1(BAU**)</li>
-                                                            <li>2025년 - 41.3 / 51.5(BAU**)</li>
-                                                            <li>2031년 - 24.5(2021년 실적 대비 46.2% ↑) / 56.3(BAU**)</li>
-                                                            <li>2035년 - 13.6 / 58.7(BAU**)</li>
-                                                            <li>2040년 - 0 / 62(BAU**)</li>
+                                                            <li>2022년(실적) - 11%</li>
+                                                            <li>2025년 - 23%</li>
+                                                            <li>2030년 - 41%</li>
+                                                            <li>2035년 - 77%</li>
+                                                            <li>2040년 - 100%</li>
                                                         </ul>
                                                     </div>
                                                 </div>

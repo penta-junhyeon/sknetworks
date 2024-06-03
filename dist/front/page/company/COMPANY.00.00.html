@@ -2,14 +2,15 @@
 <html lang="ko">
 
 <head>
-    <meta charset="utf-8" />
+    <meta charset="utf-8">
     <title>SK Networks</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
-    <meta name="format-detection" content="telephone=no, date=no, address=no, email=no" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <meta name="keywords" content="SK Networks" />
-    <!-- <link rel="shortcut icon" href="./../../assets/images/bui/favicon.ico" /> -->
-    <link rel="stylesheet" type="text/css" href="../../assets/css/style.css" />
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="format-detection" content="telephone=no, date=no, address=no, email=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="keywords" content="SK Networks">
+    <!-- <link rel="shortcut icon" href="./../../assets/images/bui/favicon.ico"> -->
+    <link rel="stylesheet" type="text/css" href="../../assets/css/style.css">
 
     <script src="./../../assets/js/jquery.js"></script>
     <script src="./../../assets/js/gsap.min.js"></script>
@@ -29,6 +30,111 @@
         document.addEventListener("DOMContentLoaded", () => {
             Tab();
         });
+    </script>
+    <script>
+        $(document).ready(function() {
+            localAnimations_Case01();
+            sectionAnimations_Case01('[data-section-animation="case-1"]');
+            sectionAnimations_Case02('[data-section-animation="case-2"]');
+            sectionAnimations_Case03('[data-section-animation="case-3"]');
+
+            gsap.utils.toArray('.story4 .data-list .data-item').forEach((item, index) => {
+                gsap.to(item, {
+                    y: -90,
+                    ease: "none",
+                    scrollTrigger: {
+                        trigger: ".story4",
+                        //markers: true,
+                        start: "center bottom",
+                        end: "top top",
+                        scrub: true
+                    },
+                });
+            });
+
+            gsap.utils.toArray('.pallarax').forEach((item, index) => {
+                gsap.to(item, {
+                    y: 0,
+                    ease: "none",
+                    scrollTrigger: {
+                        trigger: item.closest('.section'),
+                        //markers: true,
+                        start: "30% bottom",
+                        end: "top bottom",
+                        scrub: true
+                    },
+                });
+            });
+        });
+        $(window).on('scroll resize', function() {
+            sectionAnimations_Case01('[data-section-animation="case-1"]');
+            sectionAnimations_Case02('[data-section-animation="case-2"]');
+            sectionAnimations_Case03('[data-section-animation="case-3"]');
+        });
+
+        function sectionAnimations_Case01(selector) {
+            $(selector).each(function() {
+                var $selector = $(this);
+                let target = $(window).innerHeight() * 0.6;
+                var start = $selector.offset().top - $(window).innerHeight() + target;
+                var end = $selector.offset().top + $selector.innerHeight() - target;
+                var scrollAmt = $(document).scrollTop();
+
+                if (scrollAmt < start) {
+                    $selector.removeClass('active');
+                } else if (scrollAmt > end) {
+                    // $selector.removeClass('active');
+                } else {
+                    if ($selector.hasClass('active') === false) {
+                        $selector.removeClass('active');
+                    }
+                    $selector.addClass('active');
+                }
+            });
+        }
+
+        function sectionAnimations_Case02(selector) {
+            $(selector).each(function() {
+                var $selector = $(this);
+                let target1 = $(window).innerHeight() * 0.2;
+                let target2 = $(window).innerHeight() * 0.4;
+                var start = $selector.offset().top - $(window).innerHeight() + target1;
+                var end = $selector.offset().top + $selector.innerHeight() - target2;
+                var scrollAmt = $(document).scrollTop();
+
+                if (scrollAmt < start) {
+                    $selector.removeClass('active');
+                } else if (scrollAmt > end) {
+                    $selector.removeClass('active');
+                } else {
+                    if ($selector.hasClass('active') === false) {
+                        $selector.removeClass('active');
+                    }
+                    $selector.addClass('active');
+                }
+            });
+        }
+
+        function sectionAnimations_Case03(selector) {
+            $(selector).each(function() {
+                var $selector = $(this);
+                let target = $(window).innerHeight() * 1.2;
+                var start = $selector.offset().top - $(window).innerHeight() + target;
+                var end = $selector.offset().top + $selector.innerHeight() + target;
+                var scrollAmt = $(document).scrollTop();
+
+                if (scrollAmt < start) {
+                    $selector.removeClass('active');
+                } else if (scrollAmt > end) {
+                    $selector.removeClass('active');
+                } else {
+                    if ($selector.hasClass('active') === false) {
+                        $selector.removeClass('active');
+                    }
+                    $selector.addClass('active');
+                }
+            });
+        }
     </script>
 </head>
 
@@ -326,7 +432,7 @@
 
                         </ul>
                     </div>
-                    <div class="local-head design4" local-animation="case-1">
+                    <div class="local-head design4" data-local-animation="case-1">
                         <div class="local-subject">
                             <h2 class="local-name">Our<br>Company</h2>
                         </div>
@@ -337,8 +443,7 @@
                             </div>
                         </div>
                         <div class="local-figure">
-                            <!-- <img src="../../assets/images/company/bg-local-head-introduction-pc.jpg" alt=" "> -->
-                            <video preload="auto" autoplay="true" loop="loop" muted="muted" poster="" src="../../assets/movies/bg-local-head-company-introduction.mp4"></video>
+                            <video preload="auto" autoplay loop muted src="../../assets/movies/bg-local-head-company-introduction.mp4"></video>
                         </div>
                         <div class="local-util">
                             <p class="scroll-guide">Scroll Down</p>
@@ -359,15 +464,15 @@
                             <!-- //tab-display -->
                             <!-- panel-display -->
                             <div class="panel-display design1">
-                                <ul class="panel-list">
-                                    <li id="tab-panel1" class="panel-item" role="tabpanel">
+                                <div class="panel-list">
+                                    <div id="tab-panel1" class="panel-item" role="tabpanel">
                                         <div class="panel-wrap">
-                                            <div class="section story1" section-animation="case-2">
+                                            <div class="section story1" data-section-animation="case-2">
                                                 <div class="section-body">
                                                     <div class="post-list">
                                                         <div class="post-item">
                                                             <div class="post-wrap">
-                                                                <div class="post-figure"><img src="../../assets/images/company/story1-figure.png" alt=""></div>
+                                                                <div class="post-figure"><img src="../../assets/images/company/story1-figure.png" alt=" "></div>
                                                                 <div class="post-body">
                                                                     <p class="para">SK네트웍스는 사회적 책임 활동을 다하고<br>제공하는 제품과 서비스의 혁신을 통해</p>
                                                                     <p class="para">우리사회가 갖고 있는<br class="mo-only"> 다양한 문제를 해결해 나감으로써<br> 다양한 이해관계자로부터 사랑과 지지를 받고 지속가능한 성장을 이룰 것입니다.</p>
@@ -377,12 +482,12 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="section story2" section-animation="case-1">
+                                            <div class="section story2" data-section-animation="case-1">
                                                 <div class="section-body">
                                                     <div class="post-list">
                                                         <div class="post-item">
                                                             <div class="post-wrap">
-                                                                <div class="post-figure"><img src="../../assets/images/company/story2-figure.jpg" alt=""></div>
+                                                                <div class="post-figure"><img src="../../assets/images/company/story2-figure.jpg" alt=" "></div>
                                                                 <div class="post-body">
                                                                     <p class="para">
                                                                         구성원이 즐겁게 일하고<br>
@@ -395,7 +500,7 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="section story3" section-animation="case-1">
+                                            <div class="section story3" data-section-animation="case-1">
                                                 <div class="section-body">
                                                     <div class="post-list">
                                                         <div class="post-item">
@@ -414,7 +519,7 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="section story4" section-animation="case-1">
+                                            <div class="section story4" data-section-animation="case-1">
                                                 <div class="section-body">
                                                     <div class="data-list">
                                                         <div class="data-item one">
@@ -445,7 +550,7 @@
                                                             <div class="product-list">
                                                                 <div class="product-item">
                                                                     <div class="product-wrap">
-                                                                        <div class="product-figure"><img src="../../assets/images/company/story5-product-01.jpg" alt=""></div>
+                                                                        <div class="product-figure"><img src="../../assets/images/company/story5-product-01.jpg" alt=" "></div>
                                                                         <div class="product-body">
                                                                             <p class="para">
                                                                                 SK네트웍스는 디지털 전환, Web3, 지속가능성 영역 등<br class="pc-only">
@@ -466,17 +571,17 @@
                                                             <div class="product-list">
                                                                 <div class="product-item">
                                                                     <div class="product-wrap">
-                                                                        <div class="product-figure"><img src="../../assets/images/company/story5-product-02.jpg" alt=""></div>
+                                                                        <div class="product-figure"><img src="../../assets/images/company/story5-product-02.jpg" alt=" "></div>
                                                                     </div>
                                                                 </div>
                                                                 <div class="product-item">
                                                                     <div class="product-wrap">
-                                                                        <div class="product-figure"><img src="../../assets/images/company/story5-product-03.jpg" alt=""></div>
+                                                                        <div class="product-figure"><img src="../../assets/images/company/story5-product-03.jpg" alt=" "></div>
                                                                     </div>
                                                                 </div>
                                                                 <div class="product-item">
                                                                     <div class="product-wrap">
-                                                                        <div class="product-figure"><img src="../../assets/images/company/story5-product-04.jpg" alt=""></div>
+                                                                        <div class="product-figure"><img src="../../assets/images/company/story5-product-04.jpg" alt=" "></div>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -503,7 +608,7 @@
                                                             <div class="product-list">
                                                                 <div class="product-item">
                                                                     <div class="product-wrap">
-                                                                        <div class="product-figure"><img src="../../assets/images/company/story6-product-01.jpg" alt=""></div>
+                                                                        <div class="product-figure"><img src="../../assets/images/company/story6-product-01.jpg" alt=" "></div>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -512,7 +617,7 @@
                                                             <div class="product-list">
                                                                 <div class="product-item">
                                                                     <div class="product-wrap">
-                                                                        <div class="product-figure"><img src="../../assets/images/company/story6-product-02.jpg" alt=""></div>
+                                                                        <div class="product-figure"><img src="../../assets/images/company/story6-product-02.jpg" alt=" "></div>
                                                                         <div class="product-body">
                                                                             <p class="para">
                                                                                 SK네트웍스는 지속 가능한 기업으로의 입지를 강화하고<br class="pc-only">
@@ -532,7 +637,7 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="section story7 pallarax" section-animation="case-3">
+                                            <div class="section story7 pallarax" data-section-animation="case-3">
                                                 <div class="section-head">
                                                     <div class="section-subject">
                                                         <h4 class="section-name">Company Profile</h4>
@@ -630,7 +735,7 @@
                                                 </div>
                                                 <div class="section-body">
                                                     <div class="bg">
-                                                        <video preload="auto" autoplay="true" loop="loop" muted="muted" poster="" src="../../assets/movies/bg-earth.mp4"></video>
+                                                        <video preload="auto" autoplay loop muted src="../../assets/movies/bg-earth.mp4"></video>
                                                     </div>
                                                     <div class="board-list">
                                                         <div class="board-item">
@@ -677,8 +782,8 @@
                                                 </div>
                                             </div>
                                         </div>
-                                    </li>
-                                    <li id="tab-panel2" class="panel-item" role="tabpanel">
+                                    </div>
+                                    <div id="tab-panel2" class="panel-item" role="tabpanel">
                                         <div class="panel-wrap">
                                             <div class="section story9">
                                                 <div class="section-head">
@@ -689,46 +794,46 @@
                                                 </div>
                                                 <div class="section-body">
                                                     <div class="data-list">
-                                                        <button href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#modalWalkerhill" class="data-item">
+                                                        <button data-bs-toggle="modal" data-bs-target="#modalWalkerhill" class="data-item">
                                                             <img src="../../assets/images/company/company-logo-walkerhill.png" alt="GRAND WALKERHILL SEOUL">
                                                         </button>
-                                                        <button href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#modalVista" class="data-item">
+                                                        <button data-bs-toggle="modal" data-bs-target="#modalVista" class="data-item">
                                                             <img src="../../assets/images/company/company-logo-vista.png" alt="VISTA"></button>
-                                                        <button href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#modalDarakhyu" class="data-item"><img src="../../assets/images/company/company-logo-darakhyu.png" alt="다략휴">
+                                                        <button data-bs-toggle="modal" data-bs-target="#modalDarakhyu" class="data-item"><img src="../../assets/images/company/company-logo-darakhyu.png" alt="다략휴">
                                                         </button>
-                                                        <button href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#modalSKNetworks" class="data-item">
+                                                        <button data-bs-toggle="modal" data-bs-target="#modalSKNetworks" class="data-item">
                                                             <img src="../../assets/images/company/company-logo-sknetworks-kr.png" alt="SK 네트웍스 서비스">
                                                         </button>
-                                                        <button href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#modalSKMagic" class="data-item">
+                                                        <button data-bs-toggle="modal" data-bs-target="#modalSKMagic" class="data-item">
                                                             <img src="../../assets/images/company/company-logo-skmasic-kr.png" alt="SK 매직">
                                                         </button>
-                                                        <button href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#modalSKRentalcar" class="data-item">
+                                                        <button data-bs-toggle="modal" data-bs-target="#modalSKRentalcar" class="data-item">
                                                             <img src="../../assets/images/company/company-logo-rentalcar-kr.png" alt="SK 렌터카">
                                                         </button>
-                                                        <button href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#modalSKElectlink" class="data-item">
+                                                        <button data-bs-toggle="modal" data-bs-target="#modalSKElectlink" class="data-item">
                                                             <img src="../../assets/images/company/company-logo-skelectric-kr.png" alt="SK 일렉링크">
                                                         </button>
-                                                        <button href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#modalMintit" class="data-item">
+                                                        <button data-bs-toggle="modal" data-bs-target="#modalMintit" class="data-item">
                                                             <img src="../../assets/images/company/company-logo-mintit.png" alt="MINTIT">
                                                         </button>
-                                                        <button href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#modalTirepick" class="data-item">
+                                                        <button data-bs-toggle="modal" data-bs-target="#modalTirepick" class="data-item">
                                                             <img src="../../assets/images/company/company-logo-tirepick.png" alt="타이어픽">
                                                         </button>
-                                                        <button href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#modalEncore" class="data-item">
+                                                        <button data-bs-toggle="modal" data-bs-target="#modalEncore" class="data-item">
                                                             <img src="../../assets/images/company/company-logo-en-core.png" alt="en-core">
                                                         </button>
-                                                        <button href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#modalCarpet" class="data-item">
+                                                        <button data-bs-toggle="modal" data-bs-target="#modalCarpet" class="data-item">
                                                             <img src="../../assets/images/company/company-logo-carpet.png" alt="THE CARPET">
                                                         </button>
-                                                        <button href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#modalHicocapital" class="data-item">
+                                                        <button data-bs-toggle="modal" data-bs-target="#modalHicocapital" class="data-item">
                                                             <img src="../../assets/images/company/company-logo-hico.png" alt="HICO CAPITAL">
                                                         </button>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </li>
-                                </ul>
+                                    </div>
+                                </div>
                             </div>
                             <!-- //panel-display -->
                         </div>
@@ -827,11 +932,11 @@
         </footer>
         <!-- //page-foot -->
         <!-- Modal -->
-        <div class="modal design1 medium" id="modalWalkerhill" tabindex="-1" aria-labelledby="GRAND WALKERHILL SEOUL 소개" aria-hidden="true">
+        <div class="modal design1 medium" id="modalWalkerhill" tabindex="-1" aria-labelledby="modalWalkerhillLabel" aria-hidden="true">
             <div class="modal-inner modal-dialog">
                 <div class="modal-area">
                     <div class="modal-wrap">
-                        <div class="modal-head">
+                        <div class="modal-head" id="modalWalkerhillLabel">
                             <em class="modal-subjec"><span class="modal-name">그랜드 워커힐 서울</span></em>
                         </div>
                         <div class="modal-body">
@@ -852,9 +957,9 @@
                                         <!-- btn-display -->
                                         <div class="btn-display design1 case2">
                                             <div class="btn-area">
-                                                <a href="https://www.walkerhill.com/grandwalkerhillseoul" type="_blank" title="새창 열기" class="btn design3 case3 type1 color6 ar-icon-arrow-right-up2"><span class="btn-text">홈페이지 바로가기</span></a>
-                                                <a href="https://www.facebook.com/grandwalkerhillseoul" type="_blank" title="새창 열기" class="btn design3 case3 type1 color6 ar-icon-arrow-right-up2"><span class="btn-text">페이스북</span></a>
-                                                <a href="https://goo.gl/Djs4NY" type="_blank" title="새창 열기" class="btn design3 case3 type1 color6 ar-icon-arrow-right-up2"><span class="btn-text">인스타그램</span></a>
+                                                <a href="https://www.walkerhill.com/grandwalkerhillseoul" target="_blank" title="새창 열기" class="btn design3 case3 type1 color6 ar-icon-arrow-right-up2"><span class="btn-text">홈페이지 바로가기</span></a>
+                                                <a href="https://www.facebook.com/grandwalkerhillseoul" target="_blank" title="새창 열기" class="btn design3 case3 type1 color6 ar-icon-arrow-right-up2"><span class="btn-text">페이스북</span></a>
+                                                <a href="https://goo.gl/Djs4NY" target="_blank" title="새창 열기" class="btn design3 case3 type1 color6 ar-icon-arrow-right-up2"><span class="btn-text">인스타그램</span></a>
                                             </div>
                                         </div>
                                         <!-- //btn-display -->
@@ -869,11 +974,11 @@
                 </div>
             </div>
         </div>
-        <div class="modal design1 medium" id="modalVista" tabindex="-1" aria-labelledby="VISTA WALKERHILL SEOUL 소개" aria-hidden="true">
+        <div class="modal design1 medium" id="modalVista" tabindex="-1" aria-labelledby="modalVistaLabel" aria-hidden="true">
             <div class="modal-inner modal-dialog">
                 <div class="modal-area">
                     <div class="modal-wrap">
-                        <div class="modal-head">
+                        <div class="modal-head" id="modalVistaLabel">
                             <em class="modal-subjec"><span class="modal-name">비스타 워커힐 서울</span></em>
                         </div>
                         <div class="modal-body">
@@ -893,9 +998,9 @@
                                         <!-- btn-display -->
                                         <div class="btn-display design1 case2">
                                             <div class="btn-area">
-                                                <a href="https://www.walkerhill.com/vistawalkerhillseoul/" type="_blank" title="새창 열기" class="btn design3 case3 type1 color6 ar-icon-arrow-right-up2"><span class="btn-text">홈페이지 바로가기</span></a>
-                                                <a href="https://www.facebook.com/vistawalkerhill/?fref=ts" type="_blank" title="새창 열기" class="btn design3 case3 type1 color6 ar-icon-arrow-right-up2"><span class="btn-text">페이스북</span></a>
-                                                <a href="https://goo.gl/vWMyhh" type="_blank" title="새창 열기" class="btn design3 case3 type1 color6 ar-icon-arrow-right-up2"><span class="btn-text">인스타그램</span></a>
+                                                <a href="https://www.walkerhill.com/vistawalkerhillseoul/" target="_blank" title="새창 열기" class="btn design3 case3 type1 color6 ar-icon-arrow-right-up2"><span class="btn-text">홈페이지 바로가기</span></a>
+                                                <a href="https://www.facebook.com/vistawalkerhill/?fref=ts" target="_blank" title="새창 열기" class="btn design3 case3 type1 color6 ar-icon-arrow-right-up2"><span class="btn-text">페이스북</span></a>
+                                                <a href="https://goo.gl/vWMyhh" target="_blank" title="새창 열기" class="btn design3 case3 type1 color6 ar-icon-arrow-right-up2"><span class="btn-text">인스타그램</span></a>
                                             </div>
                                         </div>
                                         <!-- //btn-display -->
@@ -910,11 +1015,11 @@
                 </div>
             </div>
         </div>
-        <div class="modal design1 medium" id="modalDarakhyu" tabindex="-1" aria-labelledby="다락휴 소개" aria-hidden="true">
+        <div class="modal design1 medium" id="modalDarakhyu" tabindex="-1" aria-labelledby="modalDarakhyuLabel" aria-hidden="true">
             <div class="modal-inner modal-dialog">
                 <div class="modal-area">
                     <div class="modal-wrap">
-                        <div class="modal-head">
+                        <div class="modal-head" id="modalDarakhyuLabel">
                             <em class="modal-subjec"><span class="modal-name">다락휴</span></em>
                         </div>
                         <div class="modal-body">
@@ -934,9 +1039,9 @@
                                         <!-- btn-display -->
                                         <div class="btn-display design1 case2">
                                             <div class="btn-area">
-                                                <a href="https://www.walkerhill.com/darakhyu/t1/kr/" type="_blank" title="새창 열기" class="btn design3 case3 type1 color6 ar-icon-arrow-right-up2"><span class="btn-text">홈페이지 바로가기</span></a>
-                                                <a href="https://www.facebook.com/darakhyu/" type="_blank" title="새창 열기" class="btn design3 case3 type1 color6 ar-icon-arrow-right-up2"><span class="btn-text">페이스북</span></a>
-                                                <a href="https://www.instagram.com/p/BzXcSzVBzaP/?img_index=1" type="_blank" title="새창 열기" class="btn design3 case3 type1 color6 ar-icon-arrow-right-up2"><span class="btn-text">인스타그램</span></a>
+                                                <a href="https://www.walkerhill.com/darakhyu/t1/kr/" target="_blank" title="새창 열기" class="btn design3 case3 type1 color6 ar-icon-arrow-right-up2"><span class="btn-text">홈페이지 바로가기</span></a>
+                                                <a href="https://www.facebook.com/darakhyu/" target="_blank" title="새창 열기" class="btn design3 case3 type1 color6 ar-icon-arrow-right-up2"><span class="btn-text">페이스북</span></a>
+                                                <a href="https://www.instagram.com/p/BzXcSzVBzaP/?img_index=1" target="_blank" title="새창 열기" class="btn design3 case3 type1 color6 ar-icon-arrow-right-up2"><span class="btn-text">인스타그램</span></a>
                                             </div>
                                         </div>
                                         <!-- //btn-display -->
@@ -951,11 +1056,11 @@
                 </div>
             </div>
         </div>
-        <div class="modal design1 medium" id="modalSKNetworks" tabindex="-1" aria-labelledby="SK네트웍스 서비스 소개" aria-hidden="true">
+        <div class="modal design1 medium" id="modalSKNetworks" tabindex="-1" aria-labelledby="modalSKNetworksLabel" aria-hidden="true">
             <div class="modal-inner modal-dialog">
                 <div class="modal-area">
                     <div class="modal-wrap">
-                        <div class="modal-head">
+                        <div class="modal-head" id="modalSKNetworksLabel">
                             <em class="modal-subjec"><span class="modal-name">SK네트웍스 서비스</span></em>
                         </div>
                         <div class="modal-body">
@@ -975,7 +1080,7 @@
                                         <!-- btn-display -->
                                         <div class="btn-display design1 case2">
                                             <div class="btn-area">
-                                                <a href="https://www.sknservice.com/index.do" type="_blank" title="새창 열기" class="btn design3 case3 type1 color6 ar-icon-arrow-right-up2"><span class="btn-text">홈페이지 바로가기</span></a>
+                                                <a href="https://www.sknservice.com/index.do" target="_blank" title="새창 열기" class="btn design3 case3 type1 color6 ar-icon-arrow-right-up2"><span class="btn-text">홈페이지 바로가기</span></a>
                                             </div>
                                         </div>
                                         <!-- //btn-display -->
@@ -990,11 +1095,11 @@
                 </div>
             </div>
         </div>
-        <div class="modal design1 medium" id="modalSKMagic" tabindex="-1" aria-labelledby="SK매직 소개" aria-hidden="true">
+        <div class="modal design1 medium" id="modalSKMagic" tabindex="-1" aria-labelledby="modalSKMagicLabel" aria-hidden="true">
             <div class="modal-inner modal-dialog">
                 <div class="modal-area">
                     <div class="modal-wrap">
-                        <div class="modal-head">
+                        <div class="modal-head" id="modalSKMagicLabel">
                             <em class="modal-subjec"><span class="modal-name">SK매직</span></em>
                         </div>
                         <div class="modal-body">
@@ -1015,13 +1120,13 @@
                                         <!-- btn-display -->
                                         <div class="btn-display design1 case2">
                                             <div class="btn-area">
-                                                <a href="https://www.skmagic.com/" type="_blank" title="새창 열기" class="btn design3 case3 type1 color6 ar-icon-arrow-right-up2"><span class="btn-text">홈페이지 바로가기</span></a>
+                                                <a href="https://www.skmagic.com/" target="_blank" title="새창 열기" class="btn design3 case3 type1 color6 ar-icon-arrow-right-up2"><span class="btn-text">홈페이지 바로가기</span></a>
                                                 <a href="https://www.facebook.com/SKmagic.life" class="btn design3 case3 type1 color6 ar-icon-arrow-right-up2"><span class="btn-text">페이스북</span></a>
-                                                <a href="https://goo.gl/Ku5ejU" type="_blank" title="새창 열기" class="btn design3 case3 type1 color6 ar-icon-arrow-right-up2"><span class="btn-text">인스타그램</span></a>
-                                                <a href="https://story.kakao.com/ch/tymagic" type="_blank" title="새창 열기" class="btn design3 case3 type1 color6 ar-icon-arrow-right-up2"><span class="btn-text">카카오스토리</span></a>
-                                                <a href="https://cafe.naver.com/magicovenlove" type="_blank" title="새창 열기" class="btn design3 case3 type1 color6 ar-icon-arrow-right-up2"><span class="btn-text">네이버카페</span></a>
-                                                <a href="https://post.naver.com/tymagic_magic" type="_blank" title="새창 열기" class="btn design3 case3 type1 color6 ar-icon-arrow-right-up2"><span class="btn-text">네이버 포스트</span></a>
-                                                <a href="https://www.youtube.com/channel/UCcKmzgW07IZonw7H9MXuN7g" type="_blank" title="새창 열기" class="btn design3 case3 type1 color6 ar-icon-arrow-right-up2"><span class="btn-text">유튜브</span></a>
+                                                <a href="https://goo.gl/Ku5ejU" target="_blank" title="새창 열기" class="btn design3 case3 type1 color6 ar-icon-arrow-right-up2"><span class="btn-text">인스타그램</span></a>
+                                                <a href="https://story.kakao.com/ch/tymagic" target="_blank" title="새창 열기" class="btn design3 case3 type1 color6 ar-icon-arrow-right-up2"><span class="btn-text">카카오스토리</span></a>
+                                                <a href="https://cafe.naver.com/magicovenlove" target="_blank" title="새창 열기" class="btn design3 case3 type1 color6 ar-icon-arrow-right-up2"><span class="btn-text">네이버카페</span></a>
+                                                <a href="https://post.naver.com/tymagic_magic" target="_blank" title="새창 열기" class="btn design3 case3 type1 color6 ar-icon-arrow-right-up2"><span class="btn-text">네이버 포스트</span></a>
+                                                <a href="https://www.youtube.com/channel/UCcKmzgW07IZonw7H9MXuN7g" target="_blank" title="새창 열기" class="btn design3 case3 type1 color6 ar-icon-arrow-right-up2"><span class="btn-text">유튜브</span></a>
                                             </div>
                                         </div>
                                         <!-- //btn-display -->
@@ -1036,11 +1141,11 @@
                 </div>
             </div>
         </div>
-        <div class="modal design1 medium" id="modalSKRentalcar" tabindex="-1" aria-labelledby="SK렌터카 소개" aria-hidden="true">
+        <div class="modal design1 medium" id="modalSKRentalcar" tabindex="-1" aria-labelledby="modalSKRentalcarLabel" aria-hidden="true">
             <div class="modal-inner modal-dialog">
                 <div class="modal-area">
                     <div class="modal-wrap">
-                        <div class="modal-head">
+                        <div class="modal-head" id="modalSKRentalcarLabel">
                             <em class="modal-subjec"><span class="modal-name">SK렌터카</span></em>
                         </div>
                         <div class="modal-body">
@@ -1060,9 +1165,9 @@
                                         <!-- btn-display -->
                                         <div class="btn-display design1 case2">
                                             <div class="btn-area">
-                                                <a href="https://www.skcarrental.com/rent/index.do" type="_blank" title="새창 열기" class="btn design3 case3 type1 color6 ar-icon-arrow-right-up2"><span class="btn-text">홈페이지 바로가기</span></a>
-                                                <a href="https://www.facebook.com/SKRentacarsns" type="_blank" title="새창 열기" class="btn design3 case3 type1 color6 ar-icon-arrow-right-up2"><span class="btn-text">페이스북</span></a>
-                                                <a href="https://www.youtube.com/channel/UCTNJCgMJTAWcl86KCzNPjxQ" type="_blank" title="새창 열기" class="btn design3 case3 type1 color6 ar-icon-arrow-right-up2"><span class="btn-text">유튜브</span></a>
+                                                <a href="https://www.skcarrental.com/rent/index.do" target="_blank" title="새창 열기" class="btn design3 case3 type1 color6 ar-icon-arrow-right-up2"><span class="btn-text">홈페이지 바로가기</span></a>
+                                                <a href="https://www.facebook.com/SKRentacarsns" target="_blank" title="새창 열기" class="btn design3 case3 type1 color6 ar-icon-arrow-right-up2"><span class="btn-text">페이스북</span></a>
+                                                <a href="https://www.youtube.com/channel/UCTNJCgMJTAWcl86KCzNPjxQ" target="_blank" title="새창 열기" class="btn design3 case3 type1 color6 ar-icon-arrow-right-up2"><span class="btn-text">유튜브</span></a>
                                             </div>
                                         </div>
                                         <!-- //btn-display -->
@@ -1077,11 +1182,11 @@
                 </div>
             </div>
         </div>
-        <div class="modal design1 medium" id="modalSKElectlink" tabindex="-1" aria-labelledby="SK일렉링크 소개" aria-hidden="true">
+        <div class="modal design1 medium" id="modalSKElectlink" tabindex="-1" aria-labelledby="modalSKElectlinkLabel" aria-hidden="true">
             <div class="modal-inner modal-dialog">
                 <div class="modal-area">
                     <div class="modal-wrap">
-                        <div class="modal-head">
+                        <div class="modal-head" id="modalSKElectlinkLabel">
                             <em class="modal-subjec"><span class="modal-name">SK일렉링크</span></em>
                         </div>
                         <div class="modal-body">
@@ -1101,9 +1206,9 @@
                                         <!-- btn-display -->
                                         <div class="btn-display design1 case2">
                                             <div class="btn-area">
-                                                <a href="https://skelectlink.co.kr/" type="_blank" title="새창 열기" class="btn design3 case3 type1 color6 ar-icon-arrow-right-up2"><span class="btn-text">홈페이지 바로가기</span></a>
-                                                <a href="https://www.instagram.com/skelectlink/" type="_blank" title="새창 열기" class="btn design3 case3 type1 color6 ar-icon-arrow-right-up2"><span class="btn-text">인스타그램</span></a>
-                                                <a href="https://blog.naver.com/skelectlink_ev" type="_blank" title="새창 열기" class="btn design3 case3 type1 color6 ar-icon-arrow-right-up2"><span class="btn-text">네이버 블로그</span></a>
+                                                <a href="https://skelectlink.co.kr/" target="_blank" title="새창 열기" class="btn design3 case3 type1 color6 ar-icon-arrow-right-up2"><span class="btn-text">홈페이지 바로가기</span></a>
+                                                <a href="https://www.instagram.com/skelectlink/" target="_blank" title="새창 열기" class="btn design3 case3 type1 color6 ar-icon-arrow-right-up2"><span class="btn-text">인스타그램</span></a>
+                                                <a href="https://blog.naver.com/skelectlink_ev" target="_blank" title="새창 열기" class="btn design3 case3 type1 color6 ar-icon-arrow-right-up2"><span class="btn-text">네이버 블로그</span></a>
                                             </div>
                                         </div>
                                         <!-- //btn-display -->
@@ -1118,11 +1223,11 @@
                 </div>
             </div>
         </div>
-        <div class="modal design1 medium" id="modalMintit" tabindex="-1" aria-labelledby="민팃 소개" aria-hidden="true">
+        <div class="modal design1 medium" id="modalMintit" tabindex="-1" aria-labelledby="modalMintitLabel" aria-hidden="true">
             <div class="modal-inner modal-dialog">
                 <div class="modal-area">
                     <div class="modal-wrap">
-                        <div class="modal-head">
+                        <div class="modal-head" id="modalMintitLabel">
                             <em class="modal-subjec"><span class="modal-name">민팃</span></em>
                         </div>
                         <div class="modal-body">
@@ -1142,11 +1247,11 @@
                                         <!-- btn-display -->
                                         <div class="btn-display design1 case2">
                                             <div class="btn-area">
-                                                <a href="https://www.mintit.co.kr/" type="_blank" title="새창 열기" class="btn design3 case3 type1 color6 ar-icon-arrow-right-up2"><span class="btn-text">홈페이지 바로가기</span></a>
-                                                <a href="https://www.facebook.com/mintit.official/" type="_blank" title="새창 열기" class="btn design3 case3 type1 color6 ar-icon-arrow-right-up2"><span class="btn-text">페이스북</span></a>
-                                                <a href="https://www.instagram.com/mintit_official/" type="_blank" title="새창 열기" class="btn design3 case3 type1 color6 ar-icon-arrow-right-up2"><span class="btn-text">인스타그램</span></a>
-                                                <a href="https://post.naver.com/mintit_official" type="_blank" title="새창 열기" class="btn design3 case3 type1 color6 ar-icon-arrow-right-up2"><span class="btn-text">네이버 포스트</span></a>
-                                                <a href="https://www.youtube.com/channel/UC5bT0Fy-Ui6jJLPvw0P051g" type="_blank" title="새창 열기" class="btn design3 case3 type1 color6 ar-icon-arrow-right-up2"><span class="btn-text">유튜브</span></a>
+                                                <a href="https://www.mintit.co.kr/" target="_blank" title="새창 열기" class="btn design3 case3 type1 color6 ar-icon-arrow-right-up2"><span class="btn-text">홈페이지 바로가기</span></a>
+                                                <a href="https://www.facebook.com/mintit.official/" target="_blank" title="새창 열기" class="btn design3 case3 type1 color6 ar-icon-arrow-right-up2"><span class="btn-text">페이스북</span></a>
+                                                <a href="https://www.instagram.com/mintit_official/" target="_blank" title="새창 열기" class="btn design3 case3 type1 color6 ar-icon-arrow-right-up2"><span class="btn-text">인스타그램</span></a>
+                                                <a href="https://post.naver.com/mintit_official" target="_blank" title="새창 열기" class="btn design3 case3 type1 color6 ar-icon-arrow-right-up2"><span class="btn-text">네이버 포스트</span></a>
+                                                <a href="https://www.youtube.com/channel/UC5bT0Fy-Ui6jJLPvw0P051g" target="_blank" title="새창 열기" class="btn design3 case3 type1 color6 ar-icon-arrow-right-up2"><span class="btn-text">유튜브</span></a>
                                             </div>
                                         </div>
                                         <!-- //btn-display -->
@@ -1161,11 +1266,11 @@
                 </div>
             </div>
         </div>
-        <div class="modal design1 medium" id="modalTirepick" tabindex="-1" aria-labelledby="타이어픽 소개" aria-hidden="true">
+        <div class="modal design1 medium" id="modalTirepick" tabindex="-1" aria-labelledby="modalTirepickLabel" aria-hidden="true">
             <div class="modal-inner modal-dialog">
                 <div class="modal-area">
                     <div class="modal-wrap">
-                        <div class="modal-head">
+                        <div class="modal-head" id="modalTirepickLabel">
                             <em class="modal-subjec"><span class="modal-name">타이어픽</span></em>
                         </div>
                         <div class="modal-body">
@@ -1185,9 +1290,9 @@
                                         <!-- btn-display -->
                                         <div class="btn-display design1 case2">
                                             <div class="btn-area">
-                                                <a href="https://www.tire-pick.com/" type="_blank" title="새창 열기" class="btn design3 case3 type1 color6 ar-icon-arrow-right-up2"><span class="btn-text">홈페이지 바로가기</span></a>
-                                                <a href="https://www.instagram.com/accounts/login/?next=https%3A%2F%2Fwww.instagram.com%2Ftirepick%2F&is_from_rle" type="_blank" title="새창 열기" class="btn design3 case3 type1 color6 ar-icon-arrow-right-up2"><span class="btn-text">인스타그램</span></a>
-                                                <a href="https://www.youtube.com/channel/UC8crp07cC6BEVS9UfvRmS3g" type="_blank" title="새창 열기" class="btn design3 case3 type1 color6 ar-icon-arrow-right-up2"><span class="btn-text">유튜브</span></a>
+                                                <a href="https://www.tire-pick.com/" target="_blank" title="새창 열기" class="btn design3 case3 type1 color6 ar-icon-arrow-right-up2"><span class="btn-text">홈페이지 바로가기</span></a>
+                                                <a href="https://www.instagram.com/accounts/login/?next=https%3A%2F%2Fwww.instagram.com%2Ftirepick%2F&is_from_rle" target="_blank" title="새창 열기" class="btn design3 case3 type1 color6 ar-icon-arrow-right-up2"><span class="btn-text">인스타그램</span></a>
+                                                <a href="https://www.youtube.com/channel/UC8crp07cC6BEVS9UfvRmS3g" target="_blank" title="새창 열기" class="btn design3 case3 type1 color6 ar-icon-arrow-right-up2"><span class="btn-text">유튜브</span></a>
                                             </div>
                                         </div>
                                         <!-- //btn-display -->
@@ -1202,11 +1307,11 @@
                 </div>
             </div>
         </div>
-        <div class="modal design1 medium" id="modalEncore" tabindex="-1" aria-labelledby="엔코아 소개" aria-hidden="true">
+        <div class="modal design1 medium" id="modalEncore" tabindex="-1" aria-labelledby="modalEncoreLabel" aria-hidden="true">
             <div class="modal-inner modal-dialog">
                 <div class="modal-area">
                     <div class="modal-wrap">
-                        <div class="modal-head">
+                        <div class="modal-head" id="modalEncoreLabel">
                             <em class="modal-subjec"><span class="modal-name">엔코아</span></em>
                         </div>
                         <div class="modal-body">
@@ -1226,7 +1331,7 @@
                                         <!-- btn-display -->
                                         <div class="btn-display design1 case2">
                                             <div class="btn-area">
-                                                <a href="https://www.en-core.com/" type="_blank" title="새창 열기" class="btn design3 case3 type1 color6 ar-icon-arrow-right-up2"><span class="btn-text">홈페이지 바로가기</span></a>
+                                                <a href="https://www.en-core.com/" target="_blank" title="새창 열기" class="btn design3 case3 type1 color6 ar-icon-arrow-right-up2"><span class="btn-text">홈페이지 바로가기</span></a>
                                             </div>
                                         </div>
                                         <!-- //btn-display -->
@@ -1241,11 +1346,11 @@
                 </div>
             </div>
         </div>
-        <div class="modal design1 medium" id="modalCarpet" tabindex="-1" aria-labelledby="더카펫 소개" aria-hidden="true">
+        <div class="modal design1 medium" id="modalCarpet" tabindex="-1" aria-labelledby="modalCarpetLabel" aria-hidden="true">
             <div class="modal-inner modal-dialog">
                 <div class="modal-area">
                     <div class="modal-wrap">
-                        <div class="modal-head">
+                        <div class="modal-head" id="modalCarpetLabel">
                             <em class="modal-subjec"><span class="modal-name">더카펫</span></em>
                         </div>
                         <div class="modal-body">
@@ -1265,9 +1370,9 @@
                                         <!-- btn-display -->
                                         <div class="btn-display design1 case2">
                                             <div class="btn-area">
-                                                <a href="https://www.the-carpet.co.kr/#/" type="_blank" title="새창 열기" class="btn design3 case3 type1 color6 ar-icon-arrow-right-up2"><span class="btn-text">홈페이지 바로가기</span></a>
-                                                <a href="https://www.instagram.com/accounts/login/?next=https%3A%2F%2Fwww.instagram.com%2Fthecarpet_official%2F&is_from_rle" type="_blank" title="새창 열기" class="btn design3 case3 type1 color6 ar-icon-arrow-right-up2"><span class="btn-text">인스타그램</span></a>
-                                                <a href="https://www.youtube.com/channel/UCzvKIfVOHe-IraF3rZ3_80g" type="_blank" title="새창 열기" class="btn design3 case3 type1 color6 ar-icon-arrow-right-up2"><span class="btn-text">유튜브</span></a>
+                                                <a href="https://www.the-carpet.co.kr/#/" target="_blank" title="새창 열기" class="btn design3 case3 type1 color6 ar-icon-arrow-right-up2"><span class="btn-text">홈페이지 바로가기</span></a>
+                                                <a href="https://www.instagram.com/accounts/login/?next=https%3A%2F%2Fwww.instagram.com%2Fthecarpet_official%2F&is_from_rle" target="_blank" title="새창 열기" class="btn design3 case3 type1 color6 ar-icon-arrow-right-up2"><span class="btn-text">인스타그램</span></a>
+                                                <a href="https://www.youtube.com/channel/UCzvKIfVOHe-IraF3rZ3_80g" target="_blank" title="새창 열기" class="btn design3 case3 type1 color6 ar-icon-arrow-right-up2"><span class="btn-text">유튜브</span></a>
                                             </div>
                                         </div>
                                         <!-- //btn-display -->
@@ -1282,11 +1387,11 @@
                 </div>
             </div>
         </div>
-        <div class="modal design1 medium" id="modalHicocapital" tabindex="-1" aria-labelledby="하이코캐피탈 소개" aria-hidden="true">
+        <div class="modal design1 medium" id="modalHicocapital" tabindex="-1" aria-labelledby="modalHicocapitalLabel" aria-hidden="true">
             <div class="modal-inner modal-dialog">
                 <div class="modal-area">
                     <div class="modal-wrap">
-                        <div class="modal-head">
+                        <div class="modal-head" id="modalHicocapitalLabel">
                             <em class="modal-subjec"><span class="modal-name">하이코캐피탈</span></em>
                         </div>
                         <div class="modal-body">
@@ -1306,7 +1411,7 @@
                                         <!-- btn-display -->
                                         <div class="btn-display design1 case2">
                                             <div class="btn-area">
-                                                <a href="https://hico-capital.com/" type="_blank" title="새창 열기" class="btn design3 case3 type1 color6 ar-icon-arrow-right-up2"><span class="btn-text">홈페이지 바로가기</span></a>
+                                                <a href="https://hico-capital.com/" target="_blank" title="새창 열기" class="btn design3 case3 type1 color6 ar-icon-arrow-right-up2"><span class="btn-text">홈페이지 바로가기</span></a>
                                             </div>
                                         </div>
                                         <!-- //btn-display -->
@@ -1321,112 +1426,7 @@
                 </div>
             </div>
         </div>
-
-        <script>
-            $(document).ready(function() {
-                localAnimations_Case01();
-                sectionAnimations_Case01('[section-animation="case-1"]');
-                sectionAnimations_Case02('[section-animation="case-2"]');
-                sectionAnimations_Case03('[section-animation="case-3"]');
-
-                gsap.utils.toArray('.story4 .data-list .data-item').forEach((item, index) => {
-                    gsap.to(item, {
-                        y: -90,
-                        ease: "none",
-                        scrollTrigger: {
-                            trigger: ".story4",
-                            //markers: true,
-                            start: "center bottom",
-                            end: "top top",
-                            scrub: true
-                        },
-                    });
-                });
-
-                gsap.utils.toArray('.pallarax').forEach((item, index) => {
-                    gsap.to(item, {
-                        y: 0,
-                        ease: "none",
-                        scrollTrigger: {
-                            trigger: item.closest('.section'),
-                            //markers: true,
-                            start: "30% bottom",
-                            end: "top bottom",
-                            scrub: true
-                        },
-                    });
-                });
-            });
-            $(window).on('scroll resize', function() {
-                sectionAnimations_Case01('[section-animation="case-1"]');
-                sectionAnimations_Case02('[section-animation="case-2"]');
-                sectionAnimations_Case03('[section-animation="case-3"]');
-            });
-
-            function sectionAnimations_Case01(selector) {
-                $(selector).each(function() {
-                    var $selector = $(this);
-                    let target = $(window).innerHeight() * 0.6;
-                    var start = $selector.offset().top - $(window).innerHeight() + target;
-                    var end = $selector.offset().top + $selector.innerHeight() - target;
-                    var scrollAmt = $(document).scrollTop();
-
-                    if (scrollAmt < start) {
-                        $selector.removeClass('active');
-                    } else if (scrollAmt > end) {
-                        // $selector.removeClass('active');
-                    } else {
-                        if ($selector.hasClass('active') === false) {
-                            $selector.removeClass('active');
-                        }
-                        $selector.addClass('active');
-                    }
-                });
-            }
-
-            function sectionAnimations_Case02(selector) {
-                $(selector).each(function() {
-                    var $selector = $(this);
-                    let target1 = $(window).innerHeight() * 0.2;
-                    let target2 = $(window).innerHeight() * 0.4;
-                    var start = $selector.offset().top - $(window).innerHeight() + target1;
-                    var end = $selector.offset().top + $selector.innerHeight() - target2;
-                    var scrollAmt = $(document).scrollTop();
-
-                    if (scrollAmt < start) {
-                        $selector.removeClass('active');
-                    } else if (scrollAmt > end) {
-                        $selector.removeClass('active');
-                    } else {
-                        if ($selector.hasClass('active') === false) {
-                            $selector.removeClass('active');
-                        }
-                        $selector.addClass('active');
-                    }
-                });
-            }
-
-            function sectionAnimations_Case03(selector) {
-                $(selector).each(function() {
-                    var $selector = $(this);
-                    let target = $(window).innerHeight() * 1.2;
-                    var start = $selector.offset().top - $(window).innerHeight() + target;
-                    var end = $selector.offset().top + $selector.innerHeight() + target;
-                    var scrollAmt = $(document).scrollTop();
-
-                    if (scrollAmt < start) {
-                        $selector.removeClass('active');
-                    } else if (scrollAmt > end) {
-                        $selector.removeClass('active');
-                    } else {
-                        if ($selector.hasClass('active') === false) {
-                            $selector.removeClass('active');
-                        }
-                        $selector.addClass('active');
-                    }
-                });
-            }
-        </script>
+    </div>
 </body>
 
 </html>

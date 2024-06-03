@@ -1,0 +1,13 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="shape">
+<rect width="64" height="64" rx="16" fill="#282828"/>
+<g id="shape-04">
+<path d="M31.9974 24L25.3307 20L31.9974 16L38.6641 20L31.9974 24Z" fill="#00B6AD"/>
+<path d="M45.3307 32V24L38.6641 20V28L45.3307 32Z" fill="#00B6AD"/>
+<path d="M38.6641 44L45.3307 40V32L38.6641 36V44Z" fill="#00B6AD"/>
+<path d="M25.3307 44L31.9974 48L38.6641 44L31.9974 40L25.3307 44Z" fill="#00B6AD"/>
+<path d="M18.6641 32L25.3307 36V44L18.6641 40V32Z" fill="#00B6AD"/>
+<path d="M18.6641 32L25.3307 28V20L18.6641 24V32Z" fill="#00B6AD"/>
+</g>
+</g>
+</svg>

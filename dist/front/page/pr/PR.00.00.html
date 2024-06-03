@@ -2,14 +2,15 @@
 <html lang="ko">
 
 <head>
-    <meta charset="utf-8" />
+    <meta charset="utf-8">
     <title>SK Networks</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
-    <meta name="format-detection" content="telephone=no, date=no, address=no, email=no" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <meta name="keywords" content="SK Networks" />
-    <!-- <link rel="shortcut icon" href="./../../assets/images/bui/favicon.ico" /> -->
-    <link rel="stylesheet" type="text/css" href="../../assets/css/style.css" />
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="format-detection" content="telephone=no, date=no, address=no, email=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="keywords" content="SK Networks">
+    <!-- <link rel="shortcut icon" href="./../../assets/images/bui/favicon.ico"> -->
+    <link rel="stylesheet" type="text/css" href="../../assets/css/style.css">
 
     <script src="./../../assets/js/jquery.js"></script>
     <script src="./../../assets/js/gsap.min.js"></script>
@@ -35,6 +36,7 @@
                 loopAdditionalSlides: 1,
                 effect: "fade",
                 loop: true,
+                a11y: true,
                 controller: {
                     control: sync2
                 }
@@ -439,13 +441,13 @@
                                                     <img src="../../assets/images/pr/news-slide-01.jpg" alt="SK렌터카, 'IF 디자인 어워드 2024' 본상 수상">
                                                 </li>
                                                 <li class="swiper-slide">
-                                                    <img src="../../assets/images/pr/news-slide-01.jpg" alt="SK렌터카, 'IF 디자인 어워드 2024' 본상 수상">
+                                                    <img src="../../assets/images/ir/thumb-01.jpg" alt="SK렌터카, 'IF 디자인 어워드 2024' 본상 수상">
                                                 </li>
                                                 <li class="swiper-slide">
                                                     <img src="../../assets/images/pr/news-slide-01.jpg" alt="SK렌터카, 'IF 디자인 어워드 2024' 본상 수상">
                                                 </li>
                                                 <li class="swiper-slide">
-                                                    <img src="../../assets/images/pr/news-slide-01.jpg" alt="SK렌터카, 'IF 디자인 어워드 2024' 본상 수상">
+                                                    <img src="../../assets/images/ir/thumb-01.jpg" alt="SK렌터카, 'IF 디자인 어워드 2024' 본상 수상">
                                                 </li>
                                             </ul>
                                         </div>
@@ -628,17 +630,17 @@
                                                     <div class="board-list design3 case1 type1">
                                                         <div class="board-item">
                                                             <div class="board-wrap">
-                                                                <span class="board-info">
+                                                                <div class="board-info">
                                                                     <span class="board-name">SK네트웍스의 최신 소식과 더 많은 이야기를 들으시려면?</span>
-                                                                </span>
-                                                                <span class="board-util">
+                                                                </div>
+                                                                <div class="board-util">
                                                                     <div class="btn-display design1 case2">
                                                                         <div class="btn-area">
                                                                             <a class="btn design1 case1 type1 color1" href="#"><span class="btn-text">구독</span></a>
                                                                             <a class="btn design1 case1 type1 color2" href="#"><span class="btn-text">ㅅㅋN 방문</span></a>
                                                                         </div>
                                                                     </div>
-                                                                </span>
+                                                                </div>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -774,7 +776,10 @@
                                                             <div class="data-item">
                                                                 <div class="data-wrap">
                                                                     <div class="data-figure">
-                                                                        <iframe width="560" height="315" loading="lazy" src="https://www.youtube.com/embed/dcDCrAvMFm4" title="비대면으로 편리하게 중고폰 ATM, 민팃" aria-label="YouTube video: 비대면으로 편리하게 중고폰 ATM, 민팃" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                                                                        <iframe width="560" height="315" loading="lazy" src="https://www.youtube.com/embed/dcDCrAvMFm4" title="비대면으로 편리하게 중고폰 ATM, 민팃" aria-label="YouTube video: 비대면으로 편리하게 중고폰 ATM, 민팃" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen lang="ko"></iframe>
+                                                                        <!-- iframe 대체 -->
+                                                                        <!-- <object width="560" height="315" data="https://www.youtube.com/embed/dcDCrAvMFm4" title="비대면으로 편리하게 중고폰 ATM, 민팃" aria-label="YouTube video: 비대면으로 편리하게 중고폰 ATM, 민팃" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></object>  -->
+                                                                        <!-- //iframe 대체 -->
                                                                     </div>
                                                                     <div class="data-script">
                                                                         <p class="head">비대면으로 편리하게 중고폰 ATM, 민팃</p>

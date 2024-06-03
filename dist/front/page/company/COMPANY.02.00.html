@@ -2,14 +2,15 @@
 <html lang="ko">
 
 <head>
-    <meta charset="utf-8" />
+    <meta charset="utf-8">
     <title>SK Networks</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
-    <meta name="format-detection" content="telephone=no, date=no, address=no, email=no" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <meta name="keywords" content="SK Networks" />
-    <!-- <link rel="shortcut icon" href="./../../assets/images/bui/favicon.ico" /> -->
-    <link rel="stylesheet" type="text/css" href="../../assets/css/style.css" />
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="format-detection" content="telephone=no, date=no, address=no, email=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="keywords" content="SK Networks">
+    <!-- <link rel="shortcut icon" href="./../../assets/images/bui/favicon.ico"> -->
+    <link rel="stylesheet" type="text/css" href="../../assets/css/style.css">
 
     <script src="./../../assets/js/jquery.js"></script>
     <script src="./../../assets/js/gsap.min.js"></script>
@@ -27,6 +28,7 @@
     <script src="https://unpkg.com/@studio-freight/lenis@1.0.32/dist/lenis.min.js"></script>
     <script>
         document.addEventListener("DOMContentLoaded", () => {
+            localAnimations_Case02();
 
             // bootstrap scrollspy
             var scrollSpy = new bootstrap.ScrollSpy(document.body, {
@@ -457,7 +459,7 @@
 
                         </ul>
                     </div>
-                    <div class="local-head design5" local-animation="case-2">
+                    <div class="local-head design5" data-local-animation="case-2">
                         <div class="local-subject">
                             <h2 class="local-name">SK네트웍스의<br> 성장과 도약의 발자취</h2>
                         </div>
@@ -573,7 +575,7 @@
                                                                         <p class="data-date">2017</p>
                                                                     </div>
                                                                     <div class="data-figure">
-                                                                        <div class="figure-item"><img src="../../assets/images/company/thumb-history-2017.jpg" alt=""></div>
+                                                                        <div class="figure-item"><img src="../../assets/images/company/thumb-history-2017.jpg" alt="캡슐호텔 다락 휴 현판"></div>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -586,7 +588,7 @@
                                                                         <p class="data-date">2016</p>
                                                                     </div>
                                                                     <div class="data-figure">
-                                                                        <div class="figure-item"><img src="../../assets/images/company/thumb-history-2016.jpg" alt=""></div>
+                                                                        <div class="figure-item"><img src="../../assets/images/company/thumb-history-2016.jpg" alt="SK매직 출범식"></div>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -599,7 +601,7 @@
                                                                         <p class="data-date">2014</p>
                                                                     </div>
                                                                     <div class="data-figure">
-                                                                        <div class="figure-item"><img src="../../assets/images/company/thumb-history-2014.jpg" alt=""></div>
+                                                                        <div class="figure-item"><img src="../../assets/images/company/thumb-history-2014.jpg" alt="고객과 함께 있는 SK 렌터카 직원"></div>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -612,7 +614,7 @@
                                                                         <p class="data-date">2009</p>
                                                                     </div>
                                                                     <div class="data-figure">
-                                                                        <div class="figure-item"><img src="../../assets/images/company/thumb-history-2009.jpg" alt=""></div>
+                                                                        <div class="figure-item"><img src="../../assets/images/company/thumb-history-2009.jpg" alt="워커힐 입구 전경"></div>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -625,7 +627,7 @@
                                                                         <p class="data-date">2003</p>
                                                                     </div>
                                                                     <div class="data-figure">
-                                                                        <div class="figure-item"><img src="../../assets/images/company/thumb-history-2003.jpg" alt=""></div>
+                                                                        <div class="figure-item"><img src="../../assets/images/company/thumb-history-2003.jpg" alt="SK 네트웍스 사옥 전경"></div>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -657,7 +659,7 @@
                                                                         <p class="data-date">2000</p>
                                                                     </div>
                                                                     <div class="data-figure">
-                                                                        <div class="figure-item"><img src="../../assets/images/company/thumb-history-2000.jpg" alt=""></div>
+                                                                        <div class="figure-item"><img src="../../assets/images/company/thumb-history-2000.jpg" alt="2000년대 초반 SK글로벌 광고"></div>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -671,8 +673,8 @@
                                                                         <p class="data-date">1999</p>
                                                                     </div>
                                                                     <div class="data-figure">
-                                                                        <div class="figure-item"><img src="../../assets/images/company/thumb-history-1999-01.jpg" alt=""></div>
-                                                                        <div class="figure-item"><img src="../../assets/images/company/thumb-history-1999-02.jpg" alt=""></div>
+                                                                        <div class="figure-item"><img src="../../assets/images/company/thumb-history-1999-01.jpg" alt="스피드메이트 직원과 상담중인 고객"></div>
+                                                                        <div class="figure-item"><img src="../../assets/images/company/thumb-history-1999-02.jpg" alt="SK상사 21세기 턴어라운드 비전 선포 - 지식 기반 성과 위주의 조직 변신이라는 기사가 쓰여진 신문"></div>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -685,7 +687,7 @@
                                                                         <p class="data-date">1998</p>
                                                                     </div>
                                                                     <div class="data-figure">
-                                                                        <div class="figure-item"><img src="../../assets/images/company/thumb-history-1998.jpg" alt=""></div>
+                                                                        <div class="figure-item"><img src="../../assets/images/company/thumb-history-1998.jpg" alt="SK 상사 사명 변경식"></div>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -698,7 +700,7 @@
                                                                         <p class="data-date">1996</p>
                                                                     </div>
                                                                     <div class="data-figure">
-                                                                        <div class="figure-item"><img src="../../assets/images/company/thumb-history-1996.jpg" alt=""></div>
+                                                                        <div class="figure-item"><img src="../../assets/images/company/thumb-history-1996.jpg" alt="인천역 앞에서 휴대전화를 사용하고 있는 사람들"></div>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -711,7 +713,7 @@
                                                                         <p class="data-date">1995</p>
                                                                     </div>
                                                                     <div class="data-figure">
-                                                                        <div class="figure-item"><img src="../../assets/images/company/thumb-history-1995.jpg" alt=""></div>
+                                                                        <div class="figure-item"><img src="../../assets/images/company/thumb-history-1995.jpg" alt="SK 주유소 전경"></div>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -724,8 +726,8 @@
                                                                         <p class="data-date">1980</p>
                                                                     </div>
                                                                     <div class="data-figure">
-                                                                        <div class="figure-item"><img src="../../assets/images/company/thumb-history-1980-01.jpg" alt=""></div>
-                                                                        <div class="figure-item"><img src="../../assets/images/company/thumb-history-1980-02.jpg" alt=""></div>
+                                                                        <div class="figure-item"><img src="../../assets/images/company/thumb-history-1980-01.jpg" alt="대한석유공사 인수 관련 신문기사들"></div>
+                                                                        <div class="figure-item"><img src="../../assets/images/company/thumb-history-1980-02.jpg" alt="인수한 대한석유공사 작업 현장"></div>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -738,7 +740,7 @@
                                                                         <p class="data-date">1977</p>
                                                                     </div>
                                                                     <div class="data-figure">
-                                                                        <div class="figure-item"><img src="../../assets/images/company/thumb-history-1977.jpg" alt=""></div>
+                                                                        <div class="figure-item"><img src="../../assets/images/company/thumb-history-1977.jpg" alt="선경 기업 공개 및 주식 상장 하고 있는 현장"></div>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -751,7 +753,7 @@
                                                                         <p class="data-date">1976</p>
                                                                     </div>
                                                                     <div class="data-figure">
-                                                                        <div class="figure-item"><img src="../../assets/images/company/thumb-history-1976.jpg" alt=""></div>
+                                                                        <div class="figure-item"><img src="../../assets/images/company/thumb-history-1976.jpg" alt="선박에 실려 나가는 수출품들"></div>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -764,7 +766,7 @@
                                                                         <p class="data-date">1973</p>
                                                                     </div>
                                                                     <div class="data-figure">
-                                                                        <div class="figure-item"><img src="../../assets/images/company/thumb-history-1973-01.jpg" alt=""></div>
+                                                                        <div class="figure-item"><img src="../../assets/images/company/thumb-history-1973-01.jpg" alt="금탑산업 훈장 수상식 모습"></div>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -796,7 +798,7 @@
                                                                         <p class="data-date">1973</p>
                                                                     </div>
                                                                     <div class="data-figure">
-                                                                        <div class="figure-item"><img src="../../assets/images/company/thumb-history-1973-02.jpg" alt=""></div>
+                                                                        <div class="figure-item"><img src="../../assets/images/company/thumb-history-1973-02.jpg" alt="최종현 회장 사진"></div>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -809,7 +811,7 @@
                                                                         <p class="data-date">1963</p>
                                                                     </div>
                                                                     <div class="data-figure">
-                                                                        <div class="figure-item"><img src="../../assets/images/company/thumb-history-1963.jpg" alt=""></div>
+                                                                        <div class="figure-item"><img src="../../assets/images/company/thumb-history-1963.jpg" alt="금탑산업훈장 수상식"></div>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -822,7 +824,7 @@
                                                                         <p class="data-date">1962</p>
                                                                     </div>
                                                                     <div class="data-figure">
-                                                                        <div class="figure-item"><img src="../../assets/images/company/thumb-history-1962.jpg" alt=""></div>
+                                                                        <div class="figure-item"><img src="../../assets/images/company/thumb-history-1962.jpg" alt="레이온 직물을 뽑아내는 선경직물 직원들"></div>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -835,10 +837,10 @@
                                                                         <p class="data-date">1953</p>
                                                                     </div>
                                                                     <div class="data-figure">
-                                                                        <div class="figure-item"><img src="../../assets/images/company/thumb-history-1953-01.jpg" alt=""></div>
-                                                                        <div class="figure-item"><img src="../../assets/images/company/thumb-history-1953-02.jpg" alt=""></div>
-                                                                        <div class="figure-item"><img src="../../assets/images/company/thumb-history-1953-03.jpg" alt=""></div>
-                                                                        <div class="figure-item"><img src="../../assets/images/company/thumb-history-1953-04.jpg" alt=""></div>
+                                                                        <div class="figure-item"><img src="../../assets/images/company/thumb-history-1953-01.jpg" alt="전쟁으로 인해 파괴된 선경직물 공장"></div>
+                                                                        <div class="figure-item"><img src="../../assets/images/company/thumb-history-1953-02.jpg" alt="자리에 앉아 있는 최종건 회장"></div>
+                                                                        <div class="figure-item"><img src="../../assets/images/company/thumb-history-1953-03.jpg" alt="초창기 선경직물 사무실"></div>
+                                                                        <div class="figure-item"><img src="../../assets/images/company/thumb-history-1953-04.jpg" alt="선경직물에서 일한 직원들"></div>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -947,11 +949,6 @@
         </footer>
         <!-- //page-foot -->
     </div>
-    <script>
-        $(document).ready(function() {
-            localAnimations_Case02();
-        });
-    </script>
 </body>
 
 </html>

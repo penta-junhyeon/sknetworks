@@ -2,14 +2,15 @@
 <html lang="ko">
 
 <head>
-    <meta charset="utf-8" />
+    <meta charset="utf-8">
     <title>SK Networks</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
-    <meta name="format-detection" content="telephone=no, date=no, address=no, email=no" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <meta name="keywords" content="SK Networks" />
-    <!-- <link rel="shortcut icon" href="./../../assets/images/bui/favicon.ico" /> -->
-    <link rel="stylesheet" type="text/css" href="../../assets/css/style.css" />
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="format-detection" content="telephone=no, date=no, address=no, email=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="keywords" content="SK Networks">
+    <!-- <link rel="shortcut icon" href="./../../assets/images/bui/favicon.ico"> -->
+    <link rel="stylesheet" type="text/css" href="../../assets/css/style.css">
 
     <script src="./../../assets/js/jquery.js"></script>
     <script src="./../../assets/js/gsap.min.js"></script>
@@ -25,12 +26,12 @@
     </script>
 
     <script src="https://unpkg.com/@studio-freight/lenis@1.0.32/dist/lenis.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            localAnimations_Case02();
+        });
+    </script>
 </head>
-<script>
-    document.addEventListener("DOMContentLoaded", () => {
-        localAnimations_Case02();
-    });
-</script>
 
 <body class="kr">
     <div id="wrap">
@@ -326,7 +327,7 @@
 
                         </ul>
                     </div>
-                    <div class="local-head design5" local-animation="case-2">
+                    <div class="local-head design5" data-local-animation="case-2">
                         <div class="local-subject">
                             <h2 class="local-name">지속가능한 지구를 위한<br>
                                 경영을 하겠습니다.</h2>
@@ -337,7 +338,7 @@
                             </div>
                         </div>
                         <div class="local-figure">
-                            <img src="../../assets/images/esg/esg-banner2.png" alt="이미지">
+                            <img src="../../assets/images/esg/bg-local-head-esg-natural.jpg" alt="이미지">
                         </div>
                         <div class="local-util">
                             <p class="scroll-guide">Scroll Down</p>
@@ -382,10 +383,10 @@
                                     </div>
                                     <div class="section-body">
                                         <div class="t-display design1 case1 type1 align3 scroll">
-                                            <table style="min-width: 954px;">
+                                            <table style="min-width: 960px;" class="col-w-1">
                                                 <caption>교육일자, 교육명, 교육대상, 장소, 목적, 교육 내용</caption>
                                                 <colgroup>
-                                                    <col>
+                                                    <col class="col1">
                                                     <col>
                                                     <col>
                                                     <col>
@@ -440,23 +441,21 @@
                                             <div class="post-item">
                                                 <div class="post-wrap">
                                                     <div class="post-figure">
-                                                        <img src="../../assets/images/esg/env-policy.jpg" alt=" ">
+                                                        <img src="../../assets/images/esg/env-policy.jpg" alt="SK네트웍스 주식회사 환경방침 이미지 입니다. 자세한 설명은 하단 내용을 참고하세요.">
                                                     </div>
                                                     <div class="blind">
-                                                        <h1>환경방침</h1>
-                                                        <p>SK네트웍스 주식회사는 ESG 경영을 기반으로 고객과 사회 문제를 해결하며 지속가능한 가치 창출을 추구합니다.</p>
+                                                        <strong>환경방침</strong>
+                                                        <p>SK네트웍스 주식회사는 ESG 경영을 기반으로 고객과 사회 문제를 해결하며 지속 가능한 가치 창출을 추구합니다.</p>
                                                         <p>특히, 기후변화로 인한 환경문제 해결에 적극 동참하고 친환경 경영을 추구함으로써 기업에 요구되는 사회적 책임을 다하기 위해 다음을 실천합니다.</p>
-
                                                         <ol>
                                                             <li>기업 활동에 적용되는 환경 관련 국제 협약 및 국내 법규를 준수하고, 이해관계자 합의사항의 이행을 통해 사회가 요구하는 기업의 책임을 다하겠습니다.</li>
                                                             <li>친환경 경영을 추구하고 문화를 조성하여 KS I ISO 14001에 적합한 환경경영시스템을 구축하며 지속적인 이행과 개선을 통해 환경적 책임을 적극 실천하겠습니다.</li>
                                                             <li>기후변화를 포함한 환경 관련 이슈에 적극 대응하고 개선하기 위해, "Net Zero 2040"이라는 온실가스 감축목표 수립하고 달성 방안을 이행하도록 하겠습니다.</li>
                                                             <li>SK네트웍스 주식회사의 모든 구성원은 친환경 경영을 이행하는 주체로서, commitment를 기반으로 한 환경방침의 내재화와 실천을 도모할 수 있도록 하겠습니다.</li>
-                                                            <li>대외 이해관계자에게 정직하고 진정성이 담긴 환경정보를 공개하며, 지역사회와의 상생을 통한 친환경 활동에 적극 참여하겠습니다.</li>
+                                                            <li>대외 이해관계자에게 정확하고 진정성이 담긴 환경정보를 공개하고, 지역사회와의 상생을 통한 친환경 활동에 적극 참여하겠습니다.</li>
                                                         </ol>
-
-                                                        <p>SK네트웍스 주식회사<br>
-                                                            대표이사 사장 이호정</p>
+                                                        <p>SK네트웍스 주식회사</p>
+                                                        <p>대표이사 사장 이호정</p>
                                                     </div>
                                                 </div>
                                             </div>
@@ -573,13 +572,13 @@
         </footer>
         <!-- //page-foot -->
         <!-- Modal -->
-        <div class="modal design1 medium" id="modalLaw" tabindex="-1" aria-labelledby="GRAND WALKERHILL SEOUL 소개" aria-hidden="true">
+        <div class="modal design1 medium" id="modalLaw" tabindex="-1" aria-labelledby="modalLawLabel" aria-hidden="true">
             <div class="modal-inner modal-dialog">
                 <div class="modal-area">
                     <div class="modal-wrap">
                         <div class="modal-list">
                             <div class="modal-item">
-                                <div class="modal-head">
+                                <div class="modal-head" id="modalLawLabel">
                                     <em class="modal-subjec"><span class="modal-name">법/규제 관리 체계 및 대응 전략</span></em>
                                 </div>
                                 <div class="modal-body">
@@ -600,9 +599,9 @@
                                                 <table style="min-width: 664px;">
                                                     <caption>환경 법/규제 관리 체계 및 대응 전략</caption>
                                                     <colgroup>
-                                                        <col width="14.1%">
-                                                        <col width="13.55%">
-                                                        <col width="25%">
+                                                        <col style="width: 14.1%;">
+                                                        <col style="width: 13.55%;">
+                                                        <col style="width: 25%;">
                                                         <col>
                                                     </colgroup>
                                                     <thead>
@@ -741,9 +740,9 @@
                                                     <table style="min-width: 704px;">
                                                         <caption>환경법규 준수평가표, 점검일자, 점검부서, 점검자</caption>
                                                         <colgroup>
-                                                            <col width="15.6%">
-                                                            <col width="33%">
-                                                            <col width="14.6%">
+                                                            <col style="width: 15.6%;">
+                                                            <col style="width: 33%;">
+                                                            <col style="width: 14.6%;">
                                                             <col>
                                                         </colgroup>
                                                         <thead>
@@ -774,11 +773,11 @@
                                                     <table style="min-width: 704px;">
                                                         <caption>환경법규 준수평가표, 점검일자, 점검부서, 점검자</caption>
                                                         <colgroup>
-                                                            <col width="20.8%">
-                                                            <col width="27.8%">
-                                                            <col width="13.3%">
-                                                            <col width="13.3%">
-                                                            <col width="13.3%">
+                                                            <col style="width: 20.8%;">
+                                                            <col style="width: 27.8%;">
+                                                            <col style="width: 13.3%;">
+                                                            <col style="width: 13.3%;">
+                                                            <col style="width: 13.3%;">
                                                             <col>
                                                         </colgroup>
                                                         <thead>
@@ -802,8 +801,8 @@
                                                                     <div class="form radio design1 case1 type1">
                                                                         <ul class="radio-list">
                                                                             <li class="radio-item">
-                                                                                <label for="good">
-                                                                                    <input type="radio" name="suit" value="s1" id="good">
+                                                                                <label for="good1">
+                                                                                    <input type="radio" name="suit" value="s1" id="good1">
                                                                                     <span class="option"></span>
                                                                                 </label>
                                                                             </li>
@@ -814,8 +813,8 @@
                                                                     <div class="form radio design1 case1 type1">
                                                                         <ul class="radio-list">
                                                                             <li class="radio-item">
-                                                                                <label for="bad">
-                                                                                    <input type="radio" name="suit" value="s2" id="bad" checked>
+                                                                                <label for="bad1">
+                                                                                    <input type="radio" name="suit" value="s2" id="bad1" checked>
                                                                                     <span class="option"></span>
                                                                                 </label>
                                                                             </li>
@@ -826,8 +825,8 @@
                                                                     <div class="form radio design1 case1 type1">
                                                                         <ul class="radio-list">
                                                                             <li class="radio-item">
-                                                                                <label for="none">
-                                                                                    <input type="radio" name="suit" value="s3" id="none">
+                                                                                <label for="none1">
+                                                                                    <input type="radio" name="suit" value="s3" id="none1">
                                                                                     <span class="option"></span>
                                                                                 </label>
                                                                             </li>
@@ -843,8 +842,8 @@
                                                                     <div class="form radio design1 case1 type1">
                                                                         <ul class="radio-list">
                                                                             <li class="radio-item">
-                                                                                <label for="good">
-                                                                                    <input type="radio" name="suit1" value="s4" id="good" checked>
+                                                                                <label for="good2">
+                                                                                    <input type="radio" name="suit1" value="s4" id="good2" checked>
                                                                                     <span class="option"></span>
                                                                                 </label>
                                                                             </li>
@@ -855,8 +854,8 @@
                                                                     <div class="form radio design1 case1 type1">
                                                                         <ul class="radio-list">
                                                                             <li class="radio-item">
-                                                                                <label for="bad">
-                                                                                    <input type="radio" name="suit1" value="s5" id="bad">
+                                                                                <label for="bad2">
+                                                                                    <input type="radio" name="suit1" value="s5" id="bad2">
                                                                                     <span class="option"></span>
                                                                                 </label>
                                                                             </li>
@@ -867,90 +866,8 @@
                                                                     <div class="form radio design1 case1 type1">
                                                                         <ul class="radio-list">
                                                                             <li class="radio-item">
-                                                                                <label for="none">
-                                                                                    <input type="radio" name="suit1" value="s6" id="none">
-                                                                                    <span class="option"></span>
-                                                                                </label>
-                                                                            </li>
-                                                                        </ul>
-                                                                    </div>
-                                                                </td>
-                                                                <td></td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>제15조의2 (음식물류 폐기물 배출자의 의무)</td>
-                                                                <td>위탁처리시 위탁처리 계약 신고</td>
-                                                                <td>
-                                                                    <div class="form radio design1 case1 type1">
-                                                                        <ul class="radio-list">
-                                                                            <li class="radio-item">
-                                                                                <label for="good">
-                                                                                    <input type="radio" name="suit2" value="s7" id="good" checked>
-                                                                                    <span class="option"></span>
-                                                                                </label>
-                                                                            </li>
-                                                                        </ul>
-                                                                    </div>
-                                                                </td>
-                                                                <td>
-                                                                    <div class="form radio design1 case1 type1">
-                                                                        <ul class="radio-list">
-                                                                            <li class="radio-item">
-                                                                                <label for="bad">
-                                                                                    <input type="radio" name="suit2" value="s8" id="bad">
-                                                                                    <span class="option"></span>
-                                                                                </label>
-                                                                            </li>
-                                                                        </ul>
-                                                                    </div>
-                                                                </td>
-                                                                <td>
-                                                                    <div class="form radio design1 case1 type1">
-                                                                        <ul class="radio-list">
-                                                                            <li class="radio-item">
-                                                                                <label for="none">
-                                                                                    <input type="radio" name="suit2" value="s9" id="none">
-                                                                                    <span class="option"></span>
-                                                                                </label>
-                                                                            </li>
-                                                                        </ul>
-                                                                    </div>
-                                                                </td>
-                                                                <td></td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>자원의 절약과 재활용촉진에 관한 법률 제12조(폐기물 부담금)</td>
-                                                                <td>제조업자의 폐기물 부담금 산정, 부과 등(플라스틱(합성수지)를 함유하는 상품 제조업체, 주문자 상표 제작 업체, 수입업체 대상)</td>
-                                                                <td>
-                                                                    <div class="form radio design1 case1 type1">
-                                                                        <ul class="radio-list">
-                                                                            <li class="radio-item">
-                                                                                <label for="good">
-                                                                                    <input type="radio" name="suit3" value="s10" id="good" checked>
-                                                                                    <span class="option"></span>
-                                                                                </label>
-                                                                            </li>
-                                                                        </ul>
-                                                                    </div>
-                                                                </td>
-                                                                <td>
-                                                                    <div class="form radio design1 case1 type1">
-                                                                        <ul class="radio-list">
-                                                                            <li class="radio-item">
-                                                                                <label for="bad">
-                                                                                    <input type="radio" name="suit3" value="s11" id="bad">
-                                                                                    <span class="option"></span>
-                                                                                </label>
-                                                                            </li>
-                                                                        </ul>
-                                                                    </div>
-                                                                </td>
-                                                                <td>
-                                                                    <div class="form radio design1 case1 type1">
-                                                                        <ul class="radio-list">
-                                                                            <li class="radio-item">
-                                                                                <label for="none">
-                                                                                    <input type="radio" name="suit3" value="s12" id="none">
+                                                                                <label for="none2">
+                                                                                    <input type="radio" name="suit1" value="s6" id="none2">
                                                                                     <span class="option"></span>
                                                                                 </label>
                                                                             </li>
@@ -966,8 +883,8 @@
                                                                     <div class="form radio design1 case1 type1">
                                                                         <ul class="radio-list">
                                                                             <li class="radio-item">
-                                                                                <label for="good">
-                                                                                    <input type="radio" name="suit4" value="s13" id="good" checked>
+                                                                                <label for="good3">
+                                                                                    <input type="radio" name="suit2" value="s7" id="good3" checked>
                                                                                     <span class="option"></span>
                                                                                 </label>
                                                                             </li>
@@ -978,8 +895,8 @@
                                                                     <div class="form radio design1 case1 type1">
                                                                         <ul class="radio-list">
                                                                             <li class="radio-item">
-                                                                                <label for="bad">
-                                                                                    <input type="radio" name="suit4" value="s14" id="bad">
+                                                                                <label for="bad3">
+                                                                                    <input type="radio" name="suit2" value="s8" id="bad3">
                                                                                     <span class="option"></span>
                                                                                 </label>
                                                                             </li>
@@ -990,8 +907,8 @@
                                                                     <div class="form radio design1 case1 type1">
                                                                         <ul class="radio-list">
                                                                             <li class="radio-item">
-                                                                                <label for="none">
-                                                                                    <input type="radio" name="suit4" value="s15" id="none">
+                                                                                <label for="none3">
+                                                                                    <input type="radio" name="suit2" value="s9" id="none3">
                                                                                     <span class="option"></span>
                                                                                 </label>
                                                                             </li>
@@ -1007,8 +924,8 @@
                                                                     <div class="form radio design1 case1 type1">
                                                                         <ul class="radio-list">
                                                                             <li class="radio-item">
-                                                                                <label for="good">
-                                                                                    <input type="radio" name="suit5" value="s16" id="good" checked>
+                                                                                <label for="good4">
+                                                                                    <input type="radio" name="suit3" value="s10" id="good4" checked>
                                                                                     <span class="option"></span>
                                                                                 </label>
                                                                             </li>
@@ -1019,8 +936,8 @@
                                                                     <div class="form radio design1 case1 type1">
                                                                         <ul class="radio-list">
                                                                             <li class="radio-item">
-                                                                                <label for="bad">
-                                                                                    <input type="radio" name="suit5" value="s17" id="bad">
+                                                                                <label for="bad4">
+                                                                                    <input type="radio" name="suit3" value="s11" id="bad4">
                                                                                     <span class="option"></span>
                                                                                 </label>
                                                                             </li>
@@ -1031,8 +948,90 @@
                                                                     <div class="form radio design1 case1 type1">
                                                                         <ul class="radio-list">
                                                                             <li class="radio-item">
-                                                                                <label for="none">
-                                                                                    <input type="radio" name="suit5" value="s18" id="none">
+                                                                                <label for="none4">
+                                                                                    <input type="radio" name="suit3" value="s12" id="none4">
+                                                                                    <span class="option"></span>
+                                                                                </label>
+                                                                            </li>
+                                                                        </ul>
+                                                                    </div>
+                                                                </td>
+                                                                <td></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>제15조의2 (음식물류 폐기물 배출자의 의무)</td>
+                                                                <td>위탁처리시 위탁처리 계약 신고</td>
+                                                                <td>
+                                                                    <div class="form radio design1 case1 type1">
+                                                                        <ul class="radio-list">
+                                                                            <li class="radio-item">
+                                                                                <label for="good5">
+                                                                                    <input type="radio" name="suit4" value="s13" id="good5" checked>
+                                                                                    <span class="option"></span>
+                                                                                </label>
+                                                                            </li>
+                                                                        </ul>
+                                                                    </div>
+                                                                </td>
+                                                                <td>
+                                                                    <div class="form radio design1 case1 type1">
+                                                                        <ul class="radio-list">
+                                                                            <li class="radio-item">
+                                                                                <label for="bad5">
+                                                                                    <input type="radio" name="suit4" value="s14" id="bad5">
+                                                                                    <span class="option"></span>
+                                                                                </label>
+                                                                            </li>
+                                                                        </ul>
+                                                                    </div>
+                                                                </td>
+                                                                <td>
+                                                                    <div class="form radio design1 case1 type1">
+                                                                        <ul class="radio-list">
+                                                                            <li class="radio-item">
+                                                                                <label for="none5">
+                                                                                    <input type="radio" name="suit4" value="s15" id="none5">
+                                                                                    <span class="option"></span>
+                                                                                </label>
+                                                                            </li>
+                                                                        </ul>
+                                                                    </div>
+                                                                </td>
+                                                                <td></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>자원의 절약과 재활용촉진에 관한 법률 제12조(폐기물 부담금)</td>
+                                                                <td>제조업자의 폐기물 부담금 산정, 부과 등(플라스틱(합성수지)를 함유하는 상품 제조업체, 주문자 상표 제작 업체, 수입업체 대상)</td>
+                                                                <td>
+                                                                    <div class="form radio design1 case1 type1">
+                                                                        <ul class="radio-list">
+                                                                            <li class="radio-item">
+                                                                                <label for="good6">
+                                                                                    <input type="radio" name="suit5" value="s16" id="good6" checked>
+                                                                                    <span class="option"></span>
+                                                                                </label>
+                                                                            </li>
+                                                                        </ul>
+                                                                    </div>
+                                                                </td>
+                                                                <td>
+                                                                    <div class="form radio design1 case1 type1">
+                                                                        <ul class="radio-list">
+                                                                            <li class="radio-item">
+                                                                                <label for="bad6">
+                                                                                    <input type="radio" name="suit5" value="s17" id="bad6">
+                                                                                    <span class="option"></span>
+                                                                                </label>
+                                                                            </li>
+                                                                        </ul>
+                                                                    </div>
+                                                                </td>
+                                                                <td>
+                                                                    <div class="form radio design1 case1 type1">
+                                                                        <ul class="radio-list">
+                                                                            <li class="radio-item">
+                                                                                <label for="none6">
+                                                                                    <input type="radio" name="suit5" value="s18" id="none6">
                                                                                     <span class="option"></span>
                                                                                 </label>
                                                                             </li>
@@ -1056,8 +1055,8 @@
                                                                     <div class="form radio design1 case1 type1">
                                                                         <ul class="radio-list">
                                                                             <li class="radio-item">
-                                                                                <label for="good">
-                                                                                    <input type="radio" name="suit6" value="s19" id="good" checked>
+                                                                                <label for="good7">
+                                                                                    <input type="radio" name="suit6" value="s19" id="good7" checked>
                                                                                     <span class="option"></span>
                                                                                 </label>
                                                                             </li>
@@ -1068,8 +1067,8 @@
                                                                     <div class="form radio design1 case1 type1">
                                                                         <ul class="radio-list">
                                                                             <li class="radio-item">
-                                                                                <label for="bad">
-                                                                                    <input type="radio" name="suit6" value="s20" id="bad">
+                                                                                <label for="bad7">
+                                                                                    <input type="radio" name="suit6" value="s20" id="bad7">
                                                                                     <span class="option"></span>
                                                                                 </label>
                                                                             </li>
@@ -1080,8 +1079,8 @@
                                                                     <div class="form radio design1 case1 type1">
                                                                         <ul class="radio-list">
                                                                             <li class="radio-item">
-                                                                                <label for="none">
-                                                                                    <input type="radio" name="suit6" value="s21" id="none">
+                                                                                <label for="none7">
+                                                                                    <input type="radio" name="suit6" value="s21" id="none7">
                                                                                     <span class="option"></span>
                                                                                 </label>
                                                                             </li>
