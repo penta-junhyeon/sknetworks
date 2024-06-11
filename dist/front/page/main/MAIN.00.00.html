@@ -41,21 +41,20 @@
             intro.classList.add("active1")
             setTimeout(() => {
                 intro.classList.add("active2")
-                let press = media.querySelector(".press-media")
-                press.style.top = window.innerHeight - press.offsetHeight + "px"
             }, 1500);
 
             const io = new IntersectionObserver(entries => {
                 entries.forEach(entry => {
+                    const _width = window.innerWidth
                     const intro = entry.target.closest(".intro")
-                    if (entry.intersectionRatio > 0.1) {
+                    if (entry.intersectionRatio > 0.2) {
                         intro.classList.add("active3")
                     } else {
                         intro.classList.remove("active3")
                     }
                 })
             }, {
-                threshold: 0.1
+                threshold: [0.2]
             })
 
             const io2 = new IntersectionObserver(entries => {
@@ -75,14 +74,24 @@
 
             const io3 = new IntersectionObserver(entries => {
                 entries.forEach(entry => {
-                    if (entry.intersectionRatio > 0.4) {
-                        company.classList.add("active2")
+                    const _width = window.innerWidth
+                    if (_width >= 1024) {
+                        if (entry.intersectionRatio > 0.4) {
+                            company.classList.remove("active4")
+                            company.classList.add("active2")
+                        } else {
+                            company.classList.remove("active2")
+                        }
                     } else {
-                        company.classList.remove("active2")
+                        if (entry.intersectionRatio > 0.2) {
+                            company.classList.add("active2")
+                        } else {
+                            company.classList.remove("active2")
+                        }
                     }
                 })
             }, {
-                threshold: 0.4
+                threshold: [0.2, 0.4]
             })
 
             const io4 = new IntersectionObserver(entries => {
@@ -101,8 +110,6 @@
                 entries.forEach(entry => {
                     if (entry.intersectionRatio > 0.2) {
                         company.classList.add("active4")
-                    } else {
-                        company.classList.remove("active4")
                     }
                 })
             }, {
@@ -133,6 +140,29 @@
                 threshold: [0.1]
             })
 
+            //현재 메인 문제 없을 시 추후 삭제
+            // const pressContent = media.querySelector(".content-inner")
+            // const sns = media.querySelector(".sns-media")
+            // gsap.to(press, {
+            //     scrollTrigger: {
+            //         trigger: press,
+            //         start: "bottom+=30% bottom",
+            //         end: "bottom+=100% bottom",
+            //         scrub: true,
+            //     },
+            //     opacity: 0,
+            //     scale: 0.8
+            // })
+            // gsap.to(sns, {
+            //     scrollTrigger: {
+            //         trigger: press,
+            //         start: "bottom+=30% bottom",
+            //         end: "bottom+=100% bottom",
+            //         scrub: true,
+            //     },
+            //     "marginTop": -pressContent.offsetHeight
+            // })
+
             io.observe(ourEsg)
             io2.observe(company)
             io3.observe(network)
@@ -148,26 +178,39 @@
                 },
             });
 
-            window.addEventListener('beforeunload', function() {
-                localStorage.setItem('scrollPosition', window.scrollY);
-            });
+            // window.addEventListener('beforeunload', function() {
+            //     localStorage.setItem('scrollPosition', window.scrollY);
+            // });
 
-            window.addEventListener('load', function() {
-                if (localStorage.getItem('scrollPosition') !== null) {
-                    window.scrollTo(0, localStorage.getItem('scrollPosition'));
-                }
-                setTimeout(() => {
-                    console.log(intro.classList.contains("active4"));
+            // window.addEventListener('load', function() {
+            //     if (localStorage.getItem('scrollPosition') !== null) {
+            //         window.scrollTo(0, localStorage.getItem('scrollPosition'));
+            //     }
+            //     setTimeout(() => {
+            //     console.log(intro.classList.contains("active4"));
 
-                }, 100);
-            });
+            //     }, 100);
+            // });
 
+            // 현재 메인 문제 없을 시 추후 삭제
+            // document.addEventListener("keyup", (e) => {
+            //     if(e.key === 'Tab') {
+            //         setTimeout(() => {
+            //             const focusedElement = document.activeElement
+            //             if(focusedElement.closest(".press-media")) {
+            //                 window.scrollTo(0, media.offsetTop)
+            //             } else if(focusedElement.classList.contains("newest-link")) {
+            //                 window.scrollTo(0, sns.offsetTop)
+            //             }
+            //         }, 0);
+            //     }
+            // })
         });
     </script>
 </head>
 
 <body>
-    <div id="wrap main">
+    <div id="wrap" class="main">
         <div class="skip">
             <span class="blind">skip navigation</span>
             <ul>
@@ -459,15 +502,15 @@
                             <div class="content-inner">
                                 <div class="section-head">
                                     <h2 class="section-name">
-                                        <div class="split-wrap">
+                                        <span class="split-wrap">
                                             <span class="split">Value</span>
-                                        </div>
-                                        <div class="split-wrap action1">
-                                            <span class="split"> for</span>
-                                        </div>
-                                        <div class="split-wrap action2">
-                                            <span class="split"> AI</span>
-                                        </div>
+                                        </span>
+                                        <span class="split-wrap action1">
+                                            <span class="split">for</span>
+                                        </span>
+                                        <span class="split-wrap action2">
+                                            <span class="split">AI</span>
+                                        </span>
                                     </h2>
                                 </div>
                                 <div class="section-body">
@@ -771,7 +814,7 @@
                                     </div>
                                 </div>
                                 <div class="section-util">
-                                    <a class="btn design3 case1 type1 color1 ar-icon-arrow-right2-bg" href="javascript:void(0)">
+                                    <a class="btn design3 case1 type1 color1 ar-icon-arrow-right2-bg report" href="javascript:void(0)">
                                         <span class="btn-text">보도자료 전체보기</span>
                                     </a>
                                 </div>
@@ -785,9 +828,9 @@
                                 <div class="section-body">
                                     <ul class="post-list">
                                         <li class="item newest">
-                                            <a href="" class="link">
+                                            <a href="" class="link newest-link">
                                                 <div class="post-head">
-                                                    <img src="https://place-hold.it/590x331" alt="">
+                                                    <img src="https://place-hold.it/590x331" alt=" ">
                                                 </div>
                                                 <div class="post-body">
                                                     <span class="post-cate">Youtube</span>
@@ -797,11 +840,22 @@
                                                 </div>
                                             </a>
                                         </li>
+                                        <li class="item">
+                                            <a href="" class="link">
+                                                <div class="post-head">
+                                                    <img src="https://place-hold.it/387x218" alt=" ">
+                                                </div>
+                                                <div class="post-body">
+                                                    <span class="post-cate">Youtube</span>
+                                                    <h3 class="post-name">[이 팀을 알렸다] 진.짜. 최고의 마케팅팀!<br> 워커힐을 환전 뒤집어 놓으셨다 ✊</h3>
+                                                    <span class="date">2024.02.01</span>
+                                                </div>
+                                            </a>
                                         </li>
                                         <li class="item">
                                             <a href="" class="link">
                                                 <div class="post-head">
-                                                    <img src="https://place-hold.it/387x218" alt="">
+                                                    <img src="https://place-hold.it/387x218" alt=" ">
                                                 </div>
                                                 <div class="post-body">
                                                     <span class="post-cate">Youtube</span>
@@ -811,21 +865,9 @@
                                             </a>
                                         </li>
                                         <li class="item">
-                                            <a href="" claa="link">
+                                            <a href="" class="link">
                                                 <div class="post-head">
-                                                    <img src="https://place-hold.it/387x218" alt="">
-                                                </div>
-                                                <div class="post-body">
-                                                    <span class="post-cate">Youtube</span>
-                                                    <h3 class="post-name">[이 팀을 알렸다] 진.짜. 최고의 마케팅팀!<br> 워커힐을 환전 뒤집어 놓으셨다 ✊</h3>
-                                                    <span class="date">2024.02.01</span>
-                                                </div>
-                                            </a>
-                                        </li>
-                                        <li class="item">
-                                            <a href="" claa="link">
-                                                <div class="post-head">
-                                                    <img src="https://place-hold.it/387x218" alt="">
+                                                    <img src="https://place-hold.it/387x218" alt=" ">
                                                 </div>
                                                 <div class="post-body">
                                                     <span class="post-cate">Youtube</span>
@@ -876,7 +918,7 @@
                                     </div>
                                     <div class="board-item ir">
                                         <div class="board-head">
-                                            <img src="../../assets/images/logo/logo-w-k.svg" class="sk-logo" alt="SK 네트웍스 로고" />
+                                            <img src="../../assets/images/logo/logo-w-k.svg" class="sk-logo" alt="SK 네트웍스 로고">
                                         </div>
                                         <div class="board-body">
                                             <h3 class="board-name">IR자료실</h3>

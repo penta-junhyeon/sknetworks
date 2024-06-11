@@ -45,6 +45,7 @@
                 slidesPerView: 1,
                 loopAdditionalSlides: 1,
                 loop: true,
+                a11y: true,
                 navigation: {
                     nextEl: ".sync2 .swiper-button-next",
                     prevEl: ".sync2 .swiper-button-prev",
@@ -65,10 +66,7 @@
                 allowTouchMove: true,
                 loop: false,
                 centeredSlides: false,
-                a11y: {
-                    prevSlideMessage: '이전 슬라이드',
-                    nextSlideMessage: '다음 슬라이드',
-                },
+                a11y: true,
                 navigation: {
                     nextEl: ".pr-swiper-area .swiper-button-next",
                     prevEl: ".pr-swiper-area .swiper-button-prev",
@@ -89,41 +87,6 @@
                     },
                 },
             });
-
-            // var prSwiper1 = new Swiper(".pr-swiper1", {
-            //     slidesPerView: 2,
-            //     slidesPerColumn: 2,
-            //     grid: {
-            //         rows: 2,
-            //     },
-            //     spaceBetween: 15,
-            //     centeredSlides: false,
-            //     loop: false,
-            //     navigation: {
-            //         nextEl: ".pr-swiper-area .swiper-button-next",
-            //         prevEl: ".pr-swiper-area .swiper-button-prev"
-            //     },
-            //     breakpoints: {
-            //         280: {
-            //             slidesPerView: 2,
-            //             slidesPerColumn: 2,
-            //             grid: {
-            //                 rows: 2,
-            //             },
-            //             spaceBetween: 15,
-            //             centeredSlides: false,
-            //             loop: false,
-            //         },
-            //         1024: {
-            //             slidesPerView: 3,
-            //             slidesPerColumn: 1,
-            //             grid: false,
-            //             spaceBetween: 24,
-            //             centeredSlides: true,
-            //             loop: true,
-            //         },
-            //     },
-            // });
         });
     </script>
 </head>
