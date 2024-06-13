@@ -47,20 +47,20 @@
                 entries.forEach(entry => {
                     const _width = window.innerWidth
                     const intro = entry.target.closest(".intro")
-                    if (entry.intersectionRatio > 0.2) {
+                    if (entry.intersectionRatio > 0.5) {
                         intro.classList.add("active3")
                     } else {
                         intro.classList.remove("active3")
                     }
                 })
             }, {
-                threshold: [0.2]
+                threshold: [0.5]
             })
 
             const io2 = new IntersectionObserver(entries => {
                 entries.forEach(entry => {
                     const company = entry.target
-                    if (entry.intersectionRatio > 0.1) {
+                    if (entry.intersectionRatio > 0.2) {
                         intro.classList.add("active4")
                         company.classList.add("active1")
                     } else {
@@ -69,7 +69,7 @@
                     }
                 })
             }, {
-                threshold: 0.1
+                threshold: 0.2
             })
 
             const io3 = new IntersectionObserver(entries => {
