@@ -33,8 +33,11 @@
 
             // 현재 url hash값 반환 (# 제거)
             const id = window.location.hash.substring(1);
-            if (id) {
-                activateContentBody(id);
+            if (id && !document.querySelector('.content-body.active')) {
+                activateContentBody('ver-info-2-2');
+            } else if (!id) {
+                // 해시가 없을 때도 .content-body.ver-info-2-2에 active 클래스 추가
+                activateContentBody('ver-info-2-2');
             }
 
             // bootstrap
@@ -47,6 +50,7 @@
                     e.preventDefault();
                     const targetElement = document.querySelector(this.getAttribute('href'));
                     if (targetElement) {
+                        history.pushState(null, null, ' '); // URL 변경 방지
                         targetElement.scrollIntoView({
                             behavior: 'smooth'
                         });
@@ -105,7 +109,7 @@
                             behavior: 'auto'
                         });
 
-                        console.log(id);
+                        // console.log(id);
                     }
                 });
             });
@@ -413,7 +417,7 @@
                     <div class="local-body">
                         <div class="content-head">개인정보처리방침 페이지</div>
                         <!-- v2.2 : S -->
-                        <div class="content-body ver-info-2-2 active">
+                        <div class="content-body ver-info-2-2">
                             <div class="section design1 case8 type1">
                                 <div class="section-wrap">
                                     <div class="section-body">

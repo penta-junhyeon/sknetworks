@@ -26,18 +26,6 @@
     </script>
 
     <script src="https://unpkg.com/@studio-freight/lenis@1.0.32/dist/lenis.min.js"></script>
-    <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            const brandInquiry = document.querySelector(".section.brand-inquiry")
-            const brandInquiryItem = brandInquiry.querySelectorAll(".board-item")
-
-            brandInquiryItem.forEach(item => {
-                item.addEventListener("mouseenter", function() {
-                    brandInquiry.dataset.back = item.dataset.list
-                })
-            });
-        });
-    </script>
 </head>
 
 <body class="kr">
@@ -340,67 +328,55 @@
                     <div class="local-body">
                         <div class="content-head">문의ㆍ제안 페이지</div>
                         <div class="content-body">
-                            <div class="section design1 case1 type1">
-                                <div class="section-wrap">
-                                    <div class="section-head">
-                                        <div class="section-subject">
-                                            <h4 class="section-name">
-                                                SK네트웍스 브랜드 고객상담실에서<br>
-                                                고객님의 목소리를 듣고 정성껏 답변해 드리겠습니다.
-                                            </h4>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="section design1 case1 type1 brand-inquiry" data-back="default">
+                            <div class="section design1 case3 type1 brand-inquiry">
                                 <div class="section-wrap">
                                     <div class="section-head">
                                         <div class="section-subject">
                                             <h4 class="section-name">
                                                 브랜드별 문의 페이지 바로가기
                                             </h4>
-                                            <p class="section-summary">각 브랜드 문의 페이지를 통해 문의 주시면 보다 빠르게 답변을 받아 보실 수 있습니다.</p>
+                                            <p class="section-summary">각 브랜드 고객센터를 통해 문의 주시면 보다 신속하고 정확한 답변을 받아보실 수 있습니다.</p>
                                         </div>
                                     </div>
                                     <div class="section-body">
                                         <ul class="board-list brand-inquiry">
-                                            <li class="board-item" data-list="skMagic">
+                                            <li class="board-item magic">
                                                 <div class="board-wrap">
-                                                    <a href="https://service.skmagic.com/web/main/main.do" target='_blank'>
-                                                        <img src="../../assets/images/etc/logo-skMagic.svg" alt="SK매직 로고">
-                                                        <strong class="board-name">SK매직</strong>
+                                                    <a class="btn design3 case3 type1 color6 ar-icon-arrow-right-up2" href="https://service.skmagic.com/web/main/main.do" target="_blank">
+                                                        <span class="btn-text pc-only"><span class="blind">SK매직</span>고객센터 바로가기</span>
+                                                        <span class="btn-text mo-only">SK매직</span>
                                                     </a>
                                                 </div>
                                             </li>
-                                            <li class="board-item" data-list="electLink">
+                                            <li class="board-item electlink">
                                                 <div class="board-wrap">
-                                                    <a href="https://skelectlink.co.kr/support/inquiry" target='_blank'>
-                                                        <img src="../../assets/images/etc/logo-electLink.svg" alt="SK일렉링크 로고">
-                                                        <strong class="board-name">SK일렉링크</strong>
+                                                    <a class="btn design3 case3 type1 color6 ar-icon-arrow-right-up2" href="https://service.skmagic.com/web/main/main.do" target="_blank">
+                                                        <span class="btn-text pc-only"><span class="blind">SK일렉링크</span>고객센터 바로가기</span>
+                                                        <span class="btn-text mo-only">SK일렉링크</span>
                                                     </a>
                                                 </div>
                                             </li>
-                                            <li class="board-item" data-list="speedMate">
+                                            <li class="board-item speedmate">
                                                 <div class="board-wrap">
-                                                    <a href="https://www.speedmate.com/customer/FAQ" target='_blank'>
-                                                        <img src="../../assets/images/etc/logo-speedMate.svg" alt="스피드메이트 로고">
-                                                        <strong class="board-name">스피드메이트</strong>
+                                                    <a class="btn design3 case3 type1 color6 ar-icon-arrow-right-up2" href="https://service.skmagic.com/web/main/main.do" target="_blank">
+                                                        <span class="btn-text pc-only"><span class="blind">스피드메이트</span>고객센터 바로가기</span>
+                                                        <span class="btn-text mo-only">스피드메이트</span>
                                                     </a>
                                                 </div>
                                             </li>
-                                            <li class="board-item" data-list="walkerHill">
+                                            <li class="board-item walkerhill">
                                                 <div class="board-wrap">
-                                                    <a href="https://www.walkerhill.com/customer/VOCForm.wh" target='_blank'>
-                                                        <img src="../../assets/images/etc/logo-walkerhill.svg" alt="그랜드워커힐서울 로고">
-                                                        <strong class="board-name">워커힐 호텔앤리조트</strong>
+                                                    <a class="btn design3 case3 type1 color6 ar-icon-arrow-right-up2" href="https://service.skmagic.com/web/main/main.do" target="_blank">
+                                                        <span class="btn-text pc-only"><span class="blind">워커힐 호텔앤리조트</span>고객센터 바로가기</span>
+                                                        <span class="btn-text mo-only">워커힐 호텔앤리조트</span>
                                                     </a>
                                                 </div>
                                             </li>
-                                            <li class="board-item" data-list="mintit">
+                                            <li class="board-item mintit">
                                                 <div class="board-wrap">
-                                                    <a href="https://www.mintit.co.kr/cscenter/faq.do" target='_blank'>
-                                                        <img src="../../assets/images/etc/logo-mintit.svg" alt="민팃 로고">
-                                                        <strong class="board-name">민팃</strong>
+                                                    <a class="btn design3 case3 type1 color6 ar-icon-arrow-right-up2" href="https://service.skmagic.com/web/main/main.do" target="_blank">
+                                                        <span class="btn-text pc-only"><span class="blind">민팃</span>고객센터 바로가기</span>
+                                                        <span class="btn-text mo-only">민팃</span>
                                                     </a>
                                                 </div>
                                             </li>
@@ -408,14 +384,14 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="section design1 case3 type1 align3">
+                            <div class="section design1 case3 type1">
                                 <div class="section-wrap">
                                     <div class="section-head">
                                         <div class="section-subject">
                                             <h4 class="section-name">
-                                                SK네트웍스 문의 페이지 바로가기
+                                                사업제안, IR, ESG 등 <span class="text-bundle">기타 문의 바로가기</span>
                                             </h4>
-                                            <p class="section-summary">IR, ESG, 사업제안, 기타 문의는 아래 배너를 통해 문의 주시면 정성껏 답변해 드리겠습니다.</p>
+                                            <p class="section-summary">사업제안, IR, ESG 등 기타 문의는 아래 배너를 통해 문의해주시길 바랍니다.</p>
                                         </div>
                                     </div>
                                     <div class="section-body">
@@ -427,53 +403,13 @@
                                                 <div class="banner-body">
                                                     <p class="para">사업제안·고객문의가 필요하신가요?</p>
                                                 </div>
+                                                <div class="banner-footer">
+                                                    <span class="summary">SK네트웍스는 여러분의 소중한 제안을 기다리고 있습니다.</span>
+                                                </div>
                                                 <div class="banner-util">
                                                     <a class="btn design3 case1 type1 color2 ar-icon-arrow-right2-bg" href="/#">
                                                         <span class="btn-text">문의하기</span>
                                                     </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="section design1 case1 type1 align3">
-                                <div class="section-wrap">
-                                    <div class="section-head">
-                                        <div class="section-subject">
-                                            <h4 class="section-name">
-                                                사업제안 문의 처리 진행 과정
-                                            </h4>
-                                        </div>
-                                    </div>
-                                    <div class="section-body">
-                                        <div class="board-list inquiry-process">
-                                            <div class="board-item regi">
-                                                <div class="board-wrap">
-                                                    <span class="num">01</span>
-                                                    <strong class="board-name">제안등록</strong>
-                                                </div>
-                                            </div>
-                                            <div class="board-item receive">
-                                                <div class="board-wrap">
-                                                    <span class="num">02</span>
-                                                    <strong class="board-name">제안접수</strong>
-                                                </div>
-                                            </div>
-                                            <div class="board-item review">
-                                                <div class="board-wrap">
-                                                    <span class="num">03</span>
-                                                    <strong class="board-name">
-                                                        담당자 <span>상세 검토</span>
-                                                    </strong>
-                                                </div>
-                                            </div>
-                                            <div class="board-item reply">
-                                                <div class="board-wrap">
-                                                    <span class="num">04</span>
-                                                    <strong class="board-name">
-                                                        이메일로 검토결과 회신
-                                                    </strong>
                                                 </div>
                                             </div>
                                         </div>
