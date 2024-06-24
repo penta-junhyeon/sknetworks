@@ -36,6 +36,7 @@
             const esg = company.querySelector(".esg")
             const media = document.querySelector(".section.media")
             let press = media.querySelector(".press-media")
+            const sns = media.querySelector(".sns-media")
             const investment = document.querySelector(".section.investment")
 
             intro.classList.add("active1")
@@ -47,29 +48,48 @@
                 entries.forEach(entry => {
                     const _width = window.innerWidth
                     const intro = entry.target.closest(".intro")
-                    if (entry.intersectionRatio > 0.5) {
-                        intro.classList.add("active3")
+                    if (_width >= 1024) {
+                        if (entry.intersectionRatio > 0.5) {
+                            intro.classList.add("active3")
+                        } else {
+                            intro.classList.remove("active3")
+                        }
                     } else {
-                        intro.classList.remove("active3")
+                        if (entry.intersectionRatio > 0.1) {
+                            intro.classList.add("active3")
+                        } else {
+                            intro.classList.remove("active3")
+                        }
                     }
                 })
             }, {
-                threshold: [0.5]
+                threshold: [0.1, 0.5]
             })
 
             const io2 = new IntersectionObserver(entries => {
                 entries.forEach(entry => {
+                    const _width = window.innerWidth
                     const company = entry.target
-                    if (entry.intersectionRatio > 0.2) {
-                        intro.classList.add("active4")
-                        company.classList.add("active1")
+                    if (_width >= 1024) {
+                        if (entry.intersectionRatio > 0.2) {
+                            intro.classList.add("active4")
+                            company.classList.add("active1")
+                        } else {
+                            intro.classList.remove("active4")
+                            company.classList.remove("active1")
+                        }
                     } else {
-                        intro.classList.remove("active4")
-                        company.classList.remove("active1")
+                        if (entry.intersectionRatio > 0.1) {
+                            intro.classList.add("active4")
+                            company.classList.add("active1")
+                        } else {
+                            intro.classList.remove("active4")
+                            company.classList.remove("active1")
+                        }
                     }
                 })
             }, {
-                threshold: 0.2
+                threshold: [0.1, 0.2]
             })
 
             const io3 = new IntersectionObserver(entries => {
@@ -96,14 +116,17 @@
 
             const io4 = new IntersectionObserver(entries => {
                 entries.forEach(entry => {
-                    if (entry.intersectionRatio > 0.1) {
-                        company.classList.add("active3")
-                    } else {
-                        company.classList.remove("active3")
+                    const _width = window.innerWidth
+                    if (_width >= 1024) {
+                        if (entry.intersectionRatio > 0.1) {
+                            company.classList.add("active3")
+                        } else {
+                            company.classList.remove("active3")
+                        }
                     }
                 })
             }, {
-                threshold: 0.1
+                threshold: [0.1]
             })
 
             const io5 = new IntersectionObserver(entries => {
@@ -171,13 +194,6 @@
             io6.observe(media)
             io7.observe(investment)
 
-            var swiper = new Swiper(".press-swiper", {
-                slidesPerView: "auto",
-                scrollbar: {
-                    el: ".swiper-scrollbar",
-                },
-            });
-
             // window.addEventListener('beforeunload', function() {
             //     localStorage.setItem('scrollPosition', window.scrollY);
             // });
@@ -205,6 +221,45 @@
             //         }, 0);
             //     }
             // })
+
+            let _width = window.innerWidth
+            let pressSwiper = undefined;
+
+            function initPressSwiper() {
+                if (_width >= 1024 && pressSwiper == undefined) {
+                    console.log("실행");
+                    pressSwiper = new Swiper(".press-swiper", {
+                        slidesPerView: "auto",
+                        freeMode: true,
+                        scrollbar: {
+                            el: ".swiper-scrollbar",
+                        }
+                    });
+                } else if (_width < 1024 && pressSwiper != undefined) {
+                    console.log("111");
+                    pressSwiper.destroy();
+                    pressSwiper = undefined;
+                }
+            }
+            initPressSwiper();
+            window.addEventListener("resize", () => {
+                _width = window.innerWidth;
+                initPressSwiper();
+                company.classList.remove("active3")
+                media.classList.remove("active1")
+                media.classList.remove("active2")
+                sns.style.marginTop = "0"
+            })
+
+            new Swiper(".section-content.esg .swiper", {
+                slidesPerView: "auto",
+                freeMode: true,
+            });
+
+            new Swiper(".section.media .swiper", {
+                slidesPerView: "auto",
+                freeMode: true,
+            });
         });
     </script>
 </head>
@@ -515,9 +570,9 @@
                                 </div>
                                 <div class="section-body">
                                     <p class="para">
-                                        고객가치를 혁신의 경험으로<br>
-                                        우리의 AI기술이 더 큰 행복을 만들어가도록<br>
-                                        SK네트웍스가 더 나은 미래를 연결합니다.
+                                        인류의 문명화를 구현함으로써<br>
+                                        SK네트웍스와 함께하는 다양한 이해관계자의 행복을<br>
+                                        지속적으로 만들어 나가겠습니다.
                                     </p>
                                 </div>
                                 <div class="section-util">
@@ -589,8 +644,8 @@
                                         <h2 class="section-name">AI Network</h2>
                                     </div>
                                     <p class="section-summary">
-                                        성공적인 글로벌 친환경 · AI 기업 투자를 시작으로 향후 지속가능한<br>
-                                        미래 기술과 연관된 성장 동력 발굴 및 파트너십 구축을 확대할 계획입니다.
+                                        성공적인 글로벌 친환경 · AI 기업 투자를 시작으로 향후 지속가능한
+                                        <span class="text-bundle">미래 기술과</span> 연관된 성장 동력 발굴 및 파트너십 구축을 확대할 계획입니다.
                                     </p>
                                 </div>
                                 <div class="section-body">
@@ -655,9 +710,9 @@
                                     </div>
                                     <p class="section-summary">지속가능한 미래 SK네트웍스가 적극 동참합니다.</p>
                                 </div>
-                                <div class="section-body">
-                                    <ul class="board-list">
-                                        <li class="item envi">
+                                <div class="section-body swiper">
+                                    <ul class="board-list swiper-wrapper">
+                                        <li class="item envi swiper-slide">
                                             <div class="board-head">
                                                 <h3 class="board-name">환경</h3>
                                             </div>
@@ -670,7 +725,7 @@
                                                 </a>
                                             </div>
                                         </li>
-                                        <li class="item social">
+                                        <li class="item social swiper-slide">
                                             <div class="board-head">
                                                 <h3 class="board-name">사회</h3>
                                             </div>
@@ -683,7 +738,7 @@
                                                 </a>
                                             </div>
                                         </li>
-                                        <li class="item gove">
+                                        <li class="item gove swiper-slide">
                                             <div class="board-head">
                                                 <h3 class="board-name">거버넌스</h3>
                                             </div>
@@ -818,57 +873,59 @@
                                     <h2 class="section-name">SNS Media</h2>
                                 </div>
                                 <div class="section-body">
-                                    <ul class="post-list">
-                                        <li class="item newest">
-                                            <a href="" class="link newest-link">
-                                                <div class="post-head">
-                                                    <img src="https://place-hold.it/590x331" alt=" ">
-                                                </div>
-                                                <div class="post-body">
-                                                    <span class="post-cate">Youtube</span>
-                                                    <h3 class="post-name">[이 팀을 알렸다] 진.짜. 최고의 마케팅팀!<br> 워커힐을 환전 뒤집어 놓으셨다 ✊</h3>
-                                                    <p class="para">천하의 장돌뱅희를 당황시키는 밈잘알 마케팅팀의 등장이라...숲 속에서 열리는 콘서트부터 아이돌과의 협업까지!! 워커힐 마케팅팀의 넘치는 아이디어를 지금 영상을 통해 만나보시오~!</p>
-                                                    <span class="date">2024.02.01</span>
-                                                </div>
-                                            </a>
-                                        </li>
-                                        <li class="item">
-                                            <a href="" class="link">
-                                                <div class="post-head">
-                                                    <img src="https://place-hold.it/387x218" alt=" ">
-                                                </div>
-                                                <div class="post-body">
-                                                    <span class="post-cate">Youtube</span>
-                                                    <h3 class="post-name">[이 팀을 알렸다] 진.짜. 최고의 마케팅팀!<br> 워커힐을 환전 뒤집어 놓으셨다 ✊</h3>
-                                                    <span class="date">2024.02.01</span>
-                                                </div>
-                                            </a>
-                                        </li>
-                                        <li class="item">
-                                            <a href="" class="link">
-                                                <div class="post-head">
-                                                    <img src="https://place-hold.it/387x218" alt=" ">
-                                                </div>
-                                                <div class="post-body">
-                                                    <span class="post-cate">Youtube</span>
-                                                    <h3 class="post-name">[이 팀을 알렸다] 진.짜. 최고의 마케팅팀!<br> 워커힐을 환전 뒤집어 놓으셨다 ✊</h3>
-                                                    <span class="date">2024.02.01</span>
-                                                </div>
-                                            </a>
-                                        </li>
-                                        <li class="item">
-                                            <a href="" class="link">
-                                                <div class="post-head">
-                                                    <img src="https://place-hold.it/387x218" alt=" ">
-                                                </div>
-                                                <div class="post-body">
-                                                    <span class="post-cate">Youtube</span>
-                                                    <h3 class="post-name">[이 팀을 알렸다] 진.짜. 최고의 마케팅팀!<br> 워커힐을 환전 뒤집어 놓으셨다 ✊</h3>
-                                                    <span class="date">2024.02.01</span>
-                                                </div>
-                                            </a>
-                                        </li>
-                                    </ul>
+                                    <div class="sns-newest">
+                                        <a href="" class="link">
+                                            <div class="post-head">
+                                                <img src="https://place-hold.it/590x331" alt=" ">
+                                            </div>
+                                            <div class="post-body">
+                                                <span class="post-cate">Youtube</span>
+                                                <h3 class="post-name">[이 팀을 알렸다] 진.짜. 최고의 마케팅팀!<br> 워커힐을 완전 뒤집어 놓으셨다 ✊</h3>
+                                                <p class="para">천하의 장돌뱅희를 당황시키는 밈잘알 마케팅팀의 등장이라...숲 속에서 열리는 콘서트부터 아이돌과의 협업까지!! 워커힐 마케팅팀의 넘치는 아이디어를 지금 영상을 통해 만나보시오~!</p>
+                                                <span class="date">2024.02.01</span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="sns-swiper swiper">
+                                        <ul class="post-list swiper-wrapper">
+                                            <li class="item swiper-slide">
+                                                <a href="" class="link">
+                                                    <div class="post-head">
+                                                        <img src="https://place-hold.it/387x218" alt=" ">
+                                                    </div>
+                                                    <div class="post-body">
+                                                        <span class="post-cate">Youtube</span>
+                                                        <h3 class="post-name">[이 팀을 알렸다] 진.짜. 최고의 마케팅팀!<br> 워커힐을 완전 뒤집어 놓으셨다 ✊</h3>
+                                                        <span class="date">2024.02.01</span>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class="item swiper-slide">
+                                                <a href="" class="link">
+                                                    <div class="post-head">
+                                                        <img src="https://place-hold.it/387x218" alt=" ">
+                                                    </div>
+                                                    <div class="post-body">
+                                                        <span class="post-cate">Youtube</span>
+                                                        <h3 class="post-name">[이 팀을 알렸다] 진.짜. 최고의 마케팅팀!<br> 워커힐을 완전 뒤집어 놓으셨다 ✊</h3>
+                                                        <span class="date">2024.02.01</span>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class="item swiper-slide">
+                                                <a href="" class="link">
+                                                    <div class="post-head">
+                                                        <img src="https://place-hold.it/387x218" alt=" ">
+                                                    </div>
+                                                    <div class="post-body">
+                                                        <span class="post-cate">Youtube</span>
+                                                        <h3 class="post-name">[이 팀을 알렸다] 진.짜. 최고의 마케팅팀!<br> 워커힐을 완전 뒤집어 놓으셨다 ✊</h3>
+                                                        <span class="date">2024.02.01</span>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
                                 </div>
                                 <div class="section-util">
                                     <a class="btn design3 case1 type1 color1 ar-icon-arrow-right2-bg" href="javascript:void(0)">
@@ -890,7 +947,7 @@
                             <div class="section-body">
                                 <div class="board-list">
                                     <div class="board-item sk-stock">
-                                        <a href="javascript:void(0)" class="link" style='color: white; display: block; line-height: 37rem; font-size: 2rem; font-weight: 700; text-align: center;'>
+                                        <a href="javascript:void(0)" class="link" style='color: white; display: block; line-height: 8rem; font-size: 2rem; font-weight: 700; text-align: center;'>
                                             API 연동 구간
                                         </a>
                                     </div>
