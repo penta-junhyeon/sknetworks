@@ -342,20 +342,20 @@
                                     <div class="section-body">
                                         <div class="tab-display design1 case1 type1">
                                             <div class="swiper tab-wrap">
-                                                <ul class="swiper-wrapper tab-list">
-                                                    <li class="swiper-slide tab-item">
-                                                        <button class="tab-text">경영실적발표</button>
+                                                <ul class="swiper-wrapper tab-list" role="tablist">
+                                                    <li id="tab1" class="swiper-slide tab-item" aria-controls="tab-panel1">
+                                                        <button role="tab" class="tab-text">경영실적발표</button>
                                                     </li>
-                                                    <li class="swiper-slide tab-item">
-                                                        <button class="tab-text">IR 자료</button>
+                                                    <li id="tab2" class="swiper-slide tab-item" aria-controls="tab-panel1">
+                                                        <button role="tab" class="tab-text">IR 자료</button>
                                                     </li>
                                                 </ul>
                                             </div>
                                         </div>
 
-                                        <div class="panel-display design1">
-                                            <ul class="panel-list">
-                                                <li class="panel-item">
+                                        <div class="panel-display design1 case1">
+                                            <div class="panel-list">
+                                                <div id="tab-panel1" class="panel-item" role="tabpanel">
                                                     <div class="panel-wrap">
                                                         <div class="panel-head">
                                                             <div class="data-display design2 case4 type1">
@@ -525,8 +525,8 @@
                                                             </div>
                                                         </div>
                                                     </div>
-                                                </li>
-                                                <li class="panel-item">
+                                                </div>
+                                                <div id="tab-panel2" class="panel-item" role="tabpanel">
                                                     <div class="panel-wrap">
                                                         <div class="panel-head">
                                                             <div class="data-display design2 case4 type1">
@@ -696,8 +696,8 @@
                                                             </div>
                                                         </div>
                                                     </div>
-                                                </li>
-                                            </ul>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>

@@ -392,8 +392,6 @@
                     </div>
                     <div class="local-body">
                         <div class="content-head">뉴스룸 페이지</div>
-                        <div class="content-info">
-                        </div>
                         <div class="content-body">
                             <div class="section">
                                 <div class="section-body">
@@ -469,24 +467,24 @@
                                 <div class="section-body">
                                     <div class="tab-display design1 case1 type1">
                                         <div class="swiper tab-wrap">
-                                            <ul class="swiper-wrapper tab-list">
-                                                <li class="swiper-slide tab-item">
-                                                    <button class="tab-text">보도자료</button>
+                                            <ul class="swiper-wrapper tab-list" role="tablist">
+                                                <li id="tab1" class="swiper-slide tab-item" aria-controls="tab-panel1">
+                                                    <button role="tab" class="tab-text">보도자료</button>
                                                 </li>
-                                                <li class="swiper-slide tab-item">
-                                                    <button class="tab-text">소셜 미디어</button>
+                                                <li id="tab2" class="swiper-slide tab-item" aria-controls="tab-panel2">
+                                                    <button role="tab" class="tab-text">소셜 미디어</button>
                                                 </li>
-                                                <li class="swiper-slide tab-item">
-                                                    <button class="tab-text">영상 라이브러리</button>
+                                                <li id="tab3" class="swiper-slide tab-item" aria-controls="tab-panel3">
+                                                    <button role="tab" class="tab-text">영상 라이브러리</button>
                                                 </li>
                                             </ul>
                                         </div>
                                     </div>
 
-                                    <div class="panel-display design1">
-                                        <ul class="panel-list">
+                                    <div class="panel-display design1 case1">
+                                        <div class="panel-list">
                                             <!-- 보도자료 -->
-                                            <li class="panel-item">
+                                            <div id="tab-panel1" class="panel-item" role="tabpanel">
                                                 <div class="panel-wrap">
                                                     <div class="submit-form design1 case1 align2">
                                                         <div class="form-list">
@@ -585,10 +583,10 @@
                                                     </div>
                                                     <!-- //검색결과 없음 -->
                                                 </div>
-                                            </li>
+                                            </div>
                                             <!-- //보도자료 -->
                                             <!-- 소셜미디어 -->
-                                            <li class="panel-item">
+                                            <div id="tab-panel2" class="panel-item" role="tabpanel">
                                                 <div class="panel-wrap">
                                                     <div class="board-list design3 case1 type1">
                                                         <div class="board-item">
@@ -729,10 +727,10 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                            </li>
+                                            </div>
                                             <!-- //소셜미디어 -->
                                             <!-- 영상 라이브러리 -->
-                                            <li class="panel-item">
+                                            <div id="tab-panel3" class="panel-item" role="tabpanel">
                                                 <div class="panel-wrap">
                                                     <div class="data-display video-layout">
                                                         <div class="data-list">
@@ -824,9 +822,9 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                            </li>
+                                            </div>
                                             <!-- //영상 라이브러리 -->
-                                        </ul>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
