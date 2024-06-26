@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <title>SK Networks</title>
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="format-detection" content="telephone=no, date=no, address=no, email=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="keywords" content="SK Networks">
+    <!-- <link rel="shortcut icon" href="./../../assets/images/bui/favicon.ico"> -->
+    <link rel="stylesheet" type="text/css" href="../../assets/css/style.css">
+
+    <script src="./../../assets/js/jquery.js"></script>
+    <script src="./../../assets/js/gsap.min.js"></script>
+    <script src="./../../assets/js/ScrollTrigger.min.js"></script>
+    <script src="./../../assets/js/ScrollToPlugin.min.js"></script>
+    <script src="./../../assets/js/swiper-bundle.min.js"></script>
+    <script src="./../../assets/js/common.js"></script>
+    <script src="./../../assets/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            frontCommon.Html.reset();
+        });
+    </script>
+
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.32/dist/lenis.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            localAnimations_Case02();
+            Tab();
+        });
+    </script>
+</head>
+
+<body class="kr">
+
+    <div id="wrap">
+        <div class="skip">
+            <span class="blind">skip navigation</span>
+            <ul>
+                <li><a href="#naviMenu">메뉴 바로가기</a></li>
+                <li><a href="#main">본문 바로가기</a></li>
+                <li><a href="#footer">하단 정보(링크) 바로가기</a></li>
+            </ul>
+        </div>
+        <header class="light" id="header">
+            <div class="header-inner">
+                <h1 class="site-logo">
+                    <a href="javascript:void(0)" class="site-name">
+                        <span class="blind">SK 네트웍스 로고</span>
+                    </a>
+                </h1>
+                <div class="site-navi" id="naviMenu">
+                    <ul class="depth1-list">
+                        <li class="depth1-item">
+                            <a href="javascript:void(0)" class="depth1">Company</a>
+                            <div class="depth2-wrap">
+                                <ul class="depth2-list ">
+                                    <li class="depth2-item ">
+                                        <a href="javascript:void(0)" target="_self" class="depth2">기업 개요</a>
+                                    </li>
+                                    <li class="depth2-item">
+                                        <a href="javascript:void(0)" target="_self" class="depth2">CEO인사말</a>
+                                    </li>
+                                    <li class="depth2-item">
+                                        <a href="javascript:void(0)" target="_self" class="depth2">연혁</a>
+                                    </li>
+                                    <li class="depth2-item">
+                                        <a href="javascript:void(0)" target="_self" class="depth2">글로벌 네트워크</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="depth1-item">
+                            <a href="javascript:void(0)" class="depth1">Business</a>
+                            <div class="depth2-wrap">
+                                <ul class="depth2-list">
+                                    <li class="depth2-item">
+                                        <a href="javascript:void(0)" target="_self" class="depth2">사업 개요</a>
+                                    </li>
+                                    <li class="depth2-item">
+                                        <a href="javascript:void(0)" target="_self" class="depth2">글로벌 투자</a>
+                                    </li>
+                                    <li class="depth2-item">
+                                        <a href="javascript:void(0)" target="_self" class="depth2">정보통신</a>
+                                    </li>
+                                    <li class="depth2-item">
+                                        <a href="javascript:void(0)" target="_self" class="depth2">호텔앤리조트</a>
+                                    </li>
+                                    <li class="depth2-item">
+                                        <a href="javascript:void(0)" target="_self" class="depth2">SK매직</a>
+                                    </li>
+                                    <li class="depth2-item">
+                                        <a href="javascript:void(0)" target="_self" class="depth2">SK일렉링크</a>
+                                    </li>
+                                    <li class="depth2-item">
+                                        <a href="javascript:void(0)" target="_self" class="depth2">스피드메이트</a>
+                                    </li>
+                                    <li class="depth2-item">
+                                        <a href="javascript:void(0)" target="_self" class="depth2">글로벌 트레이딩</a>
+                                    </li>
+                                    <li class="depth2-item">
+                                        <a href="javascript:void(0)" target="_self" class="depth2">민팃</a>
+                                    </li>
+                                    <li class="depth2-item">
+                                        <a href="javascript:void(0)" target="_self" class="depth2">엔코아</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="depth1-item">
+                            <a href="javascript:void(0)" class="depth1">ESG</a>
+                            <div class="depth2-wrap">
+                                <ul class="depth2-list">
+                                    <li class="depth2-item">
+                                        <a href="javascript:void(0)" target="_self" class="depth2">ESG 개요</a>
+                                    </li>
+                                    <li class="depth2-item">
+                                        <a href="javascript:void(0)" target="_self" class="depth2">사회적 가치</a>
+                                        <div class="depth3-wrap">
+                                            <ul class="depth3-list">
+                                                <li class="depth3-item">
+                                                    <a href="javascript:void(0)" target="_self" class="depth3">Double Bottom Line</a>
+                                                </li>
+                                                <li class="depth3-item">
+                                                    <a href="javascript:void(0)" target="_self" class="depth3">사회적 가치 성과</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="depth2-item">
+                                        <a href="javascript:void(0)" target="_self" class="depth2">환경</a>
+                                        <div class="depth3-wrap">
+                                            <ul class="depth3-list">
+                                                <li class="depth3-item">
+                                                    <a href="javascript:void(0)" target="_self" class="depth3">환경경영</a>
+                                                </li>
+                                                <li class="depth3-item">
+                                                    <a href="javascript:void(0)" target="_self" class="depth3">기후변화</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="depth2-item">
+                                        <a href="javascript:void(0)" target="_self" class="depth2">사회</a>
+                                        <div class="depth3-wrap">
+                                            <ul class="depth3-list">
+                                                <li class="depth3-item">
+                                                    <a href="javascript:void(0)" target="_self" class="depth3">인권경영선언문</a>
+                                                </li>
+                                                <li class="depth3-item">
+                                                    <a href="javascript:void(0)" target="_self" class="depth3">구성원 행복</a>
+                                                </li>
+                                                <li class="depth3-item">
+                                                    <a href="javascript:void(0)" target="_self" class="depth3">이해관계자 행복</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="depth2-item">
+                                        <a href="javascript:void(0)" target="_self" class="depth2">거버넌스</a>
+                                        <div class="depth3-wrap">
+                                            <ul class="depth3-list">
+                                                <li class="depth3-item">
+                                                    <a href="javascript:void(0)" target="_self" class="depth3">지배구조</a>
+                                                </li>
+                                                <li class="depth3-item">
+                                                    <a href="javascript:void(0)" target="_self" class="depth3">윤리경영</a>
+                                                </li>
+                                                <li class="depth3-item">
+                                                    <a href="javascript:void(0)" target="_self" class="depth3">정보보호 및 보안</a>
+                                                </li>
+                                                <li class="depth3-item">
+                                                    <a href="javascript:void(0)" target="_self" class="depth3">자회사·손자회사 ESG관리</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="depth2-item">
+                                        <a href="javascript:void(0)" target="_self" class="depth2">자료실</a>
+                                        <div class="depth3-wrap">
+                                            <ul class="depth3-list">
+                                                <li class="depth3-item">
+                                                    <a href="javascript:void(0)" target="_self" class="depth3">보고서 및 정책</a>
+                                                </li>
+                                                <li class="depth3-item">
+                                                    <a href="javascript:void(0)" target="_self" class="depth3">수상 및 인증</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="depth1-item">
+                            <a href="javascript:void(0)" class="depth1">IR</a>
+                            <div class="depth2-wrap">
+                                <ul class="depth2-list">
+                                    <li class="depth2-item">
+                                        <a href="javascript:void(0)" target="_self" class="depth2">주식정보</a>
+                                        <div class="depth3-wrap">
+                                            <ul class="depth3-list">
+                                                <li class="depth3-item">
+                                                    <a href="javascript:void(0)" target="_self" class="depth3">주가정보</a>
+                                                </li>
+                                                <li class="depth3-item">
+                                                    <a href="javascript:void(0)" target="_self" class="depth3">주주환원</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="depth2-item">
+                                        <a href="javascript:void(0)" target="_self" class="depth2">재무정보</a>
+                                        <div class="depth3-wrap">
+                                            <ul class="depth3-list">
+                                                <li class="depth3-item">
+                                                    <a href="javascript:void(0)" target="_self" class="depth3">주요재무현황</a>
+                                                </li>
+                                                <li class="depth3-item">
+                                                    <a href="javascript:void(0)" target="_self" class="depth3">감사보고서</a>
+                                                </li>
+                                                <li class="depth3-item">
+                                                    <a href="javascript:void(0)" target="_self" class="depth3">신용등급</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="depth2-item">
+                                        <a href="javascript:void(0)" target="_self" class="depth2">IR정보</a>
+                                        <div class="depth3-wrap">
+                                            <ul class="depth3-list">
+                                                <li class="depth3-item">
+                                                    <a href="javascript:void(0)" target="_self" class="depth3">IR일정</a>
+                                                </li>
+                                                <li class="depth3-item">
+                                                    <a href="javascript:void(0)" target="_self" class="depth3">IR자료</a>
+                                                </li>
+                                                <li class="depth3-item">
+                                                    <a href="javascript:void(0)" target="_self" class="depth3">IR뉴스</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="depth1-item">
+                            <a href="javascript:void(0)" class="depth1">PR</a>
+                            <div class="depth2-wrap">
+                                <ul class="depth2-list">
+                                    <li class="depth2-item">
+                                        <a href="javascript:void(0)" target="_self" class="depth2">뉴스룸</a>
+                                    </li>
+                                    <li class="depth2-item">
+                                        <a href="javascript:void(0)" target="_self" class="depth2">브랜드</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="depth1-item">
+                            <a href="javascript:void(0)" class="depth1">Career</a>
+                            <div class="depth2-wrap">
+                                <ul class="depth2-list">
+                                    <li class="depth2-item">
+                                        <a href="javascript:void(0)" target="_self" class="depth2">기업문화</a>
+                                    </li>
+                                    <li class="depth2-item">
+                                        <a href="javascript:void(0)" target="_self" class="depth2">인사제도</a>
+                                    </li>
+                                    <li class="depth2-item">
+                                        <a href="javascript:void(0)" target="_self" class="depth2">채용정보</a>
+                                        <div class="depth3-wrap">
+                                            <ul class="depth3-list">
+                                                <li class="depth3-item">
+                                                    <a href="javascript:void(0)" target="_self" class="depth3">직무소개</a>
+                                                </li>
+                                                <li class="depth3-item">
+                                                    <a href="javascript:void(0)" target="_self" class="depth3">채용절차</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="site-util">
+                    <div class="util contact-wrap">
+                        <a href="javascript:void(0)" class="btn text design1 case2 color1 contact">
+                            <span class="btn-text">문의·제안</span>
+                        </a>
+                    </div>
+                    <div class="util lang" id="lang">
+                        <button title="언어 선택" aria-label="언어 선택" aria-haspopup="true" class="selected">
+                            <span class="select-text cur-lang">KR</span>
+                        </button>
+                        <div class="option-area">
+                            <ul class="option-list">
+                                <li class="option-item">
+                                    <a href="javascript:void(0)" class="option active">KR</a>
+                                </li>
+                                <li class="option-item">
+                                    <a href="javascript:void(0)" class="option">EN</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="site-control">
+                    <button class="btn icon case2 menu-header">
+                        <span class="btn-text blind">메뉴 열기</span>
+                    </button>
+                </div>
+            </div>
+        </header>
+        <div class="main esg info-protection" id="main">
+            <div class="main-inner">
+                <div class="local design1">
+                    <div class="local-info">
+                        <ul class="data-list breadcrumb design1 case1 dark">
+                            <li class="data-item"><span class="item-text">Home</span></li>
+                            <li class="data-item"><span class="item-text">ESG</span></li>
+
+                            <li class="data-item"><span class="item-text">거버넌스</span></li>
+
+
+                            <li class="data-item"><span class="item-text">정보 보호 및 보안</span></li>
+
+                        </ul>
+                    </div>
+                    <div class="local-head design5" data-local-animation="case-2">
+                        <div class="local-subject">
+                            <h2 class="local-name">투명경영으로<br> 미래가치를 창출합니다.</h2>
+                        </div>
+                        <div class="local-aside">
+                            <div class="local-wrap">
+                                <h3 class="local-title">정보 보호 및 보안</h3>
+                            </div>
+                        </div>
+                        <div class="local-figure">
+                            <img src="../../assets/images/esg/bg-local-head-esg-governance.jpg" alt=" ">
+                        </div>
+                        <div class="local-util">
+                            <p class="scroll-guide">Scroll Down</p>
+                        </div>
+                    </div>
+                    <div class="local-body">
+                        <div class="content-head">정보 보호 및 보안 페이지</div>
+                        <div class="content-info">
+                        </div>
+                        <div class="content-body">
+                            <div class="section design1 case2 type1 security">
+                                <div class="section-wrap">
+                                    <div class="section-head">
+                                        <div class="section-subject">
+                                            <h4 class="section-name">개인정보 보호 및 보안</h4>
+                                        </div>
+                                    </div>
+                                    <div class="section-body">
+                                        <p class="para">
+                                            SK네트웍스는 개인정보 및 IT 서비스 보안의 중요성을 깊이 인식하고, 고객을 포함한 당사의 정보를 안전하게 보호합니다. 정보보안 지침 및 가이드라인 제시, 정보보호 업무를 전문적으로 수행하는 조직의 운영, 정보보호위원회 및 CISO/CPO 실무협의체 운영, 구성원 대상 정보보호 교육 등 정보보안 관련 활동을 통해 기업 데이터의 유출 또는 도난 개인정보의 유출 또는 도난, 정보보호 관련 불만 사항이 발생하지 않도록 합니다.
+                                        </p>
+                                        <div class="data-display design1 case2 type1">
+                                            <div class="data-list">
+                                                <div class="data-item">
+                                                    <div class="data-wrap">
+                                                        <div class="data-head">
+                                                            <em class="data-subject">
+                                                                정보보호센터는 대내외 보안 위험 최소화를 위해<br class="pc-only">
+                                                                보안관리체계 및 인증체계 강화를 추진하고자 합니다.
+                                                            </em>
+                                                        </div>
+                                                        <div class="data-body layout1">
+                                                            <div class="data-figure bg-shadow-layout case1" style="min-width: 600px;">
+                                                                <img src="../../assets/images/esg/info-protection-diagram-1.svg" alt="정보보호센터 보안관리체계 및 인증체계 이미지입니다. 자세한 설명은 하단 내용을 참고하세요.">
+                                                            </div>
+                                                            <div class="blind">
+                                                                <ul>
+                                                                    <li>정보보호센터 Mission 고객 Data 및 회사/구성원의 보안 위험을 최소화함으로써 기업의 지속적 성장 지원</li>
+                                                                    <li>
+                                                                        <ul>
+                                                                            <li>2022 ~ 2023 정보보호 관리 투명성 제고</li>
+                                                                            <li>2024 Digital Asset 보안관리체계 구축</li>
+                                                                            <li>2025 Global 수준 인증체계 확보</li>
+                                                                        </ul>
+                                                                        <ul>
+                                                                            <li>정보보호 공시 실행 보안 위협 탐지 체계 고도화</li>
+                                                                            <li>Digital Tech 중심 정보보호 인증 확대 (ISMS/ISMS-P 인증 유지) * Cloud 서비스 영역</li>
+                                                                            <li>Global 정보보호 인증 확대 (ISO/IEC 27001, 27701)</li>
+                                                                        </ul>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="data-item">
+                                                    <div class="data-wrap">
+                                                        <div class="data-head">
+                                                            <em class="data-subject">정보보안 지침 및 가이드라인</em>
+                                                        </div>
+                                                        <div class="data-body">
+                                                            <div class="post-list design6 case2 type1">
+                                                                <div class="post-item">
+                                                                    <div class="post-wrap">
+                                                                        <div class="post-inform">
+                                                                            <p class="para">SK네트웍스는 데이터 3법 개정에 따라 취급하는 모든 개인정보를 안전하게 보호하고 철저히 관리하기 위하여 전사 개인정보보호/정보보호 규정을 개정하였습니다. 개정안은 구성원의 PC 사용 자율화에 따라 강화된 정보 관리 징계에 대한 내용을 반영하고 있으며, 구성원, 외부 업체 직원, 방문객 등 모든 이해관계자의 개인정보 관리 사항은 본 규정에 따라 처리하고 있습니다.</p>
+                                                                            <p class="para">또한 IT서비스/보안관리 규정 및 규칙을 통해 정보자산에 대한 훼손, 위조, 변조, 도난, 유출 등을 방지하여 소중한 정보자산을 보호합니다. 해당 규정은 SK네트웍스에서 취급하는 정보와 정보를 수집, 가공, 처리, 전송, 저장, 관리하는 정보시스템과 관련된 모든 부서 및 임직원, 협력사에 적용하여 다양한 위협으로부터 안전을 확보하고 있습니다.</p>
+                                                                        </div>
+                                                                        <div class="post-body">
+                                                                            <div class="post-figure">
+                                                                                <img src="../../assets/images/esg/info-protection-thumb-1.jpg" alt=" ">
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="section design1 case2 type1 align3 bg-1">
+                                <div class="section-wrap">
+                                    <div class="section-head">
+                                        <div class="section-subject">
+                                            <h4 class="section-name">정보보호 및 개인정보 보호 관리체계 인증 운영</h4>
+                                        </div>
+                                    </div>
+                                    <div class="section-body">
+                                        <div class="section-figure">
+                                            <img src="../../assets/images/esg/isms-logo-1.png" alt="정보보호 관리체계 인증 ISMS">
+                                            <img src="../../assets/images/esg/isms-p-logo-1.png" alt="개인정보보호 관리체계 인증 ISMS*P">
+                                        </div>
+                                        <p class="para">
+                                            SK네트웍스는 2015년부터 법적 의무 사항인 ISMS/PIMS 인증을 취득하여 유지하였으며, 2021년부터 통합된 인증 기준인 ISMS-P1) 심사를 통해 신규 인증서를 취득하였습니다. 이를 유지하기 위해 정보 자산 식별 및 위험 관리 계획을 수립하고, 취약점 진단 및 위험 평가, 위험 조치, 재발 방지 및 구성원 교육 등의 일련의 업무를 주기적으로 수행하고 있습니다. 당사의 3개년 목표는 2022 ~ 2023년 ISMS-P 인증 유지 및 2024년 인증 갱신이며, 이와 더불어 SK그룹의 표준 보안 지침인 ‘그룹 보안 Guideline‘ 이행 수준을 관계사 평균 수준 이상으로 유지하고자 합니다.
+                                        </p>
+                                        <p class="comment design1">
+                                            1) ISMS-P (Personal Information & Information Security Management System : 정보보호 및 개인정보보호 관리체계 인증)<br>
+                                            - 법적 근거 : 정보통신망법 제47조 및 개인정보보호법 제32조의2 및 해당 법률의 시행령/시행규칙/고시<br>
+                                            - 인증기관 : KISA(한국인터넷진흥원)/과학기술정보통신부 지정 기관<br>
+                                            - 통과기준 : 102개 인증항목에 대한 지속적인 관리체계 운영 여부 평가<br>
+                                            - 의무대상 기준 : 정보통신서비스 부문 전년도 매출액 100억원 이상 또는 직전 3개월간 일일평균 이용자 수 100만명 이상
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="section design4 case4 type1 organization">
+                                <div class="section-wrap">
+                                    <div class="section-head">
+                                        <div class="section-subject">
+                                            <h4 class="section-name">정보보안 관리 조직</h4>
+                                        </div>
+                                    </div>
+                                    <div class="section-body">
+                                        <div class="post-list design6 case3 type2">
+                                            <div class="post-item">
+                                                <div class="post-wrap">
+                                                    <div class="post-inform">
+                                                        <em class="head">정보보호위원회 및 CISO/CPO 실무협의체 조직</em>
+                                                        <p class="para">SK네트웍스는 정보보호 업무 외 겸직이 금지된 임원급 전담 CISO(정보보호최고책임자)를 지정하고 정보보호 업무를 전문적으로 수행하는 정보보호센터를 운영하고 있습니다.<br> 또한 분기별로 정보보호위원회, CISO/CPO* 실무협의체를 통해 정보보호 주요 정책을 논의하고 주요 Issue 사항을 공유하고 있으며 SK매직, SK렌터카 등 주요 자회사 CISO와의 정기적인 미팅 및 그룹 보안 지침을 기반으로 한 수준 진단을 통해 자회사의 보안 수준을 향상시키고 있습니다.</p>
+                                                        <p class="comment design1">
+                                                            *CISO: Chief Information Security Officer<br>
+                                                            *CPO: Chief Privacy Officer
+                                                        </p>
+                                                    </div>
+                                                    <div class="post-body">
+                                                        <div class="post-figure">
+                                                            <img src="../../assets/images/esg/info-protection-diagram-2.png" alt="정보보호위원회 및 CISO,CPO 실무협의체 조직 이미지입니다. 자세한 설명은 하단 내용을 참고하세요." class="pc-only">
+                                                            <img src="../../assets/images/esg/info-protection-diagram-2-mo.png" alt="정보보호위원회 및 CISO,CPO 실무협의체 조직 이미지입니다. 자세한 설명은 하단 내용을 참고하세요." class="mo-only">
+                                                            <div class="blind">
+                                                                <ul>
+                                                                    <li>
+                                                                        <ul>
+                                                                            <li>정보보호위원회</li>
+                                                                            <li>주요 임원 의결 기구 : CSO*</li>
+                                                                        </ul>
+                                                                        <ul>
+                                                                            <li>CISO/CPO 실무협의체</li>
+                                                                            <li>실무협의체 위원장 : CISO</li>
+                                                                        </ul>
+                                                                    </li>
+                                                                    <li>
+                                                                        <ul>
+                                                                            <li>CISO/CPO 실무협의체</li>
+                                                                            <li>
+                                                                                <ul>
+                                                                                    <li>정보보호센터</li>
+                                                                                    <li>정보보안 책임자</li>
+                                                                                    <li>정보보안 담당자</li>
+                                                                                    <li>10개 보안 조직</li>
+                                                                                    <li>사업부문/자회사</li>
+                                                                                </ul>
+                                                                            </li>
+                                                                        </ul>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="section design1 case4 type7 response">
+                                <div class="section-wrap">
+                                    <div class="section-head">
+                                        <div class="section-subject">
+                                            <h4 class="section-name">보안사고 대응</h4>
+                                        </div>
+                                    </div>
+                                    <div class="section-body">
+                                        <div class="data-display design1 case2 type1">
+                                            <div class="data-list">
+                                                <div class="data-item">
+                                                    <div class="data-wrap">
+                                                        <div class="data-head">
+                                                            <em class="data-subject">개인정보사고 대응 절차</em>
+                                                        </div>
+                                                        <div class="data-body">
+                                                            <ul class="board-list design16 case1 type1">
+                                                                <li class="board-item">
+                                                                    <div class="board-body">
+                                                                        <p class="para">사고 발생 사실 통보*</p>
+                                                                    </div>
+                                                                </li>
+                                                                <li class="board-item">
+                                                                    <div class="board-body">
+                                                                        <p class="para">홈페이지에 사고 관련 정보<br>
+                                                                            7일 이상 게제*<br> 24시간 내 정보주체에 통지 및 전문기관에 신고</p>
+                                                                    </div>
+                                                                </li>
+                                                                <li class="board-item">
+                                                                    <div class="board-body">
+                                                                        <p class="para">사고 종결 후 1개월 내<br> 사고에 대한 사후 평가 및<br> 재발방지 대책 수립</p>
+                                                                    </div>
+                                                                </li>
+                                                                <li class="board-item">
+                                                                    <div class="board-body">
+                                                                        <p class="para">모의훈련 실시 및 결과 보고</p>
+                                                                    </div>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <p class="para">
+                                            SK네트웍스는 보안 사고에 신속하게 대응하기 위하여 개인 정보 사고대응 Guideline 및 침해 사고 대응 규칙을 준수하고 있습니다. 사고 발견자는 즉시 담당자에게 보고해야 하며, 담당자는 사고의 심각성에 따라 조치합니다. 이후 사고 원인과 결과를 파악하여 재발 방지 조치를 시행하고, 위규자의 고의 여부, 회사의 손해 등을 고려하여 징계를 실시하고 있습니다.
+                                        </p>
+                                        <p class="comment design1">* 보고 절차: 사고 인지자→상위 팀장 및 전사 개인정보 총괄부서 담당자→상위 팀장 및 전사 리스크관리 관련 부서 담당자→CPO 및 사내 유관부서 팀장/임원→CEO 및 지주회사 담당임원</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="section design1 case2 type1">
+                                <div class="section-wrap">
+                                    <div class="section-head">
+                                        <div class="section-subject">
+                                            <h4 class="section-name">정보보호 및 개인정보보호 위반 방지</h4>
+                                        </div>
+                                    </div>
+                                    <div class="section-body">
+                                        <p class="para">SK네트웍스는 고객 개인정보의 중요성을 인식하며 안전한 관리를 위해 철저한 보호활동을 이행합니다. 자회사를 포함하여 모든 업무처리 과정에서 개인정보가 포함될 경우, 개인정보 보호정책이 적용됨을 명시하며 개인정보 이용 시 그 목적과 사유를 등록하여 보호하고 있습니다.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="section design1 case2 type1">
+                                <div class="section-wrap">
+                                    <div class="section-head">
+                                        <div class="section-subject">
+                                            <h4 class="section-name">정보보안 교육</h4>
+                                        </div>
+                                    </div>
+                                    <div class="section-body">
+                                        <p class="para">SK네트웍스는 모든 구성원이 정보보안 관련 규정을 인식할 수 있도록 공표하고 있으며, 매년 구성원을 대상으로 정보보안 교육을 시행합니다. 2020년부터 매년 정보보안 교육을 사내 교육 플랫폼 ‘mySUNI’에 연계하고 온라인 교육을 통해 교육 내용을 공유하고 있습니다. 이를 통해 오프라인으로 교육을 받지 못한 구성원들이 온라인으로 교육 자료를 확인할 수 있도록 하여 개인 정보 보호의 중요성 및 보안체계를 내재화하였습니다. 또한 워커힐 임직원에게도 개인정보보호의 중요성, 관련 법규, 개인정보 수집·이용·제공 등의 내용을 교육하여 개인정보보호 관련 의무 준수를 촉진하고 정보보안 리스크를 사전에 방지하고 있습니다.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+            document.addEventListener("DOMContentLoaded", () => {
+                const familySite = document.querySelector(".family-site");
+                const btnFamily = familySite.querySelector(".btn-family");
+                const siteArea = familySite.querySelector(".site-area");
+
+                btnFamily.addEventListener("click", function() {
+                    familySite.classList.contains("active") ? familySite.classList.remove("active") : familySite.classList.add("active");
+                })
+            })
+        </script>
+        <!-- page-foot -->
+        <footer id="footer">
+            <div class="footer-inner">
+                <div class="footer-head">
+                    <a href="#" class="footer-subject"><span class="footer-name blind">SK networks</span></a>
+                </div>
+                <div class="footer-body">
+                    <div class="section policy">
+                        <div class="section-wrap">
+                            <div class="section-head blind">운영 정책</div>
+                            <div class="section-body">
+                                <ul class="navi-list">
+                                    <li class="navi-item"><a href="#" class="navi-text">개인정보처리방침</a></li>
+                                    <li class="navi-item"><a href="#" class="navi-text">사이트맵</a></li>
+                                    <li class="navi-item"><a href="#" class="navi-text">제보하기</a></li>
+                                </ul>
+                                <ul class="info-list">
+                                    <li class="info-item ncsi"><span class="info-text blind">NCSI</span></li>
+                                    <li class="info-item isms"><a href="#" class="info-text blind" title="정보보호 관리체계(ISMS) 인증 팝업창">정보보호 관리체계 ISMS 인증 마크</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="section info">
+                        <div class="section-wrap">
+                            <div class="section-head blind">기업정보</div>
+                            <div class="section-body">
+                                <ul class="data-list">
+                                    <li class="data-item"><span class="data-text">경기도 수원시 팔달구 매산로52번길 4(매산로2가)</span></li>
+                                    <li class="data-item"><span class="data-text">Tel : 070-7800-2114</span></li>
+                                    <li class="data-item"><span class="data-text">Copyright ⓒ 2024 by SK Networks Co. Ltd. All Rights Reserved</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 패밀리 사이트 리스트 수급 후 작업예정 -->
+                    <div class="section family-site">
+                        <button title="패밀리 사이트" aria-label="패밀리 사이트" aria-haspopup="true" class="btn-family">
+                            <span class="btn-text">패밀리 사이트</span>
+                        </button>
+                        <div class="site-area">
+                            <ul class="site-list">
+                                <li class="site-item">
+                                    <a href="https://www.walkerhill.com/grandwalkerhillseoul/" target="_blank" class="site">그랜드 워커힐 서울</a>
+                                </li>
+                                <li class="site-item">
+                                    <a href="https://www.walkerhill.com/vistawalkerhillseoul/" target="_blank" class="site">비스타 워커힐 서울</a>
+                                </li>
+                                <li class="site-item">
+                                    <a href="https://www.walkerhill.com/darakhyu/t1/kr/?_ga=2.208696274.1937658122.1716172891-198197358.1712136793" target="_blank" class="site">다락휴</a>
+                                </li>
+                                <li class="site-item">
+                                    <a href="https://www.sknservice.com/index.do" target="_blank" class="site">SK네트웍스 서비스</a>
+                                </li>
+                                <li class="site-item">
+                                    <a href="https://www.skmagic.com/?_ga=2.199319278.1937658122.1716172891-198197358.1712136793" target="_blank" class="site">SK매직</a>
+                                </li>
+                                <li class="site-item">
+                                    <a href="https://skelectlink.co.kr/" target="_blank" class="site">SK일렉링크</a>
+                                </li>
+                                <li class="site-item">
+                                    <a href="https://www.mintit.co.kr/" target="_blank" class="site">민팃</a>
+                                </li>
+                                <li class="site-item">
+                                    <a href="https://www.tire-pick.com/" target="_blank" class="site">타이어픽</a>
+                                </li>
+                                <li class="site-item">
+                                    <a href="https://www.en-core.com/" target="_blank" class="site">엔코아</a>
+                                </li>
+                                <li class="site-item">
+                                    <a href="https://hico-capital.com/" target="_blank" class="site">하이코캐피탈</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- //page-foot -->
+    </div>
+</body>
+
+</html>

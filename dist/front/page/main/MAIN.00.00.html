@@ -227,7 +227,6 @@
 
             function initPressSwiper() {
                 if (_width >= 1024 && pressSwiper == undefined) {
-                    console.log("실행");
                     pressSwiper = new Swiper(".press-swiper", {
                         slidesPerView: "auto",
                         freeMode: true,
@@ -236,7 +235,6 @@
                         }
                     });
                 } else if (_width < 1024 && pressSwiper != undefined) {
-                    console.log("111");
                     pressSwiper.destroy();
                     pressSwiper = undefined;
                 }
@@ -256,7 +254,7 @@
                 freeMode: true,
             });
 
-            new Swiper(".section.media .swiper", {
+            new Swiper(".section.media .sns-media .swiper", {
                 slidesPerView: "auto",
                 freeMode: true,
             });
