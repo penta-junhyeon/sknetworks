@@ -142,6 +142,7 @@
             const io6 = new IntersectionObserver(entries => {
                 entries.forEach(entry => {
                     if (entry.intersectionRatio > 0.1) {
+                        press.style.top = window.innerHeight - press.offsetHeight + "px"
                         media.classList.add("active1")
                     } else {
                         media.classList.remove("active1")
