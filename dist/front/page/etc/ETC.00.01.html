@@ -29,6 +29,41 @@
     <script>
         document.addEventListener("DOMContentLoaded", () => {
             input();
+
+            const inquiryForm = document.querySelector(".inquiry-form")
+            const radioLabel = inquiryForm.querySelectorAll(".data-item.inquiry-sort .radio-item label")
+
+            radioLabel.forEach(radioLabel => {
+                radioLabel.addEventListener("click", () => {
+                    const idValue = radioLabel.querySelector("input").getAttribute("id")
+
+                    const businessphForm = inquiryForm.querySelector(".business-ph .form")
+                    const businessphInput = inquiryForm.querySelector(".business-ph .form .input-elem")
+
+                    const agree2 = document.getElementById("agree2")
+                    const selectInfoForm = agree2.closest(".form")
+                    const selectInfoRadio = selectInfoForm.querySelectorAll("input")
+                    if (idValue == "proposal") {
+                        businessphForm.classList.add("disabled")
+                        businessphInput.setAttribute("disabled", "")
+                        businessphInput.value = "";
+                        businessphForm.querySelector(".remove").style.display = "none";
+
+                        selectInfoForm.classList.add("disabled")
+                        selectInfoRadio.forEach(selectInfoRadio => {
+                            selectInfoRadio.setAttribute("disabled", "");
+                        });
+                    } else if (idValue == "inquiry") {
+                        businessphForm.classList.remove("disabled")
+                        businessphInput.removeAttribute("disabled")
+
+                        selectInfoForm.classList.remove("disabled")
+                        selectInfoRadio.forEach(selectInfoRadio => {
+                            selectInfoRadio.removeAttribute("disabled");
+                        });
+                    }
+                })
+            });
         });
     </script>
 </head>
@@ -359,6 +394,11 @@
                                                                 </button>
                                                             </div>
                                                         </div>
+
+                                                        <!-- 미 입력 후 문의하기 버튼 클릭 시 노출 -->
+                                                        <div class="form-text error">
+                                                            <p class="comment design1">* 이름을 입력해주세요.</p>
+                                                        </div>
                                                     </div>
                                                 </li>
                                                 <li class="data-item email">
@@ -368,50 +408,57 @@
                                                         </strong>
                                                     </div>
                                                     <div class="data-body">
-                                                        <div class="form input design1 case1 type1 email1 pc-only" style="width: 37.3rem;">
-                                                            <label for="email1" class="blind">이메일 입력</label>
-                                                            <input id="email1" class="input-elem" type="text" placeholder="내용을 입력해 주세요.">
-                                                            <div class="input-icon">
-                                                                <button class="btn icon case3 remove">
-                                                                    <span class="btn-text blind">삭제</span>
-                                                                </button>
+                                                        <div class="form-bundle">
+                                                            <div class="form input design1 case1 type1 email1 pc-only" style="width: 37.3rem;">
+                                                                <label for="email1" class="blind">이메일 입력</label>
+                                                                <input id="email1" class="input-elem" type="text" placeholder="내용을 입력해 주세요.">
+                                                                <div class="input-icon">
+                                                                    <button class="btn icon case3 remove">
+                                                                        <span class="btn-text blind">삭제</span>
+                                                                    </button>
+                                                                </div>
+                                                            </div>
+                                                            <div class="form input design1 case1 type1 email1 mo-only">
+                                                                <label for="email-mo" class="blind mo-only">이메일 입력</label>
+                                                                <input id="email-mo" class="input-elem mo-only" type="text" placeholder="이메일 전체입력">
+                                                                <div class="input-icon">
+                                                                    <button class="btn icon case3 remove">
+                                                                        <span class="btn-text blind">삭제</span>
+                                                                    </button>
+                                                                </div>
+                                                            </div>
+                                                            <span class="sign pc-only">@</span>
+                                                            <div class="form input design1 case1 type1 email2 pc-only" style="width: 18.4rem;">
+                                                                <label for="email2" class="blind">이메일 입력</label>
+                                                                <input id="email2" class="input-elem" type="text" readonly>
+                                                                <div class="input-icon">
+                                                                    <button class="btn icon case3 remove">
+                                                                        <span class="btn-text blind">삭제</span>
+                                                                    </button>
+                                                                </div>
+                                                            </div>
+                                                            <div class="form select design1 case1 type1 pc-only" style="width: 18.3rem;">
+                                                                <label for="temp" class="blind">Label</label>
+                                                                <select name="name" id="temp">
+                                                                    <option value="option1">선택하세요.</option>
+                                                                    <option value="option2">naver.com</option>
+                                                                    <option value="option3">daum.net</option>
+                                                                    <option value="option4">nate.com</option>
+                                                                    <option value="option5">hotmail.com</option>
+                                                                    <option value="option5">yahoo.com</option>
+                                                                    <option value="option5">empas.com</option>
+                                                                    <option value="option5">korea.com</option>
+                                                                    <option value="option5">dreamwiz.com</option>
+                                                                    <option value="option5">gmail.com</option>
+                                                                    <option value="option5">직접입력</option>
+                                                                </select>
+                                                                <div class="arrow"><span class="blind">닫힘</span></div>
                                                             </div>
                                                         </div>
-                                                        <div class="form input design1 case1 type1 email1 mo-only">
-                                                            <label for="email-mo" class="blind mo-only">이메일 입력</label>
-                                                            <input id="email-mo" class="input-elem mo-only" type="text" placeholder="이메일 전체입력">
-                                                            <div class="input-icon">
-                                                                <button class="btn icon case3 remove">
-                                                                    <span class="btn-text blind">삭제</span>
-                                                                </button>
-                                                            </div>
-                                                        </div>
-                                                        <span class="sign pc-only">@</span>
-                                                        <div class="form input design1 case1 type1 email2 pc-only" style="width: 18.4rem;">
-                                                            <label for="email2" class="blind">이메일 입력</label>
-                                                            <input id="email2" class="input-elem" type="text" readonly>
-                                                            <div class="input-icon">
-                                                                <button class="btn icon case3 remove">
-                                                                    <span class="btn-text blind">삭제</span>
-                                                                </button>
-                                                            </div>
-                                                        </div>
-                                                        <div class="form select design1 case1 type1 pc-only" style="width: 18.3rem;">
-                                                            <label for="temp" class="blind">Label</label>
-                                                            <select name="name" id="temp">
-                                                                <option value="option1">선택하세요.</option>
-                                                                <option value="option2">naver.com</option>
-                                                                <option value="option3">daum.net</option>
-                                                                <option value="option4">nate.com</option>
-                                                                <option value="option5">hotmail.com</option>
-                                                                <option value="option5">yahoo.com</option>
-                                                                <option value="option5">empas.com</option>
-                                                                <option value="option5">korea.com</option>
-                                                                <option value="option5">dreamwiz.com</option>
-                                                                <option value="option5">gmail.com</option>
-                                                                <option value="option5">직접입력</option>
-                                                            </select>
-                                                            <div class="arrow"><span class="blind">닫힘</span></div>
+
+                                                        <!-- 미 입력 후 문의하기 버튼 클릭 시 노출 -->
+                                                        <div class="form-text error">
+                                                            <p class="comment design1">* 이메일을 입력해주세요.</p>
                                                         </div>
                                                     </div>
                                                 </li>
@@ -439,9 +486,11 @@
                                                             </ul>
                                                         </div>
                                                         <p class="para">SK네트웍스 브랜드에 관한 문의는 각 브랜드의 고객문의 페이지를 이용하시면, 보다 빠른 처리가 가능합니다.</p>
-                                                        <a class="btn design3 case2 type3 color4 ar-icon-arrow-right2" href="#">
-                                                            <span class="btn-text">브랜드별 고객문의 바로가기</span>
-                                                        </a>
+                                                        <div class="btn-display">
+                                                            <a class="btn design3 case2 type3 color4 ar-icon-arrow-right2" href="#">
+                                                                <span class="btn-text">브랜드별 고객문의 바로가기</span>
+                                                            </a>
+                                                        </div>
                                                     </div>
                                                 </li>
                                                 <li class="data-item business-ph">
@@ -484,6 +533,11 @@
                                                                 </button>
                                                             </div>
                                                         </div>
+
+                                                        <!-- 미 입력 후 문의하기 버튼 클릭 시 노출 -->
+                                                        <div class="form-text error">
+                                                            <p class="comment design1">* 제목을 입력해주세요.</p>
+                                                        </div>
                                                     </div>
                                                 </li>
                                                 <li class="data-item inquiry-contents">
@@ -493,9 +547,14 @@
                                                         </strong>
                                                     </div>
                                                     <div class="data-body">
-                                                        <div class="textArea">
+                                                        <div class="form textArea">
                                                             <label for="inquiry-contents"></label>
                                                             <textarea name="contents" id="inquiry-contents" cols="20" rows="4" placeholder="문의내용을 입력해 주세요."></textarea>
+                                                        </div>
+
+                                                        <!-- 미 입력 후 문의하기 버튼 클릭 시 노출 -->
+                                                        <div class="form-text error">
+                                                            <p class="comment design1">* 문의내용을 입력해주세요.</p>
                                                         </div>
                                                     </div>
                                                 </li>
