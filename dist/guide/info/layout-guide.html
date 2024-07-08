@@ -2,33 +2,26 @@
 <html lang="ko">
 
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
-    <meta name="format-detection" content="telephone=no, date=no, address=no, email=no" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="format-detection" content="telephone=no, date=no, address=no, email=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>SK Networks Markup Guide</title>
-    <!-- <link rel="shortcut icon" href="./../../assets/images/bui/favicon.ico" /> -->
-    <link rel="stylesheet" type="text/css" href="../../assets/css/style.css" />
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/styles/github.min.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <!-- <link rel="shortcut icon" href="./../../assets/images/bui/favicon.ico"> -->
+    <link rel="stylesheet" type="text/css" href="../../assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/styles/github.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/languages/bash.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/ScrollToPlugin.min.js"></script>
-    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
-
+    <script src="../../assets/js/gsap.min.js"></script>
+    <script src="../../assets/js/ScrollTrigger.min.js"></script>
+    <script src="../../assets/js/ScrollToPlugin.min.js"></script>
+    <script src="../../assets/js/swiper-bundle.min.js"></script>
     <script>
         hljs.initHighlightingOnLoad();
     </script>
     <script src="./../../assets/js/guide.js"></script>
+    <script src="./../../assets/js/bootstrap.bundle.min.js"></script>
 
-
-    <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            anchorItemActive()
-        });
-    </script>
 </head>
 
 <body>
@@ -82,8 +75,8 @@
                     <!--section-->
                     <div class="section toc" id="tableOfContent">
                         <div class="section-head">
-                            <h2 class="section-title">
-                                <span class="section-name">UI Components For<br class="moOnly" /> SK Networks</span>
+                            <h2 class="section-subject">
+                                <span class="section-name">UI Components For<br class="mo-only" /> SK Networks</span>
                                 <p class="para">HERE'S WHAT TEAM PIX HAS CREATED.</p>
                             </h2>
                         </div>
@@ -97,19 +90,22 @@
                                 </li>
                                 <li class="gnb-item"><span class="gnb-name">Components</span>
                                     <ul class="lnb-list">
-                                        <li class="lnb-item"><a class="lnb-name" href="./../components/color.html">Color</a></li>
-                                        <li class="lnb-item"><a class="lnb-name" href="./../components/font.html">Font</a></li>
-                                        <li class="lnb-item"><a class="lnb-name" href="./../components/icon.html">Icon</a></li>
-                                        <li class="lnb-item"><a class="lnb-name" href="./../components/button.html">Button</a></li>
-                                        <li class="lnb-item"><a class="lnb-name" href="./../components/mark.html">Mark</a></li>
-                                        <li class="lnb-item"><a class="lnb-name" href="./../components/form.html">Form</a></li>
-                                        <li class="lnb-item"><a class="lnb-name" href="./../components/table.html">Table</a></li>
-                                        <li class="lnb-item"><a class="lnb-name" href="./../components/list.html">List</a></li>
+                                        <li class="lnb-item"><a class="lnb-name" href="./../components/accordion.html">Accordion</a></li>
+                                        <li class="lnb-item"><a class="lnb-name" href="./../components/banner.html">Banner</a></li>
                                         <li class="lnb-item"><a class="lnb-name" href="./../components/board.html">Board</a></li>
-                                        <li class="lnb-item"><a class="lnb-name" href="./../components/goods.html">Goods</a></li>
+                                        <li class="lnb-item"><a class="lnb-name" href="./../components/button.html">Button</a></li>
+                                        <li class="lnb-item"><a class="lnb-name" href="./../components/chart.html">Chart</a></li>
+                                        <li class="lnb-item"><a class="lnb-name" href="./../components/color.html">Color</a></li>
                                         <li class="lnb-item"><a class="lnb-name" href="./../components/fieldset.html">Fieldset</a></li>
-                                        <li class="lnb-item"><a class="lnb-name" href="./../components/tab.html">Tab</a></li>
+                                        <li class="lnb-item"><a class="lnb-name" href="./../components/font.html">Font</a></li>
+                                        <li class="lnb-item"><a class="lnb-name" href="./../components/form.html">Form</a></li>
+                                        <li class="lnb-item"><a class="lnb-name" href="./../components/icon.html">Icon</a></li>
+                                        <li class="lnb-item"><a class="lnb-name" href="./../components/list.html">List</a></li>
+                                        <li class="lnb-item"><a class="lnb-name" href="./../components/mark.html">Mark</a></li>
                                         <li class="lnb-item"><a class="lnb-name" href="./../components/post.html">Post</a></li>
+                                        <li class="lnb-item"><a class="lnb-name" href="./../components/swiper.html">Swiper</a></li>
+                                        <li class="lnb-item"><a class="lnb-name" href="./../components/tab.html">Tab</a></li>
+                                        <li class="lnb-item"><a class="lnb-name" href="./../components/table.html">Table</a></li>
                                         <li class="lnb-item"><a class="lnb-name" href="./../components/tooltip.html">Tooltip</a></li>
                                     </ul>
                                 </li>
@@ -142,13 +138,7 @@
                 <!-- local-body -->
                 <div class="local-body">
                     <!-- section -->
-                    <div class="section wai-guide">
-                        <!-- <div class="section-head">
-								<h4 class="section-subject">
-									<span class="section-name">html 기본 구조</span>
-								</h4>
-								<p class="section-desc">가이드라인을 준수하여 일관된 방식으로 작업할 수 있도록 합니다.</p>
-							</div> -->
+                    <div class="section layout-guide">
                         <div class="section-body">
                             <!-- subsection -->
                             <div class="subsection">
@@ -239,7 +229,7 @@
             &lt;ul class=&quot;depth1-list&quot;&gt;
                 &lt;li class=&quot;depth1-item&quot;&gt;
                     &lt;a href="" class=&quot;depth1&quot;&gt;&lt;/a&gt;
-                    &lt;div href="" clss=&quot;depth2-body&quot;&gt;
+                    &lt;div href="" clss=&quot;depth2-wrap&quot;&gt;
                         &lt;ul href="" clss=&quot;depth2-list&quot;&gt;
                             &lt;li href="" clss=&quot;depth2-item&quot;&gt;...&lt;/li&gt;
                                             .
@@ -280,39 +270,53 @@
                                             <!-- highlight-js -->
                                             <pre class="highlight-js"><code class="html">&lt;div class=&quot;main&quot; id=&quot;main&quot;&gt;
     &lt;div class=&quot;main-inner&quot;&gt;
-        &lt;div class=&quot;local-head&quot;&gt;
-            &lt;div class=&quot;local-title&quot;&gt;
-                &lt;h2 class=&quot;local-name&quot;&gt;&lt;/h2&gt;
-            &lt;/div&gt;
-        &lt;/div&gt;
-        &lt;div class=&quot;local-body&quot;&gt;
-            &lt;div class=&quot;content-head&quot;&gt;
-                &lt;div class=&quot;content-title&quot;&gt;
-                    &lt;h3 class=&quot;content-name&quot;&gt; &lt;/h3&gt;
+        &lt;div class=&quot;local&quot;&gt;
+            &lt;div class=&quot;local-head&quot;&gt;
+                &lt;div class=&quot;local-subject&quot;&gt;
+                    &lt;h2 class=&quot;local-name&quot;&gt;&lt;/h2&gt;
                 &lt;/div&gt;
             &lt;/div&gt;
-            &lt;div class=&quot;content-info&quot;&gt;
-            &lt;/div&gt;
-            &lt;div class=&quot;content-body&quot;&gt;
-                &lt;div class=&quot;section lorem-ipsum1&quot;&gt; &lt;!-- &#xACE0;&#xC720; &#xD074;&#xB798;&#xC2A4; &#xCD94;&#xAC00; &#xC0AC;&#xC6A9; --&gt;
-                    &lt;div class=&quot;section-head&quot;&gt;
-                        &lt;div class=&quot;section-title&quot;&gt;
-                            &lt;h4 class=&quot;section-name&quot;&gt;...&lt;/h4&gt;
-                            &lt;span class=&quot;section-summary&quot;&gt;...&lt;/span&gt;
-                        &lt;/div&gt;
-                    &lt;/div&gt;
-                    &lt;div class=&quot;section-body&quot;&gt;
-                        &lt;!-- &#xCEF4;&#xD3EC;&#xB10C;&#xD2B8; &#xC0BD;&#xC785; --&gt;
-                    &lt;/div&gt;
+            &lt;div class=&quot;local-body&quot;&gt;
+                &lt;div class=&quot;content-head&quot;&gt;...&lt;/div&gt; &lt;!-- 페이지 heading 텍스트 : blind 처리 --&gt;
+                &lt;div class=&quot;content-info&quot;&gt;
                 &lt;/div&gt;
-                &lt;div class=&quot;section lorem-ipsum1&quot;&gt; &lt;!-- &#xACE0;&#xC720; &#xD074;&#xB798;&#xC2A4; &#xCD94;&#xAC00; &#xC0AC;&#xC6A9; --&gt;
-                    &lt;div class=&quot;section-head&quot;&gt;
-                        &lt;div class=&quot;section-title&quot;&gt;
-                            &lt;h4 class=&quot;section-name&quot;&gt;&lt;/h4&gt;
+                &lt;div class=&quot;content-body&quot;&gt;
+                    &lt;div class=&quot;section design1 case1 type1&quot;&gt; &lt;!-- 고유 클래스 추가 사용 --&gt;
+                        &lt;div class=&quot;section-wrap&quot;&gt;
+                            &lt;div class=&quot;section-head&quot;&gt;
+                                &lt;div class=&quot;section-subject&quot;&gt;
+                                    &lt;h4 class=&quot;section-name&quot;&gt;...&lt;/h4&gt;
+                                    &lt;span class=&quot;section-summary&quot;&gt;...&lt;/span&gt;
+                                &lt;/div&gt;
+                            &lt;/div&gt;
+                            &lt;div class=&quot;section-body&quot;&gt;
+                                &lt;!-- 컴포넌트 삽입 --&gt;
+                            &lt;/div&gt;
                         &lt;/div&gt;
                     &lt;/div&gt;
-                    &lt;div class=&quot;section-body&quot;&gt;
-                        &lt;!-- &#xCEF4;&#xD3EC;&#xB10C;&#xD2B8; &#xC0BD;&#xC785; --&gt;
+                    &lt;div class=&quot;section design2&quot;&gt; &lt;!-- section-head와 section-body가 flex 되는 경우 --&gt;
+                        &lt;div class=&quot;section-wrap&quot;&gt;
+                            &lt;div class=&quot;section-head&quot;&gt;
+                                &lt;div class=&quot;section-subject&quot;&gt;
+                                    &lt;h4 class=&quot;section-name&quot;&gt;...&lt;/h4&gt;
+                                    &lt;span class=&quot;section-summary&quot;&gt;...&lt;/span&gt;
+                                &lt;/div&gt;
+                            &lt;/div&gt;
+                            &lt;div class=&quot;section-body&quot;&gt;
+                                &lt;!-- 컴포넌트 삽입 --&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;section design3 case1 type1&quot;&gt; &lt;!-- section-name과 util이 flex 되는 경우 --&gt;
+                        &lt;div class=&quot;section-wrap&quot;&gt;
+                            &lt;div class=&quot;section-info&quot;&gt; 
+                                &lt;h4 class=&quot;section-name&quot;&gt;...&lt;/h4&gt;
+                                &lt;div class=&quot;submit-form&quot;&gt;...&lt;/div&gt;
+                            &lt;/div&gt;
+                            &lt;div class=&quot;section-body&quot;&gt;
+                                &lt;!-- 컴포넌트 삽입 --&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
                     &lt;/div&gt;
                 &lt;/div&gt;
             &lt;/div&gt;
@@ -343,14 +347,16 @@
         &lt;div class=&quot;footer-body&quot;&gt;
             &lt;div class=&quot;section service&quot;&gt;&lt;/div&gt;
             &lt;div class=&quot;section info&quot;&gt;
-                &lt;div class=&quot;section-head&quot;&gt;&lt;/div&gt;
-                &lt;div class=&quot;section-body&quot;&gt;
-                    &lt;ul class=&quot;info-list&quot;&gt;
-                        &lt;li class=&quot;info-item&quot;&gt;&#xD68C;&#xC0AC;&#xC18C;&#xAC1C;&lt;/li&gt;
-                        &lt;li class=&quot;info-item&quot;&gt;&#xC0AC;&#xC6A9;&#xAD8C; &#xC57D;&#xAD00;&lt;/li&gt;
-                        &lt;li class=&quot;info-item&quot;&gt;&#xAC1C;&#xC778;&#xC815;&#xBCF4;&#xCC98;&#xB9AC;&#xBC29;&#xCE68;&lt;/li&gt;
-                        &lt;li class=&quot;info-item&quot;&gt;&#xC774;&#xC6A9;&#xC57D;&#xAD00;&lt;/li&gt;
-                    &lt;/ul&gt;
+                &lt;div class=&quot;section wrap&quot;&gt;
+                    &lt;div class=&quot;section-head&quot;&gt;&lt;/div&gt;
+                    &lt;div class=&quot;section-body&quot;&gt;
+                        &lt;ul class=&quot;info-list&quot;&gt;
+                            &lt;li class=&quot;info-item&quot;&gt;&#xD68C;&#xC0AC;&#xC18C;&#xAC1C;&lt;/li&gt;
+                            &lt;li class=&quot;info-item&quot;&gt;&#xC0AC;&#xC6A9;&#xAD8C; &#xC57D;&#xAD00;&lt;/li&gt;
+                            &lt;li class=&quot;info-item&quot;&gt;&#xAC1C;&#xC778;&#xC815;&#xBCF4;&#xCC98;&#xB9AC;&#xBC29;&#xCE68;&lt;/li&gt;
+                            &lt;li class=&quot;info-item&quot;&gt;&#xC774;&#xC6A9;&#xC57D;&#xAD00;&lt;/li&gt;
+                        &lt;/ul&gt;
+                    &lt;/div&gt;
                 &lt;/div&gt;
             &lt;/div&gt;
             &lt;div class=&quot;section company&quot;&gt;&lt;/div&gt;
@@ -365,6 +371,200 @@
                                 </div>
                             </div>
                             <!-- //subsection -->
+                        </div>
+                    </div>
+                    <!-- //section -->
+                    <!-- section -->
+                    <div class="section layout-guide">
+                        <div class="section-body">
+                            <div class="subsection">
+                                <div class="content-body">
+                                    <!-- common section -->
+                                    <div class="section design1 case1 type1">
+                                        <div class="section-wrap">
+                                            <div class="section-head">
+                                                <div class="section-subject">
+                                                    <h4 class="section-name">타이틀 T3-32-bd</h4>
+                                                    <p class="section-summary">summary 내용을 입력하세요.</p>
+                                                </div>
+                                            </div>
+                                            <div class="section-body" style="background-color: #ddd; padding: 15px; width: 70%; border-radius: 10px;">
+                                                <p class="para">section body</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- common section -->
+                                </div>
+                            </div>
+                            <div class="subsection">
+                                <div class="content-body">
+                                    <!-- common section -->
+                                    <div class="section design1 case1 type1 align3">
+                                        <div class="section-wrap">
+                                            <div class="section-head">
+                                                <div class="section-subject">
+                                                    <h4 class="section-name">타이틀 T3-32-bd</h4>
+                                                    <p class="section-summary">summary 내용을 입력하세요.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- common section -->
+                                </div>
+                            </div>
+                            <div class="subsection line">
+                                <div class="content-body">
+                                    <!-- common section -->
+                                    <div class="section design1 case2 type1">
+                                        <div class="section-wrap">
+                                            <div class="section-head">
+                                                <div class="section-subject">
+                                                    <h4 class="section-name">타이틀 T3-32-bd</h4>
+                                                </div>
+                                            </div>
+                                            <div class="section-body">
+                                                <p class="para">para 내용을 입력하세요. para 내용을 입력하세요. para 내용을 입력하세요.</p>
+                                                <p class="para">para 내용을 입력하세요. para 내용을 입력하세요. para 내용을 입력하세요.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- common section -->
+                                </div>
+                            </div>
+                            <div class="subsection line">
+                                <div class="content-body">
+                                    <!-- common section -->
+                                    <div class="section design1 case3 type1">
+                                        <div class="section-wrap">
+                                            <div class="section-head">
+                                                <div class="section-subject">
+                                                    <h4 class="section-name">타이틀 T3-32-bd</h4>
+                                                </div>
+                                            </div>
+                                            <div class="section-body" style="background-color: #ddd; padding: 15px; width: 70%; border-radius: 10px;">
+                                                <p class="para">section body</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- common section -->
+                                </div>
+                            </div>
+                            <div class="subsection line">
+                                <div class="content-body">
+                                    <!-- common section -->
+                                    <div class="section design1 case4 type1">
+                                        <div class="section-wrap">
+                                            <div class="section-head">
+                                                <div class="section-subject">
+                                                    <h4 class="section-name">타이틀 T3-32-bd</h4>
+                                                </div>
+                                            </div>
+                                            <div class="section-body" style="background-color: #ddd; padding: 15px; width: 70%; border-radius: 10px;">
+                                                <p class="para">section body</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- common section -->
+                                </div>
+                            </div>
+                            <div class="subsection line">
+                                <div class="content-body">
+                                    <!-- common section -->
+                                    <div class="section design2 type1">
+                                        <div class="section-wrap">
+                                            <div class="section-head">
+                                                <div class="section-subject">
+                                                    <h4 class="section-name">타이틀 T3-32-bd</h4>
+                                                </div>
+                                            </div>
+                                            <div class="section-body" style="background-color: #ddd; padding: 15px; width: 70%; border-radius: 10px;">
+                                                <p class="para">section body</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- common section -->
+                                </div>
+                            </div>
+                            <div class="subsection line">
+                                <div class="content-body">
+                                    <!-- common section -->
+                                    <div class="section design3 case1 type1">
+                                        <div class="section-wrap">
+                                            <div class="section-head">
+                                                <h4 class="section-name">타이틀 T3-32-bd</h4>
+                                                <div class="section-util">
+                                                    <div class="submit-form design1 case1 align1">
+                                                        <div class="form-list">
+                                                            <div class="form-item">
+                                                                <div class="form select design1 case1 type1">
+                                                                    <label for="temp" class="blind">Label</label>
+                                                                    <select name="name" id="temp">
+                                                                        <option value="option1">Option1</option>
+                                                                        <option value="option2">Option2</option>
+                                                                        <option value="option3">Option3</option>
+                                                                        <option value="option4">Option4</option>
+                                                                        <option value="option5">Option5</option>
+                                                                    </select>
+                                                                    <div class="arrow"><span class="blind">닫힘</span></div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-item">
+                                                                <div class="form search design1 case1 type1">
+                                                                    <label for="temp-search" class="blind">
+                                                                        검색
+                                                                    </label>
+                                                                    <input id="temp-search" class="input-elem" type="text" placeholder="Default" />
+                                                                    <div class="input-icon">
+                                                                        <button class="btn icon case3 remove">
+                                                                            <span class="btn-text blind">삭제</span>
+                                                                        </button>
+                                                                        <button class="btn icon case3 search">
+                                                                            <span class="btn-text blind">검색</span>
+                                                                        </button>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- common section -->
+                                </div>
+                            </div>
+                            <div class="subsection line">
+                                <div class="content-body">
+                                    <!-- common section -->
+                                    <div class="section design4 case1 type1">
+                                        <div class="section-wrap">
+                                            <div class="section-body" style="gap: 2rem;">
+                                                <div style="background-color: #ddd; padding: 30px; width: 100%; border-radius: 10px;"></div>
+                                                <div style="background-color: #ddd; padding: 30px; width: 100%; border-radius: 10px;"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- common section -->
+                                </div>
+                            </div>
+                            <div class="subsection line">
+                                <div class="content-body">
+                                    <!-- common section -->
+                                    <div class="section design1 case2 type2">
+                                        <div class="section-wrap">
+                                            <div class="section-head">
+                                                <div class="section-subject">
+                                                    <h4 class="section-name">타이틀 T4_24_bd</h4>
+                                                </div>
+                                            </div>
+                                            <div class="section-body">
+                                                <p class="para">para 내용을 입력하세요. para 내용을 입력하세요. para 내용을 입력하세요.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- common section -->
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <!-- //section -->

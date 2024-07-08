@@ -1,4 +1,4 @@
-"/sknetworks/dist/front" + 
+"/sknetworks/dist/page" + 
 
 // front.html > local-body 밑에 추가
 <span class="date" style="

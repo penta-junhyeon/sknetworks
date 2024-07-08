@@ -2,27 +2,31 @@
 <html lang="ko">
 
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
-    <meta name="format-detection" content="telephone=no, date=no, address=no, email=no" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="format-detection" content="telephone=no, date=no, address=no, email=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>SK Networks Markup Guide</title>
-    <!-- <link rel="shortcut icon" href="./../../assets/images/bui/favicon.ico" /> -->
-    <link rel="stylesheet" type="text/css" href="../../assets/css/style.css" />
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/styles/github.min.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <!-- <link rel="shortcut icon" href="./../../assets/images/bui/favicon.ico"> -->
+    <link rel="stylesheet" type="text/css" href="../../assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/styles/github.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/languages/bash.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/ScrollToPlugin.min.js"></script>
-    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
-
+    <script src="../../assets/js/gsap.min.js"></script>
+    <script src="../../assets/js/ScrollTrigger.min.js"></script>
+    <script src="../../assets/js/ScrollToPlugin.min.js"></script>
+    <script src="../../assets/js/swiper-bundle.min.js"></script>
     <script>
         hljs.initHighlightingOnLoad();
     </script>
     <script src="./../../assets/js/guide.js"></script>
+    <script src="./../../assets/js/bootstrap.bundle.min.js"></script>
 
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            Tab();
+        });
+    </script>
 </head>
 
 <body>
@@ -76,8 +80,8 @@
                     <!--section-->
                     <div class="section toc" id="tableOfContent">
                         <div class="section-head">
-                            <h2 class="section-title">
-                                <span class="section-name">UI Components For<br class="moOnly" /> SK Networks</span>
+                            <h2 class="section-subject">
+                                <span class="section-name">UI Components For<br class="mo-only" /> SK Networks</span>
                                 <p class="para">HERE'S WHAT TEAM PIX HAS CREATED.</p>
                             </h2>
                         </div>
@@ -91,19 +95,22 @@
                                 </li>
                                 <li class="gnb-item"><span class="gnb-name">Components</span>
                                     <ul class="lnb-list">
-                                        <li class="lnb-item"><a class="lnb-name" href="./../components/color.html">Color</a></li>
-                                        <li class="lnb-item"><a class="lnb-name" href="./../components/font.html">Font</a></li>
-                                        <li class="lnb-item"><a class="lnb-name" href="./../components/icon.html">Icon</a></li>
-                                        <li class="lnb-item"><a class="lnb-name" href="./../components/button.html">Button</a></li>
-                                        <li class="lnb-item"><a class="lnb-name" href="./../components/mark.html">Mark</a></li>
-                                        <li class="lnb-item"><a class="lnb-name" href="./../components/form.html">Form</a></li>
-                                        <li class="lnb-item"><a class="lnb-name" href="./../components/table.html">Table</a></li>
-                                        <li class="lnb-item"><a class="lnb-name" href="./../components/list.html">List</a></li>
+                                        <li class="lnb-item"><a class="lnb-name" href="./../components/accordion.html">Accordion</a></li>
+                                        <li class="lnb-item"><a class="lnb-name" href="./../components/banner.html">Banner</a></li>
                                         <li class="lnb-item"><a class="lnb-name" href="./../components/board.html">Board</a></li>
-                                        <li class="lnb-item"><a class="lnb-name" href="./../components/goods.html">Goods</a></li>
+                                        <li class="lnb-item"><a class="lnb-name" href="./../components/button.html">Button</a></li>
+                                        <li class="lnb-item"><a class="lnb-name" href="./../components/chart.html">Chart</a></li>
+                                        <li class="lnb-item"><a class="lnb-name" href="./../components/color.html">Color</a></li>
                                         <li class="lnb-item"><a class="lnb-name" href="./../components/fieldset.html">Fieldset</a></li>
-                                        <li class="lnb-item"><a class="lnb-name" href="./../components/tab.html">Tab</a></li>
+                                        <li class="lnb-item"><a class="lnb-name" href="./../components/font.html">Font</a></li>
+                                        <li class="lnb-item"><a class="lnb-name" href="./../components/form.html">Form</a></li>
+                                        <li class="lnb-item"><a class="lnb-name" href="./../components/icon.html">Icon</a></li>
+                                        <li class="lnb-item"><a class="lnb-name" href="./../components/list.html">List</a></li>
+                                        <li class="lnb-item"><a class="lnb-name" href="./../components/mark.html">Mark</a></li>
                                         <li class="lnb-item"><a class="lnb-name" href="./../components/post.html">Post</a></li>
+                                        <li class="lnb-item"><a class="lnb-name" href="./../components/swiper.html">Swiper</a></li>
+                                        <li class="lnb-item"><a class="lnb-name" href="./../components/tab.html">Tab</a></li>
+                                        <li class="lnb-item"><a class="lnb-name" href="./../components/table.html">Table</a></li>
                                         <li class="lnb-item"><a class="lnb-name" href="./../components/tooltip.html">Tooltip</a></li>
                                     </ul>
                                 </li>
@@ -144,18 +151,32 @@
                                 <div class="subsection-body">
                                     <!-- highlight-js -->
                                     <pre class="highlight-js"><code class="html">&lt;!-- tab-display --&gt;
-&lt;div class="tab-display design1"&gt;
-	&lt;div class="swiper tab-area"&gt;
-		&lt;ul class="swiper-wrapper tab-list"&gt;
-			&lt;li class="swiper-slide tab-item"&gt;&lt;a href="#" class="tab-text"&gt;탭1&lt;/a&gt;&lt;/li&gt;
-			&lt;li class="swiper-slide tab-item"&gt;&lt;a href="#" class="tab-text"&gt;탭2&lt;/a&gt;&lt;/li&gt;
-			&lt;li class="swiper-slide tab-item"&gt;&lt;a href="#" class="tab-text"&gt;탭3&lt;/a&gt;&lt;/li&gt;
-			&lt;li class="swiper-slide tab-item"&gt;&lt;a href="#" class="tab-text"&gt;탭4&lt;/a&gt;&lt;/li&gt;
+&lt;div class="tab-display design1 case1 type1"&gt;
+	&lt;div class="swiper tab-wrap"&gt;
+		&lt;ul class="swiper-wrapper tab-list" role="tablist"&gt;
+			&lt;li id="tab1" class="swiper-slide tab-item" aria-controls="tab-panel1"&gt;&lt;button role="tab" class="tab-text"&gt;Tab 1&lt;/button&gt;&lt;/li&gt;
+			&lt;li id="tab2" class="swiper-slide tab-item" aria-controls="tab-panel2"&gt;&lt;button role="tab" class="tab-text"&gt;Tab 2&lt;/button&gt;&lt;/li&gt;
+			&lt;li id="tab3" class="swiper-slide tab-item" aria-controls="tab-panel3"&gt;&lt;button role="tab" class="tab-text"&gt;Tab 3&lt;/button&gt;&lt;/li&gt;
+			&lt;li id="tab4" class="swiper-slide tab-item" aria-controls="tab-panel4"&gt;&lt;button role="tab" class="tab-text"&gt;Tab 4&lt;/button&gt;&lt;/li&gt;
 		&lt;/ul&gt;
 	&lt;/div&gt;
 &lt;/div&gt;
 &lt;!-- //tab-display --&gt;</code></pre>
                                     <!-- //highlight-js -->
+                                    <div class="guide-tab-area">
+                                        <div class="tab-display design1 case1 type1">
+                                            <div class="swiper tab-wrap">
+                                                <ul class="swiper-wrapper tab-list" role="tablist">
+                                                    <li id="tab1" class="swiper-slide tab-item" aria-controls="tab-panel1">
+                                                        <button role="tab" class="tab-text">Tab 1</button>
+                                                    </li>
+                                                    <li id="tab2" class="swiper-slide tab-item" aria-controls="tab-panel2">
+                                                        <button role="tab" class="tab-text">Tab 2</button>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -164,7 +185,7 @@
                     <!-- section -->
                     <div class="section">
                         <div class="section-head">
-                            <h4 class="section-subject"><span class="section-name">Penel display</span></h4>
+                            <h4 class="section-subject"><span class="section-name">Panel display</span></h4>
                         </div>
                         <div class="section-body">
                             <div class="subsection">
@@ -172,16 +193,32 @@
                                 <div class="subsection-body">
                                     <!-- highlight-js -->
                                     <pre class="highlight-js"><code class="html">&lt;!-- panel-display --&gt;
-&lt;div class="panel-display design1"&gt;
-	&lt;div class="panel-list"&gt;
-		&lt;div class="panel-item"&gt;&lt;div class="panel-wrap"&gt;탭1내용&lt;/div&gt;&lt;/div&gt;
-		&lt;div class="panel-item"&gt;&lt;div class="panel-wrap"&gt;탭2내용&lt;/div&gt;&lt;/div&gt;
-		&lt;div class="panel-item"&gt;&lt;div class="panel-wrap"&gt;탭3내용&lt;/div&gt;&lt;/div&gt;
-		&lt;div class="panel-item"&gt;&lt;div class="panel-wrap"&gt;탭4내용&lt;/div&gt;&lt;/div&gt;
-	&lt;/div&gt;
+&lt;div class="panel-display design1 case1"&gt;
+	&lt;ul class="panel-list"&gt;
+		&lt;li id="tab-panel1" class="panel-item" role="tabpanel"&gt;&lt;div class="panel-wrap"&gt;Panel 1&lt;/li&gt;&lt;/div&gt;
+		&lt;li id="tab-panel2" class="panel-item" role="tabpanel"&gt;&lt;div class="panel-wrap"&gt;Panel 2&lt;/li&gt;&lt;/div&gt;
+		&lt;li id="tab-panel3" class="panel-item" role="tabpanel"&gt;&lt;div class="panel-wrap"&gt;Panel 3&lt;/li&gt;&lt;/div&gt;
+		&lt;li id="tab-panel4" class="panel-item" role="tabpanel"&gt;&lt;div class="panel-wrap"&gt;Panel 4&lt;/li&gt;&lt;/div&gt;
+	&lt;/ul&gt;
 &lt;/div&gt;
 &lt;!-- //panel-display --&gt;</code></pre>
                                     <!-- //highlight-js -->
+                                    <div class="guide-tab-panel-area">
+                                        <div class="panel-display design1 case1">
+                                            <div class="panel-list">
+                                                <div id="tab-panel1" class="panel-item" role="tabpanel">
+                                                    <div class="panel-wrap">
+                                                        <span>Panel 1</span>
+                                                    </div>
+                                                </div>
+                                                <div id="tab-panel2" class="panel-item" role="tabpanel">
+                                                    <div class="panel-wrap">
+                                                        <span>Panel 2</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
