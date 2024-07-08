@@ -26,7 +26,7 @@
     </script>
 
     <script src="https://unpkg.com/@studio-freight/lenis@1.0.32/dist/lenis.min.js"></script>
-    <script>
+    <script defer>
         document.addEventListener("DOMContentLoaded", () => {
             localAnimations_Case02();
 
@@ -61,6 +61,7 @@
             const hisAnchor = document.querySelector('.anchor-area');
             const mainHis = document.querySelector('.main.company.history');
             const wrapHis = mainHis.closest('#wrap');
+            const wrapHead = wrapHis.querySelector('.local-head');
             const bodyHis = mainHis.querySelector('.content-body');
             const headerHis = wrapHis.querySelector('header');
 
@@ -119,18 +120,18 @@
 
                 ScrollTrigger.create({
                     trigger: bodyHis,
-                    start: "top 1",
+                    start: "top 2",
                     end: "bottom bottom",
                     onEnter: () => {
                         hisAnchor.classList.add('fixed');
                         wrapHis.style.overflow = 'visible';
-                        // headerHis.style.overflow = 'hidden';
+                        wrapHead.style.overflow = 'hidden';
                         isAnchorFixed = true;
                     },
                     onLeaveBack: () => {
                         hisAnchor.classList.remove('fixed');
                         wrapHis.style.overflow = '';
-                        // headerHis.style.overflow = '';
+                        wrapHead.style.overflow = '';
                         isAnchorFixed = false;
                     },
                 });
@@ -152,15 +153,11 @@
             // 리사이즈 이벤트 핸들러
             const debouncedRefresh = debounce(() => {
                 ScrollTrigger.refresh();
-
-                // if (isAnchorFixed) {
-                //     // headerHis.style.overflow = 'hidden'; // 리사이즈 후 고정 상태라면 다시 스타일 적용
-                // }
             }, 200);
 
             window.addEventListener('resize', () => {
                 ScrollTrigger.getAll().forEach(trigger => trigger.kill()); // 기존 트리거 제거
-                setupScrollTrigger(); // 새로운 설정 적용
+                setupScrollTrigger();
                 debouncedRefresh();
             });
 
@@ -549,8 +546,8 @@
                                                                 <div class="data-wrap">
                                                                     <div class="data-inform">
                                                                         <div class="data-subject">
-                                                                            <p class="data-name">에스에스차저, SK일렉링크 사명 변경</p>
-                                                                            <p class="data-name">데이터 관리 선도기업 ‘엔코아’ 인수 완료</p>
+                                                                            <p class="data-name">에스에스차저, SK일렉링크로 사명 변경</p>
+                                                                            <p class="data-name">데이터 관리 선도기업 ‘엔코아’ 인수</p>
                                                                         </div>
                                                                         <p class="data-date">2023</p>
                                                                     </div>
@@ -615,7 +612,7 @@
                                                                 <div class="data-wrap">
                                                                     <div class="data-inform">
                                                                         <div class="data-subject">
-                                                                            <p class="data-name">워커힐 국내 최초 캡슐호텔 ‘다락 휴’ 오픈</p>
+                                                                            <p class="data-name">워커힐 국내 최초 캡슐호텔 ‘다락휴＇오픈</p>
                                                                         </div>
                                                                         <p class="data-date">2017</p>
                                                                     </div>
@@ -688,7 +685,7 @@
                                                 <div class="head">
                                                     <div class="subject">
                                                         <p class="summary">1973~2002</p>
-                                                        <p class="name">㈜ 선경 출범, 종합상사의 새 역사를 열다</p>
+                                                        <p class="name">㈜선경 출범, 종합상사의 새 역사를 열다</p>
                                                     </div>
                                                     <div class="progress-bar"></div>
                                                 </div>
@@ -699,7 +696,7 @@
                                                                 <div class="data-wrap">
                                                                     <div class="data-inform">
                                                                         <div class="data-subject">
-                                                                            <p class="data-name">초대형마케팅 컴퍼니인 SK글로벌 출범</p>
+                                                                            <p class="data-name">초대형 마케팅 Company, SK글로벌 출범</p>
                                                                         </div>
                                                                         <p class="data-date">2000</p>
                                                                     </div>
@@ -780,7 +777,7 @@
                                                                 <div class="data-wrap">
                                                                     <div class="data-inform">
                                                                         <div class="data-subject">
-                                                                            <p class="data-name">㈜ 선경 기업 공개 및 주식 상장</p>
+                                                                            <p class="data-name">㈜선경 기업 공개 및 주식 상장</p>
                                                                         </div>
                                                                         <p class="data-date">1977</p>
                                                                     </div>
@@ -877,7 +874,7 @@
                                                                 <div class="data-wrap">
                                                                     <div class="data-inform">
                                                                         <div class="data-subject">
-                                                                            <p class="data-name">전쟁의 페허 속에서 시작된 작은 직물회사</p>
+                                                                            <p class="data-name">선경직물 창립,<br>전쟁의 폐허 속에서 일어서다</p>
                                                                         </div>
                                                                         <p class="data-date">1953</p>
                                                                     </div>

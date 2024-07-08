@@ -46,6 +46,14 @@
                 });
             });
 
+            function getStartValue(type) {
+                if (type === 1) {
+                    return window.innerWidth >= 1024 ? 'top 12' : 'top 58';
+                } else if (type === 2) {
+                    return window.innerWidth >= 1024 ? 'top -13%' : 'top top';
+                }
+                return 'top 12'; // 기본값
+            }
             // scroll ani
             gsap.registerPlugin(ScrollTrigger);
 
@@ -53,94 +61,86 @@
             const hisAnchor = document.querySelector('.anchor-area');
             const mainHis = document.querySelector('.main.company.history');
             const wrapHis = mainHis.closest('#wrap');
+            const wrapHead = wrapHis.querySelector('.local-head');
             const bodyHis = mainHis.querySelector('.content-body');
             const headerHis = wrapHis.querySelector('header');
 
-            hisItem.forEach(item => {
-                const headElement = item.querySelector('.head');
-                const progressBar = item.querySelector('.progress-bar');
+            // ScrollTrigger 설정 함수 정의
+            function setupScrollTrigger() {
+                hisItem.forEach(item => {
+                    const headElement = item.querySelector('.head');
+                    const progressBar = item.querySelector('.progress-bar');
 
-                gsap.to(item, {
-                    scrollTrigger: {
-                        trigger: item,
-                        start: 'top 12',
-                        end: 'bottom bottom',
-                        onEnter: () => {
-                            item.classList.add('active1');
+                    gsap.to(item, {
+                        scrollTrigger: {
+                            trigger: item,
+                            start: getStartValue(1),
+                            end: 'bottom bottom',
+                            onEnter: () => {
+                                item.classList.add('active1');
+                            },
+                            onLeaveBack: () => {
+                                item.classList.remove('active1');
+                            },
+                            // markers: true,
                         },
-                        onLeaveBack: () => {
-                            item.classList.remove('active1');
+                    });
+
+                    gsap.to(item, {
+                        scrollTrigger: {
+                            trigger: item,
+                            start: getStartValue(2),
+                            end: 'bottom bottom',
+                            onEnter: () => {
+                                item.classList.add('active2');
+                            },
+                            onLeaveBack: () => {
+                                item.classList.remove('active2');
+                            },
                         },
-                        // markers: true,
-                    },
+                    });
+
+                    gsap.to(progressBar, {
+                        width: '100%',
+                        scrollTrigger: {
+                            trigger: item,
+                            start: 'top 10%',
+                            end: 'bottom bottom',
+                            scrub: true,
+                            onUpdate: self => {
+                                const progress = self.progress;
+                                progressBar.style.width = `${progress * 100}%`;
+                            },
+                        },
+                    });
                 });
 
-                gsap.to(item, {
-                    scrollTrigger: {
-                        trigger: item,
-                        start: 'top -13%',
-                        end: 'bottom bottom',
-                        onEnter: () => {
-                            item.classList.add('active2');
-                        },
-                        onLeaveBack: () => {
-                            item.classList.remove('active2');
-                        },
-                        // markers: true,
+                // 현재 고정 상태를 추적하는 변수
+                let isAnchorFixed = false;
+
+                ScrollTrigger.create({
+                    trigger: bodyHis,
+                    start: "top 1",
+                    end: "bottom bottom",
+                    onEnter: () => {
+                        hisAnchor.classList.add('fixed');
+                        wrapHis.style.overflow = 'visible';
+                        wrapHead.style.overflow = 'hidden';
+                        isAnchorFixed = true;
+                    },
+                    onLeaveBack: () => {
+                        hisAnchor.classList.remove('fixed');
+                        wrapHis.style.overflow = '';
+                        wrapHead.style.overflow = '';
+                        isAnchorFixed = false;
                     },
                 });
+            }
 
-                // gsap.to(item, {
-                //     scrollTrigger: {
-                //         trigger: item,
-                //         start: 'top -100%',
-                //         end: 'bottom bottom',
-                //         onEnter: () => {
-                //             item.classList.add('active3');
-                //         },
-                //         onLeaveBack: () => {
-                //             item.classList.remove('active3');
-                //         },
-                //         // markers: true,
-                //     },
-                // });
+            // 초기 ScrollTrigger 설정
+            setupScrollTrigger();
 
-                gsap.to(progressBar, {
-                    width: '100%',
-                    scrollTrigger: {
-                        trigger: item,
-                        start: 'top 10%',
-                        end: 'bottom bottom',
-                        scrub: true,
-                        onUpdate: self => {
-                            const progress = self.progress;
-                            progressBar.style.width = `${progress * 100}%`;
-                        },
-                    },
-                });
-            });
-
-            // 현재 고정 상태를 추적하는 변수
-            let isAnchorFixed = false;
-
-            ScrollTrigger.create({
-                trigger: bodyHis,
-                start: "top 12",
-                end: "bottom bottom",
-                onEnter: () => {
-                    hisAnchor.classList.add('fixed');
-                    wrapHis.style.overflow = 'visible';
-                    // headerHis.style.overflow = 'hidden';
-                    isAnchorFixed = true;
-                },
-                onLeaveBack: () => {
-                    hisAnchor.classList.remove('fixed');
-                    wrapHis.style.overflow = '';
-                    // headerHis.style.overflow = '';
-                    isAnchorFixed = false;
-                },
-            });
-
+            // 디바운스 함수
             function debounce(func, wait) {
                 let timeout;
                 return function(...args) {
@@ -150,17 +150,44 @@
                 };
             }
 
+            // 리사이즈 이벤트 핸들러
             const debouncedRefresh = debounce(() => {
                 ScrollTrigger.refresh();
-
-                if (isAnchorFixed) {
-                    // headerHis.style.overflow = 'hidden'; // 리사이즈 후 고정 상태라면 다시 스타일 적용
-                }
             }, 200);
 
-            window.addEventListener("resize", debouncedRefresh);
+            window.addEventListener('resize', () => {
+                ScrollTrigger.getAll().forEach(trigger => trigger.kill()); // 기존 트리거 제거
+                setupScrollTrigger();
+                debouncedRefresh();
+            });
 
             ScrollTrigger.refresh();
+
+            // header regular 상태
+            const header = $('#header');
+            const headElement = $('.history-item');
+            const anchorSection = $('.section.anchor-area')
+
+
+            // header의 클래스 변경을 감지하는 MutationObserver 생성
+            const observer = new MutationObserver(function(mutations) {
+                mutations.forEach(function(mutation) {
+                    if (mutation.attributeName === 'class') {
+                        if (header.hasClass('regular')) {
+                            headElement.addClass('menu-rising').removeClass('menu-dropping');
+                            anchorSection.removeClass('anchor-dropping');
+                        } else {
+                            headElement.addClass('menu-dropping').removeClass('menu-rising');
+                            anchorSection.addClass('anchor-dropping');
+                        }
+                    }
+                });
+            });
+
+            // header 요소에 대해 MutationObserver를 설정
+            observer.observe(header[0], {
+                attributes: true // 속성 변경 감지
+            });
         });
     </script>
 </head>
