@@ -103,11 +103,7 @@
             let storyTotalHeight = (storyInnerHeight * landingSlidesLength) + storyInnerHeight;
             let tab = $('.tab-display')
 
-            console.log(storyHeight);
-
-            story.css({
-                'height': storyTotalHeight + 'px'
-            });
+            //story.css({'height': storyTotalHeight + 'px'});
 
             function setCurrentSlide(index) {
                 landingSlides.removeClass('active previous next');
@@ -130,18 +126,15 @@
                 }
             }
 
-            gsap.timeline({
+            let scrollTimeline = gsap.timeline({
                 scrollTrigger: {
                     trigger: story,
-                    markers: true,
+                    //markers: true,
                     start: 'top top',
                     end: () => '+=' + landingSlidesLength * storyInnerHeight,
                     pin: '.section-body',
-                    //scrub:'0.1'
                 }
-            })
-            //.fromTo(tab , {y:'0vh'}, {y:'5000px', opacity:0,}, 0)
-
+            });
 
             landingSlides.each(function(i, landingSlide) {
                 ScrollTrigger.create({
@@ -155,6 +148,14 @@
                     onEnterBack: () => setCurrentSlide(i),
                     onLeaveBack: () => setCurrentSlide(i),
                 });
+            });
+
+            let resizeTimeout;
+            window.addEventListener('resize', function() {
+                clearTimeout(resizeTimeout);
+                resizeTimeout = setTimeout(function() {
+                    ScrollTrigger.refresh();
+                }, 500);
             });
         }
 
@@ -520,10 +521,10 @@
                                                     </div>
                                                     <div class="post-list">
                                                         <div class="post-wrap">
-                                                            <div class="post-item active"><img src="../../assets/images/company/01.jpg" alt="전구안에 나무가 있는 이미지"></div>
-                                                            <div class="post-item"><img src="../../assets/images/company/02.jpg" alt="전구안에 나무가 있는 이미지"></div>
-                                                            <div class="post-item"><img src="../../assets/images/company/03.jpg" alt="전구안에 나무가 있는 이미지"></div>
-                                                            <div class="post-item"><img src="../../assets/images/company/04.jpg" alt="전구안에 나무가 있는 이미지"></div>
+                                                            <div class="post-item active"><img src="../../assets/images/company/story1-figure-01.jpg" alt="공장 이미지"></div>
+                                                            <div class="post-item"><img src="../../assets/images/company/story1-figure-02.jpg" alt="유통 고속도로 이미지"></div>
+                                                            <div class="post-item"><img src="../../assets/images/company/story1-figure-03.jpg" alt="휴대폰 이미지"></div>
+                                                            <div class="post-item"><img src="../../assets/images/company/story1-figure-04.jpg" alt="SK electlink 이미지"></div>
                                                         </div>
                                                     </div>
                                                 </div>
