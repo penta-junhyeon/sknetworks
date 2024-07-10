@@ -17,8 +17,8 @@
     <script src="./../../assets/js/ScrollTrigger.min.js"></script>
     <script src="./../../assets/js/ScrollToPlugin.min.js"></script>
     <script src="./../../assets/js/swiper-bundle.min.js"></script>
-    <script src="./../../assets/js/common.js"></script>
     <script src="./../../assets/js/bootstrap.bundle.min.js"></script>
+    <script src="./../../assets/js/common.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             frontCommon.Html.reset();
@@ -26,6 +26,23 @@
     </script>
 
     <script src="https://unpkg.com/@studio-freight/lenis@1.0.32/dist/lenis.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const pallarax = $(".pallarax").toArray();
+            const io = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.intersectionRatio > 0.1) {
+                        entry.target.classList.add("active")
+                    }
+                })
+            }, {
+                threshold: [0.1]
+            })
+            pallarax.forEach(element => {
+                io.observe(element);
+            });
+        })
+    </script>
 </head>
 
 <body class="kr">
