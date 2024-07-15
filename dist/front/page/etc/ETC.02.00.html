@@ -68,27 +68,6 @@
                 });
             }
 
-            // 버전 선택
-            // document.querySelectorAll('.ver-info-item .ver-info-link').forEach(link => {
-            //     link.addEventListener('click', function (e) {
-            //         e.preventDefault();
-            //         const id = this.getAttribute('href')
-            //         activateContentBody(id);
-
-            //         var scrollSpy = new bootstrap.ScrollSpy(document.body, {
-            //             target: '.content-body.active .anchor-display'
-            //         });
-
-            //         // scroll top
-            //         window.scrollTo({
-            //             top: 0,
-            //             behavior: 'auto'
-            //         });
-
-            //         // console.log(id);
-            //     });
-            // });
-
             document.querySelectorAll('.accordion-util select').forEach(select => {
                 select.addEventListener('change', function() {
                     const selectedOption = this.options[this.selectedIndex];
