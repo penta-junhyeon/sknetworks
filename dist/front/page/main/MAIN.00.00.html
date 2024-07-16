@@ -33,7 +33,6 @@
             const company = document.querySelector(".section.company")
             const subsidiary = company.querySelector(".subsidiary")
             const network = company.querySelector(".network")
-            const esg = company.querySelector(".esg")
             const media = document.querySelector(".section.media")
             let press = media.querySelector(".press-media")
             const sns = media.querySelector(".sns-media")
@@ -76,7 +75,6 @@
                             company.classList.add("active1")
                         } else {
                             intro.classList.remove("active4")
-                            company.classList.remove("active1")
                         }
                     } else {
                         if (entry.intersectionRatio > 0.1) {
@@ -84,7 +82,6 @@
                             company.classList.add("active1")
                         } else {
                             intro.classList.remove("active4")
-                            company.classList.remove("active1")
                         }
                     }
                 })
@@ -99,44 +96,19 @@
                         if (entry.intersectionRatio > 0.4) {
                             company.classList.remove("active4")
                             company.classList.add("active2")
-                        } else {
-                            company.classList.remove("active2")
                         }
                     } else {
                         if (entry.intersectionRatio > 0.2) {
                             company.classList.add("active2")
-                        } else {
-                            company.classList.remove("active2")
                         }
+                    }
+                    if (!entry.isIntersecting) {
+                        company.classList.remove("active1")
+                        company.classList.remove("active2")
                     }
                 })
             }, {
                 threshold: [0.2, 0.4]
-            })
-
-            const io4 = new IntersectionObserver(entries => {
-                entries.forEach(entry => {
-                    const _width = window.innerWidth
-                    if (_width >= 1024) {
-                        if (entry.intersectionRatio > 0.1) {
-                            company.classList.add("active3")
-                        } else {
-                            company.classList.remove("active3")
-                        }
-                    }
-                })
-            }, {
-                threshold: [0.1]
-            })
-
-            const io5 = new IntersectionObserver(entries => {
-                entries.forEach(entry => {
-                    if (entry.intersectionRatio > 0.2) {
-                        company.classList.add("active4")
-                    }
-                })
-            }, {
-                threshold: 0.2
             })
 
             const io6 = new IntersectionObserver(entries => {
@@ -190,8 +162,6 @@
             io.observe(ourEsg)
             io2.observe(company)
             io3.observe(network)
-            io4.observe(esg)
-            io5.observe(esg)
             io6.observe(media)
             io7.observe(investment)
 
@@ -709,59 +679,6 @@
                                             </div>
                                             <div class="board-body">
                                                 <p class="para">국경을 넘어<br>세계로 나아갑니다.</p>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="section-content esg">
-                            <div class="content-inner">
-                                <div class="section-head">
-                                    <div class="section-subject">
-                                        <h2 class="section-name">SK Networks with ESG</h2>
-                                    </div>
-                                    <p class="section-summary">지속가능한 미래 SK네트웍스가 적극 동참합니다.</p>
-                                </div>
-                                <div class="section-body swiper">
-                                    <ul class="board-list swiper-wrapper">
-                                        <li class="item envi swiper-slide">
-                                            <div class="board-head">
-                                                <h3 class="board-name">환경</h3>
-                                            </div>
-                                            <div class="board-caption">
-                                                <span class="caption">Environmental</span>
-                                            </div>
-                                            <div class="board-util">
-                                                <a class="btn design1 type2 color1" href="#">
-                                                    <span class="btn-text">바로가기</span>
-                                                </a>
-                                            </div>
-                                        </li>
-                                        <li class="item social swiper-slide">
-                                            <div class="board-head">
-                                                <h3 class="board-name">사회</h3>
-                                            </div>
-                                            <div class="board-caption">
-                                                <span class="caption">Social</span>
-                                            </div>
-                                            <div class="board-util">
-                                                <a class="btn design1 type2 color1" href="#">
-                                                    <span class="btn-text">바로가기</span>
-                                                </a>
-                                            </div>
-                                        </li>
-                                        <li class="item gove swiper-slide">
-                                            <div class="board-head">
-                                                <h3 class="board-name">거버넌스</h3>
-                                            </div>
-                                            <div class="board-caption">
-                                                <span class="caption">Governance</span>
-                                            </div>
-                                            <div class="board-util">
-                                                <a class="btn design1 type2 color1" href="#">
-                                                    <span class="btn-text">바로가기</span>
-                                                </a>
                                             </div>
                                         </li>
                                     </ul>
