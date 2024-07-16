@@ -257,7 +257,6 @@
 }
 .banner.type1 .banner-footer .summary {
     color: rgb(255, 255, 255);
-    word-break: keep-all;
     font-size: 1.8rem;
     font-weight: 500;
 }
@@ -7887,7 +7886,6 @@
     font-weight: 700;
     color: rgb(255, 255, 255);
     text-align: center;
-    word-break: keep-all;
 }
 @media (max-width: 1023px) {
     .t-display.design2.type1 table > thead > tr > th {
@@ -7900,7 +7898,6 @@
     font-size: 1.8rem;
     font-weight: 700;
     color: rgb(63, 63, 70);
-    word-break: keep-all;
 }
 @media (max-width: 1023px) {
     .t-display.design2.type1 table > tbody > tr > th,
@@ -9284,7 +9281,7 @@ body .text-bundle {
     font-style: normal;
     box-sizing: border-box;
     word-wrap: break-word;
-    word-break: break-word;
+    word-break: keep-all;
     touch-action: auto;
     -webkit-tap-highlight-color: transparent !important;
     -webkit-tap-highlight-color: rgba(255, 255, 255, 0) !important;
@@ -18156,6 +18153,9 @@ sub {
 .etc.personal-info .section.anchor-area + .accordion-display {
     margin-top: 8rem;
 }
+.etc.personal-info .section.anchor-area + .accordion-display .accordion-item .accordion-head {
+    border-bottom: 1px solid rgb(113, 113, 122);
+}
 @media (max-width: 1023px) {
     .etc.personal-info .section.anchor-area {
         padding: 1.6rem 1.2rem;
@@ -19199,9 +19199,6 @@ sub {
         gap: 1.6rem;
     }
 }
-.esg:not(.overview).understand .panel-display .panel-list .panel-item .section.roadmap .t-display table .bullet-display .data-item:not(.break-word) {
-    word-break: keep-all;
-}
 .esg:not(.overview).understand .panel-display .panel-list .panel-item .section.design2 .section-wrap {
     gap: 6.4rem;
 }
@@ -19224,9 +19221,6 @@ sub {
 .esg:not(.overview).understand .panel-display .panel-list .panel-item .section.sharing .section-figure img {
     width: 100%;
 }
-.esg:not(.overview).understand .panel-display .panel-list .panel-item .section.sharing .section-summary {
-    word-break: keep-all;
-}
 @media (max-width: 1023px) {
     .esg:not(.overview).understand .panel-display .panel-list .panel-item .section.sharing .section-head {
         width: 100%;
@@ -19245,9 +19239,6 @@ sub {
 }
 .esg:not(.overview).understand .panel-display .panel-list .panel-item .section.gallery .section-figure img {
     width: 100%;
-}
-.esg:not(.overview).understand .panel-display .panel-list .panel-item .section.gallery .section-summary {
-    word-break: keep-all;
 }
 @media (max-width: 1023px) {
     .esg:not(.overview).understand .panel-display .panel-list .panel-item .section.gallery .section-head {
@@ -19269,9 +19260,6 @@ sub {
 }
 .esg:not(.overview).understand .panel-display .panel-list .panel-item .section.probono .post-list.layout2 .post-body {
     width: 30.42%;
-}
-.esg:not(.overview).understand .panel-display .panel-list .panel-item .section.probono .para {
-    word-break: keep-all;
 }
 @media (max-width: 1023px) {
     .esg:not(.overview).understand .panel-display .panel-list .panel-item .section.probono .post-list.layout1 .post-inform {
@@ -19298,9 +19286,6 @@ sub {
 }
 .esg:not(.overview).understand .panel-display .panel-list .panel-item .section.collabo .section-figure img {
     width: 100%;
-}
-.esg:not(.overview).understand .panel-display .panel-list .panel-item .section.collabo .section-summary {
-    word-break: keep-all;
 }
 @media (max-width: 1023px) {
     .esg:not(.overview).understand .panel-display .panel-list .panel-item .section.collabo .section-head {
