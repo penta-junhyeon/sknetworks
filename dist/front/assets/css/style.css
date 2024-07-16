@@ -11480,7 +11480,7 @@ sub {
     margin: 0 auto;
     justify-content: flex-start;
     flex-direction: column;
-    min-height: 950px;
+    min-height: 980px;
     max-width: 1200px;
     opacity: 0;
     transition: opacity 0.5s ease-out;
@@ -17689,6 +17689,11 @@ sub {
 }
 .ir.stock-info.ir-dart .section .section-subject .btn {
     padding: 0;
+}
+@media (min-width: 1024px) {
+    .ir.stock-info.ir-dart .section .section-subject .section-name + .section-summary {
+        margin-top: unset !important;
+    }
 }
 .ir.stock-info.ir-dart .section .pagination {
     margin-top: 6.4rem;
