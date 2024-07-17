@@ -11509,7 +11509,7 @@ sub {
 @media (max-width: 1023px) {
     #wrap .local-head.design4 {
         width: 100%;
-        padding: 12.6rem 0 20rem 0;
+        padding: 8.2rem 0 20rem 0;
         min-height: 60rem;
         max-width: 100%;
     }
@@ -11697,7 +11697,7 @@ sub {
 }
 @media (max-width: 1023px) {
     #wrap .local-head.design5 {
-        padding: 12.6rem 0 0;
+        padding: 8.2rem 0 0;
     }
 }
 @media (max-width: 1023px) {
@@ -18230,18 +18230,41 @@ sub {
         margin-top: 1.2rem;
     }
 }
-.etc.personal-info .section .accordion-util {
+.etc.personal-info .section .accordion-select {
+    margin-top: 2.4rem;
+}
+.etc.personal-info .section .accordion-select .para {
+    font-size: 1.8rem;
+    font-weight: 500;
+    color: rgb(63, 63, 70);
+}
+.etc.personal-info .section .accordion-select .para + .para {
+    margin-top: 1.6rem;
+}
+.etc.personal-info .section .accordion-select .accordion-util {
     margin-top: 4rem;
 }
-.etc.personal-info .section .accordion-util select {
+.etc.personal-info .section .accordion-select .accordion-util select {
     width: 59rem;
 }
 @media (max-width: 1023px) {
-    .etc.personal-info .section .accordion-util {
+    .etc.personal-info .section .accordion-select .accordion-util {
         margin-top: 3.2rem;
     }
-    .etc.personal-info .section .accordion-util select {
+    .etc.personal-info .section .accordion-select .accordion-util select {
         width: 100%;
+    }
+}
+@media (max-width: 1023px) {
+    .etc.personal-info .section .accordion-select {
+        margin-top: 1.6rem;
+    }
+    .etc.personal-info .section .accordion-select .para {
+        font-size: 1.6rem;
+        font-weight: 500;
+    }
+    .etc.personal-info .section .accordion-select .para + .para {
+        margin-top: 1.2rem;
     }
 }
 .etc.personal-info table.col-w-1 col.col1 {
