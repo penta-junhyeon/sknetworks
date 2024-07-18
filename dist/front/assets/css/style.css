@@ -97,7 +97,7 @@
 }
 @media (max-width: 1023px) {
     .mark.design2.case1 .mark-text-area {
-        margin-top: 0.8rem;
+        margin-top: 0rem;
     }
 }
 .mark.design2.case1[class*=al-icon-]::before, .mark.design2.case1[class*=ar-icon-]::after {
@@ -105,8 +105,20 @@
     min-width: 4rem;
     height: 4rem;
 }
+@media (max-width: 1023px) {
+    .mark.design2.case1[class*=al-icon-]::before, .mark.design2.case1[class*=ar-icon-]::after {
+        width: 2.6rem;
+        min-width: 2.6rem;
+        height: 2.6rem;
+    }
+}
 .mark.design2.case1[class*=al-icon-]::before {
     margin-right: 1.6rem;
+}
+@media (max-width: 1023px) {
+    .mark.design2.case1[class*=al-icon-]::before {
+        margin-right: 0.8rem;
+    }
 }
 .mark.design2.case1[class*=ar-icon-]::after {
     margin-left: 1.6rem;
@@ -117,11 +129,23 @@
     background-color: rgb(246, 246, 247);
     border-radius: 1.6rem;
 }
+@media (max-width: 1023px) {
+    .mark.design2.case1[class*=location]::before {
+        background-size: 1.4rem 1.6rem;
+        border-radius: 100%;
+    }
+}
 .mark.design2.case1[class*=calendar]::before {
     background-image: url("data:image/svg+xml,%0A%3Csvg width='18' height='20' viewBox='0 0 18 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M6.00156 0.101562C6.49862 0.101562 6.90156 0.504506 6.90156 1.00156V2.10156H11.1016V1.00156C11.1016 0.504506 11.5045 0.101562 12.0016 0.101562C12.4986 0.101562 12.9016 0.504506 12.9016 1.00156V2.10156H15.0016C16.6032 2.10156 17.9016 3.39994 17.9016 5.00156V17.0016C17.9016 18.6032 16.6032 19.9016 15.0016 19.9016H3.00156C1.39994 19.9016 0.101562 18.6032 0.101562 17.0016V5.00156C0.101562 3.39994 1.39994 2.10156 3.00156 2.10156H5.10156V1.00156C5.10156 0.504506 5.50451 0.101562 6.00156 0.101562ZM3.00156 3.90156C2.39405 3.90156 1.90156 4.39405 1.90156 5.00156V8.10156H16.1016V5.00156C16.1016 4.39405 15.6091 3.90156 15.0016 3.90156H3.00156ZM16.1016 9.90156H1.90156V17.0016C1.90156 17.6091 2.39405 18.1016 3.00156 18.1016H15.0016C15.6091 18.1016 16.1016 17.6091 16.1016 17.0016V9.90156Z' fill='rgb(63,63,70)'/%3E%3C/svg%3E%0A");
     background-size: 1.9rem 2rem;
     background-color: rgb(246, 246, 247);
     border-radius: 1.6rem;
+}
+@media (max-width: 1023px) {
+    .mark.design2.case1[class*=calendar]::before {
+        background-size: 1.2rem 1.4rem;
+        border-radius: 100%;
+    }
 }
 
 .mark-text-area {
@@ -129,6 +153,12 @@
 }
 .mark-text-area.case1 {
     flex-direction: column;
+}
+@media (max-width: 1023px) {
+    .mark-text-area.case1 {
+        flex-direction: row;
+        gap: 0.8rem;
+    }
 }
 
 .mark-display .mark-list {
@@ -482,13 +512,12 @@
 }
 @media (max-width: 1023px) {
     .board-list.design4.case1 {
-        gap: 1rem 0.6rem;
-        flex-wrap: nowrap;
+        gap: 1.6rem;
+        flex-direction: column;
     }
     .board-list.design4.case1 .board-item {
+        width: 100%;
         padding: 2.4rem;
-        margin: 0.6rem;
-        min-width: 25rem;
     }
 }
 .board-list.design4.case1.type1 .board-item .board-wrap .board-info .board-caption {
@@ -510,10 +539,17 @@
     .board-list.design4.case1.type1 .board-item .board-wrap .board-info .board-caption {
         font-size: 1.2rem;
         font-weight: 700;
+        padding: 0.4rem 0.8rem;
+    }
+    .board-list.design4.case1.type1 .board-item .board-wrap .board-info .board-caption + .board-name {
+        margin-top: 1.2rem;
     }
     .board-list.design4.case1.type1 .board-item .board-wrap .board-info .board-name {
         font-size: 2rem;
         font-weight: 700;
+    }
+    .board-list.design4.case1.type1 .board-item .board-wrap .board-info + .board-util {
+        margin-top: 1.6rem;
     }
 }
 .board-list.design5 {

@@ -48,15 +48,46 @@
             document.querySelectorAll('.anchor-display a[href^="#"]').forEach(anchor => {
                 anchor.addEventListener('click', function(e) {
                     e.preventDefault();
-                    const targetElement = document.querySelector(this.getAttribute('href'));
+                    const targetId = this.getAttribute('href').substring(1); // 링크의 href에서 '#' 제거
+                    const targetElement = document.getElementById(targetId); // 해당 id를 가진 요소 찾기
+
                     if (targetElement) {
                         history.pushState(null, null, ' '); // URL 변경 방지
                         targetElement.scrollIntoView({
                             behavior: 'smooth'
                         });
+
+                        const accordionItem = targetElement.closest('.accordion-item');
+                        if (accordionItem) {
+                            const bodyPanel = accordionItem.querySelector('.accordion-body');
+                            const headBtn = accordionItem.querySelector('.btn');
+
+                            // aria-label 값 토글
+                            if (headBtn) {
+                                const currentAriaLabel = headBtn.getAttribute('aria-label');
+                                headBtn.setAttribute('aria-label', currentAriaLabel === '열림' ? '닫힘' : '열림');
+                            }
+
+                            if (bodyPanel) {
+                                if (accordionItem.classList.contains("active")) {
+                                    accordionItem.classList.remove("active");
+                                    bodyPanel.style.height = 0;
+                                    setTimeout(() => {
+                                        bodyPanel.style.overflow = "hidden"; // overflow hidden
+                                    }, 100);
+                                } else {
+                                    accordionItem.classList.add("active");
+                                    bodyPanel.style.height = bodyPanel.scrollHeight + "px";
+                                    setTimeout(() => {
+                                        bodyPanel.style.overflow = "visible"; // overflow visible
+                                    }, 100);
+                                }
+                            }
+                        }
                     }
                 });
             });
+
 
             function activateContentBody(id) {
                 document.querySelectorAll('.content-body').forEach(body => {
@@ -67,27 +98,6 @@
                     }
                 });
             }
-
-            // 버전 선택
-            // document.querySelectorAll('.ver-info-item .ver-info-link').forEach(link => {
-            //     link.addEventListener('click', function (e) {
-            //         e.preventDefault();
-            //         const id = this.getAttribute('href')
-            //         activateContentBody(id);
-
-            //         var scrollSpy = new bootstrap.ScrollSpy(document.body, {
-            //             target: '.content-body.active .anchor-display'
-            //         });
-
-            //         // scroll top
-            //         window.scrollTo({
-            //             top: 0,
-            //             behavior: 'auto'
-            //         });
-
-            //         // console.log(id);
-            //     });
-            // });
 
             document.querySelectorAll('.accordion-util select').forEach(select => {
                 select.addEventListener('change', function() {
