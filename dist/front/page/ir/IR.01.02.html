@@ -26,6 +26,7 @@
     </script>
 
     <script src="https://unpkg.com/@studio-freight/lenis@1.0.32/dist/lenis.min.js"></script>
+
 </head>
 
 <body class="kr">
@@ -354,12 +355,13 @@
                                                 <div class="form-list">
                                                     <div class="form-item">
                                                         <div class="form select design1 case1 type1">
-                                                            <label for="rating-year" class="blind">Label</label>
-                                                            <select name="name" id="rating-year">
-                                                                <option value="1">2022</option>
-                                                                <option value="2">2021</option>
-                                                                <option value="3">2020</option>
-                                                                <option value="4">2019</option>
+                                                            <label for="yearbox" class="blind">Label</label>
+                                                            <select id="yearbox" name="selectYear" onchange="changeYearSelect()">
+                                                                <option value="2023">2023</option>
+                                                                <option value="2022">2022</option>
+                                                                <option value="2021">2021</option>
+                                                                <option value="2020">2020</option>
+                                                                <option value="2019">2019</option>
                                                             </select>
                                                             <div class="arrow"><span class="blind">닫힘</span></div>
                                                         </div>
@@ -373,8 +375,132 @@
                                 </div>
                             </div>
 
+                            <!-- 2023 -->
+                            <div class="section credit-area design2 type1 dataCont" id="2023Data">
+                                <div class="section-wrap">
+                                    <div class="section-head">
+                                        <div class="section-subject">
+                                            <h4 class="section-name">회사채</h4>
+                                        </div>
+                                    </div>
+                                    <div class="section-body">
+                                        <div class="board-list design6 case1 type1 scroll">
+                                            <div class="board-item">
+                                                <div class="board-wrap">
+                                                    <div class="board-head">
+                                                        <p class="board-rank">AA-</p>
+                                                    </div>
+                                                    <div class="board-info">
+                                                        <div class="data-head">
+                                                            <p class="data-subject">NICE 신용평가</p>
+                                                        </div>
+                                                        <div class="data-body">
+                                                            <span class="head">평가일</span>
+                                                            <span class="body">2023.04.03</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="board-item">
+                                                <div class="board-wrap">
+                                                    <div class="board-head">
+                                                        <p class="board-rank">AA-</p>
+                                                    </div>
+                                                    <div class="board-info">
+                                                        <div class="data-head">
+                                                            <p class="data-subject">한국신용평가㈜</p>
+                                                        </div>
+                                                        <div class="data-body">
+                                                            <span class="head">평가일</span>
+                                                            <span class="body">2023.03.31</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="board-item">
+                                                <div class="board-wrap">
+                                                    <div class="board-head">
+                                                        <p class="board-rank">AA-</p>
+                                                    </div>
+                                                    <div class="board-info">
+                                                        <div class="data-head">
+                                                            <p class="data-subject">한국기업평가㈜</p>
+                                                        </div>
+                                                        <div class="data-body">
+                                                            <span class="head">평가일</span>
+                                                            <span class="body">2023.04.04</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <p class="comment design1">* 신용평가등급의 범위 : AAA ~ D</p>
+                                    </div>
+                                </div>
+                                <div class="section-wrap">
+                                    <div class="section-head">
+                                        <div class="section-subject">
+                                            <h4 class="section-name">기업어음</h4>
+                                        </div>
+                                    </div>
+                                    <div class="section-body">
+                                        <div class="board-list design6 case1 type1 scroll">
+                                            <div class="board-item">
+                                                <div class="board-wrap">
+                                                    <div class="board-head">
+                                                        <p class="board-rank">A1</p>
+                                                    </div>
+                                                    <div class="board-info">
+                                                        <div class="data-head">
+                                                            <p class="data-subject">NICE 신용평가</p>
+                                                        </div>
+                                                        <div class="data-body">
+                                                            <span class="head">평가일</span>
+                                                            <span class="body">2023.04.03</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="section-util"></div>
+                                            </div>
+                                            <div class="board-item">
+                                                <div class="board-wrap">
+                                                    <div class="board-head">
+                                                        <p class="board-rank">A1</p>
+                                                    </div>
+                                                    <div class="board-info">
+                                                        <div class="data-head">
+                                                            <p class="data-subject">한국신용평가㈜</p>
+                                                        </div>
+                                                        <div class="data-body">
+                                                            <span class="head">평가일</span>
+                                                            <span class="body">2023.03.31</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="board-item">
+                                                <div class="board-wrap">
+                                                    <div class="board-head">
+                                                        <p class="board-rank">A1</p>
+                                                    </div>
+                                                    <div class="board-info">
+                                                        <div class="data-head">
+                                                            <p class="data-subject">한국기업평가㈜</p>
+                                                        </div>
+                                                        <div class="data-body">
+                                                            <span class="head">평가일</span>
+                                                            <span class="body">2023.04.04</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <p class="comment design1">* 신용평가등급의 범위 : A1 ~ D</p>
+                                    </div>
+                                </div>
+                            </div>
                             <!-- 2022 -->
-                            <div class="section credit-area design2 type1 area-1">
+                            <div class="section credit-area design2 type1 dataCont" id="2022Data">
                                 <div class="section-wrap">
                                     <div class="section-head">
                                         <div class="section-subject">
@@ -498,7 +624,7 @@
                                 </div>
                             </div>
                             <!-- 2021 -->
-                            <div class="section credit-area design2 type1 area-2 hidden">
+                            <div class="section credit-area design2 type1 dataCont" id="2021Data">
                                 <div class="section-wrap">
                                     <div class="section-head">
                                         <div class="section-subject">
@@ -621,7 +747,7 @@
                                 </div>
                             </div>
                             <!-- 2020 -->
-                            <div class="section credit-area design2 type1 area-3 hidden">
+                            <div class="section credit-area design2 type1 dataCont" id="2020Data">
                                 <div class="section-wrap">
                                     <div class="section-head">
                                         <div class="section-subject">
@@ -744,7 +870,7 @@
                                 </div>
                             </div>
                             <!-- 2019 -->
-                            <div class="section credit-area design2 type1 area-4 hidden">
+                            <div class="section credit-area design2 type1 dataCont" id="2019Data">
                                 <div class="section-wrap">
                                     <div class="section-head">
                                         <div class="section-subject">
@@ -866,6 +992,7 @@
                                     </div>
                                 </div>
                             </div>
+
                         </div>
                     </div>
                 </div>
@@ -964,19 +1091,24 @@
     </div>
 
     <script>
-        document.getElementById('rating-year').addEventListener('change', function() {
-            var selectedValue = this.value;
+        function changeYearSelect() {
+            var selectedValue = $("#yearbox").val();
 
-            document.querySelectorAll('.credit-area').forEach(function(section) {
-                section.classList.add('hidden');
-            });
-
-            var sectionToShow = document.querySelector('.credit-area.area-' + selectedValue);
-            if (sectionToShow) {
-                sectionToShow.classList.remove('hidden');
+            $(".dataCont").hide();
+            if (selectedValue) {
+                $("#" + selectedValue + "Data").show();
             }
+        }
+
+        function resetyearbox() {
+            $(".dataCont").hide();
+        }
+
+        $(document).ready(function() {
+            changeYearSelect();
         });
     </script>
+
 
 </body>
 
