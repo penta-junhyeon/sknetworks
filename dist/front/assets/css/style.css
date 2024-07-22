@@ -3546,6 +3546,9 @@
         overflow: hidden;
         transition: top 0.3s ease;
     }
+    #header.regular, #header.regular-focus:not(.open) {
+        top: -5.8rem;
+    }
     #header .header-inner {
         padding: 0;
         flex-direction: column-reverse;
@@ -12478,6 +12481,22 @@ sub {
     flex-shrink: unset;
 }
 @media (max-width: 1023px) {
+    #wrap .local-info .data-list.breadcrumb.design1 .data-item {
+        display: block;
+        position: absolute;
+        overflow: hidden;
+        visibility: hidden;
+        margin: -1px;
+        padding: 0;
+        width: 1px;
+        height: 1px;
+        line-height: 1px;
+        font-size: 1px;
+        border: 0;
+        clip: rect(0 0 0 0);
+        clip: rect(0, 0, 0, 0);
+        pointer-events: none;
+    }
     #wrap .local-info .data-list.breadcrumb.design1 .data-item .item-text {
         font-size: 1.2rem;
         font-weight: 500;
@@ -13188,7 +13207,7 @@ sub {
 .sk-main .section.company .section-wrap .section-content.network .content-inner .section-head .section-summary {
     display: inline-block;
     color: rgb(212, 212, 216);
-    max-width: 69.2rem;
+    max-width: 51rem;
     transform: translateY(5rem);
     transition: transform 1.7s cubic-bezier(0.5, 0, 0, 1);
     word-break: keep-all;
@@ -13197,6 +13216,7 @@ sub {
 }
 @media (max-width: 1023px) {
     .sk-main .section.company .section-wrap .section-content.network .content-inner .section-head .section-summary {
+        max-width: 34rem;
         font-size: 1.6rem;
         font-weight: 500;
     }
@@ -14355,7 +14375,7 @@ sub {
 @media (max-width: 1023px) {
     .sk-main .section.investment .section-wrap .content-inner .section-body .board-list .board-item.stock-info .link {
         background: url("../images/main/bg-investment01-mo.png") no-repeat;
-        background-position: 5.4rem 6.4rem;
+        background-position: calc(100% + 20.5rem) 5.4rem;
         background-size: 33rem;
     }
 }
@@ -14407,7 +14427,8 @@ sub {
 @media (max-width: 1023px) {
     .sk-main .section.investment .section-wrap .content-inner .section-body .board-list .board-item.fina-info .link {
         background: url("../images/main/bg-investment02-mo.png") no-repeat;
-        background-position: 5.4rem 10rem;
+        background-position: calc(100% + 2.7rem) 8rem;
+        background-size: 14.4rem;
     }
 }
 @media (min-width: 1024px) {
@@ -14542,13 +14563,9 @@ sub {
 @media (max-width: 1023px) {
     .sk-main .section.investment.active1 .section-wrap .content-inner .section-body .board-list .board-item.stock-info .link {
         padding: 2rem;
-        background-position: calc(100% + 20.5rem) 5.4rem;
-        background-size: 33rem;
     }
     .sk-main .section.investment.active1 .section-wrap .content-inner .section-body .board-list .board-item.fina-info .link {
         padding: 2rem;
-        background-position: calc(100% + 2.7rem) 8rem;
-        background-size: 14.4rem;
     }
 }
 .sk-main .section.investment.active1 .section-wrap .content-inner .section-body .board-list .board-item.ir .board-head {
@@ -16708,11 +16725,11 @@ sub {
         background-image: url("../images/company/bg-history-03-mo.jpg");
     }
     .company.history .section.history-area .history-list .history-item.active1.menu-rising .head {
-        top: 0;
+        top: -1px;
         transform: translateY(0);
     }
     .company.history .section.history-area .history-list .history-item.active1.menu-dropping .head {
-        top: 0;
+        top: -1px;
         transform: translateY(5.8rem);
     }
     .company.history .section.history-area .history-list .history-item.active2 .head .summary {
@@ -16729,12 +16746,12 @@ sub {
         transform: translate(-50%, -2.5rem);
     }
     .company.history .section.history-area .history-list .history-item.active2.menu-rising .head {
-        top: 0;
+        top: -1px;
         transform: translateY(0);
         transition-duration: 0.5s;
     }
     .company.history .section.history-area .history-list .history-item.active2.menu-dropping .head {
-        top: 0;
+        top: -1px;
         transform: translateY(5.8rem);
         transition-duration: 0.5s;
     }
@@ -17650,6 +17667,40 @@ sub {
         flex-wrap: wrap;
     }
 }
+.ir.stock-info.price-info .content-body .section.shareholder-status {
+    position: relative;
+    padding-bottom: 16rem;
+}
+@media (max-width: 1023px) {
+    .ir.stock-info.price-info .content-body .section.shareholder-status {
+        padding-bottom: 8rem;
+    }
+}
+.ir.stock-info.price-info .content-body .section.shareholder-status::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    display: block;
+    width: 100vw;
+    height: 93.3rem;
+    background-color: #f6f6f7;
+    z-index: -1;
+}
+@media (max-width: 1023px) {
+    .ir.stock-info.price-info .content-body .section.shareholder-status::before {
+        height: 141.8rem;
+    }
+}
+.ir.stock-info.price-info .content-body .section.shareholder-status iframe {
+    height: 125.7rem;
+}
+@media (max-width: 1023px) {
+    .ir.stock-info.price-info .content-body .section.shareholder-status iframe {
+        height: 201.8rem;
+    }
+}
 .ir.stock-info.price-info table.col-w-1 col.col1 {
     width: 33.333%;
 }
@@ -17916,15 +17967,16 @@ sub {
         margin-top: unset !important;
     }
 }
-.ir.stock-info.ir-dart .section .pagination {
-    margin-top: 6.4rem;
+.ir.stock-info.ir-dart .section .section-body iframe {
+    height: 100%;
+    min-height: 880px;
 }
 @media (max-width: 1023px) {
     .ir.stock-info.ir-dart .section .section-subject {
         flex-direction: column;
     }
-    .ir.stock-info.ir-dart .section .pagination {
-        margin-top: 3.2rem;
+    .ir.stock-info.ir-dart .section .section-body iframe {
+        height: 1335px;
     }
 }
 .ir.stock-info.elect-not .section .section-subject {
