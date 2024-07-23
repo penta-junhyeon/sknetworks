@@ -12668,6 +12668,7 @@ sub {
 @media (max-width: 1023px) {
     .sk-main .section.intro .section-content.our-business .content-inner {
         width: 100%;
+        padding-top: 0;
     }
 }
 .sk-main .section.intro .section-content.our-esg {
@@ -12947,7 +12948,7 @@ sub {
     opacity: 1;
 }
 .sk-main .section.intro.active2 .section-content.our-business .content-inner {
-    transform: translate(-50%, -14.6rem);
+    transform: translate(-50%, -62%);
     padding-top: 0;
 }
 .sk-main .section.intro.active2 .section-content.our-business .content-inner .section-head .section-name::after {
@@ -22292,5 +22293,3 @@ button.swiper-pagination-bullet {
     backface-visibility: hidden;
     overflow: hidden;
 }
-
-/*# sourceMappingURL=d:/dev/sknetworks-show/dist/front/assets/css/style.css.map */
