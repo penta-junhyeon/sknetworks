@@ -178,18 +178,16 @@
                     scrollTrigger: {
                         // markers: true,
                         trigger: '.story2',
-                        start: 'top top',
+                        start: '50% top',
                         end: 'bottom bottom',
                         scrub: 0.001,
                     }
                 })
                 .to(sectionBg, {
-                    backgroundColor: '#F2FAFF',
-                    duration: 0.9
+                    backgroundColor: '#F2FAFF'
                 })
                 .to(sectionBg, {
-                    backgroundColor: '#FFFFFF',
-                    duration: 0.1
+                    backgroundColor: '#FFF'
                 })
                 .fromTo($story2Text, {
                     color: '#fff'
@@ -203,7 +201,7 @@
                             //markers: true,
                             trigger: figure,
                             start: 'top bottom',
-                            end: 'bottom bottom',
+                            end: 'top top',
                             toggleActions: 'play none none reverse',
                         }
                     })
@@ -213,7 +211,7 @@
                     }, {
                         opacity: '1',
                         y: '0',
-                        duration: 1
+                        duration: 0.5
                     }, 0)
             });
         }
@@ -567,14 +565,14 @@
                         </div>
                     </div>
                     <div class="local-body">
-                        <div class="content-head blind">주가정보 페이지</div>
+                        <div class="content-head blind">기업소개 페이지</div>
                         <div class="content-body">
                             <!-- tab-display -->
                             <div class="tab-display design1 case1 type1">
                                 <div class="swiper tab-wrap">
                                     <ul class="swiper-wrapper tab-list" role="tablist">
                                         <li id="tab1" class="swiper-slide tab-item" aria-controls="tab-panel1"><button role="tab" class="tab-text">본사 소개</button></li>
-                                        <li id="tab2" class="swiper-slide tab-item" aria-controls="tab-panel2"><button role="tab" class="tab-text">자회사 소개</button></li>
+                                        <li id="tab2" class="swiper-slide tab-item" aria-controls="tab-panel2"><button role="tab" class="tab-text">자회사/브랜드 소개</button></li>
                                     </ul>
                                 </div>
                             </div>
@@ -591,7 +589,7 @@
                                                     <div class="section-body">
                                                         <div class="data-list">
                                                             <div class="data-item active">1953년,<br> 선경직물로 출범한 SK네트웍스는<br> 우리나라 산업 변화에 발맞춰<br> 진화를 거듭해 왔습니다.</div>
-                                                            <div class="data-item">무역, 유통에서 출발하여<br> ICT 디바이스 유통, 통신 인프라 관리,<br> 글로벌 트레이딩, 자동차 관리,<br> 환경가전 렌털, 호텔·리조트 사업 등<br> 사업 영역을 다각화했습니다.</div>
+                                                            <div class="data-item">무역, 유통을 비롯해<br> ICT 디바이스 유통, 통신 인프라 관리,<br> 글로벌 트레이딩, 자동차 관리,<br> 환경가전 렌털, 호텔·리조트 사업 등<br> 사업 영역을 변화시켜 왔습니다.</div>
                                                             <div class="data-item">SK네트웍스는 미래 기술에 관련한<br> 전문적인 네트워크와 체계적인 포트폴리오<br> 관리 프로세스를 바탕으로<br> AI Company로 진화하고자 합니다.</div>
                                                             <div class="data-item">이를 위해 보유 사업에 AI를 접목하고<br> 데이터 솔루션 및 AI 관련 사업을 확장하여<br> 미래 혁신을 이뤄나갈 것입니다.</div>
                                                         </div>
@@ -616,44 +614,86 @@
                                                         <div class="post-list">
                                                             <div class="post-item">
                                                                 <div class="post-wrap">
-                                                                    <div class="post-figure"><img src="../../assets/images/company/story2-figure-01.jpg" alt="맞잡은 손에 지구가 있는 이미지"></div>
+                                                                    <div class="post-figure"><img src="../../assets/images/company/story2-figure-01.jpg" alt="1953 창립 무렵의 선경직물"></div>
                                                                     <p class="post-date">1953 창립 무렵의 선경직물</p>
                                                                 </div>
                                                             </div>
                                                             <div class="post-item">
                                                                 <div class="post-wrap">
-                                                                    <div class="post-figure"><img src="../../assets/images/company/story2-figure-02.jpg" alt="맞잡은 손에 지구가 있는 이미지"></div>
+                                                                    <div class="post-figure"><img src="../../assets/images/company/story2-figure-02.jpg" alt="1953"></div>
                                                                     <p class="post-date">1953</p>
                                                                 </div>
                                                             </div>
                                                             <div class="post-item">
                                                                 <div class="post-wrap">
-                                                                    <div class="post-figure"><img src="../../assets/images/company/story2-figure-03.jpg" alt="맞잡은 손에 지구가 있는 이미지"></div>
+                                                                    <div class="post-figure"><img src="../../assets/images/company/story2-figure-03.jpg" alt="1956"></div>
                                                                     <p class="post-date">1956</p>
                                                                 </div>
                                                             </div>
                                                             <div class="post-item">
                                                                 <div class="post-wrap">
-                                                                    <div class="post-figure"><img src="../../assets/images/company/story2-figure-04.jpg" alt="맞잡은 손에 지구가 있는 이미지"></div>
+                                                                    <div class="post-figure"><img src="../../assets/images/company/story2-figure-04.jpg" alt="1959"></div>
                                                                     <p class="post-date">1959</p>
                                                                 </div>
                                                             </div>
                                                             <div class="post-item">
                                                                 <div class="post-wrap">
-                                                                    <div class="post-figure"><img src="../../assets/images/company/story2-figure-05.jpg" alt="맞잡은 손에 지구가 있는 이미지"></div>
+                                                                    <div class="post-figure"><img src="../../assets/images/company/story2-figure-05.jpg" alt="1969 선경합섬 설립"></div>
+                                                                    <p class="post-date">1969 선경합섬 설립</p>
+                                                                </div>
+                                                            </div>
+                                                            <div class="post-item">
+                                                                <div class="post-wrap">
+                                                                    <div class="post-figure"><img src="../../assets/images/company/story2-figure-06.jpg" alt="1969"></div>
+                                                                    <p class="post-date">1969</p>
+                                                                </div>
+                                                            </div>
+                                                            <div class="post-item">
+                                                                <div class="post-wrap">
+                                                                    <div class="post-figure"><img src="../../assets/images/company/story2-figure-07.jpg" alt="1971"></div>
                                                                     <p class="post-date">1971</p>
                                                                 </div>
                                                             </div>
                                                             <div class="post-item">
                                                                 <div class="post-wrap">
-                                                                    <div class="post-figure"><img src="../../assets/images/company/story2-figure-06.jpg" alt="맞잡은 손에 지구가 있는 이미지"></div>
+                                                                    <div class="post-figure"><img src="../../assets/images/company/story2-figure-08.jpg" alt="1988"></div>
                                                                     <p class="post-date">1988</p>
                                                                 </div>
                                                             </div>
                                                             <div class="post-item">
                                                                 <div class="post-wrap">
-                                                                    <div class="post-figure"><img src="../../assets/images/company/story2-figure-07.jpg" alt="맞잡은 손에 지구가 있는 이미지"></div>
+                                                                    <div class="post-figure"><img src="../../assets/images/company/story2-figure-09.jpg" alt="2003"></div>
                                                                     <p class="post-date">2003</p>
+                                                                </div>
+                                                            </div>
+                                                            <div class="post-item">
+                                                                <div class="post-wrap">
+                                                                    <div class="post-figure"><img src="../../assets/images/company/story2-figure-10.jpg" alt="2005"></div>
+                                                                    <p class="post-date">2005</p>
+                                                                </div>
+                                                            </div>
+                                                            <div class="post-item">
+                                                                <div class="post-wrap">
+                                                                    <div class="post-figure"><img src="../../assets/images/company/story2-figure-11.jpg" alt="2005"></div>
+                                                                    <p class="post-date">2005</p>
+                                                                </div>
+                                                            </div>
+                                                            <div class="post-item">
+                                                                <div class="post-wrap">
+                                                                    <div class="post-figure"><img src="../../assets/images/company/story2-figure-12.jpg" alt="2012"></div>
+                                                                    <p class="post-date">2012</p>
+                                                                </div>
+                                                            </div>
+                                                            <div class="post-item">
+                                                                <div class="post-wrap">
+                                                                    <div class="post-figure"><img src="../../assets/images/company/story2-figure-13.jpg" alt="2019"></div>
+                                                                    <p class="post-date">2019</p>
+                                                                </div>
+                                                            </div>
+                                                            <div class="post-item">
+                                                                <div class="post-wrap">
+                                                                    <div class="post-figure"><img src="../../assets/images/company/story2-figure-14.jpg" alt="2021"></div>
+                                                                    <p class="post-date">2021</p>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -702,7 +742,7 @@
                                                     </div>
                                                     <p class="section-summary">
                                                         SK네트웍스는 국내외 네트워크 거점, 우량 거래선, 물류 능력 등의 경쟁력을 바탕으로<br class="pc-only">
-                                                        정보통신 유통, 글로벌 트레이딩, 자동차 경정비, 호텔, 환경가전 렌털 등 사업을 영위하고 있습니다.
+                                                        정보통신 유통, 글로벌 트레이딩, 모빌리티, 호텔, 환경가전 렌털 등 사업을 영위하고 있습니다.
                                                     </p>
                                                 </div>
                                                 <div class="section-body pallarax">
@@ -759,9 +799,9 @@
                                                         </h4>
                                                     </div>
                                                     <p class="section-summary">
-                                                        SK네트웍스는 지속가능한 기업으로의 성장하기 위해<br>
-                                                        ESG 성과 고도화, Net Zero 2040 실행력 강화, 사회적가치/ESG 연계 비즈니스 모델 혁신,<br>
-                                                        구성원 사회적가치/ESG 내재화라는 목표를 수립했습니다.
+                                                        SK네트웍스는 지속가능한 기업으로 성장하기 위해<br>
+                                                        ESG 성과 고도화, Net Zero 2040 실행력 강화, 사회적 가치 연계 비즈니스 모델 혁신,<br>
+                                                        구성원 사회적 가치 내재화라는 목표를 수립했습니다.
                                                     </p>
                                                 </div>
                                                 <div class="section-body pallarax">
@@ -872,7 +912,7 @@
                                                 </div>
                                                 <div class="section-body">
                                                     <div class="bg">
-                                                        <video preload="auto" autoplay loop muted src="../../assets/movies/bg-earth.mp4"></video>
+                                                        <video preload="auto" autoplay loop muted playsinline src="../../assets/movies/bg-earth.mp4"></video>
                                                     </div>
                                                     <div class="board-list">
                                                         <div class="board-item">

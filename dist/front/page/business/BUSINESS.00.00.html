@@ -28,6 +28,8 @@
     <script src="https://unpkg.com/@studio-freight/lenis@1.0.32/dist/lenis.min.js"></script>
     <script>
         document.addEventListener("DOMContentLoaded", () => {
+            Accordion();
+
             const dataItem = document.querySelectorAll(".business-profile .data-item")
             dataItem.forEach(item => {
                 item.addEventListener("click", function(e) {
@@ -355,12 +357,12 @@
                         </div>
                         <div class="local-aside">
                             <div class="loca-wrap">
-                                <h3 class="local-title">AI 기반의 비즈니스 모델 혁신을 통해 더 나은 미래로 나아갑니다.</h3>
+                                <h3 class="local-title">AI 기반의 비즈니스 모델 혁신을 통해<br class="pc-only"> 더 나은 미래로 나아갑니다.</h3>
                                 <p class="local-summary">고객가치를 혁신의 경험으로, 사회문제를 창의적 솔루션으로, 우리의 AI 기술이 더 큰 행복을 만들어가도록 더 나은 미래를 연결합니다.</p>
                             </div>
                         </div>
                         <div class="local-figure">
-                            <video preload="auto" autoplay loop muted src="../../assets/movies/bg-local-head-business-introduction.mp4"></video>
+                            <video preload="auto" autoplay loop muted playsinline src="../../assets/movies/bg-local-head-business-introduction.mp4"></video>
                         </div>
                         <div class="local-util">
                             <p class="scroll-guide">Scroll Down</p>
@@ -369,7 +371,7 @@
                     <div class="local-body">
                         <div class="content-head blind">사업 개요 페이지</div>
                         <div class="content-body">
-                            <div class="section design1 case3 type1 align3 business-profile">
+                            <div class="section design1 case3 type3 align3 business-profile">
                                 <div class="section-wrap">
                                     <div class="section-head">
                                         <div class="section-subject">
@@ -400,7 +402,7 @@
                                                 </li>
                                                 <li class="data-item rental">
                                                     <a href="#rental">
-                                                        <strong class="data-title">렌털</strong>
+                                                        <strong class="data-title">웰니스 가전</strong>
                                                     </a>
                                                 </li>
                                                 <li class="data-item mobility">
@@ -418,14 +420,11 @@
                                     </div>
                                 </div>
                             </div>
-                            <div id="invest" class="section design1 case4 type1 align3 invest">
+                            <div id="invest" class="section design1 case4 type3 align3 invest">
                                 <div class="section-wrap">
                                     <div class="section-head">
                                         <div class="section-subject">
                                             <h4 class="section-name">글로벌 투자</h4>
-                                            <p class="section-summary">
-                                                SK네트웍스가 AI Company로 도약합니다.
-                                            </p>
                                         </div>
                                     </div>
                                     <div class="section-body">
@@ -459,14 +458,11 @@
                                     </div>
                                 </div>
                             </div>
-                            <div id="infocom" class="section design1 case4 type1 align3 infocom">
+                            <div id="infocom" class="section design1 case4 type3 align3 infocom">
                                 <div class="section-wrap">
                                     <div class="section-head">
                                         <div class="section-subject">
                                             <h4 class="section-name">정보통신</h4>
-                                            <p class="section-summary">
-                                                AI와 함께하는 미래로 안내합니다.
-                                            </p>
                                         </div>
                                     </div>
                                     <div class="section-body">
@@ -484,13 +480,27 @@
                                                     </div>
                                                     <div class="board-body">
                                                         <div class="board-list-sub">
-                                                            <div class="board-item-sub">
-                                                                <strong class="board-name-sub">사업 영역</strong>
-                                                                <p class="para">휴대폰 단말기 도매, 물류 서비스, ICT Device/Accessory B2B 유통</p>
-                                                            </div>
-                                                            <div class="board-item-sub">
-                                                                <strong class="board-name-sub">FY2022 매출액</strong>
-                                                                <p class="para">4조 5,000억 원</p>
+                                                            <div class="accordion-display design1">
+                                                                <div class="accordion-item">
+                                                                    <div class="accordion-head pc-only">
+                                                                        <button type="button" class="btn design3 case2 type1 color4 ar-icon-arrow-down1
+                                                                    " aria-label="닫힘" aria-controls="accordionCont1">
+                                                                            <span class="btn-text">자세히 보기</span>
+                                                                        </button>
+                                                                    </div>
+                                                                    <div class="accordion-body" id="accordionCont1">
+                                                                        <div class="accordion-body-inner">
+                                                                            <div class="board-item-sub">
+                                                                                <strong class="board-name-sub">사업 영역</strong>
+                                                                                <p class="para">휴대폰 단말기 도매, 물류 서비스, ICT Device/Accessory B2B 유통</p>
+                                                                            </div>
+                                                                            <div class="board-item-sub">
+                                                                                <strong class="board-name-sub">FY2022 매출액</strong>
+                                                                                <p class="para">4조 5,000억 원</p>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -509,9 +519,23 @@
                                                     </div>
                                                     <div class="board-body">
                                                         <div class="board-list-sub">
-                                                            <div class="board-item-sub">
-                                                                <strong class="board-name-sub">사업 영역</strong>
-                                                                <p class="para">AI 기반 중고폰 매입기 '민팃 ATM' 운영</p>
+                                                            <div class="accordion-display design1">
+                                                                <div class="accordion-item">
+                                                                    <div class="accordion-head pc-only">
+                                                                        <button type="button" class="btn design3 case2 type1 color4 ar-icon-arrow-down1
+                                                                    " aria-label="닫힘" aria-controls="accordionCont2">
+                                                                            <span class="btn-text">자세히 보기</span>
+                                                                        </button>
+                                                                    </div>
+                                                                    <div class="accordion-body" id="accordionCont2">
+                                                                        <div class="accordion-body-inner">
+                                                                            <div class="board-item-sub">
+                                                                                <strong class="board-name-sub">사업 영역</strong>
+                                                                                <p class="para">AI 기반 중고폰 매입기 '민팃 ATM' 운영</p>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -526,17 +550,31 @@
                                                                 <span class="btn-text blind">엔코아 페이지 바로가기</span>
                                                             </a>
                                                         </strong>
-                                                        <p class="board-summary">기업의 비즈니스 혁신을 지원하는 Tech Company로 도약합니다.</p>
+                                                        <p class="board-summary">데이터 비즈니스 전문 기업으로서 기업의 지속가능한 데이터 관리와 활용을 지원합니다.</p>
                                                     </div>
                                                     <div class="board-body">
                                                         <div class="board-list-sub">
-                                                            <div class="board-item-sub">
-                                                                <strong class="board-name-sub">사업 영역</strong>
-                                                                <p class="para">Enterprise AI Platform, 데이터 컨설팅, 데이터 솔루션 DATAWARE™ 등</p>
-                                                            </div>
-                                                            <div class="board-item-sub">
-                                                                <strong class="board-name-sub">FY2023 매출액</strong>
-                                                                <p class="para">257억 원</p>
+                                                            <div class="accordion-display design1">
+                                                                <div class="accordion-item">
+                                                                    <div class="accordion-head pc-only">
+                                                                        <button type="button" class="btn design3 case2 type1 color4 ar-icon-arrow-down1
+                                                                    " aria-label="닫힘" aria-controls="accordionCont3">
+                                                                            <span class="btn-text">자세히 보기</span>
+                                                                        </button>
+                                                                    </div>
+                                                                    <div class="accordion-body" id="accordionCont3">
+                                                                        <div class="accordion-body-inner">
+                                                                            <div class="board-item-sub">
+                                                                                <strong class="board-name-sub">사업 영역</strong>
+                                                                                <p class="para">Enterprise AI Platform, 데이터 컨설팅, 데이터 솔루션 DATAWARE™ 등</p>
+                                                                            </div>
+                                                                            <div class="board-item-sub">
+                                                                                <strong class="board-name-sub">FY2023 매출액</strong>
+                                                                                <p class="para">257억 원</p>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -546,14 +584,11 @@
                                     </div>
                                 </div>
                             </div>
-                            <div id="hotel" class="section design1 case4 type1 align3 hotel">
+                            <div id="hotel" class="section design1 case4 type3 align3 hotel">
                                 <div class="section-wrap">
                                     <div class="section-head">
                                         <div class="section-subject">
                                             <h4 class="section-name">호텔앤리조트</h4>
-                                            <p class="section-summary">
-                                                Beyond Entertainment, Elevating Excitement
-                                            </p>
                                         </div>
                                     </div>
                                     <div class="section-body">
@@ -581,39 +616,36 @@
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <div class="board-util btn-display design1 case5">
-                                                        <div class="btn-area">
-                                                            <a class="btn design3 case3 type1 color6 ar-icon-arrow-right-up2" target="_blank" href="https://www.walkerhill.com/grandwalkerhillseoul/">
-                                                                <span class="btn-text">그랜드 워커힐 서울</span>
-                                                            </a>
-                                                            <a class="btn design3 case3 type1 color6 ar-icon-arrow-right-up2" target="_blank" href="https://www.walkerhill.com/vistawalkerhillseoul/">
-                                                                <span class="btn-text">비스타 워커힐 서울</span>
-                                                            </a>
-                                                            <a class="btn design3 case3 type1 color6 ar-icon-arrow-right-up2" target="_blank" href="https://www.walkerhill.com/grandwalkerhillseoul/douglas/Intro">
-                                                                <span class="btn-text">더글라스하우스</span>
-                                                            </a>
-                                                            <a class="btn design3 case3 type1 color6 ar-icon-arrow-right-up2" target="_blank" href="https://www.walkerhill.com/darakhyu/hub/kr/">
-                                                                <span class="btn-text">다락휴</span>
-                                                            </a>
-                                                            <a class="btn design3 case3 type1 color6 ar-icon-arrow-right-up2" target="_blank" href="https://www.walkerhill.com/transithotel/kr/">
-                                                                <span class="btn-text">인천공항 환승호텔</span>
-                                                            </a>
-                                                        </div>
+                                                    <!-- <div class="board-util btn-display design1 case5">
+                                                    <div class="btn-area">
+                                                        <a class="btn design3 case3 type1 color6 ar-icon-arrow-right-up2" target="_blank" href="https://www.walkerhill.com/grandwalkerhillseoul/">
+                                                            <span class="btn-text">그랜드 워커힐 서울</span>
+                                                        </a>
+                                                        <a class="btn design3 case3 type1 color6 ar-icon-arrow-right-up2" target="_blank" href="https://www.walkerhill.com/vistawalkerhillseoul/">
+                                                            <span class="btn-text">비스타 워커힐 서울</span>
+                                                        </a>
+                                                        <a class="btn design3 case3 type1 color6 ar-icon-arrow-right-up2" target="_blank" href="https://www.walkerhill.com/grandwalkerhillseoul/douglas/Intro">
+                                                            <span class="btn-text">더글라스하우스</span>
+                                                        </a>
+                                                        <a class="btn design3 case3 type1 color6 ar-icon-arrow-right-up2" target="_blank" href="https://www.walkerhill.com/darakhyu/hub/kr/">
+                                                            <span class="btn-text">다락휴</span>
+                                                        </a>
+                                                        <a class="btn design3 case3 type1 color6 ar-icon-arrow-right-up2" target="_blank" href="https://www.walkerhill.com/transithotel/kr/">
+                                                            <span class="btn-text">인천공항 환승호텔</span>
+                                                        </a>
                                                     </div>
+                                                </div> -->
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div id="rental" class="section design1 case4 type1 align3 rental">
+                            <div id="rental" class="section design1 case4 type3 align3 rental">
                                 <div class="section-wrap">
                                     <div class="section-head">
                                         <div class="section-subject">
-                                            <h4 class="section-name">렌털</h4>
-                                            <p class="section-summary">
-                                                건강하고 편리한, 친환경적인 일상을 시작합니다.
-                                            </p>
+                                            <h4 class="section-name">웰니스 가전</h4>
                                         </div>
                                     </div>
                                     <div class="section-body">
@@ -641,27 +673,17 @@
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <div class="board-util btn-display design1 case5">
-                                                        <div class="btn-area">
-                                                            <a class="btn design3 case3 type1 color6 ar-icon-arrow-right-up2" href="https://www.skmagic.com/">
-                                                                <span class="btn-text">SK매직</span>
-                                                            </a>
-                                                        </div>
-                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div id="mobility" class="section design1 case4 type1 align3 mobility">
+                            <div id="mobility" class="section design1 case4 type3 align3 mobility">
                                 <div class="section-wrap">
                                     <div class="section-head">
                                         <div class="section-subject">
                                             <h4 class="section-name">모빌리티</h4>
-                                            <p class="section-summary">
-                                                AI를 통해 더 차별화된 Mobility Service로 혁신합니다.
-                                            </p>
                                         </div>
                                     </div>
                                     <div class="section-body">
@@ -714,27 +736,17 @@
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <div class="board-util btn-display design1 case5">
-                                                        <div class="btn-area">
-                                                            <a class="btn design3 case3 type1 color6 ar-icon-arrow-right-up2" href="https://www.speedmate.com/;jsessionid=9DE1390FAB6C3D81535442AECD2593A1.skn-smhomepap1-user">
-                                                                <span class="btn-text">스피드메이트</span>
-                                                            </a>
-                                                        </div>
-                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div id="trading" class="section design1 case4 type1 align3 trading">
+                            <div id="trading" class="section design1 case4 type3 align3 trading">
                                 <div class="section-wrap">
                                     <div class="section-head">
                                         <div class="section-subject">
                                             <h4 class="section-name">글로벌 트레이딩</h4>
-                                            <p class="section-summary">
-                                                국경을 넘어 세계로 나아갑니다.
-                                            </p>
                                         </div>
                                     </div>
                                     <div class="section-body">
@@ -748,8 +760,7 @@
                                                                 <span class="btn-text blind">화학·소재 페이지 바로가기</span>
                                                             </a>
                                                         </strong>
-                                                        <p class="board-summary">화학·소재
-                                                            50년 이상 이어온 수출입 역량으로 업계 핵심 플레이어로 인정받고 있습니다.</p>
+                                                        <p class="board-summary">50년 이상 이어온 수출입 역량으로 화학제품 위주의 무역을 전개하고 있습니다.</p>
                                                     </div>
                                                     <div class="board-body">
                                                         <div class="board-list-sub">
@@ -967,6 +978,21 @@
                     }
                     $selector.addClass('active');
                 }
+            });
+
+            const infocomAccordionItems = document.querySelectorAll('.section.infocom .accordion-item');
+
+            infocomAccordionItems.forEach(item => {
+                const infocomButton = item.querySelector('.accordion-head button');
+                const infocomBtnText = infocomButton.querySelector('.btn-text');
+
+                infocomButton.addEventListener('click', function() {
+                    if (item.classList.contains('active')) {
+                        infocomBtnText.textContent = '자세히 보기';
+                    } else {
+                        infocomBtnText.textContent = '닫기';
+                    }
+                });
             });
         }
     </script>
