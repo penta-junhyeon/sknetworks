@@ -474,6 +474,45 @@
         margin-top: 4.8rem;
     }
 }
+.board-list.design3.case3 {
+    display: flex;
+    gap: 6.4rem;
+}
+.board-list.design3.case3 .board-item {
+    width: calc(33.3333333333% - 4.2666rem);
+    padding: 4rem;
+    border-radius: 1.6rem;
+    background-color: rgb(246, 246, 247);
+    position: relative;
+}
+.board-list.design3.case3 .board-item ~ .board-item::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -4.8rem;
+    width: 3.2rem;
+    height: 3.2rem;
+    transform: translateY(-50%);
+    background-image: url("data:image/svg+xml,%0A%3Csvg width='9' height='14' viewBox='0 0 9 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M0.365166 0.365166C0.716638 0.0136945 1.28649 0.0136945 1.63796 0.365166L8.27435 7.00156L1.63796 13.638C1.28649 13.9894 0.716638 13.9894 0.365166 13.638C0.0136945 13.2865 0.0136945 12.7166 0.365166 12.3652L5.72877 7.00156L0.365166 1.63796C0.0136945 1.28649 0.0136945 0.716638 0.365166 0.365166Z' fill='rgb(151,53,208)'/%3E%3C/svg%3E%0A");
+    background-repeat: no-repeat;
+    background-size: 1.2rem 1.9rem;
+    background-position: center center;
+}
+@media (max-width: 1023px) {
+    .board-list.design3.case3 {
+        flex-direction: column;
+        gap: 4rem;
+    }
+    .board-list.design3.case3 .board-item {
+        width: 100%;
+        padding: 2.4rem;
+    }
+    .board-list.design3.case3 .board-item ~ .board-item::before {
+        top: -3.6rem;
+        left: 50%;
+        transform: rotate(90deg) translateY(50%);
+    }
+}
 .board-list.design4 {
     display: flex;
 }
@@ -521,9 +560,9 @@
     }
 }
 .board-list.design4.case1.type1 .board-item .board-wrap .board-info .board-caption {
+    color: rgb(109, 12, 166);
     font-size: 1.4rem;
     font-weight: 700;
-    color: rgb(109, 12, 166);
 }
 .board-list.design4.case1.type1 .board-item .board-wrap .board-info .board-name {
     font-size: 2.4rem;
@@ -537,9 +576,9 @@
 }
 @media (max-width: 1023px) {
     .board-list.design4.case1.type1 .board-item .board-wrap .board-info .board-caption {
+        padding: 0.4rem 0.8rem;
         font-size: 1.2rem;
         font-weight: 700;
-        padding: 0.4rem 0.8rem;
     }
     .board-list.design4.case1.type1 .board-item .board-wrap .board-info .board-caption + .board-name {
         margin-top: 1.2rem;
@@ -596,14 +635,14 @@
     }
 }
 .board-list.design5.case2.type1 .board-item .board-wrap .board-head .board-name {
+    color: rgb(109, 12, 166);
     font-size: 2.4rem;
     font-weight: 700;
-    color: rgb(109, 12, 166);
 }
 .board-list.design5.case2.type1 .board-item .board-wrap .board-body .para {
+    color: rgb(63, 63, 70);
     font-size: 1.6rem;
     font-weight: 700;
-    color: rgb(63, 63, 70);
 }
 @media (max-width: 1023px) {
     .board-list.design5.case2.type1 .board-item .board-wrap .board-head .board-name {
@@ -663,20 +702,20 @@
     }
 }
 .board-list.design6.case1.type1 .board-item .board-wrap .board-head .board-rank {
-    font-size: 6.4rem;
-    font-weight: 700;
     color: rgb(0, 0, 0);
     text-align: center;
+    font-size: 6.4rem;
+    font-weight: 700;
 }
 .board-list.design6.case1.type1 .board-item .board-wrap .board-info .data-head .data-subject {
+    color: rgb(21, 21, 26);
     font-size: 2.4rem;
     font-weight: 700;
-    color: rgb(21, 21, 26);
 }
 .board-list.design6.case1.type1 .board-item .board-wrap .board-info .data-body {
+    color: rgb(113, 113, 122);
     font-size: 1.8rem;
     font-weight: 500;
-    color: rgb(113, 113, 122);
 }
 @media (max-width: 1023px) {
     .board-list.design6.case1.type1 .board-item .board-wrap .board-info .data-head .data-subject {
@@ -1167,12 +1206,12 @@
     }
 }
 .board-list.design12 {
-    display: flex;
     width: 100%;
-    flex-wrap: wrap;
 }
 .board-list.design12.case1 {
     width: 100%;
+    display: flex;
+    flex-wrap: wrap;
     gap: 2rem;
 }
 .board-list.design12.case1 > .board-item {
@@ -1185,11 +1224,6 @@
     padding: 4rem;
     text-align: left;
 }
-.board-list.design12.case1 > .board-item > .board-wrap > .board-name {
-    font-size: 2rem;
-    font-weight: 700;
-    color: rgb(151, 53, 208);
-}
 .board-list.design12.case1 > .board-item > .board-wrap > .board-name + .board-body {
     margin-top: 0.8rem;
 }
@@ -1201,17 +1235,51 @@
     .board-list.design12.case1 > .board-item {
         width: 100%;
     }
+    .board-list.design12.case1 > .board-item > .board-wrap {
+        padding: 2.4rem;
+    }
 }
-.board-list.design12.type1 > .board-item > .board-wrap .board-info > .board-name {
-    color: rgb(21, 21, 26);
-    font-size: 2rem;
-    font-weight: 600;
+.board-list.design12.case2 > .board-item {
+    background-color: rgb(255, 255, 255);
+    border-radius: 1.6rem;
+    box-shadow: 0 0.1336rem 0.5342rem 0 rgba(0, 0, 0, 0.1);
+}
+.board-list.design12.case2 > .board-item > .board-wrap {
+    padding: 4rem;
+    text-align: left;
+}
+.board-list.design12.case2 > .board-item > .board-wrap .board-name + .board-body {
+    margin-top: 2.4rem;
+}
+.board-list.design12.case2 > .board-item + .board-item {
+    margin-top: 2rem;
 }
 @media (max-width: 1023px) {
-    .board-list.design12.type1 > .board-item > .board-wrap .board-info > .board-name {
-        font-size: 1.4rem;
+    .board-list.design12.case2 > .board-item > .board-wrap {
+        padding: 2.4rem;
+    }
+    .board-list.design12.case2 > .board-item > .board-wrap .board-name + .board-body {
+        margin-top: 1.6rem;
+    }
+    .board-list.design12.case2 > .board-item + .board-item {
+        margin-top: 1.6rem;
+    }
+}
+.board-list.design12.type1 > .board-item > .board-wrap > .board-name {
+    color: rgb(151, 53, 208);
+    font-size: 2rem;
+    font-weight: 700;
+}
+@media (max-width: 1023px) {
+    .board-list.design12.type1 > .board-item > .board-wrap > .board-name {
+        font-size: 1.8rem;
         font-weight: 700;
     }
+}
+.board-list.design12.type1 > .board-item > .board-wrap .board-body > .para {
+    color: rgb(63, 63, 70);
+    font-size: 1.6rem;
+    font-weight: 500;
 }
 @media (max-width: 1023px) {
     .board-list.design12 {
@@ -4097,6 +4165,11 @@
 .data-display.design1.case4 > .data-list > .data-item > .data-head + .data-body {
     margin-top: 1rem;
 }
+@media (max-width: 1023px) {
+    .data-display.design1.case4 > .data-list > .data-item {
+        margin-top: 1.6rem;
+    }
+}
 @media (max-width: 1023px) and (max-width: 1023px) {
     .data-display.design1.case4 > .data-list > .data-item > .data-head > .data-subject {
         padding: 0;
@@ -6568,20 +6641,20 @@
     }
 }
 .bullet-display.design1.type3 > .data-list > .data-item {
-    font-size: 1.4rem;
-    font-weight: 500;
     color: rgb(113, 113, 122);
+    font-size: 1.6rem;
+    font-weight: 500;
 }
 @media (max-width: 1023px) {
     .bullet-display.design1.type3 > .data-list > .data-item {
-        font-size: 1.2rem;
+        font-size: 1.4rem;
         font-weight: 500;
     }
 }
 .bullet-display.design1.type3 > .data-list > .data-item::before {
+    color: rgb(113, 113, 122);
     font-size: 1.4rem;
     font-weight: 500;
-    color: rgb(113, 113, 122);
 }
 @media (max-width: 1023px) {
     .bullet-display.design1.type3 > .data-list > .data-item::before {
@@ -16740,9 +16813,9 @@ sub {
     font-size: 1.6rem;
     font-weight: 500;
 }
-@media (min-width: 1024px) and (max-width: 1120px) {
+@media (min-width: 1024px) and (max-width: 1133px) {
     .company.history .section.anchor-area .anchor-display .anchor-list .anchor-link .link-text {
-        font-size: 1.8rem;
+        font-size: 1.8rem !important;
     }
 }
 .company.history .section.anchor-area .anchor-display .anchor-list .anchor-link.active {
@@ -19819,31 +19892,30 @@ sub {
         margin: 0 auto;
     }
 }
-.esg:not(.overview).understand .panel-display .panel-list .panel-item .section.probono .post-list.layout1 .post-inform {
+.esg:not(.overview).understand .panel-display .panel-list .panel-item .section.probono .section-body .post-list.layout1 .post-inform {
     width: 45.5%;
 }
-.esg:not(.overview).understand .panel-display .panel-list .panel-item .section.probono .post-list.layout1 .post-body {
+.esg:not(.overview).understand .panel-display .panel-list .panel-item .section.probono .section-body .post-list.layout1 .post-body {
     width: 49.17%;
 }
-.esg:not(.overview).understand .panel-display .panel-list .panel-item .section.probono .post-list.layout2 .post-inform {
-    width: 64.25%;
+.esg:not(.overview).understand .panel-display .panel-list .panel-item .section.probono .section-body .post-list.layout1 ~ .board-list {
+    margin-top: 8rem;
 }
-.esg:not(.overview).understand .panel-display .panel-list .panel-item .section.probono .post-list.layout2 .post-body {
-    width: 30.42%;
+.esg:not(.overview).understand .panel-display .panel-list .panel-item .section.probono .section-body .post-list.layout1 ~ .board-list + .data-display {
+    margin-top: 8rem;
 }
 @media (max-width: 1023px) {
-    .esg:not(.overview).understand .panel-display .panel-list .panel-item .section.probono .post-list.layout1 .post-inform {
+    .esg:not(.overview).understand .panel-display .panel-list .panel-item .section.probono .section-body .post-list.layout1 .post-inform {
         width: 100%;
     }
-    .esg:not(.overview).understand .panel-display .panel-list .panel-item .section.probono .post-list.layout1 .post-body {
+    .esg:not(.overview).understand .panel-display .panel-list .panel-item .section.probono .section-body .post-list.layout1 .post-body {
         width: 100%;
     }
-    .esg:not(.overview).understand .panel-display .panel-list .panel-item .section.probono .post-list.layout2 .post-inform {
-        width: 100%;
+    .esg:not(.overview).understand .panel-display .panel-list .panel-item .section.probono .section-body .post-list.layout1 ~ .board-list {
+        margin-top: 4.8rem;
     }
-    .esg:not(.overview).understand .panel-display .panel-list .panel-item .section.probono .post-list.layout2 .post-body {
-        width: 53.33%;
-        margin: 0 auto;
+    .esg:not(.overview).understand .panel-display .panel-list .panel-item .section.probono .section-body .post-list.layout1 ~ .board-list + .data-display {
+        margin-top: 4.8rem;
     }
 }
 .esg:not(.overview).understand .panel-display .panel-list .panel-item .section.collabo .section-head {
@@ -19947,16 +20019,10 @@ sub {
         margin-top: 3.2rem;
     }
 }
-.esg:not(.overview).understand .panel-display .panel-list .panel-item .section.local-activities .section-body > .para + .comment {
-    margin-top: 1.6rem;
-}
 .esg:not(.overview).understand .panel-display .panel-list .panel-item .section.local-activities .section-body > .para + .comment + .data-display {
     margin-top: 8rem;
 }
 @media (max-width: 1023px) {
-    .esg:not(.overview).understand .panel-display .panel-list .panel-item .section.local-activities .section-body > .para + .comment {
-        margin-top: 1.2rem;
-    }
     .esg:not(.overview).understand .panel-display .panel-list .panel-item .section.local-activities .section-body > .para + .comment + .data-display {
         margin-top: 4.8rem;
     }
