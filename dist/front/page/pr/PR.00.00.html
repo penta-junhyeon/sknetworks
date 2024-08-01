@@ -31,48 +31,26 @@
             Tab();
 
             //인트로 슬라이드
-            var sync1 = new Swiper(".sync1", {
-                slidesPerView: 1,
-                loopAdditionalSlides: 1,
+            new Swiper(".pr-swiper2", {
                 effect: "fade",
                 fadeEffect: {
                     crossFade: true
                 },
-                speed: 500,
                 loop: true,
                 a11y: true,
-                controller: {
-                    control: sync2
-                }
-            });
-            var sync2 = new Swiper(".sync2", {
-                slidesPerView: 1,
-                loopAdditionalSlides: 1,
-                loop: true,
-                a11y: true,
-                effect: "fade",
-                fadeEffect: {
-                    crossFade: true
-                },
-                speed: 500,
+                allowTouchMove: false,
                 navigation: {
-                    nextEl: ".sync2 .swiper-button-next",
-                    prevEl: ".sync2 .swiper-button-prev",
+                    nextEl: ".swiper-button-next",
+                    prevEl: ".swiper-button-prev",
                 },
-                controller: {
-                    control: sync1
-                }
             });
-
-            sync1.controller.control = sync2;
-            sync2.controller.control = sync1;
 
             //영상 라이브러리 슬라이드
             var prSwiper1 = new Swiper(".pr-swiper1", {
                 slidesPerView: 2,
                 slidesPerColumn: 2,
                 spaceBetween: 15,
-                allowTouchMove: true,
+                allowTouchMove: false,
                 loop: false,
                 centeredSlides: false,
                 a11y: true,
@@ -87,14 +65,24 @@
                         spaceBetween: 15,
                         loop: false,
                         centeredSlides: false,
+                        allowTouchMove: true,
                     },
                     1024: {
                         slidesPerView: 3,
                         spaceBetween: 24,
                         loop: true,
                         centeredSlides: true,
+                        allowTouchMove: false,
                     },
                 },
+            });
+
+            document.querySelector('.pr-swiper-area').addEventListener('click', function(e) {
+                if (e.target.closest(".swiper-slide-next")) {
+                    prSwiper1.slideNext();
+                } else if (e.target.closest(".swiper-slide-prev")) {
+                    prSwiper1.slidePrev();
+                }
             });
         });
     </script>
@@ -238,6 +226,9 @@
                                                     <a href="javascript:void(0)" target="_self" class="depth3">정보보호 및 보안</a>
                                                 </li>
                                                 <li class="depth3-item">
+                                                    <a href="javascript:void(0)" target="_self" class="depth3">투자관리</a>
+                                                </li>
+                                                <li class="depth3-item">
                                                     <a href="javascript:void(0)" target="_self" class="depth3">자회사·손자회사 ESG관리</a>
                                                 </li>
                                             </ul>
@@ -345,20 +336,13 @@
                                         <a href="javascript:void(0)" target="_self" class="depth2">기업문화</a>
                                     </li>
                                     <li class="depth2-item">
-                                        <a href="javascript:void(0)" target="_self" class="depth2">인사제도</a>
+                                        <a href="javascript:void(0)" target="_self" class="depth2">인재육성</a>
+                                    </li>
+                                    <li class="depth2-item">
+                                        <a href="javascript:void(0)" target="_self" class="depth2">평가/보상</a>
                                     </li>
                                     <li class="depth2-item">
                                         <a href="javascript:void(0)" target="_self" class="depth2">채용정보</a>
-                                        <div class="depth3-wrap">
-                                            <ul class="depth3-list">
-                                                <li class="depth3-item">
-                                                    <a href="javascript:void(0)" target="_self" class="depth3">직무소개</a>
-                                                </li>
-                                                <li class="depth3-item">
-                                                    <a href="javascript:void(0)" target="_self" class="depth3">채용절차</a>
-                                                </li>
-                                            </ul>
-                                        </div>
                                     </li>
                                 </ul>
                             </div>
@@ -401,9 +385,7 @@
                         <ul class="data-list breadcrumb design1 case1 dark">
                             <li class="data-item"><span class="item-text">Home</span></li>
                             <li class="data-item"><span class="item-text">PR</span></li>
-
                             <li class="data-item"><span class="item-text">뉴스룸</span></li>
-
 
                         </ul>
                     </div>
@@ -417,70 +399,80 @@
                         <div class="content-body">
                             <div class="section">
                                 <div class="section-body">
-                                    <div class="swiper-area design1">
-                                        <div class="swiper-display sync1 swiper">
-                                            <ul class="swiper-wrapper">
-                                                <li class="swiper-slide">
-                                                    <img src="../../assets/images/pr/news-slide-01.jpg" alt="SK렌터카, 'IF 디자인 어워드 2024' 본상 수상">
-                                                </li>
-                                                <li class="swiper-slide">
-                                                    <img src="../../assets/images/ir/thumb-01.jpg" alt="SK렌터카, 'IF 디자인 어워드 2024' 본상 수상">
-                                                </li>
-                                                <li class="swiper-slide">
-                                                    <img src="../../assets/images/pr/news-slide-01.jpg" alt="SK렌터카, 'IF 디자인 어워드 2024' 본상 수상">
-                                                </li>
-                                                <li class="swiper-slide">
-                                                    <img src="../../assets/images/ir/thumb-01.jpg" alt="SK렌터카, 'IF 디자인 어워드 2024' 본상 수상">
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <div class="swiper-display sync2 swiper">
-                                            <ul class="swiper-wrapper">
-                                                <li class="swiper-slide">
-                                                    <div class="slide-head">
-                                                        <span class="cate">SK렌터카1</span>
-                                                        <strong class="tit">SK렌터카, 'IF 디자인 어워드 2024' 본상 수상</strong>
+                                    <div class="swiper-display swiper pr-swiper2">
+                                        <ul class="swiper-wrapper">
+                                            <li class="swiper-slide">
+                                                <a href="javascript:void(0)">
+                                                    <div class="figure-wrap">
+                                                        <img src="../../assets/images/pr/news-slide-01.jpg" alt="SK렌터카, 'IF 디자인 어워드 2024' 본상 수상">
                                                     </div>
-                                                    <div class="slide-body">
-                                                        <p class="des">SK렌터카(대표이사:황일문)가 세계 3대 디자인 공모전 중 하나로 꼽히는 ‘IF 디자인 어워드 2024＇에서 ＇플랫폼ㆍUI (사용자 인터페이스)’ 부문 본상을 수상했다고 20일 밝혔다.</p>
-                                                        <span class="date">2024.02.01</span>
+                                                    <div class="text-wrap">
+                                                        <div class="slide-head">
+                                                            <span class="cate">SK렌터카1</span>
+                                                            <h3 class="tit">SK렌터카, 'IF 디자인 어워드 2024' 본상 수상</h3>
+                                                        </div>
+                                                        <div class="slide-body">
+                                                            <p class="des">SK렌터카(대표이사:황일문)가 세계 3대 디자인 공모전 중 하나로 꼽히는 ‘IF 디자인 어워드 2024＇에서 ＇플랫폼ㆍUI (사용자 인터페이스)’ 부문 본상을 수상했다고 20일 밝혔다.</p>
+                                                            <span class="date">2024.02.01</span>
+                                                        </div>
                                                     </div>
-                                                </li>
-                                                <li class="swiper-slide">
-                                                    <div class="slide-head">
-                                                        <span class="cate">SK렌터카2</span>
-                                                        <strong class="tit">SK렌터카, 창립 36주년 맞아 전사 봉사활동 실시</strong>
+                                                </a>
+                                            </li>
+                                            <li class="swiper-slide">
+                                                <a href="javascript:void(0)">
+                                                    <div class="figure-wrap">
+                                                        <img src="../../assets/images/ir/thumb-01.jpg" alt="SK렌터카, 'IF 디자인 어워드 2024' 본상 수상">
                                                     </div>
-                                                    <div class="slide-body">
-                                                        <p class="des">SK렌터카(대표이사 : 황일문)가 세계 3대 디자인 공모전 중 SK렌터카(대표이사 : 황일문)가 세계 3대 디자인 공모전 중 하나로 꼽히는 ‘IF 디자인 어워드 2024’에서 ‘플랫폼·UI(사용자 인터페이스)’ 부문 본상을 수상했다고 20일 밝혔다.</p>
-                                                        <span class="date">2024.02.01</span>
+                                                    <div class="text-wrap">
+                                                        <div class="slide-head">
+                                                            <span class="cate">SK렌터카2</span>
+                                                            <h3 class="tit">SK렌터카, 창립 36주년 맞아 전사 봉사활동 실시</h3>
+                                                        </div>
+                                                        <div class="slide-body">
+                                                            <p class="des">SK렌터카(대표이사 : 황일문)가 세계 3대 디자인 공모전 중 SK렌터카(대표이사 : 황일문)가 세계 3대 디자인 공모전 중 하나로 꼽히는 ‘IF 디자인 어워드 2024’에서 ‘플랫폼·UI(사용자 인터페이스)’ 부문 본상을 수상했다고 20일 밝혔다.</p>
+                                                            <span class="date">2024.02.01</span>
+                                                        </div>
                                                     </div>
-                                                </li>
-                                                <li class="swiper-slide">
-                                                    <div class="slide-head">
-                                                        <span class="cate">SK렌터카3</span>
-                                                        <strong class="tit">SK렌터카, 'IF 디자인 어워드 2024' 본상 수상</strong>
+                                                </a>
+                                            </li>
+                                            <li class="swiper-slide">
+                                                <a href="javascript:void(0)">
+                                                    <div class="figure-wrap">
+                                                        <img src="../../assets/images/pr/news-slide-01.jpg" alt="SK렌터카, 'IF 디자인 어워드 2024' 본상 수상">
                                                     </div>
-                                                    <div class="slide-body">
-                                                        <p class="des">SK렌터카(대표이사:황일문)가 세계 3대 디자인 공모전 중 하나로 꼽히는 ‘IF 디자인 어워드 2024＇에서 ＇플랫폼ㆍUI (사용자 인터페이스)’ 부문 본상을 수상했다고 20일 밝혔다.</p>
-                                                        <span class="date">2024.02.01</span>
+                                                    <div class="text-wrap">
+                                                        <div class="slide-head">
+                                                            <span class="cate">SK렌터카3</span>
+                                                            <h3 class="tit">SK렌터카, 'IF 디자인 어워드 2024' 본상 수상</h3>
+                                                        </div>
+                                                        <div class="slide-body">
+                                                            <p class="des">SK렌터카(대표이사:황일문)가 세계 3대 디자인 공모전 중 하나로 꼽히는 ‘IF 디자인 어워드 2024＇에서 ＇플랫폼ㆍUI (사용자 인터페이스)’ 부문 본상을 수상했다고 20일 밝혔다.</p>
+                                                            <span class="date">2024.02.01</span>
+                                                        </div>
                                                     </div>
-                                                </li>
-                                                <li class="swiper-slide">
-                                                    <div class="slide-head">
-                                                        <span class="cate">SK렌터카4</span>
-                                                        <strong class="tit">SK렌터카, 창립 36주년 맞아 전사 봉사활동 실시</strong>
+                                                </a>
+                                            </li>
+                                            <li class="swiper-slide">
+                                                <a href="javascript:void(0)">
+                                                    <div class="figure-wrap">
+                                                        <img src="../../assets/images/ir/thumb-01.jpg" alt="SK렌터카, 'IF 디자인 어워드 2024' 본상 수상">
                                                     </div>
-                                                    <div class="slide-body">
-                                                        <p class="des">SK렌터카(대표이사 : 황일문)가 세계 3대 디자인 공모전 중 SK렌터카(대표이사 : 황일문)가 세계 3대 디자인 공모전 중 하나로 꼽히는 ‘IF 디자인 어워드 2024’에서 ‘플랫폼·UI(사용자 인터페이스)’ 부문 본상을 수상했다고 20일 밝혔다.</p>
-                                                        <span class="date">2024.02.01</span>
+                                                    <div class="text-wrap">
+                                                        <div class="slide-head">
+                                                            <span class="cate">SK렌터카4</span>
+                                                            <h3 class="tit">SK렌터카, 창립 36주년 맞아 전사 봉사활동 실시</h3>
+                                                        </div>
+                                                        <div class="slide-body">
+                                                            <p class="des">SK렌터카(대표이사 : 황일문)가 세계 3대 디자인 공모전 중 SK렌터카(대표이사 : 황일문)가 세계 3대 디자인 공모전 중 하나로 꼽히는 ‘IF 디자인 어워드 2024’에서 ‘플랫폼·UI(사용자 인터페이스)’ 부문 본상을 수상했다고 20일 밝혔다.</p>
+                                                            <span class="date">2024.02.01</span>
+                                                        </div>
                                                     </div>
-                                                </li>
-                                            </ul>
-                                            <div class="swiper-control">
-                                                <button class="btn icon case1 arrow-left2-bg swiper-button-prev"><span class="btn-text blind">이전</span></button>
-                                                <button class="btn icon case1 arrow-right2-bg swiper-button-next"><span class="btn-text blind">다음</span></button>
-                                            </div>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                        <div class="swiper-control">
+                                            <button class="btn icon case1 arrow-left2-bg swiper-button-prev"><span class="btn-text blind">이전</span></button>
+                                            <button class="btn icon case1 arrow-right2-bg swiper-button-next"><span class="btn-text blind">다음</span></button>
                                         </div>
                                     </div>
                                 </div>
@@ -775,7 +767,7 @@
                                                                     <div class="data-swiper pr-swiper-area">
                                                                         <div class="swiper-display swiper pr-swiper1">
                                                                             <div class="swiper-wrapper">
-                                                                                <a href="#" class="swiper-slide">
+                                                                                <a href="javascript:void(0)" class="swiper-slide">
                                                                                     <div class="img">
                                                                                         <!-- <iframe width="560" height="315" loading="lazy" src="https://www.youtube.com/embed/dcDCrAvMFm4" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> -->
                                                                                         <img src="../../assets/images/pr/pr-video-thumb-01.jpg" alt="SK렌터카, 'IF 디자인 어워드 2024' 본상 수상">
@@ -784,7 +776,7 @@
                                                                                         1집에서도 5성급 호텔처럼 숙면하는 방법은? SK매직 워커힐 스위트 룸 매트리스 편
                                                                                     </p>
                                                                                 </a>
-                                                                                <a href="#" class="swiper-slide">
+                                                                                <a href="javascript:void(0)" class="swiper-slide">
                                                                                     <div class="img">
                                                                                         <img src="../../assets/images/pr/pr-video-thumb-02.jpg" alt="SK렌터카, 'IF 디자인 어워드 2024' 본상 수상">
                                                                                     </div>
@@ -792,7 +784,7 @@
                                                                                         2집에서도 5성급 호텔처럼 숙면하는 방법은? SK매직 워커힐 스위트 룸 매트리스 편
                                                                                     </p>
                                                                                 </a>
-                                                                                <a href="#" class="swiper-slide">
+                                                                                <a href="javascript:void(0)" class="swiper-slide">
                                                                                     <div class="img">
                                                                                         <img src="../../assets/images/pr/pr-video-thumb-01.jpg" alt="SK렌터카, 'IF 디자인 어워드 2024' 본상 수상">
                                                                                     </div>
@@ -800,7 +792,7 @@
                                                                                         3집에서도 5성급 호텔처럼 숙면하는 방법은? SK매직 워커힐 스위트 룸 매트리스 편
                                                                                     </p>
                                                                                 </a>
-                                                                                <a href="#" class="swiper-slide">
+                                                                                <a href="javascript:void(0)" class="swiper-slide">
                                                                                     <div class="img">
                                                                                         <img src="../../assets/images/pr/pr-video-thumb-02.jpg" alt="SK렌터카, 'IF 디자인 어워드 2024' 본상 수상">
                                                                                     </div>
@@ -808,7 +800,7 @@
                                                                                         4집에서도 5성급 호텔처럼 숙면하는 방법은? SK매직 워커힐 스위트 룸 매트리스 편
                                                                                     </p>
                                                                                 </a>
-                                                                                <a href="#" class="swiper-slide">
+                                                                                <a href="javascript:void(0)" class="swiper-slide">
                                                                                     <div class="img">
                                                                                         <img src="../../assets/images/pr/pr-video-thumb-02.jpg" alt="SK렌터카, 'IF 디자인 어워드 2024' 본상 수상">
                                                                                     </div>
@@ -816,7 +808,7 @@
                                                                                         5집에서도 5성급 호텔처럼 숙면하는 방법은? SK매직 워커힐 스위트 룸 매트리스 편
                                                                                     </p>
                                                                                 </a>
-                                                                                <a href="#" class="swiper-slide">
+                                                                                <a href="javascript:void(0)" class="swiper-slide">
                                                                                     <div class="img">
                                                                                         <img src="../../assets/images/pr/pr-video-thumb-02.jpg" alt="SK렌터카, 'IF 디자인 어워드 2024' 본상 수상">
                                                                                     </div>
@@ -824,7 +816,7 @@
                                                                                         6집에서도 5성급 호텔처럼 숙면하는 방법은? SK매직 워커힐 스위트 룸 매트리스 편
                                                                                     </p>
                                                                                 </a>
-                                                                                <a href="#" class="swiper-slide">
+                                                                                <a href="javascript:void(0)" class="swiper-slide">
                                                                                     <div class="img">
                                                                                         <img src="../../assets/images/pr/pr-video-thumb-02.jpg" alt="SK렌터카, 'IF 디자인 어워드 2024' 본상 수상">
                                                                                     </div>
