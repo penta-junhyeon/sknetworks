@@ -17694,12 +17694,12 @@ sub {
 }
 @media (min-width: 1024px) {
     #wrap .business .content-body .section .section-wrap .article.hico .article-head .figure-wrap::before {
-        background: url("../../../assets/images/business/figure-hico-circle.svg") no-repeat center 78%;
+        background: url("../../assets/images/business/figure-hico-circle.svg") no-repeat center 78%;
     }
 }
 @media (max-width: 1023px) {
     #wrap .business .content-body .section .section-wrap .article.hico .article-head .figure-wrap::before {
-        background: url("../../../assets/images/business/figure-hico-circle.svg") no-repeat center 78%/19.5rem;
+        background: url("../../assets/images/business/figure-hico-circle.svg") no-repeat center 78%/19.5rem;
     }
 }
 @keyframes rotate {
