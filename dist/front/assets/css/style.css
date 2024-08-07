@@ -18129,24 +18129,24 @@ sub {
     display: inline-block;
     color: rgb(212, 212, 216);
 }
-#wrap .business .content-body::after {
+#wrap .business#main:not(.overview) {
+    padding: 0;
+}
+#wrap .business#main:not(.overview) .content-body::after {
     display: block;
     width: 100%;
     content: "";
     background-color: rgb(255, 255, 255);
 }
 @media (min-width: 1024px) {
-    #wrap .business .content-body::after {
+    #wrap .business#main:not(.overview) .content-body::after {
         height: 16rem;
     }
 }
 @media (max-width: 1023px) {
-    #wrap .business .content-body::after {
+    #wrap .business#main:not(.overview) .content-body::after {
         height: 8rem;
     }
-}
-#wrap .business#main:not(.overview) {
-    padding: 0;
 }
 @media (min-width: 1024px) {
     #wrap .business.overview .local-body {
