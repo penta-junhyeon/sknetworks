@@ -935,6 +935,42 @@
         font-weight: 700;
     }
 }
+.board-list.design7.type4 .board-item {
+    background-color: rgb(255, 255, 255);
+}
+.board-list.design7.type4 .board-item .board-wrap .board-info .board-name {
+    display: block;
+    color: rgb(21, 21, 26);
+    font-size: 2.4rem;
+    font-weight: 700;
+}
+@media (min-width: 1024px) {
+    .board-list.design7.type4 .board-item .board-wrap .board-info .board-name ~ .para {
+        padding-top: 0.8rem;
+    }
+}
+@media (max-width: 1023px) {
+    .board-list.design7.type4 .board-item .board-wrap .board-info .board-name ~ .para {
+        padding-top: 0.4rem;
+    }
+}
+@media (max-width: 1023px) {
+    .board-list.design7.type4 .board-item .board-wrap .board-info .board-name {
+        font-size: 2rem;
+        font-weight: 700;
+    }
+}
+.board-list.design7.type4 .board-item .board-wrap .board-info .para {
+    color: rgb(63, 63, 70);
+    font-size: 1.6rem;
+    font-weight: 500;
+}
+@media (max-width: 1023px) {
+    .board-list.design7.type4 .board-item .board-wrap .board-info .para {
+        font-size: 1.4rem;
+        font-weight: 500;
+    }
+}
 .board-list.design8 {
     display: flex;
 }
