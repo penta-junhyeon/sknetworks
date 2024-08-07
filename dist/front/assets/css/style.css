@@ -5236,9 +5236,6 @@
     width: 100%;
     transform: translate(-50%, -50%);
 }
-.data-display.roadmap > .data-list > .data-item .data-body .para {
-    height: 2.4rem;
-}
 @media (max-width: 1023px) {
     .data-display.roadmap > .data-list::after {
         display: none;
