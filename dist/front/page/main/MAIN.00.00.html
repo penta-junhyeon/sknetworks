@@ -74,6 +74,7 @@
                             intro.classList.add("active4")
                             company.classList.add("active1")
                         } else {
+                            company.classList.remove("active1")
                             intro.classList.remove("active4")
                         }
                     } else {
@@ -81,6 +82,7 @@
                             intro.classList.add("active4")
                             company.classList.add("active1")
                         } else {
+                            company.classList.remove("active1")
                             intro.classList.remove("active4")
                         }
                     }
@@ -103,7 +105,6 @@
                         }
                     }
                     if (!entry.isIntersecting) {
-                        company.classList.remove("active1")
                         company.classList.remove("active2")
                     }
                 })

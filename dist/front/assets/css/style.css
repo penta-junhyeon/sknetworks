@@ -13209,6 +13209,8 @@ sub {
     transform: translateX(-50%);
     overflow: hidden;
     z-index: 2;
+    opacity: 0;
+    transition: opacity 1.7s cubic-bezier(0.5, 0, 0, 1);
 }
 .sk-main .section.intro .section-content.our-esg .content-background [class*=figure-bundle] [class*=figure] {
     position: absolute;
@@ -13524,6 +13526,7 @@ sub {
 }
 .sk-main .section.intro.active3 .section-content.our-esg {
     position: relative;
+    opacity: 1;
 }
 .sk-main .section.intro.active3 .section-content.our-esg .content-background [class*=figure-bundle] [class*=figure] {
     transform: scale(1);
@@ -13973,7 +13976,7 @@ sub {
 }
 .sk-main .section.company.active1 .section-wrap .section-content.subsidiary .content-inner .section-body {
     height: 14.8rem;
-    transition: 1.7s 0.9s cubic-bezier(0.5, 0, 0, 1);
+    transition: 1.7s 0.1s cubic-bezier(0.5, 0, 0, 1);
 }
 @media (max-width: 1023px) {
     .sk-main .section.company.active1 .section-wrap .section-content.subsidiary .content-inner .section-body {
@@ -20790,6 +20793,14 @@ sub {
     .esg:not(.overview).member .panel-display .panel-list .panel-item .panel-body .section.family-friendly .section-wrap .section-figure {
         width: 100%;
         padding: 2.4rem;
+    }
+}
+.esg:not(.overview).member .panel-display .panel-list .panel-item .panel-body .section.balance-roadmap .section-body > .data-display + .btn-display {
+    margin-top: 6.4rem;
+}
+@media (max-width: 1023px) {
+    .esg:not(.overview).member .panel-display .panel-list .panel-item .panel-body .section.balance-roadmap .section-body > .data-display + .btn-display {
+        margin-top: 4.8rem;
     }
 }
 .esg:not(.overview).member table.col-w-1 col.col1 {
