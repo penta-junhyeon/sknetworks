@@ -17968,6 +17968,10 @@ sub {
     background-color: rgb(39, 39, 42);
     box-shadow: 0 4.7rem 2.8rem 0 rgba(0, 0, 0, 0.05), 0 2.1rem 2.1rem 0 rgba(0, 0, 0, 0.09);
 }
+#wrap .business .content-body .section.core .comment {
+    display: inline-block;
+    color: rgb(212, 212, 216);
+}
 #wrap .business .content-body .section.core .section-wrap {
     margin: 0 auto;
     max-width: 123.6rem;
@@ -18160,10 +18164,6 @@ sub {
     display: flex;
     flex-direction: column;
     padding-top: 1.6rem;
-}
-#wrap .business .content-body .section .comment {
-    display: inline-block;
-    color: rgb(212, 212, 216);
 }
 #wrap .business#main:not(.overview) {
     padding: 0;
