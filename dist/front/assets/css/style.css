@@ -20272,6 +20272,7 @@ sub {
 .esg:not(.overview) .content-body .section.over img {
     display: inline-block;
     width: 100%;
+    height: 100%;
 }
 .esg:not(.overview) .content-body .section.over .post-list + .data-display {
     margin-top: 8rem;
