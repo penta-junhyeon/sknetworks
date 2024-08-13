@@ -30,6 +30,32 @@
         document.addEventListener("DOMContentLoaded", () => {
             localAnimations_Case02();
             Tab();
+            roadMap();
+
+            window.addEventListener("resize", () => {
+                roadMap();
+            })
+
+            function roadMap() {
+                const _width = window.innerWidth
+                const policy = document.querySelectorAll(".roadmap .data-body .data-content:first-child")
+                if (_width > 1024) {
+                    let maxHeight = 0
+                    policy.forEach(policy => {
+                        const bulletHeight = policy.querySelector(".bullet-display .data-list").offsetHeight
+                        maxHeight < bulletHeight ? maxHeight = bulletHeight : null
+                    });
+                    policy.forEach(policy => {
+                        const bullet = policy.querySelector(".bullet-display .data-list")
+                        bullet.style.height = maxHeight + "px"
+                    });
+                } else {
+                    policy.forEach(policy => {
+                        const bullet = policy.querySelector(".bullet-display .data-list")
+                        bullet.removeAttribute("style");
+                    });
+                }
+            }
         });
     </script>
 </head>
@@ -39,9 +65,9 @@
         <div class="skip">
             <span class="blind">skip navigation</span>
             <ul>
-                <li><a href="#naviMenu">메뉴 바로가기</a></li>
-                <li><a href="#main">본문 바로가기</a></li>
-                <li><a href="#footer">하단 정보(링크) 바로가기</a></li>
+                <li><a href="#naviMenu">Menu Shortcuts</a></li>
+                <li><a href="#main">Text Shortcuts</a></li>
+                <li><a href="#footer">Footer Information Shortcuts</a></li>
             </ul>
         </div>
         <header class="light" id="header">
@@ -58,16 +84,16 @@
                             <div class="depth2-wrap">
                                 <ul class="depth2-list ">
                                     <li class="depth2-item ">
-                                        <a href="javascript:void(0)" target="_self" class="depth2">기업 개요</a>
+                                        <a href="javascript:void(0)" target="_self" class="depth2">Company <br class="pc-only">Overview</a>
                                     </li>
                                     <li class="depth2-item">
-                                        <a href="javascript:void(0)" target="_self" class="depth2">CEO인사말</a>
+                                        <a href="javascript:void(0)" target="_self" class="depth2">CEO Message</a>
                                     </li>
                                     <li class="depth2-item">
-                                        <a href="javascript:void(0)" target="_self" class="depth2">연혁</a>
+                                        <a href="javascript:void(0)" target="_self" class="depth2">History</a>
                                     </li>
                                     <li class="depth2-item">
-                                        <a href="javascript:void(0)" target="_self" class="depth2">글로벌 네트워크</a>
+                                        <a href="javascript:void(0)" target="_self" class="depth2">Global Networks</a>
                                     </li>
                                 </ul>
                             </div>
@@ -77,115 +103,118 @@
                             <div class="depth2-wrap">
                                 <ul class="depth2-list">
                                     <li class="depth2-item">
-                                        <a href="javascript:void(0)" target="_self" class="depth2">사업 개요</a>
+                                        <a href="javascript:void(0)" target="_self" class="depth2">Business Overview</a>
                                     </li>
                                     <li class="depth2-item">
-                                        <a href="javascript:void(0)" target="_self" class="depth2">글로벌 투자</a>
+                                        <a href="javascript:void(0)" target="_self" class="depth2">Global Investment</a>
                                     </li>
                                     <li class="depth2-item">
-                                        <a href="javascript:void(0)" target="_self" class="depth2">정보통신</a>
+                                        <a href="javascript:void(0)" target="_self" class="depth2">ICT Marketing</a>
                                     </li>
                                     <li class="depth2-item">
-                                        <a href="javascript:void(0)" target="_self" class="depth2">호텔앤리조트</a>
+                                        <a href="javascript:void(0)" target="_self" class="depth2">Hotels & Resorts</a>
                                     </li>
                                     <li class="depth2-item">
-                                        <a href="javascript:void(0)" target="_self" class="depth2">SK매직</a>
+                                        <a href="javascript:void(0)" target="_self" class="depth2">SK Magic</a>
                                     </li>
                                     <li class="depth2-item">
-                                        <a href="javascript:void(0)" target="_self" class="depth2">SK일렉링크</a>
+                                        <a href="javascript:void(0)" target="_self" class="depth2">SK Electlink</a>
                                     </li>
                                     <li class="depth2-item">
-                                        <a href="javascript:void(0)" target="_self" class="depth2">스피드메이트</a>
+                                        <a href="javascript:void(0)" target="_self" class="depth2">Speedmate</a>
                                     </li>
                                     <li class="depth2-item">
-                                        <a href="javascript:void(0)" target="_self" class="depth2">글로벌 트레이딩</a>
+                                        <a href="javascript:void(0)" target="_self" class="depth2">Global Trading</a>
                                     </li>
                                     <li class="depth2-item">
-                                        <a href="javascript:void(0)" target="_self" class="depth2">민팃</a>
+                                        <a href="javascript:void(0)" target="_self" class="depth2">MINTIT</a>
                                     </li>
                                     <li class="depth2-item">
-                                        <a href="javascript:void(0)" target="_self" class="depth2">엔코아</a>
+                                        <a href="javascript:void(0)" target="_self" class="depth2">En-core</a>
                                     </li>
                                 </ul>
                             </div>
                         </li>
                         <li class="depth1-item">
-                            <a href="javascript:void(0)" class="depth1">ESG</a>
+                            <a href="javascript:void(0)" class="depth1">Sustainability</a>
                             <div class="depth2-wrap">
                                 <ul class="depth2-list">
                                     <li class="depth2-item">
-                                        <a href="javascript:void(0)" target="_self" class="depth2">ESG 개요</a>
+                                        <a href="javascript:void(0)" target="_self" class="depth2">Overview of <br>Sustainable<br class="pc-only"> Management</a>
                                     </li>
                                     <li class="depth2-item">
-                                        <a href="javascript:void(0)" target="_self" class="depth2">사회적 가치</a>
+                                        <a href="javascript:void(0)" target="_self" class="depth2">Social Value</a>
                                         <div class="depth3-wrap">
                                             <ul class="depth3-list">
                                                 <li class="depth3-item">
                                                     <a href="javascript:void(0)" target="_self" class="depth3">Double Bottom Line</a>
                                                 </li>
                                                 <li class="depth3-item">
-                                                    <a href="javascript:void(0)" target="_self" class="depth3">사회적 가치 성과</a>
+                                                    <a href="javascript:void(0)" target="_self" class="depth3">Social Value <br class="pc-only">Performance</a>
                                                 </li>
                                             </ul>
                                         </div>
                                     </li>
                                     <li class="depth2-item">
-                                        <a href="javascript:void(0)" target="_self" class="depth2">환경</a>
+                                        <a href="javascript:void(0)" target="_self" class="depth2">Environment</a>
                                         <div class="depth3-wrap">
                                             <ul class="depth3-list">
                                                 <li class="depth3-item">
-                                                    <a href="javascript:void(0)" target="_self" class="depth3">환경경영</a>
+                                                    <a href="javascript:void(0)" target="_self" class="depth3">Environmental <br class="pc-only">Management</a>
                                                 </li>
                                                 <li class="depth3-item">
-                                                    <a href="javascript:void(0)" target="_self" class="depth3">기후변화</a>
+                                                    <a href="javascript:void(0)" target="_self" class="depth3">Climate Change</a>
                                                 </li>
                                             </ul>
                                         </div>
                                     </li>
                                     <li class="depth2-item">
-                                        <a href="javascript:void(0)" target="_self" class="depth2">사회</a>
+                                        <a href="javascript:void(0)" target="_self" class="depth2">Society</a>
                                         <div class="depth3-wrap">
                                             <ul class="depth3-list">
                                                 <li class="depth3-item">
-                                                    <a href="javascript:void(0)" target="_self" class="depth3">인권경영선언문</a>
+                                                    <a href="javascript:void(0)" target="_self" class="depth3">Human Rights <br class="pc-only">Commitment <br class="pc-only">Declaration</a>
                                                 </li>
                                                 <li class="depth3-item">
-                                                    <a href="javascript:void(0)" target="_self" class="depth3">구성원 행복</a>
+                                                    <a href="javascript:void(0)" target="_self" class="depth3">Employee Happiness</a>
                                                 </li>
                                                 <li class="depth3-item">
-                                                    <a href="javascript:void(0)" target="_self" class="depth3">이해관계자 행복</a>
+                                                    <a href="javascript:void(0)" target="_self" class="depth3">Stakeholder <br class="pc-only">Happiness</a>
                                                 </li>
                                             </ul>
                                         </div>
                                     </li>
                                     <li class="depth2-item">
-                                        <a href="javascript:void(0)" target="_self" class="depth2">거버넌스</a>
+                                        <a href="javascript:void(0)" target="_self" class="depth2">Governance</a>
                                         <div class="depth3-wrap">
                                             <ul class="depth3-list">
                                                 <li class="depth3-item">
-                                                    <a href="javascript:void(0)" target="_self" class="depth3">지배구조</a>
+                                                    <a href="javascript:void(0)" target="_self" class="depth3">Governance</a>
                                                 </li>
                                                 <li class="depth3-item">
-                                                    <a href="javascript:void(0)" target="_self" class="depth3">윤리경영</a>
+                                                    <a href="javascript:void(0)" target="_self" class="depth3">Ethical Management</a>
                                                 </li>
                                                 <li class="depth3-item">
-                                                    <a href="javascript:void(0)" target="_self" class="depth3">정보보호 및 보안</a>
+                                                    <a href="javascript:void(0)" target="_self" class="depth3">Information Protection <br class="pc-only">and Security</a>
                                                 </li>
                                                 <li class="depth3-item">
-                                                    <a href="javascript:void(0)" target="_self" class="depth3">자회사·손자회사 ESG관리</a>
+                                                    <a href="javascript:void(0)" target="_self" class="depth3">Investment <br class="pc-only">Management</a>
+                                                </li>
+                                                <li class="depth3-item">
+                                                    <a href="javascript:void(0)" target="_self" class="depth3">ESG management of <br class="pc-only">first/<br class="mo-only">second-tier <br class="pc-only">subsidiaries</a>
                                                 </li>
                                             </ul>
                                         </div>
                                     </li>
                                     <li class="depth2-item">
-                                        <a href="javascript:void(0)" target="_self" class="depth2">자료실</a>
+                                        <a href="javascript:void(0)" target="_self" class="depth2">Data Center</a>
                                         <div class="depth3-wrap">
                                             <ul class="depth3-list">
                                                 <li class="depth3-item">
-                                                    <a href="javascript:void(0)" target="_self" class="depth3">보고서 및 정책</a>
+                                                    <a href="javascript:void(0)" target="_self" class="depth3">Sustainability Report <br class="pc-only">and Policy</a>
                                                 </li>
                                                 <li class="depth3-item">
-                                                    <a href="javascript:void(0)" target="_self" class="depth3">수상 및 인증</a>
+                                                    <a href="javascript:void(0)" target="_self" class="depth3">Awards and<br class="pc-only"> Certifications</a>
                                                 </li>
                                             </ul>
                                         </div>
@@ -198,46 +227,46 @@
                             <div class="depth2-wrap">
                                 <ul class="depth2-list">
                                     <li class="depth2-item">
-                                        <a href="javascript:void(0)" target="_self" class="depth2">주식정보</a>
+                                        <a href="javascript:void(0)" target="_self" class="depth2">Stocks</a>
                                         <div class="depth3-wrap">
                                             <ul class="depth3-list">
                                                 <li class="depth3-item">
-                                                    <a href="javascript:void(0)" target="_self" class="depth3">주가정보</a>
+                                                    <a href="javascript:void(0)" target="_self" class="depth3">Stock Prices</a>
                                                 </li>
                                                 <li class="depth3-item">
-                                                    <a href="javascript:void(0)" target="_self" class="depth3">주주환원</a>
+                                                    <a href="javascript:void(0)" target="_self" class="depth3">Shareholder Return</a>
                                                 </li>
                                             </ul>
                                         </div>
                                     </li>
                                     <li class="depth2-item">
-                                        <a href="javascript:void(0)" target="_self" class="depth2">재무정보</a>
+                                        <a href="javascript:void(0)" target="_self" class="depth2">Finance</a>
                                         <div class="depth3-wrap">
                                             <ul class="depth3-list">
                                                 <li class="depth3-item">
-                                                    <a href="javascript:void(0)" target="_self" class="depth3">주요재무현황</a>
+                                                    <a href="javascript:void(0)" target="_self" class="depth3">Financial Status</a>
                                                 </li>
                                                 <li class="depth3-item">
-                                                    <a href="javascript:void(0)" target="_self" class="depth3">감사보고서</a>
+                                                    <a href="javascript:void(0)" target="_self" class="depth3">Audit Report</a>
                                                 </li>
                                                 <li class="depth3-item">
-                                                    <a href="javascript:void(0)" target="_self" class="depth3">신용등급</a>
+                                                    <a href="javascript:void(0)" target="_self" class="depth3">Credit Ratings</a>
                                                 </li>
                                             </ul>
                                         </div>
                                     </li>
                                     <li class="depth2-item">
-                                        <a href="javascript:void(0)" target="_self" class="depth2">IR정보</a>
+                                        <a href="javascript:void(0)" target="_self" class="depth2">IR Information</a>
                                         <div class="depth3-wrap">
                                             <ul class="depth3-list">
                                                 <li class="depth3-item">
-                                                    <a href="javascript:void(0)" target="_self" class="depth3">IR일정</a>
+                                                    <a href="javascript:void(0)" target="_self" class="depth3">IR Event</a>
                                                 </li>
                                                 <li class="depth3-item">
-                                                    <a href="javascript:void(0)" target="_self" class="depth3">IR자료</a>
+                                                    <a href="javascript:void(0)" target="_self" class="depth3">IR Materials</a>
                                                 </li>
                                                 <li class="depth3-item">
-                                                    <a href="javascript:void(0)" target="_self" class="depth3">IR뉴스</a>
+                                                    <a href="javascript:void(0)" target="_self" class="depth3">IR News</a>
                                                 </li>
                                             </ul>
                                         </div>
@@ -250,10 +279,10 @@
                             <div class="depth2-wrap">
                                 <ul class="depth2-list">
                                     <li class="depth2-item">
-                                        <a href="javascript:void(0)" target="_self" class="depth2">뉴스룸</a>
+                                        <a href="javascript:void(0)" target="_self" class="depth2">Newsroom</a>
                                     </li>
                                     <li class="depth2-item">
-                                        <a href="javascript:void(0)" target="_self" class="depth2">브랜드</a>
+                                        <a href="javascript:void(0)" target="_self" class="depth2">Brand</a>
                                     </li>
                                 </ul>
                             </div>
@@ -263,23 +292,16 @@
                             <div class="depth2-wrap">
                                 <ul class="depth2-list">
                                     <li class="depth2-item">
-                                        <a href="javascript:void(0)" target="_self" class="depth2">기업문화</a>
+                                        <a href="javascript:void(0)" target="_self" class="depth2">Business Culture</a>
                                     </li>
                                     <li class="depth2-item">
-                                        <a href="javascript:void(0)" target="_self" class="depth2">인사제도</a>
+                                        <a href="javascript:void(0)" target="_self" class="depth2">Human Resource <br class="pc-only">Development</a>
                                     </li>
                                     <li class="depth2-item">
-                                        <a href="javascript:void(0)" target="_self" class="depth2">채용정보</a>
-                                        <div class="depth3-wrap">
-                                            <ul class="depth3-list">
-                                                <li class="depth3-item">
-                                                    <a href="javascript:void(0)" target="_self" class="depth3">직무소개</a>
-                                                </li>
-                                                <li class="depth3-item">
-                                                    <a href="javascript:void(0)" target="_self" class="depth3">채용절차</a>
-                                                </li>
-                                            </ul>
-                                        </div>
+                                        <a href="javascript:void(0)" target="_self" class="depth2">Appraisal/Remuneration</a>
+                                    </li>
+                                    <li class="depth2-item">
+                                        <a href="javascript:void(0)" target="_self" class="depth2">Recruitment information</a>
                                     </li>
                                 </ul>
                             </div>
@@ -289,11 +311,11 @@
                 <div class="site-util">
                     <div class="util contact-wrap">
                         <a href="javascript:void(0)" class="btn text design1 case2 color1 contact">
-                            <span class="btn-text">문의·제안</span>
+                            <span class="btn-text">Contact</span>
                         </a>
                     </div>
                     <div class="util lang" id="lang">
-                        <button title="언어 선택" aria-label="언어 선택" aria-haspopup="true" class="selected">
+                        <button title="language selection" aria-label="language selection" aria-haspopup="true" class="selected">
                             <span class="select-text cur-lang">KR</span>
                         </button>
                         <div class="option-area">
@@ -310,7 +332,7 @@
                 </div>
                 <div class="site-control">
                     <button class="btn icon case2 menu-header">
-                        <span class="btn-text blind">메뉴 열기</span>
+                        <span class="btn-text blind">Open Menu</span>
                     </button>
                 </div>
             </div>
@@ -322,9 +344,9 @@
                         <div class="local-info">
                             <ul class="data-list breadcrumb design1 case2 dark">
                                 <li class="data-item"><span class="item-text">Home</span></li>
-                                <li class="data-item"><span class="item-text">Sustainabillity</span></li>
-                                <li class="data-item"><span class="item-text">거버넌스</span></li>
-                                <li class="data-item"><span class="item-text">윤리경영</span></li>
+                                <li class="data-item"><span class="item-text">Sustainability</span></li>
+                                <li class="data-item"><span class="item-text">Governance</span></li>
+                                <li class="data-item"><span class="item-text">Ethics</span></li>
                             </ul>
                         </div>
                         <div class="local-subject">
@@ -333,7 +355,7 @@
                         </div>
                         <div class="local-aside">
                             <div class="local-wrap">
-                                <h3 class="local-title">윤리경영</h3>
+                                <h3 class="local-title">Ethics</h3>
                             </div>
                         </div>
                         <div class="local-figure">
@@ -394,7 +416,7 @@
                                                                             <div class="post-item">
                                                                                 <div class="post-wrap">
                                                                                     <div class="post-figure">
-                                                                                        <img src="../../assets/images/sustainability/ethic.svg" alt="01 Code, 02 Compliance, 03 Consensus">
+                                                                                        <img src="../../assets/images/sustainability/ethic-en.svg" alt="01 Code, 02 Compliance, 03 Consensus">
                                                                                     </div>
                                                                                 </div>
                                                                             </div>
@@ -451,24 +473,28 @@
                                                                                         <div class="data-head">
                                                                                             <div class="data-head-area">
                                                                                                 <em class="data-subject">2024 ~ 2025</em>
-                                                                                                <p class="para">Upgrade the ethical management system to global standards</p>
+                                                                                                <p class="para">Upgrade the ethical<br>management system to<br>global standards</p>
                                                                                             </div>
                                                                                         </div>
                                                                                         <div class="data-body">
-                                                                                            <p class="para">정책</p>
-                                                                                            <div class="bullet-display design1 case1 type5 spec">
-                                                                                                <ul class="data-list">
-                                                                                                    <li class="data-item">자회사 대상 ISO37001 인증 전파 및 지원</li>
-                                                                                                    <li class="data-item">자회사 윤리경영 관리기준 수립</li>
-                                                                                                </ul>
+                                                                                            <div class="data-content">
+                                                                                                <p class="para">Policy</p>
+                                                                                                <div class="bullet-display design1 case1 type5 spec">
+                                                                                                    <ul class="data-list">
+                                                                                                        <li class="data-item">Disseminate and support ISO 37001 certification across subsidiaries</li>
+                                                                                                        <li class="data-item">Establish ethical management control standards for subsidiaries</li>
+                                                                                                    </ul>
+                                                                                                </div>
                                                                                             </div>
-                                                                                            <p class="para">교육</p>
-                                                                                            <div class="bullet-display design1 case1 type5 spec">
-                                                                                                <ul class="data-list">
-                                                                                                    <li class="data-item">회사 특성을 반영한 윤리교육 및 반부패 교육 컨텐츠 개발/시행
-                                                                                                    </li>
-                                                                                                    <li class="data-item">협력업체 윤리교육 컨텐츠 확대</li>
-                                                                                                </ul>
+                                                                                            <div class="data-content">
+                                                                                                <p class="para">Training</p>
+                                                                                                <div class="bullet-display design1 case1 type5 spec">
+                                                                                                    <ul class="data-list">
+                                                                                                        <li class="data-item">Develop/Implement ethical education and anti-corruption training content reflecting organizational characteristics
+                                                                                                        </li>
+                                                                                                        <li class="data-item">Expand ethical education content for suppliers</li>
+                                                                                                    </ul>
+                                                                                                </div>
                                                                                             </div>
                                                                                         </div>
                                                                                     </div>
@@ -478,30 +504,31 @@
                                                                                         <div class="data-head">
                                                                                             <div class="data-head-area">
                                                                                                 <em class="data-subject">2026 ~ 2027</em>
-                                                                                                <p class="para">Global 수준의<br>윤리경영 체계 확산
+                                                                                                <p class="para">Spread the ethical<br>management system to<br>global standards
                                                                                                 </p>
                                                                                             </div>
                                                                                         </div>
                                                                                         <div class="data-body">
-                                                                                            <p class="para pc-only"></p>
-                                                                                            <p class="para mo-only">정책</p>
-                                                                                            <div class="bullet-display design1 case1 type5 spec">
-                                                                                                <ul class="data-list">
-                                                                                                    <li class="data-item">인권 경영 성과 공개</li>
-                                                                                                    <li class="data-item">그룹 멤버사, 파트너사 및 국내외 인권 기구와의 인권 정책, 경영방침 교류, 공감대 확산</li>
-                                                                                                    <li class="data-item">인권 정책∙경영 대외 인정</li>
-                                                                                                </ul>
+                                                                                            <div class="data-content">
+                                                                                                <p class="para mo-only">Policy</p>
+                                                                                                <div class="bullet-display design1 case1 type5 spec">
+                                                                                                    <ul class="data-list">
+                                                                                                        <li class="data-item">Stabilize/Disseminate ISO 37001 certification across subsidiaries</li>
+                                                                                                        <li class="data-item">Increase the coverage of ethical management control targets across subsidiaries</li>
+                                                                                                    </ul>
+                                                                                                </div>
                                                                                             </div>
-                                                                                            <p class="para pc-only"></p>
-                                                                                            <p class="para mo-only">교육</p>
-                                                                                            <div class="bullet-display design1 case1 type5 spec">
-                                                                                                <ul class="data-list">
-                                                                                                    <li class="data-item">사업환경 변화를 반영하여 윤리교육 컨텐츠 지속 <br class="pc-only">개발
-                                                                                                    </li>
-                                                                                                    <li class="data-item">Target(리더/구성원)별 맞춤 교육 Pilot 시행
-                                                                                                    </li>
-                                                                                                    <li class="data-item">자회사 특성을 반영한 윤리교육 컨텐츠 개발 지원</li>
-                                                                                                </ul>
+                                                                                            <div class="data-content">
+                                                                                                <p class="para mo-only">Training</p>
+                                                                                                <div class="bullet-display design1 case1 type5 spec">
+                                                                                                    <ul class="data-list">
+                                                                                                        <li class="data-item">Continue developing ethical education content to reflect changes in the business environment
+                                                                                                        </li>
+                                                                                                        <li class="data-item">Implement pilot training programs tailored to each target (leader/member)
+                                                                                                        </li>
+                                                                                                        <li class="data-item">Provide support for developing ethical education content to reflect the characteristics of subsidiaries</li>
+                                                                                                    </ul>
+                                                                                                </div>
                                                                                             </div>
                                                                                         </div>
                                                                                     </div>
@@ -511,29 +538,31 @@
                                                                                         <div class="data-head">
                                                                                             <div class="data-head-area">
                                                                                                 <em class="data-subject">2028 ~</em>
-                                                                                                <p class="para">Global Top 수준의<br>
-                                                                                                    윤리경영체계 확보</p>
+                                                                                                <p class="para">Ensure the ethical<br>management system at<br>the global top-level
+                                                                                                </p>
                                                                                             </div>
                                                                                         </div>
                                                                                         <div class="data-body">
-                                                                                            <p class="para pc-only"></p>
-                                                                                            <p class="para mo-only">정책</p>
-                                                                                            <div class="bullet-display design1 case1 type5 spec">
-                                                                                                <ul class="data-list">
-                                                                                                    <li class="data-item">본사 및 자회사 ISO37001 인증 유지 인증 범위 확대 검토
-                                                                                                    </li>
-                                                                                                    <li class="data-item">자회사 윤리경영 관리 질적 수준 향상</li>
-                                                                                                </ul>
+                                                                                            <div class="data-content">
+                                                                                                <p class="para mo-only">Policy</p>
+                                                                                                <div class="bullet-display design1 case1 type5 spec">
+                                                                                                    <ul class="data-list">
+                                                                                                        <li class="data-item">Maintain ISO 37001 certification for the head office and subsidiaries and evaluate expanding the certification scope
+                                                                                                        </li>
+                                                                                                        <li class="data-item">Improve the quality of ethical management control for subsidiaries</li>
+                                                                                                    </ul>
+                                                                                                </div>
                                                                                             </div>
-                                                                                            <p class="para pc-only"></p>
-                                                                                            <p class="para mo-only">교육</p>
-                                                                                            <div class="bullet-display design1 case1 type5 spec">
-                                                                                                <ul class="data-list">
-                                                                                                    <li class="data-item">윤리교육 및 반부패 교육 컨텐츠 최신화</li>
-                                                                                                    <li class="data-item">Target별 맞춤 교육 체계 수립</li>
-                                                                                                    <li class="data-item">협력업체 윤리교육 컨텐츠 지속 보완/개선</li>
-                                                                                                    <li class="data-item">자회사 특성을 반영한 윤리교육 컨텐츠 개선 활동 <br class="pc-only">지원</li>
-                                                                                                </ul>
+                                                                                            <div class="data-content">
+                                                                                                <p class="para mo-only">Training</p>
+                                                                                                <div class="bullet-display design1 case1 type5 spec">
+                                                                                                    <ul class="data-list">
+                                                                                                        <li class="data-item">Update education content for ethical education and anti-corruption training</li>
+                                                                                                        <li class="data-item">Establish an education system tailored to each target</li>
+                                                                                                        <li class="data-item">Continue supplementing/improving ethical education content for suppliers</li>
+                                                                                                        <li class="data-item">Provide support for improving ethical education content to reflect the characteristics of subsidiaries</li>
+                                                                                                    </ul>
+                                                                                                </div>
                                                                                             </div>
                                                                                         </div>
                                                                                     </div>
@@ -547,18 +576,18 @@
                                                                 <div class="section-wrap">
                                                                     <div class="section-head">
                                                                         <div class="section-subject">
-                                                                            <h4 class="section-name">윤리규범 (Code)</h4>
+                                                                            <h4 class="section-name">Code</h4>
                                                                         </div>
                                                                     </div>
                                                                     <div class="section-body">
-                                                                        <p class="para">SK네트웍스는 2007년 그룹의 경영철학인 SKMS(SK Management System)를 기반으로 윤리규범을 제정하였으며 지속적으로 개정해 오고 있습니다. 윤리규범에는 고객에 대한 자세, 구성원의 기본윤리, 주주에 대한 책임, 비즈니스 파트너와의 관계, 사회에 대한 역할 등 구성원이 지켜야 할 올바른 행동과 가치 판단의 기준들이 제시되어 있습니다. 더불어 SK네트웍스는 윤리규범을 올바르게 이해하고 실천할 수 있도록 윤리규범 실천 가이드라인을 마련해 운영하고 있습니다. 윤리규범 실천 가이드라인에는 부패방지, 상호존중, 회사 및 고객 정보보호, 이해상충 해결, 공정거래, 안전/환경/보건 책임, 위반행위 보고 및 제보자보호 등 구성원이 지켜야 할 행동양식이 명시되어 있습니다. 특히 ‘부정 청탁 및 금품 등 수수의 금지에 관한 법률(청탁금지법)’ 등 반부패 관련 법률 위반을 Zero 화 하기 위해 관련 조항을 두어 관리하고 있습니다. 윤리규범과 실천 가이드라인은 전 직원 대상으로 구성원 뿐만 아니라 협력사에게도 공유하여 준수할 수 있도록 교육 등 윤리 지원활동을 제공하며 준수 서약을 받고 있습니다. 또한 SK네트웍스는 윤리경영 수준을 강화하기 위해 2022년 12월 부패방지경영시스템(ISO 37001) 인증을 획득하였으며, 윤리경영 수준을 지속적으로 고도화 해 나갈 예정입니다.</p>
+                                                                        <p class="para">SK Networks developed in 2007 a code of ethics modeled from SKMS (SK Management System) epitomizing SK Group’s management philosophy and has continued to update it ever since. The code of ethics contains provisions governing good practices and decisions to be upheld by SK Networks people in terms of customer relations, basic employee ethics, accountability to shareholders, relations with business partners, and roles to play in favor of the society at large. In addition, SK network has rolled out a guideline for ethical practices to ensure that the code of ethics is correctly understood and complied with as intended. The guideline for ethical practices spells out practices to be upheld by SK Networks people in terms of anti-corruption, mutual respect, protection of corporate and customer data, avoidance of conflict of interest, arm’s-length transaction, safety/environment/health responsibilities, obligations to report irregularities and protect whistleblowers among others In particular, the guideline contains a series of provisions to monitor and eliminate non-compliance of anti-corruption laws including the Improper Solicitation and Graft Act (Anti-graft Act in short). The code of ethics and the guideline for ethical practices are shared with not only SK Networks people but also business partners, with ethical practice training programs provided and compliance agreements from them required. Furthermore, SK Networks had its anti-corruption management system certified (ISO 37001) in December, 2022 to promote ethical compliance, vowing to bolster up ethical practices ever more.</p>
                                                                     </div>
                                                                     <div class="section-util">
                                                                         <div class="btn-display">
                                                                             <div class="btn-area">
-                                                                                <a class="btn design3 case1 type1 color2 ar-icon-download-bg" href="#"><span class="btn-text">윤리규범 다운로드</span></a>
-                                                                                <a class="btn design3 case1 type1 color2 ar-icon-download-bg" href="#"><span class="btn-text">윤리규범 실천 가이드라인 다운로드</span></a>
-                                                                                <a class="btn design3 case1 type1 color2 ar-icon-download-bg" href="#"><span class="btn-text">협력사 윤리실천 서약서</span></a>
+                                                                                <a class="btn design3 case1 type1 color2 ar-icon-download-bg" href="#"><span class="btn-text">Download &lt;Code of Ethics&gt;</span></a>
+                                                                                <a class="btn design3 case1 type1 color2 ar-icon-download-bg" href="#"><span class="btn-text">Download &lt;Guidelines for the Code of Ethics&gt;</span></a>
+                                                                                <a class="btn design3 case1 type1 color2 ar-icon-download-bg" href="#"><span class="btn-text">Download &lt;Business Partner Ethical Practices Agreement&gt;</span></a>
                                                                             </div>
                                                                         </div>
                                                                     </div>
@@ -568,7 +597,7 @@
                                                                 <div class="section-wrap">
                                                                     <div class="section-head">
                                                                         <div class="section-subject">
-                                                                            <h4 class="section-name">윤리경영협의체 구성 및 운영</h4>
+                                                                            <h4 class="section-name">Organization of the Ethical Management Council</h4>
                                                                         </div>
                                                                     </div>
                                                                     <div class="section-body">
@@ -576,21 +605,22 @@
                                                                             <div class="post-item">
                                                                                 <div class="post-wrap">
                                                                                     <div class="post-figure">
-                                                                                        <img src="../../assets/images/sustainability/compliance.svg" alt="윤리경영협의체 구성에 관한 이미지 입니다. 자세한 내용은 하단을 참고해주세요." style="min-width: 60rem;">
+                                                                                        <img src="../../assets/images/sustainability/compliance-en.svg" alt="This is an image of the organization of the ethical management council. Please refer to the bottom for more information." class="pc-only">
+                                                                                        <img src="../../assets/images/sustainability/compliance-en-mo.png" alt="This is an image of the organization of the ethical management council. Please refer to the bottom for more information." style="min-width: 600px;" class="mo-only">
                                                                                         <div class="post-body blind">
-                                                                                            <strong>SK네트웍스 감사위원회</strong>
+                                                                                            <strong>SK Networks Audit Committee</strong>
                                                                                             <ul>
-                                                                                                <li>윤리경영협의체장 : SK네트웍스 감사실장</li>
-                                                                                                <li>Steering Committe* : 워커힐 경영지원실장, SK네트웍스서비스 경영전략실장, SK렌터카 지속경영실장, SK매직 RM실장</li>
-                                                                                                <li>윤리경영협의체
+                                                                                                <li>Chief of Ethical Management Council : SK Networks Audit Division Head</li>
+                                                                                                <li>Steering Committe* : Walkerhill Management Supporting Division Leader, SK Networks service Management Strategy Division Leader, SK Rent-a-car Sustainability Management Division Leader, SK Magic Risk Management Division Leader</li>
+                                                                                                <li>Ethical Management Council
                                                                                                     <ul>
-                                                                                                        <li>SK네트웍스(간사) : 윤리경영팀장, 윤리경영담당자</li>
-                                                                                                        <li>워커힐 : 윤리경영담당자</li>
-                                                                                                        <li>SK네트웍스서비스 : 준법경영팀장, 윤리경영담당자</li>
-                                                                                                        <li>SK매직 : 경영진단팀장, 윤리경영담당자</li>
+                                                                                                        <li>SK Networks (Secretary) : Ethics & Audit Team Leader, The person in charge of Ethical Management</li>
+                                                                                                        <li>Walkerhill : The person in charge of Ethical Management</li>
+                                                                                                        <li>SK Networks service : Compliance Management Team Leader, The person in charge of Ethical Management</li>
+                                                                                                        <li>SK Magic : Corporate Audit Team Leader, The person in charge of Ethical Management</li>
                                                                                                     </ul>
                                                                                                 </li>
-                                                                                                <li>신규 자회사 : SK일렉링크, 에코아, 민팃, 카티니</li>
+                                                                                                <li>New Subsidiaries : SK Electlink, En-core, MINTIT</li>
                                                                                             </ul>
                                                                                         </div>
                                                                                     </div>
@@ -600,12 +630,13 @@
                                                                     </div>
                                                                 </div>
                                                             </div>
-                                                            <div class="section design1 case1 type1">
+                                                            <div class="section design1 case1 type2">
                                                                 <div class="section-wrap">
                                                                     <div class="section-head">
                                                                         <div class="section-subject">
-                                                                            <h4 class="section-name">윤리경영 협의체 운영</h4>
-                                                                            <p class="section-summary">SK네트웍스는 본사와 자회사 간 윤리경영 활동의 효과적 수행을 위한 체계 구축 및 실천 수준의 고도화를 위해 SK네트웍스 대표이사를 협의체장으로 하는 윤리경영협의체를 2018년부터 운영해 왔습니다. 2024년부터는 이사회 중심 경영 기조에 발맞추고 실행력을 제고하기 위해, 윤리경영협의체를 SK네트웍스 감사위원회 소속으로 이관하였습니다. 또한 윤리경영협의체장을 SK네트웍스 감사실장으로 변경하고, 각 사 윤리경영 조직의 팀장과 실무 담당자로 조직을 재편하였습니다. 윤리경영협의체는 분기별 운영을 통해 윤리경영 교육 및 윤리실천 워크숍 등을 함께 기획·시행하며, 각 사별 윤리규정 정립 및 감사수행과 제보 조사 관련 지원, 윤리담당 구성원 역량 강화 등 다양한 활동을 수행하고 있습니다. 편입 5년 이내 자회사의 경우, 신규 자회사로 분류하여 윤리경영 기반을 조기에 확보할 수 있도록 연 2회 기초 교육 및 규정의 제·개정을 지원하는 등 기존 윤리경영협의체와 Two-track으로 운영하고 있습니다. SK네트웍스는 윤리경영협의체 활동을 통해 각 자회사의 독자적인 윤리경영 기능을 지속적으로 고도화해 나갈 것입니다.</p>
+                                                                            <h4 class="section-name">Operating the Ethical Management Council</h4>
+                                                                            <p class="section-summary">Since 2018, SK Networks has operated the Ethical Management Council chaired by the CEO of SK Networks, with the purpose of building a system for the effective execution of ethical management activities between the head office and subsidiaries and advancing the level of practice. Starting in 2024, the Ethical Management Council has been reorganized into the SK Networks Audit Committee to follow the Board-centered management policy and enhance execution ability. In addition, the head of the Internal Audit Division became the head of the Ethical Management Council, and the organization has been reorganized with ethical management team leaders of each company and persons in charge of ethical management.
+                                                                                The Ethical Management Council plans and implements education on ethical management and workshops on ethical practice through quarterly operations, and carries out various activities such as establishing ethics regulations for each company, performing audits, supporting investigations of matters reported, and strengthening the capabilities of persons in charge of ethical management. We classify subsidiaries incorporated within 5 years as new subsidiaries and support basic education and establishment/revision of regulations twice a year so that they can secure an ethical management foundation early. As such, we are managing ethics in a two-track manner with the Ethical Management Council. SK Networks will continue to enhance the independent ethics management functions of each subsidiary through the activities of the Ethical Management Council.</p>
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -614,7 +645,7 @@
                                                                 <div class="section-wrap">
                                                                     <div class="section-head">
                                                                         <div class="section-subject">
-                                                                            <h4 class="section-name">제보 채널 운영</h4>
+                                                                            <h4 class="section-name">Ethical Management Reporting Channels</h4>
                                                                         </div>
                                                                     </div>
                                                                     <div class="section-figure">
@@ -627,7 +658,7 @@
                                                                                 <div class="data-item">
                                                                                     <div class="data-wrap">
                                                                                         <div class="data-head">
-                                                                                            <em class="data-subject">인터넷</em>
+                                                                                            <em class="data-subject">Web</em>
                                                                                         </div>
                                                                                         <div class="data-body">
                                                                                             <p class="para"><a href="http://ethics.sk.co.kr" target='_blank'>http://ethics.sk.co.kr</a></p>
@@ -637,10 +668,10 @@
                                                                                 <div class="data-item">
                                                                                     <div class="data-wrap">
                                                                                         <div class="data-head">
-                                                                                            <em class="data-subject">우편</em>
+                                                                                            <em class="data-subject">Address</em>
                                                                                         </div>
                                                                                         <div class="data-body">
-                                                                                            <p class="para">서울특별시 종로구 청계천로 85, SK네트웍스 감사팀</p>
+                                                                                            <p class="para">SK Networks Internal Audit Team, 85, Cheonggyecheon-ro, Jongno-gu, Seoul, 03190, Republic of Korea</p>
                                                                                         </div>
                                                                                     </div>
                                                                                 </div>
@@ -648,7 +679,7 @@
                                                                         </div>
                                                                         <div class="btn-display align3">
                                                                             <div class="btn-area">
-                                                                                <a class="btn design3 case3 type1 color6 ar-icon-arrow-right-up2" href="https://ethics.sk.co.kr/Report/Complaint" target="_blank"><span class="btn-text">윤리경영 홈페이지 바로가기</span></a>
+                                                                                <a class="btn design3 case3 type1 color6 ar-icon-arrow-right-up2" href="https://ethics.sk.co.kr/Report/Complaint" target="_blank"><span class="btn-text">Go to website</span></a>
                                                                             </div>
                                                                         </div>
                                                                     </div>
@@ -658,7 +689,7 @@
                                                                 <div class="section-wrap">
                                                                     <div class="section-head">
                                                                         <div class="section-subject">
-                                                                            <h4 class="section-name">공감대 형성 (Consensus)</h4>
+                                                                            <h4 class="section-name">Consensus</h4>
                                                                         </div>
                                                                     </div>
                                                                     <div class="section-body">
@@ -666,8 +697,8 @@
                                                                             <li class="board-item">
                                                                                 <div class="board-wrap">
                                                                                     <div class="board-info">
-                                                                                        <strong class="board-name">윤리교육 정책</strong>
-                                                                                        <p class="para">SK 경영의 궁극적인 목적은 구성원의 행복입니다. 구성원은 행복의 주체로서 전체의 행복을 추구하며 조직화된 힘을 통해 각자의 행복은 더욱 커지게 됩니다. 또한 SK는 회사를 둘러싼 이해관계자의 행복까지 동시에 추구합니다. 사회적 가치 창출을 통한 경제적 가치를 키우고 이해관계자와 신뢰 관계를 통해 행복의 조화와 균형을 이루어 나가는 것, 이것이 SK가 추구하는 궁극적인 가치입니다.</p>
+                                                                                        <strong class="board-name">Ethics Education Policy</strong>
+                                                                                        <p class="para">SK Networks provides ethics education annually to its people including contractors and part- timers, aiming to ensure that all of them attend and finish the ethics education programs. A separate ethics education program has been available for management leaders and board members since September 2021, with another ethics education program intended for business partners rolled out from 2022 to boost awareness of ethical management practices. The ethics education programs cover major ethical management issues in SK Networks, including anti-corruption, office bullying, and work ethics. We also survey the ethics education program takers on the effectiveness, difficulty and logistics of the education programs to inform our efforts to improve the programs and contents of feedback from SKN people. SK Networks also plan to upgrade the ethics education programs for management leaders, board members and business partners annually in quantitative/qualitative terms in line with the rapidly changing business landscape both at home and abroad.</p>
                                                                                     </div>
                                                                                     <div class="board-figure">
                                                                                         <img src="../../assets/images/sustainability/law-princ.png" alt=" " class="pc-only">
@@ -678,12 +709,12 @@
                                                                                     <div class="data-list">
                                                                                         <div class="data-item">
                                                                                             <div class="data-head">
-                                                                                                <strong class="data-subject">윤리 교육 시행 성과</strong>
+                                                                                                <strong class="data-subject">Ethics Training History</strong>
                                                                                             </div>
                                                                                             <div class="data-body">
                                                                                                 <div class="t-display design1 case1 type1 align3 scroll">
-                                                                                                    <table style="min-width: 950px;" class="col-w-1">
-                                                                                                        <caption>이 표는 윤리 교육 시행 성과를 제공하며 구분(SK네트웍스 및 자/손회사,협력사), 2019년, 2020년, 2021년, 2022년, 2023년 으로 구성되어 있습니다.</caption>
+                                                                                                    <table style="min-width: 891px;" class="col-w-1">
+                                                                                                        <caption>The table provides results of ethics training and consists of categories (SK Networks and its subsidiaries and partners), 2019, 2020, 2021, 2022, and 2023.</caption>
                                                                                                         <colgroup>
                                                                                                             <col class="col1">
                                                                                                             <col class="col2">
@@ -695,7 +726,7 @@
                                                                                                         </colgroup>
                                                                                                         <thead>
                                                                                                             <tr>
-                                                                                                                <th scope="col" colspan="2">구분</th>
+                                                                                                                <th scope="col" colspan="2">Category</th>
                                                                                                                 <th scope="col">2019</th>
                                                                                                                 <th scope="col">2020</th>
                                                                                                                 <th scope="col">2021</th>
@@ -705,8 +736,8 @@
                                                                                                         </thead>
                                                                                                         <tbody>
                                                                                                             <tr>
-                                                                                                                <td rowspan="2">SK네트웍스 및 자/손회사*</td>
-                                                                                                                <td>이수한 임직원 수 (단위 : 명)**</td>
+                                                                                                                <td rowspan="2">SK Networks, subsidiaries, and second-tier subsidiaries*</td>
+                                                                                                                <td>No. of employees completed training (Unit : person)**</td>
                                                                                                                 <td>4,635</td>
                                                                                                                 <td>4,922</td>
                                                                                                                 <td>4,866</td>
@@ -714,7 +745,7 @@
                                                                                                                 <td>4,862</td>
                                                                                                             </tr>
                                                                                                             <tr>
-                                                                                                                <td>이수한 임직원 비율 (단위 : %)</td>
+                                                                                                                <td>Percentage of employees completed training (Unit : %)</td>
                                                                                                                 <td>98.4</td>
                                                                                                                 <td>97.8</td>
                                                                                                                 <td>98.5</td>
@@ -722,8 +753,8 @@
                                                                                                                 <td>99.4</td>
                                                                                                             </tr>
                                                                                                             <tr>
-                                                                                                                <td rowspan="2">협력사***</td>
-                                                                                                                <td>이수한 임직원 수 (단위 : 명)**</td>
+                                                                                                                <td rowspan="2">Partner companies***</td>
+                                                                                                                <td>Implementation (Unit : Y/N)</td>
                                                                                                                 <td>N</td>
                                                                                                                 <td>N</td>
                                                                                                                 <td>N</td>
@@ -731,7 +762,7 @@
                                                                                                                 <td>Y</td>
                                                                                                             </tr>
                                                                                                             <tr>
-                                                                                                                <td>이수한 임직원 비율 (단위 : %)</td>
+                                                                                                                <td>No. of partner companies completed training (Unit : number)</td>
                                                                                                                 <td></td>
                                                                                                                 <td></td>
                                                                                                                 <td></td>
@@ -741,9 +772,9 @@
                                                                                                         </tbody>
                                                                                                     </table>
                                                                                                 </div>
-                                                                                                <p class="comment design1">* 2019년 ~ 2021년은 6개사(SK네트웍스(워커힐 포함), SK네트웍스서비스, SK매직, SK매직서비스, SK렌터카, SK렌터카서비스) 대상이며, 2022년부터 8개사(기존 6개사 + 민팃, 카티니) 대상임<br>
-                                                                                                    ** 2022년부터 사외이사, 비정규직 포함<br>
-                                                                                                    *** 2022년부터 SK네트웍스 본사와 거래하는 협력사 대상으로 Pilot 운영함</p>
+                                                                                                <p class="comment design1">* From 2019 to 2021, ethics training has been implemented in six companies (SK Networks (incl. Walkerhill), SK Networks service, SK Magic, SK Magic service, SK Rent-a-car, SK Rent-a-car service). The training was expanded to eight companies (the existing six companies + MINTIT and Cartini starting in 2022.<br>
+                                                                                                    ** Independent directors and non-regular employees were included from 2022.<br>
+                                                                                                    *** Business partners in direct transactions with SK Networks headquarters have been subject to a pilot ethics training program since 2022.</p>
                                                                                             </div>
                                                                                         </div>
                                                                                     </div>
@@ -752,8 +783,8 @@
                                                                             <li class="board-item">
                                                                                 <div class="board-wrap">
                                                                                     <div class="board-info">
-                                                                                        <strong class="board-name">윤리실천 Survey</strong>
-                                                                                        <p class="para">SK네트웍스는 매년 윤리규범 준수 및 윤리 실천 문화 수준 진단을 위해 본사 및 자회사 구성원을 대상으로 윤리실천 Survey를 실시하고 있습니다. 설문조사 결과에 따라 구성원 간 상호 윤리, SV 저해 요소 점검, 윤리경영 실천 제도 지속 개선 등 중요 시사점을 관리하여 구성원에 대한 윤리경영을 지원합니다.</p>
+                                                                                        <strong class="board-name">Ethics Practice Survey</strong>
+                                                                                        <p class="para">SK Networks conducts an Ethics Practice Survey for employees at the headquarters and its subsidiaries to assess compliance with the Code of Ethics and the level of ethical practice culture. Ethical management for employees is supported by handling critical implications from survey results, including mutual ethics among employees, inspection of SV-degrading elements, and continuous improvement of the ethical management practice system.</p>
                                                                                     </div>
                                                                                     <div class="board-figure">
                                                                                         <img src="../../assets/images/sustainability/box.png" alt=" " class="pc-only">
@@ -764,12 +795,12 @@
                                                                                     <div class="data-list">
                                                                                         <div class="data-item">
                                                                                             <div class="data-head">
-                                                                                                <strong class="data-subject">윤리실천 Survey 시행 성과</strong>
+                                                                                                <strong class="data-subject">Ethics Practice Survey History</strong>
                                                                                             </div>
                                                                                             <div class="data-body">
                                                                                                 <div class="t-display design1 case1 type1 align3 scroll">
-                                                                                                    <table style="min-width: 950px;" class="col-w-1">
-                                                                                                        <caption>이 표는 윤리실천 Survey 시행 성과를 제공하며 구분(SK네트웍스 및 자/손회사), 2019년, 2020년, 2021년, 2022년, 2023년 으로 구성되어 있습니다.</caption>
+                                                                                                    <table style="min-width: 891px;" class="col-w-1">
+                                                                                                        <caption>The table provides the results of the Ethics Practice Survey and consists of categories (SK Networks and its subsidiaries/subsidiaries), 2019, 2020, 2021, 2022, and 2023.</caption>
                                                                                                         <colgroup>
                                                                                                             <col class="col1">
                                                                                                             <col class="col2">
@@ -781,7 +812,7 @@
                                                                                                         </colgroup>
                                                                                                         <thead>
                                                                                                             <tr>
-                                                                                                                <th scope="col" colspan="2">구분</th>
+                                                                                                                <th scope="col" colspan="2">Category</th>
                                                                                                                 <th scope="col">2019</th>
                                                                                                                 <th scope="col">2020</th>
                                                                                                                 <th scope="col">2021</th>
@@ -791,8 +822,8 @@
                                                                                                         </thead>
                                                                                                         <tbody>
                                                                                                             <tr>
-                                                                                                                <td rowspan="2">SK네트웍스 및 자/손회사*</td>
-                                                                                                                <td>참여한 임직원 수 (단위 : 명)</td>
+                                                                                                                <td rowspan="2">SK Networks, subsidiaries, and second-tier subsidiaries*</td>
+                                                                                                                <td>No. of participating employees (Unit : person)</td>
                                                                                                                 <td>3,705</td>
                                                                                                                 <td>3,537</td>
                                                                                                                 <td>4,125</td>
@@ -800,7 +831,7 @@
                                                                                                                 <td>3,963</td>
                                                                                                             </tr>
                                                                                                             <tr>
-                                                                                                                <td>참여한 임직원 비율 (단위 : %)</td>
+                                                                                                                <td>Percentage of participating employees (Unit : %)</td>
                                                                                                                 <td>76.0</td>
                                                                                                                 <td>68.8</td>
                                                                                                                 <td>82.1</td>
@@ -810,7 +841,7 @@
                                                                                                         </tbody>
                                                                                                     </table>
                                                                                                 </div>
-                                                                                                <p class="comment design1">* 2019년 ~ 2021년은 6개사(SK네트웍스(워커힐 포함), SK네트웍스서비스, SK매직, SK매직서비스, SK렌터카, SK렌터카서비스) 대상이며, 2022년부터 8개사(기존 6개사 + 민팃, 카티니) 대상임</p>
+                                                                                                <p class="comment design1">* From 2019 to 2021, the Ethics Practice Survey has been implemented in six companies (SK Networks (incl. Walkerhill), SK Networks service, SK Magic, SK Magic service, SK Rent-a-car, SK Rent-a-car service). The Survey was expanded to eight companies (the existing six companies + MINTIT and Cartini starting in 2022.</p>
                                                                                             </div>
                                                                                         </div>
                                                                                     </div>
@@ -819,8 +850,8 @@
                                                                             <li class="board-item">
                                                                                 <div class="board-wrap">
                                                                                     <div class="board-info">
-                                                                                        <strong class="board-name">윤리경영 실천 서약</strong>
-                                                                                        <p class="para">매년 첫 영업일에는 전 구성원이 윤리경영 실천 서약에 동참합니다. 구성원들의 자발적 실천을 통해 윤리경영에 대한 인식을 확대하며 투명하고 깨끗한 기업문화를 조성하는 데 기여하고자 합니다.</p>
+                                                                                        <strong class="board-name">Ethics Management Practice Pledge</strong>
+                                                                                        <p class="para">On the first business day of each year, all employees are encouraged to participate in the Ethics Practice Pledge. Along with the employees’ voluntary actions, we aim to enhance awareness of ethical management and establish a transparent corporate culture.</p>
                                                                                     </div>
                                                                                     <div class="board-figure">
                                                                                         <img src="../../assets/images/sustainability/meeting.png" alt=" " class="pc-only">
@@ -831,8 +862,8 @@
                                                                             <li class="board-item">
                                                                                 <div class="board-wrap">
                                                                                     <div class="board-info">
-                                                                                        <strong class="board-name">윤리실천 Workshop</strong>
-                                                                                        <p class="para">SK네트웍스는 구성원 윤리경영 수준을 높이기 위해 매년 전 구성원 대상으로 윤리실천 Workshop 을 시행하고 있습니다. 윤리실천 Workshop에서는 ‘직장 내 괴롭힘’, ‘직무상 이해 상충＇등 윤리 이슈에 대한 동영상 시청 혹은 사전 공유 자료 숙지 후 토론을 진행하며, 윤리경영 실천을 위한 개선 사항을 공유합니다. 또한 자회사 포함 각 사별 윤리실천문화 내재화를 위해 ‘윤리실천 Workshop 우수조직’을 선발하여 시상합니다.</p>
+                                                                                        <strong class="board-name">Ethics Practice Workshop</strong>
+                                                                                        <p class="para">Each year, SK Networks holds an Ethics Practice Workshop for all employees to elevate the level of their ethical management. During the Ethics Practice Workshop, participants watch videos or have discussions after reviewing pre-distributed materials related to ethical issues such as workplace bullying and conflict of interest at work, followed by sharing areas of improvement for practicing ethical management. In addition, organizations are selected and awarded the Ethics Management Workshop Excellence to internalize the ethical practice culture in each company, including subsidiaries.</p>
                                                                                     </div>
                                                                                     <div class="board-figure">
                                                                                         <img src="../../assets/images/sustainability/talk.png" alt=" " class="pc-only">
@@ -843,12 +874,12 @@
                                                                                     <div class="data-list">
                                                                                         <div class="data-item">
                                                                                             <div class="data-head">
-                                                                                                <strong class="data-subject">윤리실천 Workshop 시행 성과</strong>
+                                                                                                <strong class="data-subject">Ethics Practice Workshop History</strong>
                                                                                             </div>
                                                                                             <div class="data-body">
                                                                                                 <div class="t-display design1 case1 type1 align3 scroll">
                                                                                                     <table style="min-width: 913px;" class="col-w-1">
-                                                                                                        <caption>이 표는 윤리경영 실천 Workshop 시행 성과를 제공하며 구분(SK네트웍스 및 자/손회사), 2019년, 2020년, 2021년, 2022년, 2023년으로 구성되어 있습니다.</caption>
+                                                                                                        <caption>The table provides the implementation results of the ethical management practice workshop and consists of categories (SK Networks and its subsidiaries/subsidiaries), 2019, 2020, 2021, 2022, and 2023.</caption>
                                                                                                         <colgroup>
                                                                                                             <col class="col1">
                                                                                                             <col class="col2">
@@ -860,7 +891,7 @@
                                                                                                         </colgroup>
                                                                                                         <thead>
                                                                                                             <tr>
-                                                                                                                <th scope="col" colspan="2">구분</th>
+                                                                                                                <th scope="col" colspan="2">Category</th>
                                                                                                                 <th scope="col">2019</th>
                                                                                                                 <th scope="col">2020</th>
                                                                                                                 <th scope="col">2021</th>
@@ -870,8 +901,8 @@
                                                                                                         </thead>
                                                                                                         <tbody>
                                                                                                             <tr>
-                                                                                                                <td rowspan="2">SK네트웍스 및 자/손회사*</td>
-                                                                                                                <td>참여한 조직 수 (단위 : 개)</td>
+                                                                                                                <td rowspan="2">SK Networks, subsidiaries, and second-tier subsidiaries*</td>
+                                                                                                                <td>No. of participating organizations (Unit : number)</td>
                                                                                                                 <td>414</td>
                                                                                                                 <td>393</td>
                                                                                                                 <td>549</td>
@@ -879,7 +910,7 @@
                                                                                                                 <td>393</td>
                                                                                                             </tr>
                                                                                                             <tr>
-                                                                                                                <td>참여한 조직 비율 (단위 : %)</td>
+                                                                                                                <td>Percentage of participating organizations (Unit : %)</td>
                                                                                                                 <td>95</td>
                                                                                                                 <td>98</td>
                                                                                                                 <td>98</td>
@@ -889,7 +920,7 @@
                                                                                                         </tbody>
                                                                                                     </table>
                                                                                                 </div>
-                                                                                                <p class="comment design1">* 2019년 ~ 2021년은 6개사(SK네트웍스(워커힐 포함), SK네트웍스서비스, SK매직, SK매직서비스, SK렌터카, SK렌터카서비스) 대상이며, 2022년부터 8개사(기존 6개사 + 민팃, 카티니) 대상임</p>
+                                                                                                <p class="comment design1">* From 2019 to 2021, the Ethics Practice Survey has been implemented in six companies (SK Networks (incl. Walkerhill), SK Networks service, SK Magic, SK Magic service, SK Rent-a-car, SK Rent-a-car service). The Survey was expanded to eight companies (the existing six companies + MINTIT and Cartini starting in 2022.</p>
                                                                                             </div>
                                                                                         </div>
                                                                                     </div>
@@ -903,27 +934,26 @@
                                                                 <div class="section-wrap">
                                                                     <div class="section-head">
                                                                         <div class="section-subject">
-                                                                            <h4 class="section-name">내부감사 시행</h4>
+                                                                            <h4 class="section-name">Internal Audit</h4>
                                                                         </div>
                                                                     </div>
                                                                     <div class="section-body">
-                                                                        <p class="para">SK네트웍스의 내부감사는 정기감사, 이행 점검, 자정 점검, 윤리 제보조사로 구성되어 있습니다. 정기감사 수행을 위해 매년 초 국내외 모든 사업장과 자회사, 지원 조직에 대해 ‘그룹 및 외부기관의 측정/진단 결과, 자정시스템의 리스크 점검결과 및 윤리실천 Survey 결과’ 등을 반영한 리스크 항목(Risk Pool)들을 도출하고 평가를 실시합니다. 리스크가 높게 평가된 사업/조직을 대상으로 연간 정기감사 계획을 수립하여, 감사위원회 보고 및 승인을 통해 감사 대상을 최종 확정하고 있습니다. 또한 감사 업무의 수행에만 그치지 않고 권고사항에 대한 이행여부를 시스템을 통해 지속적으로 점검하여 주기적으로 감사위원회에 보고함으로써 실행력을 제고합니다. 정기감사 시에는, 지배구조, 리스크 관리, 통제 프로세스의 효과성을 평가하고 개선시킴으로써 회사의 경영목표 달성을 지원하며, 비윤리 이슈의 발생 여부도 함께 점검하고 있습니다.</p>
-                                                                        <p class="para">자정 점검은, 업무 영역별 리스크에 대한 점검매뉴얼을 구성하여 SK네트웍스의 모든 사업과 지원 조직을 대상으로 연 1회 점검하는 시스템으로 2011년부터 시행 중입니다. 점검매뉴얼은 HR 관리, 비용 관리, 구매/비즈니스 파트너 관리, 매출/채권관리, 투자관리 체계, 재고관리, 특이 리스크 관리 등 다양한 영역에서 업무별 특성에 맞는 위험을 점검하고 평가할 수 있도록 구성되어 있으며, 항목은 매년 업데이트 중입니다. 각 영역별로 발생할 수 있는 재무적 위험뿐만 아니라 비윤리 이슈가 발생할 수 있는 사례(ex. 채용 청탁, 겸업/겸직 활동 시 발생할 수 있는 비윤리 이슈, Moral Hazard에 의한 임직원 회사 자산 오남용, 비용 자가 승인, 자금의 부정 출금, 구매 Policy 위반 등)도 포함하여 점검하고 있습니다. 자정 점검 항목 중 고위험 항목들은 감사실에서 직접 점검하고 있으며, 모든 사업과 지원 조직이 수행한 자정 점검 결과와 증빙에 대해서도 감사실에서 그 적합성을 확인하고 있습니다.</p>
-                                                                        <p class="para">SK네트웍스(모든 자회사 포함)는 웹사이트, 대면 상담, 우편 등 다양한 온/오프라인 윤리 제보채널을 운영하고 있습니다. 제보 처리 절차에 따라 접수된 상담·제보 사항을 투명하고 공정하게 처리하고 있습니다. 고객 서비스 불만은 해당 사업부서에 이관하여 처리하도록 안내하고 있으며, 비윤리 이슈를 포함한 그 외 모든 제보는 감사실에서 직접 조사*를 진행하고 있습니다.</p>
-                                                                        <p class="para">SK네트웍스는 국내외 모든 사업장과 자회사 대상으로 내부감사를 실시하고 그 결과를 감사위원회에 주기적으로 보고하고 있습니다. 점검 결과에 따라 개선이 필요한 사항은 경영 활동에 반영하고 있으며, 위반사항이 발견되면 즉시 개선조치를 이행하고 있습니다. 또한 필요 시 유관부서와의 협의를 통해 종합적인 대응 방안을 수립하고 이행될 수 있도록 관리하고 있습니다. 2023년에는 정보보호(문서보안), 부적절한 업무처리 등 영역에서 내부 관리 기준 위반사항이 발견되어 시정 및 업무 절차 개선 등의 조치를 완료하였으며 감사위원회에도 발견사항 및 개선조치 이행결과를 분기별로 보고하였습니다. 아울러 발견된 위반사항 및 처리 결과를 전사공지하고, 윤리교육, 윤리실천 Workshop 등 사내 윤리경영활동 컨텐츠에 반영하여 동일한 문제의 재발을 방지하고 있습니다.</p>
-                                                                        <p class="comment design1">* 자회사 접수 건에 대해서는 자회사와 협조를 통해 조사 진행</p>
-                                                                        <p class="comment design1">1) MSCI (Morgan Stanley Capital International) : Morgan Stanley가 만든 글로벌 평가기관으로 2009년부터 35개 ESG 요소를 통해 기업을 평가하고 공개<br>
-                                                                            2) 2020 ~ 2022년 간, SK네트웍스 본체 및 자회사 모든 사업에 대한 정기감사 시행 완료 (단, 22년 말 기준 분사 후 만 2년이 되지 않고 사업 초기인 민팃, 카티니 제외)</p>
+                                                                        <p class="para">SK Networks conducts internal audits comprising routine audits, compliance checks, voluntary inspections, and investigations into ethical violations. To conduct its routine audit, SK Networks annually develops and evaluates a risk pool encompassing all of its business sites, subsidiaries and supporting organizations at home and abroad. This process reflects measurement and diagnosis results from SK Group and third-party institutions, risk check findings conducted through the voluntary inspection system and ethical practice surveys. Subsequently, an annual routine audit plan is developed for businesses and organizations identified as having high risks, with audit targets being finalized upon reporting to and approval by the Audit Committee. Furthermore, beyond mere audit execution, we systematically monitor compliance with recommendations and regularly report our findings to the Audit Committee to ensure adherence to applicable guidelines. Throughout the routine audit, we assess and enhance the effectiveness of governance structure, risk management, and control processes to assist the Company in meeting its business targets. Additionally, we inspect unethical issues as they arise.</p>
+                                                                        <p class="para">The voluntary inspection system was established in 2011 with the aim of creating risk inspection manuals for each business area and conducting annual inspection of all SK Networks’ businesses and supporting organizations. Updated annually, these manuals are configured to assess and evaluate risks specific to each business area, including HR management, cost management, procurement/business partner management, revenue/credit management, investment management system, inventory management, extraordinary risk management. The scope of the inspection encompasses not only financial risks in each area but also scenarios that may be linked to unethical issues. These include situations such as solicitation of employment, unethical issues that could arise from businesses or positions competing with the Company, moral hazards related to the abuse or misuse of the Company properties by executives or employees, self-approval of expenditures by individuals with authority, illegal fund expenditures, and violation of procurement policy. High-risk items identified during the voluntary inspection process are directly examined by the Audit Office, which also verifies the adequacy of the voluntary inspection results and evidence provided by all businesses and supporting organizations.</p>
+                                                                        <p class="para">SK Networks, along with all its subsidiaries, operate a range of ethical reporting channels both online and offline, including website, face-to-face counseling, and mailing services. Counseling requests and informant reports are managed with transparency and fairness in accordance with established reporting procedures. Customer complaints regarding services are directed to the relevant business units, while all other informant reports, including unethical issues, are directly investigated by the Audit Office. *Reports concerning subsidiaries are investigated in cooperation with the applicable subsidiary.</p>
+                                                                        <p class="para">SK Networks conducts internal audits of all domestic and international business sites and subsidiaries, regularly reporting audit findings to the Audit Committee. Depending on the inspection results, opportunities for improvement are integrated into management activities, and corrective actions are promptly taken upon discovery of violations. In addition, comprehensive response strategies are developed and implemented in consultation with relevant departments as necessary. In 2023, violations of internal control guidelines were identified in areas such as information protection (document security) and inappropriate business handling, leading to corrective actions and process improvement. The Audit Committee also received reports on findings and results of corrective actions for each quarter. At the same time, violation findings and action results are communicated enterprise-wide and incorporated into internal ethical management program materials including ethics education and ethical practice workshop to prevent the recurrence of identical issues.</p>
+                                                                        <p class="comment design1">1) MSCI (Morgan Stanley Capital International): a global assessment firm organized by Morgan Stanley that has assessed companies on 35 ESG elements and released assessment reports since 2009.<br>
+                                                                            2) All businesses of SK Networks’ head office and subsidiaries from 2020 to 2022 have been fully audited (excluding Mintit and Cartini that are still in early days of business and are not two years old in full as of the end of ‘22).</p>
                                                                         <div class="data-display design1 case2 type1">
                                                                             <div class="data-list">
                                                                                 <div class="data-item">
                                                                                     <div class="data-head">
-                                                                                        <strong class="data-subject">윤리 감사 시행 내역</strong>
+                                                                                        <strong class="data-subject">Activities</strong>
                                                                                     </div>
                                                                                     <div class="data-body">
                                                                                         <div class="t-display design1 case1 type1 align3 scroll">
                                                                                             <table style="min-width: 590px;" class="col-w-2">
-                                                                                                <caption>이 표는 윤리 감사 시행 내역 정보를 제공하며 연도, 감사대상 사업, 감사내역으로 구성되어 있습니다.</caption>
+                                                                                                <caption>This table provides information on the implementation of ethics audits and consists of year, project subject to audit, and audit details.</caption>
                                                                                                 <colgroup>
                                                                                                     <col class="col1">
                                                                                                     <col class="col2">
@@ -931,88 +961,88 @@
                                                                                                 </colgroup>
                                                                                                 <thead>
                                                                                                     <tr>
-                                                                                                        <th scope="col">연도</th>
-                                                                                                        <th scope="col">감사대상 사업</th>
-                                                                                                        <th scope="col">감사내역</th>
+                                                                                                        <th scope="col">Year</th>
+                                                                                                        <th scope="col">Audit Scope</th>
+                                                                                                        <th scope="col">Audit Coverage</th>
                                                                                                     </tr>
                                                                                                 </thead>
                                                                                                 <tbody>
                                                                                                     <tr>
-                                                                                                        <td>2019</td>
-                                                                                                        <td class="align1">회계 감사<br>그룹 감사<br>
+                                                                                                        <td>19</td>
+                                                                                                        <td class="align1">Accounting audit<br>Group audit<br>
                                                                                                             <div class="bullet-display design1 case1 type4">
                                                                                                                 <ul class="data-list">
-                                                                                                                    <li class="data-item">글로벌부문
+                                                                                                                    <li class="data-item">Global division
                                                                                                                     </li>
-                                                                                                                    <li class="data-item">정보통신부문</li>
-                                                                                                                    <li class="data-item">Most사업부(주유소 Retail사업)
+                                                                                                                    <li class="data-item">IT division</li>
+                                                                                                                    <li class="data-item">MOST business division (gas station retail)
                                                                                                                     </li>
-                                                                                                                    <li class="data-item">스피드메이트사업부</li>
-                                                                                                                    <li class="data-item">렌터카부문</li>
-                                                                                                                    <li class="data-item">워커힐</li>
-                                                                                                                    <li class="data-item">SK매직</li>
-                                                                                                                    <li class="data-item">정보보안</li>
-                                                                                                                    <li class="data-item">SHE(안전·보건·환경)
+                                                                                                                    <li class="data-item">Speedmate business division</li>
+                                                                                                                    <li class="data-item">Car rental division</li>
+                                                                                                                    <li class="data-item">Walkerhill</li>
+                                                                                                                    <li class="data-item">SK Magic</li>
+                                                                                                                    <li class="data-item">Information security</li>
+                                                                                                                    <li class="data-item">SHE(safety, health & enviroment)
                                                                                                                     </li>
                                                                                                                 </ul>
                                                                                                             </div>
-                                                                                                            자회사 관리현황
+                                                                                                            Subsidiary management status
                                                                                                         </td>
-                                                                                                        <td class="align1">결산 및 내부회계관리제도<br>
-                                                                                                            사업 전반<br>
-                                                                                                            사업 전반<br>
-                                                                                                            사업 전반<br>
-                                                                                                            사업 전반<br>
-                                                                                                            사업 전반<br>
-                                                                                                            사업 전반<br>
-                                                                                                            사업 전반<br>
-                                                                                                            사업 전반<br>
-                                                                                                            운영 전반<br>
-                                                                                                            운영 전반<br>
-                                                                                                            자회사 효율적·효과적 관리</td>
+                                                                                                        <td class="align1">Audit Coverage<br>
+                                                                                                            Business at large<br>
+                                                                                                            Business at large<br>
+                                                                                                            Business at large<br>
+                                                                                                            Business at large<br>
+                                                                                                            Business at large<br>
+                                                                                                            Business at large<br>
+                                                                                                            Business at large<br>
+                                                                                                            Business at large<br>
+                                                                                                            Operations at large<br>
+                                                                                                            Operations at large<br>
+                                                                                                            Efficient/effective management of subsidiaries</td>
                                                                                                     </tr>
                                                                                                     <tr>
-                                                                                                        <td>2020</td>
+                                                                                                        <td>20</td>
                                                                                                         <td class="align1">
-                                                                                                            회계 감사<br>
-                                                                                                            글로벌부문<br>
-                                                                                                            정보통신부문<br>
-                                                                                                            스피드메이트사업부<br>
-                                                                                                            워커힐
+                                                                                                            Accounting audit<br>
+                                                                                                            Global division<br>
+                                                                                                            IT division<br>
+                                                                                                            Speedmate business division<br>
+                                                                                                            Walkerhill
                                                                                                         </td>
-                                                                                                        <td class="align1">결산 및 내부회계관리제도<br>
-                                                                                                            신용거래 Process<br>
-                                                                                                            B2B사업<br>
-                                                                                                            정기감사(사업 전반)<br>
-                                                                                                            중고차 사업<br>
-                                                                                                            구매(검수) Process
-                                                                                                        </td>
-                                                                                                    </tr>
-                                                                                                    <tr>
-                                                                                                        <td>2021</td>
-                                                                                                        <td class="align1">
-                                                                                                            회계 감사<br>
-                                                                                                            SK매직<br>
-                                                                                                            워커힐
-                                                                                                        </td>
-                                                                                                        <td class="align1">
-                                                                                                            결산 및 내부회계관리제도<br>
-                                                                                                            정기감사(사업 전반)<br>
-                                                                                                            정기감사(사업 전반)<br>
-                                                                                                            중고차사업 이행점검
+                                                                                                        <td class="align1">Account closing & internal accounting control<br>
+                                                                                                            Credit transaction process<br>
+                                                                                                            B2B business<br>
+                                                                                                            Regular audit (Business at large)<br>
+                                                                                                            Used car business<br>
+                                                                                                            Purchase (inspection) process
                                                                                                         </td>
                                                                                                     </tr>
                                                                                                     <tr>
-                                                                                                        <td>2022</td>
+                                                                                                        <td>21</td>
                                                                                                         <td class="align1">
-                                                                                                            회계 감사<br>
-                                                                                                            SK네트웍스서비스<br>
-                                                                                                            정보통신사업부
+                                                                                                            Accounting audit<br>
+                                                                                                            SK Magic<br>
+                                                                                                            Walkerhill
                                                                                                         </td>
                                                                                                         <td class="align1">
-                                                                                                            결산 및 내부회계관리제도<br>
-                                                                                                            정기감사(사업 전반)<br>
-                                                                                                            정기감사(사업 전반)
+                                                                                                            Account closing & intrenal accounting control<br>
+                                                                                                            Regular audit (Business at large)<br>
+                                                                                                            Regular audit (Business at large)<br>
+                                                                                                            Progress monitoring in the used car business
+                                                                                                        </td>
+                                                                                                    </tr>
+                                                                                                    <tr>
+                                                                                                        <td>22</td>
+                                                                                                        <td class="align1">
+                                                                                                            Accounting audit<br>
+                                                                                                            SK Networks service<br>
+                                                                                                            IT division
+                                                                                                        </td>
+                                                                                                        <td class="align1">
+                                                                                                            Account closing & internal accounting control<br>
+                                                                                                            Regular audit (Business at large)<br>
+                                                                                                            Regular audit (Business at large)
                                                                                                         </td>
                                                                                                     </tr>
                                                                                                 </tbody>
@@ -1037,22 +1067,22 @@
                                                                 <div class="section-wrap">
                                                                     <div class="section-head">
                                                                         <div class="section-subject">
-                                                                            <h4 class="section-name">공정거래 자율준수 프로그램</h4>
-                                                                            <p class="section-summary">SK네트웍스의 공정거래 자율준수 프로그램(CP, Compliance Program)은 기업이 공정거래 관련 법규를 준수하기 위해 자체적으로 제정하여 운영하는 내부 준법 시스템입니다. SK네트웍스는 2002년 CP를 도입하였으며, CP 운영 현황을 매년 이사회 보고 안건으로 상정하고 있습니다.<br> SK네트웍스는 CP 운영을 통하여 구성원들에게 공정거래와 관련된 명확하고 구체적인 행동기준을 제시하고 있으며, 사전 예방 활동을 통해 사업별 운영과정에서 발생할 수 있는 법규 위반 리스크를 최소화하고 있습니다.</p>
+                                                                            <h4 class="section-name">Fair Trade Compliance Program</h4>
+                                                                            <p class="section-summary">SK Networks’ Fair Trade Compliance Program (CP) is an internal compliance system established and operated with the goal of fair trade-related compliance. SK Networks introduced the CP in 2002 and has been presenting CP operation as an agenda for the BOD every year. Through the CP operation, we propose clear and concrete fair trade-related codes to our employees and minimize the risk of legal violations that can occur during business through preventive activities.</p>
                                                                         </div>
                                                                     </div>
                                                                 </div>
                                                             </div>
-                                                            <div class="section design1 case1 type1">
+                                                            <div class="section design1 case4 type1 compliance">
                                                                 <div class="section-wrap">
                                                                     <div class="section-head">
                                                                         <div class="section-subject">
-                                                                            <h4 class="section-name">SK네트웍스 컴플라이언스협의체 운영 </h4>
-                                                                            <p class="section-summary">SK네트웍스는 본사와 9개 자/손 회사(워커힐 포함)로 구성된 ‘SK네트웍스 컴플라이언스협의체’를 운영하며 참여사 모두가 준법경영과 공정경제에 대한 사회적 책임을 다하고 준법 수준을 향상하기 위해 노력하고 있습니다. 협의체는 법무, 공정거래, SHE(안전·보건·환경) 3가지 모듈로 운영되고 있으며, 협의체 활동을 통해 법규 및 제도에 대한 필요 정보 공유, 관련 교육, 각 사별 사례 학습(Lessons Learned) 공유 등 협의체 참여사간 상호작용 활동을 통해 사전 예방 활동과 이슈 대응 능력을 강화하고 있습니다.</p>
+                                                                            <h4 class="section-name">Operating Compliance Council</h4>
+                                                                            <p class="section-summary">The SK Networks operates a Compliance Council composed of SK Networks and nine first and second-tier subsidiaries (including Walkerhill) to fulfill its social responsibilities regarding compliance management and fair economy, and to enhance the overall compliance level. The Council is operated in three modules: legal, fair trade, and SHE(safety, health and environment), where the participating companies strengthen their capacities to prevent and respond to issues by interactively sharing information about the laws and regulations, lessons learned, and related training</p>
                                                                         </div>
                                                                     </div>
                                                                     <div class="section-body">
-                                                                        <p class="comment design2">SK네트웍스 Compliance 협의체</p>
+                                                                        <p class="board-name">SK Networks Compliance Council</p>
                                                                         <ul class="board-list design17 case1 type1">
                                                                             <li class="board-item">
                                                                                 <div class="board-wrap">
@@ -1060,8 +1090,10 @@
                                                                                         <img src="../../assets/images/sustainability/company.png" alt=" ">
                                                                                     </div>
                                                                                     <div class="board-name">
-                                                                                        <em class="board-caption">참여사</em>
-                                                                                        <p class="para">9개 자/손회사<br> (워커힐 포함)</p>
+                                                                                        <em class="board-caption">Participants</em>
+                                                                                        <p class="para">SK Networks and
+                                                                                            subsidiaries/
+                                                                                            sub-subsidiaries</p>
                                                                                     </div>
                                                                                 </div>
                                                                             </li>
@@ -1071,8 +1103,8 @@
                                                                                         <img src="../../assets/images/sustainability/modal.png" alt=" ">
                                                                                     </div>
                                                                                     <div class="board-name">
-                                                                                        <em class="board-caption">모듈</em>
-                                                                                        <p class="para">법무/공정거래/SHE</p>
+                                                                                        <em class="board-caption">Modules</em>
+                                                                                        <p class="para">Legal / CR / SHE</p>
                                                                                     </div>
                                                                                 </div>
                                                                             </li>
@@ -1082,8 +1114,8 @@
                                                                                         <img src="../../assets/images/sustainability/team.png" alt=" ">
                                                                                     </div>
                                                                                     <div class="board-name">
-                                                                                        <em class="board-caption">구성원 수</em>
-                                                                                        <p class="para">56명<br> (2023년 기준)</p>
+                                                                                        <em class="board-caption">Members</em>
+                                                                                        <p class="para">56<br> (as of 2023)</p>
                                                                                     </div>
                                                                                 </div>
                                                                             </li>
@@ -1093,8 +1125,11 @@
                                                                                         <img src="../../assets/images/sustainability/act.png" alt=" ">
                                                                                     </div>
                                                                                     <div class="board-name">
-                                                                                        <em class="board-caption">주요 활동</em>
-                                                                                        <p class="para">컴플라이언스 민감도 제고 및<br class="pc-only"> 대응 능력, 공동교육 </p>
+                                                                                        <em class="board-caption">Key Activities</em>
+                                                                                        <p class="para">Improvement of compliance
+                                                                                            sensitivity and response
+                                                                                            capacity, education and
+                                                                                            information sharing</p>
                                                                                     </div>
                                                                                 </div>
                                                                             </li>
@@ -1106,8 +1141,8 @@
                                                                 <div class="section-wrap">
                                                                     <div class="section-head">
                                                                         <div class="section-subject">
-                                                                            <h4 class="section-name">공정거래 자율준수 조직</h4>
-                                                                            <p class="section-summary">SK네트웍스는 이사회에서 자율준수 관리자를 선임하고, 자율준수 전담 조직을 운영하고 있습니다. 자율준수 조직체계를 통해 윤리와 관련한 중요 이슈를 도출하여 각 사업의 공정거래 관련 법 준수 현황 점검, 공정 경제 촉진, 거래 투명성 제고 및 공정거래 관련 주요 정책을 유관 사업 부서와 공유하는 등 자율준수 기반을 마련하고 있습니다.</p>
+                                                                            <h4 class="section-name">Fair Trade Compliance Committee</h4>
+                                                                            <p class="section-summary">SK Networks appoints a compliance officer from the BOD and operates an organization dedicated to compliance management. Through the voluntary compliance committee, we are preparing a foundation for compliance by deriving key ethical issues and consequently inspecting the status of fair trade-related compliance for each business, promoting fair economy, enhancing trade transparency, and sharing the key Fair Trade policies with the relevant divisions.</p>
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -1118,29 +1153,27 @@
                                                 <!-- tab3 -->
                                                 <div id="tab-panel3" class="panel-item" role="tabpanel">
                                                     <div class="panel-wrap">
-                                                        <div class="panel-head">
-                                                        </div>
                                                         <div class="panel-body">
                                                             <div class="section design1 case1 type1">
                                                                 <div class="section-wrap">
                                                                     <div class="section-body">
                                                                         <div class="section-figure">
-                                                                            <img src="../../assets/images/sustainability/policy-corruption.jpg" alt="부패방지방침 이미지입니다. 설명은 하단 내용을 참고하세요." style="min-width: 33.9rem;width: 100%">
+                                                                            <img src="../../assets/images/sustainability/policy-corruption-en.jpg" alt="This is an image of an anti-corruption policy. Please refer to the following for an explanation." style="min-width: 33.9rem;width: 100%">
                                                                             <div class="blind">
                                                                                 <div>
-                                                                                    <strong>부패방지방침</strong>
-                                                                                    <p>SK네트웍스는 구성원과 이해관계자의 지속적인 행복을 추구하고 공정하고 투명한 기업문화를 구축하고자 ‘부패방지방침’을 아래와 같이 정하여 운영합니다.</p>
+                                                                                    <strong>Anti-Corruption Policy</strong>
+                                                                                    <p>SK Networks has specified and developed the following Anti-Corruption Policy in a bid to ensure sustainable happiness of its people and stakeholders and foster a fair and transparent corporate culture.</p>
                                                                                     <ol>
-                                                                                        <li>SK네트웍스의 모든 구성원은 부패와 관련된 행위를 하지 않습니다.</li>
-                                                                                        <li>SK네트웍스의 모든 구성원은 업무 활동에 적용되는 부패 관련 국내·외 법률 및 당사의 규정·지침을 준수합니다.</li>
-                                                                                        <li>SK네트웍스는 글로벌 기준에 부합하는 부패방지 경영시스템을 구축하고 이의 실행 및 모니터링을 통해 부패방지경영 수준을 지속적으로 개선합니다.</li>
-                                                                                        <li>SK네트웍스는 윤리규범 및 부패방지방침을 준수하지 않은 구성원에 대해서는 관련 규정에 따라 엄정하게 처리하고 그 결과를 구성원들에게 공개합니다.</li>
-                                                                                        <li>SK네트웍스는 부패방지를 담당하는 조직 및 구성원에 대해서는 권한 및 독립성을 보장합니다.</li>
-                                                                                        <li>SK네트웍스의 모든 경영진은 부패방지 경영시스템이 효율적으로 실행될 수 있도록 모든 지원을 아끼지 않습니다.</li>
+                                                                                        <li>All SK Networks people do not engage in corrupt acts.</li>
+                                                                                        <li>All SK Networks people uphold domestic and international anti-corruption laws as well as corporate regulations/guidelines that are applicable to their business practies.</li>
+                                                                                        <li>SK Networks implements anti-corruption control systems in conformity of global standards and continues to improve anti-corruption controls by monitoring the operation of the control systems.</li>
+                                                                                        <li>SK Networks strictly disciplines its people in a transparent manner when they fail to comply with ethical standards and anti-corruption policies.</li>
+                                                                                        <li>SK Networks guarantees the authority and independence of organizations and individuals responsible for enforcing anti-corruption controls.</li>
+                                                                                        <li>All Members of SK Networks' management leadership spare no support in ensuring the efficient operation of anti-corruption control systems.</li>
                                                                                     </ol>
                                                                                     <div>
-                                                                                        <p>SK네트웍스 주식회사<br>
-                                                                                            대표이사 사장 이 호 정</p>
+                                                                                        <p>CEO & President<br>
+                                                                                            Lee, Ho-jeong</p>
                                                                                     </div>
                                                                                 </div>
                                                                             </div>
@@ -1170,35 +1203,35 @@
                 <div class="footer-body">
                     <div class="section policy">
                         <div class="section-wrap">
-                            <div class="section-head blind">운영 정책</div>
+                            <div class="section-head blind">operational policy</div>
                             <div class="section-body">
                                 <ul class="navi-list">
-                                    <li class="navi-item"><a href="#" class="navi-text">개인정보처리방침</a></li>
-                                    <li class="navi-item"><a href="#" class="navi-text">사이트맵</a></li>
-                                    <li class="navi-item"><a href="#" class="navi-text">제보하기</a></li>
+                                    <li class="navi-item"><a href="#" class="navi-text">Privacy Policy</a></li>
+                                    <li class="navi-item"><a href="#" class="navi-text">Sitemap</a></li>
+                                    <li class="navi-item"><a href="https://ethics.sk.co.kr/" target="_blank" class="navi-text">제보하기</a></li>
                                 </ul>
                                 <ul class="info-list">
                                     <li class="info-item ncsi"><span class="info-text blind">NCSI</span></li>
-                                    <li class="info-item isms"><a href="#" class="info-text blind" title="정보보호 관리체계(ISMS) 인증 팝업창">정보보호 관리체계 ISMS 인증 마크</a></li>
+                                    <li class="info-item isms"><a href="#" class="info-text blind" title="ISMS Popup">information security Management system mark</a></li>
                                 </ul>
                             </div>
                         </div>
                     </div>
                     <div class="section info">
                         <div class="section-wrap">
-                            <div class="section-head blind">기업정보</div>
+                            <div class="section-head blind">Corporate information</div>
                             <div class="section-body">
                                 <ul class="data-list">
-                                    <li class="data-item"><span class="data-text">경기도 수원시 팔달구 매산로52번길 4(매산로2가)</span></li>
+                                    <li class="data-item"><span class="data-text">4, Maesan-ro 52beon-gil, Paldal-gu, Suwon-si, Gyeonggi-do, Republic of Korea</span></li>
                                     <li class="data-item"><span class="data-text">Tel : 070-7800-2114</span></li>
-                                    <li class="data-item"><span class="data-text">Copyright ⓒ 2024 by SK Networks Co. Ltd. All Rights Reserved</span></li>
+                                    <li class="data-item"><span class="data-text">Copyright ⓒ 2024 by SK Networks Co. Ltd. All Rights Reserved.</span></li>
                                 </ul>
                             </div>
                         </div>
                     </div>
                     <!-- 패밀리 사이트 리스트 수급 후 작업예정 -->
                     <div class="section family-site">
-                        <button title="패밀리 사이트" aria-label="패밀리 사이트" aria-haspopup="true" class="btn-family">
+                        <button title="Family Site" aria-label="Family Site" aria-haspopup="true" class="btn-family">
                             <span class="btn-text">패밀리 사이트</span>
                         </button>
                         <div class="site-area">
@@ -1237,6 +1270,11 @@
                         </div>
                     </div>
                 </div>
+            </div>
+            <div class="btn-to-top">
+                <button type="button" id="topBtn" class="top-btn">
+                    <div class="btn-text">Top</div>
+                </button>
             </div>
         </footer>
         <!-- //page-foot -->

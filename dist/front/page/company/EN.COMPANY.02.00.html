@@ -48,9 +48,9 @@
 
             function getStartValue(type) {
                 if (type === 1) {
-                    return window.innerWidth >= 1024 ? 'top 12' : 'top 5';
+                    return window.innerWidth >= 1200 ? 'top 12' : 'top 5';
                 } else if (type === 2) {
-                    return window.innerWidth >= 1024 ? 'top -13%' : 'top top';
+                    return window.innerWidth >= 1200 ? 'top -13%' : 'top top';
                 }
                 return 'top 12'; // 기본값
             }
@@ -122,7 +122,7 @@
 
                 ScrollTrigger.create({
                     trigger: bodyHis,
-                    start: "top 1",
+                    start: "top 2",
                     end: "bottom bottom",
                     onEnter: () => {
                         hisAnchor.classList.add('fixed');
@@ -199,9 +199,9 @@
         <div class="skip">
             <span class="blind">skip navigation</span>
             <ul>
-                <li><a href="#naviMenu">메뉴 바로가기</a></li>
-                <li><a href="#main">본문 바로가기</a></li>
-                <li><a href="#footer">하단 정보(링크) 바로가기</a></li>
+                <li><a href="#naviMenu">Menu Shortcuts</a></li>
+                <li><a href="#main">Text Shortcuts</a></li>
+                <li><a href="#footer">Footer Information Shortcuts</a></li>
             </ul>
         </div>
         <header class="light" id="header">
@@ -218,16 +218,16 @@
                             <div class="depth2-wrap">
                                 <ul class="depth2-list ">
                                     <li class="depth2-item ">
-                                        <a href="javascript:void(0)" target="_self" class="depth2">기업 개요</a>
+                                        <a href="javascript:void(0)" target="_self" class="depth2">Company <br class="pc-only">Overview</a>
                                     </li>
                                     <li class="depth2-item">
-                                        <a href="javascript:void(0)" target="_self" class="depth2">CEO인사말</a>
+                                        <a href="javascript:void(0)" target="_self" class="depth2">CEO Message</a>
                                     </li>
                                     <li class="depth2-item">
-                                        <a href="javascript:void(0)" target="_self" class="depth2">연혁</a>
+                                        <a href="javascript:void(0)" target="_self" class="depth2">History</a>
                                     </li>
                                     <li class="depth2-item">
-                                        <a href="javascript:void(0)" target="_self" class="depth2">글로벌 네트워크</a>
+                                        <a href="javascript:void(0)" target="_self" class="depth2">Global Networks</a>
                                     </li>
                                 </ul>
                             </div>
@@ -237,115 +237,118 @@
                             <div class="depth2-wrap">
                                 <ul class="depth2-list">
                                     <li class="depth2-item">
-                                        <a href="javascript:void(0)" target="_self" class="depth2">사업 개요</a>
+                                        <a href="javascript:void(0)" target="_self" class="depth2">Business Overview</a>
                                     </li>
                                     <li class="depth2-item">
-                                        <a href="javascript:void(0)" target="_self" class="depth2">글로벌 투자</a>
+                                        <a href="javascript:void(0)" target="_self" class="depth2">Global Investment</a>
                                     </li>
                                     <li class="depth2-item">
-                                        <a href="javascript:void(0)" target="_self" class="depth2">정보통신</a>
+                                        <a href="javascript:void(0)" target="_self" class="depth2">ICT Marketing</a>
                                     </li>
                                     <li class="depth2-item">
-                                        <a href="javascript:void(0)" target="_self" class="depth2">호텔앤리조트</a>
+                                        <a href="javascript:void(0)" target="_self" class="depth2">Hotels & Resorts</a>
                                     </li>
                                     <li class="depth2-item">
-                                        <a href="javascript:void(0)" target="_self" class="depth2">SK매직</a>
+                                        <a href="javascript:void(0)" target="_self" class="depth2">SK Magic</a>
                                     </li>
                                     <li class="depth2-item">
-                                        <a href="javascript:void(0)" target="_self" class="depth2">SK일렉링크</a>
+                                        <a href="javascript:void(0)" target="_self" class="depth2">SK Electlink</a>
                                     </li>
                                     <li class="depth2-item">
-                                        <a href="javascript:void(0)" target="_self" class="depth2">스피드메이트</a>
+                                        <a href="javascript:void(0)" target="_self" class="depth2">Speedmate</a>
                                     </li>
                                     <li class="depth2-item">
-                                        <a href="javascript:void(0)" target="_self" class="depth2">글로벌 트레이딩</a>
+                                        <a href="javascript:void(0)" target="_self" class="depth2">Global Trading</a>
                                     </li>
                                     <li class="depth2-item">
-                                        <a href="javascript:void(0)" target="_self" class="depth2">민팃</a>
+                                        <a href="javascript:void(0)" target="_self" class="depth2">MINTIT</a>
                                     </li>
                                     <li class="depth2-item">
-                                        <a href="javascript:void(0)" target="_self" class="depth2">엔코아</a>
+                                        <a href="javascript:void(0)" target="_self" class="depth2">En-core</a>
                                     </li>
                                 </ul>
                             </div>
                         </li>
                         <li class="depth1-item">
-                            <a href="javascript:void(0)" class="depth1">ESG</a>
+                            <a href="javascript:void(0)" class="depth1">Sustainability</a>
                             <div class="depth2-wrap">
                                 <ul class="depth2-list">
                                     <li class="depth2-item">
-                                        <a href="javascript:void(0)" target="_self" class="depth2">ESG 개요</a>
+                                        <a href="javascript:void(0)" target="_self" class="depth2">Overview of <br>Sustainable<br class="pc-only"> Management</a>
                                     </li>
                                     <li class="depth2-item">
-                                        <a href="javascript:void(0)" target="_self" class="depth2">사회적 가치</a>
+                                        <a href="javascript:void(0)" target="_self" class="depth2">Social Value</a>
                                         <div class="depth3-wrap">
                                             <ul class="depth3-list">
                                                 <li class="depth3-item">
                                                     <a href="javascript:void(0)" target="_self" class="depth3">Double Bottom Line</a>
                                                 </li>
                                                 <li class="depth3-item">
-                                                    <a href="javascript:void(0)" target="_self" class="depth3">사회적 가치 성과</a>
+                                                    <a href="javascript:void(0)" target="_self" class="depth3">Social Value <br class="pc-only">Performance</a>
                                                 </li>
                                             </ul>
                                         </div>
                                     </li>
                                     <li class="depth2-item">
-                                        <a href="javascript:void(0)" target="_self" class="depth2">환경</a>
+                                        <a href="javascript:void(0)" target="_self" class="depth2">Environment</a>
                                         <div class="depth3-wrap">
                                             <ul class="depth3-list">
                                                 <li class="depth3-item">
-                                                    <a href="javascript:void(0)" target="_self" class="depth3">환경경영</a>
+                                                    <a href="javascript:void(0)" target="_self" class="depth3">Environmental <br class="pc-only">Management</a>
                                                 </li>
                                                 <li class="depth3-item">
-                                                    <a href="javascript:void(0)" target="_self" class="depth3">기후변화</a>
+                                                    <a href="javascript:void(0)" target="_self" class="depth3">Climate Change</a>
                                                 </li>
                                             </ul>
                                         </div>
                                     </li>
                                     <li class="depth2-item">
-                                        <a href="javascript:void(0)" target="_self" class="depth2">사회</a>
+                                        <a href="javascript:void(0)" target="_self" class="depth2">Society</a>
                                         <div class="depth3-wrap">
                                             <ul class="depth3-list">
                                                 <li class="depth3-item">
-                                                    <a href="javascript:void(0)" target="_self" class="depth3">인권경영선언문</a>
+                                                    <a href="javascript:void(0)" target="_self" class="depth3">Human Rights <br class="pc-only">Commitment <br class="pc-only">Declaration</a>
                                                 </li>
                                                 <li class="depth3-item">
-                                                    <a href="javascript:void(0)" target="_self" class="depth3">구성원 행복</a>
+                                                    <a href="javascript:void(0)" target="_self" class="depth3">Employee Happiness</a>
                                                 </li>
                                                 <li class="depth3-item">
-                                                    <a href="javascript:void(0)" target="_self" class="depth3">이해관계자 행복</a>
+                                                    <a href="javascript:void(0)" target="_self" class="depth3">Stakeholder <br class="pc-only">Happiness</a>
                                                 </li>
                                             </ul>
                                         </div>
                                     </li>
                                     <li class="depth2-item">
-                                        <a href="javascript:void(0)" target="_self" class="depth2">거버넌스</a>
+                                        <a href="javascript:void(0)" target="_self" class="depth2">Governance</a>
                                         <div class="depth3-wrap">
                                             <ul class="depth3-list">
                                                 <li class="depth3-item">
-                                                    <a href="javascript:void(0)" target="_self" class="depth3">지배구조</a>
+                                                    <a href="javascript:void(0)" target="_self" class="depth3">Governance</a>
                                                 </li>
                                                 <li class="depth3-item">
-                                                    <a href="javascript:void(0)" target="_self" class="depth3">윤리경영</a>
+                                                    <a href="javascript:void(0)" target="_self" class="depth3">Ethical Management</a>
                                                 </li>
                                                 <li class="depth3-item">
-                                                    <a href="javascript:void(0)" target="_self" class="depth3">정보보호 및 보안</a>
+                                                    <a href="javascript:void(0)" target="_self" class="depth3">Information Protection <br class="pc-only">and Security</a>
                                                 </li>
                                                 <li class="depth3-item">
-                                                    <a href="javascript:void(0)" target="_self" class="depth3">자회사·손자회사 ESG관리</a>
+                                                    <a href="javascript:void(0)" target="_self" class="depth3">Investment <br class="pc-only">Management</a>
+                                                </li>
+                                                <li class="depth3-item">
+                                                    <a href="javascript:void(0)" target="_self" class="depth3">ESG management of <br class="pc-only">first/<br class="mo-only">second-tier <br class="pc-only">subsidiaries</a>
                                                 </li>
                                             </ul>
                                         </div>
                                     </li>
                                     <li class="depth2-item">
-                                        <a href="javascript:void(0)" target="_self" class="depth2">자료실</a>
+                                        <a href="javascript:void(0)" target="_self" class="depth2">Data Center</a>
                                         <div class="depth3-wrap">
                                             <ul class="depth3-list">
                                                 <li class="depth3-item">
-                                                    <a href="javascript:void(0)" target="_self" class="depth3">보고서 및 정책</a>
+                                                    <a href="javascript:void(0)" target="_self" class="depth3">Sustainability Report <br class="pc-only">and Policy</a>
                                                 </li>
                                                 <li class="depth3-item">
-                                                    <a href="javascript:void(0)" target="_self" class="depth3">수상 및 인증</a>
+                                                    <a href="javascript:void(0)" target="_self" class="depth3">Awards and<br class="pc-only"> Certifications</a>
                                                 </li>
                                             </ul>
                                         </div>
@@ -358,46 +361,46 @@
                             <div class="depth2-wrap">
                                 <ul class="depth2-list">
                                     <li class="depth2-item">
-                                        <a href="javascript:void(0)" target="_self" class="depth2">주식정보</a>
+                                        <a href="javascript:void(0)" target="_self" class="depth2">Stocks</a>
                                         <div class="depth3-wrap">
                                             <ul class="depth3-list">
                                                 <li class="depth3-item">
-                                                    <a href="javascript:void(0)" target="_self" class="depth3">주가정보</a>
+                                                    <a href="javascript:void(0)" target="_self" class="depth3">Stock Prices</a>
                                                 </li>
                                                 <li class="depth3-item">
-                                                    <a href="javascript:void(0)" target="_self" class="depth3">주주환원</a>
+                                                    <a href="javascript:void(0)" target="_self" class="depth3">Shareholder Return</a>
                                                 </li>
                                             </ul>
                                         </div>
                                     </li>
                                     <li class="depth2-item">
-                                        <a href="javascript:void(0)" target="_self" class="depth2">재무정보</a>
+                                        <a href="javascript:void(0)" target="_self" class="depth2">Finance</a>
                                         <div class="depth3-wrap">
                                             <ul class="depth3-list">
                                                 <li class="depth3-item">
-                                                    <a href="javascript:void(0)" target="_self" class="depth3">주요재무현황</a>
+                                                    <a href="javascript:void(0)" target="_self" class="depth3">Financial Status</a>
                                                 </li>
                                                 <li class="depth3-item">
-                                                    <a href="javascript:void(0)" target="_self" class="depth3">감사보고서</a>
+                                                    <a href="javascript:void(0)" target="_self" class="depth3">Audit Report</a>
                                                 </li>
                                                 <li class="depth3-item">
-                                                    <a href="javascript:void(0)" target="_self" class="depth3">신용등급</a>
+                                                    <a href="javascript:void(0)" target="_self" class="depth3">Credit Ratings</a>
                                                 </li>
                                             </ul>
                                         </div>
                                     </li>
                                     <li class="depth2-item">
-                                        <a href="javascript:void(0)" target="_self" class="depth2">IR정보</a>
+                                        <a href="javascript:void(0)" target="_self" class="depth2">IR Information</a>
                                         <div class="depth3-wrap">
                                             <ul class="depth3-list">
                                                 <li class="depth3-item">
-                                                    <a href="javascript:void(0)" target="_self" class="depth3">IR일정</a>
+                                                    <a href="javascript:void(0)" target="_self" class="depth3">IR Event</a>
                                                 </li>
                                                 <li class="depth3-item">
-                                                    <a href="javascript:void(0)" target="_self" class="depth3">IR자료</a>
+                                                    <a href="javascript:void(0)" target="_self" class="depth3">IR Materials</a>
                                                 </li>
                                                 <li class="depth3-item">
-                                                    <a href="javascript:void(0)" target="_self" class="depth3">IR뉴스</a>
+                                                    <a href="javascript:void(0)" target="_self" class="depth3">IR News</a>
                                                 </li>
                                             </ul>
                                         </div>
@@ -410,10 +413,10 @@
                             <div class="depth2-wrap">
                                 <ul class="depth2-list">
                                     <li class="depth2-item">
-                                        <a href="javascript:void(0)" target="_self" class="depth2">뉴스룸</a>
+                                        <a href="javascript:void(0)" target="_self" class="depth2">Newsroom</a>
                                     </li>
                                     <li class="depth2-item">
-                                        <a href="javascript:void(0)" target="_self" class="depth2">브랜드</a>
+                                        <a href="javascript:void(0)" target="_self" class="depth2">Brand</a>
                                     </li>
                                 </ul>
                             </div>
@@ -423,23 +426,16 @@
                             <div class="depth2-wrap">
                                 <ul class="depth2-list">
                                     <li class="depth2-item">
-                                        <a href="javascript:void(0)" target="_self" class="depth2">기업문화</a>
+                                        <a href="javascript:void(0)" target="_self" class="depth2">Business Culture</a>
                                     </li>
                                     <li class="depth2-item">
-                                        <a href="javascript:void(0)" target="_self" class="depth2">인사제도</a>
+                                        <a href="javascript:void(0)" target="_self" class="depth2">Human Resource <br class="pc-only">Development</a>
                                     </li>
                                     <li class="depth2-item">
-                                        <a href="javascript:void(0)" target="_self" class="depth2">채용정보</a>
-                                        <div class="depth3-wrap">
-                                            <ul class="depth3-list">
-                                                <li class="depth3-item">
-                                                    <a href="javascript:void(0)" target="_self" class="depth3">직무소개</a>
-                                                </li>
-                                                <li class="depth3-item">
-                                                    <a href="javascript:void(0)" target="_self" class="depth3">채용절차</a>
-                                                </li>
-                                            </ul>
-                                        </div>
+                                        <a href="javascript:void(0)" target="_self" class="depth2">Appraisal/Remuneration</a>
+                                    </li>
+                                    <li class="depth2-item">
+                                        <a href="javascript:void(0)" target="_self" class="depth2">Recruitment information</a>
                                     </li>
                                 </ul>
                             </div>
@@ -449,11 +445,11 @@
                 <div class="site-util">
                     <div class="util contact-wrap">
                         <a href="javascript:void(0)" class="btn text design1 case2 color1 contact">
-                            <span class="btn-text">문의·제안</span>
+                            <span class="btn-text">Contact</span>
                         </a>
                     </div>
                     <div class="util lang" id="lang">
-                        <button title="언어 선택" aria-label="언어 선택" aria-haspopup="true" class="selected">
+                        <button title="language selection" aria-label="language selection" aria-haspopup="true" class="selected">
                             <span class="select-text cur-lang">KR</span>
                         </button>
                         <div class="option-area">
@@ -470,7 +466,7 @@
                 </div>
                 <div class="site-control">
                     <button class="btn icon case2 menu-header">
-                        <span class="btn-text blind">메뉴 열기</span>
+                        <span class="btn-text blind">Open Menu</span>
                     </button>
                 </div>
             </div>
@@ -488,11 +484,11 @@
                             </ul>
                         </div>
                         <div class="local-subject">
-                            <h2 class="local-name">SK네트웍스의<br> 성장과 도약의 발자취</h2>
+                            <h2 class="local-name">Milestones of Innovation at SK Networks</h2>
                         </div>
                         <div class="local-aside">
                             <div class="local-wrap">
-                                <h3 class="local-title">HISTORY</h3>
+                                <h3 class="local-title">History</h3>
                             </div>
                         </div>
                         <div class="local-figure">
@@ -503,24 +499,27 @@
                         </div>
                     </div>
                     <div class="local-body">
-                        <div class="content-head blind">HISTORY page</div>
+                        <div class="content-head blind">History</div>
                         <div class="content-body">
                             <div class="section anchor-area">
                                 <div id="navbar-history" class="anchor-display">
                                     <ul class="nav anchor-list">
                                         <li class="nav-item anchor-item">
                                             <a class="nav-link anchor-link" href="#historyArea1">
-                                                <p class="link-text">Expansion<span class="date">2003.10~</span></p>
+                                                <p class="link-text title">SK Networks: The Birth of a Global Company</p>
+                                                <span class="link-text date">2003.10 ~</span>
                                             </a>
                                         </li>
                                         <li class="nav-item anchor-item">
                                             <a class="nav-link anchor-link" href="#historyArea2">
-                                                <p class="link-text">Growth<span class="date">1997~2002</span></p>
+                                                <p class="link-text title">Inauguration of Sunkyong Co., Ltd. : Ushering in a New Era for General Trading Companies</p>
+                                                <span class="link-text date">1974 ~ 2002</span>
                                             </a>
                                         </li>
                                         <li class="nav-item anchor-item">
                                             <a class="nav-link anchor-link" href="#historyArea3">
-                                                <p class="link-text">Beginning<span class="date">1953~1973</span></p>
+                                                <p class="link-text title">Creating Value from Scratch! The Birth of Sunkyong</p>
+                                                <span class="link-text date">1953 ~ 1973</span>
                                             </a>
                                         </li>
                                     </ul>
@@ -534,8 +533,8 @@
                                             <div class="history-wrap">
                                                 <div class="head">
                                                     <div class="subject">
-                                                        <p class="summary">2003.10~현재</p>
-                                                        <p class="name">SK Networks, the emergence of a global company!</p>
+                                                        <p class="summary">2003.10 ~</p>
+                                                        <p class="name">SK Networks: The Birth of a Global Company</p>
                                                     </div>
                                                     <div class="progress-bar"></div>
                                                 </div>
@@ -546,13 +545,12 @@
                                                                 <div class="data-wrap">
                                                                     <div class="data-inform">
                                                                         <div class="data-subject">
-                                                                            <p class="data-name">SS Charger changed the name to SK Electlink</p>
-                                                                            <p class="data-name">데이터 관리 선도기업 ‘엔코아’ 인수 완료</p>
+                                                                            <p class="data-name">Founded PhnyX Lab, an AI research lab</p>
                                                                         </div>
-                                                                        <p class="data-date">2023</p>
+                                                                        <p class="data-date">2024.4</p>
                                                                     </div>
                                                                     <div class="data-figure">
-                                                                        <div class="figure-item"><img src="../../assets/images/company/thumb-history-2023.jpg" alt="엔코아 인수 기념 사진"></div>
+                                                                        <div class="figure-item"><img src="../../assets/images/company/thumb-history-2024-04.jpg" alt="Photo to celebrate the establishment of the PhnyX Lab"></div>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -560,12 +558,12 @@
                                                                 <div class="data-wrap">
                                                                     <div class="data-inform">
                                                                         <div class="data-subject">
-                                                                            <p class="data-name">Acquired SS Charger</p>
+                                                                            <p class="data-name">Acquired en-core</p>
                                                                         </div>
-                                                                        <p class="data-date">2022</p>
+                                                                        <p class="data-date">2023.10</p>
                                                                     </div>
                                                                     <div class="data-figure">
-                                                                        <div class="figure-item"><img src="../../assets/images/company/thumb-history-2022.jpg" alt="에스에스차저 전기차 충전소 사진"></div>
+                                                                        <div class="figure-item"><img src="../../assets/images/company/thumb-history-2023-10.jpg" alt="en-core Takeover Photo"></div>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -573,12 +571,13 @@
                                                                 <div class="data-wrap">
                                                                     <div class="data-inform">
                                                                         <div class="data-subject">
-                                                                            <p class="data-name">Spun off MINTIT, cartini</p>
+                                                                            <p class="data-name">Walkerhill launched W.XYZ,</p>
+                                                                            <p class="data-name">Korea’s first community-based NFT membership</p>
                                                                         </div>
-                                                                        <p class="data-date">2021</p>
+                                                                        <p class="data-date">2023.7</p>
                                                                     </div>
                                                                     <div class="data-figure">
-                                                                        <div class="figure-item"><img src="../../assets/images/company/thumb-history-2021.jpg" alt="민팃을 이용하고 있는 모습"></div>
+                                                                        <div class="figure-item"><img src="../../assets/images/company/thumb-history-2023-07.jpg" alt="W.XYZ Logo"></div>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -586,12 +585,38 @@
                                                                 <div class="data-wrap">
                                                                     <div class="data-inform">
                                                                         <div class="data-subject">
-                                                                            <p class="data-name">Launched SK Rent-a-car as joint Corporation</p>
+                                                                            <p class="data-name">Acquired SS Charger and launched SK Electlink</p>
+                                                                        </div>
+                                                                        <p class="data-date">2022/2023</p>
+                                                                    </div>
+                                                                    <div class="data-figure">
+                                                                        <div class="figure-item"><img src="../../assets/images/company/thumb-history-2022-2023.jpg" alt="SK Electlink Charging Station"></div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="data-item">
+                                                                <div class="data-wrap">
+                                                                    <div class="data-inform">
+                                                                        <div class="data-subject">
+                                                                            <p class="data-name">Walkerhill announced its vision for Eco-friendly hotels</p>
+                                                                        </div>
+                                                                        <p class="data-date">2021.4</p>
+                                                                    </div>
+                                                                    <div class="data-figure">
+                                                                        <div class="figure-item"><img src="../../assets/images/company/thumb-history-2021-04.jpg" alt="A photo of Walkerhill's eco-friendly hotel vision declaration ceremony"></div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="data-item">
+                                                                <div class="data-wrap">
+                                                                    <div class="data-inform">
+                                                                        <div class="data-subject">
+                                                                            <p class="data-name">Established US subsidiary Hico Capital</p>
                                                                         </div>
                                                                         <p class="data-date">2020</p>
                                                                     </div>
                                                                     <div class="data-figure">
-                                                                        <div class="figure-item"><img src="../../assets/images/company/thumb-history-2020.jpg" alt="SK렌터카 출범 모델 사진"></div>
+                                                                        <div class="figure-item"><img src="../../assets/images/company/thumb-history-2020.jpg" alt="HICO CAPITAL Logo"></div>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -599,12 +624,22 @@
                                                                 <div class="data-wrap">
                                                                     <div class="data-inform">
                                                                         <div class="data-subject">
-                                                                            <p class="data-name">Acquired AJ rent-a-car</p>
+                                                                            <p class="data-name">Named Best ESG Company at the KCGS Excellence Awards</p>
+                                                                        </div>
+                                                                        <p class="data-date">2019.10</p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="data-item">
+                                                                <div class="data-wrap">
+                                                                    <div class="data-inform">
+                                                                        <div class="data-subject">
+                                                                            <p class="data-name">Launched Korea’s first AI-based used phone trading brand, MINTIT</p>
                                                                         </div>
                                                                         <p class="data-date">2019</p>
                                                                     </div>
                                                                     <div class="data-figure">
-                                                                        <div class="figure-item"><img src="../../assets/images/company/thumb-history-2019.jpg" alt="AJ렌터카, SK렌터카 로고 이미지"></div>
+                                                                        <div class="figure-item"><img src="../../assets/images/company/thumb-history-2019.jpg" alt="MINTIT image"></div>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -612,12 +647,12 @@
                                                                 <div class="data-wrap">
                                                                     <div class="data-inform">
                                                                         <div class="data-subject">
-                                                                            <p class="data-name">Walkerhill opened Darakhyu,<br> Korea’s first capsule hotel</p>
+                                                                            <p class="data-name">AJ Rent-a-Car acquired and SK Rent-a-Car integrated (transferred in September 2024)</p>
                                                                         </div>
-                                                                        <p class="data-date">2017</p>
+                                                                        <p class="data-date">2019/2020</p>
                                                                     </div>
                                                                     <div class="data-figure">
-                                                                        <div class="figure-item"><img src="../../assets/images/company/thumb-history-2017.jpg" alt="캡슐호텔 다락 휴 현판"></div>
+                                                                        <div class="figure-item"><img src="../../assets/images/company/thumb-history-2009.jpg" alt="AJ Rent-A-Car, SK Rent-A-Car Logo Image"></div>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -625,12 +660,12 @@
                                                                 <div class="data-wrap">
                                                                     <div class="data-inform">
                                                                         <div class="data-subject">
-                                                                            <p class="data-name">Acquired Dongyang Magic</p>
+                                                                            <p class="data-name">Walkerhill launched Korea’s first capsule hotel Darakhyu</p>
                                                                         </div>
-                                                                        <p class="data-date">2016</p>
+                                                                        <p class="data-date">2017.1</p>
                                                                     </div>
                                                                     <div class="data-figure">
-                                                                        <div class="figure-item"><img src="../../assets/images/company/thumb-history-2016.jpg" alt="SK매직 출범식"></div>
+                                                                        <div class="figure-item"><img src="../../assets/images/company/thumb-history-2017-01.jpg" alt="Capsule Hotel DARAKHYU Signboard"></div>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -638,12 +673,32 @@
                                                                 <div class="data-wrap">
                                                                     <div class="data-inform">
                                                                         <div class="data-subject">
-                                                                            <p class="data-name">Launched SK Rent-a-car</p>
+                                                                            <p class="data-name">Dongyang Magic acquired and SK Magic launched</p>
+                                                                        </div>
+                                                                        <p class="data-date">2016/2017</p>
+                                                                    </div>
+                                                                    <div class="data-figure">
+                                                                        <div class="figure-item"><img src="../../assets/images/company/thumb-history-2016-2017.jpg" alt="SK Magic Launch Ceremony"></div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="data-item">
+                                                                <div class="data-wrap">
+                                                                    <div class="data-inform">
+                                                                        <div class="data-subject">
+                                                                            <p class="data-name">SpeedMate launched import car maintenance service</p>
                                                                         </div>
                                                                         <p class="data-date">2014</p>
                                                                     </div>
-                                                                    <div class="data-figure">
-                                                                        <div class="figure-item"><img src="../../assets/images/company/thumb-history-2014.jpg" alt="SK렌터카 로고 이미지"></div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="data-item">
+                                                                <div class="data-wrap">
+                                                                    <div class="data-inform">
+                                                                        <div class="data-subject">
+                                                                            <p class="data-name">Launched BeneCar, a long-term personal car rental service</p>
+                                                                        </div>
+                                                                        <p class="data-date">2010.5</p>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -651,12 +706,12 @@
                                                                 <div class="data-wrap">
                                                                     <div class="data-inform">
                                                                         <div class="data-subject">
-                                                                            <p class="data-name">December: Merged with Walkerhill</p>
+                                                                            <p class="data-name">Walkerhill merged</p>
                                                                         </div>
-                                                                        <p class="data-date">2009</p>
+                                                                        <p class="data-date">2009.9</p>
                                                                     </div>
                                                                     <div class="data-figure">
-                                                                        <div class="figure-item"><img src="../../assets/images/company/thumb-history-2009.jpg" alt="워커힐 입구 전경"></div>
+                                                                        <div class="figure-item"><img src="../../assets/images/company/thumb-history-2009-09.jpg" alt="Walkerhill View"></div>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -664,12 +719,22 @@
                                                                 <div class="data-wrap">
                                                                     <div class="data-inform">
                                                                         <div class="data-subject">
-                                                                            <p class="data-name">October: Company name changed to SK Networks</p>
+                                                                            <p class="data-name">First corporate vehicle management service launched in Korea</p>
                                                                         </div>
-                                                                        <p class="data-date">2003</p>
+                                                                        <p class="data-date">2009.3</p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="data-item">
+                                                                <div class="data-wrap">
+                                                                    <div class="data-inform">
+                                                                        <div class="data-subject">
+                                                                            <p class="data-name">SK Networks launched</p>
+                                                                        </div>
+                                                                        <p class="data-date">2003.10</p>
                                                                     </div>
                                                                     <div class="data-figure">
-                                                                        <div class="figure-item"><img src="../../assets/images/company/thumb-history-2003.jpg" alt="SK네트웍스 출범 사진"></div>
+                                                                        <div class="figure-item"><img src="../../assets/images/company/thumb-history-2003-10.jpg" alt="Photos of SK Networks' launch"></div>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -684,8 +749,8 @@
                                             <div class="history-wrap">
                                                 <div class="head">
                                                     <div class="subject">
-                                                        <p class="summary">1973~2002</p>
-                                                        <p class="name">Sunkyung Textiles Co., Ltd., writing a new chapter in general trading</p>
+                                                        <p class="summary">1974 ~ 2002</p>
+                                                        <p class="name">Inauguration of Sunkyong Co., Ltd. : Ushering in a New Era for General Trading Companies</p>
                                                     </div>
                                                     <div class="progress-bar"></div>
                                                 </div>
@@ -696,12 +761,9 @@
                                                                 <div class="data-wrap">
                                                                     <div class="data-inform">
                                                                         <div class="data-subject">
-                                                                            <p class="data-name">Company name changed to SK Global as a mega-sized marketing company</p>
+                                                                            <p class="data-name">Thrunet dedicated line acquired (transferred in July 2009)</p>
                                                                         </div>
-                                                                        <p class="data-date">2000</p>
-                                                                    </div>
-                                                                    <div class="data-figure">
-                                                                        <div class="figure-item"><img src="../../assets/images/company/thumb-history-2000.jpg" alt="2000년대 초반 SK글로벌 광고"></div>
+                                                                        <p class="data-date">2002.11</p>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -709,14 +771,12 @@
                                                                 <div class="data-wrap">
                                                                     <div class="data-inform">
                                                                         <div class="data-subject">
-                                                                            <p class="data-name">Announced its Turn-Around vision</p>
-                                                                            <p class="data-name">Merged with Speedmate and SK Distribution</p>
+                                                                            <p class="data-name">SK Global launched (merging SK Distribution and SK Energy Sales)</p>
                                                                         </div>
-                                                                        <p class="data-date">1999</p>
+                                                                        <p class="data-date">2000.7</p>
                                                                     </div>
                                                                     <div class="data-figure">
-                                                                        <div class="figure-item"><img src="../../assets/images/company/thumb-history-1999-01.jpg" alt="스피드메이트 직원과 상담중인 고객"></div>
-                                                                        <div class="figure-item"><img src="../../assets/images/company/thumb-history-1999-02.jpg" alt="SK유통 건물 전경"></div>
+                                                                        <div class="figure-item"><img src="../../assets/images/company/thumb-history-2000-07.jpg" alt="SK Global Advertising in the early 2000s"></div>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -724,12 +784,12 @@
                                                                 <div class="data-wrap">
                                                                     <div class="data-inform">
                                                                         <div class="data-subject">
-                                                                            <p class="data-name">Company name changed to SK Trading</p>
+                                                                            <p class="data-name">SpeedMate acquired</p>
                                                                         </div>
-                                                                        <p class="data-date">1998</p>
+                                                                        <p class="data-date">2000.5</p>
                                                                     </div>
                                                                     <div class="data-figure">
-                                                                        <div class="figure-item"><img src="../../assets/images/company/thumb-history-1998.jpg" alt="SK 상사 사명 변경식"></div>
+                                                                        <div class="figure-item"><img src="../../assets/images/company/thumb-history-2000-05.jpg" alt="Customer in consultation with staff"></div>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -737,12 +797,12 @@
                                                                 <div class="data-wrap">
                                                                     <div class="data-inform">
                                                                         <div class="data-subject">
-                                                                            <p class="data-name">Number of SK mobile communications shops exceed 1,000</p>
+                                                                            <p class="data-name">Renamed to SK Trading</p>
                                                                         </div>
-                                                                        <p class="data-date">1996</p>
+                                                                        <p class="data-date">1998.1</p>
                                                                     </div>
                                                                     <div class="data-figure">
-                                                                        <div class="figure-item"><img src="../../assets/images/company/thumb-history-1996.jpg" alt="인천역 앞에서 휴대전화를 사용하고 있는 사람들"></div>
+                                                                        <div class="figure-item"><img src="../../assets/images/company/thumb-history-1998-01.jpg" alt="Company Name Change Ceremony"></div>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -750,12 +810,12 @@
                                                                 <div class="data-wrap">
                                                                     <div class="data-inform">
                                                                         <div class="data-subject">
-                                                                            <p class="data-name">Number of SK gas stations exceed 3,000</p>
+                                                                            <p class="data-name">First Korean company to open a trade office in China</p>
                                                                         </div>
-                                                                        <p class="data-date">1995</p>
+                                                                        <p class="data-date">1991.2</p>
                                                                     </div>
                                                                     <div class="data-figure">
-                                                                        <div class="figure-item"><img src="../../assets/images/company/thumb-history-1995.jpg" alt="SK 주유소 전경"></div>
+                                                                        <div class="figure-item"><img src="../../assets/images/company/thumb-history-1991-02.jpg" alt="Sun-Kyung's photo commemorating the opening of the first Beijing office for a Korean company"></div>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -763,13 +823,9 @@
                                                                 <div class="data-wrap">
                                                                     <div class="data-inform">
                                                                         <div class="data-subject">
-                                                                            <p class="data-name">Acquired Korea National Oil Corporation</p>
+                                                                            <p class="data-name">Sunkyong Hall opened at the Korea World Trade Center</p>
                                                                         </div>
-                                                                        <p class="data-date">1980</p>
-                                                                    </div>
-                                                                    <div class="data-figure">
-                                                                        <div class="figure-item"><img src="../../assets/images/company/thumb-history-1980.jpg" alt="인수한 대한석유공사 작업 현장"></div>
-                                                                        <div class="figure-item"><img src="../../assets/images/company/thumb-history-1980-02.jpg" alt="대한석유공사 인수 관련 신문기사들"></div>
+                                                                        <p class="data-date">1988.9</p>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -777,12 +833,9 @@
                                                                 <div class="data-wrap">
                                                                     <div class="data-inform">
                                                                         <div class="data-subject">
-                                                                            <p class="data-name">IPO and listing on Korea Stock Exchange</p>
+                                                                            <p class="data-name">Surpassed $1 Billion in exports (received $500 Million Export Tower Award in 1981)</p>
                                                                         </div>
-                                                                        <p class="data-date">1977</p>
-                                                                    </div>
-                                                                    <div class="data-figure">
-                                                                        <div class="figure-item"><img src="../../assets/images/company/thumb-history-1977.jpg" alt="선경 기업 공개 및 주식 상장 하고 있는 현장"></div>
+                                                                        <p class="data-date">1986</p>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -790,13 +843,38 @@
                                                                 <div class="data-wrap">
                                                                     <div class="data-inform">
                                                                         <div class="data-subject">
-                                                                            <p class="data-name">Awarded the $100 Million Export Tower.</p>
-                                                                            <p class="data-name">Designated as a general trading company</p>
+                                                                            <p class="data-name">Korea Petroleum Corporation (Yukong) acquired</p>
+                                                                        </div>
+                                                                        <p class="data-date">1980.11</p>
+                                                                    </div>
+                                                                    <div class="data-figure">
+                                                                        <div class="figure-item"><img src="../../assets/images/company/thumb-history-1980-11.jpg" alt="Work site of Korea National Oil Corporation acquired"></div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="data-item">
+                                                                <div class="data-wrap">
+                                                                    <div class="data-inform">
+                                                                        <div class="data-subject">
+                                                                            <p class="data-name">$200 Million Export Tower Award received on Export Day</p>
+                                                                        </div>
+                                                                        <p class="data-date">1977.12</p>
+                                                                    </div>
+                                                                    <div class="data-figure">
+                                                                        <div class="figure-item"><img src="../../assets/images/company/thumb-history-1977-12.jpg" alt="$200 million export tower award ceremony photo"></div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="data-item">
+                                                                <div class="data-wrap">
+                                                                    <div class="data-inform">
+                                                                        <div class="data-subject">
+                                                                            <p class="data-name">Sunkyong Co., Ltd. incorporated (went public in 1977) and designated as a general trading company</p>
                                                                         </div>
                                                                         <p class="data-date">1976</p>
                                                                     </div>
                                                                     <div class="data-figure">
-                                                                        <div class="figure-item"><img src="../../assets/images/company/thumb-history-1976.jpg" alt="선박에 실려 나가는 수출품들"></div>
+                                                                        <div class="figure-item"><img src="../../assets/images/company/thumb-history-1976.jpg" alt="exports carried out on a ship"></div>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -804,12 +882,25 @@
                                                                 <div class="data-wrap">
                                                                     <div class="data-inform">
                                                                         <div class="data-subject">
-                                                                            <p class="data-name">November: Awarded the Gold Tower Order of Industrial Service Merit</p>
+                                                                            <p class="data-name">Korea Foundation for Advanced Studies established</p>
                                                                         </div>
-                                                                        <p class="data-date">1973</p>
+                                                                        <p class="data-date">1974.11</p>
                                                                     </div>
                                                                     <div class="data-figure">
-                                                                        <div class="figure-item"><img src="../../assets/images/company/thumb-history-1973.jpg" alt="금탑산업 훈장 수상식 모습"></div>
+                                                                        <div class="figure-item"><img src="../../assets/images/company/thumb-history-1974-11.jpg" alt="A photo commemorating the establishment of the Korea Higher Education Foundation"></div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="data-item">
+                                                                <div class="data-wrap">
+                                                                    <div class="data-inform">
+                                                                        <div class="data-subject">
+                                                                            <p class="data-name">Management principles announced (formalized as SKMS in 1979)</p>
+                                                                        </div>
+                                                                        <p class="data-date">1974.9</p>
+                                                                    </div>
+                                                                    <div class="data-figure">
+                                                                        <div class="figure-item"><img src="../../assets/images/company/thumb-history-1974-09.jpg" alt="SKMS First Edition Image"></div>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -824,8 +915,8 @@
                                             <div class="history-wrap">
                                                 <div class="head">
                                                     <div class="subject">
-                                                        <p class="summary">1953~1973</p>
-                                                        <p class="name">Sunkyung Textiles, starting business with nothing</p>
+                                                        <p class="summary">1953 ~ 1973</p>
+                                                        <p class="name">Creating Value from Scratch! The Birth of Sunkyong</p>
                                                     </div>
                                                     <div class="progress-bar"></div>
                                                 </div>
@@ -836,12 +927,12 @@
                                                                 <div class="data-wrap">
                                                                     <div class="data-inform">
                                                                         <div class="data-subject">
-                                                                            <p class="data-name">Chairman Chey Jong-hyun took office</p>
+                                                                            <p class="data-name">Chairman Choi Jong-hyun inaugurated</p>
                                                                         </div>
-                                                                        <p class="data-date">1973</p>
+                                                                        <p class="data-date">1973.11</p>
                                                                     </div>
                                                                     <div class="data-figure">
-                                                                        <div class="figure-item"><img src="../../assets/images/company/thumb-history-1973-02.jpg" alt="최종현 회장 사진"></div>
+                                                                        <div class="figure-item"><img src="../../assets/images/company/thumb-history-1973-11.jpg" alt="Chairman Choi Jong-hyun's picture"></div>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -849,12 +940,12 @@
                                                                 <div class="data-wrap">
                                                                     <div class="data-inform">
                                                                         <div class="data-subject">
-                                                                            <p class="data-name">Awarded the Gold Tower Order of Industrial Service Merit</p>
+                                                                            <p class="data-name">Student uniform brand ‘Smart’ launched (transferred in 2012)</p>
                                                                         </div>
-                                                                        <p class="data-date">1963</p>
+                                                                        <p class="data-date">1970</p>
                                                                     </div>
                                                                     <div class="data-figure">
-                                                                        <div class="figure-item"><img src="../../assets/images/company/thumb-history-1963.jpg" alt="금탑산업훈장 수상식"></div>
+                                                                        <div class="figure-item"><img src="../../assets/images/company/thumb-history-1970.jpg" alt="Image of promotional material for launching 'Smart' student clothing brand"></div>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -862,12 +953,12 @@
                                                                 <div class="data-wrap">
                                                                     <div class="data-inform">
                                                                         <div class="data-subject">
-                                                                            <p class="data-name">Exported rayon fabric to Hong Kong for the first time in Korea</p>
+                                                                            <p class="data-name">Awarded the Gold Tower Order of Industrial Service Merit, the first since the founding of the nation</p>
                                                                         </div>
-                                                                        <p class="data-date">1962</p>
+                                                                        <p class="data-date">1963.8</p>
                                                                     </div>
                                                                     <div class="data-figure">
-                                                                        <div class="figure-item"><img src="../../assets/images/company/thumb-history-1962.jpg" alt="선경직물 현장 시찰하는 모습"></div>
+                                                                        <div class="figure-item"><img src="../../assets/images/company/thumb-history-1963-08.jpg" alt="Photograph of the Gold Tower Order of Industrial Merit"></div>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -875,15 +966,51 @@
                                                                 <div class="data-wrap">
                                                                     <div class="data-inform">
                                                                         <div class="data-subject">
-                                                                            <p class="data-name">Founded as a small textile company in the aftermath of the Korean War</p>
+                                                                            <p class="data-name">First Rayon fabric of Korea exported</p>
                                                                         </div>
-                                                                        <p class="data-date">1953</p>
+                                                                        <p class="data-date">1962.4</p>
                                                                     </div>
                                                                     <div class="data-figure">
-                                                                        <div class="figure-item"><img src="../../assets/images/company/thumb-history-1953-01.jpg" alt="전쟁으로 인해 파괴된 선경직물 공장"></div>
-                                                                        <div class="figure-item"><img src="../../assets/images/company/thumb-history-1953-02.jpg" alt="레이온 직물을 뽑아내는 선경직물 직원들"></div>
-                                                                        <div class="figure-item"><img src="../../assets/images/company/thumb-history-1953-03.jpg" alt="초창기 선경직물 사무실"></div>
-                                                                        <div class="figure-item"><img src="../../assets/images/company/thumb-history-1953-04.jpg" alt="선경직물에서 일한 직원들"></div>
+                                                                        <div class="figure-item"><img src="../../assets/images/company/thumb-history-1962-04.jpg" alt="Sun Kyung Textile Workers Producing Rayon Textiles"></div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="data-item">
+                                                                <div class="data-wrap">
+                                                                    <div class="data-inform">
+                                                                        <div class="data-subject">
+                                                                            <p class="data-name">Phoenix blanket fabric developed</p>
+                                                                        </div>
+                                                                        <p class="data-date">1958.5</p>
+                                                                    </div>
+                                                                    <div class="data-figure">
+                                                                        <div class="figure-item"><img src="../../assets/images/company/thumb-history-1958-05.jpg" alt="Imaging of a phoenix blanket"></div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="data-item">
+                                                                <div class="data-wrap">
+                                                                    <div class="data-inform">
+                                                                        <div class="data-subject">
+                                                                            <p class="data-name">Sunkyong Textiles received the Minister of Commerce Award for its artificial silk</p>
+                                                                        </div>
+                                                                        <p class="data-date">1955.12</p>
+                                                                    </div>
+                                                                    <div class="data-figure">
+                                                                        <div class="figure-item"><img src="../../assets/images/company/thumb-history-1955-12.jpg" alt="Image of the Minister of Science and Technology Award for the Artificial Dog Lining of Seongyeong Textiles"></div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="data-item">
+                                                                <div class="data-wrap">
+                                                                    <div class="data-inform">
+                                                                        <div class="data-subject">
+                                                                            <p class="data-name">Sunkyong Textiles founded by Chairman Choi Jong-kun</p>
+                                                                        </div>
+                                                                        <p class="data-date">1953.4</p>
+                                                                    </div>
+                                                                    <div class="data-figure">
+                                                                        <div class="figure-item"><img src="../../assets/images/company/thumb-history-1953-04.jpg" alt="an early linear textile office"></div>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -910,35 +1037,35 @@
                 <div class="footer-body">
                     <div class="section policy">
                         <div class="section-wrap">
-                            <div class="section-head blind">운영 정책</div>
+                            <div class="section-head blind">operational policy</div>
                             <div class="section-body">
                                 <ul class="navi-list">
-                                    <li class="navi-item"><a href="#" class="navi-text">개인정보처리방침</a></li>
-                                    <li class="navi-item"><a href="#" class="navi-text">사이트맵</a></li>
-                                    <li class="navi-item"><a href="#" class="navi-text">제보하기</a></li>
+                                    <li class="navi-item"><a href="#" class="navi-text">Privacy Policy</a></li>
+                                    <li class="navi-item"><a href="#" class="navi-text">Sitemap</a></li>
+                                    <li class="navi-item"><a href="https://ethics.sk.co.kr/" target="_blank" class="navi-text">제보하기</a></li>
                                 </ul>
                                 <ul class="info-list">
                                     <li class="info-item ncsi"><span class="info-text blind">NCSI</span></li>
-                                    <li class="info-item isms"><a href="#" class="info-text blind" title="정보보호 관리체계(ISMS) 인증 팝업창">정보보호 관리체계 ISMS 인증 마크</a></li>
+                                    <li class="info-item isms"><a href="#" class="info-text blind" title="ISMS Popup">information security Management system mark</a></li>
                                 </ul>
                             </div>
                         </div>
                     </div>
                     <div class="section info">
                         <div class="section-wrap">
-                            <div class="section-head blind">기업정보</div>
+                            <div class="section-head blind">Corporate information</div>
                             <div class="section-body">
                                 <ul class="data-list">
-                                    <li class="data-item"><span class="data-text">경기도 수원시 팔달구 매산로52번길 4(매산로2가)</span></li>
+                                    <li class="data-item"><span class="data-text">4, Maesan-ro 52beon-gil, Paldal-gu, Suwon-si, Gyeonggi-do, Republic of Korea</span></li>
                                     <li class="data-item"><span class="data-text">Tel : 070-7800-2114</span></li>
-                                    <li class="data-item"><span class="data-text">Copyright ⓒ 2024 by SK Networks Co. Ltd. All Rights Reserved</span></li>
+                                    <li class="data-item"><span class="data-text">Copyright ⓒ 2024 by SK Networks Co. Ltd. All Rights Reserved.</span></li>
                                 </ul>
                             </div>
                         </div>
                     </div>
                     <!-- 패밀리 사이트 리스트 수급 후 작업예정 -->
                     <div class="section family-site">
-                        <button title="패밀리 사이트" aria-label="패밀리 사이트" aria-haspopup="true" class="btn-family">
+                        <button title="Family Site" aria-label="Family Site" aria-haspopup="true" class="btn-family">
                             <span class="btn-text">패밀리 사이트</span>
                         </button>
                         <div class="site-area">
@@ -977,6 +1104,11 @@
                         </div>
                     </div>
                 </div>
+            </div>
+            <div class="btn-to-top">
+                <button type="button" id="topBtn" class="top-btn">
+                    <div class="btn-text">Top</div>
+                </button>
             </div>
         </footer>
         <!-- //page-foot -->

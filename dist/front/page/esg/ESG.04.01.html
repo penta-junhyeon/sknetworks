@@ -30,6 +30,32 @@
         document.addEventListener("DOMContentLoaded", () => {
             localAnimations_Case02();
             Tab();
+            roadMap();
+
+            window.addEventListener("resize", () => {
+                roadMap();
+            })
+
+            function roadMap() {
+                const _width = window.innerWidth
+                const policy = document.querySelectorAll(".roadmap .data-body .data-content:first-child")
+                if (_width > 1024) {
+                    let maxHeight = 0
+                    policy.forEach(policy => {
+                        const bulletHeight = policy.querySelector(".bullet-display .data-list").offsetHeight
+                        maxHeight < bulletHeight ? maxHeight = bulletHeight : null
+                    });
+                    policy.forEach(policy => {
+                        const bullet = policy.querySelector(".bullet-display .data-list")
+                        bullet.style.height = maxHeight + "px"
+                    });
+                } else {
+                    policy.forEach(policy => {
+                        const bullet = policy.querySelector(".bullet-display .data-list")
+                        bullet.removeAttribute("style");
+                    });
+                }
+            }
         });
     </script>
 </head>
@@ -331,7 +357,7 @@
                         <div class="local-info">
                             <ul class="data-list breadcrumb design1 case2 dark">
                                 <li class="data-item"><span class="item-text">Home</span></li>
-                                <li class="data-item"><span class="item-text">Sustainabillity</span></li>
+                                <li class="data-item"><span class="item-text">Sustainability</span></li>
                                 <li class="data-item"><span class="item-text">거버넌스</span></li>
                                 <li class="data-item"><span class="item-text">윤리경영</span></li>
                             </ul>
@@ -466,20 +492,24 @@
                                                                                             </div>
                                                                                         </div>
                                                                                         <div class="data-body">
-                                                                                            <p class="para">정책</p>
-                                                                                            <div class="bullet-display design1 case1 type5 spec">
-                                                                                                <ul class="data-list">
-                                                                                                    <li class="data-item">자회사 대상 ISO37001 인증 전파 및 지원</li>
-                                                                                                    <li class="data-item">자회사 윤리경영 관리기준 수립</li>
-                                                                                                </ul>
+                                                                                            <div class="data-content">
+                                                                                                <p class="para">정책</p>
+                                                                                                <div class="bullet-display design1 case1 type5 spec">
+                                                                                                    <ul class="data-list">
+                                                                                                        <li class="data-item">자회사 대상 ISO37001 인증 전파 및 지원</li>
+                                                                                                        <li class="data-item">자회사 윤리경영 관리기준 수립</li>
+                                                                                                    </ul>
+                                                                                                </div>
                                                                                             </div>
-                                                                                            <p class="para">교육</p>
-                                                                                            <div class="bullet-display design1 case1 type5 spec">
-                                                                                                <ul class="data-list">
-                                                                                                    <li class="data-item">회사 특성을 반영한 윤리교육 및 반부패 교육 컨텐츠 개발/시행
-                                                                                                    </li>
-                                                                                                    <li class="data-item">협력업체 윤리교육 컨텐츠 확대</li>
-                                                                                                </ul>
+                                                                                            <div class="data-content">
+                                                                                                <p class="para">교육</p>
+                                                                                                <div class="bullet-display design1 case1 type5 spec">
+                                                                                                    <ul class="data-list">
+                                                                                                        <li class="data-item">회사 특성을 반영한 윤리교육 및 반부패 교육 컨텐츠 개발/시행
+                                                                                                        </li>
+                                                                                                        <li class="data-item">협력업체 윤리교육 컨텐츠 확대</li>
+                                                                                                    </ul>
+                                                                                                </div>
                                                                                             </div>
                                                                                         </div>
                                                                                     </div>
@@ -494,25 +524,26 @@
                                                                                             </div>
                                                                                         </div>
                                                                                         <div class="data-body">
-                                                                                            <p class="para pc-only"></p>
-                                                                                            <p class="para mo-only">정책</p>
-                                                                                            <div class="bullet-display design1 case1 type5 spec">
-                                                                                                <ul class="data-list">
-                                                                                                    <li class="data-item">인권 경영 성과 공개</li>
-                                                                                                    <li class="data-item">그룹 멤버사, 파트너사 및 국내외 인권 기구와의 인권 정책, 경영방침 교류, 공감대 확산</li>
-                                                                                                    <li class="data-item">인권 정책∙경영 대외 인정</li>
-                                                                                                </ul>
+                                                                                            <div class="data-content">
+                                                                                                <p class="para mo-only">정책</p>
+                                                                                                <div class="bullet-display design1 case1 type5 spec">
+                                                                                                    <ul class="data-list">
+                                                                                                        <li class="data-item">자회사 ISO37001 인증 정착/확산</li>
+                                                                                                        <li class="data-item">자회사 윤리경영 관리 대상 범위 확대</li>
+                                                                                                    </ul>
+                                                                                                </div>
                                                                                             </div>
-                                                                                            <p class="para pc-only"></p>
-                                                                                            <p class="para mo-only">교육</p>
-                                                                                            <div class="bullet-display design1 case1 type5 spec">
-                                                                                                <ul class="data-list">
-                                                                                                    <li class="data-item">사업환경 변화를 반영하여 윤리교육 컨텐츠 지속 <br class="pc-only">개발
-                                                                                                    </li>
-                                                                                                    <li class="data-item">Target(리더/구성원)별 맞춤 교육 Pilot 시행
-                                                                                                    </li>
-                                                                                                    <li class="data-item">자회사 특성을 반영한 윤리교육 컨텐츠 개발 지원</li>
-                                                                                                </ul>
+                                                                                            <div class="data-content">
+                                                                                                <p class="para mo-only">교육</p>
+                                                                                                <div class="bullet-display design1 case1 type5 spec">
+                                                                                                    <ul class="data-list">
+                                                                                                        <li class="data-item">사업환경 변화를 반영하여 윤리교육 컨텐츠 지속 <br class="pc-only">개발
+                                                                                                        </li>
+                                                                                                        <li class="data-item">Target(리더/구성원)별 맞춤 교육 Pilot 시행
+                                                                                                        </li>
+                                                                                                        <li class="data-item">자회사 특성을 반영한 윤리교육 컨텐츠 개발 지원</li>
+                                                                                                    </ul>
+                                                                                                </div>
                                                                                             </div>
                                                                                         </div>
                                                                                     </div>
@@ -527,24 +558,26 @@
                                                                                             </div>
                                                                                         </div>
                                                                                         <div class="data-body">
-                                                                                            <p class="para pc-only"></p>
-                                                                                            <p class="para mo-only">정책</p>
-                                                                                            <div class="bullet-display design1 case1 type5 spec">
-                                                                                                <ul class="data-list">
-                                                                                                    <li class="data-item">본사 및 자회사 ISO37001 인증 유지 인증 범위 확대 검토
-                                                                                                    </li>
-                                                                                                    <li class="data-item">자회사 윤리경영 관리 질적 수준 향상</li>
-                                                                                                </ul>
+                                                                                            <div class="data-content">
+                                                                                                <p class="para mo-only">정책</p>
+                                                                                                <div class="bullet-display design1 case1 type5 spec">
+                                                                                                    <ul class="data-list">
+                                                                                                        <li class="data-item">본사 및 자회사 ISO37001 인증 유지 인증 범위 확대 검토
+                                                                                                        </li>
+                                                                                                        <li class="data-item">자회사 윤리경영 관리 질적 수준 향상</li>
+                                                                                                    </ul>
+                                                                                                </div>
                                                                                             </div>
-                                                                                            <p class="para pc-only"></p>
-                                                                                            <p class="para mo-only">교육</p>
-                                                                                            <div class="bullet-display design1 case1 type5 spec">
-                                                                                                <ul class="data-list">
-                                                                                                    <li class="data-item">윤리교육 및 반부패 교육 컨텐츠 최신화</li>
-                                                                                                    <li class="data-item">Target별 맞춤 교육 체계 수립</li>
-                                                                                                    <li class="data-item">협력업체 윤리교육 컨텐츠 지속 보완/개선</li>
-                                                                                                    <li class="data-item">자회사 특성을 반영한 윤리교육 컨텐츠 개선 활동 <br class="pc-only">지원</li>
-                                                                                                </ul>
+                                                                                            <div class="data-content">
+                                                                                                <p class="para mo-only">교육</p>
+                                                                                                <div class="bullet-display design1 case1 type5 spec">
+                                                                                                    <ul class="data-list">
+                                                                                                        <li class="data-item">윤리교육 및 반부패 교육 컨텐츠 최신화</li>
+                                                                                                        <li class="data-item">Target별 맞춤 교육 체계 수립</li>
+                                                                                                        <li class="data-item">협력업체 윤리교육 컨텐츠 지속 보완/개선</li>
+                                                                                                        <li class="data-item">자회사 특성을 반영한 윤리교육 컨텐츠 개선 활동 <br class="pc-only">지원</li>
+                                                                                                    </ul>
+                                                                                                </div>
                                                                                             </div>
                                                                                         </div>
                                                                                     </div>
@@ -587,7 +620,8 @@
                                                                             <div class="post-item">
                                                                                 <div class="post-wrap">
                                                                                     <div class="post-figure">
-                                                                                        <img src="../../assets/images/sustainability/compliance.svg" alt="윤리경영협의체 구성에 관한 이미지 입니다. 자세한 내용은 하단을 참고해주세요." style="min-width: 60rem;">
+                                                                                        <img src="../../assets/images/sustainability/compliance.svg" alt="윤리경영협의체 구성에 관한 이미지 입니다. 자세한 내용은 하단을 참고해주세요." class="pc-only">
+                                                                                        <img src="../../assets/images/sustainability/compliance-mo.png" alt="윤리경영협의체 구성에 관한 이미지 입니다. 자세한 내용은 하단을 참고해주세요." style="min-width: 600px;" class="mo-only">
                                                                                         <div class="post-body blind">
                                                                                             <strong>SK네트웍스 감사위원회</strong>
                                                                                             <ul>
@@ -611,7 +645,7 @@
                                                                     </div>
                                                                 </div>
                                                             </div>
-                                                            <div class="section design1 case1 type1">
+                                                            <div class="section design1 case1 type2">
                                                                 <div class="section-wrap">
                                                                     <div class="section-head">
                                                                         <div class="section-subject">
@@ -734,7 +768,7 @@
                                                                                                             </tr>
                                                                                                             <tr>
                                                                                                                 <td rowspan="2">협력사***</td>
-                                                                                                                <td>이수한 임직원 수 (단위 : 명)**</td>
+                                                                                                                <td>교육 시행여부 (단위 : 시행)</td>
                                                                                                                 <td>N</td>
                                                                                                                 <td>N</td>
                                                                                                                 <td>N</td>
@@ -742,7 +776,7 @@
                                                                                                                 <td>Y</td>
                                                                                                             </tr>
                                                                                                             <tr>
-                                                                                                                <td>이수한 임직원 비율 (단위 : %)</td>
+                                                                                                                <td>이수한 협력사 수 (단위 : 개)</td>
                                                                                                                 <td></td>
                                                                                                                 <td></td>
                                                                                                                 <td></td>
@@ -1054,7 +1088,7 @@
                                                                     </div>
                                                                 </div>
                                                             </div>
-                                                            <div class="section design1 case1 type1">
+                                                            <div class="section design1 case4 type1 compliance">
                                                                 <div class="section-wrap">
                                                                     <div class="section-head">
                                                                         <div class="section-subject">
@@ -1063,7 +1097,7 @@
                                                                         </div>
                                                                     </div>
                                                                     <div class="section-body">
-                                                                        <p class="comment design2">SK네트웍스 Compliance 협의체</p>
+                                                                        <p class="board-name">SK네트웍스 Compliance 협의체</p>
                                                                         <ul class="board-list design17 case1 type1">
                                                                             <li class="board-item">
                                                                                 <div class="board-wrap">
@@ -1186,7 +1220,7 @@
                                 <ul class="navi-list">
                                     <li class="navi-item"><a href="#" class="navi-text">개인정보처리방침</a></li>
                                     <li class="navi-item"><a href="#" class="navi-text">사이트맵</a></li>
-                                    <li class="navi-item"><a href="#" class="navi-text">제보하기</a></li>
+                                    <li class="navi-item"><a href="https://ethics.sk.co.kr/" target="_blank" class="navi-text">제보하기</a></li>
                                 </ul>
                                 <ul class="info-list">
                                     <li class="info-item ncsi"><span class="info-text blind">NCSI</span></li>
@@ -1247,6 +1281,11 @@
                         </div>
                     </div>
                 </div>
+            </div>
+            <div class="btn-to-top">
+                <button type="button" id="topBtn" class="top-btn">
+                    <div class="btn-text">Top</div>
+                </button>
             </div>
         </footer>
         <!-- //page-foot -->
