@@ -1314,15 +1314,13 @@
 .board-list.design11.case1 {
     width: 100%;
     margin: 0 auto;
-    gap: 5.2rem;
-}
-@media (max-width: 1023px) {
-    .board-list.design11.case1 {
-        gap: 4rem;
-    }
+    gap: 6.4rem;
 }
 .board-list.design11.case1 .board-item {
-    width: calc(16.6666666667% - 5.2rem);
+    position: relative;
+    width: calc(16.6666666667% - 6.4rem);
+    display: flex;
+    justify-content: center;
 }
 @media (max-width: 1023px) {
     .board-list.design11.case1 .board-item {
@@ -1336,9 +1334,9 @@
 }
 .board-list.design11.case1 .board-item .board-wrap .board-figure {
     position: relative;
-    width: 100%;
-    height: 0;
-    padding-bottom: 100%;
+    width: 12.4rem;
+    height: 12.4rem;
+    padding-bottom: 50%;
     background: #FFF;
     border-radius: 100%;
     box-shadow: 0px 1.336px 5.342px 0px rgba(0, 0, 0, 0.1);
@@ -1348,34 +1346,42 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 8.4rem;
-    height: 8.4rem;
 }
 .board-list.design11.case1 .board-item .board-wrap .board-figure + .board-info {
     margin-top: 2.4rem;
-}
-.board-list.design11.case1 .board-item .board-wrap .board-figure::after {
-    display: block;
-    position: absolute;
-    top: 50%;
-    right: -2.8rem;
-    width: 0.8rem;
-    height: 1.8rem;
-    content: "";
-    transform: translateY(-50%);
-    background-image: url("data:image/svg+xml,%0A%3Csvg width='9' height='14' viewBox='0 0 9 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M0.365166 0.365166C0.716638 0.0136945 1.28649 0.0136945 1.63796 0.365166L8.27435 7.00156L1.63796 13.638C1.28649 13.9894 0.716638 13.9894 0.365166 13.638C0.0136945 13.2865 0.0136945 12.7166 0.365166 12.3652L5.72877 7.00156L0.365166 1.63796C0.0136945 1.28649 0.0136945 0.716638 0.365166 0.365166Z' fill='rgb(113,113,122)'/%3E%3C/svg%3E%0A");
-    background-repeat: no-repeat;
+    width: 12.4rem;
 }
 .board-list.design11.case1 .board-item:last-child .board-wrap .board-figure::after {
     display: none;
 }
+.board-list.design11.case1 .board-item:last-child::after {
+    display: none;
+}
+.board-list.design11.case1 .board-item::after {
+    display: block;
+    position: absolute;
+    top: 35%;
+    right: -5.8rem;
+    width: 3.2rem;
+    height: 3.2rem;
+    content: "";
+    transform: translateY(-40%);
+    background-image: url("data:image/svg+xml,%0A%3Csvg width='9' height='14' viewBox='0 0 9 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M0.365166 0.365166C0.716638 0.0136945 1.28649 0.0136945 1.63796 0.365166L8.27435 7.00156L1.63796 13.638C1.28649 13.9894 0.716638 13.9894 0.365166 13.638C0.0136945 13.2865 0.0136945 12.7166 0.365166 12.3652L5.72877 7.00156L0.365166 1.63796C0.0136945 1.28649 0.0136945 0.716638 0.365166 0.365166Z' fill='rgb(113,113,122)'/%3E%3C/svg%3E%0A");
+    background-repeat: no-repeat;
+    background-size: 1.1rem 1.9rem;
+}
+.en .board-list.design11.case1 .board-item::after {
+    top: 30%;
+}
+
 @media (max-width: 1023px) {
     .board-list.design11.case1 {
         flex-direction: unset !important;
         justify-content: unset;
-        gap: 0;
+        gap: 0.8rem;
         padding-left: 0 !important;
         padding-bottom: 0 !important;
+        margin-left: -1.4rem !important;
         width: calc(100% + 3.6rem);
         max-width: unset;
         overflow: auto;
@@ -1410,19 +1416,24 @@
         height: 4.1rem;
     }
     .board-list.design11.case1 .board-item .board-wrap .board-figure + .board-info {
-        margin-top: 1.2rem;
+        margin-top: 1.6rem;
+        width: 10rem;
     }
-    .board-list.design11.case1 .board-item .board-wrap .board-figure::after {
+    .board-list.design11.case1 .board-item::after {
         display: block;
         position: absolute;
-        top: 50%;
-        right: -2rem;
-        width: 0.8rem;
-        height: 1.8rem;
+        top: 40%;
+        right: -3.1rem;
+        width: 3.2rem;
+        height: 3.2rem;
         content: "";
-        transform: translateY(-50%);
+        transform: translateY(-40%);
         background-image: url("data:image/svg+xml,%0A%3Csvg width='9' height='14' viewBox='0 0 9 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M0.365166 0.365166C0.716638 0.0136945 1.28649 0.0136945 1.63796 0.365166L8.27435 7.00156L1.63796 13.638C1.28649 13.9894 0.716638 13.9894 0.365166 13.638C0.0136945 13.2865 0.0136945 12.7166 0.365166 12.3652L5.72877 7.00156L0.365166 1.63796C0.0136945 1.28649 0.0136945 0.716638 0.365166 0.365166Z' fill='rgb(113,113,122)'/%3E%3C/svg%3E%0A");
         background-repeat: no-repeat;
+        background-size: 0.9rem 1.4rem;
+    }
+    .en .board-list.design11.case1 .board-item::after {
+        top: 35%;
     }
 }
 .board-list.design11.type1 .board-item .board-wrap .board-info .board-name {
@@ -1433,7 +1444,7 @@
 @media (max-width: 1023px) {
     .board-list.design11.type1 .board-item .board-wrap .board-info .board-name {
         font-weight: 700;
-        font-size: 1.4rem;
+        font-size: 1.8rem;
     }
 }
 .board-list.design12 {
@@ -6122,6 +6133,14 @@
         background: url("../images/business/thumb-33-mo.jpg") no-repeat center/cover;
         clip-path: inset(0% 0% 0% 0% round 0.8rem);
     }
+}
+@media (max-width: 1023px) and (max-width: 1023px) {
+    .data-display.business-network > .data-body > .data-list > .data-item[class*=back-].back-dataware .contents-figure {
+        margin: 0 auto;
+        max-width: 19.2rem;
+    }
+}
+@media (max-width: 1023px) {
     .data-display.business-network > .data-body > .data-list > .data-item[class*=back-].back-dataware::after {
         background: url("../images/business/thumb-34-mo.jpg") no-repeat center/cover;
         clip-path: inset(0% 0% 0% 0% round 0.8rem);
@@ -18899,6 +18918,11 @@ sub {
     background: url("../../assets/images/business/bg-infocom-pc.jpg") no-repeat center/cover;
     clip-path: inset(0% 0% 0% 0% round 1.6rem);
 }
+@media (min-width: 1024px) {
+    #wrap .business.overview .section.infocom .section-body .board-list .board-item .board-wrap .board-head .board-summary {
+        padding-right: 22rem;
+    }
+}
 #wrap .business.overview .section.infocom .section-body .board-list .board-item .board-wrap .board-body {
     padding-top: 0 !important;
 }
@@ -18922,11 +18946,6 @@ sub {
 }
 #wrap .business.overview .section.infocom .section-body .board-list .board-item .board-wrap .board-body .board-list-sub .accordion-display .accordion-item.active .accordion-head .btn.design3.ar-icon-arrow-down1 .btn-text::after {
     transform: rotate(180deg);
-}
-@media (min-width: 1024px) {
-    #wrap .business.overview .section.infocom .section-body .board-list .board-item .board-wrap {
-        padding-right: 22rem;
-    }
 }
 #wrap .business.overview .section.hotel .section-head::after {
     background: url("../../assets/images/business/bg-hotel-pc.jpg") no-repeat center/cover;
@@ -20766,9 +20785,6 @@ sub {
     margin-bottom: 4rem;
     background-size: cover;
 }
-.career.recruit .section.rec-info .tab-display .tab-list .recruit-tab-item {
-    width: 33.333%;
-}
 .career.recruit .section.rec-info .tab-display .tab-list .recruit-tab-item:not(.tab-item) {
     max-width: 60rem;
     flex-shrink: 1;
@@ -20812,6 +20828,11 @@ sub {
 .career.recruit .section.rec-info .tab-display .tab-list .recruit-tab-item:not(.tab-item) .tab-text:hover::after {
     background-image: url("data:image/svg+xml,%0A%3Csvg width='11' height='11' viewBox='0 0 11 11' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M1.45703 0C1.04282 0 0.707031 0.335787 0.707031 0.75C0.707031 1.16421 1.04282 1.5 1.45703 1.5H8.13372L0.21967 9.41405C-0.0732233 9.70694 -0.0732233 10.1818 0.21967 10.4747C0.512563 10.7676 0.987437 10.7676 1.28033 10.4747L9.19231 2.56273V9.23528C9.19231 9.6495 9.5281 9.98528 9.94231 9.98528C10.3565 9.98528 10.6923 9.6495 10.6923 9.23528V0H1.45703Z' fill='rgb(151,53,208)'/%3E%3C/svg%3E%0A");
 }
+@media (max-width: 1023px) {
+    .career.recruit .section.rec-info .tab-display .tab-list .recruit-tab-item:not(.tab-item) .tab-text {
+        width: auto;
+    }
+}
 .career.recruit .section.rec-info .panel-display {
     padding-top: 0;
 }
@@ -20848,7 +20869,7 @@ sub {
 }
 @media (max-width: 1023px) {
     .career.recruit .section.rec-info .panel-display .item-head {
-        margin: 3.2rem 0 0rem;
+        margin: 4.8rem 0 0rem;
     }
     .career.recruit .section.rec-info .panel-display .item-body.bg {
         background: url(../../assets/images/career/rec-banner-m.jpg) center center;
@@ -21377,6 +21398,12 @@ sub {
         width: 17.15%;
     }
     .esg:not(.overview).member table.col-w-1 col.col2 {
+        width: auto;
+    }
+    .en .esg:not(.overview).member table.col-w-1 col.col1 {
+        width: 30%;
+    }
+    .en .esg:not(.overview).member table.col-w-1 col.col2 {
         width: auto;
     }
 }
@@ -22297,7 +22324,7 @@ sub {
         width: 8%;
     }
     .en .esg:not(.overview).governance-structure table.col-w-4 col.col2 {
-        width: 12%;
+        width: 14%;
     }
     .en .esg:not(.overview).governance-structure table.col-w-4 col.col3 {
         width: auto;
@@ -22362,7 +22389,7 @@ sub {
         width: 9%;
     }
     .en .esg:not(.overview).governance-structure table.col-w-5 col.col2 {
-        width: 17.8%;
+        width: 19%;
     }
     .en .esg:not(.overview).governance-structure table.col-w-5 col.col3 {
         width: auto;
@@ -22417,7 +22444,7 @@ sub {
     width: 9%;
 }
 .en .esg:not(.overview).governance-structure table.col-w-6 col.col2 {
-    width: 14%;
+    width: 13%;
 }
 .en .esg:not(.overview).governance-structure table.col-w-6 col.col3 {
     width: auto;
@@ -22426,29 +22453,29 @@ sub {
     width: 17.5%;
 }
 .en .esg:not(.overview).governance-structure table.col-w-6 col.col5 {
-    width: 17%;
+    width: 19%;
 }
 .en .esg:not(.overview).governance-structure table.col-w-6 col.col6 {
-    width: 15.38%;
+    width: 17%;
 }
 @media (max-width: 1023px) {
     .en .esg:not(.overview).governance-structure table.col-w-6 col.col1 {
-        width: 7.42%;
+        width: 7%;
     }
     .en .esg:not(.overview).governance-structure table.col-w-6 col.col2 {
-        width: 12%;
+        width: 11%;
     }
     .en .esg:not(.overview).governance-structure table.col-w-6 col.col3 {
         width: auto;
     }
     .en .esg:not(.overview).governance-structure table.col-w-6 col.col4 {
-        width: 8%;
+        width: 15%;
     }
     .en .esg:not(.overview).governance-structure table.col-w-6 col.col5 {
-        width: 11.91%;
+        width: 17%;
     }
     .en .esg:not(.overview).governance-structure table.col-w-6 col.col6 {
-        width: 11.52%;
+        width: 12%;
     }
 }
 
