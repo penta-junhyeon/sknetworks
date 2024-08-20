@@ -13577,7 +13577,7 @@ sub {
 .sk-main .section.intro .section-content.our-business .content-inner .section-head {
     width: 100%;
     margin: 0 auto;
-    max-width: 77.5rem;
+    max-width: 78rem;
 }
 .sk-main .section.intro .section-content.our-business .content-inner .section-head .section-name {
     position: relative;
@@ -13595,7 +13595,7 @@ sub {
     .sk-main .section.intro .section-content.our-business .content-inner .section-head .section-name::after {
         position: absolute;
         top: -3.8rem;
-        right: 15.3rem;
+        right: 15.8rem;
         width: 7.2rem;
         height: 7.2rem;
         background: url("../images/main/intro-hexa.gif") no-repeat center/cover;
