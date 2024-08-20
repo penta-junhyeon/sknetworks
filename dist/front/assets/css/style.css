@@ -5059,9 +5059,9 @@
     }
 }
 .data-display.design2.case5.type1 > .data-list .data-item .item-head .item-subject {
+    color: rgb(21, 21, 26);
     font-weight: 700;
     font-size: 2.4rem;
-    color: rgb(21, 21, 26);
 }
 @media (max-width: 1023px) {
     .data-display.design2.case5.type1 > .data-list .data-item .item-head .item-subject {
@@ -5070,9 +5070,9 @@
     }
 }
 .data-display.design2.case5.type2 > .data-list .data-item .item-head .item-subject {
-    font-weight: 700;
-    font-size: 1.8rem;
     color: rgb(21, 21, 26);
+    font-weight: 700;
+    font-size: 2rem;
 }
 @media (max-width: 1023px) {
     .data-display.design2.case5.type2 > .data-list .data-item .item-head .item-subject {
@@ -5099,9 +5099,9 @@
     }
 }
 .data-display.design2.case6.type1 > .data-list .data-item .item-head .item-date {
+    color: rgb(63, 63, 70);
     font-weight: 700;
     font-size: 1.8rem;
-    color: rgb(63, 63, 70);
 }
 @media (max-width: 1023px) {
     .data-display.design2.case6.type1 > .data-list .data-item .item-head .item-date {
@@ -5110,9 +5110,9 @@
     }
 }
 .data-display.design2.case6.type2 > .data-list .data-item .item-head .item-subject {
+    color: rgb(63, 63, 70);
     font-weight: 700;
     font-size: 1.8rem;
-    color: rgb(63, 63, 70);
 }
 @media (max-width: 1023px) {
     .data-display.design2.case6.type2 > .data-list .data-item .item-head .item-subject {
@@ -5134,9 +5134,9 @@
     }
 }
 .data-display.design2.case7.type1 > .data-list .data-item .item-head .item-subject {
+    color: rgb(21, 21, 26);
     font-weight: 700;
     font-size: 3.2rem;
-    color: rgb(21, 21, 26);
 }
 @media (max-width: 1023px) {
     .data-display.design2.case7.type1 > .data-list .data-item .item-head .item-subject {
@@ -8547,9 +8547,6 @@
     }
 }
 
-.accordion-display {
-    /* 열림 > 닫힘 */
-}
 .accordion-display .accordion-item .accordion-head {
     cursor: pointer;
 }
@@ -8578,32 +8575,21 @@
         border-bottom: 1px solid rgb(113, 113, 122);
     }
 }
-.accordion-display.design2.case1 .accordion-item .accordion-head .btn .btn-text {
-    font-weight: 700;
-    font-size: 2.4rem;
-    color: rgb(21, 21, 26);
-    text-align: left;
-}
 .accordion-display.design2.case1 .accordion-item .accordion-head::after {
+    content: "";
     position: absolute;
     top: 50%;
     right: 1.6rem;
     width: 2.4rem;
     height: 2.4rem;
     background: url("data:image/svg+xml,%0A%3Csvg width='14' height='9' viewBox='0 0 14 9' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M13.6348 0.365166C13.9863 0.716638 13.9863 1.28649 13.6348 1.63796L6.99844 8.27435L0.362041 1.63796C0.0105695 1.28649 0.0105695 0.716638 0.362041 0.365166C0.713513 0.0136939 1.28336 0.013694 1.63483 0.365166L6.99844 5.72877L12.362 0.365166C12.7135 0.0136945 13.2834 0.0136945 13.6348 0.365166Z' fill='rgb(39,39,42)'/%3E%3C/svg%3E%0A") no-repeat center center;
-    content: "";
     background-image: url("data:image/svg+xml,%0A%3Csvg width='14' height='9' viewBox='0 0 14 9' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M13.6348 0.365166C13.9863 0.716638 13.9863 1.28649 13.6348 1.63796L6.99844 8.27435L0.362041 1.63796C0.0105695 1.28649 0.0105695 0.716638 0.362041 0.365166C0.713513 0.0136939 1.28336 0.013694 1.63483 0.365166L6.99844 5.72877L12.362 0.365166C12.7135 0.0136945 13.2834 0.0136945 13.6348 0.365166Z' fill='rgb(39,39,42)'/%3E%3C/svg%3E%0A");
     background-size: 1.4rem 0.9rem;
     transform: translateY(-50%);
-    transition: 0.3s ease;
+    transition: all 0.3s ease;
 }
 .accordion-display.design2.case1 .accordion-item .accordion-body .accordion-inner {
     padding: 2.4rem 0 8rem;
-}
-.accordion-display.design2.case1 .accordion-item .accordion-body .para {
-    font-weight: 500;
-    font-size: 1.8rem;
-    color: rgb(63, 63, 70);
 }
 .accordion-display.design2.case1 .accordion-item .accordion-body .para + .para {
     margin-top: 1.6rem;
@@ -8618,25 +8604,59 @@
     .accordion-display.design2.case1 .accordion-item .accordion-head {
         padding: 1.6rem 4.8rem 1.6rem 0;
     }
-    .accordion-display.design2.case1 .accordion-item .accordion-head .btn .btn-text {
-        font-weight: 700;
-        font-size: 2rem;
-    }
     .accordion-display.design2.case1 .accordion-item .accordion-head::after {
         right: 1.2rem;
     }
     .accordion-display.design2.case1 .accordion-item .accordion-body .accordion-inner {
         padding: 1.6rem 0 4.8rem;
     }
-    .accordion-display.design2.case1 .accordion-item .accordion-body .para {
-        font-weight: 500;
-        font-size: 1.6rem;
-    }
     .accordion-display.design2.case1 .accordion-item .accordion-body .para + .para {
         margin-top: 1.2rem;
     }
     .accordion-display.design2.case1 .accordion-item:last-child .accordion-body .accordion-inner {
         padding: 1.6rem 0 0;
+    }
+}
+.accordion-display.design2.type1 .accordion-item .accordion-head .btn .btn-text {
+    font-weight: 700;
+    font-size: 2.4rem;
+    color: rgb(21, 21, 26);
+    text-align: left;
+}
+.accordion-display.design2.type1 .accordion-item .accordion-body .para {
+    font-weight: 500;
+    font-size: 1.8rem;
+    color: rgb(63, 63, 70);
+}
+@media (max-width: 1023px) {
+    .accordion-display.design2.type1 .accordion-item .accordion-head .btn .btn-text {
+        font-weight: 700;
+        font-size: 2rem;
+    }
+    .accordion-display.design2.type1 .accordion-item .accordion-body .para {
+        font-weight: 500;
+        font-size: 1.6rem;
+    }
+}
+.accordion-display.design2.type2 .accordion-item .accordion-head .btn .btn-text {
+    color: rgb(21, 21, 26);
+    text-align: left;
+    font-weight: 700;
+    font-size: 2rem;
+}
+.accordion-display.design2.type2 .accordion-item .accordion-body .para {
+    color: rgb(63, 63, 70);
+    font-weight: 500;
+    font-size: 1.6rem;
+}
+@media (max-width: 1023px) {
+    .accordion-display.design2.type2 .accordion-item .accordion-head .btn .btn-text {
+        font-weight: 700;
+        font-size: 1.8rem;
+    }
+    .accordion-display.design2.type2 .accordion-item .accordion-body .para {
+        font-weight: 500;
+        font-size: 1.4rem;
     }
 }
 
@@ -20490,9 +20510,9 @@ sub {
     margin-top: 2.4rem;
 }
 .etc.personal-info .section .accordion-select .para {
+    color: rgb(63, 63, 70);
     font-weight: 500;
     font-size: 1.8rem;
-    color: rgb(63, 63, 70);
 }
 .etc.personal-info .section .accordion-select .para + .para {
     margin-top: 1.6rem;
@@ -22196,6 +22216,18 @@ sub {
 .esg:not(.overview).governance-structure .section.committee .data-display.design2 + .esg-inform-list {
     margin-top: 2.4rem;
 }
+.esg:not(.overview).governance-structure .section.committee .accordion-display .accordion-head {
+    border-bottom: 1px solid rgb(113, 113, 122);
+}
+.esg:not(.overview).governance-structure .section.committee .accordion-display .accordion-body .para + .comment {
+    margin-top: 1.6rem;
+}
+.esg:not(.overview).governance-structure .section.committee .accordion-display .accordion-body .para + .comment + .data-display {
+    margin-top: 6.4rem;
+}
+.esg:not(.overview).governance-structure .section.committee .accordion-display .accordion-body .data-display + .data-display {
+    margin-top: 6.4rem;
+}
 @media (max-width: 1023px) {
     .esg:not(.overview).governance-structure .section.committee > .section-wrap > .section-body > .data-display + .data-display {
         margin-top: 3.2rem;
@@ -22220,6 +22252,15 @@ sub {
     }
     .esg:not(.overview).governance-structure .section.committee .data-display.design2 + .esg-inform-list {
         margin-top: 1.6rem;
+    }
+    .esg:not(.overview).governance-structure .section.committee .accordion-display .accordion-body .para + .comment {
+        margin-top: 1.2rem;
+    }
+    .esg:not(.overview).governance-structure .section.committee .accordion-display .accordion-body .para + .comment + .data-display {
+        margin-top: 3.2rem;
+    }
+    .esg:not(.overview).governance-structure .section.committee .accordion-display .accordion-body .data-display + .data-display {
+        margin-top: 3.2rem;
     }
 }
 .esg:not(.overview).governance-structure .section.download1 .board-list .board-item {
@@ -22474,7 +22515,7 @@ sub {
 }
 
 .esg:not(.overview).governance-structure table.col-w-5 col.col1 {
-    width: 10.09%;
+    width: 11%;
 }
 .esg:not(.overview).governance-structure table.col-w-5 col.col2 {
     width: 15.64%;
