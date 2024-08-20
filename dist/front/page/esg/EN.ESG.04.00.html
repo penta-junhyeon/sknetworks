@@ -30,6 +30,31 @@
         document.addEventListener("DOMContentLoaded", () => {
             localAnimations_Case02();
             Tab();
+            Accordion();
+            panelHeightOnSelectChange();
+
+
+            function panelHeightOnSelectChange() {
+                const accordionDisplays = document.querySelectorAll(".accordion-display");
+
+                accordionDisplays.forEach(function(accordionDisplay) {
+                    const accordionItems = accordionDisplay.querySelectorAll(".accordion-item");
+
+                    accordionItems.forEach(function(accordionItem) {
+                        const panels = accordionItem.querySelectorAll(".accordion-head + *");
+                        panels.forEach(panel => {
+                            const selects = panel.querySelectorAll("select");
+                            selects.forEach(select => {
+                                select.addEventListener("change", function() {
+                                    panel.style.height = "auto"
+                                    const currentHeight = panel.scrollHeight + "px"
+                                    panel.style.height = currentHeight;
+                                });
+                            });
+                        });
+                    });
+                });
+            }
         });
     </script>
 </head>
@@ -4696,15 +4721,17 @@
                                                                                 <em class="data-subject">Activities</em>
                                                                             </div>
                                                                             <div class="data-body">
-                                                                                <!-- 인사위원회 -->
-                                                                                <div class="data-display design1 case6 type4">
-                                                                                    <div class="data-list">
-                                                                                        <div class="data-item">
-                                                                                            <div class="data-wrap">
-                                                                                                <div class="data-head">
-                                                                                                    <em class="data-subject">Human Resources Committee</em>
-                                                                                                </div>
-                                                                                                <div class="data-body">
+                                                                                <div class="accordion-display design2 case1 type2">
+                                                                                    <!-- 인사위원회 -->
+                                                                                    <div class="accordion-item">
+                                                                                        <div class="accordion-wrap">
+                                                                                            <div class="accordion-head">
+                                                                                                <button type="button" class="btn" aria-label="close" aria-controls="activity-status-1">
+                                                                                                    <span class="btn-text">Human Resources Committee</span>
+                                                                                                </button>
+                                                                                            </div>
+                                                                                            <div class="accordion-body" id="activity-status-1">
+                                                                                                <div class="accordion-inner">
                                                                                                     <p class="para">In 2019, SK Networks integrated ESG criteria into the Key Performance Indicators (KPIs) applicable to its CEO, establishing it as a standard practice in 2021 for CEO performance evaluation and rewards. The HR Committee under the Board of Directors deliberated on these matters, which were then approved by the Board. In 2023, the Board endorsed the integration of ESG objectives, including carbon emission reduction, a key aspect of SK Group’s ESG objective, fostering a corporate culture centered on health and happiness, and ethical management, into the CEO’s KPIs. Alongside this decision, a 10% weighting was allocated to ESG criteria such as carbon emission reduction during the executive KPI evaluation for 2023. (Since 2022, SK Networks has incorporated carbon emission reduction into the KPIs of all its executives, including subsidiary CEOs).As ESG criteria are integrated into the evaluation of all executives, they are likewise factored into the evaluation of all employees, with rewards linked to the outcomes of the KPI evaluation. By 2025, SK Networks will increase the weighting of ESG criteria in the KPIs for all executives, including subsidiary executives, to at least 10% or higher.
                                                                                                     </p>
                                                                                                     <p class="comment design1">* Given the nature of SK Electlink’s EV charging business with carbon reduction effects in business operation, ESG items are reflected through other strategic tasks for SK Electlink.</p>
@@ -5100,17 +5127,17 @@
                                                                                             </div>
                                                                                         </div>
                                                                                     </div>
-                                                                                </div>
-                                                                                <!-- //인사위원회 -->
-                                                                                <!-- ESG경영위원회 -->
-                                                                                <div class="data-display design1 case6 type4">
-                                                                                    <div class="data-list">
-                                                                                        <div class="data-item">
-                                                                                            <div class="data-wrap">
-                                                                                                <div class="data-head">
-                                                                                                    <em class="data-subject">ESG Management Committee</em>
-                                                                                                </div>
-                                                                                                <div class="data-body">
+                                                                                    <!-- //인사위원회 -->
+                                                                                    <!-- ESG경영위원회 -->
+                                                                                    <div class="accordion-item">
+                                                                                        <div class="accordion-wrap">
+                                                                                            <div class="accordion-head">
+                                                                                                <button type="button" class="btn" aria-label="close" aria-controls="activity-status-2">
+                                                                                                    <span class="btn-text">ESG Management Committee</span>
+                                                                                                </button>
+                                                                                            </div>
+                                                                                            <div class="accordion-body" id="activity-status-2">
+                                                                                                <div class="accordion-inner">
                                                                                                     <div class="data-display design2 case5 type2">
                                                                                                         <ul class="data-list">
                                                                                                             <li class="data-item">
@@ -5728,17 +5755,17 @@
                                                                                             </div>
                                                                                         </div>
                                                                                     </div>
-                                                                                </div>
-                                                                                <!-- //ESG경영위원회 -->
-                                                                                <!-- 감사위원회 -->
-                                                                                <div class="data-display design1 case6 type4">
-                                                                                    <div class="data-list">
-                                                                                        <div class="data-item">
-                                                                                            <div class="data-wrap">
-                                                                                                <div class="data-head">
-                                                                                                    <em class="data-subject">Audit Committee</em>
-                                                                                                </div>
-                                                                                                <div class="data-body">
+                                                                                    <!-- //ESG경영위원회 -->
+                                                                                    <!-- 감사위원회 -->
+                                                                                    <div class="accordion-item">
+                                                                                        <div class="accordion-wrap">
+                                                                                            <div class="accordion-head">
+                                                                                                <button type="button" class="btn" aria-label="닫힘" aria-controls="activity-status-3">
+                                                                                                    <span class="btn-text">Audit Committee</span>
+                                                                                                </button>
+                                                                                            </div>
+                                                                                            <div class="accordion-body" id="activity-status-3">
+                                                                                                <div class="accordion-inner">
                                                                                                     <div class="data-display design2 case5 type2">
                                                                                                         <ul class="data-list">
                                                                                                             <li class="data-item">
@@ -7260,8 +7287,8 @@
                                                                                             </div>
                                                                                         </div>
                                                                                     </div>
+                                                                                    <!-- //감사위원회 -->
                                                                                 </div>
-                                                                                <!-- //감사위원회 -->
                                                                             </div>
                                                                         </div>
                                                                     </div>
