@@ -13576,6 +13576,7 @@ sub {
 }
 .sk-main .section.intro .section-content.our-business .content-inner .section-head {
     width: 100%;
+    margin: 0 auto;
     max-width: 77.5rem;
 }
 .sk-main .section.intro .section-content.our-business .content-inner .section-head .section-name {
