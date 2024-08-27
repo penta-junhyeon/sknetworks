@@ -4902,9 +4902,9 @@
     text-align: center;
 }
 .data-display.design1.type7 > .data-list > .data-item > .data-wrap > .data-head .data-subject {
+    color: rgb(21, 21, 26);
     font-weight: 700;
     font-size: 3.2rem;
-    color: rgb(21, 21, 26);
 }
 @media (max-width: 1023px) {
     .data-display.design1.type7 > .data-list > .data-item > .data-wrap > .data-head {
@@ -4916,14 +4916,14 @@
     }
 }
 .data-display.design1.type8 > .data-list .data-item .data-head .data-subject {
+    color: rgb(21, 21, 26);
     font-weight: 700;
     font-size: 2.4rem;
-    color: rgb(21, 21, 26);
 }
 .data-display.design1.type8 > .data-list .data-item .data-body > .para {
+    color: rgb(63, 63, 70);
     font-weight: 500;
     font-size: 1.6rem;
-    color: rgb(63, 63, 70);
 }
 @media (max-width: 1023px) {
     .data-display.design1.type8 > .data-list .data-item .data-head .data-subject {
@@ -8066,6 +8066,14 @@
         margin-top: 2.4rem;
     }
 }
+.post-list.design5.case2 .post-head + .post-figure {
+    margin-top: 2.4rem;
+}
+@media (max-width: 1023px) {
+    .post-list.design5.case2 .post-head + .post-figure {
+        margin-top: 1.6rem;
+    }
+}
 .post-list.design5.type1 .post-head .post-subject {
     font-weight: 700;
     font-size: 2.4rem;
@@ -8080,6 +8088,21 @@
 }
 @media (max-width: 1023px) {
     .post-list.design5.type1 .post-figure img {
+        display: inline-block;
+    }
+}
+.post-list.design5.type2 .post-head .post-subject {
+    font-weight: 700;
+    font-size: 2.4rem;
+}
+@media (max-width: 1023px) {
+    .post-list.design5.type2 .post-head .post-subject {
+        font-weight: 700;
+        font-size: 2rem;
+    }
+}
+@media (max-width: 1023px) {
+    .post-list.design5.type2 .post-figure img {
         display: inline-block;
     }
 }
@@ -8782,6 +8805,10 @@
     border-right: 1px solid rgb(228, 228, 231);
     border-bottom: 1px solid rgb(228, 228, 231);
 }
+.t-display.design1.case1 table > tbody > tr > th.t-bg,
+.t-display.design1.case1 table > tbody > tr > td.t-bg {
+    background: rgb(246, 246, 247);
+}
 @media (max-width: 1023px) {
     .t-display.design1.case1 table > tbody > tr > th,
     .t-display.design1.case1 table > tbody > tr > td {
@@ -8817,10 +8844,10 @@
     }
 }
 .t-display.design1.type1 table > thead > tr > th {
-    font-weight: 700;
-    font-size: 1.8rem;
     color: rgb(255, 255, 255);
     text-align: center;
+    font-weight: 700;
+    font-size: 1.8rem;
 }
 @media (max-width: 1023px) {
     .t-display.design1.type1 table > thead > tr > th {
@@ -8830,9 +8857,9 @@
 }
 .t-display.design1.type1 table > tbody > tr > th,
 .t-display.design1.type1 table > tbody > tr > td {
+    color: rgb(63, 63, 70);
     font-weight: 700;
     font-size: 1.8rem;
-    color: rgb(63, 63, 70);
 }
 @media (max-width: 1023px) {
     .t-display.design1.type1 table > tbody > tr > th,
@@ -13295,22 +13322,22 @@ sub {
     }
 }
 #wrap .section[class*=design].type1 .section-name + .section-summary {
-    font-weight: 500;
-    font-size: 1.8rem;
     color: rgb(63, 63, 70);
     margin-top: 2.4rem;
+    font-weight: 500;
+    font-size: 1.8rem;
 }
 @media (max-width: 1023px) {
     #wrap .section[class*=design].type1 .section-name + .section-summary {
+        margin-top: 1.6rem;
         font-weight: 500;
         font-size: 1.6rem;
-        margin-top: 1.6rem;
     }
 }
 #wrap .section[class*=design].type1 .section-body > .para {
+    color: rgb(63, 63, 70);
     font-weight: 500;
     font-size: 1.8rem;
-    color: rgb(63, 63, 70);
 }
 @media (max-width: 1023px) {
     #wrap .section[class*=design].type1 .section-body > .para {
@@ -13319,9 +13346,9 @@ sub {
     }
 }
 #wrap .section[class*=design].type2 .section-name {
+    color: rgb(21, 21, 26);
     font-weight: 700;
     font-size: 2.4rem;
-    color: rgb(21, 21, 26);
 }
 @media (max-width: 1023px) {
     #wrap .section[class*=design].type2 .section-name {
@@ -13330,22 +13357,22 @@ sub {
     }
 }
 #wrap .section[class*=design].type2 .section-name + .section-summary {
-    font-weight: 500;
-    font-size: 1.6rem;
     color: rgb(63, 63, 70);
     margin-top: 1.6rem;
+    font-weight: 500;
+    font-size: 1.6rem;
 }
 @media (max-width: 1023px) {
     #wrap .section[class*=design].type2 .section-name + .section-summary {
+        margin-top: 1.6rem;
         font-weight: 500;
         font-size: 1.4rem;
-        margin-top: 1.6rem;
     }
 }
 #wrap .section[class*=design].type2 .section-body > .para {
+    color: rgb(63, 63, 70);
     font-weight: 500;
     font-size: 1.8rem;
-    color: rgb(63, 63, 70);
 }
 @media (max-width: 1023px) {
     #wrap .section[class*=design].type2 .section-body > .para {
@@ -13354,9 +13381,9 @@ sub {
     }
 }
 #wrap .section[class*=design].type3 .section-name {
+    color: rgb(21, 21, 26);
     font-weight: 700;
     font-size: 4.8rem;
-    color: rgb(21, 21, 26);
 }
 @media (max-width: 1023px) {
     #wrap .section[class*=design].type3 .section-name {
@@ -13365,22 +13392,22 @@ sub {
     }
 }
 #wrap .section[class*=design].type3 .section-name + .section-summary {
-    font-weight: 500;
-    font-size: 1.8rem;
     color: rgb(63, 63, 70);
     margin-top: 2.4rem;
+    font-weight: 500;
+    font-size: 1.8rem;
 }
 @media (max-width: 1023px) {
     #wrap .section[class*=design].type3 .section-name + .section-summary {
+        margin-top: 1.6rem;
         font-weight: 500;
         font-size: 1.6rem;
-        margin-top: 1.6rem;
     }
 }
 #wrap .section[class*=design].type3 .section-body > .para {
+    color: rgb(21, 21, 26);
     font-weight: 700;
     font-size: 2.4rem;
-    color: rgb(21, 21, 26);
 }
 @media (max-width: 1023px) {
     #wrap .section[class*=design].type3 .section-body > .para {
@@ -13401,14 +13428,14 @@ sub {
     }
 }
 #wrap .section[class*=design].type4 .section-name {
+    color: #000;
     font-weight: 700;
     font-size: 1.6rem;
-    color: #000;
 }
 #wrap .section[class*=design].type4 .section-body > .para {
+    color: rgb(63, 63, 70);
     font-weight: 500;
     font-size: 1.6rem;
-    color: rgb(63, 63, 70);
 }
 @media (max-width: 1023px) {
     #wrap .section[class*=design].type4 .section-body > .para {
@@ -22864,12 +22891,6 @@ sub {
         margin-top: 1.2rem;
     }
 }
-.esg:not(.overview).ethical-man .panel-display .panel-list .panel-item .panel-body .section .section-body .post-list.design5 .post-item .post-head {
-    text-align: center;
-}
-.esg:not(.overview).ethical-man .panel-display .panel-list .panel-item .panel-body .section .section-body .post-list.design5 .post-item .post-head .post-subject {
-    padding: 4rem 0 6.4rem;
-}
 @media (max-width: 1023px) {
     .esg:not(.overview).ethical-man .panel-display .panel-list .panel-item .panel-body .section .section-body .post-list.design5 .post-item .post-figure {
         width: calc(100% + 3.6rem);
@@ -23123,6 +23144,22 @@ sub {
         font-size: 2rem;
     }
 }
+.esg:not(.overview).ethical-man .panel-display .panel-list .panel-item .panel-body .section.ethical-system .section-body .post-list + .data-display {
+    margin-top: 6.4rem;
+}
+@media (max-width: 1023px) {
+    .esg:not(.overview).ethical-man .panel-display .panel-list .panel-item .panel-body .section.ethical-system .section-body .post-list + .data-display {
+        margin-top: 3.2rem;
+    }
+}
+.esg:not(.overview).ethical-man .panel-display .panel-list .panel-item .panel-body .section.ethical-system .data-display .data-item + .data-item {
+    margin-top: 6.4rem;
+}
+@media (max-width: 1023px) {
+    .esg:not(.overview).ethical-man .panel-display .panel-list .panel-item .panel-body .section.ethical-system .data-display .data-item + .data-item {
+        margin-top: 3.2rem;
+    }
+}
 @media (max-width: 1023px) {
     .esg:not(.overview).ethical-man .board-list.design15 .t-display.scroll {
         width: calc(100% + 4.8rem);
@@ -23161,24 +23198,97 @@ sub {
         width: auto;
     }
 }
+.esg:not(.overview).ethical-man table.col-w-2 > thead > tr:first-child > th:first-child {
+    border-radius: 0.8rem 0 0 0.8rem;
+}
+.esg:not(.overview).ethical-man table.col-w-2 > thead > tr:first-child > th:last-child {
+    border-radius: 0 0.8rem 0 0;
+}
+.esg:not(.overview).ethical-man table.col-w-2 > thead > tr:last-child > th:last-child {
+    border-radius: 0 0 0.8rem 0;
+}
+.esg:not(.overview).ethical-man table.col-w-2 > tbody > tr > td.title {
+    border-bottom: unset;
+    position: relative;
+}
+.esg:not(.overview).ethical-man table.col-w-2 > tbody > tr > td.title::before {
+    content: "";
+    width: calc(100% - 2.4rem);
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-bottom: 1px solid rgb(228, 228, 231);
+}
+.esg:not(.overview).ethical-man table.col-w-2 > tbody > tr > td.accent {
+    padding-left: 4.4rem;
+    position: relative;
+}
+.esg:not(.overview).ethical-man table.col-w-2 > tbody > tr > td.accent:not(.last) {
+    border-bottom: unset;
+}
+.esg:not(.overview).ethical-man table.col-w-2 > tbody > tr > td.accent:not(.last)::before {
+    content: "";
+    width: calc(100% - 2.4rem);
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-left: 1px solid rgb(228, 228, 231);
+    border-bottom: 1px solid rgb(228, 228, 231);
+}
+.esg:not(.overview).ethical-man table.col-w-2 > tbody > tr > td.accent.last::before {
+    content: "";
+    width: calc(100% - 2.4rem);
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-left: 1px solid rgb(228, 228, 231);
+}
+@media (max-width: 1023px) {
+    .esg:not(.overview).ethical-man table.col-w-2 > tbody > tr > td.title::before {
+        width: calc(100% - 2rem);
+    }
+    .esg:not(.overview).ethical-man table.col-w-2 > tbody > tr > td.accent {
+        padding-left: 4.4rem;
+    }
+    .esg:not(.overview).ethical-man table.col-w-2 > tbody > tr > td.accent:not(.last)::before {
+        width: calc(100% - 2rem);
+    }
+    .esg:not(.overview).ethical-man table.col-w-2 > tbody > tr > td.accent.last::before {
+        width: calc(100% - 22rem);
+    }
+}
 .esg:not(.overview).ethical-man table.col-w-2 col.col1 {
-    width: 33.333%;
+    width: 180px;
 }
 .esg:not(.overview).ethical-man table.col-w-2 col.col2 {
-    width: 33.333%;
+    width: 9.444%;
 }
 .esg:not(.overview).ethical-man table.col-w-2 col.col3 {
-    width: 33.333%;
+    width: 9.444%;
+}
+.esg:not(.overview).ethical-man table.col-w-2 col.col4 {
+    width: 9.444%;
 }
 @media (max-width: 1023px) {
     .esg:not(.overview).ethical-man table.col-w-2 col.col1 {
-        width: 14.92%;
+        width: 172px;
     }
     .esg:not(.overview).ethical-man table.col-w-2 col.col2 {
-        width: 48.14%;
+        width: 11.11%;
     }
     .esg:not(.overview).ethical-man table.col-w-2 col.col3 {
-        width: auto;
+        width: 11.11%;
+    }
+    .esg:not(.overview).ethical-man table.col-w-2 col.col4 {
+        width: 11.11%;
+    }
+}
+@media (max-width: 1023px) {
+    .esg:not(.overview).ethical-man table.col-w-2 {
+        min-width: 123.4rem;
     }
 }
 @media (max-width: 1023px) {
